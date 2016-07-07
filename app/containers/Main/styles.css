@@ -1,0 +1,41 @@
+/*
+  black:      #070707
+  darkgrey:   #40434e
+  lightgrey:  #c1cad6
+  white:      #fbfffe
+  purple:     #434db0
+*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  color: #070707;
+  background: #c1cad6;
+  font: 300 16px/1.2 'Helvetica Neue', Helvetica,Arial, sans-serif;
+  letter-spacing: 1px;
+  box-sizing:border-box;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img {
+  max-width: 100%;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.mainContainer {
+  width: 100%;
+}
+.innerContainer {
+  width: 96%;
+  margin: 0 auto;
+}

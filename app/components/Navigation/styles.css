@@ -1,0 +1,51 @@
+.header {
+  background: #fbfffe;
+  padding: 0 4%;
+}
+.navContainer {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoContainer {
+  flex: 3;
+}
+.logo {
+  display: block;
+  width: 333px;
+  padding: 4px;
+}
+.navItems {
+  display: flex;
+  font-size:1.6em;
+  align-items: center;
+  justify-content: space-between;
+  flex: 2;
+}
+.sportsLinks {
+  display: flex;
+  justify-content: space-around;
+  flex: 3;
+}
+.navLinks {
+  display: flex;
+  height: 80px;
+  border-left: 3px solid #070707;
+  margin-left: 1em;
+  padding-left: 2em;
+  align-items: center;
+  justify-content: space-between;
+  flex: 2;
+}
+.link {
+  color: #434db0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.4s;
+}
+.link:hover {
+  border-bottom: 2px solid #070707;
+}
+:global(.active) {
+  color: #070707;
+}

@@ -1,0 +1,20 @@
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.largeHeader {
+  color: #1f0ce2;
+  font-weight: 100;
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
+.subHeader {
+  color: #4d4d4d;
+  font-size: 35px;
+  text-align: center;
+  line-height: 55px;
+  font-weight: 100;
+}

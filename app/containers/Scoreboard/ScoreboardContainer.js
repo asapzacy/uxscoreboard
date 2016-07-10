@@ -38,7 +38,9 @@ class ScoreboardContainer extends Component {
       <div>
         {this.state.scores
           ? <Scoreboard
-              date={this.props.routeParams.date}
+              date={this.props.routeParams.date
+                  ? this.props.routeParams.date
+                  : 'July 9, 2016'}
               isLoading={this.state.isLoading}
               handleClick={(today) => this.handleClick(today)}
               scores={this.state.scores}

@@ -1,14 +1,20 @@
 .scoreboardContainer {
+  width:96%;
+  margin:0 auto;
+}
+
+.scoresContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.title {
-  composes: largeHeader from 'shared/styles.css'
-}
-
-.slogan {
-  composes: subHeader from 'shared/styles.css'
+.header {
+  font-size: 4em;
+  margin: 1em 0;
+  font-weight: 100;
+  text-align: center;
 }

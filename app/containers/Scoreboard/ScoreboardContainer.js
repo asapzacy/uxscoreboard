@@ -7,43 +7,30 @@ class ScoreboardContainer extends Component {
     super()
     this.state = {
       isLoading: true,
-      scores: {}
+      scores: {},
+      date: ''
     }
   }
   componentDidMount() {
-    this.makeRequest(this.props.routeParams.date)
+    this.makeRequest()
   }
-  componentWillReceiveProps(nextProps) {
-    this.makeRequest(nextProps.routeParams.date)
-  }
-  makeRequest(date) {
-    getMlbScores(date)
+  makeRequest() {
+    getMlbScores()
       .then((currentScores) => {
         this.setState({
           isLoading: false,
-          scores: currentScores.data.games
+          scores: currentScores.data.games,
         })
       })
-  }
-  handleClick(today) {
-    this.context.router.push({
-      pathname: '/scores/' + this.props.routeParams.date,
-      state: {
-        today
-      }
-    })
   }
   render() {
     return (
       <div>
         {this.state.scores
           ? <Scoreboard
-              date={this.props.routeParams.date
-                  ? this.props.routeParams.date
-                  : 'July 9, 2016'}
               isLoading={this.state.isLoading}
-              handleClick={(today) => this.handleClick(today)}
               scores={this.state.scores}
+              date={this.state.scores.date}
             />
           : null
         }
@@ -52,8 +39,5 @@ class ScoreboardContainer extends Component {
   }
 }
 
-ScoreboardContainer.contextTypes = {
-  router: React.PropTypes.object.isRequired
-}
 
 export default ScoreboardContainer

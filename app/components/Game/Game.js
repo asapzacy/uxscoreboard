@@ -47,7 +47,6 @@ class Game extends Component {
         default: return 'th'
       }
     }
-    console.log(awayTeam)
     return (
       <div className={gameContainer}>
       <div className={gameInfo}>

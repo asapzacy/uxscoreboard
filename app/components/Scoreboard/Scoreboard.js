@@ -1,16 +1,16 @@
 import React, { PropTypes } from 'react'
-import { getMlbScores } from 'helpers/api'
 import { Game } from 'components'
+import { formatDate } from 'helpers/utils'
 import { scoreboardContainer, scoresContainer, header } from './styles.css'
 
 export default function ScoreboardUI({date, scores, handleClick}) {
   return (
     <div className={scoreboardContainer}>
-      <h1 className={header}>{date}</h1>
+      <h1 className={header}>{formatDate(date)}</h1>
       <div className={scoresContainer}>
-      {scores
-        ? scores.game.map((item) => <Game key={item.game_pk} game={item} />)
-        : <h1>{'no games today'}</h1>
+      {scores === undefined
+        ? <h1>{'no games today'}</h1>
+        : scores.game.map((item) => <Game key={item.game_pk} game={item} />)
       }
 
       </div>
@@ -21,12 +21,10 @@ export default function ScoreboardUI({date, scores, handleClick}) {
 export default function Scoreboard(props) {
   return (
     <div>
-      {
-        props.isLoading === true
+      {props.isLoading === true
         ? <h1 className={header}>{'Loading...'}</h1>
         : <ScoreboardUI
             date={props.date}
-            handleClick={props.handleClick}
             scores={props.scores}
           />
       }
@@ -35,7 +33,5 @@ export default function Scoreboard(props) {
 }
 
 Scoreboard.propTypes = {
-  date: PropTypes.string.isRequired,
   isLoading: PropTypes.bool.isRequired,
-  handleClick: PropTypes.func.isRequired,
 }

@@ -4,14 +4,14 @@ import { Game } from 'components'
 import { scoreboardContainer, scoresContainer, header } from './styles.css'
 
 export default function ScoreboardUI({date, scores, handleClick}) {
-
   return (
     <div className={scoreboardContainer}>
       <h1 className={header}>{date}</h1>
       <div className={scoresContainer}>
-      {(scores.game).map((item) => (
-        <Game key={item.game_pk} game={item} />
-      ))}
+      {scores
+        ? <h1>{'no games today'}</h1>
+        : scores.game.map((item) => <Game key={item.game_pk} game={item} />)
+      }
 
       </div>
     </div>

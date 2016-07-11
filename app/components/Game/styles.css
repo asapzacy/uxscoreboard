@@ -28,22 +28,19 @@ sup {
 .teamContainer:nth-child(2) {
   border-bottom: 6px solid #f5f5f5;
 }
-.logo {
+.teamLogo {
   max-height: 100px;
   flex-basis: 30%;
 }
-.team {
+.teamName {
   display: flex;
   flex-direction: column;
   flex-basis: 56%;
 }
-.name {
-
-}
-.record {
+.teamRecord {
   font-size: 50%;
 }
-.score {
+.teamScore {
   flex-basis: 15%;
   font-size: 120%;
   margin-left: auto;

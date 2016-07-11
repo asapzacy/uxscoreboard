@@ -9,8 +9,8 @@ export default function ScoreboardUI({date, scores, handleClick}) {
       <h1 className={header}>{date}</h1>
       <div className={scoresContainer}>
       {scores
-        ? <h1>{'no games today'}</h1>
-        : scores.game.map((item) => <Game key={item.game_pk} game={item} />)
+        ? scores.game.map((item) => <Game key={item.game_pk} game={item} />)
+        : <h1>{'no games today'}</h1>
       }
 
       </div>

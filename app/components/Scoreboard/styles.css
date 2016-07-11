@@ -1,15 +1,17 @@
 .scoreboardContainer {
-  width:96%;
-  margin:0 auto 6em;
+  width: 90%;
+  margin: 0 auto 8em;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
 }
 
 .scoresContainer {
   display: flex;
-  justify-content: space-around;
+  text-align: left;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .header {

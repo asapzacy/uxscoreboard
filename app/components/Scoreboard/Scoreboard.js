@@ -10,7 +10,7 @@ export default function ScoreboardUI({date, scores, handleClick}) {
       <h1 className={header}>{date}</h1>
       <div className={scoresContainer}>
       {(scores.game).map((item) => (
-        <Game key={item.id} game={item} />
+        <Game key={item.game_pk} game={item} />
       ))}
 
       </div>

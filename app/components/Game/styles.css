@@ -5,24 +5,29 @@
   margin: 2%;
   flex-basis: 28%;
 }
-
 .gameInfo {
-  background: #f5f5f5;
+  display: flex;
+  font-size: 120%;
   padding: 7.5px 15px;
-  font-size: 1.15em;
+  background: #f5f5f5;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
+sup {
+  font-size: 70%;
+}
+.gameInfo span:nth-child(2) {
+  float: right;
+  font-size: 85%;
+}
 .teamContainer {
   display: flex;
   align-items: center;
   font-size: 1.8em;
 }
-
 .teamContainer:nth-child(2) {
-  border-bottom: 12px solid #f5f5f5;
+  border-bottom: 6px solid #f5f5f5;
 }
-
 .logo {
   max-height: 100px;
   flex-basis: 30%;
@@ -36,12 +41,10 @@
 
 }
 .record {
-  font-size: 55%;
-}
-sup {
-  font-size: 65%;
+  font-size: 50%;
 }
 .score {
   flex-basis: 15%;
+  font-size: 120%;
   margin-left: auto;
 }

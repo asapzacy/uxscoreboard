@@ -1,6 +1,6 @@
 import React from 'react'
-import { gameContainer, gameInfo, status, teamContainer,
-  logo, team, name, record, score } from './styles.css'
+import { gameContainer, gameInfo, teamContainer,
+  logo, team, name, record, score, outs } from './styles.css'
 
 export default function Game(props) {
 
@@ -20,7 +20,8 @@ export default function Game(props) {
         status = game.status,
         time = game.home_time,
         ampm = game.home_ampm,
-        tz = game.home_time_zone
+        tz = game.home_time_zone,
+        outs = game.outs
 
   const gameState = () => {
     let result = ''
@@ -36,6 +37,7 @@ export default function Game(props) {
   const getPreGame = () => `${time} ${ampm} ${tz}`
   const getMidGame = () => inningState === 'Y' ? `Top ${inning}` : `Bottom ${inning}`
   const getPostGame = () => inning > 9 ? `Final/${inning}` : `Final`
+  const getOuts = () => outs === 1 ? `${outs} out` : `${outs} outs`
 
   const inningSuffix = () => {
     switch(inning) {
@@ -45,12 +47,14 @@ export default function Game(props) {
       default: return 'th'
     }
   }
+
   return (
     <div className={gameContainer}>
     <div className={gameInfo}>
-      <span className={status}>{gameState()}
-        <sup>{ status === 'In Progress' ? inningSuffix() : null }</sup>
+      <span>{gameState()}
+        { status === 'In Progress' ? <sup>{inningSuffix()}</sup> : null }
       </span>
+        { status === 'In Progress' ? <span>{getOuts()}</span> : null }
     </div>
       <div className={teamContainer}>
         <img className={logo} src={`assets/img/mlb/${awayCity}.svg`} alt={awayTeam}/>

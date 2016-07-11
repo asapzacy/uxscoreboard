@@ -22,7 +22,6 @@ export default function Game(props) {
         ampm = game.home_ampm,
         tz = game.home_time_zone
 
-
   const gameState = () => {
     let result = ''
     if (status === 'Pre Game' || status === 'Preview')

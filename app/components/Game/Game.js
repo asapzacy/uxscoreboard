@@ -1,26 +1,33 @@
 import React, { Component } from 'react'
-import { gameContainer, gameInfo, teamContainer,
-  teamLogo, teamName, teamRecord, teamScore, outs } from './styles.css'
+import { Team, Details } from 'components'
+import Down from 'react-icons/lib/fa/angle-down'
+import Up from 'react-icons/lib/fa/angle-up'
+import { gameContainer, gameInfo, outs, expandIcon, test } from './styles.css'
 
 class Game extends Component {
+  constructor() {
+    super()
+    this.state = {
+      expanded: false
+    }
+  }
+  componentDidMount() {
+  }
+  expandGame() {
+    this.setState({
+      expanded: !this.state.expanded
+    })
+  }
+
   render() {
+
     const game = this.props.game,
-          awayTeam = game.away_team_name,
-          awayCity = game.away_file_code,
-          awayScore = game.away_team_runs,
-          awayWs = game.away_win,
-          awayLs = game.away_loss,
-          homeTeam = game.home_team_name,
-          homeCity = game.home_file_code,
-          homeScore = game.home_team_runs,
-          homeWs = game.home_win,
-          homeLs = game.home_loss,
           inning = game.inning,
           inningState = game.top_inning,
-          status = game.status,
-          time = game.home_time,
-          ampm = game.home_ampm,
-          tz = game.home_time_zone,
+          status = game.status.status,
+          time = game.time,
+          ampm = game.ampm,
+          tz = game.time_zone,
           outs = game.outs
 
     const gameState = () => {
@@ -49,31 +56,46 @@ class Game extends Component {
     }
     return (
       <div className={gameContainer}>
+
       <div className={gameInfo}>
         <span>{gameState()}
           { status === 'In Progress' ? <sup>{inningSuffix()}</sup> : null }
         </span>
           { status === 'In Progress' ? <span>{getOuts()}</span> : null }
       </div>
-        <Team name={awayTeam} city={awayCity} ls={awayLs} ws={awayWs} score={awayScore} />
-        <Team name={homeTeam} city={homeCity} ls={homeLs} ws={homeWs} score={homeScore} />
+        <Team
+          name={game.away_team_name}
+          code={game.away_file_code}
+          ls={game.away_loss}
+          ws={game.away_win}
+          runs={game.away_team_runs}
+        />
+        <Team
+          name={game.home_team_name}
+          code={game.home_file_code}
+          ls={game.home_loss}
+          ws={game.home_win}
+          runs={game.home_team_runs}
+        />
+
+        <span className={expandIcon} onClick={() => this.expandGame()}>
+          { this.state.expanded
+            ? <Up />
+            : <Down />
+          }
+        </span>
+          { this.state.expanded
+            ? <Details
+                venue={game.venue}
+                location={game.location}
+
+
+              />
+            : null
+          }
       </div>
     )
   }
 }
-
-export default function Team({name, city, ls, ws, score}) {
-  return (
-    <div className={teamContainer}>
-      <img className={teamLogo} src={`assets/img/mlb/${city}.svg`} alt={name} />
-      <div className={teamName}>
-        <span>{name}</span>
-        <span className={teamRecord}>{`(${ws}-${ls})`}</span>
-      </div>
-      <span className={teamScore}>{score}</span>
-    </div>
-  )
-}
-
 
 export default Game

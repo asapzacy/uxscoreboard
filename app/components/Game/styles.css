@@ -1,47 +1,36 @@
 .gameContainer {
   background: #fafafa;
-  border: 12px solid #f5f5f5;
-  border-top: 0;
   margin: 2%;
   flex-basis: 28%;
 }
 .gameInfo {
   display: flex;
-  font-size: 120%;
-  padding: 7.5px 15px;
   background: #f5f5f5;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 1.2em;
   justify-content: space-between;
   align-items: center;
 }
 sup {
   font-size: 70%;
 }
+.test {
+  height:10em;
+  background: #f5f5f5;
+}
+/*
 .gameInfo span:nth-child(2) {
   float: right;
   font-size: 85%;
 }
-.teamContainer {
+*/
+.expandIcon {
+  cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 1.8em;
-}
-.teamContainer:nth-child(2) {
-  border-bottom: 6px solid #f5f5f5;
-}
-.teamLogo {
-  max-height: 100px;
-  flex-basis: 30%;
-}
-.teamName {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 56%;
-}
-.teamRecord {
-  font-size: 50%;
-}
-.teamScore {
-  flex-basis: 15%;
-  font-size: 120%;
-  margin-left: auto;
+  background: #f5f5f5;
+  height: 20px;
+  font-size: 1.2em;
+  justify-content: center;
 }

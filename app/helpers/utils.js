@@ -1,4 +1,4 @@
-const monthsOfTheYear = {
+const monthNames = {
   "1": "January",
   "2": "February",
   "3": "March",
@@ -14,9 +14,8 @@ const monthsOfTheYear = {
 }
 
 export function formatDate(dt) {
-  const yyyy = dt.slice(0, 4)
-  const mm = dt.charAt(4) === '0' ? dt.charAt(5) : dt.slice(4, 6)
-  const dd = dt.charAt(6) === '0' ? dt.charAt(7) : dt.slice(6, 8)
-  const month = monthsOfTheYear[mm]
-  return `${month} ${dd}, ${yyyy}`
+  const dd = dt.day.charAt(0) === '0' ? dt.day.charAt(1) : dt.day
+  const mm = dt.month.charAt(0) === '0' ? dt.month.charAt(1) : dt.month
+  const yyyy = dt.year
+  return `${monthNames[mm]} ${dd}, ${yyyy}`
 }

@@ -6,7 +6,7 @@ import { scoreboardContainer, scoresContainer, header } from './styles.css'
 export default function ScoreboardUI({date, scores, handleClick}) {
   return (
     <div className={scoreboardContainer}>
-      <h1 className={header}>{formatDate(date)}</h1>
+      <h1 className={header}>{formatDate(scores)}</h1>
       <div className={scoresContainer}>
       {scores === undefined
         ? <h1>{'no games today'}</h1>
@@ -24,7 +24,7 @@ export default function Scoreboard(props) {
       {props.isLoading === true
         ? <h1 className={header}>{'Loading...'}</h1>
         : <ScoreboardUI
-            date={props.date}
+            date={props.date ? props.date : "hi"}
             scores={props.scores}
           />
       }

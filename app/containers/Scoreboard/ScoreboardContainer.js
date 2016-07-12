@@ -19,7 +19,7 @@ class ScoreboardContainer extends Component {
       .then((currentScores) => {
         this.setState({
           isLoading: false,
-          scores: currentScores.data.games,
+          scores: currentScores.data.games
         })
       })
   }

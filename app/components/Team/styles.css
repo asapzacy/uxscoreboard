@@ -1,0 +1,27 @@
+.teamContainer {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+}
+.teamContainer:nth-child(2) {
+}
+.teamLogo {
+  max-height: 105px;
+  flex-basis: 30%;
+}
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 54%;
+}
+.teamName {
+
+}
+.teamRecord {
+  font-size: 50%;
+}
+.teamScore {
+  flex-basis: 16%;
+  font-size: 120%;
+  margin-left: auto;
+}

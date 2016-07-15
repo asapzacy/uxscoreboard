@@ -22,9 +22,9 @@ class Game extends Component {
   render() {
 
     const game = this.props.game,
-          inning = game.inning,
-          inningState = game.top_inning,
+          inning = game.status.inning,
           status = game.status.status,
+          inningState = game.top_inning,
           time = game.time,
           ampm = game.ampm,
           tz = game.time_zone,
@@ -68,14 +68,14 @@ class Game extends Component {
           code={game.away_file_code}
           ls={game.away_loss}
           ws={game.away_win}
-          runs={game.away_team_runs}
+          runs={game.linescore.r.away}
         />
         <Team
           name={game.home_team_name}
           code={game.home_file_code}
           ls={game.home_loss}
           ws={game.home_win}
-          runs={game.home_team_runs}
+          runs={game.linescore.r.home}
         />
 
         <span className={expandIcon} onClick={() => this.expandGame()}>
@@ -88,8 +88,9 @@ class Game extends Component {
             ? <Details
                 venue={game.venue}
                 location={game.location}
-
-
+                linescore={game.linescore}
+                awayAbbr={game.away_name_abbrev}
+                homeAbbr={game.home_name_abbrev}
               />
             : null
           }

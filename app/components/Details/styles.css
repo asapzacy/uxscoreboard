@@ -1,17 +1,43 @@
 .detailsContainer {
-  height:100px;
   background: #f5f5f5;
   padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.locationInfo {
+.locationContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding: 1em 2em;
 }
 .weatherInfo {
 
+}
+.linescoreContainer {
+  padding: 1em;
+  text-align: center;
+  font-size: 0.9em;
+}
+table {
+  border-collapse: collapse;
+}
+thead {
+  border-bottom: 2px solid #e0e0e0;
+}
+tr {
+  height: 2.6em;
+}
+th, td {
+  width: 2.4em;
+}
+thead th:first-child, tbody th:first-child {
+  border-right: 2px solid #e0e0e0;
+  width: 4.2em;
+  text-align: left;
+}
+thead th:nth-last-child(3), tbody td:nth-last-child(3) {
+  border-left: 2px solid #e0e0e0;
+}
+tbody td:nth-last-child(-n+3), thead th:nth-last-child(-n+3) {
+  text-align: right;
+  font-weight: 700;
+  width: 2.2em;
 }

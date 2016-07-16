@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Scoreboard, Game } from 'components'
-import { getMlbScores } from 'helpers/api'
+import { formatDateUrl, getMlbScores } from 'helpers/api'
 
 class ScoreboardContainer extends Component {
   constructor() {
@@ -12,16 +12,32 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
-    this.makeRequest()
+    let x = new Date()
+    let y = formatDateUrl(x)
+    this.setState({
+      date: y
+    })
+    this.makeRequest(y)
   }
-  makeRequest() {
-    getMlbScores()
+  componentWillReceiveProps(nextProps) {
+    this.makeRequest(nextProps.routeParams.date)
+  }
+  makeRequest(date) {
+    getMlbScores(date)
       .then((currentScores) => {
         this.setState({
           isLoading: false,
           scores: currentScores.data.games
         })
       })
+  }
+  handleClick(day) {
+    this.context.router.push({
+      pathname: '/scores/' + this.props.routeParams.date,
+      state: {
+        day
+      }
+    })
   }
   render() {
     return (
@@ -30,7 +46,8 @@ class ScoreboardContainer extends Component {
           ? <Scoreboard
               isLoading={this.state.isLoading}
               scores={this.state.scores}
-              date={this.state.scores.date}
+              date={this.props.routeParams.date ? this.props.routeParams.date : this.state.date}
+              handleClick={(day) => this.handleClick(day)}
             />
           : null
         }

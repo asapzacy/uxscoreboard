@@ -1,5 +1,6 @@
 import React from 'react'
-import { detailsContainer, locationContainer, linescoreContainer } from './styles.css'
+import { detailsContainer, locationContainer,
+  linescoreContainer } from './styles.css'
 
 
 export default function Details({venue, location, linescore, awayAbbr, homeAbbr}) {

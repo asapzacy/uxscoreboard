@@ -2,12 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2.5em 0 1.25em;
+  font-size: 1.25em;
 }
 .dateContainer li {
-  margin: 0 1em;
+  margin: 0 1.5em;
 }
 .currentDay {
-  font-size: 3em;
+  font-size: 160%;
 }
 .dayContainer {
   display: flex;
@@ -15,9 +17,10 @@
 }
 
 .upperStr {
-  color: grey;
+  color: #070707;
 }
 
 .lowerStr {
-  color: purple;
+  font-size: 80%;
+  color: #5a5a5a;
 }

@@ -68,14 +68,14 @@ class Game extends Component {
           code={game.away_file_code}
           ls={game.away_loss}
           ws={game.away_win}
-          runs={0}
+          runs={game.linescore.r.away}
         />
         <Team
           name={game.home_team_name}
           code={game.home_file_code}
           ls={game.home_loss}
           ws={game.home_win}
-          runs={0}
+          runs={game.linescore.r.home}
         />
 
         <span className={expandIcon} onClick={() => this.expandGame()}>

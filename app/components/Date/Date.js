@@ -29,8 +29,8 @@ export default function Date({date}) {
 function Day({date, diff}) {
   const day = moment(date).add(diff, 'days')
   const url = day.format('YYYYMMDD')
-  const weekDay = day.format('dddd')
-  const monthDay = day.format('MMMM D')
+  const weekDay = day.format('ddd').toLowerCase()
+  const monthDay = day.format('MMM D')
   return (
     <Link to={`/mlb/scores/${url}`} className={dayContainer}>
       <span className={upperStr}>{weekDay}</span>

@@ -12,9 +12,9 @@ export default function ScoreboardUI({date, scores, handleClick}) {
         <Date date={date} />
       </div>
       <div className={scoresContainer}>
-      {scores === undefined
+      {scores.game === undefined
         ? <h1>{'no games today'}</h1>
-        : scores.game.map((item) => <Game key={item.game_pk} game={item} />)
+        : scores.game.map((item) => (<Game key={item.game_pk} game={item} />))
       }
       </div>
     </div>

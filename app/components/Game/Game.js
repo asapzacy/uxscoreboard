@@ -24,10 +24,7 @@ class Game extends Component {
     const game = this.props.game,
           inning = game.status.inning,
           status = game.status.status,
-          inningState = game.top_inning,
-          time = game.time,
-          ampm = game.ampm,
-          tz = game.time_zone,
+          inningState = game.status.inning,
           outs = game.outs
 
     const gameState = () => {
@@ -41,7 +38,7 @@ class Game extends Component {
       return result
     }
 
-    const getPreGame = () => `${time} ${ampm} ${tz}`
+    const getPreGame = () => `${game.time} ${game.ampm} ${game.time_zone}`
     const getMidGame = () => inningState === 'Y' ? `Top ${inning}` : `Bottom ${inning}`
     const getPostGame = () => inning > 9 ? `Final/${inning}` : `Final`
     const getOuts = () => outs === 1 ? `${outs} out` : `${outs} outs`

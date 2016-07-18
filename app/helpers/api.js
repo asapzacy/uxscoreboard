@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function getMlbScores(dt) {
   if (dt === undefined)
-    dt = formatDateUrl(new Date())  
+    dt = formatDateUrl(new Date())
   const yyyy = dt.slice(0,4)
   const mm = dt.slice(4,6)
   const dd = dt.slice(6,8)

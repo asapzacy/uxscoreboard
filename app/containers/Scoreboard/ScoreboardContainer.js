@@ -13,18 +13,42 @@ class ScoreboardContainer extends Component {
   }
   componentDidMount() {
     let x = new Date()
-    let y = formatDateUrl(x)
+    let y = formatDateUrl(new Date())
     this.setState({
-      date: y
+      date: this.props.routeParams.date || y
     })
-    this.makeRequest(y)
+    this.makeRequest(this.props.routeParams.date)
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
+  cleanGameData(scores) {
+    if (scores.game !== undefined) {
+     scores.game.map((game) => {
+      if (game.linescore === undefined) {
+        game.linescore = {
+          r: { away: null, home: null },
+          h: { away: null, home: null },
+          e: { away: null, home: null },
+          inning: { 0: { away: null, home: null },
+                    1: { away: null, home: null },
+                    2: { away: null, home: null },
+                    3: { away: null, home: null },
+                    4: { away: null, home: null },
+                    5: { away: null, home: null },
+                    6: { away: null, home: null },
+                    7: { away: null, home: null },
+                    8: { away: null, home: null }
+                  }
+        }
+      }
+    })
+  }
+  }
   makeRequest(date) {
     getMlbScores(date)
       .then((currentScores) => {
+        this.cleanGameData(currentScores.data.games)
         this.setState({
           isLoading: false,
           scores: currentScores.data.games

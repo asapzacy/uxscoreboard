@@ -63,7 +63,7 @@ export function BoxScore({linescore, awayAbbr, homeAbbr}) {
           <td>{linescore.inning[5].home}</td>
           <td>{linescore.inning[6].home}</td>
           <td>{linescore.inning[7].home}</td>
-          <td>{linescore.inning[8].home ? linescore.inning[8].home : '-'}</td>
+          <td>{linescore.inning[8].home}</td>
           <td>{linescore.r.home}</td>
           <td>{linescore.h.home}</td>
           <td>{linescore.e.home}</td>

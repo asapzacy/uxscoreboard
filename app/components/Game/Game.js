@@ -24,8 +24,10 @@ class Game extends Component {
     const game = this.props.game,
           inning = game.status.inning,
           status = game.status.status,
-          inningState = game.status.inning,
-          outs = game.outs
+          inningState = game.status.inning_state,
+          outs = game.status.o,
+          balls = game.status.b,
+          strikes = game.status.s
 
     const gameState = () => {
       let result = ''
@@ -76,18 +78,20 @@ class Game extends Component {
         />
 
         <span className={expandIcon} onClick={() => this.expandGame()}>
-          { this.state.expanded
-            ? <Up />
-            : <Down />
-          }
+          { this.state.expanded ? <Up /> : <Down /> }
         </span>
           { this.state.expanded
             ? <Details
+                awayTeam={game.away_team_name}
+                homeTeam={game.home_team_name}
                 venue={game.venue}
                 location={game.location}
+                date={game.original_date}
                 linescore={game.linescore}
                 awayAbbr={game.away_name_abbrev}
                 homeAbbr={game.home_name_abbrev}
+                awayPitcher={game.away_probable_pitcher}
+                homePitcher={game.home_probable_pitcher}
               />
             : null
           }

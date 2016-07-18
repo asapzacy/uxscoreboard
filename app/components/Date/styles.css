@@ -8,7 +8,7 @@
 .dateContainer li {
   margin: 0 1.5em;
 }
-.currentDay {
+.currentSelection {
   font-size: 160%;
 }
 .dayContainer {

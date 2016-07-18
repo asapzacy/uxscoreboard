@@ -1,0 +1,23 @@
+.dateContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dateContainer li {
+  margin: 0 1em;
+}
+.currentDay {
+  font-size: 3em;
+}
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.upperStr {
+  color: grey;
+}
+
+.lowerStr {
+  color: purple;
+}

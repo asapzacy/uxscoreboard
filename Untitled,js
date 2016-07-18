@@ -1,0 +1,9 @@
+<li><Link to={'/mlb/scores/'+Yesterdayy({date})}>{Future(date, 1)}</Link></li>
+
+
+<li><Link to={'/mlb/scores/'+dateUrl(date,-3)}><span>{dateUpperStr(date,-3)}</span><span>{dateLowerStr(date,-3)}</span></Link></li>
+<li><Link to={'/mlb/scores/'+dateUrl(date,-2)}><span>{dateUpperStr(date,-2)}</span><span>{dateLowerStr(date,-2)}</span></Link></li>
+<li><Link to={'/mlb/scores/'+dateUrl(date,-1)}><span>{dateUpperStr(date,-1)}</span><span>{dateLowerStr(date,-1)}</span></Link></li>
+<li><Link to={'/mlb/scores/'+dateUrl(date,1)}><span>{dateUpperStr(date,1)}</span><span>{dateLowerStr(date,1)}</span></Link></li>
+<li><Link to={'/mlb/scores/'+dateUrl(date,2)}><span>{dateUpperStr(date,2)}</span><span>{dateLowerStr(date,2)}</span></Link></li>
+<li><Link to={'/mlb/scores/'+dateUrl(date,3)}><span>{dateUpperStr(date,3)}</span><span>{dateLowerStr(date,3)}</span></Link></li>

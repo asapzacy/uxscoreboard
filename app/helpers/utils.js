@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 const monthsOfTheYear = {
   "1": "January",
   "2": "February",
@@ -11,6 +13,10 @@ const monthsOfTheYear = {
   "10": "October",
   "11": "November",
   "12": "December"
+}
+
+export function formatDetailsDate(date) {
+  return moment(new Date(date)).format('MMMM D, YYYY')
 }
 
 export function formatDate(dt) {

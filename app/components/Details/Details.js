@@ -1,14 +1,12 @@
 import React from 'react'
-import moment from 'moment'
+import { formatDetailsDate } from 'helpers/utils'
+import OpenCircle from 'react-icons/lib/fa/circle-thin'
+import FullCircle from 'react-icons/lib/fa/circle'
 import { detailsContainer, aboutContainer, linescoreContainer,
-  pitchersContainer, pitchersTeam } from './styles.css'
-
-function formatDetailsDate(date) {
-  return moment(new Date(date)).format('MMMM D, YYYY')
-}
+  pitchersContainer, pitchersTeam, diamond, circles, bso} from './styles.css'
 
 export default function Details({awayTeam, homeTeam, venue, location, date,
-  linescore, awayAbbr, homeAbbr, awayPitcher, homePitcher}) {
+  linescore, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs}) {
   return (
     <div className={detailsContainer}>
       <div className={aboutContainer}>
@@ -19,25 +17,81 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
         <BoxScore linescore={linescore} awayAbbr={awayAbbr} homeAbbr={homeAbbr} />
       </div>
       <div className={pitchersContainer}>
-        <Pitchers
+        <MidGameInfo
           awayAbbr={awayAbbr}
-          awayFirst={awayPitcher.first}
-          awayLast={awayPitcher.last}
-          awayEra={awayPitcher.era}
-          awayLs={awayPitcher.losses}
-          awayWs={awayPitcher.wins}
           homeAbbr={homeAbbr}
-          homeFirst={homePitcher.first}
-          homeLast={homePitcher.last}
-          homeEra={homePitcher.era}
-          homeLs={homePitcher.losses}
-          homeWs={homePitcher.wins}
+          pitcher={pitcher}
+          batter={batter}
+          pbp={pbp}
+          runners={runners}
+          balls={balls}
+          strikes={strikes}
+          outs={outs}
         />
       </div>
     </div>
   )
 }
 
+function getBaseRunners(runners) {
+  let img = '0b'
+  if (runners.runner_on_1b)
+    img += '1b'
+  else if (runners.runner_on_2b)
+    img += '2b'
+  else if (runners.runner_on_3b)
+    img += '3b'
+  return img
+}
+
+const getBalls = (balls) => {
+  switch(balls) {
+    case '3': return <span className={circles}><FullCircle /><FullCircle /><FullCircle /><FullCircle /></span>
+    case '3': return <span className={circles}><FullCircle /><FullCircle /><FullCircle /><OpenCircle /></span>
+    case '2': return <span className={circles}><FullCircle /><FullCircle /><OpenCircle /><OpenCircle /></span>
+    case '1': return <span className={circles}><FullCircle /><OpenCircle /><OpenCircle /><OpenCircle /></span>
+    default: return <span className={circles}><OpenCircle /><OpenCircle /><OpenCircle /><OpenCircle /></span>
+  }
+}
+const getStrikesOrOuts = (SOs) => {
+  switch(SOs) {
+    case '3': return <span className={circles}><FullCircle /><FullCircle /><FullCircle /></span>
+    case '2': return <span className={circles}><FullCircle /><FullCircle /><OpenCircle /></span>
+    case '1': return <span className={circles}><FullCircle /><OpenCircle /><OpenCircle /></span>
+    default: return <span className={circles}><OpenCircle /><OpenCircle /><OpenCircle /></span>
+  }
+}
+
+function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
+  strikes, outs}) {
+  return (
+    <div>
+      <div className={diamond}>
+        <img src={`assets/img/mlb/other/diamond-${getBaseRunners(runners)}.svg`} />
+        <div>
+          <span className={bso}><strong>{`b:`}</strong>{getBalls(balls)}</span><br />
+          <span className={bso}><strong>{`s:`}</strong>{getStrikesOrOuts(strikes)}</span><br />
+          <span className={bso}><strong>{`o:`}</strong>{getStrikesOrOuts(outs)}</span><br />
+        </div>
+      </div>
+      <div>
+        <h5>{'Current Matchup:'}</h5>
+        <span className={pitchersTeam}>{`P: `}</span>
+        <span>{`${pitcher.first} ${pitcher.last} (${pitcher.ip} ip, ${pitcher.er} er)`}</span>
+        <br />
+        <span className={pitchersTeam}>{`H: `}</span>
+        <span>{`${batter.first} ${batter.last} (${batter.h}-${batter.ab})`}</span>
+        <br />
+      </div>
+      <div>
+        <br />
+        <h5>{'Last Play:'}</h5>
+        <span>{pbp.last}</span>
+      </div>
+    </div>
+
+  )
+}
 
 function Pitchers({awayAbbr, awayFirst, awayLast, awayLs, awayWs, awayEra,
   homeAbbr, homeFirst, homeLast, homeLs, homeWs, homeEra}) {
@@ -79,30 +133,30 @@ function BoxScore({linescore, awayAbbr, homeAbbr}) {
       <tbody>
         <tr>
           <th>{awayAbbr}</th>
-          <td>{linescore.inning[0].away}</td>
-          <td>{linescore.inning[1].away}</td>
-          <td>{linescore.inning[2].away}</td>
-          <td>{linescore.inning[3].away}</td>
-          <td>{linescore.inning[4].away}</td>
-          <td>{linescore.inning[5].away}</td>
-          <td>{linescore.inning[6].away}</td>
-          <td>{linescore.inning[7].away}</td>
-          <td>{linescore.inning[8].away}</td>
+          <td>{linescore.inning[0] ? linescore.inning[0].away : null}</td>
+          <td>{linescore.inning[1] ? linescore.inning[1].away : null}</td>
+          <td>{linescore.inning[2] ? linescore.inning[2].away : null}</td>
+          <td>{linescore.inning[3] ? linescore.inning[3].away : null}</td>
+          <td>{linescore.inning[4] ? linescore.inning[4].away : null}</td>
+          <td>{linescore.inning[5] ? linescore.inning[5].away : null}</td>
+          <td>{linescore.inning[6] ? linescore.inning[6].away : null}</td>
+          <td>{linescore.inning[7] ? linescore.inning[7].away : null}</td>
+          <td>{linescore.inning[8] ? linescore.inning[8].away : null}</td>
           <td>{linescore.r.away}</td>
           <td>{linescore.h.away}</td>
           <td>{linescore.e.away}</td>
         </tr>
         <tr>
           <th>{homeAbbr}</th>
-          <td>{linescore.inning[0].home}</td>
-          <td>{linescore.inning[1].home}</td>
-          <td>{linescore.inning[2].home}</td>
-          <td>{linescore.inning[3].home}</td>
-          <td>{linescore.inning[4].home}</td>
-          <td>{linescore.inning[5].home}</td>
-          <td>{linescore.inning[6].home}</td>
-          <td>{linescore.inning[7].home}</td>
-          <td>{linescore.inning[8].home}</td>
+          <td>{linescore.inning[0] ? linescore.inning[0].home : null}</td>
+          <td>{linescore.inning[1] ? linescore.inning[1].home : null}</td>
+          <td>{linescore.inning[2] ? linescore.inning[2].home : null}</td>
+          <td>{linescore.inning[3] ? linescore.inning[3].home : null}</td>
+          <td>{linescore.inning[4] ? linescore.inning[4].home : null}</td>
+          <td>{linescore.inning[5] ? linescore.inning[5].home : null}</td>
+          <td>{linescore.inning[6] ? linescore.inning[6].home : null}</td>
+          <td>{linescore.inning[7] ? linescore.inning[7].home : null}</td>
+          <td>{linescore.inning[8] ? linescore.inning[8].home : null}</td>
           <td>{linescore.r.home}</td>
           <td>{linescore.h.home}</td>
           <td>{linescore.e.home}</td>

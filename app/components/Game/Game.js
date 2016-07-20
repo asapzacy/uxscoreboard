@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Team, Details } from 'components'
+import { GameState, Team, Details } from 'components'
 import Down from 'react-icons/lib/fa/angle-down'
 import Up from 'react-icons/lib/fa/angle-up'
 import { gameContainer, gameInfo, outs, expandIcon, test } from './styles.css'
@@ -21,47 +21,20 @@ class Game extends Component {
 
   render() {
 
-    const game = this.props.game,
-          inning = game.status.inning,
-          status = game.status.status,
-          inningState = game.status.inning_state,
-          outs = game.status.o,
-          balls = game.status.b,
-          strikes = game.status.s
-
-    const gameState = () => {
-      let result = ''
-      if (status === 'Pre Game' || status === 'Preview')
-        result = getPreGame()
-      else if (status === 'In Progress')
-        result = getMidGame()
-      else if (status === 'Final' || status === 'Game Over')
-        result = getPostGame()
-      return result
-    }
-
-    const getPreGame = () => `${game.time} ${game.ampm} ${game.time_zone}`
-    const getMidGame = () => inningState === 'Y' ? `Top ${inning}` : `Bottom ${inning}`
-    const getPostGame = () => inning > 9 ? `Final/${inning}` : `Final`
-    const getOuts = () => outs === 1 ? `${outs} out` : `${outs} outs`
-
-    const inningSuffix = () => {
-      switch(inning) {
-        case '1' || '21': return 'st'
-        case '2' || '22': return 'nd'
-        case '3' || '23': return 'rd'
-        default: return 'th'
-      }
-    }
+    let game = this.props.game,
+        status = game.status.status
     return (
       <div className={gameContainer}>
-
-      <div className={gameInfo}>
-        <span>{gameState()}
-          { status === 'In Progress' ? <sup>{inningSuffix()}</sup> : null }
-        </span>
-          { status === 'In Progress' ? <span>{getOuts()}</span> : null }
-      </div>
+        <GameState
+          status={game.status.status}
+          time={game.time}
+          ampm={game.ampm}
+          tz={game.time_zone}
+          inning={game.status.inning}
+          inningState={game.status.inning_state}
+          outs={game.status.o}
+          reason={game.status.reason}
+        />
         <Team
           name={game.away_team_name}
           code={game.away_file_code}
@@ -76,25 +49,29 @@ class Game extends Component {
           ws={game.home_win}
           runs={game.linescore.r.home}
         />
-
-        <span className={expandIcon} onClick={() => this.expandGame()}>
-          { this.state.expanded ? <Up /> : <Down /> }
-        </span>
-          { this.state.expanded
-            ? <Details
-                awayTeam={game.away_team_name}
-                homeTeam={game.home_team_name}
-                venue={game.venue}
-                location={game.location}
-                date={game.original_date}
-                linescore={game.linescore}
-                awayAbbr={game.away_name_abbrev}
-                homeAbbr={game.home_name_abbrev}
-                awayPitcher={game.away_probable_pitcher}
-                homePitcher={game.home_probable_pitcher}
-              />
-            : null
-          }
+      <span className={expandIcon} onClick={() => this.expandGame()}>
+        { this.state.expanded ? <Up /> : <Down /> }
+      </span>
+      { this.state.expanded
+        ? <Details
+            awayTeam={game.away_team_name}
+            homeTeam={game.home_team_name}
+            venue={game.venue}
+            location={game.location}
+            date={game.original_date}
+            linescore={game.linescore}
+            awayAbbr={game.away_name_abbrev}
+            homeAbbr={game.home_name_abbrev}
+            pitcher={game.pitcher}
+            batter={game.batter}
+            pbp={game.pbp}
+            runners={game.runners_on_base}
+            balls={game.status.b}
+            strikes={game.status.s}
+            outs={game.status.o}
+          />
+        : null
+      }
       </div>
     )
   }

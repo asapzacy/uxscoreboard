@@ -72,3 +72,19 @@ tbody td:nth-last-child(-n+3), thead th:nth-last-child(-n+3) {
 .bso {
   display: flex;
 }
+
+h5 {
+  text-decoration: underline;
+}
+.circle {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin: 1px;
+  border-radius: 50%;
+  border: 1px solid #070707;
+}
+.circleFilled {
+  composes: circle;
+  background: #070707;
+}

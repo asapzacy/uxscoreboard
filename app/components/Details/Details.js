@@ -1,12 +1,13 @@
 import React from 'react'
-import { formatDetailsDate } from 'helpers/utils'
+import { formatDetailsDate, runnersOnBase, ballCount, strikeAndOutCount } from 'helpers/utils'
 import OpenCircle from 'react-icons/lib/fa/circle-thin'
 import FullCircle from 'react-icons/lib/fa/circle'
 import { detailsContainer, aboutContainer, linescoreContainer,
-  pitchersContainer, pitchersTeam, diamond, circles, bso} from './styles.css'
+  pitchersContainer, pitchersTeam, diamond, circles, bso, circle, circleFilled} from './styles.css'
 
 export default function Details({awayTeam, homeTeam, venue, location, date,
-  linescore, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs}) {
+  linescore, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs,
+ inningState}) {
   return (
     <div className={detailsContainer}>
       <div className={aboutContainer}>
@@ -27,60 +28,42 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
           balls={balls}
           strikes={strikes}
           outs={outs}
+          inningState={inningState}
         />
       </div>
     </div>
   )
 }
 
-function getBaseRunners(runners) {
-  let img = '0b'
-  if (runners.runner_on_1b)
-    img += '1b'
-  else if (runners.runner_on_2b)
-    img += '2b'
-  else if (runners.runner_on_3b)
-    img += '3b'
-  return img
-}
-
-const getBalls = (balls) => {
-  switch(balls) {
-    case '3': return <span className={circles}><FullCircle /><FullCircle /><FullCircle /><FullCircle /></span>
-    case '3': return <span className={circles}><FullCircle /><FullCircle /><FullCircle /><OpenCircle /></span>
-    case '2': return <span className={circles}><FullCircle /><FullCircle /><OpenCircle /><OpenCircle /></span>
-    case '1': return <span className={circles}><FullCircle /><OpenCircle /><OpenCircle /><OpenCircle /></span>
-    default: return <span className={circles}><OpenCircle /><OpenCircle /><OpenCircle /><OpenCircle /></span>
-  }
-}
-const getStrikesOrOuts = (SOs) => {
-  switch(SOs) {
-    case '3': return <span className={circles}><FullCircle /><FullCircle /><FullCircle /></span>
-    case '2': return <span className={circles}><FullCircle /><FullCircle /><OpenCircle /></span>
-    case '1': return <span className={circles}><FullCircle /><OpenCircle /><OpenCircle /></span>
-    default: return <span className={circles}><OpenCircle /><OpenCircle /><OpenCircle /></span>
-  }
-}
-
 function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
-  strikes, outs}) {
+  strikes, outs, inningState}) {
+    console.log(runners)
   return (
     <div>
       <div className={diamond}>
-        <img src={`assets/img/mlb/other/diamond-${getBaseRunners(runners)}.svg`} />
+        <img src={`assets/img/mlb/other/diamond-${runnerOnBase(runners)}.svg`} />
         <div>
-          <span className={bso}><strong>{`b:`}</strong>{getBalls(balls)}</span><br />
-          <span className={bso}><strong>{`s:`}</strong>{getStrikesOrOuts(strikes)}</span><br />
-          <span className={bso}><strong>{`o:`}</strong>{getStrikesOrOuts(outs)}</span><br />
+          <span className={bso}>
+            <span className={pitchersTeam}>{`b: `}</span>
+            <span dangerouslySetInnerHTML={getBalls(balls, inningState)} />
+          </span>
+          <span className={bso}>
+            <span className={pitchersTeam}>{`s: `}</span>
+            <span dangerouslySetInnerHTML={getBalls(balls, inningState)} />
+          </span>
+          <span className={bso}>
+            <span className={pitchersTeam}>{`o: `}</span>
+            <span dangerouslySetInnerHTML={getBalls(balls, inningState)} />
+          </span>
         </div>
       </div>
       <div>
         <h5>{'Current Matchup:'}</h5>
         <span className={pitchersTeam}>{`P: `}</span>
-        <span>{`${pitcher.first} ${pitcher.last} (${pitcher.ip} ip, ${pitcher.er} er)`}</span>
+        <span>{`${pitcher.first.charAt(0)}. ${pitcher.last} (${pitcher.ip}ip, ${pitcher.er}er)`}</span>
         <br />
         <span className={pitchersTeam}>{`H: `}</span>
-        <span>{`${batter.first} ${batter.last} (${batter.h}-${batter.ab})`}</span>
+        <span>{`${batter.first.charAt(0)}. ${batter.last} (${batter.h}-${batter.ab})`}</span>
         <br />
       </div>
       <div>
@@ -100,11 +83,11 @@ function Pitchers({awayAbbr, awayFirst, awayLast, awayLs, awayWs, awayEra,
       <h5>{'Starting Pitchers'}</h5>
       <div>
         <span className={pitchersTeam}>{`${awayAbbr}: `}</span>
-        <span>{`${awayFirst} ${awayLast} (${awayLs}-${awayWs}, ${awayEra})`}</span>
+        <span>{`${awayFirst.charAt(0)} ${awayLast} (${awayLs}-${awayWs}, ${awayEra})`}</span>
       </div>
       <div>
         <span className={pitchersTeam}>{`${homeAbbr}: `}</span>
-        <span>{`${homeFirst} ${homeLast} (${homeLs}-${homeWs}, ${homeEra})`}</span>
+        <span>{`${homeFirst.charAt(0)} ${homeLast} (${homeLs}-${homeWs}, ${homeEra})`}</span>
       </div>
     </div>
   )

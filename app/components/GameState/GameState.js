@@ -57,4 +57,14 @@ export default function GameState({status, time, ampm, tz, inning,
       </div>
     )
   }
+  else if (status === 'Delayed') {
+    return (
+      <div className={gameInfo}>
+        <span>{`${inningState} ${inning}`}
+          <sup>{getInningSuffix()}</sup>
+        </span>
+        <span><small>{`${status} (${reason})`}</small></span>
+      </div>
+    )
+  }
 }

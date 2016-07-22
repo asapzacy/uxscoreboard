@@ -3,11 +3,12 @@ import { formatDetailsDate, runnersOnBase, ballCount, strikeAndOutCount } from '
 import OpenCircle from 'react-icons/lib/fa/circle-thin'
 import FullCircle from 'react-icons/lib/fa/circle'
 import { detailsContainer, aboutContainer, linescoreContainer,
-  pitchersContainer, pitchersTeam, diamond, circles, bso, circle, circleFilled} from './styles.css'
+  midGameDetails, pitchersTeam, diamond, circles, bso, circle, circleFilled,
+ ballsAndStrikes, baseRunners, field, container} from './styles.css'
 
 export default function Details({awayTeam, homeTeam, venue, location, date,
-  linescore, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs,
- inningState}) {
+  linescore, status, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs,
+ inningState, spAway, spHome}) {
   return (
     <div className={detailsContainer}>
       <div className={aboutContainer}>
@@ -17,23 +18,49 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
       <div className={linescoreContainer}>
         <BoxScore linescore={linescore} awayAbbr={awayAbbr} homeAbbr={homeAbbr} />
       </div>
-      <div className={pitchersContainer}>
-        <MidGameInfo
-          awayAbbr={awayAbbr}
-          homeAbbr={homeAbbr}
-          pitcher={pitcher}
-          batter={batter}
-          pbp={pbp}
-          runners={runners}
-          balls={balls}
-          strikes={strikes}
-          outs={outs}
-          inningState={inningState}
-        />
+      <div className={midGameDetails}>
+        {status === 'Warmup' || status === 'Pre-Game' || status === 'Preview'
+          ? <PreGameInfo
+              awayAbbr={awayAbbr}
+              homeAbbr={homeAbbr}
+              spAway={spAway}
+              spHome={spHome}
+            />
+          : status === 'In Progress' || status === 'Delayed'
+            ? <MidGameInfo
+                awayAbbr={awayAbbr}
+                homeAbbr={homeAbbr}
+                pitcher={pitcher}
+                batter={batter}
+                pbp={pbp}
+                runners={runners}
+                balls={balls}
+                strikes={strikes}
+                outs={outs}
+                inningState={inningState}
+              />
+            : null
+          }
       </div>
     </div>
   )
 }
+function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome}) {
+  return (
+    <div>
+      <div>
+        <h5>{'Starting Pitchers:'}</h5>
+        <span className={pitchersTeam}>{`${awayAbbr}: `}</span>
+        <span>{`${spAway.first} ${spAway.last} - ${spAway.throwinghand.toLowerCase()} - (${spAway.wins}-${spAway.losses}, ${spAway.era} era)`}</span>
+        <br />
+        <span className={pitchersTeam}>{`${homeAbbr}: `}</span>
+        <span>{`${spHome.first} ${spHome.last} - ${spAway.throwinghand.toLowerCase()} - (${spHome.wins}-${spHome.losses}, ${spHome.era} era)`}</span>
+        <br />
+      </div>
+    </div>
+  )
+}
+
 
 function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
   strikes, outs, inningState}) {
@@ -41,20 +68,42 @@ function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
   return (
     <div>
       <div className={diamond}>
-        <img src={`assets/img/mlb/other/diamond-${runnerOnBase(runners)}.svg`} />
-        <div>
-          <span className={bso}>
-            <span className={pitchersTeam}>{`b: `}</span>
-            <span dangerouslySetInnerHTML={getBalls(balls, inningState)} />
-          </span>
-          <span className={bso}>
-            <span className={pitchersTeam}>{`s: `}</span>
-            <span dangerouslySetInnerHTML={getBalls(balls, inningState)} />
-          </span>
-          <span className={bso}>
-            <span className={pitchersTeam}>{`o: `}</span>
-            <span dangerouslySetInnerHTML={getBalls(balls, inningState)} />
-          </span>
+        <div className={field}>
+          <img src={`assets/img/mlb/other/diamond-${runnersOnBase(runners)}.svg`} />
+        </div>
+        <div className={container}>
+          <div className={baseRunners}>
+            { Object.keys(runners).length > 1
+              ? <h5>{'Base Runners:'}</h5>
+              : null
+            }
+            { runners.runner_on_1b
+              ? <span><strong>{`1b: `}</strong>{`${runners.runner_on_1b.first.charAt(0)}. ${runners.runner_on_1b.last}`}</span>
+              : null
+            }
+            { runners.runner_on_2b
+              ? <span><strong>{`2b: `}</strong>{`${runners.runner_on_2b.first.charAt(0)}. ${runners.runner_on_2b.last}`}</span>
+              : null
+            }
+            { runners.runner_on_3b
+              ? <span><strong>{`3b: `}</strong>{`${runners.runner_on_3b.first.charAt(0)}. ${runners.runner_on_3b.last}`}</span>
+              : null
+            }
+          </div>
+          <div className={ballsAndStrikes}>
+            <span className={bso}>
+              <span className={pitchersTeam}>{`b: `}</span>
+              <span dangerouslySetInnerHTML={ballCount(balls, inningState)}></span>
+            </span>
+            <span className={bso}>
+              <span className={pitchersTeam}>{`s: `}</span>
+              <span dangerouslySetInnerHTML={strikeAndOutCount(strikes, inningState)}></span>
+            </span>
+            <span className={bso}>
+              <span className={pitchersTeam}>{`o: `}</span>
+              <span dangerouslySetInnerHTML={strikeAndOutCount(outs, inningState)}></span>
+            </span>
+          </div>
         </div>
       </div>
       <div>

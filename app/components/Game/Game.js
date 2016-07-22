@@ -54,6 +54,7 @@ class Game extends Component {
       </span>
       { this.state.expanded
         ? <Details
+            status={game.status.status}
             awayTeam={game.away_team_name}
             homeTeam={game.home_team_name}
             venue={game.venue}
@@ -62,6 +63,8 @@ class Game extends Component {
             linescore={game.linescore}
             awayAbbr={game.away_name_abbrev}
             homeAbbr={game.home_name_abbrev}
+            spAway={game.away_probable_pitcher}
+            spHome={game.home_probable_pitcher}
             pitcher={game.pitcher}
             batter={game.batter}
             pbp={game.pbp}

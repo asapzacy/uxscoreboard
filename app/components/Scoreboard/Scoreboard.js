@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import { Game, Date } from 'components'
-import { formatDate } from 'helpers/utils'
 import moment from 'moment'
 import { scoreboardContainer, scoresContainer, header, dateContainer } from './styles.css'
 

@@ -67,4 +67,13 @@ export default function GameState({status, time, ampm, tz, inning,
       </div>
     )
   }
+  else if (status === 'Completed Early') {
+    return (
+      <div className={gameInfo}>
+        <span>{`Final/${inning}`}
+        </span>
+        <span><small>{`${status}`}</small></span>
+      </div>
+    )
+  }
 }

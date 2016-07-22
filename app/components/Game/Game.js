@@ -73,6 +73,9 @@ class Game extends Component {
             strikes={game.status.s}
             outs={game.status.o}
             inningState={game.status.inning_state}
+            pWin={game.winning_pitcher}
+            pLoss={game.losing_pitcher}
+            pSave={game.save_pitcher}
           />
         : null
       }

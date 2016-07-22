@@ -8,7 +8,7 @@ import { detailsContainer, aboutContainer, linescoreContainer,
 
 export default function Details({awayTeam, homeTeam, venue, location, date,
   linescore, status, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs,
- inningState, spAway, spHome}) {
+ inningState, spAway, spHome, pWin, pLoss, pSave}) {
   return (
     <div className={detailsContainer}>
       <div className={aboutContainer}>
@@ -19,7 +19,7 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
         <BoxScore linescore={linescore} awayAbbr={awayAbbr} homeAbbr={homeAbbr} />
       </div>
       <div className={midGameDetails}>
-        {status === 'Warmup' || status === 'Pre-Game' || status === 'Preview'
+        {status === 'Warmup' || status === 'Pre-Game' || status === 'Preview' || status === 'Delayed Start' || status === 'Postponed'
           ? <PreGameInfo
               awayAbbr={awayAbbr}
               homeAbbr={homeAbbr}
@@ -39,22 +39,44 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
                 outs={outs}
                 inningState={inningState}
               />
-            : null
+            : status === 'Final' || status === 'Game Over' || status === 'Completed Early'
+              ? <PostGameInfo
+                  pWin={pWin}
+                  pLoss={pLoss}
+                  pSave={pSave}
+                />
+              : null
           }
       </div>
     </div>
   )
 }
+
+function PostGameInfo({pWin, pLoss, pSave}) {
+  return (
+    <div>
+      <h5>{'Pitching Results:'}</h5>
+      <span className={pitchersTeam}><strong>{`Win: `}</strong>{`${pWin.first} ${pWin.last} (${pWin.wins}-${pWin.losses})`}</span>
+      <br />
+      <span className={pitchersTeam}><strong>{`Loss: `}</strong>{`${pLoss.first} ${pLoss.last} (${pLoss.wins}-${pLoss.losses})`}</span>
+      <br />
+      {pSave.first ? <span className={pitchersTeam}><strong>{`Save: `}</strong>{`${pSave.first} ${pSave.last} (${pSave.saves})`}</span> : null}
+    </div>
+  )
+}
+
+
+
 function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome}) {
   return (
     <div>
       <div>
         <h5>{'Starting Pitchers:'}</h5>
         <span className={pitchersTeam}>{`${awayAbbr}: `}</span>
-        <span>{`${spAway.first} ${spAway.last} - ${spAway.throwinghand.toLowerCase()} - (${spAway.wins}-${spAway.losses}, ${spAway.era} era)`}</span>
+        <span>{`${spAway.first} ${spAway.last}, ${spAway.throwinghand.toLowerCase()} (${spAway.wins}-${spAway.losses}, ${spAway.era} era)`}</span>
         <br />
         <span className={pitchersTeam}>{`${homeAbbr}: `}</span>
-        <span>{`${spHome.first} ${spHome.last} - ${spAway.throwinghand.toLowerCase()} - (${spHome.wins}-${spHome.losses}, ${spHome.era} era)`}</span>
+        <span>{`${spHome.first} ${spHome.last}, ${spAway.throwinghand.toLowerCase()} (${spHome.wins}-${spHome.losses}, ${spHome.era} era)`}</span>
         <br />
       </div>
     </div>
@@ -64,7 +86,6 @@ function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome}) {
 
 function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
   strikes, outs, inningState}) {
-    console.log(runners)
   return (
     <div>
       <div className={diamond}>
@@ -143,6 +164,7 @@ function Pitchers({awayAbbr, awayFirst, awayLast, awayLs, awayWs, awayEra,
 }
 
 function BoxScore({linescore, awayAbbr, homeAbbr}) {
+  console.log(linescore)
   return (
     <table>
       <thead>
@@ -165,30 +187,30 @@ function BoxScore({linescore, awayAbbr, homeAbbr}) {
       <tbody>
         <tr>
           <th>{awayAbbr}</th>
-          <td>{linescore.inning[0] ? linescore.inning[0].away : null}</td>
-          <td>{linescore.inning[1] ? linescore.inning[1].away : null}</td>
-          <td>{linescore.inning[2] ? linescore.inning[2].away : null}</td>
-          <td>{linescore.inning[3] ? linescore.inning[3].away : null}</td>
-          <td>{linescore.inning[4] ? linescore.inning[4].away : null}</td>
-          <td>{linescore.inning[5] ? linescore.inning[5].away : null}</td>
-          <td>{linescore.inning[6] ? linescore.inning[6].away : null}</td>
-          <td>{linescore.inning[7] ? linescore.inning[7].away : null}</td>
-          <td>{linescore.inning[8] ? linescore.inning[8].away : null}</td>
+          <td>{linescore.inning[0] ? linescore.inning[0].away : ''}</td>
+          <td>{linescore.inning[1] ? linescore.inning[1].away : ''}</td>
+          <td>{linescore.inning[2] ? linescore.inning[2].away : ''}</td>
+          <td>{linescore.inning[3] ? linescore.inning[3].away : ''}</td>
+          <td>{linescore.inning[4] ? linescore.inning[4].away : ''}</td>
+          <td>{linescore.inning[5] ? linescore.inning[5].away : ''}</td>
+          <td>{linescore.inning[6] ? linescore.inning[6].away : ''}</td>
+          <td>{linescore.inning[7] ? linescore.inning[7].away : ''}</td>
+          <td>{linescore.inning[8] ? linescore.inning[8].away : ''}</td>
           <td>{linescore.r.away}</td>
           <td>{linescore.h.away}</td>
           <td>{linescore.e.away}</td>
         </tr>
         <tr>
           <th>{homeAbbr}</th>
-          <td>{linescore.inning[0] ? linescore.inning[0].home : null}</td>
-          <td>{linescore.inning[1] ? linescore.inning[1].home : null}</td>
-          <td>{linescore.inning[2] ? linescore.inning[2].home : null}</td>
-          <td>{linescore.inning[3] ? linescore.inning[3].home : null}</td>
-          <td>{linescore.inning[4] ? linescore.inning[4].home : null}</td>
-          <td>{linescore.inning[5] ? linescore.inning[5].home : null}</td>
-          <td>{linescore.inning[6] ? linescore.inning[6].home : null}</td>
-          <td>{linescore.inning[7] ? linescore.inning[7].home : null}</td>
-          <td>{linescore.inning[8] ? linescore.inning[8].home : null}</td>
+          <td>{linescore.inning[0] ? linescore.inning[0].home : ''}</td>
+          <td>{linescore.inning[1] ? linescore.inning[1].home : ''}</td>
+          <td>{linescore.inning[2] ? linescore.inning[2].home : ''}</td>
+          <td>{linescore.inning[3] ? linescore.inning[3].home : ''}</td>
+          <td>{linescore.inning[4] ? linescore.inning[4].home : ''}</td>
+          <td>{linescore.inning[5] ? linescore.inning[5].home : ''}</td>
+          <td>{linescore.inning[6] ? linescore.inning[6].home : ''}</td>
+          <td>{linescore.inning[7] ? linescore.inning[7].home : ''}</td>
+          <td>{linescore.inning[8] ? typeof linescore.inning[8].home !== null && typeof linescore.inning[8].home !== 'undefined' ? linescore.inning[8].home : 'x' : ''}</td>
           <td>{linescore.r.home}</td>
           <td>{linescore.h.home}</td>
           <td>{linescore.e.home}</td>

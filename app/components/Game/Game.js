@@ -76,6 +76,8 @@ class Game extends Component {
             pWin={game.winning_pitcher}
             pLoss={game.losing_pitcher}
             pSave={game.save_pitcher}
+            alerts={game.alerts}
+            review={game.review}
           />
         : null
       }

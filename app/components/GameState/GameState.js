@@ -11,7 +11,7 @@ export default function GameState({status, time, ampm, tz, inning,
       default: return 'th'
     }
   }
-  if (status === 'Warmup' || status === 'Preview') {
+  if (status === 'Preview') {
     return (
       <div className={gameInfo}>
         <span>{`${time} ${ampm} ${tz}`}</span>
@@ -42,7 +42,7 @@ export default function GameState({status, time, ampm, tz, inning,
       </div>
     )
   }
-  else if (status === 'Pre-Game' || status === 'Delayed Start')
+  else if (status === 'Warmup' || status === 'Pre-Game' || status === 'Delayed Start')
     return (
       <div className={gameInfo}>
         <span>{`${time} ${ampm} ${tz}`}</span>
@@ -64,6 +64,16 @@ export default function GameState({status, time, ampm, tz, inning,
           <sup>{getInningSuffix()}</sup>
         </span>
         <span><small>{`${status} (${reason})`}</small></span>
+      </div>
+    )
+  }
+  else if (status === 'Manager Challenge') {
+    return (
+      <div className={gameInfo}>
+        <span>{`${inningState} ${inning}`}
+          <sup>{getInningSuffix()}</sup>
+        </span>
+        <span><small>{`${status}`}</small></span>
       </div>
     )
   }

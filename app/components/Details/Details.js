@@ -8,15 +8,20 @@ import { detailsContainer, aboutContainer, linescoreContainer,
 
 export default function Details({awayTeam, homeTeam, venue, location, date,
   linescore, status, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs,
- inningState, spAway, spHome, pWin, pLoss, pSave}) {
+  inningState, spAway, spHome, pWin, pLoss, pSave, alerts, review}) {
   return (
     <div className={detailsContainer}>
       <div className={aboutContainer}>
         <span><strong>{`${awayTeam} v. ${homeTeam}`}</strong></span>
-        <span><small>{`${formatDetailsDate(date)} - ${location} - ${venue}`}</small></span>
+        <span><small>{`${formatDetailsDate(date)} - ${location} - ${venue}`}</small></span>        <br />
       </div>
       <div className={linescoreContainer}>
-        <BoxScore linescore={linescore} awayAbbr={awayAbbr} homeAbbr={homeAbbr} />
+        <BoxScore
+          awayAbbr={awayAbbr}
+          homeAbbr={homeAbbr}
+          linescore={linescore}
+          review={review}
+        />
       </div>
       <div className={midGameDetails}>
         {status === 'Warmup' || status === 'Pre-Game' || status === 'Preview' || status === 'Delayed Start' || status === 'Postponed'
@@ -25,6 +30,7 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
               homeAbbr={homeAbbr}
               spAway={spAway}
               spHome={spHome}
+              alerts={alerts}
             />
           : status === 'In Progress' || status === 'Delayed'
             ? <MidGameInfo
@@ -38,6 +44,7 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
                 strikes={strikes}
                 outs={outs}
                 inningState={inningState}
+                alerts={alerts}
               />
             : status === 'Final' || status === 'Game Over' || status === 'Completed Early'
               ? <PostGameInfo
@@ -55,7 +62,7 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
 function PostGameInfo({pWin, pLoss, pSave}) {
   return (
     <div>
-      <h5>{'Pitching Results:'}</h5>
+      <h5>{'Results:'}</h5>
       <span className={pitchersTeam}><strong>{`Win: `}</strong>{`${pWin.first} ${pWin.last} (${pWin.wins}-${pWin.losses})`}</span>
       <br />
       <span className={pitchersTeam}><strong>{`Loss: `}</strong>{`${pLoss.first} ${pLoss.last} (${pLoss.wins}-${pLoss.losses})`}</span>
@@ -67,9 +74,13 @@ function PostGameInfo({pWin, pLoss, pSave}) {
 
 
 
-function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome}) {
+function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome, alerts}) {
   return (
     <div>
+      { alerts.text
+          ? <div style={{textAlign: 'center',padding: '1em'}}><span>{`${alerts.text}.`}</span></div>
+          : null
+      }
       <div>
         <h5>{'Starting Pitchers:'}</h5>
         <span className={pitchersTeam}>{`${awayAbbr}: `}</span>
@@ -85,7 +96,7 @@ function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome}) {
 
 
 function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
-  strikes, outs, inningState}) {
+  strikes, outs, inningState, alerts}) {
   return (
     <div>
       <div className={diamond}>
@@ -95,7 +106,7 @@ function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
         <div className={container}>
           <div className={baseRunners}>
             { Object.keys(runners).length > 1
-              ? <h5>{'Base Runners:'}</h5>
+              ? <h5>{'Runners on Base:'}</h5>
               : null
             }
             { runners.runner_on_1b
@@ -127,6 +138,10 @@ function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
           </div>
         </div>
       </div>
+      { alerts.text
+          ? <div style={{textAlign: 'center',padding: '1em'}}><span>{`${alerts.text}.`}</span></div>
+          : null
+      }
       <div>
         <h5>{'Current Matchup:'}</h5>
         <span className={pitchersTeam}>{`P: `}</span>
@@ -137,7 +152,6 @@ function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
         <br />
       </div>
       <div>
-        <br />
         <h5>{'Last Play:'}</h5>
         <span>{pbp.last}</span>
       </div>
@@ -146,25 +160,7 @@ function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
   )
 }
 
-function Pitchers({awayAbbr, awayFirst, awayLast, awayLs, awayWs, awayEra,
-  homeAbbr, homeFirst, homeLast, homeLs, homeWs, homeEra}) {
-  return (
-    <div>
-      <h5>{'Starting Pitchers'}</h5>
-      <div>
-        <span className={pitchersTeam}>{`${awayAbbr}: `}</span>
-        <span>{`${awayFirst.charAt(0)} ${awayLast} (${awayLs}-${awayWs}, ${awayEra})`}</span>
-      </div>
-      <div>
-        <span className={pitchersTeam}>{`${homeAbbr}: `}</span>
-        <span>{`${homeFirst.charAt(0)} ${homeLast} (${homeLs}-${homeWs}, ${homeEra})`}</span>
-      </div>
-    </div>
-  )
-}
-
-function BoxScore({linescore, awayAbbr, homeAbbr}) {
-  console.log(linescore)
+function BoxScore({awayAbbr, homeAbbr, linescore, review}) {
   return (
     <table>
       <thead>
@@ -182,11 +178,12 @@ function BoxScore({linescore, awayAbbr, homeAbbr}) {
           <th>{'r'}</th>
           <th>{'h'}</th>
           <th>{'e'}</th>
+          <th>{'c'}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>{awayAbbr}</th>
+          <th>{awayAbbr.toLowerCase()}</th>
           <td>{linescore.inning[0] ? linescore.inning[0].away : ''}</td>
           <td>{linescore.inning[1] ? linescore.inning[1].away : ''}</td>
           <td>{linescore.inning[2] ? linescore.inning[2].away : ''}</td>
@@ -199,9 +196,10 @@ function BoxScore({linescore, awayAbbr, homeAbbr}) {
           <td>{linescore.r.away}</td>
           <td>{linescore.h.away}</td>
           <td>{linescore.e.away}</td>
+          <td>{review.challenges_away_remaining ? typeof review.challenges_away_remaining !== undefined ? review.challenges_away_remaining >= '1' ? '✓' : '✗' : '-' : ''}</td>
         </tr>
         <tr>
-          <th>{homeAbbr}</th>
+          <th>{homeAbbr.toLowerCase()}</th>
           <td>{linescore.inning[0] ? linescore.inning[0].home : ''}</td>
           <td>{linescore.inning[1] ? linescore.inning[1].home : ''}</td>
           <td>{linescore.inning[2] ? linescore.inning[2].home : ''}</td>
@@ -210,10 +208,11 @@ function BoxScore({linescore, awayAbbr, homeAbbr}) {
           <td>{linescore.inning[5] ? linescore.inning[5].home : ''}</td>
           <td>{linescore.inning[6] ? linescore.inning[6].home : ''}</td>
           <td>{linescore.inning[7] ? linescore.inning[7].home : ''}</td>
-          <td>{linescore.inning[8] ? typeof linescore.inning[8].home !== null && typeof linescore.inning[8].home !== 'undefined' ? linescore.inning[8].home : 'x' : ''}</td>
+          <td>{linescore.inning[8] ? linescore.inning[8].away ? linescore.inning[8].home !== undefined ? linescore.inning[8].home : '✗' : '' : null}</td>
           <td>{linescore.r.home}</td>
           <td>{linescore.h.home}</td>
           <td>{linescore.e.home}</td>
+          <td>{review.challenges_home_remaining ? typeof review.challenges_home_remaining !== undefined ? review.challenges_home_remaining >= '1' ? '✓' : '✗' : '-' : ''}</td>
         </tr>
       </tbody>
     </table>

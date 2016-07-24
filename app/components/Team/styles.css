@@ -2,26 +2,37 @@
   display: flex;
   align-items: center;
   font-size: 2em;
-}
-.teamContainer:nth-child(2) {
+  padding: 2px 0;
 }
 .teamLogo {
-  max-height: 105px;
-  flex-basis: 30%;
+  max-height: 110px;
+  flex-basis: 27.5%;
 }
 .teamInfo {
   display: flex;
   flex-direction: column;
-  flex-basis: 54%;
+  flex-basis: 60%;
 }
 .teamName {
-
+  margin-bottom: 10px;
+  padding: 2px 8px;
+  width: 65%;
+  background: #fff;
+  box-shadow: rgb(0, 0, 0) 0 1px 2px 1px;
 }
 .teamRecord {
-  font-size: 50%;
+  font-size: 47.5%;
+  padding: 4px 8px;
+  width: 32.5%;
+  background: #fff;
+  box-shadow: rgb(0, 0, 0) 0 1px 2px 1px;
 }
 .teamScore {
-  flex-basis: 16%;
+  text-align: center;
+  flex-basis: 12%;
   font-size: 120%;
-  margin-left: auto;
+  margin-left: -8%;
+  padding: 6px;
+  background: #fff;
+  box-shadow: rgb(0, 0, 0) 0 1px 2px 1px;
 }

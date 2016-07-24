@@ -44,13 +44,13 @@ class ScoreboardContainer extends Component {
       }
       if (game.review === undefined) {
         game.review = {
-          challenges_away_remaining: null,
-          challenges_home_remaining: null
+          challenges_away_remaining: { null },
+          challenges_home_remaining: { null }
         }
       }
       if (game.alerts === undefined) {
         game.alerts = {
-          text: null
+          text: { null }
         }
       }
     })

@@ -18,3 +18,10 @@
   line-height: 55px;
   font-weight: 100;
 }
+
+.teamContainer {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  color: #f5f5f5;
+}

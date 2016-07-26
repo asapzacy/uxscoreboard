@@ -5,7 +5,7 @@ export default function Home(props) {
   return (
     <div className={container}>
       <h1 className={title}>{'uxscoreboard'}</h1>
-      <p className={slogan}>{'Live sports scoreboard.'}</p>
+      <p className={slogan}>{'live sports scoreboard built on react.js'}</p>
     </div>
   )
 }

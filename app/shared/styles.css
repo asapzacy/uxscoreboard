@@ -5,15 +5,15 @@
   flex-direction: column;
 }
 .largeHeader {
-  color: #1f0ce2;
+  color: #e0e0e0;
   font-weight: 100;
-  font-size: 100px;
+  font-size: 7em;
   margin-bottom: 20px;
 }
 
 .subHeader {
-  color: #4d4d4d;
-  font-size: 35px;
+  color: #bdbdbd;
+  font-size: 3em;
   text-align: center;
   line-height: 55px;
   font-weight: 100;

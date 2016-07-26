@@ -219,32 +219,32 @@ function BoxScore({awayAbbr, homeAbbr, linescore, review, homeCode, awayCode, st
       </thead>
       <tbody>
         <tr>
-          <th style={teamColors[`${awayCode}`][0]}>{awayAbbr.toLowerCase()}</th>
-          <td style={linescore.inning[0] ? linescore.inning[0].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[0] ? linescore.inning[0].away : ''}</td>
-          <td style={linescore.inning[1] ? linescore.inning[1].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[1] ? linescore.inning[1].away : ''}</td>
-          <td style={linescore.inning[2] ? linescore.inning[2].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[2] ? linescore.inning[2].away : ''}</td>
-          <td style={linescore.inning[3] ? linescore.inning[3].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[3] ? linescore.inning[3].away : ''}</td>
-          <td style={linescore.inning[4] ? linescore.inning[4].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[4] ? linescore.inning[4].away : ''}</td>
-          <td style={linescore.inning[5] ? linescore.inning[5].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[5] ? linescore.inning[5].away : ''}</td>
-          <td style={linescore.inning[6] ? linescore.inning[6].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[6] ? linescore.inning[6].away : ''}</td>
-          <td style={linescore.inning[7] ? linescore.inning[7].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[7] ? linescore.inning[7].away : ''}</td>
-          <td style={linescore.inning[8] ? linescore.inning[8].away > 0 ? teamColors[`${awayCode}`][0] : null : null}>{linescore.inning[8] ? linescore.inning[8].away : ''}</td>
+          <th>{awayAbbr.toLowerCase()}</th>
+          <td>{linescore.inning[0] ? linescore.inning[0].away : ''}</td>
+          <td>{linescore.inning[1] ? linescore.inning[1].away : ''}</td>
+          <td>{linescore.inning[2] ? linescore.inning[2].away : ''}</td>
+          <td>{linescore.inning[3] ? linescore.inning[3].away : ''}</td>
+          <td>{linescore.inning[4] ? linescore.inning[4].away : ''}</td>
+          <td>{linescore.inning[5] ? linescore.inning[5].away : ''}</td>
+          <td>{linescore.inning[6] ? linescore.inning[6].away : ''}</td>
+          <td>{linescore.inning[7] ? linescore.inning[7].away : ''}</td>
+          <td>{linescore.inning[8] ? linescore.inning[8].away : ''}</td>
           <td>{linescore.r.away}</td>
           <td>{linescore.h.away}</td>
           <td>{linescore.e.away}</td>
           <td>{review.challenges_away_remaining[0] ? review.challenges_away_remaining >= '1' ? '✓' : '✗' : status === 'Final' ? '-' : ''}</td>
         </tr>
         <tr>
-          <th style={teamColors[`${homeCode}`][0]}>{homeAbbr.toLowerCase()}</th>
-          <td style={linescore.inning[0] ? linescore.inning[0].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[0] ? linescore.inning[0].home : ''}</td>
-          <td style={linescore.inning[1] ? linescore.inning[1].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[1] ? linescore.inning[1].home : ''}</td>
-          <td style={linescore.inning[2] ? linescore.inning[2].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[2] ? linescore.inning[2].home : ''}</td>
-          <td style={linescore.inning[3] ? linescore.inning[3].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[3] ? linescore.inning[3].home : ''}</td>
-          <td style={linescore.inning[4] ? linescore.inning[4].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[4] ? linescore.inning[4].home : ''}</td>
-          <td style={linescore.inning[5] ? linescore.inning[5].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[5] ? linescore.inning[5].home : ''}</td>
-          <td style={linescore.inning[6] ? linescore.inning[6].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[6] ? linescore.inning[6].home : ''}</td>
-          <td style={linescore.inning[7] ? linescore.inning[7].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[7] ? linescore.inning[7].home : ''}</td>
-          <td style={linescore.inning[8] ? linescore.inning[8].home > 0 ? teamColors[`${homeCode}`][0] : null : null}>{linescore.inning[8] ? linescore.inning[8].away ? linescore.inning[8].home !== undefined ? linescore.inning[8].home : '✗' : '' : null}</td>
+          <th>{homeAbbr.toLowerCase()}</th>
+          <td>{linescore.inning[0] ? linescore.inning[0].home : ''}</td>
+          <td>{linescore.inning[1] ? linescore.inning[1].home : ''}</td>
+          <td>{linescore.inning[2] ? linescore.inning[2].home : ''}</td>
+          <td>{linescore.inning[3] ? linescore.inning[3].home : ''}</td>
+          <td>{linescore.inning[4] ? linescore.inning[4].home : ''}</td>
+          <td>{linescore.inning[5] ? linescore.inning[5].home : ''}</td>
+          <td>{linescore.inning[6] ? linescore.inning[6].home : ''}</td>
+          <td>{linescore.inning[7] ? linescore.inning[7].home : ''}</td>
+          <td>{linescore.inning[8] ? linescore.inning[8].away ? linescore.inning[8].home !== undefined ? linescore.inning[8].home : '✗' : '' : null}</td>
           <td>{linescore.r.home}</td>
           <td>{linescore.h.home}</td>
           <td>{linescore.e.home}</td>

@@ -1,9 +1,40 @@
 /*
-  black:      #070707
-  darkgrey:   #40434e
-  lightgrey:  #c1cad6
-  white:      #fbfffe
-  purple:     #434db0
+  __original____colors
+    black:      #070707
+    darkgrey:   #40434e
+    lightgrey:  #c1cad6
+    white:      #fbfffe
+    purple:     #434db0
+  _______________________________________________________
+  _______________________________________________________
+  __google____grey
+    500:        #9E9E9E
+    50:         #FAFAFA
+    100:        #F5F5F5
+    200:        #EEEEEE
+    300:        #E0E0E0
+    400:        #BDBDBD
+    500:        #9E9E9E
+    600:        #757575
+    700:        #616161
+    800:        #424242
+    900:        #212121
+  __google____blue__grey
+    500         #607D8B
+    50:         #ECEFF1
+    100:        #CFD8DC
+    200:        #B0BEC5
+    300:        #90A4AE
+    400:        #78909C
+    500:        #607D8B
+    600:        #546E7A
+    700:        #455A64
+    800:        #37474F
+    900:        #263238
+   _black_      #000000
+   _white_      #FFFFFF
+_______________________________________________________
+_______________________________________________________
 */
 * {
   box-sizing: border-box;
@@ -11,11 +42,15 @@
 html, body {
   margin: 0;
   padding: 0;
+  background: #070707;
+  overflow: hidden;
+  height: 100%;
 }
 body {
-  color: #070707;
-  background: #e0e0e0;
+  color: #f5f5f5;
   font: 300 16px/1.2 'Helvetica Neue', Helvetica,Arial, sans-serif;
+  overflow: auto;
+  height: 100%;
   letter-spacing: 1px;
   box-sizing:border-box;
   text-rendering:optimizeLegibility;

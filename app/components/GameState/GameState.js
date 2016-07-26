@@ -2,7 +2,7 @@ import React from 'react'
 import { gameInfo } from './styles.css'
 
 export default function GameState({status, time, ampm, tz, inning,
-  inningState, outs, reason}) {
+  inningState, outs, reason, description}) {
   const getInningSuffix = () => {
     switch(inning) {
       case '1' || '21': return 'st'
@@ -15,6 +15,7 @@ export default function GameState({status, time, ampm, tz, inning,
     return (
       <div className={gameInfo}>
         <span>{`${time} ${ampm} ${tz}`}</span>
+        {description ? <span><small>{description}</small></span> : null}
       </div>
     )
   }
@@ -57,7 +58,7 @@ export default function GameState({status, time, ampm, tz, inning,
       </div>
     )
   }
-  else if (status === 'Delayed' || status === 'Suspended') {
+  else if (status === 'Delayed' || status === 'Suspended' || status === 'Review') {
     return (
       <div className={gameInfo}>
         <span>{`${inningState} ${inning}`}

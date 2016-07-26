@@ -34,6 +34,7 @@ class Game extends Component {
           inningState={game.status.inning_state}
           outs={game.status.o}
           reason={game.status.reason}
+          description={game.description}
         />
         <Team
           name={game.away_team_name}

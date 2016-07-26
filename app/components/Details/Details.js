@@ -32,7 +32,7 @@ export default function Details({awayTeam, homeTeam, venue, location, date,
               spHome={spHome}
               alerts={alerts}
             />
-          : status === 'In Progress' || status === 'Delayed'
+          : status === 'In Progress' || status === 'Delayed' || status === 'Suspended'
             ? <MidGameInfo
                 awayAbbr={awayAbbr}
                 homeAbbr={homeAbbr}
@@ -81,15 +81,16 @@ function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome, alerts}) {
           ? <div style={{textAlign: 'center',padding: '1em'}}><span>{`${alerts.text}.`}</span></div>
           : null
       }
-      <div>
-        <h5>{'Starting Pitchers:'}</h5>
-        <span className={pitchersTeam}>{`${awayAbbr}: `}</span>
-        <span>{`${spAway.first} ${spAway.last}, ${spAway.throwinghand.toLowerCase()} (${spAway.wins}-${spAway.losses}, ${spAway.era} era)`}</span>
-        <br />
-        <span className={pitchersTeam}>{`${homeAbbr}: `}</span>
-        <span>{`${spHome.first} ${spHome.last}, ${spAway.throwinghand.toLowerCase()} (${spHome.wins}-${spHome.losses}, ${spHome.era} era)`}</span>
-        <br />
-      </div>
+      { spAway && spHome
+          ?   <div><h5>{'Starting Pitchers:'}</h5>
+                <span className={pitchersTeam}>{`${awayAbbr}: `}</span>
+                <span>{`${spAway.first} ${spAway.last}, ${spAway.throwinghand.toLowerCase()} (${spAway.wins}-${spAway.losses}, ${spAway.era} era)`}</span>
+                <br />
+                <span className={pitchersTeam}>{`${homeAbbr}: `}</span>
+                <span>{`${spHome.first} ${spHome.last}, ${spAway.throwinghand.toLowerCase()} (${spHome.wins}-${spHome.losses}, ${spHome.era} era)`}</span>
+                <br /></div>
+        : null
+      }
     </div>
   )
 }
@@ -142,6 +143,7 @@ function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls,
           ? <div style={{textAlign: 'center',padding: '1em'}}><span>{`${alerts.text}.`}</span></div>
           : null
       }
+
       <div>
         <h5>{'Current Matchup:'}</h5>
         <span className={pitchersTeam}>{`P: `}</span>
@@ -196,7 +198,7 @@ function BoxScore({awayAbbr, homeAbbr, linescore, review}) {
           <td>{linescore.r.away}</td>
           <td>{linescore.h.away}</td>
           <td>{linescore.e.away}</td>
-          <td>{review.challenges_away_remaining ? typeof review.challenges_away_remaining !== undefined ? review.challenges_away_remaining >= '1' ? '✓' : '✗' : '-' : ''}</td>
+          <td>{review.challenges_away_remaining[0] ? review.challenges_away_remaining[0] !== undefined  && review.challenges_away_remaining[0] !== null ? review.challenges_away_remaining >= '1' ? '✓' : '✗' : '-' : ''}</td>
         </tr>
         <tr>
           <th>{homeAbbr.toLowerCase()}</th>
@@ -212,7 +214,7 @@ function BoxScore({awayAbbr, homeAbbr, linescore, review}) {
           <td>{linescore.r.home}</td>
           <td>{linescore.h.home}</td>
           <td>{linescore.e.home}</td>
-          <td>{review.challenges_home_remaining ? typeof review.challenges_home_remaining !== undefined ? review.challenges_home_remaining >= '1' ? '✓' : '✗' : '-' : ''}</td>
+          <td>{review.challenges_home_remaining[0] ? review.challenges_home_remaining[0] !== undefined  && review.challenges_home_remaining[0] !== null ? review.challenges_home_remaining >= '1' ? '✓' : '✗' : '-' : ''}</td>
         </tr>
       </tbody>
     </table>

@@ -2,37 +2,65 @@
   display: flex;
   align-items: center;
   font-size: 2em;
-  padding: 2px 0;
+  padding: 6px 0;
+  background: #f5f5f5;
+  color: #070707;
+}
+.nyy, .chc {
+  position: relative;
+  composes: teamContainer;
+}
+.nyy *, .chc * {
+  z-index: 1;
+}
+.nyy::before, .chc::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-position: -50% 100%;
+  background-size: 15px;
+}
+.nyy::before {
+  background-image: -webkit-linear-gradient(0deg, #fff 86%, #142448 14%);
+}
+.chc::before {
+  background-image: -webkit-linear-gradient(0deg, #fff 86%, #0e3386 14%);
 }
 .teamLogo {
   max-height: 110px;
+  min-width: 130px;
   flex-basis: 27.5%;
+  margin-right: 5px;
 }
 .teamInfo {
   display: flex;
   flex-direction: column;
   flex-basis: 60%;
 }
+.teamContainer span {
+  background: #fff;
+  box-shadow: rgb(0,0,0) 0 1px 3px 1px;
+}
 .teamName {
   margin-bottom: 10px;
   padding: 2px 8px;
-  width: 65%;
-  background: #fff;
-  box-shadow: rgb(0, 0, 0) 0 1px 2px 1px;
+  width: 60%;
+}
+.teamName small {
+  font-size: 85%;
 }
 .teamRecord {
-  font-size: 47.5%;
+  font-size: 45%;
   padding: 4px 8px;
-  width: 32.5%;
-  background: #fff;
-  box-shadow: rgb(0, 0, 0) 0 1px 2px 1px;
+  width: 30%;
 }
 .teamScore {
   text-align: center;
   flex-basis: 12%;
   font-size: 120%;
-  margin-left: -8%;
+  margin-left: -9%;
   padding: 6px;
-  background: #fff;
-  box-shadow: rgb(0, 0, 0) 0 1px 2px 1px;
 }

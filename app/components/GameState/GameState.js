@@ -14,7 +14,7 @@ export default function GameState({status, time, ampm, tz, inning,
   if (status === 'Preview') {
     return (
       <div className={gameInfo}>
-        <span>{`${time} ${ampm} ${tz}`}</span>
+        <span>{time === '3:33' ? `TBA` : `${time} ${ampm} ${tz}`}</span>
         {description ? <span><small>{description}</small></span> : null}
       </div>
     )
@@ -54,7 +54,7 @@ export default function GameState({status, time, ampm, tz, inning,
     return (
       <div className={gameInfo}>
         <span>{status}</span>
-        <span><small>{reason}</small></span>
+        <span><small>{`(${reason})`}</small></span>
       </div>
     )
   }

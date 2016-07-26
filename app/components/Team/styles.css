@@ -6,28 +6,25 @@
   background: #f5f5f5;
   color: #070707;
 }
-.nyy, .chc {
+.nyy {
   position: relative;
   composes: teamContainer;
 }
-.nyy *, .chc * {
+.nyy * {
   z-index: 1;
 }
-.nyy::before, .chc::before {
+.nyy::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 40%;
   height: 100%;
-  background-position: -50% 100%;
+  background-position: -27.5% 100%;
   background-size: 15px;
 }
 .nyy::before {
   background-image: -webkit-linear-gradient(0deg, #fff 86%, #142448 14%);
-}
-.chc::before {
-  background-image: -webkit-linear-gradient(0deg, #fff 86%, #0e3386 14%);
 }
 .teamLogo {
   max-height: 110px;

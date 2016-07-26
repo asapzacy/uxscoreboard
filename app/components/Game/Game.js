@@ -64,6 +64,8 @@ class Game extends Component {
             linescore={game.linescore}
             awayAbbr={game.away_name_abbrev}
             homeAbbr={game.home_name_abbrev}
+            awayCode={game.away_file_code}
+            homeCode={game.home_file_code}
             spAway={game.away_probable_pitcher}
             spHome={game.home_probable_pitcher}
             pitcher={game.pitcher}

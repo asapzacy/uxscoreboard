@@ -35,6 +35,8 @@ class Game extends Component {
           outs={game.status.o}
           reason={game.status.reason}
           description={game.description}
+          doubleHeader={game.double_header_sw}
+          gameNumber={game.game_nbr}
         />
         <Team
           name={game.away_team_name}

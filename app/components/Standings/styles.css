@@ -1,0 +1,38 @@
+.standingsContainer {
+  width: 90%;
+  margin: 0 auto 8em;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+.header {
+  font-size: 4em;
+  margin: 1em 0;
+  font-weight: 100;
+  text-align: center;
+}
+
+.teamsContainer {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.teamContainer {
+  font-size: 2em;
+  margin: 0 auto;
+  border-collapse: collapse;
+  height: 2em;
+  text-align: left;
+}
+
+.teamContainer h1 {
+  font-weight: 100;
+}
+
+.columnHeadings {
+}
+.table {
+  margin-top: 2em;
+}

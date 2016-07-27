@@ -4,7 +4,7 @@ import OpenCircle from 'react-icons/lib/fa/circle-thin'
 import FullCircle from 'react-icons/lib/fa/circle'
 import { detailsContainer, aboutContainer, linescoreContainer,
   midGameDetails, pitchersTeam, diamond, circles, bso, circle, circleFilled,
- ballsAndStrikes, baseRunners, field, container} from './styles.css'
+ ballsAndStrikes, baseRunners, field, container, lineScore} from './styles.css'
 
 export default function Details({awayTeam, homeTeam, venue, location, date,
   linescore, status, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs,
@@ -189,7 +189,7 @@ function BoxScore({awayAbbr, homeAbbr, linescore, review, homeCode, awayCode, st
     pit: [{ color: '#000000', fontWeight: 'bold' }],
     sd:  [{ color: '#002d62', fontWeight: 'bold' }],
     sea: [{ color: '#005c5c', fontWeight: 'bold' }],
-    sf:  [{ color: '#fd5a1e', fontWeight: 'bold' }],
+    sf:  [{ color: '#eee3c7', fontWeight: 'bold' }],
     stl: [{ color: '#c41e3a', fontWeight: 'bold' }],
     tb:  [{ color: '#092c5c', fontWeight: 'bold' }],
     tex: [{ color: '#003278', fontWeight: 'bold' }],
@@ -198,7 +198,7 @@ function BoxScore({awayAbbr, homeAbbr, linescore, review, homeCode, awayCode, st
   }
 
   return (
-    <table>
+    <table className="lineScore">
       <thead>
         <tr>
           <th></th>

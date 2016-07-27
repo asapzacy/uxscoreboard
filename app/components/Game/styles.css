@@ -4,10 +4,7 @@
   margin: 2.25%;
   flex-basis: 27.5%;
 }
-.test {
-  height:10em;
-  background: #f5f5f5;
-}
+
 .expandIcon {
   cursor: pointer;
   display: flex;

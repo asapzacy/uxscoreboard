@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import ArrowDown from 'react-icons/lib/fa/angle-down'
 import { header, standingsContainer, row, teamLogo, filterRow, nyy,
-  xLarge, large, medium, xxLarge, sortList } from './styles.css'
+  xLarge, large, medium, xxLarge, filterList, filterItem } from './styles.css'
 
 class TeamRow extends React.Component {
   render() {
@@ -72,38 +72,18 @@ export default function FilterRow({heading}) {
   )
 }
 class TeamList extends Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     filter: ''
-  //   }
-  // }
-  // componentDidMount() {
-  //   this.setState({ filter: 'division' })
-  // }
-  // filterstandings(filter) {
-  //   this.setState({
-  //     filter:  filter
-  //   })
-  // }
+
   render() {
     let standings = this.props.standings
     var al = standings[1].queryResults.row
     var nl = standings[0].queryResults.row
     var both = al.concat(nl)
-    console.log(al)
-
-    // var al = this.props.standings[0].queryResults.row
-    // var nl = this.props.standings[1].queryResults.row
-    // var both = al.concat(nl)
-    // console.log(both)
-    // x = temp1.filter((team) => team.division === 'American League East').sort((a,b) => a.w < b.w).map((item) => console.log(item.team_full))
     return (
       <div>
-        <ul>
-          <Link to={'/mlb/standings/division'} ><li>{'division'}</li></Link>
-          <Link to={'/mlb/standings/league'}><li>{'league'}</li></Link>
-          <Link to={'/mlb/standings/overall'}><li>{'overall'}</li></Link>
+        <ul className={filterList}>
+          <li><Link to={'/mlb/standings/division'} className={filterItem} activeClassName='active'>{'division'}</Link></li>
+          <li><Link to={'/mlb/standings/league'} className={filterItem} activeClassName='active'>{'league'}</Link></li>
+          <li><Link to={'/mlb/standings/overall'} className={filterItem} activeClassName='active'>{'overall'}</Link></li>
         </ul>
         {this.props.filter === 'division'
           ? <div className={standingsContainer}>

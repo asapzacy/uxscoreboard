@@ -8,13 +8,15 @@ const routes = (
     <Route path='/' component={MainContainer}>
       <IndexRoute component={HomeContainer} />
       <Route path='/mlb' component={MlbContainer}>
-        <Route path='scores' component={ScoreboardContainer} />
-        <Route path='scores/:date' component={ScoreboardContainer} />
-        <Route path='standings' component={StandingsContainer} />
-        <Route path='standings/:filter' component={StandingsContainer} />
+        <Route path='scores'>
+          <IndexRoute component={ScoreboardContainer} />
+          <Route path=":date" component={ScoreboardContainer} />
+        </Route>
+        <Route path='standings'>
+          <IndexRoute component={StandingsContainer} />
+          <Route path=":filter" component={StandingsContainer} />
+        </Route>
       </Route>
-      <Route path='/nba' component={HomeContainer} />
-      <Route path='/nfl' component={HomeContainer} />
       <Route path='/about' component={HomeContainer} />
     </Route>
   </Router>

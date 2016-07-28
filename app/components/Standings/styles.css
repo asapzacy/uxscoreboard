@@ -18,27 +18,36 @@
   justify-content: center;
   flex-direction: column;
 }
-.sortList {
+.filterList {
   display:flex;
   font-family: 'Comfortaa', cursive;
   width: 80%;
   margin: 0 auto;
-  padding: 4em 0 2em;
+  padding: 3em 0 1.5em;
   justify-content: flex-start;
   font-size: 1.4em;
   align-items: center;
 }
-.sortList li {
+.filterList li {
   padding: 0 1em;
-  transition: 0.4s all;
   border-right: 1px solid #e0e0e0;
 }
-.sortList li:last-of-type {
+.filterList li:last-child {
   border-right: 0;
 }
-.sortList li:hover {
+.filterItem {
+  padding: 0 0.4em;
+  transition: 0.4s all;
+  border-bottom: 1px solid transparent;
+}
+.filterItem:hover {
   cursor: pointer;
   color: #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+}
+.filterItem:global(.active) {
+  color: #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
 }
 .row {
   width: 100%;

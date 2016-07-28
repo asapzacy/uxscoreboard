@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
 import ArrowDown from 'react-icons/lib/fa/angle-down'
-import { header, standingsContainer, row, teamLogo, filterRow,
-  xLarge, large, medium } from './styles.css'
+import { header, standingsContainer, row, teamLogo, filterRow, nyy,
+  xLarge, large, medium, xxLarge, sortList } from './styles.css'
 
 class TeamRow extends React.Component {
   render() {
@@ -39,7 +40,7 @@ class TeamRow extends React.Component {
       was: [{ backgroundImage: '-webkit-linear-gradient(0deg, #ab0003 20%, transparent 0%)' }]
     }
     return (
-      <div className={row} style={teamColors[`${teamData.file_code}`][0]}>
+      <div className={teamData.file_code === 'nyy' ? nyy : row} style={teamColors[`${teamData.file_code}`][0]}>
         <img className={teamLogo} src={`assets/img/mlb/teams/${teamData.file_code}.svg`} alt={teamData.team_full} />
         <span className={xLarge}>{teamData.team_short}</span>
         <span className={medium}>{teamData.w}</span>
@@ -54,35 +55,125 @@ class TeamRow extends React.Component {
     )
   }
 }
-
-export default function StandingsUI({standings}) {
-  var al = standings[0].queryResults.row
-  var nl = standings[1].queryResults.row
+export default function FilterRow({heading}) {
   return (
-    <div className={standingsContainer}>
-      <div className={filterRow}>
-        <span className={teamLogo} style={{visibility: 'hidden'}}></span>
-        <span className={xLarge} style={{visibility: 'hidden'}}></span>
-        <span className={medium}>{'w'}</span>
-        <span className={medium}>{'l'}</span>
-        <span className={medium}>{'%'}</span>
-        <span className={medium}>{'gb'}</span>
-        <span className={large}>{'home'}</span>
-        <span className={large}>{'away'}</span>
-        <span className={large}>{'strk'}</span>
-        <span className={medium}>{'l10'}</span>
-      </div>
-      { al.concat(nl).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+    <div className={filterRow}>
+      <span className={xxLarge}>{heading}</span>
+      <span className={xLarge}></span>
+      <span className={medium}>{'w'}</span>
+      <span className={medium}>{'l'}</span>
+      <span className={medium}>{'%'}</span>
+      <span className={medium}>{'gb'}</span>
+      <span className={large}>{'home'}</span>
+      <span className={large}>{'away'}</span>
+      <span className={large}>{'strk'}</span>
+      <span className={medium}>{'l10'}</span>
     </div>
   )
 }
+class TeamList extends Component {
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     filter: ''
+  //   }
+  // }
+  // componentDidMount() {
+  //   this.setState({ filter: 'division' })
+  // }
+  // filterstandings(filter) {
+  //   this.setState({
+  //     filter:  filter
+  //   })
+  // }
+  render() {
+    let standings = this.props.standings
+    var al = standings[1].queryResults.row
+    var nl = standings[0].queryResults.row
+    var both = al.concat(nl)
+    console.log(al)
+
+    // var al = this.props.standings[0].queryResults.row
+    // var nl = this.props.standings[1].queryResults.row
+    // var both = al.concat(nl)
+    // console.log(both)
+    // x = temp1.filter((team) => team.division === 'American League East').sort((a,b) => a.w < b.w).map((item) => console.log(item.team_full))
+    return (
+      <div>
+        <ul>
+          <Link to={'/mlb/standings/division'} ><li>{'division'}</li></Link>
+          <Link to={'/mlb/standings/league'}><li>{'league'}</li></Link>
+          <Link to={'/mlb/standings/overall'}><li>{'overall'}</li></Link>
+        </ul>
+        {this.props.filter === 'division'
+          ? <div className={standingsContainer}>
+              <FilterRow heading={'al east'} />
+              { al.filter((team) => team.division === 'American League East').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              <FilterRow heading={'al central'} />
+              { al.filter((team) => team.division === 'American League Central').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              <FilterRow heading={'al west'} />
+              { al.filter((team) => team.division === 'American League West').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              <FilterRow heading={'nl east'} />
+              { nl.filter((team) => team.division === 'National League East').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              <FilterRow heading={'nl central'} />
+              { nl.filter((team) => team.division === 'National League Central').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              <FilterRow heading={'nl west'} />
+              { nl.filter((team) => team.division === 'National League West').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+            </div>
+          : this.props.filter === 'league'
+            ? <div className={standingsContainer}>
+                <FilterRow heading={'al'} />
+                { al.sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+                <FilterRow heading={'nl'} />
+                { nl.sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              </div>
+            : this.props.filter === 'overall'
+              ? <div className={standingsContainer}>
+                  <FilterRow heading={'overall'} />
+                  { both.sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+                </div>
+              : null
+        }
+      </div>
+    )
+  }
+}
+
+
+
+// export default function StandingsUI({standings}) {
+//   var al = standings[0].queryResults.row
+//   var nl = standings[1].queryResults.row
+//   var both = al.concat(nl)
+//   console.log(both)
+//   // x = temp1.filter((team) => team.division === 'American League East').sort((a,b) => a.w < b.w).map((item) => console.log(item.team_full))
+//   return (
+//     <div>
+//       <SortList />
+//       <div className={standingsContainer}>
+//         <FilterRow heading={'al east'} />
+//         { both.filter((team) => team.division === 'American League East').map((item) => <TeamRow key={item.team_id} team={item} /> )}
+//         <FilterRow heading={'al central'} />
+//         { both.filter((team) => team.division === 'American League Central').map((item) => <TeamRow key={item.team_id} team={item} /> )}
+//         <FilterRow heading={'al west'} />
+//         { both.filter((team) => team.division === 'American League West').map((item) => <TeamRow key={item.team_id} team={item} /> )}
+//         <FilterRow heading={'nl east'} />
+//         { both.filter((team) => team.division === 'National League East').map((item) => <TeamRow key={item.team_id} team={item} /> )}
+//         <FilterRow heading={'nl central'} />
+//         { both.filter((team) => team.division === 'National League Central').map((item) => <TeamRow key={item.team_id} team={item} /> )}
+//         <FilterRow heading={'nl west'} />
+//         { both.filter((team) => team.division === 'National League West').map((item) => <TeamRow key={item.team_id} team={item} /> )}
+//       </div>
+//     </div>
+//   )
+// }
 
 export default function Standings(props) {
   return (
     <div>
       {props.isLoading === true
         ? <span className={header}>{'Loading...'}</span>
-        : <StandingsUI standings={props.standings} />
+        : <TeamList standings={props.standings} filter={props.filter} />
       }
     </div>
   )
@@ -91,22 +182,3 @@ export default function Standings(props) {
 Standings.propTypes = {
   isLoading: PropTypes.bool.isRequired,
 }
-
-
-
-// class Sort extends React.Component {
-//   sortStandings(field) {
-//     var teams = this.props.teams,
-//     this.props.sortRosterStateBy(field, teams)
-//   }
-//   render() {
-//     return (
-//       <div className={sortOptions}>
-//         <span>{'sort:'}</span>
-//         <span className={icon} id='overall' onClick={this.sortRoster.bind(this, 'Overall')}>{'overall'}</span>
-//         <span className={icon} id='league' onClick={this.sortRoster.bind(this, 'League')}>{'league'}</span>
-//         <span className={icon} id='division' onClick={this.sortRoster.bind(this. 'Division')}>{'division'}</span>
-//       </div>
-//     )
-//   }
-// }

@@ -28,7 +28,7 @@ export default function Team({name, code, ls, ws, runs}) {
     pit: [{ backgroundImage: '-webkit-linear-gradient(0deg, #fdb827 40%, transparent 0%)' }],
     sd:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #7f411c 40%, transparent 0%)' }],
     sea: [{ backgroundImage: '-webkit-linear-gradient(0deg, #005c5c 40%, transparent 0%)' }],
-    sf:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #fd5a1e 40%, transparent 0%)' }],
+    sf:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #000000 40%, transparent 0%)' }],
     stl: [{ backgroundImage: '-webkit-linear-gradient(0deg, #c41e3a 40%, transparent 0%)' }],
     tb:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #8fbce6 40%, transparent 0%)' }],
     tex: [{ backgroundImage: '-webkit-linear-gradient(0deg, #003278 40%, transparent 0%)' }],

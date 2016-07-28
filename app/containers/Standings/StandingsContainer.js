@@ -7,14 +7,19 @@ class StandingsContainer extends Component {
     super()
     this.state = {
       isLoading: true,
-      standings: {}
+      standings: {},
+      filter: ''
     }
   }
   componentDidMount() {
-    this.makeRequest()
+    let x = 'division'
+    this.setState({
+      filter: this.props.routeParams.filter || x
+    })
+    this.makeRequest(this.props.routeParams.filter)
   }
   componentWillReceiveProps(nextProps) {
-    this.makeRequest(nextProps)
+    this.makeRequest(nextProps.routeParams.filter)
   }
   makeRequest() {
     getMlbStandings()
@@ -25,11 +30,21 @@ class StandingsContainer extends Component {
         })
       })
   }
+  filterStandings(filterBy) {
+    this.context.router.push({
+      pathname: '/standings/' + this.props.routeParams.filter,
+      state: {
+        filterBy
+      }
+    })
+  }
   render() {
     return (
       <Standings
         isLoading={this.state.isLoading}
         standings={this.state.standings}
+        filter={this.props.routeParams.filter ? this.props.routeParams.filter : this.state.filter}
+        handleClick={(x) => this.handleClick(x)}
       />
     )
   }

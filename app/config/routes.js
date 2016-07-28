@@ -11,6 +11,7 @@ const routes = (
         <Route path='scores' component={ScoreboardContainer} />
         <Route path='scores/:date' component={ScoreboardContainer} />
         <Route path='standings' component={StandingsContainer} />
+        <Route path='standings/:filter' component={StandingsContainer} />
       </Route>
       <Route path='/nba' component={HomeContainer} />
       <Route path='/nfl' component={HomeContainer} />

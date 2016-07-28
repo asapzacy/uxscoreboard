@@ -4,7 +4,7 @@ import OpenCircle from 'react-icons/lib/fa/circle-thin'
 import FullCircle from 'react-icons/lib/fa/circle'
 import { detailsContainer, aboutContainer, linescoreContainer,
   midGameDetails, pitchersTeam, diamond, circles, bso, circle, circleFilled,
- ballsAndStrikes, baseRunners, field, container, lineScore} from './styles.css'
+ ballsAndStrikes, baseRunners, field, container } from './styles.css'
 
 export default function Details({awayTeam, homeTeam, venue, location, date,
   linescore, status, awayAbbr, homeAbbr, pitcher, batter, pbp, runners, balls, strikes, outs,
@@ -198,7 +198,7 @@ function BoxScore({awayAbbr, homeAbbr, linescore, review, homeCode, awayCode, st
   }
 
   return (
-    <table className="lineScore">
+    <table>
       <thead>
         <tr>
           <th></th>

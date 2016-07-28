@@ -1,4 +1,5 @@
 import axios from 'axios'
+import moment from 'moment'
 
 export function formatDateUrl(dt) {
   const yyyy = dt.getFullYear()
@@ -26,8 +27,19 @@ export function getMlbStandings2() {
     .catch((currentStandings) => currentStandings.status)
 }
 
+
+export function formatDetailsDate(date) {
+  return moment(new Date(date)).format('MMMM D, YYYY')
+}
+
 export function getMlbStandings() {
-  const url = `http://mlb.mlb.com/lookup/json/named.standings_schedule_date.bam?season=2016&schedule_game_date.game_date=%272016/07/26%27&sit_code=%27h0%27&league_id=103&league_id=104&all_star_sw=%27N%27&version=2`
+  const dt = moment().format('YYYYMMDD')
+  const year = dt.slice(0,4)
+  const month = dt.slice(4,6)
+  const today = dt.slice(6,8)
+  // const yesterday = moment(dt).subtract(1, 'days').format('DD')
+  // const url = `http://mlb.mlb.com/lookup/json/named.standings_schedule_date.bam?season=2016&schedule_game_date.game_date=%272016/07/26%27&sit_code=%27h0%27&league_id=103&league_id=104&all_star_sw=%27N%27&version=2`
+  const url = `http://mlb.mlb.com/lookup/json/named.standings_schedule_date.bam?season=${year}&schedule_game_date.game_date=%${today}${year}/${month}/${today}%${today}&sit_code=%${today}h0%${today}&league_id=103&league_id=104&all_star_sw=%${today}N%${today}&version=2`
   return axios.get(url)
     .then((currentStandings) => currentStandings.data)
     .catch((currentStandings) => currentStandings.status)

@@ -19,7 +19,7 @@ export default function Team({name, code, ls, ws, runs}) {
     kc:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%)' }],
     la:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%)' }],
     mia: [{ backgroundImage: '-webkit-linear-gradient(0deg, #0077c8 40%, transparent 0%)' }],
-    mil: [{ backgroundImage: '-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%)' }],
+    mil: [{ backgroundImage: '-webkit-linear-gradient(0deg, #0a2351 40%, transparent 0%)' }],
     min: [{ backgroundImage: '-webkit-linear-gradient(0deg, #d31145 40%, transparent 0%)' }],
     nym: [{ backgroundImage: '-webkit-linear-gradient(0deg, #002d72 40%, transparent 0%)' }],
     nyy: [{ null }],
@@ -31,7 +31,7 @@ export default function Team({name, code, ls, ws, runs}) {
     sf:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #fd5a1e 40%, transparent 0%)' }],
     stl: [{ backgroundImage: '-webkit-linear-gradient(0deg, #c41e3a 40%, transparent 0%)' }],
     tb:  [{ backgroundImage: '-webkit-linear-gradient(0deg, #8fbce6 40%, transparent 0%)' }],
-    tex: [{ backgroundImage: '-webkit-linear-gradient(0deg, #c0111f 40%, transparent 0%)' }],
+    tex: [{ backgroundImage: '-webkit-linear-gradient(0deg, #003278 40%, transparent 0%)' }],
     tor: [{ backgroundImage: '-webkit-linear-gradient(0deg, #134a8e 40%, transparent 0%)' }],
     was: [{ backgroundImage: '-webkit-linear-gradient(0deg, #ab0003 40%, transparent 0%)' }]
   }

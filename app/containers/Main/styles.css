@@ -43,14 +43,14 @@ html, body {
   margin: 0;
   padding: 0;
   background: #070707;
-  overflow: hidden;
-  height: 100%;
+  /*overflow: hidden;
+  height: 100%;*/
 }
 body {
   color: #f5f5f5;
   font: 300 16px/1.2 'Helvetica Neue', Helvetica,Arial, sans-serif;
-  overflow: auto;
-  height: 100%;
+  /*overflow: auto;
+  height: 100%;*/
   letter-spacing: 1px;
   box-sizing:border-box;
   text-rendering:optimizeLegibility;

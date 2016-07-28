@@ -1,38 +1,111 @@
-.standingsContainer {
-  width: 90%;
-  margin: 0 auto 8em;
-  font-family: 'Comfortaa', cursive;
-  text-align: center;
-}
 .header {
   font-size: 4em;
   margin: 1em 0;
   font-weight: 100;
   text-align: center;
-}
-
-.teamsContainer {
   display: flex;
-  text-align: left;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
-.teamContainer {
-  font-size: 2em;
-  margin: 0 auto;
-  border-collapse: collapse;
-  height: 2em;
+.standingsContainer {
+  width: 80%;
+  margin: 4em auto 8em;
+  font-family: 'Comfortaa', cursive;
+  background: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  color: #070707;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;;
+  align-items: center;
+  flex-basis: 100%;
+  font-size: 1.6em;
+  padding-right: 0.5%;
+}
+.filterRow {
+  composes: row;
+  padding: 1em 0;
+  background: #070707;
+  color: #e0e0e0;
+}
+.filterRow span {
+  transition: 0.4s all;
+  border-bottom: 1px solid #e0e0e0;
+}
+.filterRow span:hover {
+  cursor: pointer;
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+.filterRow span svg {
+  color: #e0e0e0;
+  font-size: 80%;
+}
+
+.filterRow .xLarge {
+  background: initial;
+  box-shadow: initial;
+}
+.teamLogo {
+  max-height: 92px;
+  flex-basis: 9%;
+}
+.xLarge {
+  flex-basis: 17%;
   text-align: left;
+  margin-left: -2%;
+  margin-right: 0.5%;
+  padding: 10px 15px;
+  background: #fff;
+  box-shadow: rgb(0,0,0) 0 1px 3px 1px;
+}
+.large {
+  text-align: center;
+  flex-basis: 7%;
+}
+.medium {
+  text-align: center;
+  flex-basis: 4%;
 }
 
-.teamContainer h1 {
-  font-weight: 100;
-}
 
-.columnHeadings {
+
+
+
+
+
+
+
+
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
 }
-.table {
-  margin-top: 2em;
+.teamContainer span {
+  background: #fff;
+  box-shadow: rgb(0,0,0) 0 1px 3px 1px;
+}
+.teamName {
+}
+.teamName small {
+  font-size: 85%;
+}
+.teamRecord {
+  font-size: 45%;
+  padding: 4px 8px;
+  width: 30%;
+}
+.teamScore {
+  text-align: center;
+  flex-basis: 12%;
+  font-size: 120%;
+  margin-left: -9%;
+  padding: 6px;
 }

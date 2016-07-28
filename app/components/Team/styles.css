@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   font-size: 2em;
-  padding: 6px 0;
+  padding: 4px 0;
   background: #f5f5f5;
   color: #070707;
 }
@@ -37,7 +37,7 @@
   flex-direction: column;
   flex-basis: 60%;
 }
-.teamContainer span {
+.teamInfo span {
   background: #fff;
   box-shadow: rgb(0,0,0) 0 1px 3px 1px;
 }
@@ -57,7 +57,7 @@
 .teamScore {
   text-align: center;
   flex-basis: 12%;
-  font-size: 120%;
+  font-size: 150%;
   margin-left: -9%;
   padding: 6px;
 }

@@ -1,7 +1,7 @@
 {
   "name": "uxscoreboard",
   "version": "1.0.0",
-  "description": "live sports scoreboard",
+  "description": "live sports scoreboard built on react.js",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",

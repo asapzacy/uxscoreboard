@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="674px" height="133px" viewBox="0 0 674 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="95" y="19" width="100" height="133"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100" height="133" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0" y="19" width="100" height="133"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100" height="133" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, -19.000000)">
+            <use id="Rectangle-1" fill="#f5f5f5" stroke="#070707" mask="url(#mask-2)" stroke-width="12.5" xlink:href="#path-1"></use>
+            <text id="x" font-family="FrozenCrystal, Frozen Crystal" font-size="100" font-weight="normal" fill="#070707">
+                <tspan x="115.15" y="121">x</tspan>
+            </text>
+            <use id="Rectangle-1" fill="#f5f5f5" stroke="#070707" mask="url(#mask-4)" stroke-width="12.5" xlink:href="#path-3"></use>
+            <text id="u" font-family="FrozenCrystal, Frozen Crystal" font-size="100" font-weight="normal" fill="#070707">
+                <tspan x="20.15" y="121">u</tspan>
+            </text>
+            <text id="scoreboard" font-family="Kanit-ExtraLight, Kanit" font-size="100" font-weight="300" fill="#f5f5f5">
+                <tspan x="205" y="110">scoreboard</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

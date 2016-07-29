@@ -12,6 +12,7 @@
   font-family: 'Comfortaa', cursive;
   background: #f5f5f5;
   border: 2px solid #f5f5f5;
+  border-top: 0;
   color: #070707;
   display: flex;
   align-items: center;
@@ -61,6 +62,8 @@
 .filterRow {
   composes: row;
   padding: 1em 0;
+  border-bottom: 2px solid #e0e0e0;
+  border-top: 2px solid #e0e0e0;
   background: #070707;
   color: #e0e0e0;
 }
@@ -133,4 +136,13 @@
 }
 .nyy::before {
   background-image: -webkit-linear-gradient(0deg, #fff 86%, #142448 14%);
+}
+
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10em 0;
+
 }

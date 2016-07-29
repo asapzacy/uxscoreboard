@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-import ArrowDown from 'react-icons/lib/fa/angle-down'
+import { Loading } from 'components'
 import { header, standingsContainer, row, teamLogo, filterRow, nyy,
-  xLarge, large, medium, xxLarge, filterList, filterItem } from './styles.css'
+  xLarge, large, medium, xxLarge, filterList, filterItem, loadingContainer } from './styles.css'
 
 class TeamRow extends React.Component {
   render() {
@@ -60,9 +60,9 @@ export default function FilterRow({heading}) {
     <div className={filterRow}>
       <span className={xxLarge}>{heading}</span>
       <span className={xLarge}></span>
-      <span className={medium}>{'w'}</span>
-      <span className={medium}>{'l'}</span>
-      <span className={medium}>{'%'}</span>
+      <span className={medium} onClick={(() => console.log('clicked'))}>{'w'}</span>
+      <span className={medium} onClick={(() => console.log('clicked'))}>{'l'}</span>
+      <span className={medium} onClick={(() => console.log('clicked'))}>{'%'}</span>
       <span className={medium}>{'gb'}</span>
       <span className={large}>{'home'}</span>
       <span className={large}>{'away'}</span>
@@ -88,17 +88,17 @@ class TeamList extends Component {
         {this.props.filter === 'division'
           ? <div className={standingsContainer}>
               <FilterRow heading={'al east'} />
-              { al.filter((team) => team.division === 'American League East').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              { al.filter((team) => team.division_id === '201').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
               <FilterRow heading={'al central'} />
-              { al.filter((team) => team.division === 'American League Central').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              { al.filter((team) => team.division_id === '202').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
               <FilterRow heading={'al west'} />
-              { al.filter((team) => team.division === 'American League West').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              { al.filter((team) => team.division_id === '200').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
               <FilterRow heading={'nl east'} />
-              { nl.filter((team) => team.division === 'National League East').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              { nl.filter((team) => team.division_id === '204').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
               <FilterRow heading={'nl central'} />
-              { nl.filter((team) => team.division === 'National League Central').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              { nl.filter((team) => team.division_id === '205').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
               <FilterRow heading={'nl west'} />
-              { nl.filter((team) => team.division === 'National League West').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
+              { nl.filter((team) => team.division_id === '203').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
             </div>
           : this.props.filter === 'league'
             ? <div className={standingsContainer}>
@@ -119,40 +119,11 @@ class TeamList extends Component {
   }
 }
 
-
-
-// export default function StandingsUI({standings}) {
-//   var al = standings[0].queryResults.row
-//   var nl = standings[1].queryResults.row
-//   var both = al.concat(nl)
-//   console.log(both)
-//   // x = temp1.filter((team) => team.division === 'American League East').sort((a,b) => a.w < b.w).map((item) => console.log(item.team_full))
-//   return (
-//     <div>
-//       <SortList />
-//       <div className={standingsContainer}>
-//         <FilterRow heading={'al east'} />
-//         { both.filter((team) => team.division === 'American League East').map((item) => <TeamRow key={item.team_id} team={item} /> )}
-//         <FilterRow heading={'al central'} />
-//         { both.filter((team) => team.division === 'American League Central').map((item) => <TeamRow key={item.team_id} team={item} /> )}
-//         <FilterRow heading={'al west'} />
-//         { both.filter((team) => team.division === 'American League West').map((item) => <TeamRow key={item.team_id} team={item} /> )}
-//         <FilterRow heading={'nl east'} />
-//         { both.filter((team) => team.division === 'National League East').map((item) => <TeamRow key={item.team_id} team={item} /> )}
-//         <FilterRow heading={'nl central'} />
-//         { both.filter((team) => team.division === 'National League Central').map((item) => <TeamRow key={item.team_id} team={item} /> )}
-//         <FilterRow heading={'nl west'} />
-//         { both.filter((team) => team.division === 'National League West').map((item) => <TeamRow key={item.team_id} team={item} /> )}
-//       </div>
-//     </div>
-//   )
-// }
-
 export default function Standings(props) {
   return (
     <div>
       {props.isLoading === true
-        ? <span className={header}>{'Loading...'}</span>
+        ? <Loading speed={400} text={'loading'} />
         : <TeamList standings={props.standings} filter={props.filter} />
       }
     </div>

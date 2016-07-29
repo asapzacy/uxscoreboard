@@ -2,7 +2,6 @@
   "name": "uxscoreboard",
   "version": "1.0.0",
   "description": "live sports scoreboard",
-  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -17,8 +16,6 @@
     "moment": "^2.14.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-fontawesome": "^1.1.0",
-    "react-icons": "^2.2.1",
     "react-router": "^2.0.0-rc5"
   },
   "devDependencies": {
@@ -39,5 +36,13 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacarellano/uxscoreboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zacarellano/uxscoreboard/issues"
+  },
+  "homepage": "https://github.com/zacarellano/uxscoreboard#readme"
 }

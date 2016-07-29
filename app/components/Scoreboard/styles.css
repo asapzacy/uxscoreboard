@@ -4,7 +4,6 @@
   font-family: 'Comfortaa', cursive;
   text-align: center;
 }
-
 .scoresContainer {
   display: flex;
   text-align: left;
@@ -13,7 +12,6 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .header {
   font-size: 4em;
   margin: 1em 0;

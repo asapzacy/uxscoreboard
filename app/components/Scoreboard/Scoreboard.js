@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
-import { Game, Date } from 'components'
 import moment from 'moment'
-import { scoreboardContainer, scoresContainer, header, dateContainer } from './styles.css'
+import { Game, Date, Loading } from 'components'
+import { scoreboardContainer, scoresContainer, header, dateContainer, loadingContainer } from './styles.css'
 
 export default function ScoreboardUI({date, scores, handleClick}) {
   return (
@@ -19,11 +19,12 @@ export default function ScoreboardUI({date, scores, handleClick}) {
   )
 }
 
+
 export default function Scoreboard(props) {
   return (
     <div>
       {props.isLoading === true
-        ? <h1 className={header}>{'Loading...'}</h1>
+        ? <Loading speed={400} text={'loading'} />
         : <ScoreboardUI
             date={props.date}
             scores={props.scores}

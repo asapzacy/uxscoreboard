@@ -1,0 +1,36 @@
+.ana { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #ba0021 40%, transparent 0%); }
+.ari { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
+.atl { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #13274f 40%, transparent 0%); }
+.bal { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
+.bos { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #0d2b56 40%, transparent 0%); }
+.chc { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #0e3386 40%, transparent 0%); }
+.cin { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #c6011f 40%, transparent 0%); }
+.cle { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #002b5c 40%, transparent 0%); }
+.col { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced4 40%, transparent 0%); }
+.cws { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced4 40%, transparent 0%); }
+.det { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
+.hou { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d62 40%, transparent 0%); }
+.kc  { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
+.la  { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
+.mia { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #0077c8 40%, transparent 0%); }
+.mil { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #0a2351 40%, transparent 0%); }
+.min { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #d31145 40%, transparent 0%); }
+.nym { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d72 40%, transparent 0%); }
+.nyy { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #142448 40%, transparent 0%); }
+.oak { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #003831 40%, transparent 0%); }
+.phi { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #e81828 40%, transparent 0%); }
+.pit { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #fdb827 40%, transparent 0%); }
+.sd  { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #7f411c 40%, transparent 0%); }
+.sea { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #005c5c 40%, transparent 0%); }
+.sf  { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
+.stl { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #c41e3a 40%, transparent 0%); }
+.tb  { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #8fbce6 40%, transparent 0%); }
+.tex { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #003278 40%, transparent 0%); }
+.tor { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #134a8e 40%, transparent 0%); }
+.was { composes:container from './styles.css';background-image:-webkit-linear-gradient(0deg, #ab0003 40%, transparent 0%); }
+
+/*  special case for the Yankees.. ___go_Giants__\_(ツ)_/¯___  */
+.nyy { position:relative; }
+.nyy * { z-index:1; }
+.nyy::before { content:'';position:absolute;left:0;top:0;width:40%;height:100%;background-position:-27.5% 100%; }
+.nyy::before { background-size:15px;background-image:-webkit-linear-gradient(0deg, #fff 86%, #142448 14%); }

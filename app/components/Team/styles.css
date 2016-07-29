@@ -1,30 +1,10 @@
-.teamContainer {
+.container {
   display: flex;
   align-items: center;
   font-size: 2em;
   padding: 4px 0;
   background: #f5f5f5;
   color: #070707;
-}
-.nyy {
-  position: relative;
-  composes: teamContainer;
-}
-.nyy * {
-  z-index: 1;
-}
-.nyy::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40%;
-  height: 100%;
-  background-position: -27.5% 100%;
-  background-size: 15px;
-}
-.nyy::before {
-  background-image: -webkit-linear-gradient(0deg, #fff 86%, #142448 14%);
 }
 .teamLogo {
   max-height: 110px;

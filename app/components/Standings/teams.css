@@ -1,0 +1,36 @@
+.ana { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #ba0021 20%, transparent 0%); }
+.ari { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 20%, transparent 0%); }
+.atl { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #13274f 20%, transparent 0%); }
+.bal { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 20%, transparent 0%); }
+.bos { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #0d2b56 20%, transparent 0%); }
+.chc { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #0e3386 20%, transparent 0%); }
+.cin { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #c6011f 20%, transparent 0%); }
+.cle { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #002b5c 20%, transparent 0%); }
+.col { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced4 20%, transparent 0%); }
+.cws { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced4 20%, transparent 0%); }
+.det { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 20%, transparent 0%); }
+.hou { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d62 20%, transparent 0%); }
+.kc  { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 20%, transparent 0%); }
+.la  { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 20%, transparent 0%); }
+.mia { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #0077c8 20%, transparent 0%); }
+.mil { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #0a2351 20%, transparent 0%); }
+.min { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #d31145 20%, transparent 0%); }
+.nym { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d72 20%, transparent 0%); }
+.nyy { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #142448 20%, transparent 0%); }
+.oak { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #003831 20%, transparent 0%); }
+.phi { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #e81828 20%, transparent 0%); }
+.pit { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #fdb827 20%, transparent 0%); }
+.sd  { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #7f411c 20%, transparent 0%); }
+.sea { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #005c5c 20%, transparent 0%); }
+.sf  { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 20%, transparent 0%); }
+.stl { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #c41e3a 20%, transparent 0%); }
+.tb  { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #8fbce6 20%, transparent 0%); }
+.tex { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #003278 20%, transparent 0%); }
+.tor { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #134a8e 20%, transparent 0%); }
+.was { composes:row from './styles.css';background-image:-webkit-linear-gradient(0deg, #ab0003 20%, transparent 0%); }
+
+/*  special case for the Yankees.. ___go_Giants__\_(ツ)_/¯___  */
+.nyy { position:relative; }
+.nyy * { z-index:1; }
+.nyy::before { content:'';position:absolute;left:0;top:0;width:20%;height:100%;background-position:-27.5% 100%; }
+.nyy::before { background-size:15px;background-image:-webkit-linear-gradient(0deg, #fff 86%, #142448 14%); }

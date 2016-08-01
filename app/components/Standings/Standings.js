@@ -1,98 +1,100 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import { Loading } from 'components'
-import { header, standingsContainer, row, teamLogo, filterRow, xLarge, large, medium, xxLarge, filterList, filterItem, loadingContainer } from './styles.css'
+import { container, filterList, filterItem, standingsContainer, teamsContainer,
+  table, headingRow, header, logo, name } from './styles.css'
 import * as teamColors from './teams.css'
 
-class TeamRow extends React.Component {
-  render() {
-    let teamData = this.props.team
-    return (
-      <div className={teamColors[teamData.file_code]}>
-        <img className={teamLogo} src={`assets/img/mlb/teams/${teamData.file_code}.svg`} alt={teamData.team_full} />
-        <span className={xLarge}>{teamData.team_short}</span>
-        <span className={medium}>{teamData.w}</span>
-        <span className={medium}>{teamData.l}</span>
-        <span className={medium}>{teamData.pct}</span>
-        <span className={medium}>{teamData.gb}</span>
-        <span className={large}>{teamData.home}</span>
-        <span className={large}>{teamData.away}</span>
-        <span className={large}>{teamData.streak}</span>
-        <span className={medium}>{teamData.last_ten}</span>
-      </div>
-    )
-  }
-}
-export default function FilterRow({heading}) {
+export default function StandingsUI({standings, filter}) {
+  var al        = standings[1].queryResults.row,
+      nl        = standings[0].queryResults.row,
+      both      = al.concat(nl),
+      alWest    = al.filter((team) => team.division_id === '200'),
+      alEast    = al.filter((team) => team.division_id === '201'),
+      alCentral = al.filter((team) => team.division_id === '202'),
+      nlWest    = nl.filter((team) => team.division_id === '203'),
+      nlEast    = nl.filter((team) => team.division_id === '204'),
+      nlCentral = nl.filter((team) => team.division_id === '205')
   return (
-    <div className={filterRow}>
-      <span className={xxLarge}>{heading}</span>
-      <span className={xLarge}></span>
-      <span className={medium} onClick={(() => console.log('clicked'))}>{'w'}</span>
-      <span className={medium} onClick={(() => console.log('clicked'))}>{'l'}</span>
-      <span className={medium} onClick={(() => console.log('clicked'))}>{'%'}</span>
-      <span className={medium}>{'gb'}</span>
-      <span className={large}>{'home'}</span>
-      <span className={large}>{'away'}</span>
-      <span className={large}>{'strk'}</span>
-      <span className={medium}>{'l10'}</span>
+    <div className={standingsContainer}>
+      <ul className={filterList}>
+        <li><Link to={'/mlb/standings/division'} className={filterItem} activeClassName='active'>{'division'}</Link></li>
+        <li><Link to={'/mlb/standings/league'} className={filterItem} activeClassName='active'>{'league'}</Link></li>
+        <li><Link to={'/mlb/standings/overall'} className={filterItem} activeClassName='active'>{'overall'}</Link></li>
+        <li><Link to={'/mlb/standings/wc'} className={filterItem} activeClassName='active'>{'wild card'}</Link></li>
+      </ul>
+      { filter === 'division'
+        ? <div className={teamsContainer}>
+            <Table heading={'al east'} data={alEast} />
+            <Table heading={'al central'} data={alCentral} />
+            <Table heading={'al west'} data={alWest} />
+            <span style={{display:'block', width:'100%'}}></span>
+            <Table heading={'nl east'} data={nlEast} />
+            <Table heading={'nl central'} data={nlCentral} />
+            <Table heading={'nl west'} data={nlWest} />
+          </div>
+        : filter === 'league'
+          ? <div className={teamsContainer}>
+              <Table heading={'american'} data={al} />
+              <Table heading={'national'} data={nl} />
+            </div>
+          : filter === 'overall'
+            ? <div className={teamsContainer}>
+                <Table heading={'overall'} data={both} />
+              </div>
+            : null
+      }
     </div>
   )
 }
-class TeamList extends Component {
 
-  render() {
-    let standings = this.props.standings
-    var al = standings[1].queryResults.row
-    var nl = standings[0].queryResults.row
-    var both = al.concat(nl)
-    return (
-      <div>
-        <ul className={filterList}>
-          <li><Link to={'/mlb/standings/division'} className={filterItem} activeClassName='active'>{'division'}</Link></li>
-          <li><Link to={'/mlb/standings/league'} className={filterItem} activeClassName='active'>{'league'}</Link></li>
-          <li><Link to={'/mlb/standings/overall'} className={filterItem} activeClassName='active'>{'overall'}</Link></li>
-        </ul>
-        {this.props.filter === 'division'
-          ? <div className={standingsContainer}>
-              <FilterRow heading={'al east'} />
-              { al.filter((team) => team.division_id === '201').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-              <FilterRow heading={'al central'} />
-              { al.filter((team) => team.division_id === '202').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-              <FilterRow heading={'al west'} />
-              { al.filter((team) => team.division_id === '200').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-              <FilterRow heading={'nl east'} />
-              { nl.filter((team) => team.division_id === '204').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-              <FilterRow heading={'nl central'} />
-              { nl.filter((team) => team.division_id === '205').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-              <FilterRow heading={'nl west'} />
-              { nl.filter((team) => team.division_id === '203').sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-            </div>
-          : this.props.filter === 'league'
-            ? <div className={standingsContainer}>
-                <FilterRow heading={'al'} />
-                { al.sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-                <FilterRow heading={'nl'} />
-                { nl.sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-              </div>
-            : this.props.filter === 'overall'
-              ? <div className={standingsContainer}>
-                  <FilterRow heading={'overall'} />
-                  { both.sort((a,b) => b.pct - a.pct).map((item) => <TeamRow key={item.team_id} team={item} /> )}
-                </div>
-              : null
-        }
+export default function Table({heading, data}) {
+  return (
+    <div className={table}>
+      <div className={headingRow}>
+        <span className={header}>{heading}</span>
+        <span style={{flexBasis:'13%',visibility:'hidden'}}></span>
+        <span>{'w'}</span>
+        <span>{'l'}</span>
+        <span>{'%'}</span>
+        <span>{'gb'}</span>
       </div>
-    )
-  }
+      { data.sort((a,b) => b.pct - a.pct).map((item) => (
+        <TeamRow
+          key={item.team_id}
+          team={item.team_short}
+          code={item.file_code}
+          ws={item.w}
+          ls={item.l}
+          pct={item.pct}
+          gb={item.gb}
+        />
+      ))}
+    </div>
+  )
+}
+export default function TeamRow({team, code, ws, ls, pct, gb}) {
+  return (
+    <div className={teamColors[code]}>
+      <img className={logo} src={`assets/img/mlb/teams/${code}.svg`} alt={team} />
+      <span className={name}>{team}</span>
+      <span>{ws}</span>
+      <span>{ls}</span>
+      <span>{pct}</span>
+      <span>{gb}</span>
+    </div>
+  )
 }
 
 export default function Standings(props) {
   return (
     <div>
       {props.isLoading === true
-        ? <Loading speed={400} text={'loading'} />
-        : <TeamList standings={props.standings} filter={props.filter} />
+        ? <Loading speed={400} text={'Loading'} />
+        : <StandingsUI
+            standings={props.standings}
+            filter={props.filter}
+          />
       }
     </div>
   )

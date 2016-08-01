@@ -1,5 +1,5 @@
 .container {
-  composes: centeredContainer from 'shared/styles.css'
+  composes: centeredContainer from 'styles/shared.css'
 }
 
 .mlbLinks {

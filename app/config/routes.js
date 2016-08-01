@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
-import { MainContainer, HomeContainer, MlbContainer,
+import { MainContainer, HomeContainer, AboutContainer, MlbContainer,
   ScoreboardContainer, StandingsContainer } from 'containers'
 
 const routes = (
@@ -17,7 +17,7 @@ const routes = (
           <Route path=":filter" component={StandingsContainer} />
         </Route>
       </Route>
-      <Route path='/about' component={HomeContainer} />
+      <Route path='/about' component={AboutContainer} />
     </Route>
   </Router>
 )

@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react'
 import moment from 'moment'
 import { Game, Date, Loading } from 'components'
+import { GameContainer } from 'containers'
 import { scoreboardContainer, scoresContainer, header, dateContainer, loadingContainer } from './styles.css'
 
-export default function ScoreboardUI({date, scores, handleClick}) {
+export default function ScoreboardUI({date, scores}) {
   return (
     <div className={scoreboardContainer}>
       <div className={dateContainer}>
@@ -12,7 +13,7 @@ export default function ScoreboardUI({date, scores, handleClick}) {
       <div className={scoresContainer}>
       {scores.game === undefined
         ? <h1>{'no games today'}</h1>
-        : scores.game.map((item) => <Game key={item.game_pk} game={item} />)
+        : scores.game.map((item) => <GameContainer key={item.game_pk} game={item} />)
       }
       </div>
     </div>

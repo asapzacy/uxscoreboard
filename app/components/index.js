@@ -1,4 +1,5 @@
 export Home from './Home/Home'
+export Footer from './Footer/Footer'
 export About from './About/About'
 export Navigation from './Navigation/Navigation'
 export Mlb from './Mlb/Mlb'

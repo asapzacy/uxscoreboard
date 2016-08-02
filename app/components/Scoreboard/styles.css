@@ -9,12 +9,5 @@
   text-align: left;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: row;
   flex-wrap: wrap;
-}
-.header {
-  font-size: 4em;
-  margin: 1em 0;
-  font-weight: 100;
-  text-align: center;
 }

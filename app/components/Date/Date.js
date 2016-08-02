@@ -1,15 +1,18 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
-import Left from 'react-icons/lib/fa/angle-left'
-import Right from 'react-icons/lib/fa/angle-right'
 import moment from 'moment'
-import { dateContainer, currentSelection, dayContainer,
-  upperStr, lowerStr } from './styles.css'
+import Left from 'react-icons/lib/md/chevron-left'
+import Right from 'react-icons/lib/md/chevron-right'
+import { dateContainer, arrow, currentSelection, dayContainer } from './styles.css'
+
+const propTypes = {
+  date: PropTypes.string.isRequired
+}
 
 export default function Date({date}) {
   return (
     <ul className={dateContainer}>
-      <li><Arrow date={date} diff={-4} direction={'left'}/></li>
+      <li className={arrow}><Arrow date={date} diff={-4} direction={'left'}/></li>
       <li><Day date={date} diff={-3} /></li>
       <li><Day date={date} diff={-2} /></li>
       <li><Day date={date} diff={-1} /></li>
@@ -17,21 +20,23 @@ export default function Date({date}) {
       <li><Day date={date} diff={1} /></li>
       <li><Day date={date} diff={2} /></li>
       <li><Day date={date} diff={3} /></li>
-      <li><Arrow date={date} diff={4} direction={'right'}/></li>
+      <li className={arrow}><Arrow date={date} diff={4} direction={'right'}/></li>
     </ul>
   )
 }
 
+Date.propTypes = propTypes
+
 function Day({date, diff}) {
   const day = moment(date).add(diff, 'days')
-  const today = moment().format('YYYYMMDD')
   const url = day.format('YYYYMMDD')
   const weekDay = day.format('ddd').toLowerCase()
   const monthDay = day.format('MMM D')
+  const today = moment().format('YYYYMMDD')
   return (
     <Link to={`/mlb/scores/${url}`} className={dayContainer}>
-      <span className={upperStr}>{today === url ? 'today' : weekDay}</span>
-      <span className={lowerStr}>{monthDay}</span>
+      <span>{today === url ? 'today' : weekDay}</span>
+      <span>{monthDay}</span>
     </Link>
   )
 }

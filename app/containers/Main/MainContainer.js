@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation } from 'components'
+import { Navigation, Footer } from 'components'
 import { mainContainer, innerContainer } from './styles.css'
 
 const MainContainer = React.createClass({
@@ -10,6 +10,7 @@ const MainContainer = React.createClass({
         <div className={innerContainer}>
           {this.props.children}
         </div>
+        <Footer />
       </div>
     )
   }

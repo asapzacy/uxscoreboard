@@ -2,24 +2,27 @@ import React, { PropTypes } from 'react'
 import moment from 'moment'
 import { Game, Date, Loading } from 'components'
 import { GameContainer } from 'containers'
-import { scoreboardContainer, scoresContainer, header, dateContainer, loadingContainer } from './styles.css'
+import { scoreboardContainer, scoresContainer, loadingContainer } from './styles.css'
 
 export default function ScoreboardUI({date, scores}) {
   return (
     <div className={scoreboardContainer}>
-      <div className={dateContainer}>
-        <Date date={date} />
-      </div>
+      <Date date={date} />
       <div className={scoresContainer}>
-      {scores.game === undefined
-        ? <h1>{'no games today'}</h1>
-        : scores.game.map((item) => <GameContainer key={item.game_pk} game={item} />)
-      }
+        {scores.game === undefined
+          ? <h1>{'no games today'}</h1>
+          : scores.game.map(item => <GameContainer key={item.game_pk} game={item} />)
+        }
       </div>
     </div>
   )
 }
 
+const propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  date: PropTypes.string.isRequired,
+  scores: PropTypes.object.isRequired
+}
 
 export default function Scoreboard(props) {
   return (
@@ -33,8 +36,4 @@ export default function Scoreboard(props) {
       }
     </div>
   )
-}
-
-Scoreboard.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
 }

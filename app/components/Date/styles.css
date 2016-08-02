@@ -1,26 +1,45 @@
 .dateContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 2.5em 0 1.25em;
-  font-size: 1.25em;
+  margin: 2.6em auto 1.3em;
+  width: 56%;
+  font-size: 1.2em;
   color: #f5f5f5;
 }
+
 .dateContainer li {
-  margin: 0 1.5em;
+  margin: 0 1em;
 }
+
+.dateContainer li span:last-child {
+  color: #bdbdbd;
+  font-size: 80%;
+  transition: 0.4s all ease-in-out;
+}
+
+.dateContainer li:hover span:last-child  {
+  color: #f5f5f5;
+}
+
+.arrow {
+  transition: 0.4s all ease-in-out;
+}
+
+.arrow:hover {
+  transform: scale(1.4);
+}
+
 .currentSelection {
   font-size: 160%;
 }
+
 .dayContainer {
   display: flex;
   flex-direction: column;
 }
-.upperStr {
-  color: #f5f5f5;
-}
 
-.lowerStr {
-  font-size: 80%;
-  color: #bdbdbd;
+.arrow .dayContainer {
+  cursor: pointer;
+  padding: 1em;
 }

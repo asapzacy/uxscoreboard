@@ -79,7 +79,7 @@
 }
 .filterItem {
   padding: 0 0.4em;
-  transition: 0.4s all;
+  transition: 0.4s all ease-in-out;
   border-bottom: 1px solid transparent;
 }
 .filterItem:hover {

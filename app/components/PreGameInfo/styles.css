@@ -1,0 +1,14 @@
+.pitchingInfo {
+  display: flex;
+  align-items: flex-start;;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.alertsContainer {
+  text-align: center;
+  font-style: italic;
+  padding: 1em 0;
+  font-size: 0.9em;
+}

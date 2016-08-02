@@ -1,16 +1,9 @@
 import React from 'react'
+import { inningSuffix } from 'helpers/utils'
 import { gameInfo } from './styles.css'
 
 export default function GameState({status, time, ampm, tz, inning,
   inningState, outs, reason, description, doubleHeader, gameNumber}) {
-  const getInningSuffix = () => {
-    switch(inning) {
-      case '1' || '21': return 'st'
-      case '2' || '22': return 'nd'
-      case '3' || '23': return 'rd'
-      default: return 'th'
-    }
-  }
   if (status === 'Preview') {
     return (
       <div className={gameInfo}>
@@ -23,7 +16,7 @@ export default function GameState({status, time, ampm, tz, inning,
     return (
       <div className={gameInfo}>
         <span>{`${inningState} ${inning}`}
-          <sup>{getInningSuffix()}</sup>
+          <sup>{inningSuffix(inning)}</sup>
         </span>
         <span><small>
           {inningState === 'Middle' || inningState === 'End'
@@ -70,7 +63,7 @@ export default function GameState({status, time, ampm, tz, inning,
     return (
       <div className={gameInfo}>
         <span>{`${inningState} ${inning}`}
-          <sup>{getInningSuffix()}</sup>
+          <sup>{inningSuffix(inning)}</sup>
         </span>
         <span><small>{`${status} (${reason})`}</small></span>
       </div>
@@ -80,7 +73,7 @@ export default function GameState({status, time, ampm, tz, inning,
     return (
       <div className={gameInfo}>
         <span>{`${inningState} ${inning}`}
-          <sup>{getInningSuffix()}</sup>
+          <sup>{inningSuffix(inning)}</sup>
         </span>
         <span><small>{`${status}`}</small></span>
       </div>

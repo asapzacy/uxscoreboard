@@ -1,10 +1,19 @@
 import moment from 'moment'
 
-export function formatDetailsDate(date) {
+export function detailsDate(date) {
   return moment(new Date(date)).format('MMMM D, YYYY')
 }
 
-export let runnersOnBase = (runners) => {
+export function inningSuffix(inning) {
+  switch(inning) {
+    case '1' || '21': return 'st'
+    case '2' || '22': return 'nd'
+    case '3' || '23': return 'rd'
+    default: return 'th'
+  }
+}
+
+export function baseRunners(runners) {
   let img = '0b'
   if (runners.runner_on_1b)
     img += '1b'
@@ -15,37 +24,36 @@ export let runnersOnBase = (runners) => {
   return img
 }
 
-export const ballCount = (ball, inningState) => {
+export function ballCount(balls, inningState) {
   if (inningState === 'Middle' || inningState === 'End')
     return fillCircles(4, 0)
-  else if (ball === '1')
+  else if (balls === '1')
     return fillCircles(4, 1)
-  else if (ball === '2')
+  else if (balls === '2')
     return fillCircles(4, 2)
-  else if (ball === '3')
+  else if (balls === '3')
     return fillCircles(4, 3)
-  else if (ball === '4')
+  else if (balls === '4')
     return fillCircles(4, 4)
   else
     return fillCircles(4, 0)
 }
 
-export const strikeAndOutCount = (strikeOrOut, inningState) => {
+export function strikeOutCount(strikesOuts, inningState) {
   if (inningState === 'Middle' || inningState === 'End')
     return fillCircles(3, 0)
-  else if (strikeOrOut === '1')
+  else if (strikesOuts === '1')
     return fillCircles(3, 1)
-  else if (strikeOrOut === '2')
+  else if (strikesOuts === '2')
     return fillCircles(3, 2)
-  else if (strikeOrOut === '3')
+  else if (strikesOuts === '3')
     return fillCircles(3, 3)
   else
     return fillCircles(3, 0)
 }
 
 const fillCircles = (numCircles, numFilled) => {
-  var counter = 0
-  var result = ''
+  let counter = 0, result = ''
   while (counter < numFilled) {
     result += '<span class="circle circleFilled"></span>'
     counter++

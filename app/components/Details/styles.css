@@ -1,105 +1,17 @@
 .detailsContainer {
-  background: #f5f5f5;
-  padding: 1.5em;
-  font-size: 0.9em;
+  padding: 0.75em 1.5em;
+  float: left;
 }
+
+.detailsContainer h4 {
+  text-decoration: underline;
+  margin: 0 0 6px;
+}
+
 .aboutContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1em 0;
   text-align: center;
-}
-.linescoreContainer {
-  padding: 1em;
-  text-align: center;
-}
-.midGameDetails {
-}
-.midGameDetails h5 {
-  line-height: 1.2em;
-  margin-bottom: 5px;
-  text-decoration: underline;
-}
-.pitchersTeam {
-  font-size: 0.8em;
-  font-weight: 700;
-}
-.line {
-  border-bottom: 1px solid #5a5a5a;
-  margin: 1em 0;
-  width:20%;
-}
-
-.linescoreContainer table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  font-size: 0.9em;
-}
-.linescoreContainer thead {
-  border-bottom: 2px solid #e0e0e0;
-}
-.linescoreContainer tr {
-  height: 2.4em;
-}
-.linescoreContainer th, .linescoreContainer td {
-  width: 2em;
-  padding: 2px 4px;
-}
-.linescoreContainer thead th:first-child, .linescoreContainer tbody th:first-child {
-  border-right: 2px solid #e0e0e0;
-  width: 4em;
-  text-align: left;
-}
-.linescoreContainer tbody td:nth-last-child(-n+4), .linescoreContainer thead th:nth-last-child(-n+4) {
-  font-weight: 700;
-  width: 2.2em;
-}
-.linescoreContainer thead th:nth-last-child(4), .linescoreContainer tbody td:nth-last-child(4),
-.linescoreContainer thead th:nth-last-child(1), .linescoreContainer tbody td:nth-last-child(1) {
-  border-left: 2px solid #e0e0e0;
-}
-.linescoreContainer tbody td:nth-last-child(1) {
-  font-weight: normal;
-}
-
-.circles {
-  display: inline-block;
-}
-.bso {
-  display: flex;
-}
-
-:global(.circle) {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  margin: 1px;
-  border-radius: 50%;
-  border: 1px solid #070707;
-}
-:global(.circleFilled) {
-  background: #070707;
-}
-.diamond {
-  padding: 1em;
-  display: flex;
-}
-.field {
-  width: 60%;
-  padding: 1%;
-}
-.container {
-  width: 40%;
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.baseRunners {
-  margin: 0 auto;
-}
-.baseRunners span {
-  float: left;
-  clear: both;
 }

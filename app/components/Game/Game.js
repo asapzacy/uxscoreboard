@@ -1,16 +1,16 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import { GameState, Team, Details } from 'components'
-import Down from 'react-icons/lib/fa/angle-down'
-import Up from 'react-icons/lib/fa/angle-up'
-import { gameContainer, gameInfo, outs, expandIcon, test } from './styles.css'
+import Add from 'react-icons/lib/md/add'
+import Clear from 'react-icons/lib/md/clear'
+import { gameContainer, expandIcon } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  toggleDetails: PropTypes.func.isRequired,
-  expanded: PropTypes.bool.isRequired
+  expanded: PropTypes.bool.isRequired,
+  toggleDetails: PropTypes.func.isRequired
 }
 
-export default function Game({game, toggleDetails, expanded}) {
+export default function Game({game, expanded, toggleDetails}) {
   return (
     <div className={gameContainer}>
       <GameState
@@ -40,40 +40,10 @@ export default function Game({game, toggleDetails, expanded}) {
         ws={game.home_win}
         runs={game.linescore.r.home}
       />
-    <span className={expandIcon} onClick={toggleDetails}>
-      { expanded ? <Up /> : <Down /> }
-    </span>
-    { expanded
-      ? <Details
-          status={game.status.status}
-          awayTeam={game.away_team_name}
-          homeTeam={game.home_team_name}
-          venue={game.venue}
-          location={game.location}
-          date={game.original_date}
-          linescore={game.linescore}
-          awayAbbr={game.away_name_abbrev}
-          homeAbbr={game.home_name_abbrev}
-          awayCode={game.away_file_code}
-          homeCode={game.home_file_code}
-          spAway={game.away_probable_pitcher}
-          spHome={game.home_probable_pitcher}
-          pitcher={game.pitcher}
-          batter={game.batter}
-          pbp={game.pbp}
-          runners={game.runners_on_base}
-          balls={game.status.b}
-          strikes={game.status.s}
-          outs={game.status.o}
-          inningState={game.status.inning_state}
-          pWin={game.winning_pitcher}
-          pLoss={game.losing_pitcher}
-          pSave={game.save_pitcher}
-          alerts={game.alerts}
-          review={game.review}
-        />
-      : null
-    }
+      <span className={expandIcon} onClick={toggleDetails}>
+        {expanded ? <Clear /> : <Add />}
+      </span>
+      {expanded ? <Details game={game} status={game.status.status} /> : null}
     </div>
   )
 }

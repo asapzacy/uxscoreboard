@@ -3,7 +3,6 @@ import { Game } from 'components'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  toggleDetails: PropTypes.func
 }
 
 class GameContainer extends Component {
@@ -19,8 +18,8 @@ class GameContainer extends Component {
     return (
       <Game
         game={this.props.game}
-        toggleDetails={this.toggleDetails}
         expanded={this.state.expanded}
+        toggleDetails={this.toggleDetails}
       />
     )
   }

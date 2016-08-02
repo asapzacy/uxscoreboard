@@ -1,39 +1,45 @@
-.container {
+.teamContainer {
+  font-size: 2.2em;
+  padding: 2px 0;
   display: flex;
   align-items: center;
-  font-size: 2em;
-  padding: 4px 0;
-  background: #f5f5f5;
-  color: #070707;
 }
+
 .teamLogo {
   max-height: 110px;
   min-width: 130px;
   flex-basis: 27.5%;
-  margin-right: 5px;
+  margin-right: 4px;
 }
+
 .teamInfo {
   display: flex;
   flex-direction: column;
   flex-basis: 60%;
 }
+
 .teamInfo span {
   background: #fff;
-  box-shadow: rgb(0,0,0) 0 1px 3px 1px;
+  box-shadow: rgb(0,0,0) 0 1px 2px 1px;
 }
+
 .teamName {
   margin-bottom: 10px;
   padding: 2px 8px;
   width: 60%;
 }
+
 .teamName small {
   font-size: 85%;
 }
+
 .teamRecord {
   font-size: 45%;
   padding: 4px 8px;
   width: 30%;
+  font-weight: bold;
 }
+
 .teamScore {
   text-align: center;
   flex-basis: 12%;

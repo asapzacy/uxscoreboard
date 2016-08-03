@@ -1,16 +1,21 @@
 .footerContainer {
   position: absolute;
-  bottom:0; right:0;
-  font-size: 2em;
-  margin: 0.4em;
-}
-
-.twitter {
-  padding:  0.2em;
+  bottom:0;right:0;
+  margin:1%;
   color: #e0e0e0;
-  transition: 0.4s all ease-in-out;
 }
 
-.twitter:hover {
-  color:#1da1f2;
+.ux {
+  font-size: 1.6em;
+  margin-right: 2em;
+}
+
+.tweeter {
+  padding:  0.5em;
+  font-size: 2em;
+  transition: color 0.28s ease-in-out;
+}
+
+.tweeter:hover {
+  color: #1da1f2;
 }

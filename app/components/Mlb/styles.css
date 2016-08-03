@@ -1,27 +1,33 @@
-.container {
-  composes: centeredContainer from 'styles/shared.css'
+.mlbContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .mlbLinks {
   justify-content: space-around;
   display: flex;
-  height: 250px;
+  height: 400px;
   width: 50%;
   align-items: center;
-  color: #f5f5f5;
 }
 
-.mlbLink {
+.mlbLink a {
   font-weight: 100;
-  font-size: 4.5em;
-  transition: all 0.4s;
-  border-bottom: 1px solid transparent;
+  position: relative;
+  font-size: 5em;
+  padding: 0 20px;
 }
 
-.mlbLink:hover {
-  border-bottom: 1px solid #f5f5f5;
+.mlbLink a::before {
+  content: '';
+  position: absolute;
+  bottom:0;left:50%;right:50%;
+  height: 1px;
+  background: #f5f5f5;
+  transition: all 0.4s ease-out;
 }
 
-.logo {
-  display: block;
+.mlbLink a:hover::before {
+  left:0;right:0;
 }

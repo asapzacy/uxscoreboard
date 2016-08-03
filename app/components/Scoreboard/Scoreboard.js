@@ -28,7 +28,7 @@ export default function Scoreboard(props) {
   return (
     <div>
       {props.isLoading === true
-        ? <Loading speed={400} text={'loading'} />
+        ? <Loading speed={300} text={'loading'} />
         : <ScoreboardUI
             date={props.date}
             scores={props.scores}

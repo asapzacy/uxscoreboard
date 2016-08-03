@@ -1,65 +1,72 @@
-.header {
+.headerContainer {
   background: #f5f5f5;
-  padding: 0 4%;
-  color: #5a5a5a;
-}
-.navContainer {
-  display: flex;
-  height: 120px;
-  align-items: center;
-  justify-content: space-between;
-}
-.logoContainer {
-  flex: 3;
-}
-.logo {
-  display: block;
-  width: 333px;
-  padding: 4px;
-}
-.navItems {
-  display: flex;
-  font-size:1.6em;
-  align-items: center;
-  justify-content: space-between;
-  flex: 2;
-}
-.sportsLinks {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  flex: 3;
-}
-.arrow {
-  color: #070707;
-}
-.navLinks {
-  display: flex;
-  height: 70px;
-  border-left: 2px solid #070707;
-  margin-left: 1em;
-  padding-left: 1em;
-  align-items: center;
-  justify-content: space-around;
-  flex: 2;
-}
-.link {
-  border-bottom: 2px solid transparent;
-  transition: all 0.4s;
-}
-.link:hover {
-  border-bottom: 2px solid #070707;
-  color: #070707;
-}
-.littleLink {
-  border-bottom: 1px solid transparent;
-  transition: all 0.4s;
-}
-.littleLink:hover {
-  border-bottom: 1px solid #070707;
+  padding: 0 3.33%;
   color: #070707;
 }
 
-:global(.active) {
+.navContainer {
+  display: flex;
+  height: 115px;
+  align-items: center;
+  color: #616161;
+}
+
+.logoContainer {
+  flex: 1;
+}
+
+.logo {
+  display: flex;
+  width: 353px;
+  padding: 10px;
+}
+
+.navItems {
+  display: flex;
+  font-size:1.8em;
+  flex: 1;
+  margin-left:8%;
+}
+
+.sportsLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 3;
+}
+
+.navLinks {
+  display: flex;
+  height:66px;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 3px solid #070707;
+  align-items: center;
+  justify-content: space-around;
+  flex: 2;
+}
+
+.link {
+  position: relative;
+  padding: 0 2px;
+  transition: color 0.26s ease-in-out
+}
+
+.arrow,
+.link:hover {
   color: #070707;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom:0;left:50%;right:50%;
+  height: 3px;
+  background: #070707;
+  transition: all 0.26s ease-in-out;
+}
+
+.link:hover::before,
+:global(.active::before)  {
+  left:0;right:0;
 }

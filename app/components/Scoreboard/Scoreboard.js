@@ -9,11 +9,13 @@ export default function ScoreboardUI({date, scores}) {
     <div className={scoreboardContainer}>
       <Date date={date} />
       <div className={scoresContainer}>
-        {scores.game === undefined
-          ? <h1>{'no games today..'}</h1>
-          : scores.game[0] === undefined
-            ? <GameContainer key={scores.game.game_pk} game={scores.game} asg={true} />
-            : scores.game.map(item => <GameContainer key={item.game_pk} game={item} asg={false} />)
+        {date >= Number('20160227') && date <= Number('20160402')
+          ? <h1>{'spring training..'}</h1>
+          : scores.game === undefined
+            ? <h1>{'no games today..'}</h1>
+            : scores.game[0] === undefined
+              ? <GameContainer key={scores.game.game_pk} game={scores.game} type={scores.game.game_type} />
+              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} type={item.game_type} />)
         }
       </div>
     </div>

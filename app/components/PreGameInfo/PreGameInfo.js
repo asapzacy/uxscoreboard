@@ -21,11 +21,11 @@ export default function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome, alerts}
             <h4>{'Starting Pitchers:'}</h4>
             <span>
               <strong>{`${awayAbbr.toLowerCase()}:`}</strong>
-              {spAway.last ? ` ${spAway.last}, ${spAway.throwinghand.toLowerCase()} (${spAway.wins}-${spAway.losses}, ${spAway.era} era)` : `TBA`}
+              {spAway.last ? ` ${spAway.last}, ${spAway.throwinghand.toLowerCase()} (${spAway.wins}-${spAway.losses}, ${spAway.era} era)` : 'TBA'}
             </span>
             <span>
               <strong>{`${homeAbbr.toLowerCase()}:`}</strong>
-              {spHome.last ? ` ${spHome.last}, ${spAway.throwinghand.toLowerCase()} (${spHome.wins}-${spHome.losses}, ${spHome.era} era)` : `TBA`}
+              {spHome.last ? ` ${spHome.last}, ${spAway.throwinghand.toLowerCase()} (${spHome.wins}-${spHome.losses}, ${spHome.era} era)` : 'TBA'}
             </span>
           </div>
         : null

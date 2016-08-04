@@ -88,4 +88,11 @@ export default function GameState({status, time, ampm, tz, inning,
       </div>
     )
   }
+  else {
+    return (
+      <div className={gameInfo}>
+        <span>{'fix this bug..'}</span>
+      </div>
+    )
+  }
 }

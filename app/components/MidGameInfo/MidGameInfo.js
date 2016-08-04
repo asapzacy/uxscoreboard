@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 import { baseRunners, ballCount, strikeOutCount } from 'helpers/utils'
 import { alertsContainer, diamondContainer, baseballField, sideContainer,
-  runnersOnBase, ballsStrikesOuts, bso, circle, circleFilled, phInfo } from './styles.css'
+  runnersOnBase, ballsStrikesOuts, bso, circle, circleFilled, phInfo,
+  pbpInfo } from './styles.css'
 
 const propTypes = {
   awayAbbr: PropTypes.string.isRequired,
@@ -75,7 +76,7 @@ export default function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter,
           {` ${batter.last} (${batter.h}-${batter.ab})`}
         </span>
       </div>
-      <div className={phInfo}>
+      <div className={pbpInfo}>
         <h4>{'Last Play:'}</h4>
         <span>{pbp.last}</span>
       </div>

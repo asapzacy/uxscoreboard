@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 1em 0;
+  height:73px;
 }
 
 .alertsContainer {

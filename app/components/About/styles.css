@@ -1,0 +1,16 @@
+.aboutContainer {
+  text-align: center;
+  margin: 0 auto 10em;
+  width:74%;
+}
+
+.header {
+  font-weight: 100;
+  font-size: 5em;
+}
+
+.info {
+  font-weight: 100;
+  font-size: 1.6em;
+  line-height: 2;
+}

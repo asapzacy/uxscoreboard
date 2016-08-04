@@ -7,7 +7,7 @@
 .cin { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c6011f 40%, transparent 0%); }
 .cle { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002b5c 40%, transparent 0%); }
 .col { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced4 40%, transparent 0%); }
-.cws { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced4 40%, transparent 0%); }
+.cws { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
 .det { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
 .hou { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d62 40%, transparent 0%); }
 .kc  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
@@ -34,3 +34,7 @@
 .nyy * { z-index:1; }
 .nyy::before { content:'';position:absolute;left:0;top:0;width:40%;height:100%;background-position:-27.5% 100%; }
 .nyy::before { background-size:15px;background-image:-webkit-linear-gradient(0deg, #fff 86%, #142448 14%); }
+
+/*  special case for the all-star game */
+.nl { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #7f411c 40%, transparent 0%); }
+.al { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #fec325 40%, transparent 0%); }

@@ -61,8 +61,15 @@
   padding: 1em 0;
   float: left;
   clear: both;
+  height: 73px;
 }
 .phInfo span {
   float: left;
   clear: both;
+}
+.pbpInfo {
+  padding-top: 1.5em;
+  float: left;
+  clear: both;
+  height:97px;
 }

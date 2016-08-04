@@ -4,8 +4,8 @@ import { alertsContainer, pitchingInfo } from './styles.css'
 const propTypes = {
   awayAbbr: PropTypes.string.isRequired,
   homeAbbr: PropTypes.string.isRequired,
-  spAway: PropTypes.object.isRequired,
-  spHome: PropTypes.object.isRequired,
+  spAway: PropTypes.object,
+  spHome: PropTypes.object,
   alerts: PropTypes.object.isRequired
 }
 

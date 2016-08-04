@@ -24,37 +24,48 @@ class ScoreboardContainer extends Component {
   }
   cleanGameData(scores) {
     if (scores.game !== undefined) {
-     scores.game.map((game) => {
-      if (game.linescore === undefined) {
-        game.linescore = {
-          r: { away: null, home: null },
-          h: { away: null, home: null },
-          e: { away: null, home: null },
-          inning: { 0: { away: null, home: null },
-                    1: { away: null, home: null },
-                    2: { away: null, home: null },
-                    3: { away: null, home: null },
-                    4: { away: null, home: null },
-                    5: { away: null, home: null },
-                    6: { away: null, home: null },
-                    7: { away: null, home: null },
-                    8: { away: null, home: null }
-                  }
+      if (scores.game[0] === undefined) {
+        if (scores.game.review === undefined) {
+          scores.game.review = {
+            challenges_away_remaining: { null },
+            challenges_home_remaining: { null }
+          }
         }
+        return scores.game
       }
-      if (game.review === undefined) {
-        game.review = {
-          challenges_away_remaining: { null },
-          challenges_home_remaining: { null }
-        }
+      else {
+        scores.game.map((game) => {
+          if (game.linescore === undefined) {
+            game.linescore = {
+              r: { away: null, home: null },
+              h: { away: null, home: null },
+              e: { away: null, home: null },
+              inning: { 0: { away: null, home: null },
+                        1: { away: null, home: null },
+                        2: { away: null, home: null },
+                        3: { away: null, home: null },
+                        4: { away: null, home: null },
+                        5: { away: null, home: null },
+                        6: { away: null, home: null },
+                        7: { away: null, home: null },
+                        8: { away: null, home: null }
+                      }
+            }
+          }
+          if (game.review === undefined) {
+            game.review = {
+              challenges_away_remaining: { null },
+              challenges_home_remaining: { null }
+            }
+          }
+          if (game.alerts === undefined) {
+            game.alerts = {
+              text: { null }
+            }
+          }
+        })
       }
-      if (game.alerts === undefined) {
-        game.alerts = {
-          text: { null }
-        }
-      }
-    })
-  }
+    }
   }
   makeRequest(date) {
     getMlbScores(date)

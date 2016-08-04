@@ -10,8 +10,10 @@ export default function ScoreboardUI({date, scores}) {
       <Date date={date} />
       <div className={scoresContainer}>
         {scores.game === undefined
-          ? <h1>{'no games today'}</h1>
-          : scores.game.map(item => <GameContainer key={item.game_pk} game={item} />)
+          ? <h1>{'no games today..'}</h1>
+          : scores.game[0] === undefined
+            ? <GameContainer key={scores.game.game_pk} game={scores.game} asg={true} />
+            : scores.game.map(item => <GameContainer key={item.game_pk} game={item} asg={false} />)
         }
       </div>
     </div>

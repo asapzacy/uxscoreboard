@@ -6,11 +6,12 @@ import { gameContainer, expandIcon } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
+  asg: PropTypes.bool.isRequired,
   expanded: PropTypes.bool.isRequired,
   toggleDetails: PropTypes.func.isRequired
 }
 
-export default function Game({game, expanded, toggleDetails}) {
+export default function Game({game, asg, expanded, toggleDetails}) {
   return (
     <div className={gameContainer}>
       <GameState
@@ -27,18 +28,20 @@ export default function Game({game, expanded, toggleDetails}) {
         gameNumber={game.game_nbr}
       />
       <Team
-        name={game.away_team_name}
+        name={asg ? 'National' : game.away_team_name}
         code={game.away_file_code}
         ls={game.away_loss}
         ws={game.away_win}
         runs={game.linescore.r.away}
+        img={asg ? 'png' : 'svg'}
       />
       <Team
-        name={game.home_team_name}
+        name={asg ? 'American' : game.home_team_name}
         code={game.home_file_code}
         ls={game.home_loss}
         ws={game.home_win}
         runs={game.linescore.r.home}
+        img={asg ? 'png' : 'svg'}
       />
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <Clear /> : <Add />}

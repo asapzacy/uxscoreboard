@@ -1,11 +1,20 @@
-.container {
-  composes: centeredContainer from 'styles/shared.css'
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.title {
-  composes: largeHeader from 'styles/shared.css'
+.ux {
+  color: #e0e0e0;
+  font-weight: 100;
+  font-size: 7em;
+  margin: 0.6em 0;
 }
 
 .slogan {
-  composes: subHeader from 'styles/shared.css'
+  color: #bdbdbd;
+  font-weight: 100;
+  font-size: 3.5em;
+  margin: 0.3em 0;
 }

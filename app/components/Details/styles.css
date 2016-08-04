@@ -1,21 +1,22 @@
 .detailsContainer {
-  padding: 0.75em 1.5em;
+  padding:1em;
   float: left;
 }
 
 .detailsContainer h4 {
   text-decoration: underline;
-  margin: 0 0 6px;
+  margin: 0 0 5px;
 }
 
 .aboutContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em 0;
+  padding: 1em 1em 0;
   text-align: center;
+  height:73px;
 }
 
 .aboutContainer small {
-  font-size: 75%;
+  font-size: 96%;
 }

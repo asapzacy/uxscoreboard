@@ -12,6 +12,13 @@
   margin-right: 4px;
 }
 
+.asgLogo {
+  max-height: 110px;
+  max-width: 110px;
+  flex-basis: 27.5%;
+  margin-right: 4px;
+}
+
 .teamInfo {
   display: flex;
   flex-direction: column;

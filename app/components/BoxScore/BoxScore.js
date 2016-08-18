@@ -37,7 +37,7 @@ export default function BoxScore({awayAbbr, homeAbbr, awayCode, homeCode,
         <tbody>
           <tr>
             <th>{awayAbbr.toLowerCase()}</th>
-            <td>{linescore.inning[0] ? linescore.inning[0].away : ''}</td>
+            <td>{linescore.inning[0] ? linescore.inning[0].away : linescore.inning.away ? linescore.inning.away : ''}</td>
             <td>{linescore.inning[1] ? linescore.inning[1].away : ''}</td>
             <td>{linescore.inning[2] ? linescore.inning[2].away : ''}</td>
             <td>{linescore.inning[3] ? linescore.inning[3].away : ''}</td>
@@ -53,7 +53,7 @@ export default function BoxScore({awayAbbr, homeAbbr, awayCode, homeCode,
           </tr>
           <tr>
             <th>{homeAbbr.toLowerCase()}</th>
-            <td>{linescore.inning[0] ? linescore.inning[0].home : ''}</td>
+            <td>{linescore.inning[0] ? linescore.inning[0].home : linescore.inning.home ? linescore.inning.home : ''}</td>
             <td>{linescore.inning[1] ? linescore.inning[1].home : ''}</td>
             <td>{linescore.inning[2] ? linescore.inning[2].home : ''}</td>
             <td>{linescore.inning[3] ? linescore.inning[3].home : ''}</td>

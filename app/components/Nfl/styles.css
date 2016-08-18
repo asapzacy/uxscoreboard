@@ -1,0 +1,32 @@
+.nflContainer {
+  height: 460px;
+  width: 60%;
+  margin:0 auto;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nflContainer li {
+  margin:2em 0;
+}
+
+.nflLink {
+  font-weight: 100;
+  font-size: 5em;
+  position: relative;
+  padding: 0 1%;
+}
+
+.nflLink::before {
+  content: '';
+  position: absolute;
+  bottom:0;left:50%;right:50%;
+  height: 4px;
+  background: #e0e0e0;
+  transition: all 0.28s ease-in-out;
+}
+
+.nflLink:hover::before {
+  left:0;right:0;
+}

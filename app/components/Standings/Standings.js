@@ -3,7 +3,9 @@ import { Link } from 'react-router'
 import { Loading } from 'components'
 import { container, filterList, filterItem, standingsContainer, teamsContainer,
   table, headingRow, header, logo, name } from './styles.css'
-import * as teamColors from './teams.css'
+import teamColors from './teams.css'
+
+
 
 export default function StandingsUI({standings, filter}) {
   var al        = standings[1].queryResults.row,

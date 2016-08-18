@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { BoxScore, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
-import { detailsDate } from 'helpers/utils'
+import { formatDate } from 'helpers/utils'
 import { detailsContainer, aboutContainer } from './styles.css'
 
 const propTypes = {
@@ -9,11 +9,12 @@ const propTypes = {
 }
 
 export default function Details({game, status}) {
+  const date = formatDate(game.original_date)
   return (
     <div className={detailsContainer}>
       <div className={aboutContainer}>
         <span><strong>{`${game.away_team_name} v. ${game.home_team_name}`}</strong></span>
-        <span><small>{`${detailsDate(game.original_date)} - ${game.location} - ${game.venue}`}</small></span>
+        <span><small>{`${date} - ${game.location} - ${game.venue}`}</small></span>
       </div>
       <BoxScore
         awayAbbr={game.away_name_abbrev}

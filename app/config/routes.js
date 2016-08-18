@@ -1,20 +1,21 @@
 import React from 'react'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import { MainContainer, HomeContainer, AboutContainer, MlbContainer,
-  ScoreboardContainer, StandingsContainer } from 'containers'
+  NflContainer, ScoreboardContainer, StandingsContainer, LeagueContainer } from 'containers'
 
 const routes = (
   <Router history={hashHistory}>
     <Route path='/' component={MainContainer}>
       <IndexRoute component={HomeContainer} />
-      <Route path='/mlb' component={MlbContainer} />
-      <Route path='/mlb/scores'>
-        <IndexRoute component={ScoreboardContainer} />
-        <Route path=":date" component={ScoreboardContainer} />
+      <Route path='/mlb' component={MlbContainer}>
+        <Route path='scores' component={ScoreboardContainer} />
+        <Route path='scores/:date' component={ScoreboardContainer} />
+        <Route path='standings' component={StandingsContainer} />
+        <Route path='standings/:filter' component={StandingsContainer} />
       </Route>
-      <Route path='/mlb/standings'>
-        <IndexRoute component={StandingsContainer} />
-        <Route path=":filter" component={StandingsContainer} />
+      <Route path='/nfl' component={NflContainer}>
+        <Route path='scores' component={ScoreboardContainer} />
+        <Route path='scores/:date' component={ScoreboardContainer} />
       </Route>
       <Route path='/about' component={AboutContainer} />
     </Route>

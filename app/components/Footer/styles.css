@@ -16,8 +16,12 @@
   color: #bdbdbd;
 }
 
-.tweeter {
+.tweeter, .github {
   font-size: 2em;
+}
+
+.github:hover {
+  color: #666;
 }
 
 .tweeter:hover {

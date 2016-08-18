@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import { GameState, Team, Details } from 'components'
 import Add from 'react-icons/lib/md/add'
-import Clear from 'react-icons/lib/md/clear'
-import {gameContainer, expandIcon } from './styles.css'
+import X from 'react-icons/lib/md/clear'
+import { gameContainer, expandIcon } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
@@ -44,7 +44,7 @@ export default function Game({game, type, expanded, toggleDetails}) {
         img={type === 'A' ? 'png' : 'svg'}
       />
       <span className={expandIcon} onClick={toggleDetails}>
-        {expanded ? <Clear /> : <Add />}
+        {expanded ? <X /> : <Add />}
       </span>
       {expanded ? <Details game={game} status={game.status.status} /> : null}
     </div>

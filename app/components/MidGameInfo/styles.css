@@ -1,9 +1,10 @@
 .alertsContainer {
   text-align: center;
   font-style: italic;
-  width: 80%;
+  width: 90%;
   margin: 1em auto;
-  font-size: 0.9em;
+  font-size: 0.86em;
+  height: 32px;
 }
 .diamondContainer {
   padding: 1em;
@@ -28,6 +29,7 @@
 .runnersOnBase span {
   float: left;
   clear: both;
+  margin: 0 12px 6px 0;
 }
 
 .ballsStrikesOuts {
@@ -58,18 +60,17 @@
 }
 
 .phInfo {
-  padding: 1em 0;
+  margin: 1em 0;
   float: left;
   clear: both;
-  height: 73px;
+  height: 62px;
 }
 .phInfo span {
   float: left;
   clear: both;
 }
 .pbpInfo {
-  padding-top: 1.5em;
   float: left;
   clear: both;
-  height:97px;
+  height:81px;
 }

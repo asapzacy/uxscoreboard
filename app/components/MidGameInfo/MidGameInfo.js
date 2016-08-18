@@ -22,7 +22,7 @@ export default function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter,
   balls, strikes, outs, pbp, runners, inningState, alerts}) {
   return (
     <div>
-      { alerts.text[0]
+      {alerts.text[0]
           ? <div className={alertsContainer}><span>{`${alerts.text}.`}</span></div>
           : null
       }
@@ -32,19 +32,19 @@ export default function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter,
         </div>
         <div className={sideContainer}>
           <div className={runnersOnBase}>
-            { Object.keys(runners).length > 1
+            {Object.keys(runners).length > 1
               ? <h4>{'Runners on Base:'}</h4>
               : null
             }
-            { runners.runner_on_1b
+            {runners.runner_on_1b
               ? <span><strong>{`1b:`}</strong>{` ${runners.runner_on_1b.last}`}</span>
               : null
             }
-            { runners.runner_on_2b
+            {runners.runner_on_2b
               ? <span><strong>{`2b:`}</strong>{` ${runners.runner_on_2b.last}`}</span>
               : null
             }
-            { runners.runner_on_3b
+            {runners.runner_on_3b
               ? <span><strong>{`3b:`}</strong>{` ${runners.runner_on_3b.last}`}</span>
               : null
             }

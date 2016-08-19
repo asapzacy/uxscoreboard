@@ -23,7 +23,7 @@ export default function ScoreboardUI({date, scores}) {
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,
-  // date: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
   scores: PropTypes.object.isRequired
 }
 

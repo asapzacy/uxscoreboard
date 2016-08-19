@@ -12,14 +12,13 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
-    const today = formatDateUrl()
-    this.makeRequest(today)
+    this.makeRequest(this.props.routeParams.date)
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(date) {
-    getMlbScores(date)
+  makeRequest(dt) {
+    getMlbScores(dt)
       .then((currentScores) => {
         this.cleanGameData(currentScores.data.games)
         this.setState({
@@ -81,7 +80,7 @@ class ScoreboardContainer extends Component {
           ? <Scoreboard
               isLoading={this.state.isLoading}
               scores={this.state.scores}
-              date={this.props.routeParams.date ? this.props.routeParams.date : this.state.date}
+              date={this.state.date}
             />
           : null
         }

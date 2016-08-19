@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Mlb } from 'components'
 
-const MlbContainer = React.createClass({
+class MlbContainer extends Component {
   render() {
     return (
       <div>
@@ -9,6 +9,6 @@ const MlbContainer = React.createClass({
       </div>
     )
   }
-})
+}
 
 export default MlbContainer

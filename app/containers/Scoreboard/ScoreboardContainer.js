@@ -12,15 +12,22 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
-    let x = new Date()
-    let y = formatDateUrl(new Date())
-    this.setState({
-      date: this.props.routeParams.date || y
-    })
-    this.makeRequest(this.props.routeParams.date)
+    const today = formatDateUrl()
+    this.makeRequest(today)
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
+  }
+  makeRequest(date) {
+    getMlbScores(date)
+      .then((currentScores) => {
+        this.cleanGameData(currentScores.data.games)
+        this.setState({
+          isLoading: false,
+          scores: currentScores.data.games,
+          date: this.props.routeParams.date || formatDateUrl()
+        })
+      })
   }
   cleanGameData(scores) {
     if (scores.game !== undefined) {
@@ -67,24 +74,6 @@ class ScoreboardContainer extends Component {
       }
     }
   }
-  makeRequest(date) {
-    getMlbScores(date)
-      .then((currentScores) => {
-        this.cleanGameData(currentScores.data.games)
-        this.setState({
-          isLoading: false,
-          scores: currentScores.data.games
-        })
-      })
-  }
-  handleClick(day) {
-    this.context.router.push({
-      pathname: '/scores/' + this.props.routeParams.date,
-      state: {
-        day
-      }
-    })
-  }
   render() {
     return (
       <div>
@@ -93,7 +82,6 @@ class ScoreboardContainer extends Component {
               isLoading={this.state.isLoading}
               scores={this.state.scores}
               date={this.props.routeParams.date ? this.props.routeParams.date : this.state.date}
-              handleClick={(day) => this.handleClick(day)}
             />
           : null
         }

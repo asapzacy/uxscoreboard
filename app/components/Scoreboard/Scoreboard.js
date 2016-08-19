@@ -3,28 +3,6 @@ import { Game, Date, Loading } from 'components'
 import { GameContainer } from 'containers'
 import { scoreboardContainer, scoresContainer, loadingContainer } from './styles.css'
 
-const propTypes = {
-  isLoading: PropTypes.bool.isRequired,
-  date: PropTypes.string.isRequired,
-  scores: PropTypes.object.isRequired
-}
-
-function Scoreboard({isLoading, date, scores}) {
-  return (
-    <div>
-      {isLoading === true
-        ? <Loading speed={300} text={'loading'} />
-        : <ScoreboardUI
-            date={date}
-            scores={scores}
-          />
-      }
-    </div>
-  )
-}
-
-Scoreboard.propTypes = propTypes
-
 export default function ScoreboardUI({date, scores}) {
   return (
     <div className={scoreboardContainer}>
@@ -42,3 +20,25 @@ export default function ScoreboardUI({date, scores}) {
     </div>
   )
 }
+
+const propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  // date: PropTypes.string.isRequired,
+  scores: PropTypes.object.isRequired
+}
+
+export default function Scoreboard(props) {
+  return (
+    <div>
+      {props.isLoading === true
+        ? <Loading speed={300} text={'loading'} />
+        : <ScoreboardUI
+            date={props.date}
+            scores={props.scores}
+          />
+      }
+    </div>
+  )
+}
+
+Scoreboard.propTypes = propTypes

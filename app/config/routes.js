@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import { MainContainer, HomeContainer, AboutContainer, MlbContainer,
-  NflContainer, ScoreboardContainer, StandingsContainer, LeagueContainer } from 'containers'
+  NflContainer, ScoreboardContainer, StandingsContainer } from 'containers'
 
 const routes = (
   <Router history={hashHistory}>

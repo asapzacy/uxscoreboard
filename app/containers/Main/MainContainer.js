@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Navigation, Footer } from 'components'
 import { mainContainer, innerContainer } from './styles.css'
 
-const MainContainer = React.createClass({
+class MainContainer extends Component {
   render() {
     return (
       <div className={mainContainer}>
@@ -14,6 +14,6 @@ const MainContainer = React.createClass({
       </div>
     )
   }
-})
+}
 
 export default MainContainer

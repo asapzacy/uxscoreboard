@@ -37,7 +37,7 @@ export default function GameState({status, time, ampm, tz, inning,
     )
   }
   else if (status === 'Final' || status === 'Game Over') {
-    if (doubleHeader === 'Y') {
+    if (doubleHeader === 'S' || doubleHeader === 'Y') {
       return (
         <div className={gameInfo}>
           <span>{inning > 9 ? `Final/${inning}` : `Final`}</span>

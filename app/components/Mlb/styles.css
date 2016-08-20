@@ -1,32 +1,20 @@
-.mlbContainer {
-  height: 460px;
-  width: 60%;
-  margin:0 auto;
-  color: #e0e0e0;
+.scoreboardContainer {
+  width: 93.33%;
+  margin: 0 auto 8em;
+  text-align: center;
+}
+
+.scoresContainer {
   display: flex;
-  flex-direction: column;
+  text-align: left;
   justify-content: center;
-}
-.mlbContainer li {
-  margin:2em 0;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.mlbLink {
+.scoresContainer h1 {
+  color: #bdbdbd;
   font-weight: 100;
-  font-size: 5em;
-  position: relative;
-  padding: 0 1%;
-}
-
-.mlbLink::before {
-  content: '';
-  position: absolute;
-  bottom:0;left:50%;right:50%;
-  height: 4px;
-  background: #e0e0e0;
-  transition: all 0.28s ease-in-out;
-}
-
-.mlbLink:hover::before {
-  left:0;right:0;
+  font-size: 3.5em;
+  margin: 2em 0;
 }

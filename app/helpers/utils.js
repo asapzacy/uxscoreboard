@@ -13,6 +13,20 @@ export function inningSuffix(inning) {
   }
 }
 
+// switch(digit1Str){
+// 			case '1':
+// 				if(digit2Str.startsWith('1')){ return 'th'; }
+// 				return 'st';
+// 			case '2':
+// 				if(digit2Str.startsWith('1')){ return 'th'; }
+// 				return 'nd';
+// 			case '3':
+// 				if(digit2Str.startsWith('1')){ return 'th'; }
+// 				return 'rd';
+// 			default:
+// 				return 'th';
+// 		}
+
 export function baseRunners(runners) {
   let img = '0b'
   if (runners.runner_on_1b)

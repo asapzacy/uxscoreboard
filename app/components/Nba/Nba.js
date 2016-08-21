@@ -9,7 +9,7 @@ const propTypes = {
   scores: PropTypes.object.isRequired
 }
 
-export default function Mlb({isLoading, date, scores}) {
+export default function Nba({isLoading, date, scores}) {
   return (
     <div>
       {isLoading === true
@@ -20,7 +20,7 @@ export default function Mlb({isLoading, date, scores}) {
   )
 }
 
-Mlb.propTypes = propTypes
+Nba.propTypes = propTypes
 
 function Scoreboard({date, scores}) {
   console.log(scores)

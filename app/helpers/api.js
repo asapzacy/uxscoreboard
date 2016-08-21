@@ -1,5 +1,11 @@
-import axios from 'axios'
 import moment from 'moment'
+import axios from 'axios'
+import parseString from 'xml2js'
+
+export function formatDateUrl() {
+  return moment().format('YYYYMMDD')
+}
+
 
 /*
   example api json endpoints
@@ -20,12 +26,6 @@ __epl__   https://footballapi.pulselive.com/football/fixtures?comps=1&compSeason
 -----------------------------------------
 */
 
-
-
-export function formatDateUrl() {
-  return moment().format('YYYYMMDD')
-}
-
 export function getMlbScores(dt) {
   if (dt === undefined)
     dt = formatDateUrl()
@@ -34,11 +34,30 @@ export function getMlbScores(dt) {
   const dd = dt.slice(6,8)
   const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
-    .then((currentScores) => (dt, currentScores.data))
-    .catch((currentScores) => (dt, currentScores.status))
+    .then((currentScores) => currentScores.data)
+    .catch((currentScores) => currentScores.status)
+}
+
+export function getNflScores() {
+  return axios.get('http://www.nfl.com/liveupdate/scores/scores.json')
+    .then((currentScores) => currentScores.data)
+    .catch((currentScores) => currentScores.status)
 }
 
 
+
+
+
+
+// export function getNflScores() {
+//   return axios.get('http://www.nfl.com/ajax/scorestrip?season=2016&seasonType=PRE&week=2')
+//     .then((currentScores) => {
+//       var xml = currentScores.data
+//       console.log(xml)
+//       parseString(xml, (err, result) => console.log(JSON.stringify(result)))
+//     })
+//     .catch((currentScores) => currentScores.status)
+// }
 
 
 

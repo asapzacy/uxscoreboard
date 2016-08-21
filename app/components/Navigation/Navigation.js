@@ -12,8 +12,10 @@ export default function Navigation() {
         </div>
         <ul className={navItems}>
           <ul className={sportsLinks}>
-            <li><Link className={link} to='/nfl' activeClassName='active'>{'nfl'}</Link></li>
             <li><Link className={link} to='/mlb' activeClassName='active'>{'mlb'}</Link></li>
+            <li><Link className={link} to='/nba' activeClassName='active'>{'nba'}</Link></li>
+            <li><Link className={link} to='/nfl' activeClassName='active'>{'nfl'}</Link></li>
+            <li><Link className={link} to='/nhl' activeClassName='active'>{'nhl'}</Link></li>
           </ul>
           <ul className={navLinks}>
             <li><Link className={link} to='/about' activeClassName='active'>{'about'}</Link></li>

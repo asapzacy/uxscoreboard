@@ -23,18 +23,17 @@ export default function Mlb({isLoading, date, scores}) {
 Mlb.propTypes = propTypes
 
 function Scoreboard({date, scores}) {
-  console.log(scores)
   return (
     <div className={scoreboardContainer}>
-      <Date date={date} />
+      <Date date={date} sport={'mlb'} />
       <div className={scoresContainer}>
-        {date >= Number('20160227') && date <= Number('20160402')
-          ? <h1>{'spring training . . . '}</h1>
+        {date > Number('20160228') && date < Number('20160403')
+          ? <h1>{'[ spring training ]'}</h1>
           : scores.game === undefined
-            ? <h1>{'no games today . . . '}</h1>
+            ? <h1>{'[ no games today ]'}</h1>
             : scores.game[0] === undefined
-              ? <GameContainer key={scores.game.game_pk} game={scores.game} type={scores.game.game_type} />
-              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} type={item.game_type} />)
+              ? <GameContainer key={scores.game.game_pk} game={scores.game} sport={'mlb'} />
+              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} sport={'mlb'} />)
         }
       </div>
     </div>

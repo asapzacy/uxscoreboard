@@ -14,9 +14,13 @@
   align-items: center;
   padding: 1em 1em 0;
   text-align: center;
-  height:73px;
+  height:79px;
 }
 
+.aboutContainer span:first-child {
+  margin-bottom:4px;
+  font-size:110%;
+}
 .aboutContainer small {
-  font-size: 96%;
+  font-size: 95%;
 }

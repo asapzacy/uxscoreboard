@@ -6,14 +6,40 @@ import { gameContainer, expandIcon } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  type: PropTypes.string.isRequired,
+  sport: PropTypes.string.isRequired,
   expanded: PropTypes.bool.isRequired,
   toggleDetails: PropTypes.func.isRequired
 }
 
-export default function Game({game, type, expanded, toggleDetails}) {
+export default function Game({game, sport, expanded, toggleDetails}) {
   return (
     <div className={gameContainer}>
+      {sport === 'mlb'
+        ? <MlbGame
+            game={game}
+            sport={sport}
+            expanded={expanded}
+            toggleDetails={toggleDetails}
+          />
+        : sport === 'nba'
+          ? <NbaGame
+              game={game}
+              sport={sport}
+              expanded={expanded}
+              toggleDetails={toggleDetails}
+            />
+          : <h1>{'ayeee'}</h1>
+      }
+    </div>
+
+  )
+}
+
+Game.propTypes = propTypes
+
+function MlbGame({game, sport, expanded, toggleDetails}) {
+  return (
+    <div>
       <GameState
         status={game.status.status}
         time={game.time}
@@ -28,20 +54,22 @@ export default function Game({game, type, expanded, toggleDetails}) {
         gameNumber={game.game_nbr}
       />
       <Team
-        name={type === 'A' ? 'National' : game.away_team_name}
+        name={game.game_type === 'A' ? 'National' : game.away_team_name}
+        sport={sport}
         code={game.away_file_code}
         ls={game.away_loss}
         ws={game.away_win}
         runs={game.linescore.r.away}
-        img={type === 'A' ? 'png' : 'svg'}
+        img={game.game_type === 'A' ? 'png' : 'svg'}
       />
       <Team
-        name={type === 'A' ? 'American' : game.home_team_name}
+        name={game.game_type === 'A' ? 'American' : game.home_team_name}
+        sport={sport}
         code={game.home_file_code}
         ls={game.home_loss}
         ws={game.home_win}
         runs={game.linescore.r.home}
-        img={type === 'A' ? 'png' : 'svg'}
+        img={game.game_type === 'A' ? 'png' : 'svg'}
       />
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <X /> : <Add />}
@@ -51,4 +79,28 @@ export default function Game({game, type, expanded, toggleDetails}) {
   )
 }
 
-Game.propTypes = propTypes
+
+function NbaGame({game, sport, expanded, toggleDetails}) {
+  return (
+    <div>
+      <Team
+        name={game.visitor.nickname}
+        sport={sport}
+        code={game.visitor.team_key.toLowerCase()}
+        ls={'0'}
+        ws={'0'}
+      />
+      <Team
+        name={game.home.nickname}
+        sport={sport}
+        code={game.home.team_key.toLowerCase()}
+        ls={'0'}
+        ws={'0'}
+      />
+      <span className={expandIcon} onClick={toggleDetails}>
+        {expanded ? <X /> : <Add />}
+      </span>
+      {expanded ? 'expanded !' : null}
+    </div>
+  )
+}

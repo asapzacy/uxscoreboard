@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Mlb, Game } from 'components'
+import { Mlb } from 'components'
 import { formatDateUrl, getMlbScores } from 'helpers/api'
 
 class MlbContainer extends Component {

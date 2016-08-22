@@ -26,15 +26,13 @@ function Scoreboard({date, scores}) {
   console.log(scores)
   return (
     <div className={scoreboardContainer}>
-      <Date date={date} />
+      <Date date={date} sport={'nba'} />
       <div className={scoresContainer}>
-        {date >= Number('20160227') && date <= Number('20160402')
-          ? <h1>{'spring training . . . '}</h1>
+        {date > Number('20161001') && date < Number('20161025')
+          ? <h1>{'[ preseason ]'}</h1>
           : scores.game === undefined
-            ? <h1>{'no games today . . . '}</h1>
-            : scores.game[0] === undefined
-              ? <GameContainer key={scores.game.game_pk} game={scores.game} type={scores.game.game_type} />
-              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} type={item.game_type} />)
+            ? <h1>{'[ no games today ]'}</h1>
+            : scores.game.map(item => <GameContainer key={item.id} game={item} sport={'nba'} />)
         }
       </div>
     </div>

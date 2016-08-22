@@ -11,13 +11,12 @@ export function formatDateUrl() {
   example api json endpoints
 -----------------------------------------
 __mlb__   http://gd2.mlb.com/components/game/mlb/year_2016/month_08/day_19/master_scoreboard.json   [master]
-          http://gd2.mlb.com/components/game/mlb/year_2016/month_07/day_01/miniscoreboard.json      [mini]
-
-__nfl__   http://www.nfl.com/liveupdate/scores/scores.json  [scores]
-          http://feeds.nfl.com/feeds-rs/teams/2016.json     [teams]
+          http://gd2.mlb.com/components/game/mlb/year_2016/month_08/day_19/miniscoreboard.json      [mini]
+__nfl__   http://www.nfl.com/liveupdate/scores/scores.json
 
 __nba__   http://data.nba.com/data//json/nbacom/2016/gameline/20161025/games.json         [simple]
           http://data.nba.com/data/5s/json/cms/noseason/scoreboard/20161025/games.json    [detailed]
+          http://data.nba.com/                                                            [teams]
 
 __nhl__   https://statsapi.web.nhl.com/api/v1/schedule?startDate=2016-10-12&endDate=2016-10-12
 
@@ -36,6 +35,16 @@ export function getMlbScores(dt) {
   return axios.get(url)
     .then((currentScores) => currentScores.data)
     .catch((currentScores) => currentScores.status)
+}
+
+export function getNbaScores(dt) {
+  if (dt === undefined)
+    dt = '20161025'
+  const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
+  return axios.get(url)
+    .then((currentScores) => currentScores.data)
+    .catch((currentScores) => currentScores.status)
+
 }
 
 export function getNflScores() {

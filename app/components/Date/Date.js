@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import moment from 'moment'
-import Left from 'react-icons/lib/md/chevron-left'
-import Right from 'react-icons/lib/md/chevron-right'
+import Left from 'react-icons/lib/fa/angle-left'
+import Right from 'react-icons/lib/fa/angle-right'
 import { dateContainer, arrow, currentSelection, dayContainer } from './styles.css'
 
 const propTypes = {

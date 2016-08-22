@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Date, Loading } from 'components'
+import { Loading, NotFound, Date } from 'components'
 import { GameContainer } from 'containers'
 import { scoreboardContainer, scoresContainer, loadingContainer } from './styles.css'
 
@@ -14,7 +14,9 @@ export default function Mlb({isLoading, date, scores}) {
     <div>
       {isLoading === true
         ? <Loading speed={300} text={'loading'} />
-        : <Scoreboard date={date} scores={scores} />
+        : scores !== 404
+          ? <Scoreboard date={date} scores={scores} />
+          : <NotFound />
       }
     </div>
   )

@@ -45,13 +45,17 @@ export function getNbaScores(dt) {
   return axios.get(url)
     .then((currentScores) => currentScores.data)
     .catch((currentScores) => currentScores.status)
-
+    // .catch((currentScores) => axios.get('http://data.nba.com/data/5s/json/cms/noseason/scoreboard/20161025/games.json'))
+    //   .then((currentScores) => currentScores.data)
 }
+
+//     currentScores.status === 404 ? this.props.pushState(null, '/404') : null)
+
 
 export function getNflScores() {
   return axios.get('http://www.nfl.com/liveupdate/scores/scores.json')
     .then((currentScores) => currentScores.data)
-    .catch((currentScores) => currentScores.status )
+    .catch((currentScores) => currentScores.status)
 }
 
 

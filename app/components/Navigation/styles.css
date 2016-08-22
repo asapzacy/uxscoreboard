@@ -66,7 +66,10 @@
   transition: all 0.26s ease-in-out;
 }
 
-.link:hover::before,
-:global(.active::before)  {
+.link:hover::before  {
   left:0;right:0;
+}
+
+:global(.active) {
+  color: #070707;
 }

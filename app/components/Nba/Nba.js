@@ -23,14 +23,13 @@ export default function Nba({isLoading, date, scores}) {
 Nba.propTypes = propTypes
 
 function Scoreboard({date, scores}) {
-  console.log(scores)
   return (
     <div className={scoreboardContainer}>
       <Date date={date} sport={'nba'} />
       <div className={scoresContainer}>
-        {date > Number('20161001') && date < Number('20161025')
+        {date > 20161001 && date < 20161025
           ? <h1>{'[ preseason ]'}</h1>
-          : scores.game === undefined
+          : scores.game === undefined || scores.game.length === 0
             ? <h1>{'[ no games today ]'}</h1>
             : scores.game.map(item => <GameContainer key={item.id} game={item} sport={'nba'} />)
         }

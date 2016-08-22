@@ -1,6 +1,5 @@
 import moment from 'moment'
 import axios from 'axios'
-import parseString from 'xml2js'
 
 export function formatDateUrl() {
   return moment().format('YYYYMMDD')
@@ -39,7 +38,9 @@ export function getMlbScores(dt) {
 
 export function getNbaScores(dt) {
   if (dt === undefined)
-    dt = '20161025'
+    dt = 20161025
+  if (dt > 20160619 && dt < 20160930)
+    dt = 20151024
   const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
   return axios.get(url)
     .then((currentScores) => currentScores.data)
@@ -50,7 +51,7 @@ export function getNbaScores(dt) {
 export function getNflScores() {
   return axios.get('http://www.nfl.com/liveupdate/scores/scores.json')
     .then((currentScores) => currentScores.data)
-    .catch((currentScores) => currentScores.status)
+    .catch((currentScores) => currentScores.status )
 }
 
 

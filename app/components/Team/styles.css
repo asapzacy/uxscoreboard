@@ -33,15 +33,11 @@
 .teamName {
   margin-bottom: 10px;
   padding: 2px 8px;
-  width: 66%;
+  width: 64%;
 }
 
-.teamName .small {
-  font-size: 85%;
-}
-
-.teamName .tiny {
-  font-size: 69%;
+.teamName small {
+  font-size: 82.5%;
 }
 
 .teamRecord {

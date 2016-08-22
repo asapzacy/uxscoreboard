@@ -27,7 +27,7 @@ function Scoreboard({date, scores}) {
     <div className={scoreboardContainer}>
       <Date date={date} sport={'mlb'} />
       <div className={scoresContainer}>
-        {date > Number('20160228') && date < Number('20160403')
+        {date > 20160228 && date < 20160403
           ? <h1>{'[ spring training ]'}</h1>
           : scores.game === undefined
             ? <h1>{'[ no games today ]'}</h1>

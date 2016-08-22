@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import { MainContainer, HomeContainer, MlbContainer, NbaContainer,
-  NflContainer, NhlContainer, AboutContainer } from 'containers'
+  NflContainer, NhlContainer, AboutContainer, NotFoundContainer } from 'containers'
 
 const routes = (
   <Router history={hashHistory}>
@@ -11,6 +11,7 @@ const routes = (
         <IndexRoute component={MlbContainer} />
         <Route path='scores' component={MlbContainer} />
         <Route path='scores/:date' component={MlbContainer} />
+        <Route path='*' component={NotFoundContainer} />
       </Route>
       <Route path='/nba'>
         <IndexRoute component={NbaContainer} />
@@ -28,6 +29,7 @@ const routes = (
         <Route path='scores/:date' component={NhlContainer} />
       </Route>
       <Route path='/about' component={AboutContainer} />
+      <Route path='*' component={NotFoundContainer} />
     </Route>
   </Router>
 )

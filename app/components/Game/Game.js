@@ -23,7 +23,7 @@ export default function Game({game, sport, expanded, toggleDetails}) {
       />
     )
   }
-  else if (sport === 'nba') {
+  if (sport === 'nba') {
     return (
       <NbaGame
         game={game}
@@ -77,34 +77,23 @@ function MlbGame({game, sport, expanded, toggleDetails}) {
 
 
 function NbaGame({game, sport, expanded, toggleDetails}) {
-  const time = formatTime(game.time)
-  const ampm = Number(game.time) > 1200 ? 'PM' : 'AM'
-  const isPlayoffs = game.playoffs ? true : false
+  console.log(game)
   return (
-    <div>
-      <GameState
-        status={game.period_time.period_status}
-        time={time}
-        ampm={ampm}
-        tz={'ET'}
-        inning={game.period_time.period_value}
-        state={'Qtr'}
-        gameNbr={isPlayoffs ? game.playoffs.game_number : null}
-        isPlayoffs={isPlayoffs}
-      />
+    <div className={gameContainer}>
+      <GameState game={game} sport={sport} />
       <Team
         name={game.visitor.nickname}
         code={game.visitor.team_key.toLowerCase()}
-        ls={isPlayoffs ? game.playoffs.home_wins : null}
-        ws={isPlayoffs ? game.playoffs.visitor_wins : null}
+        ls={game.playoffs ? game.playoffs.home_wins : null}
+        ws={game.playoffs ? game.playoffs.visitor_wins : null}
         score={game.visitor.score}
         sport={sport}
       />
       <Team
         name={game.home.nickname}
         code={game.home.team_key.toLowerCase()}
-        ls={isPlayoffs ? game.playoffs.visitor_wins : null}
-        ws={isPlayoffs ? game.playoffs.home_wins : null}
+        ls={game.playoffs ? game.playoffs.visitor_wins : null}
+        ws={game.playoffs ? game.playoffs.home_wins : null}
         score={game.home.score}
         sport={sport}
       />

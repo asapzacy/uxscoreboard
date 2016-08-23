@@ -25,6 +25,15 @@ export default function GameState({game, sport}) {
       />
     )
   }
+  if (sport === 'nba') {
+    return (
+      <NbaState
+        status={game.period_time.period_status}
+        totalQtrs={game.period_time.period_value}
+        playoffs={game.playoffs}
+      />
+    )
+  }
   else return <h1>{'yo'}</h1>
 
 }
@@ -32,8 +41,8 @@ export default function GameState({game, sport}) {
 GameState.propTypes = propTypes
 
 
-function MlbState({status, time, ampm, tz, inning, inningState, outs,
-  reason, description, doubleHdr, gameNbr}) {
+function MlbState({status, time, ampm, tz, inning, inningState, outs, reason,
+  description, doubleHdr, gameNbr}) {
   // all cases of pre-game statuses
   if (status === 'Preview' || status === 'Warmup' || status === 'Pre-Game' || status === 'Delayed Start') {
     return (
@@ -79,14 +88,31 @@ function MlbState({status, time, ampm, tz, inning, inningState, outs,
   }
 }
 
-//
-// else if (!(isNaN(Number(status.charAt(0))))) {
-//   return (
-//     <div className={gameInfo}>
-//       <span>{status.toUpperCase()}</span>
-//     </div>
-//   )
-// }
+function NbaState({status, totalQtrs, playoffs}) {
+  // all cases of pre-game statuses. this checks if string starts w/ number
+  if (!(isNaN(Number(status.charAt(0))))) {
+    return (
+      <div className={gameInfo}>
+        <span>{status.toUpperCase()}</span>
+      </div>
+    )
+  }
+  // DON'T KNOW BC SEASON HASN'T STARTED
+  // all cases of mid-game statuses
+  // else if () {
+  //   return (
+  //
+  //   )
+  // }
+  // all cases of post-game statuses
+  else if (status === 'Final') {
+    const OTs = totalQtrs - 4
+    return (
+      <div className={gameInfo}>
+        <span>{totalQtrs > 4 ? OTs > 1 ? `${status}/${OTs}OT` : `${status}/OT` : status}</span>
+        {playoffs ? <span><small>{`Game ${playoffs.game_number} of 7`}</small></span> : null}
+      </div>
 
-// : isPlayoffs
-//   ? <span><small>{`Game ${gameNbr} of 7`}</small></span>
+    )
+  }
+}

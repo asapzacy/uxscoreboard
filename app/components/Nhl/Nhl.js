@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Date, Loading } from 'components'
+import { Loading, NotFound, Date } from 'components'
 import { GameContainer } from 'containers'
 import { scoreboardContainer, scoresContainer, loadingContainer } from './styles.css'
 
@@ -14,7 +14,9 @@ export default function Nhl({isLoading, date, scores}) {
     <div>
       {isLoading === true
         ? <Loading speed={300} text={'loading'} />
-        : <Scoreboard date={date} scores={scores} />
+        : scores !== 404
+          ? <Scoreboard date={date} scores={scores} />
+          : <NotFound />
       }
     </div>
   )
@@ -23,18 +25,15 @@ export default function Nhl({isLoading, date, scores}) {
 Nhl.propTypes = propTypes
 
 function Scoreboard({date, scores}) {
-  console.log(scores)
   return (
     <div className={scoreboardContainer}>
-      <Date date={date} />
+      <Date date={date} sport={'nhl'} />
       <div className={scoresContainer}>
-        {date >= Number('20160227') && date <= Number('20160402')
-          ? <h1>{'spring training . . . '}</h1>
-          : scores.game === undefined
-            ? <h1>{'no games today . . . '}</h1>
-            : scores.game[0] === undefined
-              ? <GameContainer key={scores.game.game_pk} game={scores.game} type={scores.game.game_type} />
-              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} type={item.game_type} />)
+      {date > 20160925 && date < 20161012
+          ? <h1>{'[ preseason ]'}</h1>
+          : scores.games === undefined
+            ? <h1>{'[ no games today ]'}</h1>
+            : scores.games.map(item => <GameContainer key={item.gamePk} game={item} sport={'nhl'} />)
         }
       </div>
     </div>

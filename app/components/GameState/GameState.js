@@ -3,93 +3,73 @@ import { inningSuffix } from 'helpers/utils'
 import { gameInfo } from './styles.css'
 
 const propTypes = {
-  status: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  ampm: PropTypes.string.isRequired,
-  inning: PropTypes.string.isRequired,
-  state: PropTypes.string.isRequired,
-  isPlayoffs: PropTypes.bool.isRequired,
-  tz: PropTypes.string,
-  gameNbr: PropTypes.string,
-  outs: PropTypes.string,
-  reason: PropTypes.string,
-  description: PropTypes.string,
-  doubleHeader: PropTypes.string,
+  game: PropTypes.object.isRequired,
+  sport: PropTypes.string.isRequired
 }
 
-export default function GameState({status, time, ampm, tz='ET', inning,
-  state, outs, reason, description, doubleHeader, gameNbr, isPlayoffs}) {
-  const suffix = inningSuffix(inning)
-  if (status === 'Preview') {
+export default function GameState({game, sport}) {
+  if (sport === 'mlb') {
     return (
-      <div className={gameInfo}>
-        <span>{time === '3:33' ? `TBA` : `${time} ${ampm} ${tz}`}</span>
-        {description ? <span><small>{description}</small></span> : null}
-      </div>
+      <MlbState
+        status={game.status.status}
+        time={game.time}
+        ampm={game.ampm}
+        tz={game.time_zone}
+        inning={game.status.inning}
+        inningState={game.status.inning_state}
+        outs={game.status.o}
+        reason={game.status.reason}
+        description={game.description}
+        doubleHdr={game.double_header_sw}
+        gameNbr={game.game_nbr}
+      />
     )
   }
-  else if (status === 'In Progress') {
+  else return <h1>{'yo'}</h1>
+
+}
+
+GameState.propTypes = propTypes
+
+
+function MlbState({status, time, ampm, tz, inning, inningState, outs,
+  reason, description, doubleHdr, gameNbr}) {
+  // all cases of pre-game statuses
+  if (status === 'Preview' || status === 'Warmup' || status === 'Pre-Game' || status === 'Delayed Start') {
     return (
       <div className={gameInfo}>
-        <span>{`${state} ${inning}`}<sup>{suffix}</sup></span>
+        <span>{time === '3:33' ? 'TBA' : `${time} ${ampm} ${tz}`}</span>
         <span><small>
-          {state === 'Middle' || state === 'End' ? outs = '' : outs === '1' ? `${outs} out` : `${outs} outs`}
+          {description ? description : status === 'Pre-Game' || status === 'Delayed Start' ? status : null}
         </small></span>
       </div>
     )
   }
-  else if (status === 'Final' || status === 'Game Over') {
+  // all cases of mid-game statuses
+  else if (status === 'In Progress'|| status === 'Delayed' || status === 'Suspended' || status === 'Review' || status === 'Manager Challenger') {
+    const suffix = inningSuffix(inning)
     return (
       <div className={gameInfo}>
-        <span>{inning > 9 ? `Final/${inning}` : `Final`}</span>
-        {doubleHeader === 'S' || doubleHeader === 'Y'
-          ? <span><small>{`Game ${gameNbr} of 2`}</small></span>
-          : isPlayoffs
-            ? <span><small>{`Game ${gameNbr} of 7`}</small></span>
-            : null
-        }
+        <span>{`${inningState} ${inning}`}<sup>{suffix}</sup></span>
+        <span><small>
+          {status === 'In Progress' && inningState === 'Middle' || inningState === 'End' ? outs = '' : outs === '1' ? `${outs} out` : `${outs} outs`}
+          {status === 'Manager Challenge' ? status : status !== 'In Progress' ? `${status} (${reason})` : null}
+        </small></span>
       </div>
     )
   }
-  else if (status === 'Warmup' || status === 'Pre-Game' || status === 'Delayed Start')
+  // all cases of post-game statuses
+  else if (status === 'Final' || status === 'Game Over' || status === 'Completed Early' || status === 'Postponed') {
     return (
       <div className={gameInfo}>
-        <span>{`${time} ${ampm} ${tz}`}</span>
-        <span><small>{status}</small></span>
-      </div>
-    )
-  else if (status === 'Postponed') {
-    return (
-      <div className={gameInfo}>
-        <span>{status}</span>
-        <span><small>{`(${reason})`}</small></span>
+        <span>{status === 'Postponed' ? status : inning !== '9' ? `Final/${inning}` : 'Final'}</span>
+        <span><small>
+          {status === 'Postponed' ? `(${reason})` : doubleHdr === 'S' || doubleHdr === 'Y' ? `Game ${gameNbr} of 2` : status === 'Completed Early' ? status : null}
+        </small></span>
       </div>
     )
   }
-  else if (status === 'Delayed' || status === 'Suspended' || status === 'Review') {
-    return (
-      <div className={gameInfo}>
-        <span>{`${state} ${inning}`}<sup>{suffix}</sup></span>
-        <span><small>{`${status} (${reason})`}</small></span>
-      </div>
-    )
-  }
-  else if (status === 'Manager Challenge') {
-    return (
-      <div className={gameInfo}>
-        <span>{`${state} ${inning}`}<sup>{suffix}</sup></span>
-        <span><small>{status}</small></span>
-      </div>
-    )
-  }
-  else if (status === 'Completed Early') {
-    return (
-      <div className={gameInfo}>
-        <span>{`Final/${inning}`}</span>
-        <span><small>{status}</small></span>
-      </div>
-    )
-  }
+  // mlb has so many different status options, this is to find any new ones and add them
   else {
     return (
       <div className={gameInfo}>
@@ -99,4 +79,14 @@ export default function GameState({status, time, ampm, tz='ET', inning,
   }
 }
 
-GameState.propTypes = propTypes
+//
+// else if (!(isNaN(Number(status.charAt(0))))) {
+//   return (
+//     <div className={gameInfo}>
+//       <span>{status.toUpperCase()}</span>
+//     </div>
+//   )
+// }
+
+// : isPlayoffs
+//   ? <span><small>{`Game ${gameNbr} of 7`}</small></span>

@@ -14,9 +14,9 @@ export default function Nba({isLoading, date, scores}) {
     <div>
       {isLoading === true
         ? <Loading speed={300} text={'loading'} />
-        : scores === 404
-          ? <NotFound />
-          : <Scoreboard date={date} scores={scores} />
+        : scores !== 404
+          ? <Scoreboard date={date} scores={scores} />
+          : <NotFound />
       }
     </div>
   )

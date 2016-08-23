@@ -13,51 +13,44 @@ const propTypes = {
 }
 
 export default function Game({game, sport, expanded, toggleDetails}) {
-  return (
-    <div className={gameContainer}>
-      {sport === 'mlb'
-        ? <MlbGame
-            game={game}
-            sport={sport}
-            expanded={expanded}
-            toggleDetails={toggleDetails}
-          />
-        : sport === 'nba'
-          ? <NbaGame
-              game={game}
-              sport={sport}
-              expanded={expanded}
-              toggleDetails={toggleDetails}
-            />
-          : <h1>{'ayeee'}</h1>
-      }
-    </div>
-
-  )
+  if (sport === 'mlb') {
+    return (
+      <MlbGame
+        game={game}
+        sport={sport}
+        expanded={expanded}
+        toggleDetails={toggleDetails}
+      />
+    )
+  }
+  else if (sport === 'nba') {
+    return (
+      <NbaGame
+        game={game}
+        sport={sport}
+        expanded={expanded}
+        toggleDetails={toggleDetails}
+      />
+    )
+  }
+  else {
+    return (
+      <h1>{'ayeee'}</h1>
+    )
+  }
 }
 
 Game.propTypes = propTypes
 
 function MlbGame({game, sport, expanded, toggleDetails}) {
+  const awayTeam = game.game_type === 'A' ? 'American' : game.away_team_name
+  const homeTeam = game.game_type === 'A' ? 'National' : game.home_team_name
   const img = game.game_type === 'A' ? 'png' : 'svg'
   return (
-    <div>
-      <GameState
-        status={game.status.status}
-        time={game.time}
-        ampm={game.ampm}
-        tz={game.time_zone}
-        inning={game.status.inning}
-        state={game.status.inning_state}
-        outs={game.status.o}
-        reason={game.status.reason}
-        description={game.description}
-        doubleHeader={game.double_header_sw}
-        gameNbr={game.game_nbr}
-        isPlayoffs={false}
-      />
+    <div className={gameContainer}>
+      <GameState game={game} sport={sport} />
       <Team
-        name={game.game_type === 'A' ? 'National' : game.away_team_name}
+        name={awayTeam}
         code={game.away_file_code}
         ls={game.away_loss}
         ws={game.away_win}
@@ -66,7 +59,7 @@ function MlbGame({game, sport, expanded, toggleDetails}) {
         sport={sport}
       />
       <Team
-        name={game.game_type === 'A' ? 'American' : game.home_team_name}
+        name={homeTeam}
         code={game.home_file_code}
         ls={game.home_loss}
         ws={game.home_win}
@@ -93,6 +86,46 @@ function NbaGame({game, sport, expanded, toggleDetails}) {
         status={game.period_time.period_status}
         time={time}
         ampm={ampm}
+        tz={'ET'}
+        inning={game.period_time.period_value}
+        state={'Qtr'}
+        gameNbr={isPlayoffs ? game.playoffs.game_number : null}
+        isPlayoffs={isPlayoffs}
+      />
+      <Team
+        name={game.visitor.nickname}
+        code={game.visitor.team_key.toLowerCase()}
+        ls={isPlayoffs ? game.playoffs.home_wins : null}
+        ws={isPlayoffs ? game.playoffs.visitor_wins : null}
+        score={game.visitor.score}
+        sport={sport}
+      />
+      <Team
+        name={game.home.nickname}
+        code={game.home.team_key.toLowerCase()}
+        ls={isPlayoffs ? game.playoffs.visitor_wins : null}
+        ws={isPlayoffs ? game.playoffs.home_wins : null}
+        score={game.home.score}
+        sport={sport}
+      />
+      <span className={expandIcon} onClick={toggleDetails}>
+        {expanded ? <X /> : <Add />}
+      </span>
+      {expanded ? 'expanded !' : null}
+    </div>
+  )
+}
+
+
+function NhlGame({game, sport, expanded, toggleDetails}) {
+  const isPlayoffs = game.playoffs ? true : false
+  return (
+    <div>
+      <GameState
+        status={game.status.abstractGameState}
+        time={time}
+        ampm={ampm}
+        tz={'ET'}
         inning={game.period_time.period_value}
         state={'Qtr'}
         gameNbr={isPlayoffs ? game.playoffs.game_number : null}

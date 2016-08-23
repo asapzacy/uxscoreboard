@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { BoxScore, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
-import { formatDate } from 'helpers/utils'
+import { formatDateStr } from 'helpers/utils'
 import { detailsContainer, aboutContainer } from './styles.css'
 
 const propTypes = {
@@ -9,7 +9,7 @@ const propTypes = {
 }
 
 export default function Details({game, status}) {
-  const date = formatDate(game.original_date)
+  const date = formatDateStr(game.original_date)
   return (
     <div className={detailsContainer}>
       <div className={aboutContainer}>

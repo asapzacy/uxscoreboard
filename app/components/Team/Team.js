@@ -5,24 +5,24 @@ import teamColors from './colors.css'
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  sport: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
-  ls: PropTypes.string.isRequired,
-  ws: PropTypes.string.isRequired,
-  runs: PropTypes.string,
+  sport: PropTypes.string.isRequired,
+  ls: PropTypes.string,
+  ws: PropTypes.string,
   img: PropTypes.string,
+  score: PropTypes.string,
 }
 
-export default function Team({name, sport, code, ls, ws, runs, img='svg'}) {
+export default function Team({name, code, ls, ws, score, img='svg', sport}) {
   name = name === 'Timberwolves' ? 'T-wolves' : name === 'Trail Blazers' ? 'Blazers' : name
   return (
     <div className={teamColors[`${code}_${sport}`]}>
       <img className={img === 'png' ? asgLogo : teamLogo} src={`assets/img/${sport}/teams/${code}.${img}`} alt={name} />
       <div className={teamInfo}>
         <span className={teamName}>{name.length > 7 ? <small>{name}</small> : name}</span>
-        <span className={teamRecord}>{`(${ws}-${ls})`}</span>
+        {ws && ls ? <span className={teamRecord}>{`(${ws}-${ls})`}</span> : null}
       </div>
-      {runs ? <span className={teamScore}>{runs}</span> : null}
+      {score ? <span className={teamScore}>{score}</span> : null}
     </div>
   )
 }

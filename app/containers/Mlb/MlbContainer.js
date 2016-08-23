@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Mlb } from 'components'
-import { formatDateUrl, getMlbScores } from 'helpers/api'
+import { formatDateUrl } from 'helpers/utils'
+import { getMlbScores } from 'helpers/api'
 
 class MlbContainer extends Component {
   constructor() {

@@ -6,17 +6,19 @@ const propTypes = {
   status: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
   ampm: PropTypes.string.isRequired,
-  inning: PropTypes.string,
-  inningState: PropTypes.string.isRequired,
+  inning: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  isPlayoffs: PropTypes.bool.isRequired,
+  tz: PropTypes.string,
+  gameNbr: PropTypes.string,
   outs: PropTypes.string,
   reason: PropTypes.string,
-  description: PropTypes.string.isRequired,
-  doubleHeader: PropTypes.string.isRequired,
-  gameNumber: PropTypes.string.isRequired
+  description: PropTypes.string,
+  doubleHeader: PropTypes.string,
 }
 
-export default function GameState({status, time, ampm, tz, inning,
-  inningState, outs, reason, description, doubleHeader, gameNumber}) {
+export default function GameState({status, time, ampm, tz='ET', inning,
+  state, outs, reason, description, doubleHeader, gameNbr, isPlayoffs}) {
   const suffix = inningSuffix(inning)
   if (status === 'Preview') {
     return (
@@ -29,25 +31,23 @@ export default function GameState({status, time, ampm, tz, inning,
   else if (status === 'In Progress') {
     return (
       <div className={gameInfo}>
-        <span>{`${inningState} ${inning}`}<sup>{suffix}</sup></span>
+        <span>{`${state} ${inning}`}<sup>{suffix}</sup></span>
         <span><small>
-          {inningState === 'Middle' || inningState === 'End' ? outs = '' : outs === '1' ? `${outs} out` : `${outs} outs`}
+          {state === 'Middle' || state === 'End' ? outs = '' : outs === '1' ? `${outs} out` : `${outs} outs`}
         </small></span>
       </div>
     )
   }
   else if (status === 'Final' || status === 'Game Over') {
-    if (doubleHeader === 'S' || doubleHeader === 'Y') {
-      return (
-        <div className={gameInfo}>
-          <span>{inning > 9 ? `Final/${inning}` : `Final`}</span>
-          <span><small>{`Game ${gameNumber} of 2`}</small></span>
-        </div>
-      )
-    }
     return (
       <div className={gameInfo}>
         <span>{inning > 9 ? `Final/${inning}` : `Final`}</span>
+        {doubleHeader === 'S' || doubleHeader === 'Y'
+          ? <span><small>{`Game ${gameNbr} of 2`}</small></span>
+          : isPlayoffs
+            ? <span><small>{`Game ${gameNbr} of 7`}</small></span>
+            : null
+        }
       </div>
     )
   }
@@ -69,7 +69,7 @@ export default function GameState({status, time, ampm, tz, inning,
   else if (status === 'Delayed' || status === 'Suspended' || status === 'Review') {
     return (
       <div className={gameInfo}>
-        <span>{`${inningState} ${inning}`}<sup>{suffix}</sup></span>
+        <span>{`${state} ${inning}`}<sup>{suffix}</sup></span>
         <span><small>{`${status} (${reason})`}</small></span>
       </div>
     )
@@ -77,7 +77,7 @@ export default function GameState({status, time, ampm, tz, inning,
   else if (status === 'Manager Challenge') {
     return (
       <div className={gameInfo}>
-        <span>{`${inningState} ${inning}`}<sup>{suffix}</sup></span>
+        <span>{`${state} ${inning}`}<sup>{suffix}</sup></span>
         <span><small>{status}</small></span>
       </div>
     )

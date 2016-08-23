@@ -1,10 +1,16 @@
 .pitchingInfo {
-  display: flex;
+  /*display: flex;
   align-items: flex-start;;
   justify-content: center;
-  flex-direction: column;
-  padding: 1em 0;
-  height:73px;
+  flex-direction: column;*/
+  margin: 1em 0 0;
+  height:62px;
+}
+
+.pitchingInfo span {
+  display: block;
+  float:left;
+  clear:both;
 }
 
 .alertsContainer {

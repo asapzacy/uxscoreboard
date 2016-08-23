@@ -1,7 +1,18 @@
 import moment from 'moment'
 
-export function formatDate(date) {
+export function formatDateUrl() {
+  return moment().format('YYYYMMDD')
+}
+
+export function formatDateStr(date) {
   return moment(new Date(date)).format('MMMM D, YYYY')
+}
+
+export function formatTime(time) {
+  let hh = time.slice(0,2)
+  const mm = time.slice(2,4)
+  if (hh > 12) hh -= 12
+  return `${hh}:${mm}`
 }
 
 export function inningSuffix(inning) {

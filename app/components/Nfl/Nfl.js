@@ -14,7 +14,9 @@ export default function Nfl({isLoading, date, scores}) {
     <div>
       {isLoading === true
         ? <Loading speed={300} text={'loading'} />
-        : <Scoreboard date={'20160820'} scores={scores} />
+        : scores === 404
+          ? <NotFound />
+          : <Scoreboard date={'20160820'} scores={scores} />
       }
     </div>
   )
@@ -23,8 +25,8 @@ export default function Nfl({isLoading, date, scores}) {
 Nfl.propTypes = propTypes
 
 function Scoreboard({date, scores}) {
-  console.log(scores)
-  console.log(Object.keys(scores))
+  // console.log(scores)
+  // console.log(Object.keys(scores))
   return (
     <div className={scoreboardContainer}>
       <Date date={date} />

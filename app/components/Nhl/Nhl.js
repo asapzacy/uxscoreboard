@@ -25,15 +25,16 @@ export default function Nhl({isLoading, date, scores}) {
 Nhl.propTypes = propTypes
 
 function Scoreboard({date, scores}) {
+  console.log(scores)
   return (
     <div className={scoreboardContainer}>
       <Date date={date} sport={'nhl'} />
       <div className={scoresContainer}>
-      {date > 20160925 && date < 20161012
+        {date > 20160924 && date < 20161012
           ? <h1>{'[ preseason ]'}</h1>
-          : scores.games === undefined
+          : !scores.dates.length
             ? <h1>{'[ no games today ]'}</h1>
-            : scores.games.map(item => <GameContainer key={item.gamePk} game={item} sport={'nhl'} />)
+            : scores.dates[0].games.map(item => <GameContainer key={item.gamePk} game={item} sport={'nhl'} />)
         }
       </div>
     </div>

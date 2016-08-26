@@ -1,5 +1,4 @@
 /*    __mlb__     */
-
 .ana_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ba0021 40%, transparent 0%); }
 .ari_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
 .atl_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #13274f 40%, transparent 0%); }
@@ -44,8 +43,7 @@
 
 
 
-/*    __nba     */
-
+/*    __nba__     */
 .atl_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #e13a3e 40%, transparent 0%); }
 .bos_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #008348 40%, transparent 0%); }
 .bkn_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
@@ -80,3 +78,38 @@
 /*  special case for the all-star game */
 .west_nba { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #7f411c 40%, transparent 0%); }
 .east_nba { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #fec325 40%, transparent 0%); }
+
+
+
+
+/*    __nhl__     */
+.ari_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #8c2633 40%, transparent 0%); }
+.ana_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #111111 40%, transparent 0%); }
+.bos_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #111111 40%, transparent 0%); }
+.buf_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002654 40%, transparent 0%); }
+.car_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #111111 40%, transparent 0%); }
+.cbj_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002654 40%, transparent 0%); }
+.cgy_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #111111 40%, transparent 0%); }
+.chi_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #cf0a2c 40%, transparent 0%); }
+.col_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #006bb6 40%, transparent 0%); }
+.dal_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #006847 40%, transparent 0%); }
+.det_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ce1126 40%, transparent 0%); }
+.edm_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
+.fla_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002654 40%, transparent 0%); }
+.lak_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #111111 40%, transparent 0%); }
+.min_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #024930 40%, transparent 0%); }
+.mtl_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
+.njd_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ce1126 40%, transparent 0%); }
+.nsh_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #fcb514 40%, transparent 0%); }
+.nyi_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #003893 40%, transparent 0%); }
+.nyr_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
+.ott_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ce1126 40%, transparent 0%); }
+.phi_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #f74902 40%, transparent 0%); }
+.pit_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
+.sjs_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #006d75 40%, transparent 0%); }
+.stl_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002654 40%, transparent 0%); }
+.tbl_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002868 40%, transparent 0%); }
+.tor_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002868 40%, transparent 0%); }
+.van_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced3 40%, transparent 0%); }
+.wpg_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #041e41 40%, transparent 0%); }
+.wsh_nhl  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #cf0a2c 40%, transparent 0%); }

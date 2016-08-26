@@ -10,6 +10,11 @@
   min-width: 130px;
   flex-basis: 27.5%;
   margin-right: 4px;
+  /*max-height: 110px;
+  max-width: 158px;
+  flex-basis: 27.5%;
+  margin-right: 4px;
+  padding: 2.6%;*/
 }
 
 .asgLogo {

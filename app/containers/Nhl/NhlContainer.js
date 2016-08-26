@@ -23,7 +23,7 @@ class NhlContainer extends Component {
       .then((currentScores) => {
         this.setState({
           isLoading: false,
-          scores: currentScores.dates[0],
+          scores: currentScores,
           date: this.props.routeParams.date || '20161012'
         })
       })

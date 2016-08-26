@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { inningSuffix } from 'helpers/utils'
+import { formatTz, inningSuffix } from 'helpers/utils'
 import { gameInfo } from './styles.css'
 
 const propTypes = {
@@ -12,9 +12,7 @@ export default function GameState({game, sport}) {
     return (
       <MlbState
         status={game.status.status}
-        time={game.time}
-        ampm={game.ampm}
-        tz={game.time_zone}
+        time={`${game.time} ${game.ampm} ${game.time_zone}`}
         inning={game.status.inning}
         inningState={game.status.inning_state}
         outs={game.status.o}
@@ -34,20 +32,32 @@ export default function GameState({game, sport}) {
       />
     )
   }
-  else return <h1>{'yo'}</h1>
+  if (sport === 'nhl') {
+    return (
+      <NhlState
+        status={game.status.abstractGameState}
+        time={game.gameDate}
+        prd={game.linescore.currentPeriod}
+        totalPrds={game.linescore.currentPeriod}
+        ordinal={game.linescore.currentPeriodOrdinal}
+        playoffs={game.gameType === 'P' ? game.seriesSummary : null }
+       />
+    )
+  }
+  return <span>{'hi !'}</span>
 
 }
 
 GameState.propTypes = propTypes
 
 
-function MlbState({status, time, ampm, tz, inning, inningState, outs, reason,
+function MlbState({status, time, inning, inningState, outs, reason,
   description, doubleHdr, gameNbr}) {
   // all cases of pre-game statuses
   if (status === 'Preview' || status === 'Warmup' || status === 'Pre-Game' || status === 'Delayed Start') {
     return (
       <div className={gameInfo}>
-        <span>{time === '3:33' ? 'TBA' : `${time} ${ampm} ${tz}`}</span>
+        <span>{time.startsWith('3:33') ? 'TBA' : time}</span>
         <span><small>
           {description ? description : status === 'Pre-Game' || status === 'Delayed Start' ? status : null}
         </small></span>
@@ -111,6 +121,35 @@ function NbaState({status, totalQtrs, playoffs}) {
       <div className={gameInfo}>
         <span>{totalQtrs > 4 ? OTs > 1 ? `${status}/${OTs}OT` : `${status}/OT` : status}</span>
         {playoffs ? <span><small>{`Game ${playoffs.game_number} of 7`}</small></span> : null}
+      </div>
+
+    )
+  }
+}
+
+function NhlState({status, time, prd, totalPrds, ordinal, playoffs}) {
+  // all cases of pre-game statuses
+  if (status === 'Preview') {
+    const timeEt = formatTz(time)
+    return (
+      <div className={gameInfo}>
+        <span>{`${timeEt} ET`}</span>
+      </div>
+    )
+  }
+  // DON'T KNOW BC SEASON HASN'T STARTED
+  // all cases of mid-game statuses
+  // else if () {
+  //   return (
+  //
+  //   )
+  // }
+  // all cases of post-game statuses
+  else if (status === 'Final') {
+    return (
+      <div className={gameInfo}>
+        <span>{totalPrds - 3 > 0 ? `${status}/${ordinal}` : status}</span>
+        <span><small>{playoffs ? `${playoffs.gameLabel} of 7` : null}</small></span>
       </div>
 
     )

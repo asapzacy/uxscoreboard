@@ -44,10 +44,62 @@ export default function Game({game, sport, expanded, toggleDetails}) {
   }
   else {
     return (
-      <h1>{'ayeee'}</h1>
+      <h1>{'ye'}</h1>
     )
   }
 }
+
+function NbaGame({game, sport, expanded, toggleDetails}) {
+  return (
+    <div className={gameContainer}>
+      <GameState game={game} sport={sport} />
+      <Team
+        name={game.visitor.nickname}
+        code={game.visitor.team_key.toLowerCase()}
+        ls={game.playoffs ? game.playoffs.home_wins : null}
+        ws={game.playoffs ? game.playoffs.visitor_wins : null}
+        score={game.visitor.score}
+        sport={sport}
+      />
+      <Team
+        name={game.home.nickname}
+        code={game.home.team_key.toLowerCase()}
+        ls={game.playoffs ? game.playoffs.visitor_wins : null}
+        ws={game.playoffs ? game.playoffs.home_wins : null}
+        score={game.home.score}
+        sport={sport}
+      />
+      <span className={expandIcon} onClick={toggleDetails}>
+        {expanded ? <X /> : <Add />}
+      </span>
+      {expanded ? <Details game={game} sport={sport} status={game.period_time.game_status} /> : null}
+    </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function NhlGame({game, sport, expanded, toggleDetails}) {
@@ -123,35 +175,7 @@ function MlbGame({game, sport, expanded, toggleDetails}) {
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <X /> : <Add />}
       </span>
-      {expanded ? <Details game={game} status={game.status.status} /> : null}
-    </div>
-  )
-}
-
-function NbaGame({game, sport, expanded, toggleDetails}) {
-  return (
-    <div className={gameContainer}>
-      <GameState game={game} sport={sport} />
-      <Team
-        name={game.visitor.nickname}
-        code={game.visitor.team_key.toLowerCase()}
-        ls={game.playoffs ? game.playoffs.home_wins : null}
-        ws={game.playoffs ? game.playoffs.visitor_wins : null}
-        score={game.visitor.score}
-        sport={sport}
-      />
-      <Team
-        name={game.home.nickname}
-        code={game.home.team_key.toLowerCase()}
-        ls={game.playoffs ? game.playoffs.visitor_wins : null}
-        ws={game.playoffs ? game.playoffs.home_wins : null}
-        score={game.home.score}
-        sport={sport}
-      />
-      <span className={expandIcon} onClick={toggleDetails}>
-        {expanded ? <X /> : <Add />}
-      </span>
-      {expanded ? 'expanded !' : null}
+      {expanded ? <Details game={game} sport={sport} status={game.status.status} /> : null}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Loading, NotFound, Date } from 'components'
 import { GameContainer } from 'containers'
-import { scoreboardContainer, scoresContainer, loadingContainer } from './styles.css'
+import { scoreboardContainer, scoresContainer } from 'styles/shared.css'
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,

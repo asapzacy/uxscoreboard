@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Nba } from 'components'
-import { NotFoundContainer } from 'containers'
 import { getNbaScores } from 'helpers/api'
 
 class NbaContainer extends Component {

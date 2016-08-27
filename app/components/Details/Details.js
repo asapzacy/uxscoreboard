@@ -5,17 +5,75 @@ import { detailsContainer, aboutContainer } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  status: PropTypes.string.isRequired
+  status: PropTypes.string.isRequired,
+  sport: PropTypes.string.isRequired
 }
 
-export default function Details({game, status}) {
-  const date = formatDateStr(game.original_date)
+export default function Details({game, sport, status}) {
+  if (sport === 'mlb') {
+    return (
+      <MlbDetails
+        game={game}
+        status={status}
+      />
+    )
+  }
+  if (sport === 'nba') {
+    return (
+      <NbaDetails
+        game={game}
+      />
+    )
+  }
+  else {
+    return (
+      <h1>{'i hope this doesn\'t run'}</h1>
+    )
+  }
+}
+
+Details.propTypes = propTypes
+
+
+function About({awayTeam, homeTeam, date, location, venue}) {
+  date = formatDateStr(date)
+  return (
+    <div className={aboutContainer}>
+      <span><strong>{`${awayTeam} v. ${homeTeam}`}</strong></span>
+      <span><small>{`${date} - ${location} - ${venue}`}</small></span>
+    </div>
+  )
+}
+
+
+function NbaDetails({game}) {
   return (
     <div className={detailsContainer}>
-      <div className={aboutContainer}>
-        <span><strong>{`${game.away_team_name} v. ${game.home_team_name}`}</strong></span>
-        <span><small>{`${date} - ${game.location} - ${game.venue}`}</small></span>
-      </div>
+      <About
+        awayTeam={game.visitor.nickname}
+        homeTeam={game.home.nickname}
+        date={game.date}
+        location={`${game.city}, ${game.state}`}
+        venue={game.arena}
+      />
+    </div>
+  )
+}
+
+
+
+
+
+function MlbDetails({game, status}) {
+  return (
+    <div className={detailsContainer}>
+      <About
+        awayTeam={game.away_team_name}
+        homeTeam={game.home_team_name}
+        date={game.original_date}
+        location={game.location}
+        venue={game.venue}
+      />
       <BoxScore
         awayAbbr={game.away_name_abbrev}
         homeAbbr={game.home_name_abbrev}
@@ -58,5 +116,3 @@ export default function Details({game, status}) {
     </div>
   )
 }
-
-Details.propTypes = propTypes

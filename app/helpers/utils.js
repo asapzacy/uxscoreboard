@@ -6,6 +6,10 @@ export function formatDateUrl() {
 }
 
 export function formatDateStr(date) {
+  console.log(date)
+  if (date.length === 8) {
+    date = `${date.slice(0,4)}/${date.slice(4,6)}/${date.slice(6,8)}`
+  }
   return moment(new Date(date)).format('MMMM D, YYYY')
 }
 

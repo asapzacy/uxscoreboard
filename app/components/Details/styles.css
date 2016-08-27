@@ -1,6 +1,7 @@
 .detailsContainer {
   padding:1em;
   float: left;
+  width:100%;
 }
 
 .detailsContainer h4 {

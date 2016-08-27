@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Loading, NotFound, Date } from 'components'
 import { GameContainer } from 'containers'
-import { scoreboardContainer, scoresContainer, loadingContainer } from './styles.css'
+import { scoreboardContainer, scoresContainer, loadingContainer } from 'styles/shared.css'
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,
@@ -25,7 +25,6 @@ export default function Nhl({isLoading, date, scores}) {
 Nhl.propTypes = propTypes
 
 function Scoreboard({date, scores}) {
-  console.log(scores)
   return (
     <div className={scoreboardContainer}>
       <Date date={date} sport={'nhl'} />

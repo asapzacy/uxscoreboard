@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Loading, NotFound, Date } from 'components'
 import { GameContainer } from 'containers'
-import { scoreboardContainer, scoresContainer, loadingContainer } from './styles.css'
+import { scoreboardContainer, scoresContainer, loadingContainer } from 'styles/shared.css'
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,
@@ -14,9 +14,9 @@ export default function Mlb({isLoading, date, scores}) {
     <div>
       {isLoading === true
         ? <Loading speed={300} text={'loading'} />
-        : scores === 404
-          ? <NotFound />
-          : <Scoreboard date={date} scores={scores} />
+        : scores !== 404
+          ? <Scoreboard date={date} scores={scores} />
+          : <NotFound />
       }
     </div>
   )

@@ -5,25 +5,18 @@ import { detailsContainer, aboutContainer } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  status: PropTypes.string.isRequired,
   sport: PropTypes.string.isRequired
 }
 
-export default function Details({game, sport, status}) {
+export default function Details({game, sport}) {
   if (sport === 'mlb') {
-    return (
-      <MlbDetails
-        game={game}
-        status={status}
-      />
-    )
+    return <MlbDetails game={game} />
   }
   if (sport === 'nba') {
-    return (
-      <NbaDetails
-        game={game}
-      />
-    )
+    return <NbaDetails game={game} />
+  }
+  if (sport === 'nhl') {
+    return <NhlDetails game={game} />
   }
   else {
     return (
@@ -41,6 +34,22 @@ function About({awayTeam, homeTeam, date, location, venue}) {
     <div className={aboutContainer}>
       <span><strong>{`${awayTeam} v. ${homeTeam}`}</strong></span>
       <span><small>{`${date} - ${location} - ${venue}`}</small></span>
+    </div>
+  )
+}
+
+
+
+function NhlDetails({game}) {
+  return (
+    <div className={detailsContainer}>
+      <About
+        awayTeam={game.teams.away.team.teamName}
+        homeTeam={game.teams.home.team.teamName}
+        date={game.gameDate}
+        location={game.teams.home.team.venue.city}
+        venue={game.venue.name}
+      />
     </div>
   )
 }
@@ -64,7 +73,10 @@ function NbaDetails({game}) {
 
 
 
-function MlbDetails({game, status}) {
+
+
+function MlbDetails({game}) {
+  const status = game.status.status
   return (
     <div className={detailsContainer}>
       <About

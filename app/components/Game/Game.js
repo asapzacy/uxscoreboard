@@ -49,6 +49,47 @@ export default function Game({game, sport, expanded, toggleDetails}) {
   }
 }
 
+
+
+
+
+
+
+function NhlGame({game, sport, expanded, toggleDetails}) {
+  return (
+    <div className={gameContainer}>
+      <GameState game={game} sport={sport} />
+      <Team
+        name={game.teams.away.team.teamName}
+        code={game.teams.away.team.abbreviation.toLowerCase()}
+        ls={game.teams.away.leagueRecord.losses + ''}
+        ws={game.teams.away.leagueRecord.wins + ''}
+        score={game.teams.away.score + ''}
+        sport={sport}
+      />
+      <Team
+        name={game.teams.home.team.teamName}
+        code={game.teams.home.team.abbreviation.toLowerCase()}
+        ls={game.teams.home.leagueRecord.losses + ''}
+        ws={game.teams.home.leagueRecord.wins + ''}
+        score={game.teams.home.score + ''}
+        sport={sport}
+      />
+      <span className={expandIcon} onClick={toggleDetails}>
+        {expanded ? <X /> : <Add />}
+      </span>
+      {expanded ? <Details game={game} sport={sport} /> : null}
+    </div>
+  )
+}
+Game.propTypes = propTypes
+
+
+
+
+
+
+
 function NbaGame({game, sport, expanded, toggleDetails}) {
   return (
     <div className={gameContainer}>
@@ -72,79 +113,10 @@ function NbaGame({game, sport, expanded, toggleDetails}) {
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <X /> : <Add />}
       </span>
-      {expanded ? <Details game={game} sport={sport} status={game.period_time.game_status} /> : null}
+      {expanded ? <Details game={game} sport={sport} /> : null}
     </div>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function NhlGame({game, sport, expanded, toggleDetails}) {
-  const away = game.teams.away.team.id
-  const home = game.teams.home.team.id
-  return (
-    <div className={gameContainer}>
-      <GameState game={game} sport={sport} />
-      <Team
-        name={game.teams.away.team.teamName}
-        code={game.teams.away.team.abbreviation.toLowerCase()}
-        ls={game.teams.away.leagueRecord.losses + ''}
-        ws={game.teams.away.leagueRecord.wins + ''}
-        score={game.teams.away.score + ''}
-        sport={sport}
-      />
-      <Team
-        name={game.teams.home.team.teamName}
-        code={game.teams.home.team.abbreviation.toLowerCase()}
-        ls={game.teams.home.leagueRecord.losses + ''}
-        ws={game.teams.home.leagueRecord.wins + ''}
-        score={game.teams.home.score + ''}
-        sport={sport}
-      />
-      <span className={expandIcon} onClick={toggleDetails}>
-        {expanded ? <X /> : <Add />}
-      </span>
-      {expanded ? 'expanded !' : null}
-    </div>
-  )
-}
-Game.propTypes = propTypes
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function MlbGame({game, sport, expanded, toggleDetails}) {

@@ -9,24 +9,17 @@ const propTypes = {
 }
 
 export default function Details({game, sport}) {
-  if (sport === 'mlb') {
-    return <MlbDetails game={game} />
-  }
-  if (sport === 'nba') {
-    return <NbaDetails game={game} />
-  }
-  if (sport === 'nhl') {
-    return <NhlDetails game={game} />
-  }
-  else {
-    return (
-      <h1>{'i hope this doesn\'t run'}</h1>
-    )
-  }
+  if (sport === 'mlb')
+    return <MlbDetails game={game} sport={sport} />
+  if (sport === 'nba')
+    return <NbaDetails game={game} sport={sport} />
+  if (sport === 'nhl')
+    return <NhlDetails game={game} sport={sport} />
+  else
+    return <h1>{'i hope this doesn\'t run'}</h1>
 }
 
 Details.propTypes = propTypes
-
 
 function About({awayTeam, homeTeam, date, location, venue}) {
   date = formatDateStr(date)
@@ -40,22 +33,10 @@ function About({awayTeam, homeTeam, date, location, venue}) {
 
 
 
-function NhlDetails({game}) {
-  return (
-    <div className={detailsContainer}>
-      <About
-        awayTeam={game.teams.away.team.teamName}
-        homeTeam={game.teams.home.team.teamName}
-        date={game.gameDate}
-        location={game.teams.home.team.venue.city}
-        venue={game.venue.name}
-      />
-    </div>
-  )
-}
-
-
-function NbaDetails({game}) {
+function NbaDetails({game, sport}) {
+  const linescore = {}
+  linescore['away'] = game.visitor.linescores ? game.visitor.linescores.period : null
+  linescore['home'] = game.home.linescores ? game.home.linescores.period : null
   return (
     <div className={detailsContainer}>
       <About
@@ -65,17 +46,19 @@ function NbaDetails({game}) {
         location={`${game.city}, ${game.state}`}
         venue={game.arena}
       />
+      <BoxScore
+        sport={sport}
+        awayAbbr={game.visitor.abbreviation}
+        homeAbbr={game.home.abbreviation}
+        linescore={linescore}
+        awayScore={game.visitor.score}
+        homeScore={game.home.score}
+      />
     </div>
   )
 }
 
-
-
-
-
-
-
-function MlbDetails({game}) {
+function MlbDetails({game, sport}) {
   const status = game.status.status
   return (
     <div className={detailsContainer}>
@@ -87,13 +70,12 @@ function MlbDetails({game}) {
         venue={game.venue}
       />
       <BoxScore
+        sport={sport}
         awayAbbr={game.away_name_abbrev}
         homeAbbr={game.home_name_abbrev}
-        awayCode={game.away_file_code}
-        homeCode={game.home_file_code}
         linescore={game.linescore}
         review={game.review}
-        status={game.status.status}
+        status={status}
       />
       {status === 'Warmup' || status === 'Pre-Game' || status === 'Preview' || status === 'Delayed Start' || status === 'Postponed'
         ? <PreGameInfo
@@ -125,6 +107,22 @@ function MlbDetails({game}) {
                 />
               : null
           }
+    </div>
+  )
+}
+
+
+
+function NhlDetails({game}) {
+  return (
+    <div className={detailsContainer}>
+      <About
+        awayTeam={game.teams.away.team.teamName}
+        homeTeam={game.teams.home.team.teamName}
+        date={game.gameDate}
+        location={game.teams.home.team.venue.city}
+        venue={game.venue.name}
+      />
     </div>
   )
 }

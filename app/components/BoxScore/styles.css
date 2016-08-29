@@ -1,47 +1,56 @@
-.linescoreContainer {
-  padding: 1em;
-  text-align: center;
+.boxScoreContainer {
+  width:96%;
+  margin:1em auto;
+  font-size:0.9em;
+  text-align:center;
 }
 
-.linescoreContainer table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  font-size: 0.9em;
+.boxScoreContainer table {
+  width:100%;
+  margin:0 auto;
+  table-layout: fixed;
+  border-collapse:collapse;
 }
 
-.linescoreContainer thead {
-  border-bottom: 2px solid #e0e0e0;
+.boxScoreContainer thead {
+  border-bottom:2px solid #e0e0e0;
 }
 
-.linescoreContainer tr {
-  height: 2.4em;
+.boxScoreContainer tr {
+  height:2.4em;
+}
+.boxScoreContainer th,
+.boxScoreContainer td {
+  padding:2px 4px;
 }
 
-.linescoreContainer th,
-.linescoreContainer td {
-  width: 2em;
-  padding: 2px 4px;
+.boxScoreContainer thead th:first-child,
+.boxScoreContainer tbody th:first-child {
+  width:12.5%;
+  text-align:left;
+  border-right:2px solid #e0e0e0;
 }
 
-.linescoreContainer thead th:first-child,
-.linescoreContainer tbody th:first-child {
-  border-right: 2px solid #e0e0e0;
-  width: 4em;
-  text-align: left;
-}
-
-.linescoreContainer tbody td:nth-last-child(-n+4),
-.linescoreContainer thead th:nth-last-child(-n+4) {
+.boxScoreContainer thead th:last-child,
+.boxScoreContainer tbody td:last-child {
+  border-left:2px solid #e0e0e0;
   font-weight: bold;
-  width: 2.2em;
 }
 
-.linescoreContainer thead th:nth-last-child(4),
-.linescoreContainer tbody td:nth-last-child(4),
-.linescoreContainer thead th:nth-last-child(1),
-.linescoreContainer tbody td:nth-last-child(1) {
-  border-left: 2px solid #e0e0e0;
+/* mlb games */
+.mlb tbody td:nth-last-child(-n+4),
+.mlb thead th:nth-last-child(-n+4) {
+  font-weight:bold;
 }
-.linescoreContainer tbody td:nth-last-child(1) {
-  font-weight: normal;
+
+.mlb thead th:nth-last-child(4),
+.mlb tbody td:nth-last-child(4) {
+  border-left:2px solid #e0e0e0;
 }
+
+.mlb tbody td:last-child {
+  font-weight:normal;
+}
+
+
+/* nba games */

@@ -1,21 +1,102 @@
 import React, { PropTypes } from 'react'
-import { linescoreContainer } from './styles.css'
+import { boxScoreContainer, mlb } from './styles.css'
 
 const propTypes = {
+  sport: PropTypes.string.isRequired,
   awayAbbr: PropTypes.string.isRequired,
   homeAbbr: PropTypes.string.isRequired,
-  awayCode: PropTypes.string.isRequired,
-  homeCode: PropTypes.string.isRequired,
   linescore: PropTypes.object.isRequired,
-  review: PropTypes.object.isRequired,
-  status: PropTypes.string.isRequired
+  review: PropTypes.object,
+  status: PropTypes.string,
+  awayScore: PropTypes.string,
+  homeScore: PropTypes.string,
+
 }
 
-export default function BoxScore({awayAbbr, homeAbbr, awayCode, homeCode,
-  linescore, review, status}) {
+export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
+  status, awayScore, homeScore}) {
+  if (sport === 'mlb') {
+    return (
+      <MlbBoxScore
+        awayAbbr={awayAbbr}
+        homeAbbr={homeAbbr}
+        linescore={linescore}
+        review={review}
+        status={status}
+      />
+    )
+  }
+  if (sport === 'nba') {
+    return (
+      <NbaBoxScore
+        awayAbbr={awayAbbr}
+        homeAbbr={homeAbbr}
+        linescore={linescore}
+        awayScore={awayScore}
+        homeScore={homeScore}
+      />
+    )
+  }
+}
+
+BoxScore.propTypes = propTypes
+
+function NbaBoxScore({awayAbbr, homeAbbr, linescore, awayScore, homeScore}) {
   return (
-    <div className={linescoreContainer}>
+    <div className={boxScoreContainer}>
       <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>{'1'}</th>
+            <th>{'2'}</th>
+            <th>{'3'}</th>
+            <th>{'4'}</th>
+            {linescore.away.length > 4 ?  <th>{'OT'}</th> : null}
+            {linescore.away.length > 5 ?  <th>{'2OT'}</th> : null}
+            {linescore.away.length > 6 ?  <th>{'3OT'}</th> : null}
+            {linescore.away.length > 7 ?  <th>{'4OT'}</th> : null}
+            <th>{'t'}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{awayAbbr.toLowerCase()}</th>
+            <td>{linescore.away[0].score}</td>
+            <td>{linescore.away[1].score}</td>
+            <td>{linescore.away[2].score}</td>
+            <td>{linescore.away[3].score}</td>
+            {linescore.away.length > 4 ? <td>{linescore.away[4].score}</td> : null}
+            {linescore.away.length > 5 ? <td>{linescore.away[5].score}</td> : null}
+            {linescore.away.length > 6 ? <td>{linescore.away[6].score}</td> : null}
+            {linescore.away.length > 7 ? <td>{linescore.away[7].score}</td> : null}
+            <td>{awayScore}</td>
+          </tr>
+          <tr>
+            <th>{homeAbbr.toLowerCase()}</th>
+            <td>{linescore.home[0].score}</td>
+            <td>{linescore.home[1].score}</td>
+            <td>{linescore.home[2].score}</td>
+            <td>{linescore.home[3].score}</td>
+            {linescore.home.length > 4 ? <td>{linescore.home[4].score}</td> : null}
+            {linescore.home.length > 5 ? <td>{linescore.home[5].score}</td> : null}
+            {linescore.home.length > 6 ? <td>{linescore.home[6].score}</td> : null}
+            {linescore.home.length > 7 ? <td>{linescore.home[7].score}</td> : null}
+            <td>{homeScore}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+
+
+
+function MlbBoxScore({awayAbbr, homeAbbr, linescore, review, status}) {
+  return (
+    <div className={boxScoreContainer}>
+      <table className={mlb}>
         <thead>
           <tr>
             <th></th>
@@ -72,5 +153,3 @@ export default function BoxScore({awayAbbr, homeAbbr, awayCode, homeCode,
     </div>
   )
 }
-
-BoxScore.propTypes = propTypes

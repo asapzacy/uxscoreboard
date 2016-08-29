@@ -27,6 +27,16 @@ class NbaContainer extends Component {
         })
       })
   }
+  // cleanGameData(scores) {
+  //   if (scores.game !== undefined) {
+  //     scores.game.map((game) => {
+  //       if (game.visitor.linescores === undefined) {
+  //         game.visitor.linescore = null
+  //       if (game.home.linescores === undefined) {
+  //         game.home.linescore = null
+  //     })
+  //   }
+  // }
   render() {
     return (
       <div>

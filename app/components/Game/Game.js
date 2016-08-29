@@ -86,10 +86,6 @@ Game.propTypes = propTypes
 
 
 
-
-
-
-
 function NbaGame({game, sport, expanded, toggleDetails}) {
   return (
     <div className={gameContainer}>

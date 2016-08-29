@@ -20,10 +20,10 @@ class NbaContainer extends Component {
   makeRequest(dt) {
     getNbaScores(dt)
       .then((currentScores) => {
-        this.cleanGameData(currentScores.sports_content.games)
+        this.cleanGameData(currentScores)
         this.setState({
           isLoading: false,
-          scores: currentScores.sports_content.games,
+          scores: currentScores,
           date: this.props.routeParams.date || '20161025'
         })
       })
@@ -33,18 +33,20 @@ class NbaContainer extends Component {
       scores.game.map((game) => {
         if (game.visitor.linescores === undefined) {
           game.visitor.linescores = {
-            0: { score: null },
-            1: { score: null },
-            2: { score: null },
-            3: { score: null }
+            period: { 0: { score: null },
+                      1: { score: null },
+                      2: { score: null },
+                      3: { score: null }
+                    }
           }
         }
         if (game.home.linescores === undefined) {
           game.home.linescores = {
-            0: { score: null },
-            1: { score: null },
-            2: { score: null },
-            3: { score: null }
+            period: { 0: { score: null },
+                      1: { score: null },
+                      2: { score: null },
+                      3: { score: null }
+                    }
           }
         }
       })

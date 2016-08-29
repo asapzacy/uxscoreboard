@@ -43,7 +43,7 @@ export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
 BoxScore.propTypes = propTypes
 
 function NbaBoxScore({awayAbbr, homeAbbr, linescore, awayScore, homeScore}) {
-  console.log(linescore)
+  // let's hope an nba game doesn't go over 4ot this year..
   return (
     <div className={boxScoreContainer}>
       <table>
@@ -54,36 +54,36 @@ function NbaBoxScore({awayAbbr, homeAbbr, linescore, awayScore, homeScore}) {
             <th>{'2'}</th>
             <th>{'3'}</th>
             <th>{'4'}</th>
-            {Object.keys(linescore.away).length > 4 ?  <th>{'OT'}</th> : null}
-            {Object.keys(linescore.away).length > 5 ?  <th>{'2OT'}</th> : null}
-            {Object.keys(linescore.away).length > 6 ?  <th>{'3OT'}</th> : null}
-            {Object.keys(linescore.away).length > 7 ?  <th>{'4OT'}</th> : null}
+            {Object.keys(linescore.away.period).length > 4 ?  <th>{'OT'}</th> : null}
+            {Object.keys(linescore.away.period).length > 5 ?  <th>{'2OT'}</th> : null}
+            {Object.keys(linescore.away.period).length > 6 ?  <th>{'3OT'}</th> : null}
+            {Object.keys(linescore.away.period).length > 7 ?  <th>{'4OT'}</th> : null}
             <th>{'t'}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th>{awayAbbr.toLowerCase()}</th>
-            <td>{linescore.away[0].score}</td>
-            <td>{linescore.away[1].score}</td>
-            <td>{linescore.away[2].score}</td>
-            <td>{linescore.away[3].score}</td>
-            {Object.keys(linescore.away).length > 4 ? <td>{linescore.away[4].score}</td> : null}
-            {Object.keys(linescore.away).length > 5 ? <td>{linescore.away[5].score}</td> : null}
-            {Object.keys(linescore.away).length > 6 ? <td>{linescore.away[6].score}</td> : null}
-            {Object.keys(linescore.away).length > 7 ? <td>{linescore.away[7].score}</td> : null}
+            <td>{linescore.away.period[0].score}</td>
+            <td>{linescore.away.period[1].score}</td>
+            <td>{linescore.away.period[2].score}</td>
+            <td>{linescore.away.period[3].score}</td>
+            {Object.keys(linescore.away.period).length > 4 ? <td>{linescore.away.period[4].score}</td> : null}
+            {Object.keys(linescore.away.period).length > 5 ? <td>{linescore.away.period[5].score}</td> : null}
+            {Object.keys(linescore.away.period).length > 6 ? <td>{linescore.away.period[6].score}</td> : null}
+            {Object.keys(linescore.away.period).length > 7 ? <td>{linescore.away.period[7].score}</td> : null}
             <td>{awayScore}</td>
           </tr>
           <tr>
             <th>{homeAbbr.toLowerCase()}</th>
-            <td>{linescore.home[0].score}</td>
-            <td>{linescore.home[1].score}</td>
-            <td>{linescore.home[2].score}</td>
-            <td>{linescore.home[3].score}</td>
-            {Object.keys(linescore.home).length  > 4 ? <td>{linescore.home[4].score}</td> : null}
-            {Object.keys(linescore.home).length  > 5 ? <td>{linescore.home[5].score}</td> : null}
-            {Object.keys(linescore.home).length  > 6 ? <td>{linescore.home[6].score}</td> : null}
-            {Object.keys(linescore.home).length  > 7 ? <td>{linescore.home[7].score}</td> : null}
+            <td>{linescore.home.period[0].score}</td>
+            <td>{linescore.home.period[1].score}</td>
+            <td>{linescore.home.period[2].score}</td>
+            <td>{linescore.home.period[3].score}</td>
+            {Object.keys(linescore.home.period).length  > 4 ? <td>{linescore.home.period[4].score}</td> : null}
+            {Object.keys(linescore.home.period).length  > 5 ? <td>{linescore.home.period[5].score}</td> : null}
+            {Object.keys(linescore.home.period).length  > 6 ? <td>{linescore.home.period[6].score}</td> : null}
+            {Object.keys(linescore.home.period).length  > 7 ? <td>{linescore.home.period[7].score}</td> : null}
             <td>{homeScore}</td>
           </tr>
         </tbody>

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Loading, NotFound, Date } from 'components'
 import { GameContainer } from 'containers'
+import { getNbaGameDetails } from 'helpers/api'
 import { scoreboardContainer, scoresContainer } from 'styles/shared.css'
 
 const propTypes = {
@@ -33,7 +34,7 @@ function Scoreboard({date, scores}) {
           ? <h1>{'[ preseason ]'}</h1>
           : scores.game === undefined || scores.game.length === 0
             ? <h1>{'[ no games today ]'}</h1>
-            : scores.game.map(item => <GameContainer key={item.id} game={item} sport={'nba'} />)
+            : scores.game.map(item => <GameContainer key={item.id} game={item} sport={'nba'} details={item.period_time.game_status === '3' ? getNbaGameDetails(item.date,item.id) : null} />)
         }
       </div>
     </div>

@@ -49,7 +49,36 @@ export default function Game({game, sport, expanded, toggleDetails}) {
   }
 }
 
+Game.propTypes = propTypes
 
+
+function NbaGame({game, sport, expanded, toggleDetails}) {
+  return (
+    <div className={gameContainer}>
+      <GameState game={game} sport={sport} />
+      <Team
+        name={game.visitor.nickname}
+        code={game.visitor.team_key.toLowerCase()}
+        ls={game.playoffs ? game.playoffs.home_wins : null}
+        ws={game.playoffs ? game.playoffs.visitor_wins : null}
+        score={game.visitor.score}
+        sport={sport}
+      />
+      <Team
+        name={game.home.nickname}
+        code={game.home.team_key.toLowerCase()}
+        ls={game.playoffs ? game.playoffs.visitor_wins : null}
+        ws={game.playoffs ? game.playoffs.home_wins : null}
+        score={game.home.score}
+        sport={sport}
+      />
+      <span className={expandIcon} onClick={toggleDetails}>
+        {expanded ? <X /> : <Add />}
+      </span>
+      {expanded ? <Details game={game} sport={sport} /> : null}
+    </div>
+  )
+}
 
 
 
@@ -82,37 +111,7 @@ function NhlGame({game, sport, expanded, toggleDetails}) {
     </div>
   )
 }
-Game.propTypes = propTypes
 
-
-
-function NbaGame({game, sport, expanded, toggleDetails}) {
-  return (
-    <div className={gameContainer}>
-      <GameState game={game} sport={sport} />
-      <Team
-        name={game.visitor.nickname}
-        code={game.visitor.team_key.toLowerCase()}
-        ls={game.playoffs ? game.playoffs.home_wins : null}
-        ws={game.playoffs ? game.playoffs.visitor_wins : null}
-        score={game.visitor.score}
-        sport={sport}
-      />
-      <Team
-        name={game.home.nickname}
-        code={game.home.team_key.toLowerCase()}
-        ls={game.playoffs ? game.playoffs.visitor_wins : null}
-        ws={game.playoffs ? game.playoffs.home_wins : null}
-        score={game.home.score}
-        sport={sport}
-      />
-      <span className={expandIcon} onClick={toggleDetails}>
-        {expanded ? <X /> : <Add />}
-      </span>
-      {expanded ? <Details game={game} sport={sport} /> : null}
-    </div>
-  )
-}
 
 
 function MlbGame({game, sport, expanded, toggleDetails}) {

@@ -11,6 +11,8 @@ __nba__   http://data.nba.com/data//json/nbacom/2016/gameline/20161025/games.jso
           http://data.nba.com/data/5s/json/cms/noseason/scoreboard/20161025/games.json            [detailed]
           http://data.nba.com/                                                                    [teams]
           http://data.nba.com/data/5s/json/cms/noseason/scoreboard/2015/playoff_all_games.json    [playoffs]
+          http://data.nba.com/data/10s/json/cms/noseason/game/20160225/0021500855/boxscore.json   [single game]
+          http://data.nba.com/data/json/cms/2015/league/standings.json                            [standings]
 
 __nhl__   https://statsapi.web.nhl.com/api/v1/schedule?startDate=2016-10-12&endDate=2016-10-12
 
@@ -39,8 +41,15 @@ export function getNbaScores(dt) {
     dt = '20161025'
   const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
   return axios.get(url)
-    .then((currentScores) => currentScores.data, nba_config)
-    .catch((currentScores) => currentScores.status)
+    .then(currentScores => currentScores.data.sports_content.games, nba_config)
+    .catch(currentScores => currentScores.status)
+}
+
+export function getNbaGameDetails(dt,id) {
+  const url = `http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
+  return axios.get(url)
+    .then(gameDetails => gameDetails.data.sports_content.game)
+    .catch(gameDetails => gameDetails.status)
 }
 
 var epl_config = {

@@ -5,10 +5,11 @@ import { detailsContainer, aboutContainer } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  sport: PropTypes.string.isRequired
+  sport: PropTypes.string.isRequired,
+  details: PropTypes.object
 }
 
-export default function Details({game, sport}) {
+export default function Details({game, sport, details}) {
   if (sport === 'mlb')
     return <MlbDetails game={game} sport={sport} />
   if (sport === 'nba')

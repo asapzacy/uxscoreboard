@@ -15,6 +15,7 @@ const propTypes = {
 
 export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
   status, awayScore, homeScore}) {
+  console.log(linescore)
   if (sport === 'mlb') {
     return (
       <MlbBoxScore
@@ -42,6 +43,7 @@ export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
 BoxScore.propTypes = propTypes
 
 function NbaBoxScore({awayAbbr, homeAbbr, linescore, awayScore, homeScore}) {
+  console.log(linescore)
   return (
     <div className={boxScoreContainer}>
       <table>
@@ -52,10 +54,10 @@ function NbaBoxScore({awayAbbr, homeAbbr, linescore, awayScore, homeScore}) {
             <th>{'2'}</th>
             <th>{'3'}</th>
             <th>{'4'}</th>
-            {linescore.away.length > 4 ?  <th>{'OT'}</th> : null}
-            {linescore.away.length > 5 ?  <th>{'2OT'}</th> : null}
-            {linescore.away.length > 6 ?  <th>{'3OT'}</th> : null}
-            {linescore.away.length > 7 ?  <th>{'4OT'}</th> : null}
+            {Object.keys(linescore.away).length > 4 ?  <th>{'OT'}</th> : null}
+            {Object.keys(linescore.away).length > 5 ?  <th>{'2OT'}</th> : null}
+            {Object.keys(linescore.away).length > 6 ?  <th>{'3OT'}</th> : null}
+            {Object.keys(linescore.away).length > 7 ?  <th>{'4OT'}</th> : null}
             <th>{'t'}</th>
           </tr>
         </thead>
@@ -66,10 +68,10 @@ function NbaBoxScore({awayAbbr, homeAbbr, linescore, awayScore, homeScore}) {
             <td>{linescore.away[1].score}</td>
             <td>{linescore.away[2].score}</td>
             <td>{linescore.away[3].score}</td>
-            {linescore.away.length > 4 ? <td>{linescore.away[4].score}</td> : null}
-            {linescore.away.length > 5 ? <td>{linescore.away[5].score}</td> : null}
-            {linescore.away.length > 6 ? <td>{linescore.away[6].score}</td> : null}
-            {linescore.away.length > 7 ? <td>{linescore.away[7].score}</td> : null}
+            {Object.keys(linescore.away).length > 4 ? <td>{linescore.away[4].score}</td> : null}
+            {Object.keys(linescore.away).length > 5 ? <td>{linescore.away[5].score}</td> : null}
+            {Object.keys(linescore.away).length > 6 ? <td>{linescore.away[6].score}</td> : null}
+            {Object.keys(linescore.away).length > 7 ? <td>{linescore.away[7].score}</td> : null}
             <td>{awayScore}</td>
           </tr>
           <tr>
@@ -78,10 +80,10 @@ function NbaBoxScore({awayAbbr, homeAbbr, linescore, awayScore, homeScore}) {
             <td>{linescore.home[1].score}</td>
             <td>{linescore.home[2].score}</td>
             <td>{linescore.home[3].score}</td>
-            {linescore.home.length > 4 ? <td>{linescore.home[4].score}</td> : null}
-            {linescore.home.length > 5 ? <td>{linescore.home[5].score}</td> : null}
-            {linescore.home.length > 6 ? <td>{linescore.home[6].score}</td> : null}
-            {linescore.home.length > 7 ? <td>{linescore.home[7].score}</td> : null}
+            {Object.keys(linescore.home).length  > 4 ? <td>{linescore.home[4].score}</td> : null}
+            {Object.keys(linescore.home).length  > 5 ? <td>{linescore.home[5].score}</td> : null}
+            {Object.keys(linescore.home).length  > 6 ? <td>{linescore.home[6].score}</td> : null}
+            {Object.keys(linescore.home).length  > 7 ? <td>{linescore.home[7].score}</td> : null}
             <td>{homeScore}</td>
           </tr>
         </tbody>

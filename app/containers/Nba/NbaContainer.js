@@ -20,6 +20,7 @@ class NbaContainer extends Component {
   makeRequest(dt) {
     getNbaScores(dt)
       .then((currentScores) => {
+        this.cleanGameData(currentScores.sports_content.games)
         this.setState({
           isLoading: false,
           scores: currentScores.sports_content.games,
@@ -27,16 +28,28 @@ class NbaContainer extends Component {
         })
       })
   }
-  // cleanGameData(scores) {
-  //   if (scores.game !== undefined) {
-  //     scores.game.map((game) => {
-  //       if (game.visitor.linescores === undefined) {
-  //         game.visitor.linescore = null
-  //       if (game.home.linescores === undefined) {
-  //         game.home.linescore = null
-  //     })
-  //   }
-  // }
+  cleanGameData(scores) {
+    if (scores.game !== undefined) {
+      scores.game.map((game) => {
+        if (game.visitor.linescores === undefined) {
+          game.visitor.linescores = {
+            0: { score: null },
+            1: { score: null },
+            2: { score: null },
+            3: { score: null }
+          }
+        }
+        if (game.home.linescores === undefined) {
+          game.home.linescores = {
+            0: { score: null },
+            1: { score: null },
+            2: { score: null },
+            3: { score: null }
+          }
+        }
+      })
+    }
+  }
   render() {
     return (
       <div>

@@ -35,8 +35,8 @@ function About({awayTeam, homeTeam, date, location, venue}) {
 
 function NbaDetails({game, sport}) {
   const linescore = {}
-  linescore['away'] = game.visitor.linescores ? game.visitor.linescores.period : null
-  linescore['home'] = game.home.linescores ? game.home.linescores.period : null
+  linescore['away'] = game.visitor.linescores
+  linescore['home'] = game.home.linescores
   return (
     <div className={detailsContainer}>
       <About

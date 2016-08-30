@@ -7,11 +7,12 @@ import { gameContainer, expandIcon } from './styles.css'
 const propTypes = {
   game: PropTypes.object.isRequired,
   sport: PropTypes.string.isRequired,
+  details: PropTypes.object,
   expanded: PropTypes.bool.isRequired,
   toggleDetails: PropTypes.func.isRequired
 }
 
-export default function Game({game, sport, expanded, toggleDetails}) {
+export default function Game({game, sport, details, expanded, toggleDetails}) {
   if (sport === 'mlb') {
     return (
       <MlbGame
@@ -27,6 +28,7 @@ export default function Game({game, sport, expanded, toggleDetails}) {
       <NbaGame
         game={game}
         sport={sport}
+        details={details}
         expanded={expanded}
         toggleDetails={toggleDetails}
       />
@@ -52,7 +54,7 @@ export default function Game({game, sport, expanded, toggleDetails}) {
 Game.propTypes = propTypes
 
 
-function NbaGame({game, sport, expanded, toggleDetails}) {
+function NbaGame({game, sport, details, expanded, toggleDetails}) {
   return (
     <div className={gameContainer}>
       <GameState game={game} sport={sport} />
@@ -75,7 +77,7 @@ function NbaGame({game, sport, expanded, toggleDetails}) {
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <X /> : <Add />}
       </span>
-      {expanded ? <Details game={game} sport={sport} /> : null}
+      {expanded ? <Details game={game} sport={sport} details={details} /> : null}
     </div>
   )
 }

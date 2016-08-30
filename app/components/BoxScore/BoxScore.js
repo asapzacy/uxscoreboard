@@ -15,7 +15,6 @@ const propTypes = {
 
 export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
   status, awayScore, homeScore}) {
-  console.log(linescore)
   if (sport === 'mlb') {
     return (
       <MlbBoxScore

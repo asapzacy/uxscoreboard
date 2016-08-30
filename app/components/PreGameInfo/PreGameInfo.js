@@ -12,13 +12,10 @@ const propTypes = {
 export default function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome, alerts}) {
   return (
     <div>
-      {alerts.text[0]
-        ? <div className={alertsContainer}>{`${alerts.text}.`}</div>
-        : null
-      }
+      {alerts.text[0] ? <div className={alertsContainer}>{alerts.text}</div> : null}
       {spAway && spHome
         ? <div className={pitchingInfo}>
-            <h4>{'Starting Pitchers:'}</h4>
+            <h4>{'starting pitchers:'}</h4>
             <span>
               <strong>{`${awayAbbr.toLowerCase()}:`}</strong>
               {spAway.last ? ` ${spAway.last}, ${spAway.throwinghand.toLowerCase()} (${spAway.wins}-${spAway.losses}, ${spAway.era} era)` : 'TBA'}

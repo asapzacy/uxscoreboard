@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 import { BoxScore, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
 import { formatDateStr } from 'helpers/utils'
-import { detailsContainer, aboutContainer, statsContainer } from './styles.css'
+import { detailsContainer, aboutContainer, statsContainer,
+  teamLeaders, teamStats } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
@@ -54,16 +55,41 @@ function NbaDetails({game, sport, details}) {
         awayScore={game.visitor.score}
         homeScore={game.home.score}
       />
-      <TeamStats away={details.visitor} home={details.home} />
+      {Object.keys(details).length > 0 ? <Stats away={details.visitor} home={details.home} /> : null}
     </div>
   )
 }
 
-
-function TeamStats({away, home}) {
+function Stats({away, home}) {
   return (
     <div className={statsContainer}>
-       <table>
+      <table className={teamLeaders}>
+        <thead>
+          <tr>
+            <th>{'team leaders'}</th>
+            <th>{away.abbreviation.toLowerCase()}</th>
+            <th>{home.abbreviation.toLowerCase()}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{'points'}</th>
+            <td><strong>{away.Leaders.Points.StatValue}</strong><br /><small>{away.Leaders.Points.leader[0].LastName}</small></td>
+            <td><strong>{home.Leaders.Points.StatValue}</strong><br /><small>{home.Leaders.Points.leader[0].LastName}</small></td>
+          </tr>
+          <tr>
+            <th>{'rebounds'}</th>
+            <td><strong>{away.Leaders.Rebounds.StatValue}</strong><br /><small>{away.Leaders.Rebounds.leader[0].LastName}</small></td>
+            <td><strong>{home.Leaders.Rebounds.StatValue}</strong><br /><small>{home.Leaders.Rebounds.leader[0].LastName}</small></td>
+          </tr>
+          <tr>
+            <th>{'assists'}</th>
+            <td><strong>{away.Leaders.Assists.StatValue}</strong><br /><small>{away.Leaders.Assists.leader[0].LastName}</small></td>
+            <td><strong>{home.Leaders.Assists.StatValue}</strong><br /><small>{home.Leaders.Assists.leader[0].LastName}</small></td>
+          </tr>
+        </tbody>
+      </table>
+       <table className={teamStats}>
          <thead>
            <tr>
             <th>{'team stats'}</th>

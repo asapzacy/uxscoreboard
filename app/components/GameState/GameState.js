@@ -71,7 +71,7 @@ function MlbState({status, time, inning, inningState, outs, reason,
       <div className={gameInfo}>
         <span>{`${inningState} ${inning}`}<sup>{suffix}</sup></span>
         <span><small>
-          {status === 'In Progress' && inningState === 'Middle' || inningState === 'End' ? outs = '' : outs === '1' ? `${outs} out` : `${outs} outs`}
+          {status === 'In Progress' ? inningState === 'Middle' || inningState === 'End' ? outs = '' : outs === '1' ? `${outs} out` : `${outs} outs` : null}
           {status === 'Manager Challenge' ? status : status !== 'In Progress' ? `${status} (${reason})` : null}
         </small></span>
       </div>

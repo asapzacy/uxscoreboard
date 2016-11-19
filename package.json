@@ -4,8 +4,8 @@
   "description": "live sports scoreboard built on react.js",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "production": "webpack -p",
+    "dev": "webpack-dev-server",
+    "build": "webpack -p",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0"
   },

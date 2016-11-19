@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { formatDateUrl } from './utils.js'
+
 /*
   example api json endpoints
 -----------------------------------------
@@ -21,13 +22,16 @@ __epl__   https://footballapi.pulselive.com/football/fixtures?comps=1&compSeason
 -----------------------------------------
 */
 
+const cors = 'https://crossorigin.me/'
+
 export function getMlbScores(dt) {
   if (dt === undefined)
     dt = formatDateUrl()
   const yyyy = dt.slice(0, 4)
   const mm = dt.slice(4, 6)
   const dd = dt.slice(6, 8)
-  const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  // const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const url = `${cors}http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then((currentScores) => currentScores.data)
     .catch((currentScores) => currentScores.status)
@@ -39,14 +43,14 @@ var nba_config = {
 export function getNbaScores(dt) {
   if (dt === undefined || dt > 20160619 && dt < 20160930)
     dt = '20161025'
-  const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
+  const url = `${cors}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
   return axios.get(url)
     .then(currentScores => currentScores.data.sports_content.games, nba_config)
     .catch(currentScores => currentScores.status)
 }
 
 export function getNbaGameDetails(dt, id) {
-  const url = `http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
+  const url = `${cors}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
   return axios.get(url)
     .then(gameDetails => gameDetails.data.sports_content.game)
     .catch(gameDetails => gameDetails.status)

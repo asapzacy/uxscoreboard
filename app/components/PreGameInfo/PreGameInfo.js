@@ -25,8 +25,7 @@ export default function PreGameInfo({awayAbbr, homeAbbr, spAway, spHome, alerts}
               {spHome.last ? ` ${spHome.last}, ${spAway.throwinghand.toLowerCase()} (${spHome.wins}-${spHome.losses}, ${spHome.era} era)` : 'TBA'}
             </span>
           </div>
-        : null
-      }
+        : null}
     </div>
   )
 }

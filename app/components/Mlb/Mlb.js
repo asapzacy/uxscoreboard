@@ -16,8 +16,7 @@ export default function Mlb({isLoading, date, scores}) {
         ? <Loading speed={300} text={'loading'} />
         : scores !== 404
           ? <Scoreboard date={date} scores={scores} />
-          : <NotFound />
-      }
+          : <NotFound />}
     </div>
   )
 }
@@ -35,8 +34,7 @@ function Scoreboard({date, scores}) {
             ? <h1>{'[ no games today ]'}</h1>
             : scores.game[0] === undefined
               ? <GameContainer key={scores.game.game_pk} game={scores.game} sport={'mlb'} />
-              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} sport={'mlb'} />)
-        }
+              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} sport={'mlb'} />)}
       </div>
     </div>
   )

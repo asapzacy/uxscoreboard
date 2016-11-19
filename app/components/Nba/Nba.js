@@ -17,8 +17,7 @@ export default function Nba({isLoading, date, scores}) {
         ? <Loading speed={300} text={'loading'} />
         : scores !== 404
           ? <Scoreboard date={date} scores={scores} />
-          : <NotFound />
-      }
+          : <NotFound />}
     </div>
   )
 }
@@ -34,8 +33,7 @@ function Scoreboard({date, scores}) {
           ? <h1>{'[ preseason ]'}</h1>
           : scores.game === undefined || scores.game.length === 0
             ? <h1>{'[ no games today ]'}</h1>
-            : scores.game.map(item => <GameContainer key={item.id} game={item} sport={'nba'} />)
-        }
+            : scores.game.map(item => <GameContainer key={item.id} game={item} sport={'nba'} />)}
       </div>
     </div>
   )

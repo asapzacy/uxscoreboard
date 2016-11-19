@@ -8,13 +8,13 @@ export function formatDateUrl() {
 export function formatDateStr(date) {
   console.log(date)
   if (date.length === 8)
-    date = `${date.slice(0,4)}/${date.slice(4,6)}/${date.slice(6,8)}`
+    date = `${date.slice(0, 4)}/${date.slice(4, 6)}/${date.slice(6, 8)}`
   return moment(new Date(date)).format('MMMM D, YYYY')
 }
 
 export function formatTime(time) {
-  let hh = time.slice(0,2)
-  const mm = time.slice(2,4)
+  let hh = time.slice(0, 2)
+  const mm = time.slice(2, 4)
   if (hh > 12) hh -= 12
   return `${hh}:${mm}`
 }
@@ -24,7 +24,7 @@ export function formatTz(time) {
 }
 
 export function inningSuffix(inning) {
-  switch(inning) {
+  switch (inning) {
     case '1' || '21': return 'st'
     case '2' || '22': return 'nd'
     case '3' || '23': return 'rd'

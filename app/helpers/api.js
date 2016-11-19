@@ -24,9 +24,9 @@ __epl__   https://footballapi.pulselive.com/football/fixtures?comps=1&compSeason
 export function getMlbScores(dt) {
   if (dt === undefined)
     dt = formatDateUrl()
-  const yyyy = dt.slice(0,4)
-  const mm = dt.slice(4,6)
-  const dd = dt.slice(6,8)
+  const yyyy = dt.slice(0, 4)
+  const mm = dt.slice(4, 6)
+  const dd = dt.slice(6, 8)
   const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then((currentScores) => currentScores.data)
@@ -45,7 +45,7 @@ export function getNbaScores(dt) {
     .catch(currentScores => currentScores.status)
 }
 
-export function getNbaGameDetails(dt,id) {
+export function getNbaGameDetails(dt, id) {
   const url = `http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
   return axios.get(url)
     .then(gameDetails => gameDetails.data.sports_content.game)
@@ -56,7 +56,7 @@ var epl_config = {
   headers: {
     'Origin': 'https://www.premierleague.com',
     'Referer': 'https://www.premierleague.com',
-    'Host': 'premierleague.com',
+    'Host': 'premierleague.com'
   }
 }
 export function getNflScores() {
@@ -70,16 +70,14 @@ export function getNflScores() {
 export function getNhlScores(dt) {
   if (dt === undefined)
     dt = '20161012'
-  const yyyy = dt.slice(0,4)
-  const mm = dt.slice(4,6)
-  const dd = dt.slice(6,8)
+  const yyyy = dt.slice(0, 4)
+  const mm = dt.slice(4, 6)
+  const dd = dt.slice(6, 8)
   const url = `https://statsapi.web.nhl.com/api/v1/schedule?startDate=${yyyy}-${mm}-${dd}&endDate=${yyyy}-${mm}-${dd}&expand=schedule.teams,schedule.linescore,schedule.scoringplays,schedule.game.seriesSummary`
   return axios.get(url)
     .then((currentScores) => currentScores.data)
     .catch((currentScores) => currentScores.status)
 }
-
-
 
 // export function getNflScores() {
 //   return axios.get('http://www.nfl.com/ajax/scorestrip?season=2016&seasonType=PRE&week=2')

@@ -24,8 +24,7 @@ export default function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter,
     <div>
       {alerts.text[0]
           ? <div className={alertsContainer}><span>{`${alerts.text}.`}</span></div>
-          : null
-      }
+          : null}
       <div className={diamondContainer}>
         <div className={baseballField}>
           <img src={`assets/img/mlb/other/diamond-${baseRunners(runners)}.svg`} />
@@ -34,33 +33,29 @@ export default function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter,
           <div className={runnersOnBase}>
             {Object.keys(runners).length > 1
               ? <h4>{'Runners on Base:'}</h4>
-              : null
-            }
+              : null}
             {runners.runner_on_1b
-              ? <span><strong>{`1b:`}</strong>{` ${runners.runner_on_1b.last}`}</span>
-              : null
-            }
+              ? <span><strong>{'1b:'}</strong>{` ${runners.runner_on_1b.last}`}</span>
+              : null}
             {runners.runner_on_2b
-              ? <span><strong>{`2b:`}</strong>{` ${runners.runner_on_2b.last}`}</span>
-              : null
-            }
+              ? <span><strong>{'2b:'}</strong>{` ${runners.runner_on_2b.last}`}</span>
+              : null}
             {runners.runner_on_3b
-              ? <span><strong>{`3b:`}</strong>{` ${runners.runner_on_3b.last}`}</span>
-              : null
-            }
+              ? <span><strong>{'3b:'}</strong>{` ${runners.runner_on_3b.last}`}</span>
+              : null}
           </div>
           <div className={ballsStrikesOuts}>
             <span className={bso}>
-              <strong>{`b:`}</strong>
-              <span dangerouslySetInnerHTML={ballCount(balls,inningState)}></span>
+              <strong>{'b:'}</strong>
+              <span dangerouslySetInnerHTML={ballCount(balls, inningState)}></span>
             </span>
             <span className={bso}>
-              <strong>{`s:`}</strong>
-              <span dangerouslySetInnerHTML={strikeOutCount(strikes,inningState)}></span>
+              <strong>{'s:'}</strong>
+              <span dangerouslySetInnerHTML={strikeOutCount(strikes, inningState)}></span>
             </span>
             <span className={bso}>
-              <strong>{`o:`}</strong>
-              <span dangerouslySetInnerHTML={strikeOutCount(outs,inningState)}></span>
+              <strong>{'o:'}</strong>
+              <span dangerouslySetInnerHTML={strikeOutCount(outs, inningState)}></span>
             </span>
           </div>
         </div>
@@ -68,11 +63,11 @@ export default function MidGameInfo({awayAbbr, homeAbbr, pitcher, batter,
       <div className={phInfo}>
         <h4>{'Current Matchup:'}</h4>
         <span>
-          <strong>{`p:`}</strong>
+          <strong>{'p:'}</strong>
           {` ${pitcher.last} (${pitcher.ip} ip, ${pitcher.er} er)`}
         </span>
         <span>
-          <strong>{`h:`}</strong>
+          <strong>{'h:'}</strong>
           {` ${batter.last} (${batter.h}-${batter.ab})`}
         </span>
       </div>

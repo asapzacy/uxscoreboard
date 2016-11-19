@@ -33,7 +33,6 @@ function About({awayTeam, homeTeam, date, location, venue}) {
   )
 }
 
-
 function NbaDetails({game, sport, details}) {
   const linescore = {}
   linescore['away'] = game.visitor.linescores
@@ -45,16 +44,14 @@ function NbaDetails({game, sport, details}) {
         homeTeam={game.home.nickname}
         date={game.date}
         location={`${game.city}, ${game.state}`}
-        venue={game.arena}
-      />
+        venue={game.arena}/>
       <BoxScore
         sport={sport}
         awayAbbr={game.visitor.abbreviation}
         homeAbbr={game.home.abbreviation}
         linescore={linescore}
         awayScore={game.visitor.score}
-        homeScore={game.home.score}
-      />
+        homeScore={game.home.score}/>
       {Object.keys(details).length > 0 ? <Stats away={details.visitor} home={details.home} /> : null}
     </div>
   )
@@ -154,22 +151,6 @@ function Stats({away, home}) {
   )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function MlbDetails({game, sport}) {
   const status = game.status.status
   return (
@@ -179,24 +160,21 @@ function MlbDetails({game, sport}) {
         homeTeam={game.home_team_name}
         date={game.original_date}
         location={game.location}
-        venue={game.venue}
-      />
+        venue={game.venue}/>
       <BoxScore
         sport={sport}
         awayAbbr={game.away_name_abbrev}
         homeAbbr={game.home_name_abbrev}
         linescore={game.linescore}
         review={game.review}
-        status={status}
-      />
+        status={status}/>
       {status === 'Warmup' || status === 'Pre-Game' || status === 'Preview' || status === 'Delayed Start' || status === 'Postponed'
         ? <PreGameInfo
             awayAbbr={game.away_name_abbrev}
             homeAbbr={game.home_name_abbrev}
             spAway={game.away_probable_pitcher}
             spHome={game.home_probable_pitcher}
-            alerts={game.alerts}
-          />
+            alerts={game.alerts}/>
           : status === 'In Progress' || status === 'Delayed' || status === 'Suspended'
             ? <MidGameInfo
                 awayAbbr={game.away_name_abbrev}
@@ -209,21 +187,16 @@ function MlbDetails({game, sport}) {
                 pbp={game.pbp}
                 runners={game.runners_on_base}
                 inningState={game.status.inning_state}
-                alerts={game.alerts}
-              />
+                alerts={game.alerts}/>
             : status === 'Final' || status === 'Game Over' || status === 'Completed Early'
               ? <PostGameInfo
                 pWin={game.winning_pitcher}
                 pLoss={game.losing_pitcher}
-                pSave={game.save_pitcher}
-                />
-              : null
-          }
+                pSave={game.save_pitcher}/>
+              : null}
     </div>
   )
 }
-
-
 
 function NhlDetails({game}) {
   return (
@@ -233,8 +206,7 @@ function NhlDetails({game}) {
         homeTeam={game.teams.home.team.teamName}
         date={game.gameDate}
         location={game.teams.home.team.venue.city}
-        venue={game.venue.name}
-      />
+        venue={game.venue.name}/>
     </div>
   )
 }

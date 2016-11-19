@@ -12,9 +12,7 @@
       experimentalObjectRestSpread: true
     }
   },
-  plugins: [
-    "react"
-  ],
+  plugins: ["react"],
   extends: ["eslint:recommended", "plugin:react/recommended", "standard"],
   "rules": {
     "no-console": [2, {allow: ["warn", "error"]}],

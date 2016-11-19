@@ -10,8 +10,7 @@ const propTypes = {
   review: PropTypes.object,
   status: PropTypes.string,
   awayScore: PropTypes.string,
-  homeScore: PropTypes.string,
-
+  homeScore: PropTypes.string
 }
 
 export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
@@ -23,8 +22,7 @@ export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
         homeAbbr={homeAbbr}
         linescore={linescore}
         review={review}
-        status={status}
-      />
+        status={status}/>
     )
   }
   if (sport === 'nba') {
@@ -34,14 +32,20 @@ export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
         homeAbbr={homeAbbr}
         linescore={linescore}
         awayScore={awayScore}
-        homeScore={homeScore}
-      />
+        homeScore={homeScore}/>
     )
   }
 }
 
 BoxScore.propTypes = propTypes
 
+const propTypes2 = {
+  awayAbbr: PropTypes.string.isRequired,
+  homeAbbr: PropTypes.string.isRequired,
+  linescore: PropTypes.object.isRequired,
+  review: PropTypes.object,
+  status: PropTypes.string
+}
 
 function MlbBoxScore({awayAbbr, homeAbbr, linescore, review, status}) {
   return (
@@ -103,3 +107,5 @@ function MlbBoxScore({awayAbbr, homeAbbr, linescore, review, status}) {
     </div>
   )
 }
+
+MlbBoxScore.propTypes = propTypes2

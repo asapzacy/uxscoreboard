@@ -82,14 +82,11 @@ class MlbContainer extends Component {
           ? <Mlb
               isLoading={this.state.isLoading}
               scores={this.state.scores}
-              date={this.state.date}
-            />
-          : null
-        }
+              date={this.state.date}/>
+          : null}
       </div>
     )
   }
 }
-
 
 export default MlbContainer

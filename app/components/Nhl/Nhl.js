@@ -16,8 +16,7 @@ export default function Nhl({isLoading, date, scores}) {
         ? <Loading speed={300} text={'loading'} />
         : scores !== 404
           ? <Scoreboard date={date} scores={scores} />
-          : <NotFound />
-      }
+          : <NotFound />}
     </div>
   )
 }
@@ -33,8 +32,7 @@ function Scoreboard({date, scores}) {
           ? <h1>{'[ preseason ]'}</h1>
           : !scores.dates.length
             ? <h1>{'[ no games today ]'}</h1>
-            : scores.dates[0].games.map(item => <GameContainer key={item.gamePk} game={item} sport={'nhl'} />)
-        }
+            : scores.dates[0].games.map(item => <GameContainer key={item.gamePk} game={item} sport={'nhl'} />)}
       </div>
     </div>
   )

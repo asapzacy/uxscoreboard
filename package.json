@@ -16,6 +16,7 @@
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "moment": "^2.14.1",
+    "moment-timezone": "^0.5.9",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-icons": "^2.2.1",

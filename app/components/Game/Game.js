@@ -19,8 +19,7 @@ export default function Game({game, sport, details, expanded, toggleDetails}) {
         game={game}
         sport={sport}
         expanded={expanded}
-        toggleDetails={toggleDetails}
-      />
+        toggleDetails={toggleDetails}/>
     )
   }
   if (sport === 'nba') {
@@ -30,8 +29,7 @@ export default function Game({game, sport, details, expanded, toggleDetails}) {
         sport={sport}
         details={details}
         expanded={expanded}
-        toggleDetails={toggleDetails}
-      />
+        toggleDetails={toggleDetails}/>
     )
   }
   if (sport === 'nhl') {
@@ -40,8 +38,7 @@ export default function Game({game, sport, details, expanded, toggleDetails}) {
         game={game}
         sport={sport}
         expanded={expanded}
-        toggleDetails={toggleDetails}
-      />
+        toggleDetails={toggleDetails}/>
     )
   }
   else {
@@ -53,7 +50,6 @@ export default function Game({game, sport, details, expanded, toggleDetails}) {
 
 Game.propTypes = propTypes
 
-
 function NbaGame({game, sport, details, expanded, toggleDetails}) {
   return (
     <div className={gameContainer}>
@@ -64,16 +60,14 @@ function NbaGame({game, sport, details, expanded, toggleDetails}) {
         ls={game.playoffs ? game.playoffs.home_wins : null}
         ws={game.playoffs ? game.playoffs.visitor_wins : null}
         score={game.visitor.score}
-        sport={sport}
-      />
+        sport={sport}/>
       <Team
         name={game.home.nickname}
         code={game.home.team_key.toLowerCase()}
         ls={game.playoffs ? game.playoffs.visitor_wins : null}
         ws={game.playoffs ? game.playoffs.home_wins : null}
         score={game.home.score}
-        sport={sport}
-      />
+        sport={sport}/>
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <X /> : <Add />}
       </span>
@@ -81,10 +75,6 @@ function NbaGame({game, sport, details, expanded, toggleDetails}) {
     </div>
   )
 }
-
-
-
-
 
 function NhlGame({game, sport, expanded, toggleDetails}) {
   return (
@@ -96,16 +86,14 @@ function NhlGame({game, sport, expanded, toggleDetails}) {
         ls={game.teams.away.leagueRecord.losses + ''}
         ws={game.teams.away.leagueRecord.wins + ''}
         score={game.teams.away.score + ''}
-        sport={sport}
-      />
+        sport={sport}/>
       <Team
         name={game.teams.home.team.teamName}
         code={game.teams.home.team.abbreviation.toLowerCase()}
         ls={game.teams.home.leagueRecord.losses + ''}
         ws={game.teams.home.leagueRecord.wins + ''}
         score={game.teams.home.score + ''}
-        sport={sport}
-      />
+        sport={sport}/>
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <X /> : <Add />}
       </span>
@@ -113,8 +101,6 @@ function NhlGame({game, sport, expanded, toggleDetails}) {
     </div>
   )
 }
-
-
 
 function MlbGame({game, sport, expanded, toggleDetails}) {
   const awayTeam = game.game_type === 'A' ? 'American' : game.away_team_name
@@ -130,8 +116,7 @@ function MlbGame({game, sport, expanded, toggleDetails}) {
         ws={game.away_win}
         score={game.linescore.r.away}
         img={img}
-        sport={sport}
-      />
+        sport={sport}/>
       <Team
         name={homeTeam}
         code={game.home_file_code}
@@ -139,8 +124,7 @@ function MlbGame({game, sport, expanded, toggleDetails}) {
         ws={game.home_win}
         score={game.linescore.r.home}
         img={img}
-        sport={sport}
-      />
+        sport={sport}/>
       <span className={expandIcon} onClick={toggleDetails}>
         {expanded ? <X /> : <Add />}
       </span>

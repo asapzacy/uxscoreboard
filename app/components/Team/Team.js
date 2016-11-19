@@ -7,13 +7,13 @@ const propTypes = {
   name: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
   sport: PropTypes.string.isRequired,
-  ls: PropTypes.string ,
+  ls: PropTypes.string,
   ws: PropTypes.string,
   img: PropTypes.string,
-  score: PropTypes.string,
+  score: PropTypes.string
 }
 
-export default function Team({name, code, ls, ws, score, img='svg', sport}) {
+export default function Team({name, code, ls, ws, score, img = 'svg', sport}) {
   name = name === 'Timberwolves' ? 'T-wolves' : name === 'Trail Blazers' ? 'Blazers' : name === 'Maple Leafs' ? 'Leafs' : name
   return (
     <div className={teamColors[`${code}_${sport}`]}>

@@ -19,8 +19,7 @@ export default function GameState({game, sport}) {
         reason={game.status.reason}
         description={game.description}
         doubleHdr={game.double_header_sw}
-        gameNbr={game.game_nbr}
-      />
+        gameNbr={game.game_nbr}/>
     )
   }
   if (sport === 'nba') {
@@ -28,8 +27,7 @@ export default function GameState({game, sport}) {
       <NbaState
         status={game.period_time.period_status}
         totalQtrs={game.period_time.period_value}
-        playoffs={game.playoffs}
-      />
+        playoffs={game.playoffs}/>
     )
   }
   if (sport === 'nhl') {
@@ -40,16 +38,13 @@ export default function GameState({game, sport}) {
         prd={game.linescore.currentPeriod}
         totalPrds={game.linescore.currentPeriod}
         ordinal={game.linescore.currentPeriodOrdinal}
-        playoffs={game.gameType === 'P' ? game.seriesSummary : null }
-       />
+        playoffs={game.gameType === 'P' ? game.seriesSummary : null}/>
     )
   }
   return <span>{'hi !'}</span>
-
 }
 
 GameState.propTypes = propTypes
-
 
 function MlbState({status, time, inning, inningState, outs, reason,
   description, doubleHdr, gameNbr}) {
@@ -65,7 +60,7 @@ function MlbState({status, time, inning, inningState, outs, reason,
     )
   }
   // all cases of mid-game statuses
-  else if (status === 'In Progress'|| status === 'Delayed' || status === 'Suspended' || status === 'Review' || status === 'Manager Challenger') {
+  else if (status === 'In Progress' || status === 'Delayed' || status === 'Suspended' || status === 'Review' || status === 'Manager Challenger') {
     const suffix = inningSuffix(inning)
     return (
       <div className={gameInfo}>

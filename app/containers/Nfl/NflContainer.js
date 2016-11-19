@@ -7,7 +7,7 @@ class NflContainer extends Component {
     super()
     this.state = {
       isLoading: true,
-      scores: '',
+      scores: ''
     }
   }
   componentDidMount() {
@@ -31,14 +31,11 @@ class NflContainer extends Component {
         {this.state.scores
           ? <Nfl
               isLoading={this.state.isLoading}
-              scores={this.state.scores}
-            />
-          : null
-        }
+              scores={this.state.scores}/>
+          : null}
       </div>
     )
   }
 }
-
 
 export default NflContainer

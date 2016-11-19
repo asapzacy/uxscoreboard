@@ -37,8 +37,7 @@ class GameContainer extends Component {
         sport={this.props.sport}
         details={this.state.details}
         expanded={this.state.expanded}
-        toggleDetails={this.toggleDetails}
-      />
+        toggleDetails={this.toggleDetails}/>
     )
   }
 }

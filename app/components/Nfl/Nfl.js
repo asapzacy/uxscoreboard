@@ -16,8 +16,7 @@ export default function Nfl({isLoading, date, scores}) {
         ? <Loading speed={300} text={'loading'} />
         : scores === 404
           ? <NotFound />
-          : <Scoreboard date={'20160820'} scores={scores} />
-      }
+          : <Scoreboard date={'20160820'} scores={scores} />}
     </div>
   )
 }
@@ -33,13 +32,11 @@ function Scoreboard({date, scores}) {
       <div className={scoresContainer}>
         {scores === undefined
           ? <h1>{'no games today . . . '}</h1>
-          : Object.keys(scores).map(item => <NflGame key={item} game={item} />)
-        }
+          : Object.keys(scores).map(item => <NflGame key={item} game={item} />)}
       </div>
     </div>
   )
 }
-
 
 function NflGame({game}) {
   return (

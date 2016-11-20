@@ -4,13 +4,14 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 
-const isProduction = LAUNCH_COMMAND === 'production'
+const isProduction = LAUNCH_COMMAND === 'build'
 process.env.BABEL_ENV = LAUNCH_COMMAND
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'dist')
 }
+
 
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
@@ -36,7 +37,7 @@ const base = {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
       { test: /\.css$/, loader: 'style!css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]' },
-      { test: /\.json$/,  loader: 'json-loader' }
+      { test: /\.json$/, loader: 'json' }
     ]
   },
   resolve: {

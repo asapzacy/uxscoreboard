@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const express = require('express')
 const compression = require('compression')
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 9090
 const app = express()
 
 app.use(compression())

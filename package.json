@@ -6,7 +6,6 @@
   "scripts": {
     "start": "webpack-dev-server --progress",
     "build": "webpack -p --progress",
-    "server": "node server",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0"
   },
@@ -50,8 +49,5 @@
   "bugs": {
     "url": "https://github.com/zacarellano/uxscoreboard/issues"
   },
-  "homepage": "https://github.com/zacarellano/uxscoreboard#readme",
-  "engines": {
-    "node": ">=7.0.0"
-  }
+  "homepage": "https://github.com/zacarellano/uxscoreboard#readme"
 }

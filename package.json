@@ -4,8 +4,9 @@
   "description": "live sports scoreboard built on react.js",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "start": "webpack-dev-server --progress",
     "build": "webpack -p",
+    "server": "node server",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0"
   },
@@ -49,5 +50,8 @@
   "bugs": {
     "url": "https://github.com/zacarellano/uxscoreboard/issues"
   },
-  "homepage": "https://github.com/zacarellano/uxscoreboard#readme"
+  "homepage": "https://github.com/zacarellano/uxscoreboard#readme",
+  "engines": {
+    "node": ">=7.0.0"
+  }
 }

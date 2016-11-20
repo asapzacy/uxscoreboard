@@ -8,7 +8,7 @@ export default function Navigation() {
     <header className={headerContainer}>
       <nav className={navContainer}>
         <div className={logoContainer}>
-          <Link to='/' className={logo}><img src='assets/img/logo.svg' /></Link>
+          <Link to='/' className={logo}><img src='assets/img/uxscoreboard.svg' /></Link>
         </div>
         <ul className={navItems}>
           <ul className={sportsLinks}>

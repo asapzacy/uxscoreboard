@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --progress",
     "build": "webpack -p --progress",
     "lint": "eslint app/.; exit 0",
-    "fix": "eslint --fix app/.; exit 0"
+    "fix": "eslint --fix app/.; exit 0",
+    "svgo": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;"
   },
   "author": "Zac Arellano",
   "license": "ISC",
@@ -39,6 +40,7 @@
     "html-webpack-plugin": "^2.21.0",
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.1",
+    "svgo": "^0.7.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },

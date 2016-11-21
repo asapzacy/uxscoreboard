@@ -16,7 +16,7 @@ const PATHS = {
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
   filename: 'index.html',
-  inject: 'body'
+  inject: 'body',
 })
 
 const productionPlugin = new webpack.DefinePlugin({
@@ -44,7 +44,6 @@ const base = {
     root: path.resolve('./app')
   }
 }
-
 const developmentConfig = {
   devtool: 'cheap-module-inline-source-map',
   devServer: {

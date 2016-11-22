@@ -44,14 +44,17 @@ var nba_config = {
 export function getNbaScores(dt) {
   if (dt === undefined || dt > 20160619 && dt < 20160930)
     dt = '20161025'
-  const url = `${cors}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
+  // const url = `${cors}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
+  const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
+  return axios.get(url)
   return axios.get(url)
     .then(currentScores => currentScores.data.sports_content.games, nba_config)
     .catch(currentScores => currentScores.status)
 }
 
 export function getNbaGameDetails(dt, id) {
-  const url = `${cors}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
+  // const url = `${cors}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
+  const url = `http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
   return axios.get(url)
     .then(gameDetails => gameDetails.data.sports_content.game)
     .catch(gameDetails => gameDetails.status)

@@ -6,23 +6,30 @@ class MainContainer extends Component {
   constructor() {
     super()
     this.state = {
-      expanded: false,
+      visible: false,
       height: 0
     }
     this.toggleMenu = this.toggleMenu.bind(this)
+    this.hideMenu = this.hideMenu.bind(this)
+  }
+  componentDidMount() {
+    window.addEventListener('hashchange', this.hideMenu.bind(this))
+  }
+  hideMenu() {
+    if (this.state.visible) { this.toggleMenu() }
   }
   toggleMenu() {
     const navHeight = document.querySelector('header nav').scrollHeight
     this.setState({
-      expanded: !this.state.expanded,
-      height: !this.state.expanded ? navHeight : 0
+      visible: !this.state.visible,
+      height: !this.state.visible ? navHeight : 0
     })
   }
   render() {
     return (
       <div className={mainContainer}>
         <Header
-          expanded={this.state.expanded}
+          visible={this.state.visible}
           height={this.state.height}
           toggleMenu={this.toggleMenu}
         />

@@ -3,9 +3,9 @@ import { Link } from 'react-router'
 import { headerContainer, menuOpen, logoContainer, logo, menuBtn, lineTop, lineBottom,
   navContainer, menuContainer, link, extrasLink } from './styles.css'
 
-export default function Header({expanded, height, toggleMenu}) {
+export default function Header({visible, height, toggleMenu}) {
   return (
-    <header className={expanded ? menuOpen : headerContainer}>
+    <header className={visible ? menuOpen : headerContainer}>
       <div className={logoContainer}>
         <Link to='/'><img className={logo} src='assets/img/uxscoreboard.svg'/></Link>
         <span className={menuBtn} onClick={toggleMenu}>

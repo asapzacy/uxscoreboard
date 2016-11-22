@@ -1,5 +1,5 @@
 import moment from 'moment'
-import tz from 'moment-timezone'
+import timezone from 'moment-timezone'
 
 export function formatDateUrl() {
   return moment().format('YYYYMMDD')
@@ -19,8 +19,8 @@ export function formatTime(time) {
   return `${hh}:${mm}`
 }
 
-export function formatTz(time) {
-  return moment(time).tz('America/New_York').format('h:mm A')
+export function formatTimezone(time) {
+  return moment(time).timezone('America/New_York').format('h:mm A')
 }
 
 export function inningSuffix(inning) {

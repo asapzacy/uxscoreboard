@@ -78,12 +78,13 @@ class MlbContainer extends Component {
   render() {
     return (
       <div>
-        {this.state.scores
+        { this.state.scores
           ? <Mlb
               isLoading={this.state.isLoading}
               scores={this.state.scores}
-              date={this.state.date}/>
-          : null}
+              date={this.state.date}
+            />
+          : null }
       </div>
     )
   }

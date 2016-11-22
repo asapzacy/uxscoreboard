@@ -1,8 +1,13 @@
+//  base skeleton
 export Home from './Home/Home'
-export Navigation from './Navigation/Navigation'
+export Header from './Header/Header'
 export Footer from './Footer/Footer'
+
+//  other pages
 export Loading from './Loading/Loading'
 export NotFound from './NotFound/NotFound'
+
+//  scoreboard pages
 export Mlb from './Mlb/Mlb'
 export Nba from './Nba/Nba'
 export Nfl from './Nfl/Nfl'

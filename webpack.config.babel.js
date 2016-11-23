@@ -49,7 +49,8 @@ const developmentConfig = {
   devServer: {
     contentBase: PATHS.build,
     hot: true,
-    inline: true
+    inline: true,
+    historyApiFallback: true
   },
   plugins: [HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin()]
 }

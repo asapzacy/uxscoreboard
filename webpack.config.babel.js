@@ -30,7 +30,7 @@ const base = {
     PATHS.app
   ],
   output: {
-    path: PATHS.build,
+    path: PATHS.build
     filename: 'bundle.js'
   },
   module: {

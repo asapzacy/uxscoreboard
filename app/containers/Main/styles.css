@@ -1,2 +1,2 @@
-.mainContainer { width:100%;height:100%;display:flex;align-items:center;justify-content:flex-end;flex-direction:column }
-.innerContainer { width: 96%;margin: 0 auto }
+.mainContainer { width:100%;height:100%;display:flex;align-items:center;justify-content:space-between;flex-direction:column }
+.innerContainer { display:flex;flex:9 }

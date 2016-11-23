@@ -12,32 +12,24 @@ class MainContainer extends Component {
     this.toggleMenu = this.toggleMenu.bind(this)
     this.hideMenu = this.hideMenu.bind(this)
   }
-  showMenu() {
-
-  }
-  hideMenu(e) {
-    console.log(e)
-    if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
-      document.querySelector('header').removeEventListener('click', this.hideMenu)
-      this.toggleMenu()
-    }
-  }
-  // hideMenu() {
-  //   if (this.state.visible) { this.toggleMenu() }
-  // }
   toggleMenu() {
     const header = document.querySelector('header')
     const navHeight = header.querySelector('nav').scrollHeight
     if (!this.state.visible) {
       header.addEventListener('click', this.hideMenu)
-    }
-    if (this.state.visible) {
+    } else {
       header.removeEventListener('click', this.hideMenu)
     }
     this.setState({
-    visible: !this.state.visible,
-    height: !this.state.visible ? navHeight : 0
-  })
+      visible: !this.state.visible,
+      height: !this.state.visible ? navHeight : 0
+    })
+  }
+  hideMenu(e) {
+    if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
+      document.querySelector('header').removeEventListener('click', this.hideMenu)
+      this.toggleMenu()
+    }
   }
   render() {
     return (

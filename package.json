@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress",
     "build": "webpack -p --progress",
+    "server": "node server.js",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",
     "svgo": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;"

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Router, Route, IndexRoute, Redirect, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { MainContainer, HomeContainer, MlbContainer, NbaContainer,
   NflContainer, NhlContainer, AboutContainer, NotFoundContainer } from 'containers'
 
 const routes = (
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path='/' component={MainContainer}>
       <IndexRoute component={HomeContainer} />
       <Route path='/mlb'>

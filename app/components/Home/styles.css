@@ -1,38 +1,10 @@
-.homeContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.ux {
-  color: #e0e0e0;
-  font-weight: 100;
-}
-
-.slogan {
-  color: #bdbdbd;
-  font-weight: 100;
-}
-
-/*
-.homeContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.ux {
-  color: #e0e0e0;
-  font-weight: 100;
-  font-size: 7em;
-  margin: 0.6em 0;
-}
-
-.slogan {
-  color: #bdbdbd;
-  font-weight: 100;
-  font-size: 3.5em;
-  margin: 0.3em 0;
-}*/
+/* home page - content */
+.homeContainer { display:flex;width:100%;text-align:center;justify-content:center;align-items:center;flex-direction:column }
+.companyInfo { margin-bottom:15% }
+.title { font-size:2.1em }
+.slogan { font-size:1em;color:#bdbdbd }
+.sportsInfo { width:80%;font-size:1.2em;letter-spacing:2px;font-weight:700 }
+.leagueList { display:flex;flex-wrap:wrap;}
+.leagueList li { width:50% }
+.leagueLink { padding:8%;margin:12%;display:block;border:1px solid #e0e0e0;transition:0.22s color,0.22s background-color,0.22s box-shadow }
+.leagueLink:hover { color:#070707;background:#e0e0e0;box-shadow:inset 0 0 0 0.35em #070707 }

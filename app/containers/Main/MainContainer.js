@@ -33,7 +33,7 @@ class MainContainer extends Component {
   }
   render() {
     return (
-      <div className={mainContainer}>
+      <div className={mainContainer} style={{height:this.state.visible ? `calc(100% + ${this.state.height/4}px)` : '100%'}}>
         <Header
           visible={this.state.visible}
           height={this.state.height}

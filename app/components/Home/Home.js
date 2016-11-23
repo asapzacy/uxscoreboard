@@ -1,11 +1,24 @@
 import React from 'react'
-import { homeContainer, ux, slogan } from './styles.css'
+import { Link } from 'react-router'
+import { homeContainer, companyInfo, title, slogan, sportsInfo,
+  leagueList, leagueLink } from './styles.css'
 
 export default function Home() {
   return (
     <div className={homeContainer}>
-      <h1 className={ux}>{'uxscoreboard'}</h1>
-      <p className={slogan}>{'live sports scoreboard built on react.js'}</p>
+      <div className={companyInfo}>
+        <h1 className={title}>{'uxscoreboard'}</h1>
+        <h2 className={slogan}>{'live sports scoreboard built on react.js'}</h2>
+      </div>
+      <div className={sportsInfo}>
+        <ul className={leagueList}>
+          <li><Link className={leagueLink} to='/mlb'>{'mlb'}</Link></li>
+          <li><Link className={leagueLink} to='/nba'>{'nba'}</Link></li>
+          <li><Link className={leagueLink} to='/nfl'>{'nfl'}</Link></li>
+          <li><Link className={leagueLink} to='/nhl'>{'nhl'}</Link></li>
+        </ul>
+      </div>
+
     </div>
   )
 }

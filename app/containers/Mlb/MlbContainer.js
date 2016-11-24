@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Mlb } from 'components'
+import base from 'config/firebase'
 import { formatDateUrl } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
 
@@ -11,6 +12,15 @@ class MlbContainer extends Component {
       scores: {},
       date: ''
     }
+  }
+  componentWillMount() {
+    this.ref = base.syncState(this.props.location.pathname, {
+      context: this,
+      state: 'scores'
+    })
+  }
+  componentWillUnmount() {
+    base.removeBinding(this.ref)
   }
   componentDidMount() {
     console.log(this.props.routeParams.date)

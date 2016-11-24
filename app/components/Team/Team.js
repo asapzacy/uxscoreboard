@@ -17,7 +17,7 @@ export default function Team({name, code, ls, ws, score, img = 'svg', sport}) {
   name = name === 'Timberwolves' ? 'T-wolves' : name === 'Trail Blazers' ? 'Blazers' : name === 'Maple Leafs' ? 'Leafs' : name
   return (
     <div className={teamColors[`${code}_${sport}`]}>
-      <img className={img === 'png' ? asgLogo : teamLogo} src={`assets/img/${sport}/teams/${code}.${img}`} alt={name} />
+      <img className={img === 'png' ? asgLogo : teamLogo} src={`/assets/img/${sport}/teams/${code}.${img}`} alt={name} />
       <div className={teamInfo}>
         <span className={teamName}>{name.length > 7 ? <small>{name}</small> : name}</span>
         {ws && ls ? <span className={teamRecord}>{`(${ws}-${ls})`}</span> : null}

@@ -1,2 +1,2 @@
-.mainContainer { width:100%;display:flex;align-items:center;flex-direction:column;transition:0.22s height }
-.innerContainer { display:flex;width:96%;flex:9 }
+.mainContainer { width:100%;display:flex;align-items:center;justify-content:space-between;flex-direction:column;transition:0.22s height }
+.innerContainer { width:96% }

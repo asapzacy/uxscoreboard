@@ -4,7 +4,7 @@
   "description": "live sports scoreboard built on react.js",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress",
+    "start": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress",
     "build": "webpack -p --progress",
     "server": "node server.js",
     "lint": "eslint app/.; exit 0",

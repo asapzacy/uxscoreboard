@@ -13,6 +13,7 @@ class MlbContainer extends Component {
     }
   }
   componentDidMount() {
+    console.log(this.props.routeParams.date)
     this.makeRequest(this.props.routeParams.date)
   }
   componentWillReceiveProps(nextProps) {

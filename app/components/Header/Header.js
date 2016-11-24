@@ -7,7 +7,7 @@ export default function Header({visible, height, toggleMenu}) {
   return (
     <header className={visible ? menuOpen : headerContainer}>
       <div className={logoContainer}>
-        <Link to='/'><img className={logo} src='assets/img/uxscoreboard.svg'/></Link>
+        <Link to='/'><img className={logo} src='/assets/img/uxscoreboard.svg'/></Link>
         <span className={menuBtn} onClick={toggleMenu}>
           <span className={lineTop}></span>
           <span className={lineBottom}></span>

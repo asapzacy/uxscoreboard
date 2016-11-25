@@ -1,24 +1,23 @@
 import moment from 'moment'
 import timezone from 'moment-timezone'
 
-// check if date is in current season
-// if not, return date closest to start of next or end of last
+// date defaults to today
+export const getTodaysDate = () => moment().format('YYYYMMDD')
+
+// checks if data param is string of 8 numbers
+export const isValidDate = dt => !!Number(dt) && dt.length === 8
+
+// check if date is in season
+// if not - return date closest to start of next season or end of last season
 // TODO: add next season start dates !!
 export const isInSeason = (dt, start, end) => {
-  if (dt >= start && dt <= end) {
-    return dt
-  } else if (Math.abs(dt - start) <= Math.abs(dt - end)) {
-    return start
-  } else if (Math.abs(dt - end) <= Math.abs(dt - start)){
-    return end
-  } else {
-    return
-  }
+  if (dt >= start && dt <= end) return dt
+  if (Math.abs(dt - start) <= Math.abs(dt - end)) return start
+  if (Math.abs(dt - end) <= Math.abs(dt - start)) return end
+  return dt
 }
 
-export const checkSeason = (dt, start, end) => dt >= start && dt <= end
-
-export const getTodaysDate = () => moment().format('YYYYMMDD')
+// export const isInSeason = (dt, start, end) => dt >= start && dt <= end
 
 
 export function formatDateUrl() {

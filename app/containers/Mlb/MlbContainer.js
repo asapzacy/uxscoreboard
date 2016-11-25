@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Mlb } from 'components'
-import { getTodaysDate, isInSeason } from 'helpers/utils'
+import { getTodaysDate, isInSeason, formatDateUrl } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
 import { seasons } from 'helpers/seasons'
 
@@ -10,24 +10,35 @@ class MlbContainer extends Component {
     this.state = {
       isLoading: true,
       scores: {},
-      date: ''
+      date: '',
+      today: ''
     }
   }
   componentDidMount() {
-    this.makeRequest(this.props.routeParams.date || getTodaysDate())
+    this.setState({ today: formatDateUrl() }, () => {
+      this.makeRequest(this.props.routeParams.date)
+    })
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
   makeRequest(dt) {
-    dt = isInSeason(dt, seasons.mlb.start, seasons.mlb.end)
+    if (dt === undefined) {
+      dt = isInSeason(this.state.today, seasons.mlb.start, seasons.mlb.end)
+    }
     getMlbScores(dt)
-      .then((currentScores) => {
-        const data = currentScores.data.games
-        this.cleanGameData(data)
+      .then(currentScores => {
+        this.cleanGameData(currentScores.data.games)
         this.setState({
           isLoading: false,
-          scores: data,
+          scores: currentScores.data.games,
+          date: dt
+        })
+      })
+      .catch(error =>  {
+        this.setState({
+          isLoading: false,
+          scores: 404,
           date: dt
         })
       })

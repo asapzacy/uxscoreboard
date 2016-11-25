@@ -10,7 +10,6 @@ const propTypes = {
 }
 
 export default function Mlb({isLoading, scores, date}) {
-  // console.log(scores)
   return (
     <div>
       {isLoading === true

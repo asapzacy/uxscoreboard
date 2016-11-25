@@ -19,7 +19,7 @@ export default function Header({visible, height, toggleMenu}) {
           <li><Link className={link} to='/nba' activeClassName='active'>{'nba'}</Link></li>
           <li><Link className={link} to='/nfl' activeClassName='active'>{'nfl'}</Link></li>
           <li><Link className={link} to='/nhl' activeClassName='active'>{'nhl'}</Link></li>
-          <span></span>
+          <div></div>
           <li><Link className={extrasLink} to='/about' activeClassName='active'>{'about'}</Link></li>
           <li><a className={extrasLink} href='https://github.com/zacarellano/uxscoreboard'>{'source'}</a></li>
         </ul>

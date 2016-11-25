@@ -16,9 +16,9 @@ class MainContainer extends Component {
     const header = document.querySelector('header')
     const navHeight = header.querySelector('nav').scrollHeight
     if (!this.state.visible) {
-      header.addEventListener('click', this.hideMenu)
+      window.addEventListener('click', this.hideMenu)
     } else {
-      header.removeEventListener('click', this.hideMenu)
+      window.removeEventListener('click', this.hideMenu)
     }
     this.setState({
       visible: !this.state.visible,
@@ -26,7 +26,7 @@ class MainContainer extends Component {
     })
   }
   hideMenu(e) {
-    if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
+    if (e.target.tagName === 'A' || (e.target.tagName === 'IMG')) {
       document.querySelector('header').removeEventListener('click', this.hideMenu)
       this.toggleMenu()
     }

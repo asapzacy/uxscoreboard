@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Mlb } from 'components'
-import base from 'config/firebase'
-import { formatDateUrl } from 'helpers/utils'
+import { getTodaysDate, isInSeason } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
+import { seasons } from 'helpers/seasons'
 
 class MlbContainer extends Component {
   constructor() {
@@ -13,31 +13,22 @@ class MlbContainer extends Component {
       date: ''
     }
   }
-  componentWillMount() {
-    this.ref = base.syncState(this.props.location.pathname, {
-      context: this,
-      state: 'scores'
-    })
-  }
-  componentWillUnmount() {
-    base.removeBinding(this.ref)
-  }
   componentDidMount() {
-    console.log(this.props.routeParams.date)
-    this.makeRequest(this.props.routeParams.date)
+    this.makeRequest(this.props.routeParams.date || getTodaysDate())
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
   makeRequest(dt) {
+    dt = isInSeason(dt, seasons.mlb.start, seasons.mlb.end)
     getMlbScores(dt)
       .then((currentScores) => {
-        const today = formatDateUrl()
-        this.cleanGameData(currentScores.data.games)
+        const data = currentScores.data.games
+        this.cleanGameData(data)
         this.setState({
           isLoading: false,
-          scores: currentScores.data.games,
-          date: this.props.routeParams.date || today
+          scores: data,
+          date: dt
         })
       })
   }

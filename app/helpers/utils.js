@@ -1,6 +1,26 @@
 import moment from 'moment'
 import timezone from 'moment-timezone'
 
+// check if date is in current season
+// if not, return date closest to start of next or end of last
+// TODO: add next season start dates !!
+export const isInSeason = (dt, start, end) => {
+  if (dt >= start && dt <= end) {
+    return dt
+  } else if (Math.abs(dt - start) <= Math.abs(dt - end)) {
+    return start
+  } else if (Math.abs(dt - end) <= Math.abs(dt - start)){
+    return end
+  } else {
+    return
+  }
+}
+
+export const checkSeason = (dt, start, end) => dt >= start && dt <= end
+
+export const getTodaysDate = () => moment().format('YYYYMMDD')
+
+
 export function formatDateUrl() {
   return moment().format('YYYYMMDD')
 }
@@ -31,20 +51,6 @@ export function inningSuffix(inning) {
     default: return 'th'
   }
 }
-
-// switch(digit1Str){
-// 			case '1':
-// 				if(digit2Str.startsWith('1')){ return 'th'; }
-// 				return 'st';
-// 			case '2':
-// 				if(digit2Str.startsWith('1')){ return 'th'; }
-// 				return 'nd';
-// 			case '3':
-// 				if(digit2Str.startsWith('1')){ return 'th'; }
-// 				return 'rd';
-// 			default:
-// 				return 'th';
-// 		}
 
 export function baseRunners(runners) {
   let img = '0b'

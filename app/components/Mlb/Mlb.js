@@ -5,11 +5,12 @@ import { scoreboardContainer, scoresContainer, loadingContainer } from 'styles/s
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,
+  scores: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
-  scores: PropTypes.object.isRequired
 }
 
-export default function Mlb({isLoading, date, scores}) {
+export default function Mlb({isLoading, scores, date}) {
+  // console.log(scores)
   return (
     <div>
       {isLoading === true

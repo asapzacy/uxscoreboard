@@ -5,37 +5,61 @@ import { scoreboardContainer, scoresContainer, loadingContainer } from 'styles/s
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,
+  isValid: PropTypes.bool.isRequired,
   scores: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
+  sport: PropTypes.string
 }
 
-export default function Mlb({isLoading, scores, date}) {
+const defaultProps = {
+  league: 'mlb'
+}
+
+export default function Mlb({ isLoading, isValid, scores, date, league }) {
   return (
     <div>
-      {isLoading === true
-        ? <Loading speed={300} text={'loading'} />
-        : scores !== 404
-          ? <Scoreboard date={date} scores={scores} />
-          : <NotFound />}
+      {do {
+        if (isLoading) {
+          <Loading speed={300} text={'test'} />
+        } else if (isValid && scores) {
+          <Scoreboard scores={scores} date={date} league={league} />
+        } else {
+          <NotFound />
+        }
+      }}
     </div>
   )
 }
 
 Mlb.propTypes = propTypes
+Mlb.defaultProps = defaultProps
 
-function Scoreboard({date, scores}) {
+
+const propTypes2 = {
+  scores: PropTypes.object.isRequired,
+  date: PropTypes.string.isRequired,
+  league: PropTypes.string.isRequired
+}
+
+function Scoreboard({ scores, date, league }) {
   return (
     <div className={scoreboardContainer}>
-      <Date date={date} sport={'mlb'} />
+      <Date date={date} league={league} />
       <div className={scoresContainer}>
-        {date > 20160228 && date < 20160403
-          ? <h1>{'[ spring training ]'}</h1>
-          : scores.game === undefined
-            ? <h1>{'[ no games today ]'}</h1>
-            : scores.game[0] === undefined
-              ? <GameContainer key={scores.game.game_pk} game={scores.game} sport={'mlb'} />
-              : scores.game.filter(item => item.game_type === 'R').map(item => <GameContainer key={item.game_pk} game={item} sport={'mlb'} />)}
+        {do {
+          if (scores.game === undefined) {
+            <h1>{'[[ no games today ]]'}</h1>
+          } else if (scores.game[0] === undefined) {
+            <GameContainer game={scores.game} league={league} key={scores.game.game_pk} />
+          } else {
+            scores.game
+              .filter(item => item.game_type === 'R')
+              .map(item => <GameContainer game={scores.game} league={league} key={scores.game.game_pk} />)
+          }
+        }}
       </div>
     </div>
   )
 }
+
+Scoreboard.propTypes = propTypes2

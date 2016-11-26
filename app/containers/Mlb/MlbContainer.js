@@ -9,6 +9,7 @@ class MlbContainer extends Component {
     super()
     this.state = {
       isLoading: true,
+      isValid: false,
       scores: {},
       date: '',
       today: ''
@@ -25,6 +26,7 @@ class MlbContainer extends Component {
   makeRequest(dt=this.state.today) {
     if (isValidDate(dt)) {
       dt = isInSeason(dt, seasons.mlb.start, seasons.mlb.end)
+      this.setState({ isValid: true })
     }
     getMlbScores(dt)
       .then((currentScores) => {
@@ -38,7 +40,6 @@ class MlbContainer extends Component {
       .catch((error) =>  {
         this.setState({
           isLoading: false,
-          scores: 404,
           date: dt
         })
       })
@@ -89,17 +90,7 @@ class MlbContainer extends Component {
     }
   }
   render() {
-    return (
-      <div>
-        { this.state.scores
-          ? <Mlb
-              isLoading={this.state.isLoading}
-              scores={this.state.scores}
-              date={this.state.date}
-            />
-          : null }
-      </div>
-    )
+    return <Mlb {...this.state} />
   }
 }
 

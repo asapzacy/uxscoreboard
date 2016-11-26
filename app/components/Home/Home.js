@@ -8,7 +8,7 @@ export default function Home() {
     <div className={homeContainer}>
       <div className={companyInfo}>
         <h1 className={title}>{'uxscoreboard'}</h1>
-        <h2 className={slogan}>{'live leagues scoreboard built on react.js'}</h2>
+        <h2 className={slogan}>{'live sports scoreboard built on react.js'}</h2>
       </div>
       <div className={leaguesInfo}>
         <ul className={leagueList}>

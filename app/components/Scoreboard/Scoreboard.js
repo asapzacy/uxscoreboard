@@ -1,19 +1,18 @@
 import React, { PropTypes } from 'react'
-import { Date } from 'components'
-import { GameContainer } from 'containers'
+import { GameContainer, DateContainer } from 'containers'
 import { scoreboardContainer, scoresContainer, loadingContainer } from 'styles/shared.css'
 
 const propTypes = {
   scores: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
+  today: PropTypes.string.isRequired,
   league: PropTypes.string.isRequired
 }
 
-export default function Scoreboard({ scores, date, league }) {
-  console.log(scores)
+export default function Scoreboard({ scores, date, today, league }) {
   return (
     <div className={scoreboardContainer}>
-      <Date date={date} league={league} />
+      <DateContainer date={date} today={today} league={league} />
       <div className={scoresContainer}>
         { scores.game === undefined
           ? <h1>{'[[ no games today]]'}</h1>

@@ -1,45 +1,5 @@
-.dateContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2.2em auto;
-  width: 56%;
-  font-size: 1.2em;
-  color: #f5f5f5;
-}
-
-.dateContainer li a {
-  padding:4px 8px;
-}
-
-.dateContainer li span:last-child {
-  color: #bdbdbd;
-  font-size: 80%;
-  transition: 0.4s all ease-in-out;
-}
-
-.dateContainer li:hover span:last-child  {
-  color: #f5f5f5;
-}
-
-.arrow {
-  transition: 0.4s all ease-in-out;
-}
-
-.arrow:hover {
-  transform: scale(1.4);
-}
-
-.currentSelection {
-  font-size: 160%;
-}
-
-.dayContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.arrow .dayContainer {
-  cursor: pointer;
-  padding: 1em;
-}
+.dateContainer { height:3em }
+.daysList { display:flex;justify-content:space-between;align-items:center;height:100% }
+.dayItem { display:block }
+.arrowItem { font-size:1.1em;composes:dayItem }
+.arrowItem a { display:flex;padding:0.4em }

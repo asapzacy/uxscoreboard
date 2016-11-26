@@ -1,9 +1,16 @@
+// main container pages
 export MainContainer from './Main/MainContainer'
 export HomeContainer from './Home/HomeContainer'
+
+// extra container pages
+export AboutContainer from './About/AboutContainer'
+export NotFoundContainer from './NotFound/NotFoundContainer'
+
+// league container pages
 export MlbContainer from './Mlb/MlbContainer'
 export NbaContainer from './Nba/NbaContainer'
 export NflContainer from './Nfl/NflContainer'
 export NhlContainer from './Nhl/NhlContainer'
-export AboutContainer from './About/AboutContainer'
+
 export GameContainer from './Game/GameContainer'
-export NotFoundContainer from './NotFound/NotFoundContainer'
+export DateContainer from './Date/DateContainer'

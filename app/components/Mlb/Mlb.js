@@ -6,20 +6,21 @@ const propTypes = {
   isValid: PropTypes.bool.isRequired,
   scores: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
-  league: PropTypes.string
+  today: PropTypes.string.isRequired,
+  league: PropTypes.string.isRequired
 }
 
 const defaultProps = {
   league: 'mlb'
 }
 
-export default function Mlb({ isLoading, isValid, scores, date, league }) {
+export default function Mlb({ isLoading, isValid, scores, date, today, league }) {
   return (
     <div>
       { isLoading
         ? <Loading speed={300} text={'loading'} />
         : isValid && scores
-          ? <Scoreboard scores={scores} date={date} league={league} />
+          ? <Scoreboard scores={scores} date={date} today={today} league={league} />
           : <NotFound />
       }
     </div>

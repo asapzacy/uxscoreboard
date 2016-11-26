@@ -23,7 +23,7 @@ export function getNbaScores(dt) {
   const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
   return axios.get(url)
   return axios.get(url)
-    .then(currentScores => currentScores.data.sports_content.games, nba_config)
+    .then(currentScores => currentScores.data.leagues_content.games, nba_config)
     .catch(currentScores => currentScores.status)
 }
 
@@ -31,7 +31,7 @@ export function getNbaGameDetails(dt, id) {
   // const url = `${cors}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
   const url = `http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
   return axios.get(url)
-    .then(gameDetails => gameDetails.data.sports_content.game)
+    .then(gameDetails => gameDetails.data.leagues_content.game)
     .catch(gameDetails => gameDetails.status)
 }
 

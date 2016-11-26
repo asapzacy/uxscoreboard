@@ -4,11 +4,11 @@ import { gameInfo } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  sport: PropTypes.string.isRequired
+  league: PropTypes.string.isRequired
 }
 
-export default function GameState({game, sport}) {
-  if (sport === 'mlb') {
+export default function GameState({game, league}) {
+  if (league === 'mlb') {
     return (
       <MlbState
         status={game.status.status}
@@ -22,7 +22,7 @@ export default function GameState({game, sport}) {
         gameNbr={game.game_nbr}/>
     )
   }
-  if (sport === 'nba') {
+  if (league === 'nba') {
     return (
       <NbaState
         status={game.period_time.period_status}
@@ -30,7 +30,7 @@ export default function GameState({game, sport}) {
         playoffs={game.playoffs}/>
     )
   }
-  if (sport === 'nhl') {
+  if (league === 'nhl') {
     return (
       <NhlState
         status={game.status.abstractGameState}

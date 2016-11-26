@@ -6,17 +6,17 @@ import { detailsContainer, aboutContainer, statsContainer,
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  sport: PropTypes.string.isRequired,
+  league: PropTypes.string.isRequired,
   details: PropTypes.object
 }
 
-export default function Details({game, sport, details}) {
-  if (sport === 'mlb')
-    return <MlbDetails game={game} sport={sport} />
-  if (sport === 'nba')
-    return <NbaDetails game={game} sport={sport} details={details} />
-  if (sport === 'nhl')
-    return <NhlDetails game={game} sport={sport} />
+export default function Details({game, league, details}) {
+  if (league === 'mlb')
+    return <MlbDetails game={game} league={league} />
+  if (league === 'nba')
+    return <NbaDetails game={game} league={league} details={details} />
+  if (league === 'nhl')
+    return <NhlDetails game={game} league={league} />
   else
     return <h1>{'i hope this doesn\'t run'}</h1>
 }
@@ -33,7 +33,7 @@ function About({awayTeam, homeTeam, date, location, venue}) {
   )
 }
 
-function NbaDetails({game, sport, details}) {
+function NbaDetails({game, league, details}) {
   const linescore = {}
   linescore['away'] = game.visitor.linescores
   linescore['home'] = game.home.linescores
@@ -46,7 +46,7 @@ function NbaDetails({game, sport, details}) {
         location={`${game.city}, ${game.state}`}
         venue={game.arena}/>
       <BoxScore
-        sport={sport}
+        league={league}
         awayAbbr={game.visitor.abbreviation}
         homeAbbr={game.home.abbreviation}
         linescore={linescore}
@@ -151,7 +151,7 @@ function Stats({away, home}) {
   )
 }
 
-function MlbDetails({game, sport}) {
+function MlbDetails({game, league}) {
   const status = game.status.status
   return (
     <div className={detailsContainer}>
@@ -162,7 +162,7 @@ function MlbDetails({game, sport}) {
         location={game.location}
         venue={game.venue}/>
       <BoxScore
-        sport={sport}
+        league={league}
         awayAbbr={game.away_name_abbrev}
         homeAbbr={game.home_name_abbrev}
         linescore={game.linescore}

@@ -3,7 +3,7 @@ import { NbaBoxScore } from 'components'
 import { boxScoreContainer, mlb } from './styles.css'
 
 const propTypes = {
-  sport: PropTypes.string.isRequired,
+  league: PropTypes.string.isRequired,
   awayAbbr: PropTypes.string.isRequired,
   homeAbbr: PropTypes.string.isRequired,
   linescore: PropTypes.object.isRequired,
@@ -13,9 +13,9 @@ const propTypes = {
   homeScore: PropTypes.string
 }
 
-export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
+export default function BoxScore({league, awayAbbr, homeAbbr, linescore, review,
   status, awayScore, homeScore}) {
-  if (sport === 'mlb') {
+  if (league === 'mlb') {
     return (
       <MlbBoxScore
         awayAbbr={awayAbbr}
@@ -25,7 +25,7 @@ export default function BoxScore({sport, awayAbbr, homeAbbr, linescore, review,
         status={status}/>
     )
   }
-  if (sport === 'nba') {
+  if (league === 'nba') {
     return (
       <NbaBoxScore
         awayAbbr={awayAbbr}

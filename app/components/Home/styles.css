@@ -3,7 +3,7 @@
 .companyInfo { margin-bottom:15% }
 .title { font-size:2.1em }
 .slogan { font-size:1em;color:#bdbdbd }
-.sportsInfo { width:80%;font-size:1.2em;letter-spacing:2px;font-weight:700 }
+.leaguesInfo { width:80%;font-size:1.2em;letter-spacing:2px;font-weight:700 }
 .leagueList { display:flex;flex-wrap:wrap;}
 .leagueList li { width:50% }
 .leagueLink { padding:8%;margin:12%;display:block;border:1px solid #e0e0e0;transition:0.22s color,0.22s background-color,0.22s box-shadow }

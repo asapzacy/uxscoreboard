@@ -4,7 +4,7 @@ import { Game } from 'components'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
-  sport: PropTypes.string.isRequired
+  league: PropTypes.string.isRequired
 }
 
 class GameContainer extends Component {
@@ -20,7 +20,7 @@ class GameContainer extends Component {
     this.getGameDetails()
   }
   getGameDetails() {
-    if (this.props.sport === 'nba') {
+    if (this.props.league === 'nba') {
       if (this.props.game.period_time.game_status === '3') {
         getNbaGameDetails(this.props.game.date, this.props.game.id)
           .then(gameDetails => this.setState({ details: gameDetails }))
@@ -34,7 +34,7 @@ class GameContainer extends Component {
     return (
       <Game
         game={this.props.game}
-        sport={this.props.sport}
+        league={this.props.league}
         details={this.state.details}
         expanded={this.state.expanded}
         toggleDetails={this.toggleDetails}/>

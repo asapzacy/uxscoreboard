@@ -1,12 +1,5 @@
 .scoreboardContainer { margin-bottom:2.5em }
-
-.gamesContainer {
-  display: flex;
-  text-align: left;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
+.gamesContainer { display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap }
 
 .gamesContainer h1 {
   color: #bdbdbd;

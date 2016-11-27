@@ -8,7 +8,7 @@ export function getMlbScores(dt) {
   const yyyy = dt.slice(0,4)
   const mm = dt.slice(4,6)
   const dd = dt.slice(6,dt.length)
-  const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const url = `${cors}http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then(currentScores => currentScores.data)
   }
@@ -19,9 +19,7 @@ var nba_config = {
 export function getNbaScores(dt) {
   if (dt === undefined || dt > 20160619 && dt < 20160930)
     dt = '20161025'
-  const url = `${cors}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
-  // const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
-  return axios.get(url)
+  const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
   return axios.get(url)
     .then(currentScores => currentScores.data.leagues_content.games, nba_config)
     .catch(currentScores => currentScores.status)

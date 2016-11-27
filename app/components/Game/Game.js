@@ -7,52 +7,21 @@ import { gameContainer, expandIcon } from './styles.css'
 const propTypes = {
   game: PropTypes.object.isRequired,
   league: PropTypes.string.isRequired,
-  details: PropTypes.object,
   expanded: PropTypes.bool.isRequired,
-  toggleDetails: PropTypes.func.isRequired
+  showDetails: PropTypes.func.isRequired
 }
 
-export default function Game({game, league, details, expanded, toggleDetails}) {
-  if (league === 'mlb') {
-    return (
-      <MlbGame
-        game={game}
-        league={league}
-        expanded={expanded}
-        toggleDetails={toggleDetails}/>
-    )
+export default function Game({ ...props }) {
+  if (props.league === 'mlb') {
+    return ( <MlbGame {...props} /> )
   }
-  // if (league === 'nba') {
-  //   return (
-  //     <NbaGame
-  //       game={game}
-  //       league={league}
-  //       details={details}
-  //       expanded={expanded}
-  //       toggleDetails={toggleDetails}/>
-  //   )
-  // }
-  // if (league === 'nhl') {
-  //   return (
-  //     <NhlGame
-  //       game={game}
-  //       league={league}
-  //       expanded={expanded}
-  //       toggleDetails={toggleDetails}/>
-  //   )
-  // }
-  // else {
-  //   return (
-  //     <h1>{'ye'}</h1>
-  //   )
-  // }
 }
 
 Game.propTypes = propTypes
 
 
 
-function MlbGame({game, league, expanded, toggleDetails}) {
+function MlbGame({ game, league, expanded, showDetails }) {
   const awayTeam = game.game_type === 'A' ? 'American' : game.away_team_name
   const homeTeam = game.game_type === 'A' ? 'National' : game.home_team_name
   const img = game.game_type === 'A' ? 'png' : 'svg'
@@ -75,7 +44,7 @@ function MlbGame({game, league, expanded, toggleDetails}) {
         score={game.linescore.r.home}
         img={img}
         league={league}/>
-      <span className={expandIcon} onClick={toggleDetails}>
+      <span className={expandIcon} onClick={showDetails}>
         {expanded ? <X /> : <Add />}
       </span>
       {expanded ? <Details game={game} league={league} status={game.status.status} /> : null}
@@ -94,7 +63,7 @@ function MlbGame({game, league, expanded, toggleDetails}) {
 
 
 //
-// function NbaGame({game, league, details, expanded, toggleDetails}) {
+// function NbaGame({game, league, details, expanded, showDetails}) {
 //   return (
 //     <div className={gameContainer}>
 //       <GameState game={game} league={league} />

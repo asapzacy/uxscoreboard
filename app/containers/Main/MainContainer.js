@@ -39,7 +39,7 @@ class MainContainer extends Component {
     const height = this.state.visible ? `calc(100% + ${this.state.height/2}px)` : '100%'
     return (
       <div className={mainContainer} style={{height:height}}>
-        <Header {...this.state} toggleMenu={this.toggleMenu} />
+        <Header toggleMenu={this.toggleMenu} {...this.state} />
         <main className={innerContainer}>
           {this.props.children}
         </main>

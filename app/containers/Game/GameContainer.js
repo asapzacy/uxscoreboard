@@ -1,47 +1,20 @@
-import React, { Component, PropTypes } from 'react'
-import { getNbaGameDetails } from 'helpers/api'
+import React, { Component } from 'react'
 import { Game } from 'components'
-
-const propTypes = {
-  game: PropTypes.object.isRequired,
-  league: PropTypes.string.isRequired
-}
 
 class GameContainer extends Component {
   constructor() {
     super()
     this.state = {
-      details: {},
       expanded: false
     }
-    this.toggleDetails = this.toggleDetails.bind(this)
+    this.showDetails = this.showDetails.bind(this)
   }
-  componentDidMount() {
-    this.getGameDetails()
-  }
-  getGameDetails() {
-    if (this.props.league === 'nba') {
-      if (this.props.game.period_time.game_status === '3') {
-        getNbaGameDetails(this.props.game.date, this.props.game.id)
-          .then(gameDetails => this.setState({ details: gameDetails }))
-      }
-    }
-  }
-  toggleDetails() {
+  showDetails() {
     this.setState({ expanded: !this.state.expanded })
   }
   render() {
-    return (
-      <Game
-        game={this.props.game}
-        league={this.props.league}
-        details={this.state.details}
-        expanded={this.state.expanded}
-        toggleDetails={this.toggleDetails}/>
-    )
+    return <Game showDetails={this.showDetails} {...this.state} {...this.props} />
   }
 }
-
-GameContainer.propTypes = propTypes
 
 export default GameContainer

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { GameContainer, DateContainer } from 'containers'
-import { scoreboardContainer, scoresContainer, loadingContainer } from 'styles/shared.css'
+import { scoreboardContainer, gamesContainer } from './styles.css'
 
 const propTypes = {
   scores: PropTypes.object.isRequired,
@@ -13,7 +13,7 @@ export default function Scoreboard({ scores, date, today, league }) {
   return (
     <div className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
-      <div className={scoresContainer}>
+      <div className={gamesContainer}>
         { scores.game === undefined
           ? <h1>{'[[ no games today]]'}</h1>
           : scores.game[0] === undefined

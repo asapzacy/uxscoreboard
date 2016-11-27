@@ -26,16 +26,20 @@ class MainContainer extends Component {
     })
   }
   hideMenu(e) {
-    if (e.target.tagName === 'A' || (e.target.tagName === 'IMG')) {
-      document.querySelector('header').removeEventListener('click', this.hideMenu)
-      this.toggleMenu()
+    let el = e.target || e.srcElement
+    while (el) {
+      if (el.nodeName === 'A') {
+        window.removeEventListener('click', this.hideMenu)
+        this.toggleMenu()
+      }
+      el = el.parentNode
     }
   }
   render() {
-    const height = this.state.visible ? `calc(100% + ${this.state.height/4}px)` : '100%'
+    const height = this.state.visible ? `calc(100% + ${this.state.height/2}px)` : '100%'
     return (
       <div className={mainContainer} style={{height:height}}>
-        <Header visible={this.state.visible} height={this.state.height} toggleMenu={this.toggleMenu} />
+        <Header {...this.state} toggleMenu={this.toggleMenu} />
         <main className={innerContainer}>
           {this.props.children}
         </main>

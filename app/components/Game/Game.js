@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react'
 import { GameState, Team, Details } from 'components'
+import { mlbTeamProps } from 'helpers/gameProps'
 import Add from 'react-icons/lib/md/add'
 import X from 'react-icons/lib/md/clear'
-import { gameContainer, expandIcon } from './styles.css'
+import { gameItem, expandIcon } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
@@ -22,33 +23,18 @@ Game.propTypes = propTypes
 
 
 function MlbGame({ game, league, expanded, showDetails }) {
-  const awayTeam = game.game_type === 'A' ? 'American' : game.away_team_name
-  const homeTeam = game.game_type === 'A' ? 'National' : game.home_team_name
-  const img = game.game_type === 'A' ? 'png' : 'svg'
+  const awayTeam = mlbTeamProps(game, 'away', league)
+  const homeTeam = mlbTeamProps(game, 'home', league)
   return (
-    <div className={gameContainer}>
+    <li className={gameItem}>
       <GameState game={game} league={league} />
-      <Team
-        name={awayTeam}
-        code={game.away_file_code}
-        ls={game.away_loss}
-        ws={game.away_win}
-        score={game.linescore.r.away}
-        img={img}
-        league={league}/>
-      <Team
-        name={homeTeam}
-        code={game.home_file_code}
-        ls={game.home_loss}
-        ws={game.home_win}
-        score={game.linescore.r.home}
-        img={img}
-        league={league}/>
+      <Team {...awayTeam} />
+      <Team {...homeTeam} />
       <span className={expandIcon} onClick={showDetails}>
         {expanded ? <X /> : <Add />}
       </span>
       {expanded ? <Details game={game} league={league} status={game.status.status} /> : null}
-    </div>
+    </li>
   )
 }
 

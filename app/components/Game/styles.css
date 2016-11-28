@@ -1,4 +1,6 @@
-.gameContainer { background:#f5f5f5;color:#070707;border:2px solid #f5f5f5;margin:1em;flex:1 1 calc(33.33% - 2em) }
+.gameItem { background:#f5f5f5;color:#070707;border:2px solid #f5f5f5;margin:1em;flex:1 0 calc(33.33% - 2em) }
+
+
 .expandIcon {
   cursor: pointer;
   height: 20px;

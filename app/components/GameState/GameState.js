@@ -93,60 +93,101 @@ function MlbState({status, time, inning, inningState, outs, reason,
   }
 }
 
-function NbaState({status, totalQtrs, playoffs}) {
-  // all cases of pre-game statuses. this checks if string starts w/ number
-  if (!(isNaN(Number(status.charAt(0))))) {
-    return (
-      <div className={gameInfo}>
-        <span>{status.toUpperCase()}</span>
-      </div>
-    )
-  }
-  // DON'T KNOW BC SEASON HASN'T STARTED
-  // all cases of mid-game statuses
-  // else if () {
-  //   return (
-  //
-  //   )
-  // }
-  // all cases of post-game statuses
-  else if (status === 'Final') {
-    const OTs = totalQtrs - 4
-    return (
-      <div className={gameInfo}>
-        <span>{totalQtrs > 4 ? OTs > 1 ? `${status}/${OTs}OT` : `${status}/OT` : status}</span>
-        {playoffs ? <span><small>{`Game ${playoffs.game_number} of 7`}</small></span> : null}
-      </div>
 
-    )
-  }
-}
 
-function NhlState({status, time, prd, totalPrds, ordinal, playoffs}) {
-  // all cases of pre-game statuses
-  if (status === 'Preview') {
-    const timeEt = formatTz(time)
-    return (
-      <div className={gameInfo}>
-        <span>{`${timeEt} ET`}</span>
-      </div>
-    )
-  }
-  // DON'T KNOW BC SEASON HASN'T STARTED
-  // all cases of mid-game statuses
-  // else if () {
-  //   return (
-  //
-  //   )
-  // }
-  // all cases of post-game statuses
-  else if (status === 'Final') {
-    return (
-      <div className={gameInfo}>
-        <span>{totalPrds - 3 > 0 ? `${status}/${ordinal}` : status}</span>
-        <span><small>{playoffs ? `${playoffs.gameLabel} of 7` : null}</small></span>
-      </div>
 
-    )
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// function NbaState({status, totalQtrs, playoffs}) {
+//   // all cases of pre-game statuses. this checks if string starts w/ number
+//   if (!(isNaN(Number(status.charAt(0))))) {
+//     return (
+//       <div className={gameInfo}>
+//         <span>{status.toUpperCase()}</span>
+//       </div>
+//     )
+//   }
+//   // DON'T KNOW BC SEASON HASN'T STARTED
+//   // all cases of mid-game statuses
+//   // else if () {
+//   //   return (
+//   //
+//   //   )
+//   // }
+//   // all cases of post-game statuses
+//   else if (status === 'Final') {
+//     const OTs = totalQtrs - 4
+//     return (
+//       <div className={gameInfo}>
+//         <span>{totalQtrs > 4 ? OTs > 1 ? `${status}/${OTs}OT` : `${status}/OT` : status}</span>
+//         {playoffs ? <span><small>{`Game ${playoffs.game_number} of 7`}</small></span> : null}
+//       </div>
+//
+//     )
+//   }
+// }
+//
+// function NhlState({status, time, prd, totalPrds, ordinal, playoffs}) {
+//   // all cases of pre-game statuses
+//   if (status === 'Preview') {
+//     const timeEt = formatTz(time)
+//     return (
+//       <div className={gameInfo}>
+//         <span>{`${timeEt} ET`}</span>
+//       </div>
+//     )
+//   }
+//   // DON'T KNOW BC SEASON HASN'T STARTED
+//   // all cases of mid-game statuses
+//   // else if () {
+//   //   return (
+//   //
+//   //   )
+//   // }
+//   // all cases of post-game statuses
+//   else if (status === 'Final') {
+//     return (
+//       <div className={gameInfo}>
+//         <span>{totalPrds - 3 > 0 ? `${status}/${ordinal}` : status}</span>
+//         <span><small>{playoffs ? `${playoffs.gameLabel} of 7` : null}</small></span>
+//       </div>
+//
+//     )
+//   }
+// }

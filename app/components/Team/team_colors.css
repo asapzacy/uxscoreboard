@@ -1,44 +1,44 @@
-/*    __mlb__     */
-.ana_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ba0021 40%, transparent 0%); }
-.ari_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
-.atl_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #13274f 40%, transparent 0%); }
-.bal_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
-.bos_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #0d2b56 40%, transparent 0%); }
-.chc_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #0e3386 40%, transparent 0%); }
-.cin_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c6011f 40%, transparent 0%); }
-.cle_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002b5c 40%, transparent 0%); }
-.col_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced4 40%, transparent 0%); }
-.cws_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
-.det_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
-.hou_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d62 40%, transparent 0%); }
-.kc_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
-.la_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
-.mia_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #0077c8 40%, transparent 0%); }
-.mil_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #0a2351 40%, transparent 0%); }
-.min_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #d31145 40%, transparent 0%); }
-.nym_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d72 40%, transparent 0%); }
-.nyy_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #142448 40%, transparent 0%); }
-.oak_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #003831 40%, transparent 0%); }
-.phi_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #e81828 40%, transparent 0%); }
-.pit_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #fdb827 40%, transparent 0%); }
-.sd_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #7f411c 40%, transparent 0%); }
-.sea_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #005c5c 40%, transparent 0%); }
-.sf_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #000000 40%, transparent 0%); }
-.stl_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c41e3a 40%, transparent 0%); }
-.tb_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #8fbce6 40%, transparent 0%); }
-.tex_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #003278 40%, transparent 0%); }
-.tor_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #134a8e 40%, transparent 0%); }
-.was_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ab0003 40%, transparent 0%); }
+/*  mlb  */
+.ana_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#ba0021 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#ba0021 40%,transparent 0%) }
+.ari_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#000000 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#000000 40%,transparent 0%) }
+.atl_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#13274f 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#13274f 40%,transparent 0%) }
+.bal_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#000000 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#000000 40%,transparent 0%) }
+.bos_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#0d2b56 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#0d2b56 40%,transparent 0%) }
+.chc_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#0e3386 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#0e3386 40%,transparent 0%) }
+.cin_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#c6011f 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#c6011f 40%,transparent 0%) }
+.cle_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#002b5c 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#002b5c 40%,transparent 0%) }
+.col_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#c4ced4 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#c4ced4 40%,transparent 0%) }
+.cws_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#000000 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#000000 40%,transparent 0%) }
+.det_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#ffffff 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#ffffff 40%,transparent 0%) }
+.hou_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#002d62 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#002d62 40%,transparent 0%) }
+.kc_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#ffffff 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#ffffff 40%,transparent 0%) }
+.la_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#ffffff 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#ffffff 40%,transparent 0%) }
+.mia_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#0077c8 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#0077c8 40%,transparent 0%) }
+.mil_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#0a2351 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#0a2351 40%,transparent 0%) }
+.min_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#d31145 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#d31145 40%,transparent 0%) }
+.nym_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#002d72 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#002d72 40%,transparent 0%) }
+.nyy_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#142448 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#142448 40%,transparent 0%) }
+.oak_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#003831 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#003831 40%,transparent 0%) }
+.phi_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#e81828 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#e81828 40%,transparent 0%) }
+.pit_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#fdb827 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#fdb827 40%,transparent 0%) }
+.sd_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#7f411c 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#7f411c 40%,transparent 0%) }
+.sea_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#005c5c 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#005c5c 40%,transparent 0%) }
+.sf_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#000000 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#000000 40%,transparent 0%) }
+.stl_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#c41e3a 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#c41e3a 40%,transparent 0%) }
+.tb_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#8fbce6 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#8fbce6 40%,transparent 0%) }
+.tex_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#003278 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#003278 40%,transparent 0%) }
+.tor_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#134a8e 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#134a8e 40%,transparent 0%) }
+.was_mlb { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#ab0003 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#ab0003 40%,transparent 0%) }
 
-/*  special case for the Yankees.. ___go_Giants__¯\_(ツ)_/¯ ___  */
+/*  edge case for the custom Yankees background... ___go_Giants__¯\_(ツ)_/¯ ___  */
 .nyy_mlb { position:relative; }
 .nyy_mlb * { z-index:1; }
 .nyy_mlb::before { content:'';position:absolute;left:0;top:0;width:40%;height:100%;background-position:-27.5% 100%; }
-.nyy_mlb::before { background-size:15px;background-image:-webkit-linear-gradient(0deg, #fff 86%, #142448 14%); }
+.nyy_mlb::before { background-size:15px;background-image:-webkit-linear-gradient(0deg,#ffffff 86%,#142448 14%);background-image:-moz-linear-gradient(0deg,#ffffff 86%,#142448 14%) }
 
 /*  special case for the all-star game */
-.nl_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #7f411c 40%, transparent 0%); }
-.al_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #fec325 40%, transparent 0%); }
+.nl_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#7f411c 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#7f411c 40%,transparent 0%) }
+.al_mlb  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg,#fec325 40%,transparent 0%);background-image:-moz-linear-gradient(0deg,#fec325 40%,transparent 0%) }
 
 
 

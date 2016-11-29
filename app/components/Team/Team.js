@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { teamContainer, teamLogo, asgLogo, teamInfo, teamName, teamRecord, teamScore } from './styles.css'
+import { teamContainer, teamLogo, teamInfo, teamName, teamRecord, teamScore } from './styles.css'
 import teamColors from './team_colors.css'
 
 export default function Team({ name, code, filetype, ws, ls, score, league, isAllstar }) {

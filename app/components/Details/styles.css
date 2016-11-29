@@ -1,8 +1,4 @@
-.detailsContainer {
-  padding:1em;
-  float:left;
-  width:100%;
-}
+.detailsContainer { padding:1em }
 
 .detailsContainer h4 {
   text-decoration:underline;

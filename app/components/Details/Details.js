@@ -10,9 +10,10 @@ const propTypes = {
   details: PropTypes.object
 }
 
-export default function Details({game, league, details}) {
-  if (league === 'mlb')
+export default function Details({game, league }) {
+  if (league === 'mlb') {
     return <MlbDetails game={game} league={league} />
+  }
   if (league === 'nba')
     return <NbaDetails game={game} league={league} details={details} />
   if (league === 'nhl')
@@ -33,125 +34,7 @@ function About({awayTeam, homeTeam, date, location, venue}) {
   )
 }
 
-function NbaDetails({game, league, details}) {
-  const linescore = {}
-  linescore['away'] = game.visitor.linescores
-  linescore['home'] = game.home.linescores
-  return (
-    <div className={detailsContainer}>
-      <About
-        awayTeam={game.visitor.nickname}
-        homeTeam={game.home.nickname}
-        date={game.date}
-        location={`${game.city}, ${game.state}`}
-        venue={game.arena}/>
-      <BoxScore
-        league={league}
-        awayAbbr={game.visitor.abbreviation}
-        homeAbbr={game.home.abbreviation}
-        linescore={linescore}
-        awayScore={game.visitor.score}
-        homeScore={game.home.score}/>
-      {Object.keys(details).length > 0 ? <Stats away={details.visitor} home={details.home} /> : null}
-    </div>
-  )
-}
-
-function Stats({away, home}) {
-  return (
-    <div className={statsContainer}>
-      <table className={teamLeaders}>
-        <thead>
-          <tr>
-            <th>{'team leaders'}</th>
-            <th>{away.abbreviation.toLowerCase()}</th>
-            <th>{home.abbreviation.toLowerCase()}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>{'points'}</th>
-            <td><strong>{away.Leaders.Points.StatValue}</strong><br /><small>{away.Leaders.Points.leader[0].LastName}</small></td>
-            <td><strong>{home.Leaders.Points.StatValue}</strong><br /><small>{home.Leaders.Points.leader[0].LastName}</small></td>
-          </tr>
-          <tr>
-            <th>{'rebounds'}</th>
-            <td><strong>{away.Leaders.Rebounds.StatValue}</strong><br /><small>{away.Leaders.Rebounds.leader[0].LastName}</small></td>
-            <td><strong>{home.Leaders.Rebounds.StatValue}</strong><br /><small>{home.Leaders.Rebounds.leader[0].LastName}</small></td>
-          </tr>
-          <tr>
-            <th>{'assists'}</th>
-            <td><strong>{away.Leaders.Assists.StatValue}</strong><br /><small>{away.Leaders.Assists.leader[0].LastName}</small></td>
-            <td><strong>{home.Leaders.Assists.StatValue}</strong><br /><small>{home.Leaders.Assists.leader[0].LastName}</small></td>
-          </tr>
-        </tbody>
-      </table>
-       <table className={teamStats}>
-         <thead>
-           <tr>
-            <th>{'team stats'}</th>
-            <th>{away.abbreviation.toLowerCase()}</th>
-            <th>{home.abbreviation.toLowerCase()}</th>
-           </tr>
-         </thead>
-         <tbody>
-           <tr>
-             <th>{'points'}</th>
-             <td>{away.stats.points}</td>
-             <td>{home.stats.points}</td>
-           </tr>
-           <tr>
-             <th>{'field goal %'}</th>
-             <td>{`${Math.ceil(away.stats.field_goals_percentage)}%`}</td>
-             <td>{`${Math.ceil(home.stats.field_goals_percentage)}%`}</td>
-           </tr>
-           <tr>
-             <th>{'3-point %'}</th>
-             <td>{`${Math.ceil(away.stats.three_pointers_percentage)}%`}</td>
-             <td>{`${Math.ceil(home.stats.three_pointers_percentage)}%`}</td>
-           </tr>
-           <tr>
-             <th>{'free throw %'}</th>
-             <td>{`${Math.ceil(away.stats.free_throws_percentage)}%`}</td>
-             <td>{`${Math.ceil(home.stats.free_throws_percentage)}%`}</td>
-           </tr>
-           <tr>
-             <th>{'rebounds'}</th>
-             <td>{+away.stats.rebounds_defensive + +away.stats.rebounds_offensive + +away.stats.team_rebounds}</td>
-             <td>{+home.stats.rebounds_defensive + +home.stats.rebounds_offensive + +home.stats.team_rebounds}</td>
-           </tr>
-           <tr>
-             <th>{'assists'}</th>
-             <td>{away.stats.assists}</td>
-             <td>{home.stats.assists}</td>
-           </tr>
-           <tr>
-             <th>{'blocks'}</th>
-             <td>{away.stats.blocks}</td>
-             <td>{home.stats.blocks}</td>
-           </tr>
-           <tr>
-             <th>{'fouls'}</th>
-             <td>{away.stats.fouls}</td>
-             <td>{home.stats.fouls}</td>
-           </tr>
-           <tr>
-             <th>{'steals'}</th>
-             <td>{away.stats.steals}</td>
-             <td>{home.stats.steals}</td>
-           </tr>
-           <tr>
-             <th>{'turnovers'}</th>
-             <td>{away.stats.turnovers}</td>
-             <td>{home.stats.turnovers}</td>
-           </tr>
-         </tbody>
-       </table>
-    </div>
-  )
-}
-
-function MlbDetails({game, league}) {
+function MlbDetails({game, league }) {
   const status = game.status.status
   return (
     <div className={detailsContainer}>
@@ -194,19 +77,6 @@ function MlbDetails({game, league}) {
                 pLoss={game.losing_pitcher}
                 pSave={game.save_pitcher}/>
               : null}
-    </div>
-  )
-}
-
-function NhlDetails({game}) {
-  return (
-    <div className={detailsContainer}>
-      <About
-        awayTeam={game.teams.away.team.teamName}
-        homeTeam={game.teams.home.team.teamName}
-        date={game.gameDate}
-        location={game.teams.home.team.venue.city}
-        venue={game.venue.name}/>
     </div>
   )
 }

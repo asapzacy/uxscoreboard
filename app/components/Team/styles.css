@@ -11,7 +11,7 @@
   flex-basis: 27.5%;
   margin-right: 4px;
 }
-.teamLogo[src$='.png'] { max-height:110px;max-width:110px }
+.teamLogo[src$='.png'] { max-height:110px;max-width:110px;min-width:inherit }
 
 .teamInfo {
   display: flex;

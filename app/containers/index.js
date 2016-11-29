@@ -12,5 +12,7 @@ export NbaContainer from './Nba/NbaContainer'
 export NflContainer from './Nfl/NflContainer'
 export NhlContainer from './Nhl/NhlContainer'
 
+
+export DetailsContainer from './Details/DetailsContainer'
 export GameContainer from './Game/GameContainer'
 export DateContainer from './Date/DateContainer'

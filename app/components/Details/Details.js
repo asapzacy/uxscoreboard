@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { BoxScore, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
 import { formatDateStr } from 'helpers/utils'
-import { detailsContainer, aboutContainer, statsContainer,
+import { detailsContainer, hideDetails, showDetails, aboutContainer, statsContainer,
   teamLeaders, teamStats } from './styles.css'
 
 const propTypes = {
@@ -10,9 +10,9 @@ const propTypes = {
   details: PropTypes.object
 }
 
-export default function Details({game, league }) {
+export default function Details({game, league, expanded }) {
   if (league === 'mlb') {
-    return <MlbDetails game={game} league={league} />
+    return <MlbDetails game={game} league={league} expanded={expanded} />
   }
   if (league === 'nba')
     return <NbaDetails game={game} league={league} details={details} />
@@ -34,7 +34,7 @@ function About({awayTeam, homeTeam, date, location, venue}) {
   )
 }
 
-function MlbDetails({game, league }) {
+function MlbDetails({game, league, expanded }) {
   const status = game.status.status
   return (
     <div className={detailsContainer}>

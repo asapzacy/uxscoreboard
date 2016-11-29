@@ -3,7 +3,7 @@ import { VelocityTransitionGroup } from 'velocity-react'
 import { GameState, Team, Details } from 'components'
 import { mlbTeamProps } from 'helpers/gameProps'
 import Plus from 'react-icons/lib/md/add'
-import { gameItem, expandIcon, expandedIcon } from './styles.css'
+import { gameItem, expandIcon, expandedIcon, details } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
@@ -32,8 +32,8 @@ function MlbGame({ game, league, showDetails, expanded }) {
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={spanClass} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup enter={{animation:'slideDown'}} leave={{animation:'slideUp'}} duration='220'>
-        { expanded && <Details game={game} league={league} /> }
+      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:220}} leave={{animation:'slideUp',duration:220}}>
+        { expanded ? <Details game={game} league={league} expanded={expanded} /> : null }
       </VelocityTransitionGroup>
     </li>
   )

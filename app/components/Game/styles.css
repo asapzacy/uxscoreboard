@@ -3,24 +3,8 @@
 .expandedIcon { composes:expandIcon }
 .expandIcon svg { transition:transform 0.22s }
 .expandedIcon svg { transform:rotate(45deg) }
-
-.exampleComponent {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  transition: 2s;
-  opacity: 0;
-  visibility: hidden;
-}
-.exampleComponent.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-
-
-
+.details:empty { opacity:0 }
+.details:not(:empty) { display:block;opacity:1;transition:opacity 0.42s 0.32s}
 
 
 @media (min-width:48em) {

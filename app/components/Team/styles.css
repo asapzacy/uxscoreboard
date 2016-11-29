@@ -1,133 +1,14 @@
-.teamContainer {
-  font-size: 2.2em;
-  padding: 2px 0;
-  display: flex;
-  align-items: center;
-}
+.teamContainer { display:flex;align-items:center;padding:2px 0 }
 
-.teamLogo {
-  max-height: 110px;
-  min-width: 130px;
-  flex-basis: 27.5%;
-  margin-right: 4px;
-}
-.teamLogo[src$='.png'] { max-height:110px;max-width:110px;min-width:inherit }
+.teamLogo { max-height:75px;flex:1 }
+.teamLogo[src$='.png'] { width:75px }
+.teamInfo { display:flex;align-items:center;justify-content:space-between;flex:2 }
 
-.teamInfo {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 60%;
-}
+.teamLeft { display:flex;flex-direction:column;flex:2 }
+.teamLeft span { padding:2px 8px;background:#fff;box-shadow:#070707 0 0 1px 1px }
+.teamName { margin-bottom:6px;font-size:120% }
+.teamName small { font-size:94% }
+.teamRecord { width:40%;font-size:70%;font-weight:700 }
 
-.teamInfo span {
-  background: #fff;
-  box-shadow: rgb(0,0,0) 0 1px 2px 1px;
-}
-
-.teamName {
-  margin-bottom: 10px;
-  padding: 2px 8px;
-  width: 64%;
-}
-
-.teamName small {
-  font-size: 70%;
-}
-
-.teamRecord {
-  font-size: 45%;
-  padding: 4px 8px;
-  width: 30%;
-  font-weight: bold;
-}
-
-.teamScore {
-  flex-basis: 12%;
-  font-size: 150%;
-  margin-left: -9%;
-  padding: 6px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.teamContainer {
-  font-size: 2.2em;
-  padding: 2px 0;
-  display: flex;
-  align-items: center;
-}
-
-.teamLogo {
-  max-height: 110px;
-  min-width: 130px;
-  flex-basis: 27.5%;
-  margin-right: 4px;
-  max-height: 110px;
-  max-width: 158px;
-  flex-basis: 27.5%;
-  margin-right: 4px;
-  padding: 2.6%;
-}
-
-.asgLogo {
-  max-height: 110px;
-  max-width: 110px;
-  flex-basis: 27.5%;
-  margin-right: 4px;
-}
-
-.teamInfo {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 60%;
-}
-
-.teamInfo span {
-  background: #fff;
-  box-shadow: rgb(0,0,0) 0 1px 2px 1px;
-}
-
-.teamName {
-  margin-bottom: 10px;
-  padding: 2px 8px;
-  width: 64%;
-}
-
-.teamName small {
-  font-size: 82.5%;
-}
-
-.teamRecord {
-  font-size: 45%;
-  padding: 4px 8px;
-  width: 30%;
-  font-weight: bold;
-}
-
-.teamScore {
-  flex-basis: 12%;
-  font-size: 150%;
-  margin-left: -9%;
-  padding: 6px;
-}*/
+.teamRight { flex:1 }
+.teamScore { display:block;font-size:160%;text-align:center }

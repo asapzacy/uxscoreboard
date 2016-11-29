@@ -1,7 +1,11 @@
 import webpack from 'webpack'
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
 
+const HOST = process.env.host || 'localhost'
+const PORT = process.env.port || 8080
+const PROXY = `http://${HOST}:${PORT}`
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 
 const isProduction = LAUNCH_COMMAND === 'build'
@@ -50,9 +54,19 @@ const developmentConfig = {
     contentBase: PATHS.build,
     hot: true,
     inline: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    host: HOST,
+    port: PORT
   },
-  plugins: [HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    HTMLWebpackPluginConfig,
+    new webpack.HotModuleReplacementPlugin(),
+    new BrowserSyncPlugin({
+      host: HOST,
+      port: PORT,
+      proxy: PROXY
+    }, { reload: false })
+  ]
 }
 
 const productionConfig = {

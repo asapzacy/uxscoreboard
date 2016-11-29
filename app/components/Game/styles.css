@@ -1,10 +1,12 @@
-.gameItem { background:#f5f5f5;color:#070707;border:2px solid #f5f5f5;margin:1em;flex:1 0 calc(50% - 2em) }
-.expandIcon {cursor:pointer;height:1.25em;display:flex;align-items:center;justify-content:center }
+.gameItem { background:#f5f5f5;color:#070707;font-size:1.1em;border:2px solid #f5f5f5;margin:1em;flex:0 1 calc(50% - 2em);min-width:350px;max-width:420px }
+
+.expandIcon {cursor:pointer;height:1.25em;display:flex;align-items:flex-end;justify-content:center }
 .expandedIcon { composes:expandIcon }
 .expandIcon svg { transition:transform 0.22s }
 .expandedIcon svg { transform:rotate(45deg) }
-.details:empty { opacity:0 }
-.details:not(:empty) { display:block;opacity:1;transition:opacity 0.42s 0.32s}
+
+.details:empty { color:rgba(7,7,7,0) }
+.details:not(:empty) { display:block;color:rgba(7,7,7,1);transition:color 0.66s 0.44s}
 
 
 @media (min-width:48em) {

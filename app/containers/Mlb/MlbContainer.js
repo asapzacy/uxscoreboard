@@ -25,8 +25,10 @@ class MlbContainer extends Component {
   }
   makeRequest(dt=this.state.today) {
     if (isValidDate(dt)) {
-      dt = isInSeason(dt, seasons.mlb.start, seasons.mlb.end)
       this.setState({ isValid: true })
+    }
+    if (dt === this.state.today) {
+      dt = seasons.mlb.end
     }
     getMlbScores(dt)
       .then((currentScores) => {

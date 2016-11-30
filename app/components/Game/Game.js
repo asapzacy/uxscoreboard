@@ -25,14 +25,14 @@ Game.propTypes = propTypes
 function MlbGame({ game, league, showDetails, expanded }) {
   const awayTeam = mlbTeamProps(game, 'away', league)
   const homeTeam = mlbTeamProps(game, 'home', league)
-  const spanClass = expanded ? expandedIcon : expandIcon
+  const time = 110
   return (
     <li className={gameItem}>
       <GameState game={game} league={league} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
-      <span className={spanClass} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:220}} leave={{animation:'slideUp',duration:220}}>
+      <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
+      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time}} leave={{animation:'slideUp',duration:time}}>
         { expanded ? <Details game={game} league={league} expanded={expanded} /> : null }
       </VelocityTransitionGroup>
     </li>

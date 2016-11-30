@@ -51,7 +51,7 @@ const base = {
       { test: /\.json$/, loader: 'json' }
     ]
   },
-  postcss: [ autoprefixer({ remove: false, browsers: ['last 2 versions'] }) ],
+  postcss: [ autoprefixer({ remove: false, browsers: ['> 5%','last 2 versions'] }) ],
   resolve: {
     root: path.resolve('./app')
   }

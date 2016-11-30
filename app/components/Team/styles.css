@@ -1,14 +1,14 @@
 .teamContainer { display:flex;align-items:center;padding:2px 0 }
 
-.teamLogo { max-height:75px;flex:1 }
+.teamLogo { height:75px;flex:1 }
 .teamLogo[src$='.png'] { width:75px }
 .teamInfo { display:flex;align-items:center;justify-content:space-between;flex:2 }
 
 .teamLeft { display:flex;flex-direction:column;flex:2 }
 .teamLeft span { padding:2px 8px;background:#fff;box-shadow:#070707 0 0 1px 1px }
-.teamName { margin-bottom:6px;font-size:120% }
+.teamName { margin-bottom:5%;font-size:120% }
 .teamName small { font-size:94% }
-.teamRecord { width:40%;font-size:70%;font-weight:700 }
+.teamRecord { display:table;font-size:70%;font-weight:700 }
 
 .teamRight { flex:1 }
 .teamScore { display:block;font-size:160%;text-align:center }

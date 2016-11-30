@@ -2,6 +2,7 @@ import webpack from 'webpack'
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
+import autoprefixer from 'autoprefixer'
 
 const HOST = process.env.host || 'localhost'
 const PORT = process.env.port || 8080
@@ -23,6 +24,12 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body',
 })
 
+const browserSyncPlugin = new BrowserSyncPlugin({
+  host: HOST,
+  port: PORT,
+  proxy: PROXY
+}, { reload: false })
+
 const productionPlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: JSON.stringify('production')
@@ -40,10 +47,11 @@ const base = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-      { test: /\.css$/, loader: 'style!css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]' },
+      { test: /\.css$/, loader: 'style!css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]&modules&importLoaders=1!postcss' },
       { test: /\.json$/, loader: 'json' }
     ]
   },
+  postcss: [ autoprefixer({ remove: false, browsers: ['last 2 versions'] }) ],
   resolve: {
     root: path.resolve('./app')
   }
@@ -58,20 +66,12 @@ const developmentConfig = {
     host: HOST,
     port: PORT
   },
-  plugins: [
-    HTMLWebpackPluginConfig,
-    new webpack.HotModuleReplacementPlugin(),
-    new BrowserSyncPlugin({
-      host: HOST,
-      port: PORT,
-      proxy: PROXY
-    }, { reload: false })
-  ]
+  plugins: [ HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin(), browserSyncPlugin ]
 }
 
 const productionConfig = {
   devtool: 'cheap-module-source-map',
-  plugins: [HTMLWebpackPluginConfig, productionPlugin]
+  plugins: [ HTMLWebpackPluginConfig, productionPlugin ]
 }
 
 export default Object.assign({}, base, isProduction === true ? productionConfig : developmentConfig)

@@ -1,4 +1,5 @@
 
+// mlb teams - home and away team props
 export const mlbTeamProps = (game, side, league) => {
   const isAllstar = game.game_type === 'A'
   return {
@@ -12,6 +13,24 @@ export const mlbTeamProps = (game, side, league) => {
     isAllstar
   }
 }
+
+// nhl teams - home and away team props
+export const nhlTeamProps = (game, side, league) => {
+  return {
+    name: game.teams[`${side}`].team.teamName,
+    code: game.teams[`${side}`].team.abbreviation.toLowerCase(),
+    filetype: 'svg',
+    ws: String(game.teams[`${side}`].leagueRecord.wins),
+    ws: String(game.teams[`${side}`].leagueRecord.losses),
+    score: String(game.teams[`${side}`].score),
+    league
+  }
+}
+
+
+
+
+
 
 export const mlbMatchupProps = (game, date) => {
   return {

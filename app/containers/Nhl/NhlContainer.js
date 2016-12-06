@@ -1,44 +1,49 @@
 import React, { Component } from 'react'
 import { Nhl } from 'components'
-import { NotFoundContainer } from 'containers'
+import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNhlScores } from 'helpers/api'
+import { seasons } from 'helpers/seasons'
 
 class NhlContainer extends Component {
   constructor() {
     super()
     this.state = {
       isLoading: true,
+      isValid: false,
       scores: {},
-      date: ''
+      date: '',
+      today: ''
     }
   }
   componentDidMount() {
-    this.makeRequest(this.props.routeParams.date)
+    this.setState({ today: getTodaysDate() }, () => {
+      this.makeRequest(this.props.routeParams.date)
+    })
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(dt) {
+  makeRequest(dt=this.state.today) {
+    if (isValidDate(dt)) {
+      this.setState({ isValid: true })
+    }
     getNhlScores(dt)
       .then((currentScores) => {
         this.setState({
           isLoading: false,
-          scores: currentScores,
-          date: this.props.routeParams.date || '20161012'
+          scores: currentScores.dates[0],
+          date: dt
+        })
+      })
+      .catch((error) =>  {
+        this.setState({
+          isLoading: false,
+          date: dt
         })
       })
   }
   render() {
-    return (
-      <div>
-        {this.state.scores
-          ? <Nhl
-              isLoading={this.state.isLoading}
-              scores={this.state.scores}
-              date={this.state.date}/>
-          : null}
-      </div>
-    )
+    return <Nhl {...this.state} />
   }
 }
 

@@ -1,12 +1,12 @@
 .gameItem { background:#f5f5f5;color:#070707;font-size:1.1em;border:2px solid #f5f5f5;margin:1em;flex:1 1 calc(320px - 2em);max-width:420px }
 
-.expandIcon {cursor:pointer;height:1.25em;display:flex;align-items:flex-end;justify-content:center }
+.expandIcon {cursor:pointer;font-size:90%;display:flex;justify-content:center }
 .expandedIcon { composes:expandIcon }
 .expandIcon svg { transition:transform 0.12s }
 .expandedIcon svg { transform:rotate(45deg) }
 
 .details:empty { color:rgba(7,7,7,0) }
-.details:not(:empty) { color:rgba(7,7,7,1);transition:color 1.2s 0.6s}
+.details:not(:empty) { display:block;padding:0.4em;color:rgba(7,7,7,1);transition:color 0.66s 0.22s}
 
 
 /*@media (min-width:45em) {

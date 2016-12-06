@@ -17,8 +17,8 @@ export default function Scoreboard({ scores, date, today, league }) {
         { scores.game === undefined
           ? <li className={gamesHeader}>{'[ no games today ]'}</li>
           : scores.game[0] === undefined
-            ? <GameContainer game={scores.game} league={league} key={scores.game.game_pk} />
-            : scores.game.filter(item => item.game_type !== 'S').map(item => <GameContainer game={item} league={league} key={item.game_pk} />)
+            ? <GameContainer game={scores.game} date={date} league={league} key={scores.game.game_pk} />
+            : scores.game.filter(item => item.game_type !== 'S').map(item => <GameContainer game={item} date={date} league={league} key={item.game_pk} />)
         }
       </ul>
     </div>

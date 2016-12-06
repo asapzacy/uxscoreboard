@@ -1,0 +1,31 @@
+
+.matchupContainer { display:flex;flex-direction:column }
+.who { font-weight:700 }
+.when {  }
+.where { font-size:80% }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.matchupContainer span:first-child {
+  display:block;
+  margin-bottom:4px;
+  font-size:112%;
+
+}
+.matchupContainer small {
+  font-size:96%;
+}*/

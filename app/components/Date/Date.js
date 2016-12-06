@@ -37,9 +37,7 @@ function Day({ date, today, league, diff, isArrow }) {
     <Link to={`/${league}/scores/${url}`} title={title}>
       { !isArrow
         ? <span>{formattedDate}</span>
-        : diff < 0
-          ? <FaAngleLeft />
-          : <FaAngleRight />
+        : diff < 0 ? <FaAngleLeft /> : <FaAngleRight />
       }
     </Link>
   )

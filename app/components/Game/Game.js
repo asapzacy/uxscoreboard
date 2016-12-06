@@ -7,6 +7,7 @@ import { gameItem, expandIcon, expandedIcon, details } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
+  date: PropTypes.string.isRequired,
   league: PropTypes.string.isRequired,
   expanded: PropTypes.bool.isRequired,
   showDetails: PropTypes.func.isRequired
@@ -22,18 +23,19 @@ Game.propTypes = propTypes
 
 
 
-function MlbGame({ game, league, showDetails, expanded }) {
+function MlbGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = mlbTeamProps(game, 'away', league)
   const homeTeam = mlbTeamProps(game, 'home', league)
   const time = 110
+  const el = 'flex'
   return (
     <li className={gameItem}>
       <GameState game={game} league={league} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time}} leave={{animation:'slideUp',duration:time}}>
-        { expanded ? <Details game={game} league={league} expanded={expanded} /> : null }
+      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+        { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
       </VelocityTransitionGroup>
     </li>
   )

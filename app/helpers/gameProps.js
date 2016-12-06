@@ -12,3 +12,13 @@ export const mlbTeamProps = (game, side, league) => {
     isAllstar
   }
 }
+
+export const mlbMatchupProps = (game, date) => {
+  return {
+    awayTeam: game.away_team_name,
+    homeTeam: game.home_team_name,
+    location: game.location,
+    venue: game.venue,
+    date
+  }
+}

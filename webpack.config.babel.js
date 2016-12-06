@@ -17,7 +17,6 @@ const PATHS = {
   build: path.join(__dirname, 'dist')
 }
 
-
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
   filename: 'index.html',
@@ -27,7 +26,8 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 const browserSyncPlugin = new BrowserSyncPlugin({
   host: HOST,
   port: PORT,
-  proxy: PROXY
+  proxy: PROXY,
+  open: false
 }, { reload: false })
 
 const productionPlugin = new webpack.DefinePlugin({
@@ -51,7 +51,7 @@ const base = {
       { test: /\.json$/, loader: 'json' }
     ]
   },
-  postcss: [ autoprefixer({ remove: false, browsers: ['> 5%','last 2 versions'] }) ],
+  postcss: [ autoprefixer({ remove: false, browsers: ['last 2 versions'] }) ],
   resolve: {
     root: path.resolve('./app')
   }

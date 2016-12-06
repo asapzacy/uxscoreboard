@@ -14,13 +14,19 @@ export Nba from './Nba/Nba'
 export Nfl from './Nfl/Nfl'
 export Nhl from './Nhl/Nhl'
 
+// scoreboard components
 export Scoreboard from './Scoreboard/Scoreboard'
-
 export Date from './Date/Date'
+
+// game components
 export Game from './Game/Game'
 export GameState from './GameState/GameState'
 export Team from './Team/Team'
 export Details from './Details/Details'
+export Matchup from './Matchup/Matchup'
+
+
+
 export BoxScore from './BoxScore/BoxScore'
 export NbaBoxScore from './Nba/NbaBoxScore/NbaBoxScore'
 export PreGameInfo from './PreGameInfo/PreGameInfo'

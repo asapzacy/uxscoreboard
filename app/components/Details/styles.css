@@ -1,25 +1,10 @@
-.detailsContainer { }
+.detailsContainer { flex-direction:column;text-align:center }
 
 .detailsContainer h4 {
   text-decoration:underline;
   margin:0 0 5px;
 }
 
-.aboutContainer {
-  margin:1em;
-  text-align:center;
-  height:63px;
-}
-
-.aboutContainer span:first-child {
-  display:block;
-  margin-bottom:4px;
-  font-size:112%;
-
-}
-.aboutContainer small {
-  font-size:96%;
-}
 
 
 

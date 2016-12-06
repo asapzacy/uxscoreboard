@@ -1,49 +1,30 @@
 import React, { PropTypes } from 'react'
-import { BoxScore, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
-import { formatDateStr } from 'helpers/utils'
-import { detailsContainer, hideDetails, showDetails, aboutContainer, statsContainer,
-  teamLeaders, teamStats } from './styles.css'
+import { BoxScore, Matchup, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
+import { mlbMatchupProps } from 'helpers/gameProps'
+import { detailsContainer, statsContainer, teamLeaders, teamStats } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
+  date: PropTypes.string.isRequired,
   league: PropTypes.string.isRequired,
   details: PropTypes.object
 }
 
-export default function Details({game, league, expanded }) {
-  if (league === 'mlb') {
-    return <MlbDetails game={game} league={league} expanded={expanded} />
-  }
-  if (league === 'nba')
-    return <NbaDetails game={game} league={league} details={details} />
-  if (league === 'nhl')
-    return <NhlDetails game={game} league={league} />
+export default function Details({ ...props }) {
+  if (props.league === 'mlb')
+    return <MlbDetails {...props} />
   else
     return <h1>{'i hope this doesn\'t run'}</h1>
 }
 
 Details.propTypes = propTypes
 
-function About({awayTeam, homeTeam, date, location, venue}) {
-  date = formatDateStr(date)
-  return (
-    <div className={aboutContainer}>
-      <span><strong>{`${awayTeam} v. ${homeTeam}`}</strong></span>
-      <span><small>{`${date} - ${location} - ${venue}`}</small></span>
-    </div>
-  )
-}
-
-function MlbDetails({game, league, expanded }) {
+function MlbDetails({ game, date, league, expanded }) {
   const status = game.status.status
+  const matchupProps = mlbMatchupProps(game, date)
   return (
     <div className={detailsContainer}>
-      <About
-        awayTeam={game.away_team_name}
-        homeTeam={game.home_team_name}
-        date={game.original_date}
-        location={game.location}
-        venue={game.venue}/>
+      <Matchup {...matchupProps} />
       <BoxScore
         league={league}
         awayAbbr={game.away_name_abbrev}

@@ -4,14 +4,34 @@ import { formatDateUrl } from './utils.js'
 const cors = 'https://crossorigin.me/'
 
 // axios request - mlb scores
-export function getMlbScores(dt) {
+export const getMlbScores = (dt) => {
   const yyyy = dt.slice(0,4)
   const mm = dt.slice(4,6)
   const dd = dt.slice(6,dt.length)
-  const url = `${cors}http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then(currentScores => currentScores.data)
-  }
+    .catch(currentScores => currentScores.status)
+}
+
+// axios request - nhl scores
+export const getNhlScores = (dt) => {
+  const yyyy = dt.slice(0,4)
+  const mm = dt.slice(4,6)
+  const dd = dt.slice(6,dt.length)
+  const url = `https://statsapi.web.nhl.com/api/v1/schedule?startDate=${yyyy}-${mm}-${dd}&endDate=${yyyy}-${mm}-${dd}&expand=schedule.teams,schedule.linescore,schedule.scoringplays,schedule.game.seriesSummary`
+  return axios.get(url)
+    .then(currentScores => currentScores.data)
+    .catch(currentScores => currentScores.status)
+}
+
+
+
+
+
+
+
+
 
 var nba_config = {
   headers: { 'Access-Control-Allow-Origin': '*', 'Accept': 'application/json, text/plain, */*'}
@@ -46,16 +66,4 @@ export function getNflScores() {
   return axios.get(url, epl_config)
     .then((currentScores) => console.log(currentScores.headers))
     .catch((currentScores) => console.log(currentScores.headers))
-}
-
-export function getNhlScores(dt) {
-  if (dt === undefined)
-    dt = '20161012'
-  const yyyy = dt.slice(0, 4)
-  const mm = dt.slice(4, 6)
-  const dd = dt.slice(6, 8)
-  const url = `https://statsapi.web.nhl.com/api/v1/schedule?startDate=${yyyy}-${mm}-${dd}&endDate=${yyyy}-${mm}-${dd}&expand=schedule.teams,schedule.linescore,schedule.scoringplays,schedule.game.seriesSummary`
-  return axios.get(url)
-    .then((currentScores) => currentScores.data)
-    .catch((currentScores) => currentScores.status)
 }

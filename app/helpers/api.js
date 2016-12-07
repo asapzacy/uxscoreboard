@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { formatDateUrl } from './utils.js'
 
 const cors = 'https://crossorigin.me/'
 
@@ -8,7 +7,7 @@ export const getMlbScores = (dt) => {
   const yyyy = dt.slice(0,4)
   const mm = dt.slice(4,6)
   const dd = dt.slice(6,dt.length)
-  const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const url = `//gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)

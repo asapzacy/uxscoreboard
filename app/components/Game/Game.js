@@ -14,12 +14,8 @@ const propTypes = {
 }
 
 export default function Game({ ...props }) {
-  if (props.league === 'mlb') {
-    return <MlbGame {...props} />
-  }
-  if (props.league === 'nhl') {
-    return <NhlGame {...props} />
-  }
+  if (props.league === 'mlb') return <MlbGame {...props} />
+  if (props.league === 'nhl') return <NhlGame {...props} />
 }
 
 Game.propTypes = propTypes

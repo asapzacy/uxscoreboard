@@ -27,10 +27,7 @@ export const nhlTeamProps = (game, side, league) => {
 }
 
 
-
-
-
-
+// mlb matchups - teams + date + venue
 export const mlbMatchupProps = (game, date) => {
   return {
     awayTeam: game.away_team_name,
@@ -38,5 +35,16 @@ export const mlbMatchupProps = (game, date) => {
     location: game.location,
     venue: game.venue,
     date
+  }
+}
+
+// nhl matchups - teams + date + venue
+export const nhlMatchupProps = (game, date) => {
+  return {
+    awayTeam: game.teams.away.team.teamName,
+    homeTeam: game.teams.home.team.teamName,
+    date: game.gameDate,
+    location: game.teams.home.team.venue.city,
+    venue: game.venue.name
   }
 }

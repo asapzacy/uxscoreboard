@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { BoxScore, Matchup, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
-import { mlbMatchupProps } from 'helpers/gameProps'
+import { mlbMatchupProps, nhlMatchupProps } from 'helpers/gameProps'
 import { detailsContainer, statsContainer, teamLeaders, teamStats } from './styles.css'
 
 const propTypes = {
@@ -11,17 +11,30 @@ const propTypes = {
 }
 
 export default function Details({ ...props }) {
-  if (props.league === 'mlb')
-    return <MlbDetails {...props} />
-  else
-    return <h1>{'i hope this doesn\'t run'}</h1>
+  if (props.league === 'mlb') return <MlbDetails {...props} />
+  if (props.league === 'nhl') return <NhlDetails {...props} />
+  else return <h1>{'i hope this doesn\'t run'}</h1>
 }
 
 Details.propTypes = propTypes
 
+function NhlDetails({ game, date, league }) {
+  const matchupProps = nhlMatchupProps(game,date)
+  return (
+    <div className={detailsContainer}>
+      <Matchup {...matchupProps} />
+    </div>
+  )
+}
+
+
+
+
+
+
 function MlbDetails({ game, date, league, expanded }) {
   const status = game.status.status
-  const matchupProps = mlbMatchupProps(game, date)
+  const matchupProps = mlbMatchupProps(game,date)
   return (
     <div className={detailsContainer}>
       <Matchup {...matchupProps} />

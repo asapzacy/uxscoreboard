@@ -1,8 +1,9 @@
 
 .matchupContainer { display:flex;flex-direction:column }
 .who { font-weight:700 }
-.when {  }
-.where { font-size:80% }
+.when { font-size:80% }
+.when sup { font-size:66% }
+.where { font-size:90% }
 
 
 

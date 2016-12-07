@@ -1,56 +1,6 @@
-.boxScoreContainer {
-  width:96%;
-  margin:1em auto;
-  font-size:0.9em;
-  text-align:center;
-}
-
-.boxScoreContainer table {
-  width:100%;
-  margin:0 auto;
-  table-layout: fixed;
-  border-collapse:collapse;
-}
-
-.boxScoreContainer thead {
-  border-bottom:2px solid #e0e0e0;
-}
-
-.boxScoreContainer tr {
-  height:2.4em;
-}
-.boxScoreContainer th,
-.boxScoreContainer td {
-  padding:2px 4px;
-}
-
-.boxScoreContainer thead th:first-child,
-.boxScoreContainer tbody th:first-child {
-  width:12.5%;
-  text-align:left;
-  border-right:2px solid #e0e0e0;
-}
-
-.boxScoreContainer thead th:last-child,
-.boxScoreContainer tbody td:last-child {
-  border-left:2px solid #e0e0e0;
-  font-weight: bold;
-}
-
-/* mlb games */
-.mlb tbody td:nth-last-child(-n+4),
-.mlb thead th:nth-last-child(-n+4) {
-  font-weight:bold;
-}
-
-.mlb thead th:nth-last-child(4),
-.mlb tbody td:nth-last-child(4) {
-  border-left:2px solid #e0e0e0;
-}
-
-.mlb tbody td:last-child {
-  font-weight:normal;
-}
-
-
-/* nba games */
+.boxScoreContainer { margin-bottom:1.4em;font-size:80% }
+.tableContainer { width:100%;table-layout:fixed;border-collapse:collapse }
+.tableContainer tr { height:2.6em }
+.tableHead { border-bottom:2px solid #bdbdbd }
+.tableHead th:first-child,.tableBody th:first-child { border-right:2px solid #bdbdbd }
+.tableHead th:last-child,.tableBody td:last-child { border-left:2px solid #bdbdbd;font-weight:700 }

@@ -1,56 +1,28 @@
 import React, { PropTypes } from 'react'
-import { NbaBoxScore } from 'components'
-import { boxScoreContainer, mlb } from './styles.css'
+import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScore'
+import { boxScoreContainer, tableContainer, tableHead, tableBody } from './styles.css'
 
-const propTypes = {
-  league: PropTypes.string.isRequired,
-  awayAbbr: PropTypes.string.isRequired,
-  homeAbbr: PropTypes.string.isRequired,
-  linescore: PropTypes.object.isRequired,
-  review: PropTypes.object,
-  status: PropTypes.string,
-  awayScore: PropTypes.string,
-  homeScore: PropTypes.string
-}
-
-export default function BoxScore({league, awayAbbr, homeAbbr, linescore, review,
-  status, awayScore, homeScore}) {
-  if (league === 'mlb') {
-    return (
-      <MlbBoxScore
-        awayAbbr={awayAbbr}
-        homeAbbr={homeAbbr}
-        linescore={linescore}
-        review={review}
-        status={status}/>
-    )
-  }
-  if (league === 'nba') {
-    return (
-      <NbaBoxScore
-        awayAbbr={awayAbbr}
-        homeAbbr={homeAbbr}
-        linescore={linescore}
-        awayScore={awayScore}
-        homeScore={homeScore}/>
-    )
-  }
-}
-
-BoxScore.propTypes = propTypes
-
-const propTypes2 = {
-  awayAbbr: PropTypes.string.isRequired,
-  homeAbbr: PropTypes.string.isRequired,
-  linescore: PropTypes.object.isRequired,
-  review: PropTypes.object,
-  status: PropTypes.string
+export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore, linescore, prds, ots }) {
+  console.log(linescore)
+  return (
+    <div className={boxScoreContainer}>
+      <table className={tableContainer}>
+        <thead className={tableHead}>
+          <tr dangerouslySetInnerHTML={formatTableHeaderRow(prds,ots)}></tr>
+        </thead>
+        <tbody className={tableBody}>
+          <tr dangerouslySetInnerHTML={formatTableBodyRow(awayAbbr,awayScore,'away',linescore)}></tr>
+          <tr dangerouslySetInnerHTML={formatTableBodyRow(homeAbbr,homeScore,'home',linescore)}></tr>
+        </tbody>
+      </table>
+    </div>
+  )
 }
 
 function MlbBoxScore({awayAbbr, homeAbbr, linescore, review, status}) {
   return (
     <div className={boxScoreContainer}>
-      <table className={mlb}>
+      <table>
         <thead>
           <tr>
             <th></th>
@@ -107,5 +79,3 @@ function MlbBoxScore({awayAbbr, homeAbbr, linescore, review, status}) {
     </div>
   )
 }
-
-MlbBoxScore.propTypes = propTypes2

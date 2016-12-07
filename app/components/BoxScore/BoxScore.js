@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react'
-import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScore'
+import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScoreFns'
 import { boxScoreContainer, tableContainer, tableHead, tableBody } from './styles.css'
 
-export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore, linescore, prds, ots }) {
+export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore, linescore,
+  prds, totalPrds, ots }) {
   console.log(linescore)
   return (
     <div className={boxScoreContainer}>
@@ -11,8 +12,8 @@ export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore, lin
           <tr dangerouslySetInnerHTML={formatTableHeaderRow(prds,ots)}></tr>
         </thead>
         <tbody className={tableBody}>
-          <tr dangerouslySetInnerHTML={formatTableBodyRow(awayAbbr,awayScore,'away',linescore)}></tr>
-          <tr dangerouslySetInnerHTML={formatTableBodyRow(homeAbbr,homeScore,'home',linescore)}></tr>
+          <tr dangerouslySetInnerHTML={formatTableBodyRow(awayAbbr,awayScore,'away',linescore,prds,totalPrds)}></tr>
+          <tr dangerouslySetInnerHTML={formatTableBodyRow(homeAbbr,homeScore,'home',linescore,prds,totalPrds)}></tr>
         </tbody>
       </table>
     </div>

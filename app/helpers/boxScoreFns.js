@@ -14,11 +14,15 @@ export const formatTableHeaderRow = (prds, ots) => {
   return { __html: result }
 }
 
-export const formatTableBodyRow = (team, score, side, linescore) => {
+export const formatTableBodyRow = (team, score, side, linescore, prds, totalPrds) => {
   let result = `<th>${team}</th>`
-  const size = linescore.length
-  for (let i = 0; i < size; i++) {
-    result += `<td>${linescore[i][`${side}`].goals}</td>`
+  const higher = Math.max(prds,totalPrds)
+  for (let i = 0; i < higher; i++) {
+    if (linescore[i]) {
+      result += `<td>${linescore[i][`${side}`].goals}</td>`
+    } else {
+      result += `<td></td>`
+    }
   }
   result += `<td>${score}</td>`
   return { __html: result }

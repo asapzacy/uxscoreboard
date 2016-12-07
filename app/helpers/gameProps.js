@@ -16,12 +16,14 @@ export const mlbTeamProps = (game, side, league) => {
 
 // nhl teams - home and away team props
 export const nhlTeamProps = (game, side, league) => {
+  console.log(game)
   return {
     name: game.teams[`${side}`].team.teamName,
     code: game.teams[`${side}`].team.abbreviation.toLowerCase(),
     filetype: 'svg',
     ws: String(game.teams[`${side}`].leagueRecord.wins),
-    ws: String(game.teams[`${side}`].leagueRecord.losses),
+    ls: String(game.teams[`${side}`].leagueRecord.losses),
+    ots: String(game.teams[`${side}`].leagueRecord.ot),
     score: String(game.teams[`${side}`].score),
     league
   }

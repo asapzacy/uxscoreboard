@@ -2,12 +2,24 @@ import axios from 'axios'
 
 const cors = 'https://crossorigin.me/'
 
+
+const params = {
+  proxy: {
+   host: '127.0.0.1',
+   port: 9090
+ },
+ headers: {
+   'Access-Control-Allow-Origin': '*',
+   'http-equiv': 'Content-Security-Policy',
+   'content': 'upgrade-insecure-requests'
+ }
+}
 // axios request - mlb scores
 export const getMlbScores = (dt) => {
   const yyyy = dt.slice(0,4)
   const mm = dt.slice(4,6)
   const dd = dt.slice(6,dt.length)
-  const url = `//gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)
@@ -20,7 +32,7 @@ export const getNhlScores = (dt) => {
   const dd = dt.slice(6,dt.length)
   const url = `https://statsapi.web.nhl.com/api/v1/schedule?startDate=${yyyy}-${mm}-${dd}&endDate=${yyyy}-${mm}-${dd}&expand=schedule.teams,schedule.linescore,schedule.scoringplays,schedule.game.seriesSummary`
   return axios.get(url)
-    .then(currentScores => currentScores.data)
+    .then(currentScores => currentScores.data, params)
     .catch(currentScores => currentScores.status)
 }
 

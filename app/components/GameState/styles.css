@@ -1,6 +1,5 @@
-.gameStateContainer { display:flex;font-size:82%;padding:4px 12px }
-.gameStateContainer span { width:100%;text-align:right }
-
+.gameStateContainer { display:flex;font-size:78%;padding:4px 12px;justify-content:flex-end }
+.gameStateContainer span { width:100% }
 
 
 

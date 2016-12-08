@@ -25,10 +25,11 @@ export const mlbMatchupProps = (game, date) => {
 
 // nhl gamestate details - time + description
 export const nhlGameStateProps = (game) => {
+  const formattedTime = `${formatTimezone(game.gameDate)} ET`
   return {
     state: game.status.codedGameState < 3 ? 0 : game.status.codedGameState < 6 ? 1 : 2,
     status: game.status.codedGameState === '2' ? game.status.detailedState : game.status.abstractGameState,
-    time: game.gameDate,
+    time: formattedTime,
     prds: 3,
     currentPrd: game.linescore.currentPeriod,
     currentTime: game.linescore.currentPeriodTimeRemaining,

@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react'
 import { formatTimezone, inningSuffix } from 'helpers/utils'
-import { gameStateContainer } from './styles.css'
+import { gameStateContainer, gameState } from './styles.css'
 
 
 export default function GameState({ state, status, time, prds, currentPrd, currentTime, totalPrds, ordinal, isPlayoffs }) {
   console.log(currentPrd)
   return (
     <div className={gameStateContainer}>
-      { state === 0 && <span style={{textAlign:'left'}}>{`${formatTimezone(time)} ET`}</span> }
-      { state === 1 && <span>{`${currentTime} • ${currentPrd}`}<sup>{inningSuffix(String(currentPrd))}</sup></span> }
+      { state === 0 && <span>{time}</span> }
+      { state === 1 && <span style={{textAlign:'right'}}>{`${currentTime} • ${currentPrd}`}<sup>{inningSuffix(String(currentPrd))}</sup></span> }
       { state === 2 && <span>{currentPrd > prds ? `${status}/${ordinal}` : status}</span> }
     </div>
   )

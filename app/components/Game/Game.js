@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { GameState, Team, Details } from 'components'
-import { mlbTeamProps, nhlTeamProps } from 'helpers/gameProps'
+import { mlbTeamProps, nhlTeamProps, nhlGameStateProps } from 'helpers/gameProps'
 import Plus from 'react-icons/lib/md/add'
 import { gameItem, expandIcon, expandedIcon, details } from './styles.css'
 
@@ -27,9 +27,10 @@ const el = 'flex'
 function NhlGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nhlTeamProps(game, 'away', league)
   const homeTeam = nhlTeamProps(game, 'home', league)
+  const gameStateProps = nhlGameStateProps(game)
   return (
     <li className={gameItem}>
-      {/* <GameState game={game} league={league} /> */}
+      <GameState {...gameStateProps} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>

@@ -3,13 +3,12 @@ import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScoreFns'
 import { boxScoreContainer, tableContainer, tableHead, tableBody } from './styles.css'
 
 export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore, linescore,
-  prds, totalPrds, ots }) {
-  console.log(linescore)
+  prds, totalPrds }) {
   return (
     <div className={boxScoreContainer}>
       <table className={tableContainer}>
         <thead className={tableHead}>
-          <tr dangerouslySetInnerHTML={formatTableHeaderRow(prds,ots)}></tr>
+          <tr dangerouslySetInnerHTML={formatTableHeaderRow(prds,totalPrds)}></tr>
         </thead>
         <tbody className={tableBody}>
           <tr dangerouslySetInnerHTML={formatTableBodyRow(awayAbbr,awayScore,'away',linescore,prds,totalPrds)}></tr>

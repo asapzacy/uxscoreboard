@@ -41,7 +41,7 @@ export function formatTime(time) {
 }
 
 export function formatTimezone(time) {
-  return moment(time).timezone('America/New_York').format('h:mm A')
+  return moment(time).tz('America/New_York').format('h:mm A')
 }
 
 export function inningSuffix(inning) {

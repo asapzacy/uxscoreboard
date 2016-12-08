@@ -1,50 +1,19 @@
 import React, { PropTypes } from 'react'
-import { formatTz, inningSuffix } from 'helpers/utils'
-import { gameInfo } from './styles.css'
+import { formatTimezone, inningSuffix } from 'helpers/utils'
+import { gameStateContainer } from './styles.css'
 
-const propTypes = {
-  game: PropTypes.object.isRequired,
-  league: PropTypes.string.isRequired
+
+export default function GameState({ state, status, time, prds, currentPrd, currentTime, totalPrds, ordinal, isPlayoffs }) {
+  console.log(currentPrd)
+  return (
+    <div className={gameStateContainer}>
+      { state === 0 && <span style={{textAlign:'left'}}>{`${formatTimezone(time)} ET`}</span> }
+      { state === 1 && <span>{`${currentTime} • ${currentPrd}`}<sup>{inningSuffix(String(currentPrd))}</sup></span> }
+      { state === 2 && <span>{currentPrd > prds ? `${status}/${ordinal}` : status}</span> }
+    </div>
+  )
 }
 
-export default function GameState({game, league}) {
-  if (league === 'mlb') {
-    return (
-      <MlbState
-        status={game.status.status}
-        time={`${game.time} ${game.ampm} ${game.time_zone}`}
-        inning={game.status.inning}
-        inningState={game.status.inning_state}
-        outs={game.status.o}
-        reason={game.status.reason}
-        description={game.description}
-        doubleHdr={game.double_header_sw}
-        gameNbr={game.game_nbr}/>
-    )
-  }
-  if (league === 'nba') {
-    return (
-      <NbaState
-        status={game.period_time.period_status}
-        totalQtrs={game.period_time.period_value}
-        playoffs={game.playoffs}/>
-    )
-  }
-  if (league === 'nhl') {
-    return (
-      <NhlState
-        status={game.status.abstractGameState}
-        time={game.gameDate}
-        prd={game.linescore.currentPeriod}
-        totalPrds={game.linescore.currentPeriod}
-        ordinal={game.linescore.currentPeriodOrdinal}
-        playoffs={game.gameType === 'P' ? game.seriesSummary : null}/>
-    )
-  }
-  return <span>{'hi !'}</span>
-}
-
-GameState.propTypes = propTypes
 
 function MlbState({status, time, inning, inningState, outs, reason,
   description, doubleHdr, gameNbr}) {

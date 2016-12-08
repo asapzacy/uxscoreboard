@@ -18,7 +18,7 @@ export default function Details({ ...props }) {
 
 Details.propTypes = propTypes
 
-function NhlDetails({ game, date, league }) {
+function NhlDetails({ game, date }) {
   const matchupProps = nhlMatchupProps(game,date)
   const boxScoreProps = nhlBoxScoreProps(game)
   return (

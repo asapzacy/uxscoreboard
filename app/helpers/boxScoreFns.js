@@ -1,13 +1,13 @@
 
 // format table heading row
-export const formatTableHeaderRow = (prds, ots) => {
+export const formatTableHeaderRow = (prds, totalPrds) => {
   let result = '<th></th>'
   for (let i = 1; i <= prds; i++) {
     result += `<th>${i}</th>`
   }
-  if (ots > 0) {
-    for (let i = 1; i <= ots; i++) {
-      result += `<th>${i > 1 ? `${i}ot` : 'ot'}</th>`
+  if (totalPrds > prds) {
+    for (let i = prds + 1; i <= totalPrds; i++) {
+      result += `<th>${i > prds + 1 ? `${i}ot` : 'ot'}</th>`
     }
   }
   result += '<th>t</th>'

@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const cors = 'https://crossorigin.me/'
+const crossorigin = 'https://crossorigin.me'
+const corsAnywhere = 'https://cors-anywhere.herokuapp.com'
 
 
 const params = {
@@ -14,12 +15,24 @@ const params = {
    'content': 'upgrade-insecure-requests'
  }
 }
+
+export const googleSheets = () => {
+  const url = `https://script.google.com/macros/s/AKfycbzcxlEA-pf_4o2psuOth2Kq54_gsqBjNJrnfEK_XYa89-QeBBiB/exec?pullStart=04/01/2016&pullEnd=04/02/2016`
+  return axios.get(url)
+    .then(currentScores => currentScores.data)
+    .catch(currentScores => currentScores.status)
+}
+
+const config = {
+  headers: { origin: 'https://uxscoreboard.com' }
+}
+
 // axios request - mlb scores
 export const getMlbScores = (dt) => {
   const yyyy = dt.slice(0,4)
   const mm = dt.slice(4,6)
   const dd = dt.slice(6,dt.length)
-  const url = `http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const url = `${corsAnywhere}/http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)

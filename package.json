@@ -2,7 +2,7 @@
   "name": "uxscoreboard",
   "version": "1.0.0",
   "description": "live sports scoreboard built on react.js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress",
     "build": "webpack -p --progress",

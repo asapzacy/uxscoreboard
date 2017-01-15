@@ -5,8 +5,8 @@
 .expandIcon svg { transition:transform 0.12s }
 .expandedIcon svg { transform:rotate(45deg) }
 
-.details:empty { color:rgba(7,7,7,0);display:block }
-.details:not(:empty) { display:block;padding:0.4em;color:rgba(7,7,7,1);transition:color 0.66s 0.22s }
+.details:empty { opacity:0;display:block }
+.details:not(:empty) { display:block;padding:0.4em;opacity:1;transition:opacity 0.66s 0.22s }
 
 
 /*@media (min-width:45em) {

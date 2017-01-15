@@ -11,13 +11,15 @@ class DateContainer extends Component {
   }
   componentDidMount() {
     this.getWidth()
-    window.addEventListener('resize', this.getWidth)
+    window.addEventListener('resize', this.getWidth, false)
   }
   componentWillUnmount() {
-    window.removeEventListener('resize', this.getWidth)
+    window.removeEventListener('resize', this.getWidth, false)
   }
   getWidth() {
-    this.setState({ 'width': window.innerWidth })
+    this.setState({
+      'width': window.innerWidth
+    })
   }
   render() {
     return (

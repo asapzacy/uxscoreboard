@@ -11,7 +11,7 @@
 .uxscoreboard {
   margin-bottom:15%;
   display:flex;
-  flex-basis:33.3%;
+  flex:1 0 33.3%;
   flex-direction:column;
   justify-content:flex-end;
 }
@@ -28,6 +28,7 @@
 /* -------  league menu  ------- */
 .leagueMenu {
   width:80%;
+  flex:1 0 auto;
   font-size:1.2em;
 }
 /* -------  league list  ------- */

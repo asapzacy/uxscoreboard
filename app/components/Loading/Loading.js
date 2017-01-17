@@ -1,8 +1,7 @@
 import React from 'react'
-import Loading from 'react-loading-animation'
 import { loadingContainer, svgContainer, svg, svgPath } from './styles.css'
 
-export default function Test() {
+export default function Loading() {
   return (
     <div className={loadingContainer}>
       <div className={svgContainer}>

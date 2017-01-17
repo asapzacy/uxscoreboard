@@ -1,10 +1,63 @@
-/* home page - content */
-.homeContainer { display:flex;width:100%;text-align:center;justify-content:center;align-items:center;flex-direction:column }
-.companyInfo { margin-bottom:15% }
-.title { font-size:2.1em }
-.slogan { font-size:1em;color:#bdbdbd }
-.leaguesInfo { width:80%;font-size:1.2em;letter-spacing:2px;font-weight:700 }
-.leagueList { display:flex;flex-wrap:wrap;}
-.leagueList li { width:50% }
-.leagueLink { padding:8%;margin:12%;display:block;border:1px solid #e0e0e0;transition:0.22s color,0.22s background-color,0.22s box-shadow }
-.leagueLink:hover { color:#070707;background:#e0e0e0;box-shadow:inset 0 0 0 0.35em #070707 }
+
+/* -------  home container  ------- */
+.homeContainer {
+  text-align:center;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+}
+
+/* -------  uxscoreboard  ------- */
+.uxscoreboard {
+  height:33.3%;
+  margin-bottom:15%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+/* -------  name  ------- */
+.name {
+  font-size:2.2em;
+}
+/* -------  description  ------- */
+.description {
+  font-size:1.1em;
+  color:#bdbdbd;
+}
+
+/* -------  league menu  ------- */
+.leagueMenu {
+  width:80%;
+  font-size:1.2em;
+}
+/* -------  league list  ------- */
+.leagueList {
+  display:flex;
+  flex-flow:row wrap;
+}
+/* -------  league item  ------- */
+.leagueItem {
+  width:50%;
+}
+/* -------  league link  ------- */
+.leagueLink {
+  display:block;
+  padding:8%;
+  margin:12%;
+  border:2px solid #e0e0e0;
+  transition:0.22s color,0.22s background-color,0.22s box-shadow;
+}
+/* -------  league link - :hover  ------- */
+.leagueLink:hover {
+  color:#070707;
+  background:#e0e0e0;
+  box-shadow:inset 0 0 0 0.35em #070707;
+}
+
+
+
+@media only screen and (min-width:667px) {
+  .homeContainer {
+    font-size:1.8em;
+  }
+}

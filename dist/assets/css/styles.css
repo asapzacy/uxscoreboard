@@ -7,11 +7,11 @@ img { max-width:100% }
 a { color:inherit;text-decoration:none }
 ul, menu { list-style-type:none }
 h1,h2,h3,h4,h5,h6 { font-weight:inherit }
-strong { font-weight:600 }
+strong { font-weight:700 }
 figure { text-align:center }
 figcaption { font-size:0.9em }
 table, hr { border:0 }
-nav { letter-spacing:1px;font-weight:600 }
+nav { letter-spacing:2px;font-weight:700 }
 sup { font-size:66% }
 
 /* -------  body  ------- */

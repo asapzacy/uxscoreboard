@@ -1,81 +1,103 @@
 
-/* header - menu closed */
-.headerContainer { background:#f5f5f5;color:#070707;width:100%;font-size:1.2em;z-index:10 }
-.logoContainer { height:60px;padding:0 2%;display:flex;justify-content:space-between;align-items:center }
-.logo { display:block;height:48px;padding:1% }
-.menuBtn { width:52px;height:52px;position:relative;cursor:pointer }
-.line { height:2px;width:24px;display:block;background:#070707;position:absolute;top:25px;left:14px;transition:transform 0.22s }
-.lineTop { transform:translateY(-4px);composes:line }
-.lineBottom { transform:translateY(4px);composes:line }
-.navContainer { overflow:hidden;transition:0.22s max-height }
-
-/* header - menu open */
-.menuOpen { composes:headerContainer }
-.menuOpen .lineTop { transform:rotate(-45deg) }
-.menuOpen .lineBottom { transform:rotate(45deg) }
-.menuContainer { padding:0.75em 1em;font-weight:700;letter-spacing:2px }
-.menuContainer li { margin-bottom:0.8em }
-.menuContainer div { height:0.5em }
-.link { display:block;transition:0.22s color }
-.extrasLink { font-size:75%;composes:link }
-.link::after { content:'';display:block;height:2px;background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0.66),rgba(0,0,0,0)) }
-/*.link:hover { color:rgba(7,7,7,0.65) }*/
-/*:global(.active) { color:rgba(7,7,7,0.65) }*/
-
-
-
-
-
-
-
-/*
-
-.navItems {
-  display: flex;
-  font-size:1.8em;
-  flex: 1;
-  margin-left:8%;
+/* -------  header container - menu closed  ------- */
+.headerContainer {
+  background:#f5f5f5;
+  color:#070707;
+  width:100%;
+  font-size:1.2em;
+  z-index:10;
 }
 
-.leaguesLinks {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex: 3;
+/* -------  logo container  ------- */
+.logoContainer {
+  height:60px;
+  padding:0 2%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+/* -------  logo  ------- */
+.logo {
+  display:block;
+  height:48px;
+  padding:1%;
 }
 
-.navLinks {
-  display: flex;
-  height:66px;
-  margin-left: 1em;
-  padding-left: 1em;
-  border-left: 3px solid #070707;
-  align-items: center;
-  justify-content: space-around;
-  flex: 2;
+/* -------  trigger  ------- */
+.trigger {
+  width:52px;
+  height:52px;
+  position:relative;
+  cursor:pointer;
+}
+/* -------  trigger line  ------- */
+.triggerLine {
+  height:2px;
+  width:24px;
+  display:block;
+  background:#070707;
+  position:absolute;
+  top:25px;
+  left:14px;
+  transition:transform 0.22s;
+}
+/* -------  trigger line - top  ------- */
+.triggerLineTop {
+  transform:translateY(-4px);
+  composes:triggerLine;
+}
+/* -------  trigger line - bottom  ------- */
+.triggerLineBottom {
+  transform:translateY(4px);
+  composes:triggerLine;
 }
 
-.link {
-  position: relative;
-  padding: 0 1%;
-  transition: color 0.26s ease-in-out
+/* -------  menu container  ------- */
+.menuContainer {
+  overflow:hidden;
+  transition:0.22s max-height;
+}
+/* -------  menu list  ------- */
+.menuList {
+  padding:0.75em 1em;
+  font-weight:700;
+  letter-spacing:2px
+}
+/* -------  menu item  ------- */
+.menuItem {
+  margin-bottom:0.8em;
+}
+/* -------  menu item  ------- */
+.menuBlock {
+  height:0.5em;
+}
+/* -------  menu link  ------- */
+.menuLink {
+  display:block;
+  transition:0.22s color;
+}
+/* -------  menu link - ::after  ------- */
+.menuLink::after {
+  content:'';
+  display:block;
+  height:2px;
+  background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0.66),rgba(0,0,0,0));
+}
+/* -------  menu link - extra  ------- */
+.menuLinkExtra {
+  font-size:75%;
+  composes:menuLink;
 }
 
-.link:hover,
-:global(.active) {
-  color: #070707;
+/* -------  header container - menu open  ------- */
+.menuOpen {
+  composes:headerContainer;
 }
-
-.link::before {
-  content: '';
-  position: absolute;
-  bottom:0;left:50%;right:50%;
-  height: 3px;
-  background: #070707;
-  transition: all 0.26s ease-in-out;
+/* -------  menu open - trigger line - top  ------- */
+.menuOpen .triggerLineTop {
+  transform:rotate(-45deg);
 }
-
-.link:hover::before,
-:global(.active::before)  {
-  left:0;right:0;
-}*/
+/* -------  menu open - trigger line - bottom  ------- */
+.menuOpen .triggerLineBottom {
+  transform:rotate(45deg);
+}

@@ -1,28 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { headerContainer, menuOpen, logoContainer, logo, menuBtn, lineTop, lineBottom,
-  navContainer, menuContainer, link, extrasLink } from './styles.css'
+import { headerContainer, logoContainer, logo, trigger, triggerLineTop, triggerLineBottom,
+  menuContainer, menuList, menuItem, menuBlock, menuLink, menuLinkExtra, menuOpen } from './styles.css'
 
-export default function Header({visible, height, toggleMenu}) {
+export default function Header({isMenuOpen, menuHeight, triggerMenu}) {
   return (
-    <header className={visible ? menuOpen : headerContainer}>
+    <header className={isMenuOpen ? menuOpen : headerContainer}>
       <div className={logoContainer}>
         <Link to='/'><img className={logo} src='/assets/img/uxscoreboard.svg'/></Link>
-        <span className={menuBtn} onClick={toggleMenu}>
-          <span className={lineTop}></span>
-          <span className={lineBottom}></span>
+        <span className={trigger} onClick={triggerMenu}>
+          <span className={triggerLineTop}></span>
+          <span className={triggerLineBottom}></span>
         </span>
       </div>
-      <nav className={navContainer} style={{maxHeight:height}}>
-        <ul className={menuContainer}>
-          <li><Link className={link} to='/mlb' activeClassName='active'>{'mlb'}</Link></li>
-          <li><Link className={link} to='/nba' activeClassName='active'>{'nba'}</Link></li>
-          <li><Link className={link} to='/nfl' activeClassName='active'>{'nfl'}</Link></li>
-          <li><Link className={link} to='/nhl' activeClassName='active'>{'nhl'}</Link></li>
-          <div></div>
-          <li><Link className={extrasLink} to='/about' activeClassName='active'>{'about'}</Link></li>
-          <li><a className={extrasLink} href='https://github.com/zacarellano/uxscoreboard'>{'source'}</a></li>
-        </ul>
+      <nav className={menuContainer} style={{maxHeight:menuHeight}}>
+        <menu className={menuList}>
+          <li className={menuItem}><Link className={menuLink} to='/mlb' activeClassName='active'>{'mlb'}</Link></li>
+          <li className={menuItem}><Link className={menuLink} to='/nba' activeClassName='active'>{'nba'}</Link></li>
+          <li className={menuItem}><Link className={menuLink} to='/nfl' activeClassName='active'>{'nfl'}</Link></li>
+          <li className={menuItem}><Link className={menuLink} to='/nhl' activeClassName='active'>{'nhl'}</Link></li>
+          <li className={menuBlock}></li>
+          <li className={menuItem}><Link className={menuLinkExtra} to='/about' activeClassName='active'>{'about'}</Link></li>
+          <li className={menuItem}><a className={menuLinkExtra} href='https://github.com/zacarellano/uxscoreboard'>{'source'}</a></li>
+        </menu>
       </nav>
     </header>
   )

@@ -3,9 +3,7 @@ import { NotFound } from 'components'
 
 class NotFoundContainer extends Component {
   render() {
-    return (
-      <NotFound />
-    )
+    return <NotFound />
   }
 }
 

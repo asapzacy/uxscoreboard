@@ -4,9 +4,6 @@ import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
 import { seasons } from 'helpers/seasons'
 
-
-import { googleSheets } from 'helpers/api'
-
 class MlbContainer extends Component {
   constructor() {
     super()
@@ -22,15 +19,14 @@ class MlbContainer extends Component {
     this.setState({ today: getTodaysDate() }, () => {
       this.makeRequest(this.props.routeParams.date)
     })
-    const ex = googleSheets()
-      .then(currentScores => console.log(currentScores))
-      .catch(error => console.log(error))
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(dt=this.state.today) {
-    this.setState({ isValid: isValidDate(dt) })
+  makeRequest(dt = this.state.today) {
+    if (isValidDate(dt)) {
+      this.setState({ isValid: true })
+    }
     if (dt === this.state.today) {
       dt = seasons.mlb.end
     }

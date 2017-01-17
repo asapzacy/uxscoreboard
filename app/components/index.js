@@ -26,9 +26,15 @@ export Details from './Details/Details'
 export Matchup from './Matchup/Matchup'
 
 
-
 export BoxScore from './BoxScore/BoxScore'
 export NbaBoxScore from './Nba/NbaBoxScore/NbaBoxScore'
 export PreGameInfo from './PreGameInfo/PreGameInfo'
 export MidGameInfo from './MidGameInfo/MidGameInfo'
 export PostGameInfo from './PostGameInfo/PostGameInfo'
+
+
+
+
+
+
+export Test from './Test/Test'

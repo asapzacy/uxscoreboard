@@ -18,7 +18,6 @@ export default function Home() {
           <li><Link className={leagueLink} to='/nhl'>{'nhl'}</Link></li>
         </ul>
       </div>
-
     </div>
   )
 }

@@ -11,15 +11,16 @@ const propTypes = {
   league: PropTypes.string.isRequired
 }
 
+
 // TODO: implement a calendar
 export default function Date({ width, ...props }) {
   return (
     <div className={dateContainer}>
       <ul className={daysList}>
         <li className={arrowItem}><Day {...props} diff={-2} isArrow={true} /></li>
-        { width > 600 && <li className={dayItem}><Day {...props} diff={-1} isArrow={false} /></li> }
+        { width > 667 && <li className={dayItem}><Day {...props} diff={-1} isArrow={false} /></li> }
         <li className={dayItem}><Day {...props} diff={0} isArrow={false} /></li>
-        { width > 600 && <li className={dayItem}><Day {...props} diff={1} isArrow={false} /></li> }
+        { width > 667 && <li className={dayItem}><Day {...props} diff={1} isArrow={false} /></li> }
         <li className={arrowItem}><Day {...props} diff={2} isArrow={true} /></li>
       </ul>
   </div>

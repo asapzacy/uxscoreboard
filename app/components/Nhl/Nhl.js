@@ -18,7 +18,7 @@ export default function Nhl({ isLoading, isValid, scores, date, today, league })
   return (
     <div>
       { isLoading
-        ? <Loading speed={300} text={'loading'} />
+        ? <Loading />
         : isValid && scores
           ? <Scoreboard scores={scores} date={date} today={today} league={league} />
           : <NotFound />

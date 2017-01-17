@@ -12,10 +12,10 @@ export default function Home() {
       </div>
       <nav className={leagueMenu}>
         <menu className={leagueList}>
-          <li className={leagueItem}><Link className={leagueLink} to='/mlb'>{'mlb'}</Link></li>
-          <li className={leagueItem}><Link className={leagueLink} to='/nba'>{'nba'}</Link></li>
-          <li className={leagueItem}><Link className={leagueLink} to='/nfl'>{'nfl'}</Link></li>
-          <li className={leagueItem}><Link className={leagueLink} to='/nhl'>{'nhl'}</Link></li>
+          <li className={leagueItem}><Link className={leagueLink} to='/mlb'>{'MLB'}</Link></li>
+          <li className={leagueItem}><Link className={leagueLink} to='/nba'>{'NBA'}</Link></li>
+          <li className={leagueItem}><Link className={leagueLink} to='/nfl'>{'NFL'}</Link></li>
+          <li className={leagueItem}><Link className={leagueLink} to='/nhl'>{'NHL'}</Link></li>
         </menu>
       </nav>
     </div>

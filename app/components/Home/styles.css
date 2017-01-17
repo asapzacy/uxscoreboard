@@ -4,16 +4,16 @@
   display:flex;
   text-align:center;
   align-items:center;
+  justify-content:center;
   flex-direction:column;
 }
 
 /* -------  uxscoreboard  ------- */
 .uxscoreboard {
-  margin-bottom:15%;
   display:flex;
-  flex:1 0 33.3%;
+  flex-basis:40%;
   flex-direction:column;
-  justify-content:flex-end;
+  justify-content:center;
 }
 /* -------  name  ------- */
 .name {
@@ -28,17 +28,19 @@
 /* -------  league menu  ------- */
 .leagueMenu {
   width:80%;
-  flex:1 0 auto;
+  flex-basis:40%;
   font-size:1.2em;
 }
 /* -------  league list  ------- */
 .leagueList {
   display:flex;
   flex-flow:row wrap;
+  justify-content:center;
 }
 /* -------  league item  ------- */
 .leagueItem {
   width:50%;
+  max-width:250px;
 }
 /* -------  league link  ------- */
 .leagueLink {
@@ -56,9 +58,41 @@
 }
 
 
-
+/* -------------------------------- */
+/* -------     >  667px     ------- */
+/* -------------------------------- */
 @media only screen and (min-width:667px) {
-  .homeContainer {
+
+  /* -------  uxscoreboard  ------- */
+  .uxscoreboard {
     font-size:1.8em;
   }
+
+  /* -------  league menu  ------- */
+  .leagueMenu {
+    width:90%;
+  }
+  /* -------  league item  ------- */
+  .leagueItem {
+    width:25%;
+  }
+}
+
+/* -------------------------------- */
+/* -------     > 1000px     ------- */
+/* -------------------------------- */
+@media only screen and (min-width:1000px) {
+
+  /* -------  uxscoreboard  ------- */
+  .uxscoreboard {
+    font-size:2.2em;
+  }
+
+}
+
+/* -------------------------------- */
+/* -------     > 1333px     ------- */
+/* -------------------------------- */
+@media only screen and (min-width:1333px) {
+
 }

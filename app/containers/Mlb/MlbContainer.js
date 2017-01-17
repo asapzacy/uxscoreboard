@@ -18,12 +18,19 @@ class MlbContainer extends Component {
   componentDidMount() {
     this.setState({ today: getTodaysDate() }, () => {
       this.makeRequest(this.props.routeParams.date)
+      this.isEverythingLoaded()
     })
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
+  isEverythingLoaded() {
+    window.addEventListener('load', function() {
+      console.log('loaded !')
+    }, false)
+  }
   makeRequest(dt = this.state.today) {
+    let loaded = document.ready === 'complete'
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
@@ -34,7 +41,7 @@ class MlbContainer extends Component {
       .then((currentScores) => {
         this.cleanGameData(currentScores.data.games)
         this.setState({
-          isLoading: false,
+          isLoading: loaded,
           scores: currentScores.data.games,
           date: dt
         })

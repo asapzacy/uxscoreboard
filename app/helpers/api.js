@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 const crossorigin = 'https://crossorigin.me'
-const corsAnywhere = 'https://cors-anywhere.herokuapp.com'
-
+const corsAnywhere = 'https://cors-anywhere.herokuapp.com/'
 
 const params = {
   proxy: {
@@ -16,15 +15,15 @@ const params = {
  }
 }
 
-export const googleSheets = () => {
-  const url = `https://script.google.com/macros/s/AKfycbzcxlEA-pf_4o2psuOth2Kq54_gsqBjNJrnfEK_XYa89-QeBBiB/exec?pullStart=04/01/2016&pullEnd=04/02/2016`
-  return axios.get(url)
-    .then(currentScores => currentScores.data)
-    .catch(currentScores => currentScores.status)
-}
-
 const config = {
   headers: { origin: 'https://uxscoreboard.com' }
+}
+
+function dateObject(dt) {
+  const yyyy = dt.slice(0,4)
+  const mm = dt.slice(4,6)
+  const dd = dt.slice(6,dt.length)
+  return { yyyy, mm, dd }
 }
 
 // axios request - mlb scores
@@ -32,7 +31,7 @@ export const getMlbScores = (dt) => {
   const yyyy = dt.slice(0,4)
   const mm = dt.slice(4,6)
   const dd = dt.slice(6,dt.length)
-  const url = `${corsAnywhere}/http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const url = `${corsAnywhere}http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
   return axios.get(url)
     .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)
@@ -45,17 +44,9 @@ export const getNhlScores = (dt) => {
   const dd = dt.slice(6,dt.length)
   const url = `https://statsapi.web.nhl.com/api/v1/schedule?startDate=${yyyy}-${mm}-${dd}&endDate=${yyyy}-${mm}-${dd}&expand=schedule.teams,schedule.linescore,schedule.scoringplays,schedule.game.seriesSummary`
   return axios.get(url)
-    .then(currentScores => currentScores.data, params)
+    .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)
 }
-
-
-
-
-
-
-
-
 
 var nba_config = {
   headers: { 'Access-Control-Allow-Origin': '*', 'Accept': 'application/json, text/plain, */*'}
@@ -63,7 +54,7 @@ var nba_config = {
 export function getNbaScores(dt) {
   if (dt === undefined || dt > 20160619 && dt < 20160930)
     dt = '20161025'
-  const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
+  const url = `${corsAnywhere}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
   return axios.get(url)
     .then(currentScores => currentScores.data.leagues_content.games, nba_config)
     .catch(currentScores => currentScores.status)

@@ -4,8 +4,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
 import autoprefixer from 'autoprefixer'
 
-const HOST = process.env.host || 'localhost'
-const PORT = process.env.port || 8080
+const HOST = process.env.HOST || 'localhost'
+const PORT = process.env.PORT || 8080
 const PROXY = `http://${HOST}:${PORT}`
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 
@@ -27,7 +27,13 @@ const browserSyncPlugin = new BrowserSyncPlugin({
   host: HOST,
   port: PORT,
   proxy: PROXY,
-  open: false
+  open: false,
+  ui: {
+    port: 8080,
+    weinre: {
+        port: 9090
+      }
+    }
 }, { reload: false })
 
 const productionPlugin = new webpack.DefinePlugin({

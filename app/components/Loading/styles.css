@@ -1,18 +1,15 @@
 
 /* -------  loading container  ------- */
 .loadingContainer {
-  height:100%; 
-  display:flex;
-  justify-content:center;
+  margin-top:16%;
 }
 
 /* -------  svg container  ------- */
 .svgContainer {
   position:relative;
-  width:20%;
-  max-width:140px;
-  height:50%;
- }
+  width:80px;
+  margin:0 auto;
+}
 
  /* -------  svg container - ::after  ------- */
 .svgContainer::before {
@@ -35,7 +32,7 @@
   animation:rotate 2s linear infinite;
  }
 
- /* -------  svg - path  ------- */
+ /* -------  svg path  ------- */
 .svgPath {
   stroke:#f5f5f5;
   stroke-dasharray:1,200;
@@ -46,12 +43,10 @@
 
 /* -------  keyframes - rotate  ------- */
 @keyframes rotate {
-  100% {
-    transform:rotate(360deg);
-  }
+  100% { transform:rotate(360deg) }
 }
 
-/* -------  keyframe - dash  ------- */
+/* -------  keyframes - dash  ------- */
 @keyframes dash {
   0% {
     stroke-dasharray:1,200;
@@ -65,4 +60,15 @@
     stroke-dasharray:89,200;
     stroke-dashoffset:-124px;
   }
+}
+
+
+@media only screen and (min-width:667px) {
+  .loadingContainer {
+    margin-top:12%
+  }
+  .svgContainer {
+    width:100px
+  }
+
 }

@@ -8,7 +8,7 @@ class NbaContainer extends Component {
     this.state = {
       isLoading: true,
       scores: {},
-      date: ''
+      date: '20160116'
     }
   }
   componentDidMount() {
@@ -17,16 +17,17 @@ class NbaContainer extends Component {
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(dt) {
+  makeRequest(dt='20160116') {
     getNbaScores(dt)
-      .then((currentScores) => {
-        this.cleanGameData(currentScores)
-        this.setState({
-          isLoading: false,
-          scores: currentScores,
-          date: this.props.routeParams.date || '20161025'
-        })
-      })
+      .then(currentScores => console.log(currentScores))
+      // .then((currentScores) => {
+      //   this.cleanGameData(currentScores)
+      //   this.setState({
+      //     isLoading: false,
+      //     scores: currentScores,
+      //     date: this.props.routeParams.date || '20161025'
+      //   })
+      // })
   }
   cleanGameData(scores) {
     if (scores.game !== undefined) {

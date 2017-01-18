@@ -1,5 +1,4 @@
 import React from 'react'
-import Loading from 'react-loading-animation'
 import { loadingContainer, svgContainer, svg, svgPath } from './styles.css'
 
 export default function Test() {

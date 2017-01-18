@@ -7,8 +7,8 @@ import autoprefixer from 'autoprefixer'
 const HOST = process.env.HOST || 'localhost'
 const PORT = process.env.PORT || 8080
 const PROXY = `http://${HOST}:${PORT}`
-const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 
+const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 const isProduction = LAUNCH_COMMAND === 'build'
 process.env.BABEL_ENV = LAUNCH_COMMAND
 
@@ -28,12 +28,7 @@ const browserSyncPlugin = new BrowserSyncPlugin({
   port: PORT,
   proxy: PROXY,
   open: false,
-  ui: {
-    port: 8080,
-    weinre: {
-        port: 9090
-      }
-    }
+  ui: { port: 8080, weinre: { port: 9090 }}
 }, { reload: false })
 
 const productionPlugin = new webpack.DefinePlugin({
@@ -62,6 +57,7 @@ const base = {
     root: path.resolve('./app')
   }
 }
+
 const developmentConfig = {
   devtool: 'cheap-module-inline-source-map',
   devServer: {

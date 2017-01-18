@@ -75,11 +75,11 @@
   transition:0.22s color;
 }
 /* -------  menu link - ::after  ------- */
-.menuLink::after {
+.menuLink::after,:global(.active::after) {
   content:'';
   display:block;
   height:2px;
-  background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0.66),rgba(0,0,0,0));
+  background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
 }
 /* -------  menu link - extra  ------- */
 .menuExtra {
@@ -107,30 +107,45 @@
 @media only screen and (min-width:667px) {
 
   .headerContainer {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    justify-content:space-between;
+    line-height:1;
+    height:60px;
     padding:0 2%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
   }
 
   .logoContainer {
-    display:inline-flex;
-    padding:initial;
-    flex-grow:4;
+    padding:0;
   }
-
   .trigger {
     display:none;
   }
 
   .menuContainer {
-    flex-grow:6;
-
+    flex-grow:1;
   }
   .menuList {
+    padding:0;
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     align-items:center;
+  }
+  .menuItem {
+    margin:0 3%;
+  }
+  .menuLink::after, :global(.active::after) {
+    width:0px;
+    margin-right:auto;
+    margin-top:2px;
+    transition:width 0.22s;
+  }
+  .menuLink:hover::after , :global(.active::after) {
+    width:100%;
+  }
+  .menuBlock {
+    height:40px;
+    width:2px;
+    background:#070707;
   }
 }

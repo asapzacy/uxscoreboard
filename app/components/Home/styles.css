@@ -30,6 +30,7 @@
   width:80%;
   flex-basis:40%;
   font-size:1.2em;
+  letter-spacing:3px;
 }
 /* -------  league list  ------- */
 .leagueList {

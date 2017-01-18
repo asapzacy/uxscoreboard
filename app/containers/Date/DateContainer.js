@@ -7,16 +7,16 @@ class DateContainer extends Component {
     this.state = {
       width: 0
     }
-    this.getWidth = this.getWidth.bind(this)
+    this.getScreenWidth = this.getScreenWidth.bind(this)
   }
   componentDidMount() {
-    this.getWidth()
-    window.addEventListener('resize', this.getWidth, false)
+    this.getScreenWidth()
+    window.addEventListener('resize', this.getScreenWidth, false)
   }
   componentWillUnmount() {
-    window.removeEventListener('resize', this.getWidth, false)
+    window.removeEventListener('resize', this.getScreenWidth, false)
   }
-  getWidth() {
+  getScreenWidth() {
     this.setState({
       'width': window.innerWidth
     })

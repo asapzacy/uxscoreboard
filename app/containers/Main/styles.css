@@ -1,3 +1,22 @@
-.mainContainer { width:100%;display:flex;align-items:center;justify-content:space-between;flex-direction:column;transition:0.22s height }
-.innerContainer { width:96%;display:flex;flex:1 0 auto }
-.innerContainer > div:first-child { width:100% }
+
+/* -------  main container  ------- */
+.mainContainer {
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-direction:column;
+  transition:0.44s height;
+}
+
+/* -------  inner container  ------- */
+.innerContainer {
+  width:96%;
+  display:flex;
+  flex:1 0 auto;
+}
+
+/* -------  inner container - > div:first-child  ------- */
+.innerContainer > div:first-child {
+  width:100%;
+}

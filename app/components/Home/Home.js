@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { homeContainer, uxscoreboard, name, description, leagueMenu, leagueList,
-  leagueItem, leagueLink } from './styles.css'
+import { homeContainer, uxscoreboard, name, description, leagueMenu,
+  leagueList,leagueItem, leagueLink } from './styles.css'
 
 export default function Home() {
   return (

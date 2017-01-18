@@ -6,13 +6,31 @@ class MainContainer extends Component {
   constructor() {
     super()
     this.state = {
-      isMenuOpen: false,
+      screenWidth: 0,
       menuHeight: 0,
-      appWidth: 0
+      isMenuOpen: false,
     }
+    this.getScreenWidth = this.getScreenWidth.bind(this)
     this.triggerMenu = this.triggerMenu.bind(this)
     this.hideMenu = this.hideMenu.bind(this)
-    this.getWidth = this.getWidth.bind(this)
+  }
+  componentDidMount() {
+    this.getScreenWidth()
+    window.addEventListener('resize', this.getScreenWidth)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.getScreenWidth)
+  }
+  getScreenWidth() {
+    this.setState({ 'screenWidth': window.innerWidth }, () => {
+      const header = document.querySelector('header')
+      const navHeight = header.querySelector('nav').scrollHeight
+      if (this.state.screenWidth >= 667) {
+        this.setState({ menuHeight: 'initial' })
+      } else {
+        this.setState({ menuHeight: this.state.isMenuOpen ? navHeight : 0 })
+      }
+    })
   }
   triggerMenu() {
     const header = document.querySelector('header')
@@ -27,8 +45,8 @@ class MainContainer extends Component {
       menuHeight: !this.state.isMenuOpen ? navHeight : 0
     })
   }
-  hideMenu(e) {
-    let el = e.target || e.srcElement
+  hideMenu(event) {
+    let el = event.target || event.srcElement
     while (el) {
       if (el.nodeName === 'A') {
         window.removeEventListener('click', this.hideMenu)
@@ -36,18 +54,6 @@ class MainContainer extends Component {
       }
       el = el.parentNode
     }
-  }
-  getWidth() {
-    this.setState({
-      'appWidth': window.innerWidth
-    })
-  }
-  componentDidMount() {
-    this.getWidth()
-    window.addEventListener('resize', this.getWidth, false)
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.getWidth, false)
   }
   render() {
     const menuHeight = this.state.isMenuOpen ? `calc(100% + ${this.state.menuHeight / 2}px)` : '100%'

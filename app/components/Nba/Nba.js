@@ -19,7 +19,7 @@ export default function Nba({ isLoading, isValid, scores, date, today, league })
     <div>
       { isLoading
         ? <Loading />
-        : isValid && scores
+        : isValid
           ? <Scoreboard scores={scores} date={date} today={today} league={league} />
           : <NotFound />
       }

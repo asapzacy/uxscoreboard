@@ -24,12 +24,15 @@ export default function Scoreboard({ scores, date, today, league }) {
       : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)
   }
   if (league === 'nba') {
-    console.log(scores.sports_content.games.game, !scores.sports_content.games.game.length)
     games = !scores.sports_content.games.game.length
       ? <li className={gamesHeader}>{'[ no games today ]'}</li>
-      : scores.sports_content.games.game.map(item => <GameContainer game={item} date={date} league={league} key={item.id} />)
+      : scores.sports_content.games.game.map((item, index) => {
+        console.log(scores.games[index])
+        let combined = Object.assign({}, scores.games[index], item)
+        console.log(combined)
+        return <GameContainer game={combined} date={date} league={league} key={item.id} />
+      })
   }
-  console.log(games)
   return (
     <div className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />

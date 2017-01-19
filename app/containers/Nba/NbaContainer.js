@@ -4,6 +4,9 @@ import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
 import { seasons } from 'helpers/seasons'
 
+import { getNbaGameDetails } from 'helpers/api'
+
+
 class NbaContainer extends Component {
   constructor() {
     super()
@@ -29,10 +32,7 @@ class NbaContainer extends Component {
     }
     getNbaScores(dt)
       .then((currentScores) => {
-        const games = currentScores.sports_content.games.game
-        console.log(games)
-        this.cleanGameData(games)
-        console.log(games)
+        console.log(currentScores)
         this.setState({
           isLoading: false,
           scores: currentScores,

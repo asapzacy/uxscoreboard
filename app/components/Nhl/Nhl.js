@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Loading, Scoreboard, NotFound } from 'components'
+import { ScoreboardContainer } from 'containers'
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,

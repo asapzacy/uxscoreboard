@@ -14,9 +14,8 @@ export const nbaTeamProps = (game, side, league) => {
   return {
     name: game[side].nickname,
     code: game[side].abbreviation.toLowerCase(),
-    filetype: 'svg',
-    ws: null,
-    ls: null,
+    ws: side === 'home' ? game.hTeam.win : game.vTeam.win,
+    ls: side === 'home' ? game.hTeam.loss : game.vTeam.loss,
     score: game[side].score,
     league
   }

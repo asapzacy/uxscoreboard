@@ -62,7 +62,7 @@
   padding:0.75em 1em;
 }
 /* -------  menu item  ------- */
-.menuItem {
+.menuItem, .menuExtra {
   margin-bottom:0.8em;
 }
 /* -------  menu item  ------- */
@@ -74,6 +74,9 @@
   display:block;
   transition:0.22s color;
 }
+.menuLink:hover {
+  color:#616161;
+}
 /* -------  menu link - ::after  ------- */
 .menuLink::after,:global(.active::after) {
   content:'';
@@ -82,8 +85,9 @@
   background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
 }
 /* -------  menu link - extra  ------- */
-.menuExtra {
-  font-size:75%;
+.menuLinkExtra {
+  font-size:85%;
+  letter-spacing:1px;
   composes:menuLink;
 }
 
@@ -102,7 +106,7 @@
 
 
 /* -------------------------------- */
-/* -------     >  667px     ------- */
+/* -------     >= 667px     ------- */
 /* -------------------------------- */
 @media only screen and (min-width:667px) {
 
@@ -113,6 +117,7 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
+    flex-shrink:0;
   }
 
   .logoContainer {
@@ -124,15 +129,22 @@
 
   .menuContainer {
     flex-grow:1;
+    max-width:550px;
   }
   .menuList {
     padding:0;
     display:flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     align-items:center;
   }
   .menuItem {
-    margin:0 3%;
+    margin:0 2%;
+  }
+  .menuExtra {
+    margin:0 1%;
+  }
+  .menuLink:hover {
+    color:initial;
   }
   .menuLink::after, :global(.active::after) {
     width:0px;
@@ -147,5 +159,6 @@
     height:40px;
     width:2px;
     background:#070707;
+    margin:0 2%;
   }
 }

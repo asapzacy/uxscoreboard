@@ -1,4 +1,18 @@
-.footerContainer { width:100% }
-.socialContainer { display:flex;margin-right:10%;height:4em;justify-content:flex-end;align-items:center }
-.socialContainer a { font-size:1.8em;line-height:1;padding:1%;margin:0 3%;transition:color 0.22s }
+.footerContainer {
+  width:100%;
+}
+.socialContainer {
+  display:flex;
+  margin-right:10%;
+  height:4em;
+  justify-content:flex-end;
+  align-items:center;
+}
+.socialContainer a {
+  font-size:1.8em;
+  line-height:1;
+  padding:1%;
+  margin:0 3%;
+  transition:color 0.22s;
+}
 .socialContainer a:hover { color:#bdbdbd }

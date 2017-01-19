@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { headerContainer, logoContainer, logo, trigger, triggerTop,
-  triggerBottom, menuContainer, menuList, menuItem, menuBlock, menuLink,
-  menuExtra, menuOpen } from './styles.css'
+  triggerBottom, menuContainer, menuList, menuItem, menuBlock, menuExtra,
+  menuLink, menuLinkExtra, menuOpen } from './styles.css'
 
 export default function Header({isMenuOpen, menuHeight, triggerMenu}) {
   return (
@@ -21,8 +21,8 @@ export default function Header({isMenuOpen, menuHeight, triggerMenu}) {
           <li className={menuItem}><Link className={menuLink} to='/nfl' activeClassName='active'>{'NFL'}</Link></li>
           <li className={menuItem}><Link className={menuLink} to='/nhl' activeClassName='active'>{'NHL'}</Link></li>
           <li className={menuBlock}></li>
-          <li className={menuItem}><Link className={menuExtra} to='/about' activeClassName='active'>{'about'}</Link></li>
-          <li className={menuItem}><a className={menuExtra} href='https://github.com/zacarellano/uxscoreboard'>{'source'}</a></li>
+          <li className={menuExtra}><Link className={menuLinkExtra} to='/about' activeClassName='active'>{'about'}</Link></li>
+          <li className={menuExtra}><a className={menuLinkExtra} href='https://github.com/zacarellano/uxscoreboard'>{'source'}</a></li>
         </menu>
       </nav>
     </header>

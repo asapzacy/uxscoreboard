@@ -7,13 +7,18 @@
   justify-content:center;
   flex-direction:column;
 }
+.container {
+
+}
 
 /* -------  uxscoreboard  ------- */
 .uxscoreboard {
   display:flex;
-  flex-basis:40%;
+  flex:1;
   flex-direction:column;
   justify-content:center;
+  position:relative;
+  top:5%;
 }
 /* -------  name  ------- */
 .name {
@@ -28,7 +33,7 @@
 /* -------  league menu  ------- */
 .leagueMenu {
   width:80%;
-  flex-basis:40%;
+  flex:1;
   font-size:1.2em;
   letter-spacing:3px;
 }

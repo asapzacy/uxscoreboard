@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { GameState, Team, Details } from 'components'
 import { mlbTeamProps, nhlTeamProps, nhlGameStateProps } from 'helpers/gameProps'
+import { nbaTeamProps } from 'helpers/teamProps'
 import Plus from 'react-icons/lib/md/add'
 import { gameItem, expandIcon, expandedIcon, details } from './styles.css'
 
@@ -13,9 +14,11 @@ const propTypes = {
   showDetails: PropTypes.func.isRequired
 }
 
-export default function Game({ ...props }) {
+export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
   if (props.league === 'nhl') return <NhlGame {...props} />
+  if (props.league === 'nba') return <NbaGame {...props} />
+
 }
 
 Game.propTypes = propTypes
@@ -23,6 +26,21 @@ Game.propTypes = propTypes
 
 const time = 110
 const el = 'flex'
+
+function NbaGame({ game, date, league, showDetails, expanded }) {
+  const awayTeam = nbaTeamProps(game, 'visitor', league)
+  const homeTeam = nbaTeamProps(game, 'home', league)
+  return (
+    <li className={gameItem}>
+      <Team {...awayTeam} />
+      <Team {...homeTeam} />
+      <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
+      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+        {/* { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> } */}
+      </VelocityTransitionGroup>
+    </li>
+  )
+}
 
 function NhlGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nhlTeamProps(game, 'away', league)

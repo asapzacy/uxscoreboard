@@ -1,40 +1,31 @@
 import React, { PropTypes } from 'react'
-import { Loading, NotFound, Date } from 'components'
-import { GameContainer } from 'containers'
-import { getNbaGameDetails } from 'helpers/api'
-import { scoreboardContainer, scoresContainer } from 'styles/shared.css'
+import { Loading, Scoreboard, NotFound } from 'components'
 
 const propTypes = {
   isLoading: PropTypes.bool.isRequired,
+  isValid: PropTypes.bool.isRequired,
+  scores: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
-  scores: PropTypes.object.isRequired
+  today: PropTypes.string.isRequired,
+  league: PropTypes.string.isRequired
 }
 
-export default function Nba({isLoading, date, scores}) {
+const defaultProps = {
+  league: 'nba'
+}
+
+export default function Nba({ isLoading, isValid, scores, date, today, league }) {
   return (
     <div>
-      {isLoading === true
+      { isLoading
         ? <Loading />
-        : scores !== 404
-          ? <Scoreboard date={date} scores={scores} />
-          : <NotFound />}
+        : isValid && scores
+          ? <Scoreboard scores={scores} date={date} today={today} league={league} />
+          : <NotFound />
+      }
     </div>
   )
 }
 
 Nba.propTypes = propTypes
-
-function Scoreboard({date, scores}) {
-  return (
-    <div className={scoreboardContainer}>
-      <Date date={date} league={'nba'} />
-      <div className={scoresContainer}>
-        {date > 20161001 && date < 20161025
-          ? <h1>{'[ preseason ]'}</h1>
-          : scores.game === undefined || scores.game.length === 0
-            ? <h1>{'[ no games today ]'}</h1>
-            : scores.game.map(item => <GameContainer key={item.id} game={item} league={'nba'} />)}
-      </div>
-    </div>
-  )
-}
+Nba.defaultProps = defaultProps

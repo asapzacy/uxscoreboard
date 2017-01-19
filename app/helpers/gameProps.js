@@ -40,12 +40,12 @@ export const nhlGameStateProps = (game) => {
 // nhl teams - home and away team props
 export const nhlTeamProps = (game, side, league) => {
   return {
-    name: game.teams[`${side}`].team.teamName,
-    code: game.teams[`${side}`].team.abbreviation.toLowerCase(),
-    ws: String(game.teams[`${side}`].leagueRecord.wins),
-    ls: String(game.teams[`${side}`].leagueRecord.losses),
-    ts: String(game.teams[`${side}`].leagueRecord.ot),
-    score: game.status.codedGameState > '2' ? String(game.teams[`${side}`].score) : null,
+    name: game.teams[side].team.teamName,
+    code: game.teams[side].team.abbreviation.toLowerCase(),
+    ws: game.teams[side].leagueRecord.wins,
+    ls: game.teams[side].leagueRecord.losses,
+    ts: game.teams[side].leagueRecord.ot,
+    score: game.status.codedGameState > '2' ? game.teams[side].score : null,
     league
   }
 }

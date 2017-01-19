@@ -39,10 +39,11 @@ class MlbContainer extends Component {
     }
     getMlbScores(dt)
       .then((currentScores) => {
-        this.cleanGameData(currentScores.data.games)
+        const games = currentScores.data.games
+        this.cleanGameData(games)
         this.setState({
           isLoading: loaded,
-          scores: currentScores.data.games,
+          scores: games,
           date: dt
         })
       })

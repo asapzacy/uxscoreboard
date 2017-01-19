@@ -1,33 +1,50 @@
 import React, { Component } from 'react'
 import { Nba } from 'components'
+import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
+import { seasons } from 'helpers/seasons'
 
 class NbaContainer extends Component {
   constructor() {
     super()
     this.state = {
       isLoading: true,
+      isValid: false,
       scores: {},
-      date: '20160116'
+      date: '',
+      today: ''
     }
   }
   componentDidMount() {
-    this.makeRequest(this.props.routeParams.date)
+    this.setState({ today: getTodaysDate() }, () => {
+      this.makeRequest(this.props.routeParams.date)
+    })
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(dt='20160116') {
+  makeRequest(dt = this.state.today) {
+    if (isValidDate(dt)) {
+      this.setState({ isValid: true })
+    }
     getNbaScores(dt)
-      .then(currentScores => console.log(currentScores))
-      // .then((currentScores) => {
-      //   this.cleanGameData(currentScores)
-      //   this.setState({
-      //     isLoading: false,
-      //     scores: currentScores,
-      //     date: this.props.routeParams.date || '20161025'
-      //   })
-      // })
+      .then((currentScores) => {
+        const games = currentScores.sports_content.games.game
+        console.log(games)
+        this.cleanGameData(games)
+        console.log(games)
+        this.setState({
+          isLoading: false,
+          scores: currentScores,
+          date: dt
+        })
+      })
+      .catch((error) =>  {
+        this.setState({
+          isLoading: false,
+          date: dt
+        })
+      })
   }
   cleanGameData(scores) {
     if (scores.game !== undefined) {
@@ -54,16 +71,7 @@ class NbaContainer extends Component {
     }
   }
   render() {
-    return (
-      <div>
-        {this.state.scores
-          ? <Nba
-              isLoading={this.state.isLoading}
-              scores={this.state.scores}
-              date={this.state.date}/>
-          : null}
-      </div>
-    )
+    return <Nba {...this.state} />
   }
 }
 

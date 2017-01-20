@@ -1,11 +1,6 @@
 import axios from 'axios'
 
-const crossorigin = 'https://crossorigin.me'
 const corsAnywhere = 'https://cors-anywhere.herokuapp.com/'
-
-const config = {
-  headers: { origin: 'https://uxscoreboard.com' }
-}
 
 function dateObject(dt) {
   const yyyy = dt.slice(0, 4)

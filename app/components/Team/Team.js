@@ -4,6 +4,7 @@ import { teamContainer, teamLogo, teamInfo, teamLeft, teamRight, teamName,
 import teamColors from './team_colors.css'
 
 export default function Team({ name, code, filetype='svg', ws, ls, ts, score, league }) {
+  console.log(typeof score)
   const sectionClass = teamColors[`${code}_${league}`]
   return (
     <section className={sectionClass}>

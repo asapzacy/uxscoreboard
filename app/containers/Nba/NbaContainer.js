@@ -32,7 +32,6 @@ class NbaContainer extends Component {
     }
     getNbaScores(dt)
       .then((currentScores) => {
-        console.log(currentScores)
         this.setState({
           isLoading: false,
           scores: currentScores,

@@ -1,17 +1,6 @@
 import { formatTimezone } from './utils'
 
-// mlb teams - home and away team props
-export const mlbTeamProps = (game, side, league) => {
-  return {
-    name: game[`${side}_team_name`],
-    code: game[`${side}_file_code`],
-    filetype: game.game_type === 'A' ? 'png' : 'svg',
-    ws: game[`${side}_win`],
-    ls: game[`${side}_loss`],
-    score: game.linescore.r[`${side}`],
-    league
-  }
-}
+
 // mlb matchups - teams + date + venue
 export const mlbMatchupProps = (game, date) => {
   return {
@@ -37,18 +26,8 @@ export const nhlGameStateProps = (game) => {
     isPlayoffs: game.gameType === 'P'
   }
 }
-// nhl teams - home and away team props
-export const nhlTeamProps = (game, side, league) => {
-  return {
-    name: game.teams[side].team.teamName,
-    code: game.teams[side].team.abbreviation.toLowerCase(),
-    ws: game.teams[side].leagueRecord.wins,
-    ls: game.teams[side].leagueRecord.losses,
-    ts: game.teams[side].leagueRecord.ot,
-    score: game.status.codedGameState > '2' ? game.teams[side].score : null,
-    league
-  }
-}
+
+
 // nhl matchups - teams + date + venue
 export const nhlMatchupProps = (game, date) => {
   return {

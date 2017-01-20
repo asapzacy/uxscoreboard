@@ -27,9 +27,7 @@ export default function Scoreboard({ scores, date, today, league }) {
     games = !scores.sports_content.games.game.length
       ? <li className={gamesHeader}>{'[ no games today ]'}</li>
       : scores.sports_content.games.game.map((item, index) => {
-        console.log(scores.games[index])
         let combined = Object.assign({}, scores.games[index], item)
-        console.log(combined)
         return <GameContainer game={combined} date={date} league={league} key={item.id} />
       })
   }

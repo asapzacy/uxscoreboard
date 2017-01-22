@@ -17,8 +17,9 @@ export const mlbTeamProps = (game, side, league) => {
 export const nbaTeamProps = (game, side, league) => {
   const side2 = side === 'home' ? 'hTeam' : 'vTeam'
   const inGame = game.period.current
+  const name = game[side].nickname
   return {
-    name: game[side].nickname,
+    name: name === 'Trail Blazers' ? 'Blazers' : name,
     code: game[side].abbreviation.toLowerCase(),
     ws: game[side2].win,
     ls: game[side2].loss,

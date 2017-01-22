@@ -2,18 +2,36 @@ import React, { PropTypes } from 'react'
 import { inningSuffix } from 'helpers/utils'
 import { gameStateContainer } from './styles.css'
 
-export default function GameState({ gameState, status, time, periods,
-  currentTime, currentPeriod, isHalfTime, totalPeriods, overtime, isPlayoffs }) {
+export default function GameState(props) {
+  if (props.gameState === 0) return <PreGameState {...props} />
+  if (props.gameState === 1) return <InGameState {...props} />
+  if (props.gameState === 2) return <PostGameState {...props} />
+}
+
+
+function PreGameState({ time }) {
   return (
     <div className={gameStateContainer}>
-      { gameState === 0 && <span>{time}</span> }
-      { gameState === 1
-        ? !currentTime || currentTime === '0.0'
-          ? <span>{status}</span>
-          : <span>{`${currentTime} • ${currentPeriod}`}<sup>{inningSuffix(String(currentPeriod))}</sup></span>
-        : null
+      <span>{time}</span>
+    </div>
+  )
+}
+
+function InGameState({ currentTime, currentPeriod, isHalfTime, status }) {
+  return (
+    <div className={gameStateContainer}>
+      { isHalfTime
+        ? <span>{status}</span>
+        : <span>{`${currentTime} • ${currentPeriod}`}<sup>{inningSuffix(String(currentPeriod))}</sup></span>
       }
-      { gameState === 2 && <span>{totalPeriods > periods ? `${status}/${overtime}` : status}</span> }
+    </div>
+  )
+}
+
+function PostGameState({ totalPeriods, periods, status, overtime}) {
+  return (
+    <div className={gameStateContainer}>
+      <span>{totalPeriods > periods ? `${status}/${overtime}` : status}</span>
     </div>
   )
 }

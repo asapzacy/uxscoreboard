@@ -1,4 +1,4 @@
-import { formatTimezone } from './utils'
+import { formatTimezone } from './../utils'
 
 // nhl gamestate details - time + description
 export const nhlGameStateProps = (game) => {
@@ -22,8 +22,8 @@ export const nbaGameStateProps = (game) => {
     time: `${formatTimezone(game.startTimeUTC)} ET`,
     periods: 4,
     currentPeriod: game.period_time.period_value,
-    currentTime: game.period_time.game_clock,
-    isHalfTime: game.period.isHalftime, 
+    currentTime: game.period.isEndOfPeriod ? 'END' : game.period_time.game_clock,
+    isHalfTime: game.period.isHalftime,
     totalPeriods: game.period_time.period_value,
     overtime: game.period_time.period_value > 4 ? game.period_time.period_value > 5 ? `${game.period_time.period_value - 4}OT` : 'OT' : '',
     isPlayoffs:  null

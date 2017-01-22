@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { BoxScore, Matchup, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
-import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/matchupProps'
-import { nhlBoxScoreProps } from 'helpers/gameProps'
+import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
+import { nhlBoxScoreProps } from 'helpers/props/gameProps'
 import { detailsContainer } from './styles.css'
 
 const propTypes = {

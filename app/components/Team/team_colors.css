@@ -78,7 +78,7 @@
 .atl_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#e13a3e 40%,transparent 0%) }
 .bos_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#008348 40%,transparent 0%) }
 .bkn_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
-.cha_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#1d1160 40%,transparent 0%) }
+.cha_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#008ca8 40%,transparent 0%) }
 .chi_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ce1141 40%,transparent 0%) }
 .cle_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#860038 40%,transparent 0%) }
 .dal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#007dc5 40%,transparent 0%) }
@@ -88,7 +88,7 @@
 .hou_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .ind_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffc633 40%,transparent 0%) }
 .lac_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
-.lal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#552582 40%,transparent 0%) }
+.lal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .mem_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#6189b9 40%,transparent 0%) }
 .mia_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .mil_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#00471b 40%,transparent 0%) }

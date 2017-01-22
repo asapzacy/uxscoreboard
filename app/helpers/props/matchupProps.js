@@ -12,7 +12,6 @@ export const mlbMatchupProps = (game, date) => {
 
 //  nba matchup props --> Matchup component
 export const nbaMatchupProps = (game, date) => {
-  console.log(game)
   return {
     awayTeam: game.visitor.nickname,
     homeTeam: game.home.nickname,

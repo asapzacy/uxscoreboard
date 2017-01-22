@@ -14,8 +14,8 @@ const propTypes = {
 // TODO: implement a calendar
 export default function Date({ width, ...props }) {
   return (
-    <menu className={dateMenu}>
-      <ul className={dateList}>
+    <nav className={dateMenu}>
+      <menu className={dateList}>
         <li className={arrowItem}><Day {...props} diff={-1} isArrow={true} /></li>
         { width >= 1331 && <li className={dateItem}><Day {...props} diff={-2} isArrow={false} /></li> }
         { width >= 667 && <li className={dateItem}><Day {...props} diff={-1} isArrow={false} /></li> }
@@ -23,8 +23,8 @@ export default function Date({ width, ...props }) {
         { width >= 667 && <li className={dateItem}><Day {...props} diff={1} isArrow={false} /></li> }
         { width >= 1331 && <li className={dateItem}><Day {...props} diff={2} isArrow={false} /></li> }
         <li className={arrowItem}><Day {...props} diff={1} isArrow={true} /></li>
-      </ul>
-  </menu>
+      </menu>
+    </nav>
   )
 }
 

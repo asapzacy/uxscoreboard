@@ -1,15 +1,17 @@
 
 /* -------  matchup container  ------- */
 .matchupContainer {
-  font-size:90%;
-  margin-bottom:1.4em;
+  font-size:0.9em;
+  height:6em;
   display:flex;
   flex-direction:column;
+  justify-content:center;
 }
 
 /* -------  matchup teams  ------- */
 .matchupTeams {
   font-weight:700;
+  font-size:105%;
 }
 
 /* -------  matchup date  ------- */

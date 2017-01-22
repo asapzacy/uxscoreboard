@@ -1,21 +1,24 @@
 import React, { PropTypes } from 'react'
 import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScoreFns'
-import { boxScoreContainer, tableContainer, tableHead, tableBody } from './styles.css'
+import { boxScoreContainer, boxScore, tableHead, tableBody } from './styles.css'
 
-export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore, linescore,
-  prds, totalPrds }) {
+export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore,
+  linescore, periods, totalPeriods, league }) {
+  const headerRow = formatTableHeaderRow(periods, totalPeriods)
+  const awayTeamRow = formatTableBodyRow(awayAbbr, awayScore, 'away', linescore, periods, totalPeriods, league)
+  const homeTeamRow = formatTableBodyRow(homeAbbr, homeScore, 'home', linescore, periods, totalPeriods, league)
   return (
-    <div className={boxScoreContainer}>
-      <table className={tableContainer}>
+    <section className={boxScoreContainer}>
+      <table className={boxScore}>
         <thead className={tableHead}>
-          <tr dangerouslySetInnerHTML={formatTableHeaderRow(prds,totalPrds)}></tr>
+          <tr dangerouslySetInnerHTML={headerRow}></tr>
         </thead>
         <tbody className={tableBody}>
-          <tr dangerouslySetInnerHTML={formatTableBodyRow(awayAbbr,awayScore,'away',linescore,prds,totalPrds)}></tr>
-          <tr dangerouslySetInnerHTML={formatTableBodyRow(homeAbbr,homeScore,'home',linescore,prds,totalPrds)}></tr>
+          <tr dangerouslySetInnerHTML={awayTeamRow}></tr>
+          <tr dangerouslySetInnerHTML={homeTeamRow}></tr>
         </tbody>
       </table>
-    </div>
+    </section>
   )
 }
 

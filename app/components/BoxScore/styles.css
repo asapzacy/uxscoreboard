@@ -1,6 +1,23 @@
-.boxScoreContainer { margin-bottom:1.4em;font-size:80% }
-.tableContainer { width:100%;table-layout:fixed;border-collapse:collapse }
-.tableContainer tr { height:2.6em }
+
+/* -------  box score container  ------- */
+.boxScoreContainer {
+  font-size:0.8em;
+  height:9em;
+  display:flex;
+  align-items:center;
+}
+/* -------  box score  ------- */
+.boxScore {
+  width:100%;
+  table-layout:fixed;
+  border-collapse:collapse;
+}
+/* -------  matchup container  ------- */
+.boxScore tr {
+  height:2.6em;
+}
+/* -------  matchup container  ------- */
+
 .tableHead { border-bottom:2px solid #bdbdbd }
 .tableHead th:first-child,.tableBody th:first-child { border-right:2px solid #bdbdbd }
 .tableHead th:last-child,.tableBody td:last-child { border-left:2px solid #bdbdbd;font-weight:700 }

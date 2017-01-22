@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { BoxScore, Matchup, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
 import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
-import { nhlBoxScoreProps } from 'helpers/props/gameProps'
+import { nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
 import { detailsContainer } from './styles.css'
 
 const propTypes = {
@@ -19,20 +19,22 @@ export default function Details(props) {
 
 Details.propTypes = propTypes
 
-function NbaDetails({ game, date }) {
+function NbaDetails({ game, date, league }) {
   const matchupProps = nbaMatchupProps(game, date)
+  const boxScoreProps = nbaBoxScoreProps(game, league)
   return (
     <div className={detailsContainer}>
       <Matchup {...matchupProps} />
+      <BoxScore {...boxScoreProps} />
     </div>
   )
 }
 
 
 
-function NhlDetails({ game, date }) {
+function NhlDetails({ game, date, league }) {
   const matchupProps = nhlMatchupProps(game, date)
-  const boxScoreProps = nhlBoxScoreProps(game)
+  const boxScoreProps = nhlBoxScoreProps(game, league)
   return (
     <div className={detailsContainer}>
       <Matchup {...matchupProps} />

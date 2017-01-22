@@ -1,27 +1,35 @@
 
 // format table heading row
-export const formatTableHeaderRow = (prds, totalPrds) => {
+export const formatTableHeaderRow = (periods, totalPeriods) => {
   let result = '<th></th>'
-  for (let i = 1; i <= prds; i++) {
+  for (let i = 1; i <= periods; i++) {
     result += `<th>${i}</th>`
   }
-  if (totalPrds > prds) {
-    for (let i = prds + 1; i <= totalPrds; i++) {
-      result += `<th>${i > prds + 1 ? `${i}ot` : 'ot'}</th>`
+  if (totalPeriods > periods) {
+    for (let i = periods + 1; i <= totalPeriods; i++) {
+      result += `<th>${i > periods + 1 ? `${i - periods}OT` : 'OT'}</th>`
     }
   }
-  result += '<th>t</th>'
+  result += '<th>T</th>'
   return { __html: result }
 }
 
-export const formatTableBodyRow = (team, score, side, linescore, prds, totalPrds) => {
+export const formatTableBodyRow = (team, score, side, linescore, periods, totalPeriods, league) => {
   let result = `<th>${team}</th>`
-  const higher = Math.max(prds,totalPrds)
-  for (let i = 0; i < higher; i++) {
-    if (linescore[i]) {
-      result += `<td>${linescore[i][`${side}`].goals}</td>`
-    } else {
-      result += `<td></td>`
+  for (let i = 0; i < Math.max(periods, totalPeriods); i++) {
+    if (league === 'nhl') {
+      if (linescore[i]) {
+        result += `<td>${linescore[i][side].goals}</td>`
+      } else {
+        result += `<td></td>`
+      }
+    }
+    if (league === 'nba') {
+      if (linescore[side][i]) {
+        result += `<td>${linescore[side][i].score}</td>`
+      } else {
+        result += `<td></td>`
+      }
     }
   }
   result += `<td>${score}</td>`

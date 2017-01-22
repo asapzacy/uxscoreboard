@@ -32,9 +32,15 @@
   transform:rotate(45deg);
 }
 
-.detailsContainer {
 
+.details:empty {
+  opacity:0;
+  display:block;
 }
 
-.details:empty { opacity:0;display:block }
-.details:not(:empty) { display:block;padding:0.4em;opacity:1;transition:opacity 0.66s 0.22s }
+.details:not(:empty) {
+  display:block;
+  background:#fff;
+  opacity:1;
+  transition:opacity 0.66s 0.22s;
+}

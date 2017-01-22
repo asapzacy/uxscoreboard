@@ -12,11 +12,11 @@ const propTypes = {
 
 export default function Matchup({ awayTeam, homeTeam, date, location, venue }) {
   return (
-    <div className={matchupContainer}>
-      <span className={matchupTeams}>{`${awayTeam} v. ${homeTeam}`}</span>
-      <span className={matchupDate} dangerouslySetInnerHTML={formatDateStr(date)}></span>
-      <span className={matchupLocation}>{`${venue} • ${location}`}</span>
-    </div>
+    <header className={matchupContainer}>
+      <h1 className={matchupTeams}>{`${awayTeam} v. ${homeTeam}`}</h1>
+      <h2 className={matchupDate}>{formatDateStr(date)}</h2>
+      <h3 className={matchupLocation}>{`${venue} • ${location}`}</h3>
+    </header>
   )
 }
 

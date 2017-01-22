@@ -30,18 +30,16 @@ const el = 'flex'
 function NbaGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nbaTeamProps(game, 'visitor', league)
   const homeTeam = nbaTeamProps(game, 'home', league)
-  const gameStateProps = nbaGameStateProps(game)
+  const gameStateProps = nbaGameStateProps(game, league)
   return (
     <li className={gameItem}>
       <GameState {...gameStateProps} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <section className={detailsContainer}>
-        <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
-          { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
-        </VelocityTransitionGroup>
-      </section>
+      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+        { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
+      </VelocityTransitionGroup>
     </li>
   )
 }
@@ -49,18 +47,16 @@ function NbaGame({ game, date, league, showDetails, expanded }) {
 function NhlGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nhlTeamProps(game, 'away', league)
   const homeTeam = nhlTeamProps(game, 'home', league)
-  const gameStateProps = nhlGameStateProps(game)
+  const gameStateProps = nhlGameStateProps(game, league)
   return (
     <li className={gameItem}>
       <GameState {...gameStateProps} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <section className={detailsContainer}>
-        <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
-          { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
-        </VelocityTransitionGroup>
-      </section>
+      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+        { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
+      </VelocityTransitionGroup>
     </li>
   )
 }

@@ -24,14 +24,10 @@ export function formatDateUrl() {
   return moment().format('YYYYMMDD')
 }
 
-export function formatDateStr(date) {
-  const dt = moment(date)
-  const yyyy = dt.format('YYYY')
-  const mm = dt.format('MMMM')
-  const dd =  dt.format('Do').match(/([0-9]+)([a-z]+)/)
-  const result = `${mm} ${dd[1]}<sup>${dd[2]}</sup>, ${yyyy}`
-  return { __html: result }
+export function formatDateStr(dt) {
+  return moment(dt).format('MMMM D, YYYY')
 }
+
 
 export function formatTime(time) {
   let hh = time.slice(0, 2)

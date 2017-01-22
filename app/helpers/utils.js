@@ -16,6 +16,17 @@ export const isInSeason = (dt, start, end) => {
   return dt
 }
 
+
+export const shortenName = (name) => {
+  switch(name) {
+    case 'Blue Jackets':  return 'Jackets'
+    case 'Maple Leafs':   return 'Leafs'
+    case 'Trail Blazers': return 'Blazers'
+    case 'Timberwolves':  return 'T-Wolves'
+    default:              return name
+  }
+}
+
 // export const isInSeason = (dt, start, end) => dt >= start && dt <= end
 export const isNotInSeason = (dt, start, end) => dt >= start && dt <= end
 

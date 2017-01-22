@@ -8,6 +8,7 @@
   margin:1em;
   flex:1 1 calc(320px - 2em);
   max-width:420px;
+  min-width:320px;
 }
 
 /* -------  expand icon  ------- */

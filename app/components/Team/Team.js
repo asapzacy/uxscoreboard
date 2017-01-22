@@ -9,7 +9,7 @@ export default function Team({ name, code, filetype='svg', ws, ls, ts, score, le
       <img className={teamLogo} src={`/assets/img/${league}/teams/${code}.${filetype}`} alt={name} />
       <div className={teamInfo}>
         <div className={teamLeft}>
-          <span className={teamName}>{ name.length > 7 ? <small>{name}</small> : name }</span>
+          <span className={teamName}>{ name.length >= 9 ? <small>{name}</small> : name }</span>
           { (ws && ls) && <span className={teamRecord}>{`(${ws}-${ls}${ts ? `-${ts}` : ''})`}</span> }
         </div>
         <div className={teamRight}>

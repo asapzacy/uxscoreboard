@@ -7,19 +7,16 @@
   flex-direction:column;
   justify-content:center;
 }
-
 /* -------  matchup teams  ------- */
 .matchupTeams {
   font-weight:700;
   font-size:105%;
 }
-
 /* -------  matchup date  ------- */
 .matchupDate {
-  font-size:90%;
+  font-size:95%;
 }
-
 /* -------  matchup location  ------- */
 .matchupLocation {
-  font-size:90%;
+  font-size:95%;
 }

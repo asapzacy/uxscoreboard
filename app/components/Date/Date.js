@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import moment from 'moment'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/lib/fa';
-import { dateContainer, daysList, dayItem, arrowItem } from './styles.css'
+import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink } from './styles.css'
 
 const propTypes = {
   width: PropTypes.number.isRequired,
@@ -11,19 +11,20 @@ const propTypes = {
   league: PropTypes.string.isRequired
 }
 
-
 // TODO: implement a calendar
 export default function Date({ width, ...props }) {
   return (
-    <div className={dateContainer}>
-      <ul className={daysList}>
-        <li className={arrowItem}><Day {...props} diff={-2} isArrow={true} /></li>
-        { width > 667 && <li className={dayItem}><Day {...props} diff={-1} isArrow={false} /></li> }
-        <li className={dayItem}><Day {...props} diff={0} isArrow={false} /></li>
-        { width > 667 && <li className={dayItem}><Day {...props} diff={1} isArrow={false} /></li> }
-        <li className={arrowItem}><Day {...props} diff={2} isArrow={true} /></li>
+    <menu className={dateMenu}>
+      <ul className={dateList}>
+        <li className={arrowItem}><Day {...props} diff={-1} isArrow={true} /></li>
+        { width >= 1331 && <li className={dateItem}><Day {...props} diff={-2} isArrow={false} /></li> }
+        { width >= 667 && <li className={dateItem}><Day {...props} diff={-1} isArrow={false} /></li> }
+        <li className={dateItem}><Day {...props} diff={0} isArrow={false} /></li>
+        { width >= 667 && <li className={dateItem}><Day {...props} diff={1} isArrow={false} /></li> }
+        { width >= 1331 && <li className={dateItem}><Day {...props} diff={2} isArrow={false} /></li> }
+        <li className={arrowItem}><Day {...props} diff={1} isArrow={true} /></li>
       </ul>
-  </div>
+  </menu>
   )
 }
 
@@ -33,12 +34,13 @@ Date.propTypes = propTypes
 function Day({ date, today, league, diff, isArrow }) {
   const day = moment(date).add(diff,'days')
   const url = day.format('YYYYMMDD')
+  const isMainLink = diff === 0
   let dayOfTheWeek = today === url ? 'today' : day.format('dddd')
-  dayOfTheWeek = diff === 0 ? dayOfTheWeek : day.format('ddd')
+  dayOfTheWeek = isMainLink ? dayOfTheWeek : day.format('ddd')
   const formattedDate = `${dayOfTheWeek}, ${day.format('MMM D')}`.toLowerCase()
   const title = `${league.toUpperCase()} scores - ${day.format('MMMM D, YYYY')}`
   return (
-    <Link to={`/${league}/scores/${url}`} title={title}>
+    <Link className={isMainLink ? mainLink : dateLink} to={`/${league}/scores/${url}`} title={title}>
       { !isArrow
         ? <span>{formattedDate}</span>
         : diff < 0 ? <FaAngleLeft /> : <FaAngleRight />

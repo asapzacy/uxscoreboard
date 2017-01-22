@@ -1,1 +1,10 @@
-.gameStateContainer { display:flex;font-size:78%;padding:4px 12px;justify-content:flex-end }
+
+/* -------  game state container  ------- */
+.gameStateContainer {
+  font-size:0.8em;
+  padding:4px 12px;
+}
+/* -------  game state text  ------- */
+.gameStateText {
+  display:flex;
+}

@@ -1,5 +1,49 @@
-.dateContainer { height:3em }
-.daysList { display:flex;justify-content:space-between;align-items:center;height:100% }
-.dayItem { display:block }
-.arrowItem { font-size:1.1em;composes:dayItem }
-.arrowItem a { display:flex;padding:0.4em }
+
+/* -------  date menu  ------- */
+.dateMenu {
+  height:3em;
+}
+/* -------  date list  ------- */
+.dateList {
+  height:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+/* -------  date item  ------- */
+.dateItem {
+}
+/* -------  arrow item  ------- */
+.arrowItem {
+  font-size:1.2em;
+  composes:dateItem;
+}
+/* -------  date list  ------- */
+.arrowItem a {
+  display:flex;
+}
+.dateLink {
+  padding:0.4em;
+}
+.mainLink {
+  composes:dateLink;
+}
+
+/* -------------------------------- */
+/* -------     >  667px     ------- */
+/* -------------------------------- */
+@media only screen and (min-width:667px) {
+
+  /* -------  mainLink  ------- */
+  .mainLink {
+    font-size:1.2em;
+  }
+
+}
+
+/* -------------------------------- */
+/* -------     > 1331px     ------- */
+/* -------------------------------- */
+@media only screen and (min-width:1331px) {
+
+}

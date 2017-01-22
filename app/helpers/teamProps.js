@@ -16,7 +16,7 @@ export const mlbTeamProps = (game, side, league) => {
 //  nba home + away team props --> Team component
 export const nbaTeamProps = (game, side, league) => {
   const side2 = side === 'home' ? 'hTeam' : 'vTeam'
-  const inGame = game.isGameActivated || game.period.current
+  const inGame = game.period.current
   return {
     name: game[side].nickname,
     code: game[side].abbreviation.toLowerCase(),

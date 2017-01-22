@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { GameState, Team, Details } from 'components'
 import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from 'helpers/teamProps'
-import { nhlGameStateProps } from 'helpers/gameProps'
+import { nbaGameStateProps, nhlGameStateProps } from 'helpers/gameStateProps'
 import Plus from 'react-icons/lib/md/add'
-import { gameItem, expandIcon, expandedIcon, details } from './styles.css'
+import { gameItem, expandIcon, expandedIcon, detailsContainer, details } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
@@ -16,8 +16,8 @@ const propTypes = {
 
 export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
-  if (props.league === 'nhl') return <NhlGame {...props} />
   if (props.league === 'nba') return <NbaGame {...props} />
+  if (props.league === 'nhl') return <NhlGame {...props} />
 
 }
 
@@ -30,14 +30,18 @@ const el = 'flex'
 function NbaGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nbaTeamProps(game, 'visitor', league)
   const homeTeam = nbaTeamProps(game, 'home', league)
+  const gameStateProps = nbaGameStateProps(game)
   return (
     <li className={gameItem}>
+      <GameState {...gameStateProps} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
-        {/* { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> } */}
-      </VelocityTransitionGroup>
+      <section className={detailsContainer}>
+        <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+          { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
+        </VelocityTransitionGroup>
+      </section>
     </li>
   )
 }
@@ -52,9 +56,11 @@ function NhlGame({ game, date, league, showDetails, expanded }) {
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
-        { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
-      </VelocityTransitionGroup>
+      <section className={detailsContainer}>
+        <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+          { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
+        </VelocityTransitionGroup>
+      </section>
     </li>
   )
 }

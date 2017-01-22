@@ -1,4 +1,6 @@
-/*  mlb teams - background colors  */
+
+
+/* -------  mlb teams  ------- */
 .ana_mlb { composes:teamContainer from './styles.css';background:linear-gradient(to right,#ba0021 40%,transparent 0%) }
 .ari_mlb { composes:teamContainer from './styles.css';background:linear-gradient(to right,#000000 40%,transparent 0%) }
 .atl_mlb { composes:teamContainer from './styles.css';background:linear-gradient(to right,#13274f 40%,transparent 0%) }
@@ -34,11 +36,12 @@
 .nyy_mlb * { z-index:1; }
 .nyy_mlb::before { content:'';position:absolute;left:0;top:0;width:40%;height:100%;background-position:-27.5% 100%; }
 .nyy_mlb::before { background-size:15px;background-image:linear-gradient(to right,#ffffff 86%,#142448 14%) }
-/*  special case for the all-star game */
+/*  special case for the all-star game  */
 .nl_mlb  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#7f411c 40%,transparent 0%) }
 .al_mlb  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#fec325 40%,transparent 0%) }
 
-/*  nhl teams - background colors  */
+
+/* -------  mhl teams  ------- */
 .ari_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#8c2633 40%,transparent 0%); }
 .ana_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#111111 40%,transparent 0%); }
 .bos_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#111111 40%,transparent 0%); }
@@ -71,39 +74,38 @@
 .wsh_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#cf0a2c 40%,transparent 0%); }
 
 
-
-/*    __nba__     */
-.atl_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #e13a3e 40%, transparent 0%); }
-.bos_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #008348 40%, transparent 0%); }
-.bkn_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
-.cha_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #1d1160 40%, transparent 0%); }
-.chi_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ce1141 40%, transparent 0%); }
-.cle_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #860038 40%, transparent 0%); }
-.dal_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #007dc5 40%, transparent 0%); }
-.den_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002d62 40%, transparent 0%); }
-.det_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ed174c 40%, transparent 0%); }
-.gsw_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
-.hou_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffffff 40%, transparent 0%); }
-.ind_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ffc633 40%, transparent 0%); }
-.lac_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #006bb6 40%, transparent 0%); }
-.lal_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #552582 40%, transparent 0%); }
-.mem_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #6189b9 40%, transparent 0%); }
-.mia_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #98002e 40%, transparent 0%); }
-.mil_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #00471b 40%, transparent 0%); }
-.min_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #005083 40%, transparent 0%); }
-.nop_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002b5c 40%, transparent 0%); }
-.nyk_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #006bb6 40%, transparent 0%); }
-.okc_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #007dc3 40%, transparent 0%); }
-.orl_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #c4ced3 40%, transparent 0%); }
-.phi_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #ed174c 40%, transparent 0%); }
-.phx_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #e56020 40%, transparent 0%); }
-.por_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #e03a3e 40%, transparent 0%); }
-.sac_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #724c9f 40%, transparent 0%); }
-.sas_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #061922 40%, transparent 0%); }
-.tor_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #061922 40%, transparent 0%); }
-.uta_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #002b5c 40%, transparent 0%); }
-.was_nba  { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #e31837 40%, transparent 0%); }
+/* -------  nba teams  ------- */
+.atl_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#e13a3e 40%,transparent 0%) }
+.bos_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#008348 40%,transparent 0%) }
+.bkn_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.cha_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#1d1160 40%,transparent 0%) }
+.chi_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ce1141 40%,transparent 0%) }
+.cle_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#860038 40%,transparent 0%) }
+.dal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#007dc5 40%,transparent 0%) }
+.den_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002d62 40%,transparent 0%) }
+.det_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ed174c 40%,transparent 0%) }
+.gsw_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.hou_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.ind_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffc633 40%,transparent 0%) }
+.lac_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.lal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#552582 40%,transparent 0%) }
+.mem_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#6189b9 40%,transparent 0%) }
+.mia_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.mil_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#00471b 40%,transparent 0%) }
+.min_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#005083 40%,transparent 0%) }
+.nop_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002b5c 40%,transparent 0%) }
+.nyk_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#006bb6 40%,transparent 0%) }
+.okc_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#007dc3 40%,transparent 0%) }
+.orl_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#c4ced3 40%,transparent 0%) }
+.phi_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ed174c 40%,transparent 0%) }
+.phx_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#e56020 40%,transparent 0%) }
+.por_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#061922 40%,transparent 0%) }
+.sac_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#724c9f 40%,transparent 0%) }
+.sas_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#061922 40%,transparent 0%) }
+.tor_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#061922 40%,transparent 0%) }
+.uta_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002b5c 40%,transparent 0%) }
+.was_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002b5c 40%,transparent 0%) }
 
 /*  special case for the all-star game */
-.west_nba { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #7f411c 40%, transparent 0%); }
-.east_nba { composes:teamContainer from './styles.css';background-image:-webkit-linear-gradient(0deg, #fec325 40%, transparent 0%); }
+.west_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#7f411c 40%,transparent 0%) }
+.east_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#fec325 40%,transparent 0%) }

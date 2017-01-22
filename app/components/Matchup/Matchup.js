@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { formatDateStr } from 'helpers/utils'
-import { matchupContainer, who, when, where } from './styles.css'
+import { matchupContainer, matchupTeams, matchupDate, matchupLocation } from './styles.css'
 
 const propTypes = {
   awayTeam: PropTypes.string.isRequired,
@@ -10,12 +10,12 @@ const propTypes = {
   venue: PropTypes.string.isRequired
 }
 
-export default function Matchup({ awayTeam, homeTeam, date, location, venue}) {
+export default function Matchup({ awayTeam, homeTeam, date, location, venue }) {
   return (
     <div className={matchupContainer}>
-      <span className={who}>{`${awayTeam} v. ${homeTeam}`}</span>
-      <span className={when} dangerouslySetInnerHTML={formatDateStr(date)}></span>
-      <span className={where}>{`${venue} • ${location}`}</span>
+      <span className={matchupTeams}>{`${awayTeam} v. ${homeTeam}`}</span>
+      <span className={matchupDate} dangerouslySetInnerHTML={formatDateStr(date)}></span>
+      <span className={matchupLocation}>{`${venue} • ${location}`}</span>
     </div>
   )
 }

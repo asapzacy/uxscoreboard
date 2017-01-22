@@ -1,17 +1,40 @@
-.gameItem { background:#f5f5f5;color:#070707;font-size:1.1em;border:2px solid #f5f5f5;margin:1em;flex:1 1 calc(320px - 2em);max-width:420px }
 
-.expandIcon {cursor:pointer;font-size:90%;display:flex;justify-content:center }
-.expandedIcon { composes:expandIcon }
-.expandIcon svg { transition:transform 0.12s }
-.expandedIcon svg { transform:rotate(45deg) }
+/* -------  game item  ------- */
+.gameItem {
+  background:#f5f5f5;
+  color:#070707;
+  font-size:1.1em;
+  border:2px solid #f5f5f5;
+  margin:1em;
+  flex:1 1 calc(320px - 2em);
+  max-width:420px;
+}
+
+/* -------  expand icon  ------- */
+.expandIcon {
+  cursor:pointer;
+  font-size:90%;
+  display:flex;
+  justify-content:center;
+}
+/* -------  expand icon - svg  ------- */
+.expandIcon svg {
+  transition:transform 0.12s;
+}
+
+
+/* -------  expanded icon  ------- */
+.expandedIcon {
+  composes:expandIcon;
+}
+/* -------  expanded icon - svg  ------- */
+.expandedIcon svg {
+  transform:rotate(45deg);
+}
+
+.detailsContainer {
+
+}
 
 .details:empty { opacity:0;display:block }
 .details:not(:empty) { display:block;padding:0.4em;opacity:1;transition:opacity 0.66s 0.22s }
-
-
-/*@media (min-width:45em) {
-  .gameItem { flex:1 0 calc(50% - 2em) }
-}
-@media (min-width:90em) {
-  .gameItem { flex:1 0 calc(33.3% - 2em) }
-}*/

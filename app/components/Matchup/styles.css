@@ -1,5 +1,23 @@
 
-.matchupContainer { font-size:90%;margin-bottom:1.4em;display:flex;flex-direction:column }
-.who { font-weight:700 }
-.when { font-size:90% }
-.where { font-size:90% }
+/* -------  matchup container  ------- */
+.matchupContainer {
+  font-size:90%;
+  margin-bottom:1.4em;
+  display:flex;
+  flex-direction:column;
+}
+
+/* -------  matchup teams  ------- */
+.matchupTeams {
+  font-weight:700;
+}
+
+/* -------  matchup date  ------- */
+.matchupDate {
+  font-size:90%;
+}
+
+/* -------  matchup location  ------- */
+.matchupLocation {
+  font-size:90%;
+}

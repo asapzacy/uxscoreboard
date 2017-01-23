@@ -6,14 +6,17 @@ import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props
 class DetailsContainer extends Component {
   constructor() {
     super()
-    this.state = { display: 'boxscore' }
-    this.switchView = this.switchView.bind(this)
+    this.state = { panel: '' }
+    this.switchPanel = this.switchPanel.bind(this)
   }
-  switchView() {
-    this.setState({ display: this.state.display === 'boxscore' ? 'team stats' : 'boxscore' })
+  componentDidMount() {
+    this.setState({ panel: 'boxScore' })
+  }
+  switchPanel(newPanel) {
+    this.setState({ panel: newPanel })
   }
   render() {
-    return <Details switchView={this.switchView} {...this.state} {...this.props}  />
+    return <Details switchPanel={this.switchPanel} {...this.state} {...this.props}  />
   }
 }
 

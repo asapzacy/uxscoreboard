@@ -1,0 +1,29 @@
+
+/* -------  panel menu  ------- */
+.panelMenu {
+  display:flex;
+  height:3em;
+  justify-content:center;
+  align-items:center;
+
+}
+/* -------  panel list  ------- */
+.panelList {
+  display:flex;
+  font-size:0.8em;
+}
+/* -------  panel item  ------- */
+.panelItem {
+  cursor:pointer;
+  color:#070707;
+  border-bottom:1px solid #616161;
+  padding:0.25em 0.5em;
+  letter-spacing:0;
+}
+.panelItem:not(:last-child) {
+  border-right:1px solid #616161;
+}
+.activated {
+  color:#616161;
+  composes:panelItem;
+}

@@ -27,6 +27,7 @@ export Team from './Team/Team'
 /* -------  details components  ------- */
 export Details from './Details/Details'
 export Matchup from './Matchup/Matchup'
+export PanelMenu from './PanelMenu/PanelMenu'
 export BoxScore from './BoxScore/BoxScore'
 export Stats from './Stats/Stats'
 

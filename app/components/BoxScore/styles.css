@@ -1,25 +1,20 @@
 
 /* -------  box score container  ------- */
 .boxScoreContainer {
-  font-size:0.8em;
   height:9em;
-  display:flex;
-  align-items:center;
+  composes:tableContainer from 'styles/shared.css';
 }
 /* -------  box score table  ------- */
 .boxScoreTable {
-  width:100%;
-  table-layout:fixed;
-  border-collapse:collapse;
+  composes:table from 'styles/shared.css';
 }
 /* -------  box score table head  ------- */
 .boxScoreTableHead {
-  border-bottom:1px solid #bdbdbd;
-  border-bottom:1px solid #e0e0e0;
+  composes:tableHead from 'styles/shared.css';
 }
 /* -------  box score table row  ------- */
 .boxScoreTableRow {
-  height:2.6em;
+  composes:tableRow from 'styles/shared.css';
 }
 
 /* -------  box score table head  ------- */
@@ -30,10 +25,10 @@
   padding-left:0.5em;
 }
 /* -------  box score table head  ------- */
-.boxScoreTableBody .boxScoreTableRow:nth-of-type(even) {
+.boxScoreTableRow:nth-of-type(even) {
   background:#f5f5f5;
 }
 
-.boxScoreTableHead th:last-child, .boxScoreTableBody td:last-child {
+.boxScoreTableBody td:last-child {
   font-weight:700;
 }

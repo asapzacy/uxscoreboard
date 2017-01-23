@@ -24,6 +24,7 @@
   border-right:1px solid #616161;
 }
 .activated {
-  color:#616161;
+  color:#ba0021;
+  border-color:#ba0021;
   composes:panelItem;
 }

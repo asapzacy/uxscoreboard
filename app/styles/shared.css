@@ -1,3 +1,54 @@
+
+
+.tableContainer {
+  font-size:0.8em;
+  display:flex;
+  align-items:center;
+}
+.table {
+  width:100%;
+  table-layout:fixed;
+  border-collapse:collapse;
+}
+.tableHead {
+  border-bottom:1px solid #e0e0e0;
+}
+.tableRow {
+  height:2.6em;
+}
+.tableRowFirstChild {
+  text-align:left;
+  letter-spacing:0;
+  padding-left:0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .scoreboardContainer {
   width: 93.33%;
   margin: 0 auto 16em;
@@ -18,19 +69,6 @@
   font-size: 3.5em;
   margin: 2em 0;
 }
-
-.infoContainer {
-  /*display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height:50px;
-  line-height: 1.6;
-  margin: 1em 0 0;
-}*/
-
-}
-
 
 
 
@@ -71,43 +109,3 @@
 .gameInfo sup {
   font-size: 70%;
 }
-
-
-
-/*
-
-.container {
-  background: #f5f5f5;
-  color: #070707;
-  border: 2px solid #f5f5f5;
-  margin: 2.25%;
-  flex-basis: 27.5%;
-}
-
-.centeredContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.largeHeader {
-  color: #e0e0e0;
-  font-weight: 100;
-  font-size: 7em;
-  margin-bottom: 20px;
-}
-
-.subHeader {
-  color: #bdbdbd;
-  font-size: 3em;
-  text-align: center;
-  line-height: 55px;
-  font-weight: 100;
-}
-
-.teamContainer {
-  display: flex;
-  align-items: center;
-  font-size: 2em;
-  color: #f5f5f5;
-}*/

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScoreFns'
 import { boxScoreContainer, boxScoreTable, boxScoreTableHead, boxScoreTableBody,
-  boxScoreTableRow } from './styles.css'
+  boxScoreTableRow, boxScoreTableRowFirstChild } from './styles.css'
 
 export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore,
   linescore, periods, totalPeriods, league }) {

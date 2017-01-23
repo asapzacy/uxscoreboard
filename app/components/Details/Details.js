@@ -27,7 +27,7 @@ function NbaDetails({ game, date, league, panel, switchPanel }) {
       <Matchup {...matchupProps} />
       <PanelMenu panel={panel} switchPanel={switchPanel} />
       { panel === 'boxScore' && <BoxScore {...boxScoreProps} /> }
-      { panel === 'teamStats' && <Stats away={game.visitor} home={game.home} /> }
+      { panel === 'teamStats' && <Stats game={game} away={game.visitor} home={game.home} /> }
     </div>
   )
 }

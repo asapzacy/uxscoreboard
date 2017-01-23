@@ -1,5 +1,5 @@
 
-import { shortenTeamName } from './../utils'
+import { shortenTeamName } from '../utils'
 
 // nhl boxscores - periods + scores
 export const nhlBoxScoreProps = (game, league) => {

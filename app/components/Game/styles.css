@@ -34,14 +34,29 @@
 }
 
 
-.details:empty {
+/*.details:empty {
   opacity:0;
   display:block;
 }
+
 
 .details:not(:empty) {
   display:block;
   background:#fff;
   opacity:1;
   transition:opacity 0.66s 0.22s;
+}*/
+
+.details {
+  opacity:0;
+  transition:opacity 0.66s 0.22s;
+  display:block;
+}
+
+.detailsExpanded {
+  opacity:1;
+  transition:opacity 0.66s 0.22s;
+  display:block;
+  background:#fff;
+  composes:details;
 }

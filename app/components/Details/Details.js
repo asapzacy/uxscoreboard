@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { BoxScore, Matchup, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
+import { BoxScore, Matchup, Stats, PreGameInfo, MidGameInfo, PostGameInfo } from 'components'
 import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
 import { nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
 import { detailsContainer } from './styles.css'
@@ -10,6 +10,20 @@ const propTypes = {
   league: PropTypes.string.isRequired
 }
 
+
+// export default function Details(props) {
+//   const matchupProps = nbaMatchupProps(game, date)
+//   const boxScoreProps = nbaBoxScoreProps(game, league)
+//   return (
+//     <div className={detailsContainer}>
+//       <h1 onClick={switchView}>{display}</h1>
+//       <Matchup {...matchupProps} />
+//       <BoxScore {...boxScoreProps} />
+//       <Stats away={game.visitor} home={game.home} />
+//
+//     </div>
+//   )
+// }
 export default function Details(props) {
   if (props.league === 'mlb') return <MlbDetails {...props} />
   if (props.league === 'nba') return <NbaDetails {...props} />
@@ -19,13 +33,16 @@ export default function Details(props) {
 
 Details.propTypes = propTypes
 
-function NbaDetails({ game, date, league }) {
+function NbaDetails({ game, date, league, display, switchView }) {
   const matchupProps = nbaMatchupProps(game, date)
   const boxScoreProps = nbaBoxScoreProps(game, league)
   return (
     <div className={detailsContainer}>
+      <h1 onClick={switchView}>{display}</h1>
       <Matchup {...matchupProps} />
-      <BoxScore {...boxScoreProps} />
+      { display === 'boxscore' && <BoxScore {...boxScoreProps} /> }
+      { display === 'team stats' && <Stats away={game.visitor} home={game.home} /> }
+
     </div>
   )
 }
@@ -46,7 +63,7 @@ function NhlDetails({ game, date, league }) {
 
 
 
-function MlbDetails({ game, date, league, expanded }) {
+function MlbDetails({ game, date, league }) {
   const matchupProps = mlbMatchupProps(game, date)
   return (
     <div className={detailsContainer}>

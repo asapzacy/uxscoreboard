@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { GameState, Team, Details } from 'components'
+import { DetailsContainer } from 'containers'
 import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from 'helpers/props/teamProps'
 import { nbaGameStateProps, nhlGameStateProps } from 'helpers/props/gameStateProps'
 import Plus from 'react-icons/lib/md/add'
-import { gameItem, expandIcon, expandedIcon, detailsContainer, details } from './styles.css'
+import { gameItem, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
@@ -30,15 +31,15 @@ const el = 'flex'
 function NbaGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nbaTeamProps(game, 'visitor', league)
   const homeTeam = nbaTeamProps(game, 'home', league)
-  const gameStateProps = nbaGameStateProps(game, league)
+  const gameState = nbaGameStateProps(game, league)
   return (
     <li className={gameItem}>
-      <GameState {...gameStateProps} />
+      <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
-        { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
+      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el,delay:2000}}>
+        { expanded && <DetailsContainer game={game} date={date} league={league} /> }
       </VelocityTransitionGroup>
     </li>
   )
@@ -47,14 +48,14 @@ function NbaGame({ game, date, league, showDetails, expanded }) {
 function NhlGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nhlTeamProps(game, 'away', league)
   const homeTeam = nhlTeamProps(game, 'home', league)
-  const gameStateProps = nhlGameStateProps(game, league)
+  const gameState = nhlGameStateProps(game, league)
   return (
     <li className={gameItem}>
-      <GameState {...gameStateProps} />
+      <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el,delay:2000}}>
         { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
       </VelocityTransitionGroup>
     </li>

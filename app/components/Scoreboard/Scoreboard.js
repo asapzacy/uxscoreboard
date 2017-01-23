@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react'
 import { GameContainer, DateContainer } from 'containers'
 import { scoreboardContainer, gamesList, gamesHeader } from './styles.css'
 
+import { getNbaGameDetails } from 'helpers/api'
+
 const propTypes = {
   scores: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
@@ -28,6 +30,8 @@ export default function Scoreboard({ scores, date, today, league }) {
       ? <li className={gamesHeader}>{'[ no games today ]'}</li>
       : scores.sports_content.games.game.map((item, index) => {
         let combined = Object.assign({}, scores.games[index], item)
+        getNbaGameDetails(date, item.id)
+          .then(data => Object.assign(combined, data.sports_content.game))
         return <GameContainer game={combined} date={date} league={league} key={item.id} />
       })
   }

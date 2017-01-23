@@ -1,0 +1,33 @@
+
+.statsContainer {
+  width:96%;
+  margin:2.6em auto;
+  font-size:0.9em;
+  text-align:center;
+}
+
+.statsContainer table {
+  width:100%;
+  margin:0 auto;
+  table-layout:fixed;
+  border-collapse:collapse;
+}
+
+.statsContainer thead {
+  border-bottom:2px solid #e0e0e0;
+}
+
+.statsContainer tr {
+  height:2.4em;
+}
+.statsContainer th,
+.statsContainer td {
+  padding:2px 4px;
+}
+
+.statsContainer thead th:first-child,
+.statsContainer tbody th:first-child {
+  width:50%;
+  text-align:left;
+  border-right:2px solid #e0e0e0;
+}

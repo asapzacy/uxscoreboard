@@ -28,15 +28,13 @@ Game.propTypes = propTypes
 const transitionsConfig = {
   enter: {
     animation: 'slideDown',
-    display:'flex',
-    duration:110,
+    duration:220,
     delay:0
   },
   leave: {
     animation: 'slideUp',
-    display:'flex',
-    duration:110,
-    delay:330
+    duration:220,
+    delay:220
   }
 }
 

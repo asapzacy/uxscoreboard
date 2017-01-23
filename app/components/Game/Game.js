@@ -25,8 +25,20 @@ export default function Game(props) {
 Game.propTypes = propTypes
 
 
-const time = 110
-const el = 'flex'
+const transitionsConfig = {
+  enter: {
+    animation: 'slideDown',
+    display:'flex',
+    duration:110,
+    delay:0
+  },
+  leave: {
+    animation: 'slideUp',
+    display:'flex',
+    duration:110,
+    delay:440
+  }
+}
 
 function NbaGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nbaTeamProps(game, 'visitor', league)
@@ -38,7 +50,7 @@ function NbaGame({ game, date, league, showDetails, expanded }) {
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el,delay:2000}}>
+      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
         { expanded && <DetailsContainer game={game} date={date} league={league} /> }
       </VelocityTransitionGroup>
     </li>
@@ -55,7 +67,7 @@ function NhlGame({ game, date, league, showDetails, expanded }) {
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el,delay:2000}}>
+      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
         { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
       </VelocityTransitionGroup>
     </li>
@@ -72,7 +84,7 @@ function MlbGame({ game, date, league, showDetails, expanded }) {
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
-      <VelocityTransitionGroup className={details} enter={{animation:'slideDown',duration:time,display:el}} leave={{animation:'slideUp',duration:time,display:el}}>
+      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
         { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
       </VelocityTransitionGroup>
     </li>

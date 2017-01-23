@@ -34,29 +34,19 @@
 }
 
 
-/*.details:empty {
-  opacity:0;
-  display:block;
-}
-
-
-.details:not(:empty) {
-  display:block;
-  background:#fff;
-  opacity:1;
-  transition:opacity 0.66s 0.22s;
-}*/
-
 .details {
-  opacity:0;
-  transition:opacity 0.66s 0.22s;
   display:block;
+  opacity:0;
+  transition-property:opacity;
+  transition-duration:0.33s;
+  transition-delay:0s;
 }
 
 .detailsExpanded {
-  opacity:1;
-  transition:opacity 0.66s 0.22s;
   display:block;
+  opacity:1;
+  transition-duration:0.66s;
+  transition-delay:0.22s;
   background:#fff;
   composes:details;
 }

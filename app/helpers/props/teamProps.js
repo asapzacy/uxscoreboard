@@ -1,12 +1,11 @@
 
-
-import { shortenName } from './../utils'
+import { shortenTeamName } from './../utils'
 
 //  mlb home + away team props --> Team component
 export const mlbTeamProps = (game, side, league) => {
   const isAllStar = game.game_type === 'A'
   return {
-    name: shortenName(game[`${side}_team_name`]),
+    name: shortenTeamName(game[`${side}_team_name`]),
     code: game[`${side}_file_code`].toLowerCase(),
     filetype: isAllStar ? 'png' : 'svg',
     ws: game[`${side}_win`],
@@ -21,7 +20,7 @@ export const nbaTeamProps = (game, side, league) => {
   const side2 = side === 'home' ? 'hTeam' : 'vTeam'
   const inGame = game.period.current
   return {
-    name: shortenName(game[side].nickname),
+    name: shortenTeamName(game[side].nickname),
     code: game[side].abbreviation.toLowerCase(),
     ws: game[side2].win,
     ls: game[side2].loss,
@@ -34,7 +33,7 @@ export const nbaTeamProps = (game, side, league) => {
 export const nhlTeamProps = (game, side, league) => {
   const inGame = game.status.codedGameState > '2'
   return {
-    name: shortenName(game.teams[side].team.teamName),
+    name: shortenTeamName(game.teams[side].team.teamName),
     code: game.teams[side].team.abbreviation.toLowerCase(),
     ws: String(game.teams[side].leagueRecord.wins),
     ls: String(game.teams[side].leagueRecord.losses),

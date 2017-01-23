@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScoreFns'
-import { boxScoreContainer, boxScore, tableHead, tableBody } from './styles.css'
+import { boxScoreContainer, boxScoreTable, boxScoreTableHead, boxScoreTableBody, boxScoreTableRow } from './styles.css'
 
 export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore,
   linescore, periods, totalPeriods, league }) {
@@ -9,13 +9,13 @@ export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore,
   const homeTeamRow = formatTableBodyRow(homeAbbr, homeScore, 'home', linescore, periods, totalPeriods, league)
   return (
     <section className={boxScoreContainer}>
-      <table className={boxScore}>
-        <thead className={tableHead}>
-          <tr dangerouslySetInnerHTML={headerRow}></tr>
+      <table className={boxScoreTable}>
+        <thead className={boxScoreTableHead}>
+          <tr className={boxScoreTableRow} dangerouslySetInnerHTML={headerRow}></tr>
         </thead>
-        <tbody className={tableBody}>
-          <tr dangerouslySetInnerHTML={awayTeamRow}></tr>
-          <tr dangerouslySetInnerHTML={homeTeamRow}></tr>
+        <tbody className={boxScoreTableBody}>
+          <tr className={boxScoreTableRow} dangerouslySetInnerHTML={awayTeamRow}></tr>
+          <tr className={boxScoreTableRow} dangerouslySetInnerHTML={homeTeamRow}></tr>
         </tbody>
       </table>
     </section>

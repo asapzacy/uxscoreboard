@@ -17,7 +17,7 @@ export const isInSeason = (dt, start, end) => {
 }
 
 
-export const shortenName = (name) => {
+export const shortenTeamName = (name) => {
   switch(name) {
     case 'Blue Jackets':  return 'Jackets'
     case 'Maple Leafs':   return 'Leafs'

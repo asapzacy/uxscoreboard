@@ -4,14 +4,15 @@
   display:flex;
   height:3em;
   justify-content:center;
-  align-items:center;
-
+  align-items:flex-start;
 }
+
 /* -------  panel list  ------- */
 .panelList {
   display:flex;
   font-size:0.8em;
 }
+
 /* -------  panel item  ------- */
 .panelItem {
   cursor:pointer;
@@ -20,11 +21,13 @@
   padding:0.25em 0.5em;
   letter-spacing:0;
 }
+/* -------  panel item - :not - :last-child  ------- */
 .panelItem:not(:last-child) {
   border-right:1px solid #616161;
 }
+
+/* -------  activated  ------- */
 .activated {
   color:#ba0021;
-  border-color:#ba0021;
   composes:panelItem;
 }

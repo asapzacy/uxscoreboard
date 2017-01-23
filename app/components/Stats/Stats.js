@@ -1,23 +1,24 @@
 import React, { PropTypes } from 'react'
 import { nbaStatsProps } from 'helpers/props/statsProps'
+import { formatStatsTableHeaderRow, formatStatsTableBody } from 'helpers/statsFns'
 import { statsContainer, statsTable, statsTableHead,
   statsTableBody, statsTableRow } from './styles.css'
 
-export default function Stats({ game, away, home }) {
-  const { homeTeam, awayTeam } = nbaStatsProps(game)
+export default function Stats({ game }) {
+  const stats = nbaStatsProps(game)
+  const headerRow = formatStatsTableHeaderRow(stats.Teams)
+  const statsBody = formatStatsTableBody(stats)
   return (
     <div className={statsContainer}>
        <table className={statsTable}>
          <thead className={statsTableHead}>
-           <tr className={statsTableRow}>
-            <th></th>
-            <th>{homeTeam}</th>
-            <th>{awayTeam}</th>
-           </tr>
+           <tr className={statsTableRow} dangerouslySetInnerHTML={headerRow}></tr>
          </thead>
-         <tbody className={statsTableBody}>
+         <tbody className={statsTableBody} dangerouslySetInnerHTML={statsBody}></tbody>
+
+         {/* <tbody className={statsTableBody}>
            <tr className={statsTableRow}>
-             <th>{'points'}</th>
+             <th>{'PTS'}</th>
              <td>{away.stats.points}</td>
              <td>{home.stats.points}</td>
            </tr>
@@ -66,7 +67,7 @@ export default function Stats({ game, away, home }) {
              <td>{away.stats.turnovers}</td>
              <td>{home.stats.turnovers}</td>
            </tr>
-         </tbody>
+         </tbody> */}
        </table>
     </div>
   )

@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
-import { formatTableHeaderRow, formatTableBodyRow } from 'helpers/boxScoreFns'
+import { formatBoxScoreTableHeaderRow, formatBoxScoreTableBodyRow } from 'helpers/boxScoreFns'
 import { boxScoreContainer, boxScoreTable, boxScoreTableHead, boxScoreTableBody,
   boxScoreTableRow, boxScoreTableRowFirstChild } from './styles.css'
 
 export default function BoxScore({ awayAbbr, homeAbbr, awayScore, homeScore,
   linescore, periods, totalPeriods, league }) {
-  const headerRow = formatTableHeaderRow(periods, totalPeriods)
-  const awayTeamRow = formatTableBodyRow(awayAbbr, awayScore, 'away', linescore, periods, totalPeriods, league)
-  const homeTeamRow = formatTableBodyRow(homeAbbr, homeScore, 'home', linescore, periods, totalPeriods, league)
+  const headerRow = formatBoxScoreTableHeaderRow(periods, totalPeriods)
+  const awayTeamRow = formatBoxScoreTableBodyRow(awayAbbr, awayScore, 'away', linescore, periods, totalPeriods, league)
+  const homeTeamRow = formatBoxScoreTableBodyRow(homeAbbr, homeScore, 'home', linescore, periods, totalPeriods, league)
   return (
     <section className={boxScoreContainer}>
       <table className={boxScoreTable}>

@@ -1,7 +1,6 @@
 
 /* -------  stats container  ------- */
 .statsContainer {
-  height:30em;
   composes:tableContainer from 'styles/shared.css';
 }
 /* -------  stats table  ------- */

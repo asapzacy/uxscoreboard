@@ -1,7 +1,6 @@
 
 /* -------  box score container  ------- */
 .boxScoreContainer {
-  height:9em;
   composes:tableContainer from 'styles/shared.css';
 }
 /* -------  box score table  ------- */

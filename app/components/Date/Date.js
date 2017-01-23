@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import moment from 'moment'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/lib/fa';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/lib/fa'
 import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink } from './styles.css'
 
 const propTypes = {

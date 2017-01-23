@@ -11,34 +11,11 @@
   min-width:320px;
 }
 
-/* -------  expand icon  ------- */
-.expandIcon {
-  cursor:pointer;
-  font-size:90%;
-  display:flex;
-  justify-content:center;
-}
-/* -------  expand icon - svg  ------- */
-.expandIcon svg {
-  transition:transform 0.12s;
-}
-
-
-/* -------  expanded icon  ------- */
-.expandedIcon {
-  composes:expandIcon;
-}
-/* -------  expanded icon - svg  ------- */
-.expandedIcon svg {
-  transform:rotate(45deg);
-}
-
-
 .details {
   display:block;
   opacity:0;
   transition-property:opacity;
-  transition-duration:0.33s;
+  transition-duration:0.22s;
   transition-delay:0s;
 }
 
@@ -46,7 +23,7 @@
   display:block;
   opacity:1;
   transition-duration:0.66s;
-  transition-delay:0.22s;
+  transition-delay:0.33s;
   background:#fff;
   composes:details;
 }

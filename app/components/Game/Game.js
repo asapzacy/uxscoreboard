@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { VelocityTransitionGroup } from 'velocity-react'
-import { GameState, Team, Details } from 'components'
+import { GameState, Team, Expand, Details } from 'components'
 import { DetailsContainer } from 'containers'
 import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from 'helpers/props/teamProps'
 import { nbaGameStateProps, nhlGameStateProps } from 'helpers/props/gameStateProps'
@@ -36,7 +36,7 @@ const transitionsConfig = {
     animation: 'slideUp',
     display:'flex',
     duration:110,
-    delay:440
+    delay:330
   }
 }
 
@@ -49,7 +49,7 @@ function NbaGame({ game, date, league, showDetails, expanded }) {
       <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
-      <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
+      <Expand expanded={expanded} showDetails={showDetails} />
       <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
         { expanded && <DetailsContainer game={game} date={date} league={league} /> }
       </VelocityTransitionGroup>
@@ -66,7 +66,7 @@ function NhlGame({ game, date, league, showDetails, expanded }) {
       <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
-      <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
+      <Expand expanded={expanded} showDetails={showDetails} />
       <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
         { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
       </VelocityTransitionGroup>
@@ -83,7 +83,7 @@ function MlbGame({ game, date, league, showDetails, expanded }) {
     <li className={gameItem}>
       <Team {...awayTeam} />
       <Team {...homeTeam} />
-      <span className={expanded ? expandedIcon : expandIcon} onClick={showDetails}><Plus /></span>
+      <Expand expanded={expanded} showDetails={showDetails} />
       <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
         { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
       </VelocityTransitionGroup>

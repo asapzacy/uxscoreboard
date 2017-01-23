@@ -16,10 +16,10 @@
 /* -------  panel item  ------- */
 .panelItem {
   cursor:pointer;
-  color:#070707;
   border-bottom:1px solid #616161;
   padding:0.25em 0.5em;
   letter-spacing:0;
+  transition:color 0.22s;
 }
 /* -------  panel item - :not - :last-child  ------- */
 .panelItem:not(:last-child) {

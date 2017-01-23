@@ -23,6 +23,7 @@ export Date from './Date/Date'
 export Game from './Game/Game'
 export GameState from './GameState/GameState'
 export Team from './Team/Team'
+export Expand from './Expand/Expand'
 
 /* -------  details components  ------- */
 export Details from './Details/Details'

@@ -7,7 +7,7 @@ export const nbaStatsProps = (game) => {
   const inGame = game.period.current
   const empty = ['', '']
   return {
-    'Teams': [ shortenTeamName(game.visitor.nickname), shortenTeamName(game.home.nickname) ],
+    'teams': [ shortenTeamName(game.visitor.nickname), shortenTeamName(game.home.nickname) ],
     'Points': inGame ? [ awayStats.points, homeStats.points ] : empty,
     'Field-Goal %': inGame ? [ awayStats.field_goals_percentage, homeStats.field_goals_percentage ] : empty,
     '3-Point %': inGame ? [ awayStats.three_pointers_percentage, homeStats.three_pointers_percentage ] : empty,

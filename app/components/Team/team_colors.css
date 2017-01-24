@@ -100,7 +100,7 @@
 .phi_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ed174c 40%,transparent 0%) }
 .phx_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#e56020 40%,transparent 0%) }
 .por_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#061922 40%,transparent 0%) }
-.sac_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#724c9f 40%,transparent 0%) }
+.sac_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#5b2b82 40%,transparent 0%) }
 .sas_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#061922 40%,transparent 0%) }
 .tor_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#061922 40%,transparent 0%) }
 .uta_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002b5c 40%,transparent 0%) }

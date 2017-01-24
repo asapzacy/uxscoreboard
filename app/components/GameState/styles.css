@@ -4,6 +4,10 @@
   font-size:0.8em;
   padding:4px 12px;
 }
+.inGameStateContainer {
+  text-align:right;
+  composes:gameStateContainer;
+}
 /* -------  game state text  ------- */
 .gameStateText {
   display:flex;

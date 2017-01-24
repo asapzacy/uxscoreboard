@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { inningSuffix } from 'helpers/utils'
-import { gameStateContainer } from './styles.css'
+import { gameStateContainer, inGameStateContainer } from './styles.css'
 
 export default function GameState(props) {
   if (props.gameState === 0) return <PreGameState {...props} />
@@ -19,7 +19,7 @@ function PreGameState({ time }) {
 
 function InGameState({ currentTime, currentPeriod, isHalfTime, status }) {
   return (
-    <div className={gameStateContainer}>
+    <div className={inGameStateContainer}>
       { isHalfTime
         ? <span>{status}</span>
         : <span>{`${currentTime} • ${currentPeriod}`}<sup>{inningSuffix(String(currentPeriod))}</sup></span>

@@ -1,0 +1,11 @@
+
+/* -------  details container  ------- */
+.diamondContainer {
+  padding: 1em;
+  display: flex;
+}
+
+/* -------  details container  ------- */
+.baseballField {
+  width: 50%;
+}

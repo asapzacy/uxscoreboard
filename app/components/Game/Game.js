@@ -4,7 +4,6 @@ import { GameState, Team, Expand, Details } from 'components'
 import { DetailsContainer } from 'containers'
 import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from 'helpers/props/teamProps'
 import { nbaGameStateProps, nhlGameStateProps } from 'helpers/props/gameStateProps'
-import Plus from 'react-icons/lib/md/add'
 import { gameItem, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
 
 const propTypes = {
@@ -38,6 +37,21 @@ const transitionsConfig = {
   }
 }
 
+function MlbGame({ game, date, league, showDetails, expanded }) {
+  const awayTeam = mlbTeamProps(game, 'away', league)
+  const homeTeam = mlbTeamProps(game, 'home', league)
+  return (
+    <li className={gameItem}>
+      <Team {...awayTeam} />
+      <Team {...homeTeam} />
+      <Expand expanded={expanded} showDetails={showDetails} />
+      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
+        { expanded && <DetailsContainer game={game} date={date} league={league} /> }
+      </VelocityTransitionGroup>
+    </li>
+  )
+}
+
 function NbaGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nbaTeamProps(game, 'visitor', league)
   const homeTeam = nbaTeamProps(game, 'home', league)
@@ -62,23 +76,6 @@ function NhlGame({ game, date, league, showDetails, expanded }) {
   return (
     <li className={gameItem}>
       <GameState {...gameState} />
-      <Team {...awayTeam} />
-      <Team {...homeTeam} />
-      <Expand expanded={expanded} showDetails={showDetails} />
-      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} enter={transitionsConfig.enter} leave={transitionsConfig.leave}>
-        { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
-      </VelocityTransitionGroup>
-    </li>
-  )
-}
-
-
-
-function MlbGame({ game, date, league, showDetails, expanded }) {
-  const awayTeam = mlbTeamProps(game, 'away', league)
-  const homeTeam = mlbTeamProps(game, 'home', league)
-  return (
-    <li className={gameItem}>
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <Expand expanded={expanded} showDetails={showDetails} />

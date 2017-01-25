@@ -15,7 +15,3 @@
 .boxScoreTableBody {
   composes:tableBody from 'styles/shared.css'
 }
-/* -------  box score table body - td:last-child  ------- */
-.boxScoreTableBody td:last-child {
-  font-weight:700;
-}

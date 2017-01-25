@@ -1,15 +1,29 @@
 
 import { shortenTeamName } from '../utils'
 
+
+export const mlbBoxScoreProps = (game, league) => {
+  return {
+    awayTeam: shortenTeamName(game.away_team_name),
+    homeTeam: shortenTeamName(game.home_team_name),
+    awayScore: game.linescore.r.away,
+    homeScore: game.linescore.r.home,
+    linescore: game.linescore,
+    periods:9,
+    totalPeriods: game.linescore.inning.length,
+    league
+  }
+}
+
+
 // nhl boxscores - periods + scores
 export const nhlBoxScoreProps = (game, league) => {
+  const inGame = game.status.codedGameState > '2'
   return {
-    // awayAbbr: game.teams.away.team.abbreviation.toUpperCase(),
-    // homeAbbr: game.teams.home.team.abbreviation.toUpperCase(),
-    awayAbbr: shortenTeamName(game.teams.away.team.teamName),
-    homeAbbr: shortenTeamName(game.teams.home.team.teamName),
-    awayScore: game.status.codedGameState > '2' ? game.linescore.teams.away.goals : '',
-    homeScore: game.status.codedGameState > '2' ? game.linescore.teams.home.goals : '',
+    awayTeam: shortenTeamName(game.teams.away.team.teamName),
+    homeTeam: shortenTeamName(game.teams.home.team.teamName),
+    awayScore: inGame ? game.linescore.teams.away.goals : '',
+    homeScore: inGame ? game.linescore.teams.home.goals : '',
     linescore: game.linescore.periods,
     periods: 3,
     totalPeriods: game.linescore.periods.length,
@@ -20,13 +34,14 @@ export const nhlBoxScoreProps = (game, league) => {
 export const nbaBoxScoreProps = (game, league) => {
   const inGame = game.period.current
   return {
-    // awayAbbr: game.vTeam.triCode,
-    // homeAbbr: game.hTeam.triCode,
-    awayAbbr: shortenTeamName(game['visitor'].nickname),
-    homeAbbr: shortenTeamName(game['home'].nickname),
+    awayTeam: shortenTeamName(game.visitor.nickname),
+    homeTeam: shortenTeamName(game.home.nickname),
     awayScore: inGame ? game.vTeam.score : '',
     homeScore: inGame ? game.hTeam.score : '',
-    linescore:  { away: game.vTeam.linescore, home: game.hTeam.linescore },
+    linescore:  {
+      away: game.vTeam.linescore,
+      home: game.hTeam.linescore
+    },
     periods: 4,
     totalPeriods: game.period.current,
     league

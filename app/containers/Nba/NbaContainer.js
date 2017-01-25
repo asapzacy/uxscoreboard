@@ -4,8 +4,6 @@ import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
 import { seasons } from 'helpers/seasons'
 
-import { getNbaGameDetails } from 'helpers/api'
-
 
 class NbaContainer extends Component {
   constructor() {

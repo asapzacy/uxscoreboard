@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
-import { Matchup, PanelMenu, BoxScore, Stats } from 'components'
+import { Matchup, PanelMenu, BoxScore, Stats, Diamond } from 'components'
 import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
-import { nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
+import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
 import { nbaStatsProps } from 'helpers/props/statsProps'
 import { detailsContainer } from './styles.css'
 
@@ -20,17 +20,35 @@ export default function Details(props) {
 
 Details.propTypes = propTypes
 
+
+
+
+
+function MlbDetails({ game, date, league, panel, switchPanel }) {
+  const matchupProps = mlbMatchupProps(game, date)
+  const boxScoreProps = mlbBoxScoreProps(game, league)
+  return (
+    <section className={detailsContainer}>
+      <Matchup {...matchupProps} />
+      <PanelMenu panel={panel} switchPanel={switchPanel} />
+      { panel === 'boxScore' && <BoxScore {...boxScoreProps} /> }
+      {/* { panel === 'boxScore' && <Diamond /> } */}
+    </section>
+  )
+}
+
+
 function NbaDetails({ game, date, league, panel, switchPanel }) {
   const matchupProps = nbaMatchupProps(game, date)
   const boxScoreProps = nbaBoxScoreProps(game, league)
   const statsProps = nbaStatsProps(game)
   return (
-    <div className={detailsContainer}>
+    <section className={detailsContainer}>
       <Matchup {...matchupProps} />
       <PanelMenu panel={panel} switchPanel={switchPanel} />
       { panel === 'boxScore' && <BoxScore {...boxScoreProps} /> }
       { panel === 'teamStats' && <Stats {...statsProps} /> }
-    </div>
+    </section>
   )
 }
 
@@ -40,21 +58,9 @@ function NhlDetails({ game, date, league }) {
   const matchupProps = nhlMatchupProps(game, date)
   const boxScoreProps = nhlBoxScoreProps(game, league)
   return (
-    <div className={detailsContainer}>
+    <section className={detailsContainer}>
       <Matchup {...matchupProps} />
       <BoxScore {...boxScoreProps} />
-    </div>
-  )
-}
-
-
-
-
-function MlbDetails({ game, date, league }) {
-  const matchupProps = mlbMatchupProps(game, date)
-  return (
-    <div className={detailsContainer}>
-      <Matchup {...matchupProps} />
-    </div>
+    </section>
   )
 }

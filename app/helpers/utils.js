@@ -39,14 +39,6 @@ export function formatDateStr(dt) {
   return moment(dt).format('MMMM D, YYYY')
 }
 
-
-export function formatTime(time) {
-  let hh = time.slice(0, 2)
-  const mm = time.slice(2, 4)
-  if (hh > 12) hh -= 12
-  return `${hh}:${mm}`
-}
-
 export function formatTimezone(time) {
   return moment(time).tz('America/New_York').format('h:mm A')
 }
@@ -60,16 +52,7 @@ export function inningSuffix(inning) {
   }
 }
 
-export function baseRunners(runners) {
-  let img = '0b'
-  if (runners.runner_on_1b)
-    img += '1b'
-  if (runners.runner_on_2b)
-    img += '2b'
-  if (runners.runner_on_3b)
-    img += '3b'
-  return img
-}
+
 
 export function ballCount(balls, inningState) {
   if (inningState === 'Middle' || inningState === 'End')

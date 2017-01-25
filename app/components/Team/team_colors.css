@@ -84,7 +84,7 @@
 .dal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#007dc5 40%,transparent 0%) }
 .den_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002d62 40%,transparent 0%) }
 .det_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ed174c 40%,transparent 0%) }
-.gsw_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.gsw_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#fdb927 40%,transparent 0%) }
 .hou_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .ind_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffc633 40%,transparent 0%) }
 .lac_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }

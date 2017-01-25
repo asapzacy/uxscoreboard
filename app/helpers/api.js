@@ -27,19 +27,10 @@ export const getNhlScores = (dt) => {
     .catch(currentScores => currentScores.status)
 }
 
-function getNbaDetails(dt) {
-  const url = `${corsAnywhere}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
-  return axios.get(url)
-}
-function getNbaStandings(dt) {
-  const url = `${corsAnywhere}http://data.nba.net/data/10s/prod/v1/${dt}/scoreboard.json`
-  return axios.get(url)
-}
-
 export function getNbaScores(dt) {
-  // const url = `${corsAnywhere}http://data.nba.net/data/10s/prod/v1/${dt}/scoreboard.json`
-  // const url = `${corsAnywhere}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
-  return axios.all([getNbaDetails(dt), getNbaStandings(dt)])
+  const url = `${corsAnywhere}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
+  const url2 = `${corsAnywhere}http://data.nba.net/data/10s/prod/v1/${dt}/scoreboard.json`
+  return axios.all([axios.get(url), axios.get(url2)])
     .then(axios.spread((details, standings) => Object.assign({}, details.data, standings.data)))
     .catch(currentScores => currentScores.status)
 }

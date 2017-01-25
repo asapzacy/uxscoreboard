@@ -31,6 +31,8 @@ export Matchup from './Matchup/Matchup'
 export PanelMenu from './PanelMenu/PanelMenu'
 export BoxScore from './BoxScore/BoxScore'
 export Stats from './Stats/Stats'
+export Diamond from './Diamond/Diamond'
+export Leaders from './Leaders/Leaders'
 
 /* -------  test component  ------- */
 export Test from './Test/Test'

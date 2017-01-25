@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Details } from 'components'
-import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
-
 
 class DetailsContainer extends Component {
   constructor() {

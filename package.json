@@ -1,7 +1,7 @@
 {
   "name": "uxscoreboard",
   "version": "1.0.0",
-  "description": "live sports scoreboard built on react.js",
+  "description": "A sports scoreboard web app built on react.js and es6; features all MLB, NBA, NFL (coming soon), and NHL season and playoff games.",
   "main": "server.js",
   "scripts": {
     "start": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress",

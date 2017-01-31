@@ -2,7 +2,6 @@
 // format table heading row
 export const formatBoxScoreTableHead = (periods, totalPeriods, league) => {
   let result = '<thead><tr><th></th>'
-  console.log(periods, totalPeriods)
   for (let i = 1; i <= periods; i++) {
     result += `<th>${i}</th>`
   }

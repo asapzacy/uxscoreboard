@@ -14,7 +14,7 @@ class DetailsContainer extends Component {
     this.setState({ panel: newPanel })
   }
   render() {
-    return <Details switchPanel={this.switchPanel} {...this.state} {...this.props}  />
+    return <Details switchPanel={this.switchPanel} {...this.state} {...this.props} />
   }
 }
 

@@ -21,8 +21,9 @@ export const shortenTeamName = (name) => {
   switch(name) {
     case 'Blue Jackets':  return 'Jackets'
     case 'Maple Leafs':   return 'Leafs'
-    case 'Trail Blazers': return 'Blazers'
+    case 'Metropolitan':  return 'Metro'
     case 'Timberwolves':  return 'T-Wolves'
+    case 'Trail Blazers': return 'Blazers'
     default:              return name
   }
 }

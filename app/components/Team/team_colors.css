@@ -36,7 +36,7 @@
 .nyy_mlb * { z-index:1; }
 .nyy_mlb::before { content:'';position:absolute;left:0;top:0;width:40%;height:100%;background-position:-27.5% 100%; }
 .nyy_mlb::before { background-size:15px;background-image:linear-gradient(to right,#ffffff 86%,#142448 14%) }
-/*  special case for the all-star game  */
+/*  special case for the mlb all-star game  */
 .nl_mlb  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#7f411c 40%,transparent 0%) }
 .al_mlb  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#fec325 40%,transparent 0%) }
 
@@ -72,6 +72,11 @@
 .van_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#c4ced3 40%,transparent 0%); }
 .wpg_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#041e41 40%,transparent 0%); }
 .wsh_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#cf0a2c 40%,transparent 0%); }
+/*  special case for the nhl all-star game  */
+.atl_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffb81c 40%,transparent 0%); }
+.cen_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#582c83 40%,transparent 0%); }
+.met_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%); }
+.pac_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#010101 40%,transparent 0%); }
 
 
 /* -------  nba teams  ------- */

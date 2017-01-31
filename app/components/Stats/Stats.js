@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { formatStatsTableHead, formatStatsTableBody } from 'helpers/statsFns'
 import { statsContainer, statsTable, statsTableHead, statsTableBody } from './styles.css'
 

@@ -4,7 +4,6 @@ import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
 import { seasons } from 'helpers/seasons'
 
-
 class NbaContainer extends Component {
   constructor() {
     super()
@@ -63,6 +62,12 @@ class NbaContainer extends Component {
                       3: { score: null }
                     }
           }
+        }
+        if (game.home.stats.points === undefined) {
+          game.home.stats.points = null
+        }
+        if (game.visitor.stats.points === undefined) {
+          game.visitor.stats.points = null
         }
       })
     }

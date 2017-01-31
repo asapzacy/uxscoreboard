@@ -36,12 +36,12 @@ export default function Scoreboard({ scores, date, today, league }) {
       })
   }
   return (
-    <div className={scoreboardContainer}>
+    <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
       <ul className={gamesList}>
         {games}
       </ul>
-    </div>
+    </main>
   )
 }
 

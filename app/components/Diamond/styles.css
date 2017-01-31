@@ -4,8 +4,19 @@
   padding: 1em;
   display: flex;
 }
-
 /* -------  details container  ------- */
 .baseballField {
   width: 50%;
+}
+
+.infoContainer {
+  
+}
+
+.ballStrikesOuts {
+}
+.runnersOnBase {
+
+}
+.hitterPitcher {
 }

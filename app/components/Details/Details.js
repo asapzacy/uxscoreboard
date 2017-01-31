@@ -21,9 +21,6 @@ export default function Details(props) {
 Details.propTypes = propTypes
 
 
-
-
-
 function MlbDetails({ game, date, league, panel, switchPanel }) {
   const matchupProps = mlbMatchupProps(game, date)
   const boxScoreProps = mlbBoxScoreProps(game, league)
@@ -32,11 +29,10 @@ function MlbDetails({ game, date, league, panel, switchPanel }) {
       <Matchup {...matchupProps} />
       <PanelMenu panel={panel} switchPanel={switchPanel} />
       { panel === 'boxScore' && <BoxScore {...boxScoreProps} /> }
-      {/* { panel === 'boxScore' && <Diamond /> } */}
+      { panel === 'boxScore' && <Diamond /> }
     </section>
   )
 }
-
 
 function NbaDetails({ game, date, league, panel, switchPanel }) {
   const matchupProps = nbaMatchupProps(game, date)

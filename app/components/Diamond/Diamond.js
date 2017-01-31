@@ -1,13 +1,27 @@
 import React from 'react'
-import { createDiamond } from 'helpers/diamondFns'
-import { diamondContainer, baseballField } from './styles.css'
+import { createDiamondImg } from 'helpers/diamondFns'
+import { diamondContainer, baseballField, infoContainer, ballStrikesOuts,
+  runnersOnBase, hitterPitcher } from './styles.css'
 
 export default function Diamond() {
-  const file = createDiamond()
+  const img = createDiamondImg()
   return (
     <section className={diamondContainer}>
       <div className={baseballField}>
-        <img src={`/assets/img/mlb/other/${file}.svg`} />
+        <img src={`/assets/img/mlb/other/${img}.svg`} />
+      </div>
+      <div className={infoContainer}>
+        <div className={ballStrikesOuts}>
+
+        </div>
+
+        <div className={runnersOnBase}>
+
+        </div>
+
+        <div className={hitterPitcher}>
+
+        </div>
       </div>
     </section>
   )

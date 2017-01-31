@@ -1,9 +1,0 @@
-.pitchingInfo {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height:50px;
-  line-height: 1.6;
-  margin: 1em 0 0;
-}

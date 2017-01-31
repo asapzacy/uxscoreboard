@@ -1,41 +1,6 @@
-.scoreboardContainer {
-  width: 93.33%;
-  margin: 0 auto 8em;
-  text-align: center;
-}
 
-.scoresContainer {
-  display: flex;
-  text-align: left;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.scoresContainer h1 {
-  color: #bdbdbd;
-  font-weight: 100;
-  font-size: 3.5em;
-  margin: 2em 0;
-}
-
-
-
-
-
-
-.gameContainer {
-  background: #f5f5f5;
-  color: #070707;
-  border: 2px solid #f5f5f5;
-  margin: 2.25%;
-  flex-basis: 27.5%;
-}
-
-.expandIcon {
-  cursor: pointer;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* -------  nfl container (temporary)  ------- */
+.nflContainer {
+  text-align:center;
+  composes:standardContainer from 'styles/shared.css';
 }

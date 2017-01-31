@@ -37,8 +37,3 @@ export Leaders from './Leaders/Leaders'
 
 /* -------  test component  ------- */
 export Test from './Test/Test'
-
-/* -------  need to deal with components..  ------- */
-export PreGameInfo from './PreGameInfo/PreGameInfo'
-export MidGameInfo from './MidGameInfo/MidGameInfo'
-export PostGameInfo from './PostGameInfo/PostGameInfo'

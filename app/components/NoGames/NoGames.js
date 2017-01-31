@@ -1,8 +1,8 @@
 import React from 'react'
-import { } from './styles.css'
+import { noGamesContainer } from './styles.css'
 
 export default function NoGames() {
   return (
-    <h1>{'no games'}</h1>
+    <li className={noGamesContainer}>{'no games today'}</li>
   )
 }

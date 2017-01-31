@@ -23,10 +23,11 @@ export const nbaMatchupProps = (game, date) => {
 
 //  nhl matchup props --> Matchup component
 export const nhlMatchupProps = (game, date) => {
+  const isAllStar = game.gameType === 'A'
   return {
     awayTeam: game.teams.away.team.teamName,
     homeTeam: game.teams.home.team.teamName,
-    location: game.teams.home.team.venue.city,
+    location: isAllStar ? 'Los Angeles' : game.teams.home.team.venue.city,
     venue: game.venue.name,
     date
   }

@@ -32,12 +32,13 @@ export const nbaTeamProps = (game, side, league) => {
 //  nhl home + away team props --> Team component
 export const nhlTeamProps = (game, side, league) => {
   const inGame = game.status.codedGameState > '2'
+  const isAllStar = game.gameType === 'A'
   return {
     name: shortenTeamName(game.teams[side].team.teamName),
     code: game.teams[side].team.abbreviation.toLowerCase(),
-    ws: String(game.teams[side].leagueRecord.wins),
-    ls: String(game.teams[side].leagueRecord.losses),
-    ts: String(game.teams[side].leagueRecord.ot),
+    ws: isAllStar ? null : String(game.teams[side].leagueRecord.wins),
+    ls: isAllStar ? null : String(game.teams[side].leagueRecord.losses),
+    ts: isAllStar ? null : String(game.teams[side].leagueRecord.ot),
     score: inGame ? String(game.teams[side].score) : null,
     league
   }

@@ -8,6 +8,7 @@ export Footer from './Footer/Footer'
 export About from './About/About'
 export NotFound from './NotFound/NotFound'
 export Loading from './Loading/Loading'
+export NoGames from './NoGames/NoGames'
 
 /* -------  league components  ------- */
 export Mlb from './Mlb/Mlb'

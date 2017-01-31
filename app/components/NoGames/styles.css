@@ -1,0 +1,14 @@
+
+/* -------  no games container  ------- */
+.noGamesContainer {
+  font-size:1.2em;
+  padding:0.8em 1.6em;
+  border:1px solid currentColor;
+  composes:standardContainer from 'styles/shared.css';
+}
+
+@media only screen and (min-width:667px) {
+  .noGamesContainer {
+    font-size:1.6em;
+  }
+}

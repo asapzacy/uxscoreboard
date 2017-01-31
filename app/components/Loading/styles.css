@@ -1,7 +1,7 @@
 
 /* -------  loading container  ------- */
 .loadingContainer {
-  margin-top:25%;
+  composes:standardContainer from 'styles/shared.css';
 }
 
 /* -------  svg container  ------- */
@@ -64,9 +64,6 @@
 
 
 @media only screen and (min-width:667px) {
-  .loadingContainer {
-    margin-top:12%
-  }
   .svgContainer {
     width:90px
   }

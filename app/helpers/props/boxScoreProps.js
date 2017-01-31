@@ -35,13 +35,14 @@ export const nbaBoxScoreProps = (game, league) => {
 
 export const nhlBoxScoreProps = (game, league) => {
   const inGame = game.status.codedGameState > '2'
+  const isAllStar = game.gameType === 'A'
   return {
     awayTeam: shortenTeamName(game.teams.away.team.teamName),
     homeTeam: shortenTeamName(game.teams.home.team.teamName),
     awayScore: inGame ? game.linescore.teams.away.goals : '',
     homeScore: inGame ? game.linescore.teams.home.goals : '',
     linescore: game.linescore.periods,
-    periods: 3,
+    periods: isAllStar ? 2 : 3,
     totalPeriods: game.linescore.periods.length,
     league
   }

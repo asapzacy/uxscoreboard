@@ -20,7 +20,7 @@ export default function Nfl({ isLoading, isValid, scores, date, today, league })
     <div>
       { isLoading
         ? <Loading />
-        : <div className={nflContainer}><h1>{'sorry :/'}</h1><h2>{'coming soon.. '}</h2></div>
+        : <section className={nflContainer}><h1>{'sorry :/'}</h1><h2>{'coming soon.. '}</h2></section>
       }
     </div>
   )

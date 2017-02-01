@@ -1,20 +1,60 @@
 
-/* -------  details container  ------- */
+/* -------  diamond container  ------- */
 .diamondContainer {
-  padding: 1em;
-  display: flex;
+  margin-top:1.5em;
+  display:flex;
+  justify-content:space-between;
 }
-/* -------  details container  ------- */
+
+/* -------  baseball field  ------- */
 .baseballField {
-  width: 50%;
+  width:48%;
+  display:flex;
+  align-items:center;
+  padding:1%;
 }
 
-.infoContainer {
-  
+/* -------  other info  ------- */
+.otherInfo {
+  width:48%;
+  display:flex;
+  align-items:flex-end;
 }
 
-.ballStrikesOuts {
+/* -------  bso container  ------- */
+.bsoContainer {
+  margin:0 0 5% 5%;
+  text-align:left;
 }
+/* -------  bso  ------- */
+.bso {
+}
+/* -------  bso heading  ------- */
+.bsoHeading {
+  font:1.1em/100% monospace;
+  display:inline-block;
+  width:1.25em;
+  letter-spacing:-1px;
+}
+/* -------  bso data  ------- */
+.bsoData {
+}
+
+:global(.circle) {
+  width:11px;
+  height:11px;
+  display:inline-block;
+  margin:0 2px;
+  border-radius:50%;
+  background:#aaa;
+}
+:global(.circleFilled) {
+  background:#ba0021;
+}
+
+
+
+
 .runnersOnBase {
 
 }

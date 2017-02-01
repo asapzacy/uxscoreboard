@@ -1,7 +1,7 @@
 import React from 'react'
 import { createDiamondImage, ballsCount, strikesOutsCount } from 'helpers/diamondFns'
-import { diamondContainer, baseballField, otherInfo, bsoContainer,
-  bso, bsoHeading, bsoData, runnersOnBase, hitterPitcher } from './styles.css'
+import { diamondContainer, baseballFieldContainer, baseballField, otherInfo,
+  bsoContainer, bso, bsoHeading, bsoData, runnersOnBase, hitterPitcher } from './styles.css'
 
 export default function Diamond() {
   const img = createDiamondImage()
@@ -16,8 +16,8 @@ export default function Diamond() {
   const outsData = strikesOutsCount(config.outs, config.inningState)
   return (
     <section className={diamondContainer}>
-      <div className={baseballField}>
-        <img src={`/assets/img/mlb/other/${img}.svg`} />
+      <div className={baseballFieldContainer}>
+        <img className={baseballField} src={`/assets/img/mlb/other/${img}.svg`} />
       </div>
       <div className={otherInfo}>
 

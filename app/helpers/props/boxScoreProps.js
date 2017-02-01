@@ -1,6 +1,7 @@
 
 import { shortenTeamName } from '../utils'
 
+//  mlb box score props --> BoxScore component
 export const mlbBoxScoreProps = (game, league) => {
   return {
     awayTeam: shortenTeamName(game.away_team_name),
@@ -10,10 +11,12 @@ export const mlbBoxScoreProps = (game, league) => {
     linescore: game.linescore,
     periods: 9,
     totalPeriods: game.linescore.inning.length,
+    overtimes: game.linescore.inning.length > 9 ? game.linescore.inning.length - 9 : 0,
     league
   }
 }
 
+//  nba box score props --> BoxScore component
 export const nbaBoxScoreProps = (game, league) => {
   const inGame = game.period.current
   return {
@@ -27,12 +30,13 @@ export const nbaBoxScoreProps = (game, league) => {
     },
     points: inGame ? game.home.stats.points : '',
     periods: 4,
-    totalPeriods: game.period.current,
+    totalPeriods: Number(game.period_time.period_value),
+    overtimes: game.period_time.period_value > 4 ? Number(game.period_time.period_value) - 4 : 0,
     league
   }
 }
 
-
+//  nhl box score props --> BoxScore component
 export const nhlBoxScoreProps = (game, league) => {
   const inGame = game.status.codedGameState > '2'
   const isAllStar = game.gameType === 'A'

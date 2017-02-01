@@ -1,16 +1,14 @@
 
 import { shortenTeamName } from '../utils'
 
+//  nba stats props --> Stats component
 export const nbaStatsProps = (game) => {
   const awayStats = game.visitor.stats
   const homeStats = game.home.stats
   const inGame = game.period.current
   const empty = ['', '']
   return {
-    'teams': [
-      shortenTeamName(game.visitor.nickname),
-      shortenTeamName(game.home.nickname)
-    ],
+    'teams': [ shortenTeamName(game.visitor.nickname),shortenTeamName(game.home.nickname)],
     'Points': inGame ? [ awayStats.points, homeStats.points ] : empty,
     'Field-Goal %': inGame ? [ awayStats.field_goals_percentage, homeStats.field_goals_percentage ] : empty,
     '3-Point %': inGame ? [ awayStats.three_pointers_percentage, homeStats.three_pointers_percentage ] : empty,

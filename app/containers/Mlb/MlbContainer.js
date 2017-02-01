@@ -50,6 +50,23 @@ class MlbContainer extends Component {
   cleanGameData(scores) {
     if (scores.game !== undefined) {
       if (scores.game[0] === undefined) {
+        if (scores.game.linescore === undefined) {
+          scores.game.linescore = {
+            r: { away: null, home: null },
+            h: { away: null, home: null },
+            e: { away: null, home: null },
+            inning: { 0: { away: null, home: null },
+                      1: { away: null, home: null },
+                      2: { away: null, home: null },
+                      3: { away: null, home: null },
+                      4: { away: null, home: null },
+                      5: { away: null, home: null },
+                      6: { away: null, home: null },
+                      7: { away: null, home: null },
+                      8: { away: null, home: null }
+                    }
+          }
+        }
         if (scores.game.review === undefined) {
           scores.game.review = {
             challenges_away_remaining: { null },

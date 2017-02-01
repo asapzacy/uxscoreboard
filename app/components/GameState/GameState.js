@@ -11,27 +11,30 @@ export default function GameState(props) {
 
 function PreGameState({ time }) {
   return (
-    <div className={gameStateContainer}>
+    <section className={gameStateContainer}>
       <span>{time}</span>
-    </div>
+    </section>
   )
 }
 
 function InGameState({ currentTime, currentPeriod, isHalfTime, status }) {
   return (
-    <div className={inGameStateContainer}>
+    <section className={inGameStateContainer}>
       { isHalfTime
         ? <span>{status}</span>
         : <span>{`${currentTime} • ${currentPeriod}`}<sup>{inningSuffix(String(currentPeriod))}</sup></span>
       }
-    </div>
+    </section>
   )
 }
 
-function PostGameState({ totalPeriods, periods, status, overtime}) {
+function PostGameState({ periods, totalPeriods, status, overtime,
+   isDoubleHeader, doubleHeader, isPlayoffs, playoffs }) {
   return (
-    <div className={gameStateContainer}>
+    <section className={gameStateContainer}>
       <span>{totalPeriods > periods ? `${status}/${overtime}` : status}</span>
-    </div>
+      { isDoubleHeader && <span>{`Game ${doubleHeader} of 2`}</span> }
+      { isPlayoffs && <span>{`${playoffs.series} - Game ${playoffs.game} of ${playoffs.maxGames}`}</span> }
+    </section>
   )
 }

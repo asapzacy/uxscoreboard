@@ -1,14 +1,14 @@
 
 /* -------  game state container  ------- */
 .gameStateContainer {
+  display:flex;
+  justify-content:space-between;
   font-size:0.8em;
   padding:4px 12px;
 }
+
+/* -------  in-game state container  ------- */
 .inGameStateContainer {
   text-align:right;
   composes:gameStateContainer;
-}
-/* -------  game state text  ------- */
-.gameStateText {
-  display:flex;
 }

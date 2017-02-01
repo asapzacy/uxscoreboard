@@ -1,7 +1,8 @@
 
 // format table heading row
-export const formatBoxScoreTableHead = (periods, totalPeriods, league) => {
-  let result = '<thead><tr><th></th>'
+export const formatBoxScoreTableHead = (periods, totalPeriods, league, overtimes) => {
+  const width = overtimes > 3 ? '25%' : overtimes ? '30%' : '40%'
+  let result = `<thead><tr><th style="width:${width}"></th>`
   for (let i = 1; i <= periods; i++) {
     result += `<th>${i}</th>`
   }

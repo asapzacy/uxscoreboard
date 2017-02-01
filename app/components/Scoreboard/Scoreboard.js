@@ -16,7 +16,7 @@ export default function Scoreboard({ scores, date, today, league }) {
   if (league === 'mlb') {
     games = scores.game === undefined
       ? <NoGames />
-      : scores.game[0] === undefined
+      : !Array.isArray(scores.game)
         ? <GameContainer game={scores.game} date={date} league={league} key={scores.game.game_pk} />
         : scores.game.filter(item => item.game_type !== 'S').map(item => <GameContainer game={item} date={date} league={league} key={item.game_pk} />)
   }

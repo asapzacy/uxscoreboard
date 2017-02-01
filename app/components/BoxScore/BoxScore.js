@@ -4,8 +4,8 @@ import { boxScoreContainer, boxScoreTable, boxScoreTableHead, boxScoreTableBody,
   boxScoreTableRow } from './styles.css'
 
 export default function BoxScore({ awayTeam, homeTeam, awayScore, homeScore,
-  linescore, periods, totalPeriods, league }) {
-  const boxScoreHead = formatBoxScoreTableHead(periods, totalPeriods, league)
+  linescore, periods, totalPeriods, league, overtimes }) {
+  const boxScoreHead = formatBoxScoreTableHead(periods, totalPeriods, league, overtimes)
   const awayTeamRow = formatBoxScoreTableBodyRow(awayTeam, awayScore, 'away', linescore, periods, totalPeriods, league)
   const homeTeamRow = formatBoxScoreTableBodyRow(homeTeam, homeScore, 'home', linescore, periods, totalPeriods, league)
   return (

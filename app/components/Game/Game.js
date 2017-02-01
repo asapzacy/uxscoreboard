@@ -3,7 +3,7 @@ import { VelocityTransitionGroup } from 'velocity-react'
 import { GameState, Team, Expand, Details } from 'components'
 import { DetailsContainer } from 'containers'
 import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from 'helpers/props/teamProps'
-import { nbaGameStateProps, nhlGameStateProps } from 'helpers/props/gameStateProps'
+import { mlbGameStateProps, nbaGameStateProps, nhlGameStateProps } from 'helpers/props/gameStateProps'
 import { gameItem, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
 
 const propTypes = {
@@ -18,6 +18,7 @@ export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
   if (props.league === 'nba') return <NbaGame {...props} />
   if (props.league === 'nhl') return <NhlGame {...props} />
+  return <h1>{'i hope this doesn\'t run'}</h1>
 
 }
 
@@ -38,10 +39,12 @@ const transitionsConfig = {
 }
 
 function MlbGame({ game, date, league, showDetails, expanded }) {
+  const gameState = mlbGameStateProps(game)
   const awayTeam = mlbTeamProps(game, 'away', league)
   const homeTeam = mlbTeamProps(game, 'home', league)
   return (
     <li className={gameItem}>
+      <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <Expand expanded={expanded} showDetails={showDetails} />
@@ -53,9 +56,9 @@ function MlbGame({ game, date, league, showDetails, expanded }) {
 }
 
 function NbaGame({ game, date, league, showDetails, expanded }) {
+  const gameState = nbaGameStateProps(game)
   const awayTeam = nbaTeamProps(game, 'visitor', league)
   const homeTeam = nbaTeamProps(game, 'home', league)
-  const gameState = nbaGameStateProps(game, league)
   return (
     <li className={gameItem}>
       <GameState {...gameState} />
@@ -70,9 +73,9 @@ function NbaGame({ game, date, league, showDetails, expanded }) {
 }
 
 function NhlGame({ game, date, league, showDetails, expanded }) {
+  const gameState = nhlGameStateProps(game)
   const awayTeam = nhlTeamProps(game, 'away', league)
   const homeTeam = nhlTeamProps(game, 'home', league)
-  const gameState = nhlGameStateProps(game, league)
   return (
     <li className={gameItem}>
       <GameState {...gameState} />

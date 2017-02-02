@@ -1,16 +1,64 @@
+
+/* -------  about container  ------- */
 .aboutContainer {
-  text-align: center;
-  margin: 0 auto 10em;
-  width:74%;
+  width:100%;
+  padding:0 2%;
+  display:flex;
+  flex-direction:column;
+  counter-reset:section;
+  composes:standardContainer from 'styles/shared.css';
 }
 
-.header {
-  font-weight: 100;
-  font-size: 5em;
+
+
+/* -------  about header  ------- */
+.aboutHeader {
+  font-size:2em;
+  margin-bottom:0.5em;
+  text-align:center;
 }
 
-.info {
-  font-weight: 100;
-  font-size: 1.6em;
-  line-height: 2;
+/* -------  about header  ------- */
+.aboutIntro {
+  margin-bottom:2em;
+}
+
+/* -------  about header  ------- */
+.aboutLink {
+  border-bottom:1px solid currentColor;
+}
+
+/* -------  about header  ------- */
+.aboutSection {
+  margin-bottom:2em;
+}
+
+/* -------  about header  ------- */
+.aboutSubHeader {
+  margin-bottom:0.5em;
+}
+.aboutSubHeader::before {
+  display: inline;
+  border-bottom: 1px solid #070707;
+  margin-right: .4em;
+  counter-increment: section;
+  content: counter(section,lower-roman) ". ";
+}
+
+/* -------  about header  ------- */
+.aboutInfo {
+  margin-bottom:1em;
+}
+
+/* -------  about header  ------- */
+.aboutList {
+  font-size:.9em;
+  padding-left:2em;
+  margin-bottom:2em;
+  list-style-type:circle;
+}
+
+/* -------  about header  ------- */
+.aboutListItem {
+  margin:0.5em 0;
 }

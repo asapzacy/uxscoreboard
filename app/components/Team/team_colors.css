@@ -52,7 +52,7 @@
 .chi_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#cf0a2c 40%,transparent 0%); }
 .col_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#006bb6 40%,transparent 0%); }
 .dal_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#006847 40%,transparent 0%); }
-.det_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ce1126 40%,transparent 0%); }
+.det_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%); }
 .edm_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%); }
 .fla_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002654 40%,transparent 0%); }
 .lak_nhl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#111111 40%,transparent 0%); }

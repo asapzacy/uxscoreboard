@@ -9,6 +9,6 @@
 
 /* -------  in-game state container  ------- */
 .inGameStateContainer {
-  text-align:right;
+  justify-content:flex-end;
   composes:gameStateContainer;
 }

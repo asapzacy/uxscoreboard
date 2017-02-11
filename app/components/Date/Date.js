@@ -1,7 +1,10 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import moment from 'moment'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/lib/fa'
+// import { FaAngleLeft, FaAngleRight } from 'react-icons/lib/fa'
+import AngleRight from 'react-icons/lib/fa/angle-right'
+import AngleLeft from 'react-icons/lib/fa/angle-left'
+
 import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink } from './styles.css'
 
 const propTypes = {
@@ -43,7 +46,7 @@ function Day({ date, today, league, diff, isArrow }) {
     <Link className={isMainLink ? mainLink : dateLink} to={`/${league}/scores/${url}`} title={title}>
       { !isArrow
         ? <span>{formattedDate}</span>
-        : diff < 0 ? <FaAngleLeft /> : <FaAngleRight />
+        : diff < 0 ? <AngleLeft /> : <AngleRight />
       }
     </Link>
   )

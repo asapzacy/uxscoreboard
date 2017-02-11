@@ -1,9 +1,9 @@
 
-/* -------  base containers  ------- */
+/* -------  main container  ------- */
 export MainContainer from './Main/MainContainer'
-export HomeContainer from './Home/HomeContainer'
 
 /* -------  random containers  ------- */
+export HomeContainer from './Home/HomeContainer'
 export AboutContainer from './About/AboutContainer'
 export NotFoundContainer from './NotFound/NotFoundContainer'
 

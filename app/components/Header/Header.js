@@ -8,7 +8,7 @@ export default function Header({isMenuOpen, menuHeight, triggerMenu}) {
   return (
     <header className={isMenuOpen ? menuOpen : headerContainer}>
       <div className={logoContainer}>
-        <Link to='/'><img className={logo} src='/assets/img/uxscoreboard.svg' alt={'uxscoreboard logo'}/></Link>
+        <Link to='/'><img className={logo} src={'/assets/img/uxscoreboard.svg'} alt={'uxscoreboard logo'}/></Link>
         <span className={trigger} onClick={triggerMenu}>
           <span className={triggerTop}></span>
           <span className={triggerBottom}></span>

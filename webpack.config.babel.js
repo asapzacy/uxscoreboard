@@ -64,7 +64,7 @@ const base = {
   ],
   output: {
     path: PATHS.build,
-    filename: 'bundle.js'
+    filename: './bundle.js'
   },
   module: {
     rules: [

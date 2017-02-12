@@ -43,13 +43,13 @@ const postCSSPlugin = new webpack.LoaderOptionsPlugin({
 })
 
 const statsWriterPlugin = new StatsWriterPlugin({
-  filename: '/webpack_stats.json',
+  filename: './webpack_stats.json',
   fields: null,
   stats: { chunkModules: true }
 })
 
 const visualizerPlugin = new VisualizerPlugin({
-  filename: '/webpack_stats.html'
+  filename: './webpack_stats.html'
 })
 
 const productionPlugin = new webpack.DefinePlugin({
@@ -64,7 +64,8 @@ const base = {
   ],
   output: {
     path: PATHS.build,
-    filename: '/bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [

@@ -11,7 +11,8 @@ const propTypes = {
   league: PropTypes.string.isRequired
 }
 
-export default function Scoreboard({ scores, date, today, league }) {
+export default function Scoreboard(props) {
+  const { scores, date, today, league, ...props } = props
   let games
   if (league === 'mlb') {
     games = scores.game === undefined

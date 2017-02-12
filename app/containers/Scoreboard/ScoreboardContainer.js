@@ -6,25 +6,29 @@ class ScoreboardContainer extends Component {
   constructor() {
     super()
     this.state = {
-      isPreSeason: false,
-      isRegularSeason: false,
+      isPreseason: false,
+      isSeason: false,
       isAllStar: false,
       isPlayoffs: false,
       isFinals: false
     }
   }
-  componentWillReceiveProps() {
+  componentDidMount() {
     const seasonDates = seasons[this.props.league].seasons[this.props.season]
-    this.checkDates(seasonDates)
+    this.checkDates(this.props.date, seasonDates)
   }
-  checkDates(dates) {
-    const checkDay = (start, end) => start <= this.props.date && this.props.date <= end
+  componentWillReceiveProps(nextProps) {
+    const seasonDates = seasons[this.props.league].seasons[this.props.season]
+    this.checkDates(nextProps.date, seasonDates)
+   }
+  checkDates(day, dates) {
+    const checkDay = (day, start, end) => (day >= start) && (day <= end)
     this.setState({
-      isPreSeason: checkDay(dates.preseason[0], dates.preseason[1]),
-      isRegularSeason: checkDay(dates.season[0], dates.season[1]),
-      isAllStar: checkDay(dates.allstar[0], dates.allstar[1]),
-      isPlayoffs: checkDay(dates.playoffs[0], dates.playoffs[1]),
-      isFinals: checkDay(dates.finals[0], dates.finals[1])
+      isPreseason: checkDay(day, dates.preseason[0], dates.preseason[1]),
+      isSeason: checkDay(day, dates.season[0], dates.season[1]),
+      isAllStar: checkDay(day, dates.allstar[0], dates.allstar[1]),
+      isPlayoffs: checkDay(day, dates.playoffs[0], dates.playoffs[1]),
+      isFinals: checkDay(day, dates.finals[0], dates.finals[1])
     })
   }
   render() {

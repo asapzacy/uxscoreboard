@@ -4,7 +4,7 @@ import { Details } from 'components'
 class DetailsContainer extends Component {
   constructor() {
     super()
-    this.state = { panel: '' }
+    this.state = { panel: '', details: {} }
     this.switchPanel = this.switchPanel.bind(this)
   }
   componentDidMount() {
@@ -12,6 +12,9 @@ class DetailsContainer extends Component {
   }
   switchPanel(newPanel) {
     this.setState({ panel: newPanel })
+  }
+  updateDetails(newDetails) {
+    this.setState({ details: newDetails })
   }
   render() {
     return <Details switchPanel={this.switchPanel} {...this.state} {...this.props} />

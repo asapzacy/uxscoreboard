@@ -33,7 +33,7 @@ const browserSyncPlugin = new BrowserSyncPlugin({
   ui: { port: 8080, weinre: { port: 9090 }}
 }, { reload: false })
 
-const postCSSPlugin = new webpack.LoaderOptionsPlugin({
+const postcssPlugin = new webpack.LoaderOptionsPlugin({
   options: {
     context: PATHS.app,
     postcss: [
@@ -107,12 +107,12 @@ const developmentConfig = {
     host: HOST,
     port: PORT
   },
-  plugins: [ HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin(), browserSyncPlugin, postCSSPlugin ]
+  plugins: [ HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin(), browserSyncPlugin, postcssPlugin ]
 }
 
 const productionConfig = {
   devtool: 'cheap-module-source-map',
-  plugins: [ HTMLWebpackPluginConfig, productionPlugin, postCSSPlugin, statsWriterPlugin, visualizerPlugin ]
+  plugins: [ HTMLWebpackPluginConfig, productionPlugin, postcssPlugin, statsWriterPlugin, visualizerPlugin ]
 }
 
 export default Object.assign({}, base, isProduction ? productionConfig : developmentConfig)

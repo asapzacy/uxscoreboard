@@ -19,6 +19,8 @@ export Nhl from './Nhl/Nhl'
 /* -------  scoreboard components  ------- */
 export Scoreboard from './Scoreboard/Scoreboard'
 export Date from './Date/Date'
+export Playoffs from './Playoffs/Playoffs'
+export AllStar from './AllStar/AllStar'
 
 /* -------  game components  ------- */
 export Game from './Game/Game'

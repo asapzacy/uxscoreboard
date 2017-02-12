@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { NoGames } from 'components'
+import { NoGames, AllStar } from 'components'
 import { GameContainer, DateContainer } from 'containers'
 import { scoreboardContainer, gamesList, gamesHeader } from './styles.css'
 import { getNbaGameDetails } from 'helpers/api'
@@ -35,12 +35,17 @@ export default function Scoreboard({ scores, date, today, league }) {
         return <GameContainer game={combined} date={date} league={league} key={item.id} />
       })
   }
+  let isAllStar
+  if (league === 'nba' && date === '20170219') {
+    isAllStar = true
+  }
   return (
     <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
       <ul className={gamesList}>
         {games}
       </ul>
+      { isAllStar && <AllStar img={'asg'} league={league} /> }
     </main>
   )
 }

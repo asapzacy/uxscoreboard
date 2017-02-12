@@ -112,5 +112,5 @@
 .was_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002b5c 40%,transparent 0%) }
 
 /*  special case for the all-star game */
-.west_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#7f411c 40%,transparent 0%) }
-.east_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#fec325 40%,transparent 0%) }
+.wst_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.est_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }

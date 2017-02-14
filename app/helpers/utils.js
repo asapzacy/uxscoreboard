@@ -1,10 +1,11 @@
 import moment from 'moment'
 import timezone from 'moment-timezone'
 
-
 export const getTodaysDate = () => moment().format('YYYYMMDD')
 
 export const isValidDate = (dt) => dt.length === 8 && Number.isInteger(Number(dt))
+
+export const checkDay = (day, start, end) => (day >= start) && (day <= end)
 
 // check if date is in season
 // if not - return date closest to start of next season or end of last season
@@ -27,10 +28,6 @@ export const shortenTeamName = (name) => {
     default:              return name
   }
 }
-
-// export const isInSeason = (dt, start, end) => dt >= start && dt <= end
-export const isNotInSeason = (dt, start, end) => dt >= start && dt <= end
-
 
 export function formatDateUrl() {
   return moment().format('YYYYMMDD')

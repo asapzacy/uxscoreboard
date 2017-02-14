@@ -1,5 +1,4 @@
 
-
 /* -------  mlb teams  ------- */
 .ana_mlb { composes:teamContainer from './styles.css';background:linear-gradient(to right,#ba0021 40%,transparent 0%) }
 .ari_mlb { composes:teamContainer from './styles.css';background:linear-gradient(to right,#000000 40%,transparent 0%) }
@@ -110,7 +109,8 @@
 .tor_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#061922 40%,transparent 0%) }
 .uta_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002b5c 40%,transparent 0%) }
 .was_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002b5c 40%,transparent 0%) }
-
 /*  special case for the all-star game */
+.wld_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
+.usa_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .wst_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .est_nba { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }

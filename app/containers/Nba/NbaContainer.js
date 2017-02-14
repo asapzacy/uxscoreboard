@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Nba } from 'components'
 import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
-// import { seasons } from 'helpers/seasons'
 
 class NbaContainer extends Component {
   constructor() {
@@ -11,7 +10,7 @@ class NbaContainer extends Component {
       isLoading: true,
       isValid: false,
       scores: {},
-      season: '',
+      year: '',
       date: '',
       today: ''
     }
@@ -33,16 +32,16 @@ class NbaContainer extends Component {
         this.setState({
           isLoading: false,
           scores: currentScores,
-          season: currentScores.sports_content.sports_meta.season_meta.season_year,
+          year: currentScores.sports_content.sports_meta.season_meta.season_year,
           date: dt
         })
       })
       .catch((error) =>  {
-        throw new Error(error)
         this.setState({
           isLoading: false,
           date: dt
         })
+        throw new Error(error)
       })
   }
   cleanGameData(scores) {

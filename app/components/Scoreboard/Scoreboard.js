@@ -11,8 +11,7 @@ const propTypes = {
   league: PropTypes.string.isRequired
 }
 
-export default function Scoreboard(props) {
-  const { scores, date, today, league, ...props } = props
+export default function Scoreboard({ scores, date, today, league, seasonState }) {
   let games
   if (league === 'mlb') {
     games = scores.game === undefined
@@ -36,9 +35,9 @@ export default function Scoreboard(props) {
         return <GameContainer game={combined} date={date} league={league} key={item.id} />
       })
   }
-  let isAllStar
-  if (league === 'nba' && date === '20170219') {
-    isAllStar = true
+  let allStarGame = false
+  if (league === 'nba') {
+    allStarGame = scores.games.length === 1 && scores.games[0].tags[0] === 'AWASG'
   }
   return (
     <main className={scoreboardContainer}>
@@ -46,7 +45,7 @@ export default function Scoreboard(props) {
       <ul className={gamesList}>
         {games}
       </ul>
-      { isAllStar && <AllStar img={'asg'} league={league} /> }
+      { seasonState && seasonState.isAllStar && <AllStar img={allStarGame ? 'asg' : 'nola'} league={league} /> }
     </main>
   )
 }

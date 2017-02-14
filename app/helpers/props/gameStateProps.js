@@ -6,8 +6,9 @@ export const mlbGameStateProps = (game) => {
   const isPlayoffs = game.game_type !== 'R'
   const isDoubleHeader = game.double_header_sw === 'Y'
   return {
-    gameState: 2,
+    gameState: game.status.ind === 'S' ? 0 : 2,
     status: game.status.status,
+    time: `${game.time} ET`,
     periods: 9,
     totalPeriods: game.linescore.inning.length,
     overtime: game.linescore.inning.length,

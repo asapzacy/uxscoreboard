@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Mlb } from 'components'
 import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
-import { seasons } from 'helpers/seasons'
 
 class MlbContainer extends Component {
   constructor() {
@@ -11,6 +10,7 @@ class MlbContainer extends Component {
       isLoading: true,
       isValid: false,
       scores: {},
+      year: '',
       date: '',
       today: ''
     }
@@ -27,9 +27,6 @@ class MlbContainer extends Component {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    if (dt === this.state.today) {
-      dt = seasons.mlb.end
-    }
     getMlbScores(dt)
       .then((currentScores) => {
         const games = currentScores.data.games
@@ -37,6 +34,7 @@ class MlbContainer extends Component {
         this.setState({
           isLoading: false,
           scores: games,
+          year: currentScores.data.games.year,
           date: dt
         })
       })
@@ -45,6 +43,7 @@ class MlbContainer extends Component {
           isLoading: false,
           date: dt
         })
+        throw new Error(error)
       })
   }
   cleanGameData(scores) {

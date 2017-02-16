@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Matchup, PanelMenu, BoxScore, Stats, Diamond } from 'components'
+import { Matchup, PanelMenu, BoxScore, Stats, Diamond, Leaders } from 'components'
 import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
 import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
 import { nbaStatsProps } from 'helpers/props/statsProps'
@@ -44,6 +44,7 @@ function NbaDetails({ game, date, league, panel, switchPanel }) {
       <PanelMenu panel={panel} switchPanel={switchPanel} />
       { panel === 'boxScore' && <BoxScore {...boxScoreProps} /> }
       { panel === 'teamStats' && <Stats {...statsProps} /> }
+      { panel === 'leaders' && <Leaders /> }
     </section>
   )
 }

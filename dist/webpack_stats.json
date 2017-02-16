@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "2.2.1",
-  "hash": "b23ca45d5b617ea99716",
+  "hash": "7c244017acf17981281e",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
@@ -13,7 +13,7 @@
   "assets": [
     {
       "name": "bundle.js",
-      "size": 818089,
+      "size": 818144,
       "chunks": [
         0
       ],
@@ -56,7 +56,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 2057523,
+      "size": 2057569,
       "names": [
         "main"
       ],
@@ -64,7 +64,7 @@
         "bundle.js",
         "bundle.js.map"
       ],
-      "hash": "11fc4692f43811ac580a",
+      "hash": "afef52ee2ee51297ec46",
       "parents": [],
       "origins": [
         {
@@ -2069,7 +2069,7 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/config/routes.js",
-      "issuerId": 312,
+      "issuerId": 314,
       "issuerName": "./app/config/routes.js",
       "failed": false,
       "errors": 0,
@@ -2229,7 +2229,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 294,
+          "moduleId": 296,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/GameState/GameState.js",
           "module": "./app/components/GameState/GameState.js",
           "moduleName": "./app/components/GameState/GameState.js",
@@ -2238,7 +2238,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 295,
+          "moduleId": 297,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Header/Header.js",
           "module": "./app/components/Header/Header.js",
           "moduleName": "./app/components/Header/Header.js",
@@ -2247,7 +2247,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 296,
+          "moduleId": 298,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Home/Home.js",
           "module": "./app/components/Home/Home.js",
           "moduleName": "./app/components/Home/Home.js",
@@ -2256,7 +2256,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 297,
+          "moduleId": 299,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Leaders/Leaders.js",
           "module": "./app/components/Leaders/Leaders.js",
           "moduleName": "./app/components/Leaders/Leaders.js",
@@ -2265,7 +2265,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 298,
+          "moduleId": 300,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Loading/Loading.js",
           "module": "./app/components/Loading/Loading.js",
           "moduleName": "./app/components/Loading/Loading.js",
@@ -2274,7 +2274,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 299,
+          "moduleId": 301,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Matchup/Matchup.js",
           "module": "./app/components/Matchup/Matchup.js",
           "moduleName": "./app/components/Matchup/Matchup.js",
@@ -2283,7 +2283,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 300,
+          "moduleId": 302,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Mlb/Mlb.js",
           "module": "./app/components/Mlb/Mlb.js",
           "moduleName": "./app/components/Mlb/Mlb.js",
@@ -2292,7 +2292,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 301,
+          "moduleId": 303,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nba/Nba.js",
           "module": "./app/components/Nba/Nba.js",
           "moduleName": "./app/components/Nba/Nba.js",
@@ -2301,7 +2301,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 302,
+          "moduleId": 304,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nfl/Nfl.js",
           "module": "./app/components/Nfl/Nfl.js",
           "moduleName": "./app/components/Nfl/Nfl.js",
@@ -2310,7 +2310,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 303,
+          "moduleId": 305,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nhl/Nhl.js",
           "module": "./app/components/Nhl/Nhl.js",
           "moduleName": "./app/components/Nhl/Nhl.js",
@@ -2319,7 +2319,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 304,
+          "moduleId": 306,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NoGames/NoGames.js",
           "module": "./app/components/NoGames/NoGames.js",
           "moduleName": "./app/components/NoGames/NoGames.js",
@@ -2328,7 +2328,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 305,
+          "moduleId": 307,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NotFound/NotFound.js",
           "module": "./app/components/NotFound/NotFound.js",
           "moduleName": "./app/components/NotFound/NotFound.js",
@@ -2337,7 +2337,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 306,
+          "moduleId": 308,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/PanelMenu/PanelMenu.js",
           "module": "./app/components/PanelMenu/PanelMenu.js",
           "moduleName": "./app/components/PanelMenu/PanelMenu.js",
@@ -2346,7 +2346,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 307,
+          "moduleId": 309,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Playoffs/Playoffs.js",
           "module": "./app/components/Playoffs/Playoffs.js",
           "moduleName": "./app/components/Playoffs/Playoffs.js",
@@ -2355,7 +2355,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 308,
+          "moduleId": 310,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
           "module": "./app/components/Scoreboard/Scoreboard.js",
           "moduleName": "./app/components/Scoreboard/Scoreboard.js",
@@ -2364,7 +2364,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 309,
+          "moduleId": 311,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Stats/Stats.js",
           "module": "./app/components/Stats/Stats.js",
           "moduleName": "./app/components/Stats/Stats.js",
@@ -2373,7 +2373,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 310,
+          "moduleId": 312,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Team/Team.js",
           "module": "./app/components/Team/Team.js",
           "moduleName": "./app/components/Team/Team.js",
@@ -2382,7 +2382,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 311,
+          "moduleId": 313,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Test/Test.js",
           "module": "./app/components/Test/Test.js",
           "moduleName": "./app/components/Test/Test.js",
@@ -2391,7 +2391,7 @@
           "loc": "8:13-29"
         },
         {
-          "moduleId": 312,
+          "moduleId": 314,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/config/routes.js",
           "module": "./app/config/routes.js",
           "moduleName": "./app/config/routes.js",
@@ -2400,7 +2400,7 @@
           "loc": "7:13-29"
         },
         {
-          "moduleId": 313,
+          "moduleId": 315,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/About/AboutContainer.js",
           "module": "./app/containers/About/AboutContainer.js",
           "moduleName": "./app/containers/About/AboutContainer.js",
@@ -2409,7 +2409,7 @@
           "loc": "9:13-29"
         },
         {
-          "moduleId": 314,
+          "moduleId": 316,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Date/DateContainer.js",
           "module": "./app/containers/Date/DateContainer.js",
           "moduleName": "./app/containers/Date/DateContainer.js",
@@ -2418,7 +2418,7 @@
           "loc": "11:13-29"
         },
         {
-          "moduleId": 315,
+          "moduleId": 317,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Details/DetailsContainer.js",
           "module": "./app/containers/Details/DetailsContainer.js",
           "moduleName": "./app/containers/Details/DetailsContainer.js",
@@ -2427,7 +2427,7 @@
           "loc": "11:13-29"
         },
         {
-          "moduleId": 316,
+          "moduleId": 318,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Game/GameContainer.js",
           "module": "./app/containers/Game/GameContainer.js",
           "moduleName": "./app/containers/Game/GameContainer.js",
@@ -2436,7 +2436,7 @@
           "loc": "11:13-29"
         },
         {
-          "moduleId": 317,
+          "moduleId": 319,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Home/HomeContainer.js",
           "module": "./app/containers/Home/HomeContainer.js",
           "moduleName": "./app/containers/Home/HomeContainer.js",
@@ -2445,7 +2445,7 @@
           "loc": "9:13-29"
         },
         {
-          "moduleId": 318,
+          "moduleId": 320,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Main/MainContainer.js",
           "module": "./app/containers/Main/MainContainer.js",
           "moduleName": "./app/containers/Main/MainContainer.js",
@@ -2454,7 +2454,7 @@
           "loc": "11:13-29"
         },
         {
-          "moduleId": 319,
+          "moduleId": 321,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Mlb/MlbContainer.js",
           "module": "./app/containers/Mlb/MlbContainer.js",
           "moduleName": "./app/containers/Mlb/MlbContainer.js",
@@ -2463,7 +2463,7 @@
           "loc": "9:13-29"
         },
         {
-          "moduleId": 320,
+          "moduleId": 322,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nba/NbaContainer.js",
           "module": "./app/containers/Nba/NbaContainer.js",
           "moduleName": "./app/containers/Nba/NbaContainer.js",
@@ -2472,7 +2472,7 @@
           "loc": "9:13-29"
         },
         {
-          "moduleId": 321,
+          "moduleId": 323,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nfl/NflContainer.js",
           "module": "./app/containers/Nfl/NflContainer.js",
           "moduleName": "./app/containers/Nfl/NflContainer.js",
@@ -2481,7 +2481,7 @@
           "loc": "9:13-29"
         },
         {
-          "moduleId": 322,
+          "moduleId": 324,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nhl/NhlContainer.js",
           "module": "./app/containers/Nhl/NhlContainer.js",
           "moduleName": "./app/containers/Nhl/NhlContainer.js",
@@ -2490,7 +2490,7 @@
           "loc": "9:13-29"
         },
         {
-          "moduleId": 323,
+          "moduleId": 325,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/NotFound/NotFoundContainer.js",
           "module": "./app/containers/NotFound/NotFoundContainer.js",
           "moduleName": "./app/containers/NotFound/NotFoundContainer.js",
@@ -2499,7 +2499,7 @@
           "loc": "9:13-29"
         },
         {
-          "moduleId": 324,
+          "moduleId": 326,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Scoreboard/ScoreboardContainer.js",
           "module": "./app/containers/Scoreboard/ScoreboardContainer.js",
           "moduleName": "./app/containers/Scoreboard/ScoreboardContainer.js",
@@ -2508,7 +2508,7 @@
           "loc": "11:13-29"
         },
         {
-          "moduleId": 325,
+          "moduleId": 327,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Test/TestContainer.js",
           "module": "./app/containers/Test/TestContainer.js",
           "moduleName": "./app/containers/Test/TestContainer.js",
@@ -4424,9 +4424,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/About/AboutContainer.js",
-      "issuerId": 313,
-      "issuerName": "./app/containers/About/AboutContainer.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Main/MainContainer.js",
+      "issuerId": 320,
+      "issuerName": "./app/containers/Main/MainContainer.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4450,7 +4450,7 @@
           "loc": "14:18-39"
         },
         {
-          "moduleId": 300,
+          "moduleId": 302,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Mlb/Mlb.js",
           "module": "./app/components/Mlb/Mlb.js",
           "moduleName": "./app/components/Mlb/Mlb.js",
@@ -4459,7 +4459,7 @@
           "loc": "12:18-39"
         },
         {
-          "moduleId": 301,
+          "moduleId": 303,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nba/Nba.js",
           "module": "./app/components/Nba/Nba.js",
           "moduleName": "./app/components/Nba/Nba.js",
@@ -4468,7 +4468,7 @@
           "loc": "12:18-39"
         },
         {
-          "moduleId": 302,
+          "moduleId": 304,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nfl/Nfl.js",
           "module": "./app/components/Nfl/Nfl.js",
           "moduleName": "./app/components/Nfl/Nfl.js",
@@ -4477,7 +4477,7 @@
           "loc": "12:18-39"
         },
         {
-          "moduleId": 303,
+          "moduleId": 305,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nhl/Nhl.js",
           "module": "./app/components/Nhl/Nhl.js",
           "moduleName": "./app/components/Nhl/Nhl.js",
@@ -4486,7 +4486,7 @@
           "loc": "12:18-39"
         },
         {
-          "moduleId": 308,
+          "moduleId": 310,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
           "module": "./app/components/Scoreboard/Scoreboard.js",
           "moduleName": "./app/components/Scoreboard/Scoreboard.js",
@@ -4495,7 +4495,7 @@
           "loc": "12:18-39"
         },
         {
-          "moduleId": 313,
+          "moduleId": 315,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/About/AboutContainer.js",
           "module": "./app/containers/About/AboutContainer.js",
           "moduleName": "./app/containers/About/AboutContainer.js",
@@ -4504,7 +4504,7 @@
           "loc": "13:18-39"
         },
         {
-          "moduleId": 314,
+          "moduleId": 316,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Date/DateContainer.js",
           "module": "./app/containers/Date/DateContainer.js",
           "moduleName": "./app/containers/Date/DateContainer.js",
@@ -4513,7 +4513,7 @@
           "loc": "15:18-39"
         },
         {
-          "moduleId": 315,
+          "moduleId": 317,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Details/DetailsContainer.js",
           "module": "./app/containers/Details/DetailsContainer.js",
           "moduleName": "./app/containers/Details/DetailsContainer.js",
@@ -4522,7 +4522,7 @@
           "loc": "15:18-39"
         },
         {
-          "moduleId": 316,
+          "moduleId": 318,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Game/GameContainer.js",
           "module": "./app/containers/Game/GameContainer.js",
           "moduleName": "./app/containers/Game/GameContainer.js",
@@ -4531,7 +4531,7 @@
           "loc": "15:18-39"
         },
         {
-          "moduleId": 317,
+          "moduleId": 319,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Home/HomeContainer.js",
           "module": "./app/containers/Home/HomeContainer.js",
           "moduleName": "./app/containers/Home/HomeContainer.js",
@@ -4540,7 +4540,7 @@
           "loc": "13:18-39"
         },
         {
-          "moduleId": 318,
+          "moduleId": 320,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Main/MainContainer.js",
           "module": "./app/containers/Main/MainContainer.js",
           "moduleName": "./app/containers/Main/MainContainer.js",
@@ -4549,7 +4549,7 @@
           "loc": "15:18-39"
         },
         {
-          "moduleId": 319,
+          "moduleId": 321,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Mlb/MlbContainer.js",
           "module": "./app/containers/Mlb/MlbContainer.js",
           "moduleName": "./app/containers/Mlb/MlbContainer.js",
@@ -4558,7 +4558,7 @@
           "loc": "13:18-39"
         },
         {
-          "moduleId": 320,
+          "moduleId": 322,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nba/NbaContainer.js",
           "module": "./app/containers/Nba/NbaContainer.js",
           "moduleName": "./app/containers/Nba/NbaContainer.js",
@@ -4567,7 +4567,7 @@
           "loc": "13:18-39"
         },
         {
-          "moduleId": 321,
+          "moduleId": 323,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nfl/NflContainer.js",
           "module": "./app/containers/Nfl/NflContainer.js",
           "moduleName": "./app/containers/Nfl/NflContainer.js",
@@ -4576,7 +4576,7 @@
           "loc": "13:18-39"
         },
         {
-          "moduleId": 322,
+          "moduleId": 324,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nhl/NhlContainer.js",
           "module": "./app/containers/Nhl/NhlContainer.js",
           "moduleName": "./app/containers/Nhl/NhlContainer.js",
@@ -4585,7 +4585,7 @@
           "loc": "13:18-39"
         },
         {
-          "moduleId": 323,
+          "moduleId": 325,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/NotFound/NotFoundContainer.js",
           "module": "./app/containers/NotFound/NotFoundContainer.js",
           "moduleName": "./app/containers/NotFound/NotFoundContainer.js",
@@ -4594,7 +4594,7 @@
           "loc": "13:18-39"
         },
         {
-          "moduleId": 324,
+          "moduleId": 326,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Scoreboard/ScoreboardContainer.js",
           "module": "./app/containers/Scoreboard/ScoreboardContainer.js",
           "moduleName": "./app/containers/Scoreboard/ScoreboardContainer.js",
@@ -4603,7 +4603,7 @@
           "loc": "15:18-39"
         },
         {
-          "moduleId": 325,
+          "moduleId": 327,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Test/TestContainer.js",
           "module": "./app/containers/Test/TestContainer.js",
           "moduleName": "./app/containers/Test/TestContainer.js",
@@ -4935,7 +4935,7 @@
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Nfl/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "10:51-288"
+          "loc": "3:10-247"
         },
         {
           "moduleId": 349,
@@ -4944,7 +4944,7 @@
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Nfl/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "3:10-247"
+          "loc": "10:51-288"
         },
         {
           "moduleId": 350,
@@ -5030,9 +5030,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ChangeEventPlugin.js",
-      "issuerId": 388,
-      "issuerName": "./~/react-dom/lib/ChangeEventPlugin.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/setInnerHTML.js",
+      "issuerId": 59,
+      "issuerName": "./~/react-dom/lib/setInnerHTML.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5738,7 +5738,7 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Mlb/MlbContainer.js",
-      "issuerId": 319,
+      "issuerId": 321,
       "issuerName": "./app/containers/Mlb/MlbContainer.js",
       "failed": false,
       "errors": 0,
@@ -5746,6 +5746,24 @@
       "reasons": [
         {
           "moduleId": 294,
+          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/gameStateProps.js",
+          "module": "./app/components/Game/gameStateProps.js",
+          "moduleName": "./app/components/Game/gameStateProps.js",
+          "type": "cjs require",
+          "userRequest": "helpers/utils",
+          "loc": "8:13-37"
+        },
+        {
+          "moduleId": 295,
+          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/teamProps.js",
+          "module": "./app/components/Game/teamProps.js",
+          "moduleName": "./app/components/Game/teamProps.js",
+          "type": "cjs require",
+          "userRequest": "helpers/utils",
+          "loc": "8:13-37"
+        },
+        {
+          "moduleId": 296,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/GameState/GameState.js",
           "module": "./app/components/GameState/GameState.js",
           "moduleName": "./app/components/GameState/GameState.js",
@@ -5754,7 +5772,7 @@
           "loc": "12:13-37"
         },
         {
-          "moduleId": 299,
+          "moduleId": 301,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Matchup/Matchup.js",
           "module": "./app/components/Matchup/Matchup.js",
           "moduleName": "./app/components/Matchup/Matchup.js",
@@ -5763,7 +5781,7 @@
           "loc": "12:13-37"
         },
         {
-          "moduleId": 319,
+          "moduleId": 321,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Mlb/MlbContainer.js",
           "module": "./app/containers/Mlb/MlbContainer.js",
           "moduleName": "./app/containers/Mlb/MlbContainer.js",
@@ -5772,7 +5790,7 @@
           "loc": "15:13-37"
         },
         {
-          "moduleId": 320,
+          "moduleId": 322,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nba/NbaContainer.js",
           "module": "./app/containers/Nba/NbaContainer.js",
           "moduleName": "./app/containers/Nba/NbaContainer.js",
@@ -5781,7 +5799,7 @@
           "loc": "15:13-37"
         },
         {
-          "moduleId": 322,
+          "moduleId": 324,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nhl/NhlContainer.js",
           "module": "./app/containers/Nhl/NhlContainer.js",
           "moduleName": "./app/containers/Nhl/NhlContainer.js",
@@ -5790,7 +5808,7 @@
           "loc": "15:13-37"
         },
         {
-          "moduleId": 324,
+          "moduleId": 326,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Scoreboard/ScoreboardContainer.js",
           "module": "./app/containers/Scoreboard/ScoreboardContainer.js",
           "moduleName": "./app/containers/Scoreboard/ScoreboardContainer.js",
@@ -5799,7 +5817,7 @@
           "loc": "19:13-37"
         },
         {
-          "moduleId": 328,
+          "moduleId": 330,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/boxScoreProps.js",
           "module": "./app/helpers/props/boxScoreProps.js",
           "moduleName": "./app/helpers/props/boxScoreProps.js",
@@ -5808,31 +5826,13 @@
           "loc": "8:13-32"
         },
         {
-          "moduleId": 329,
-          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/gameStateProps.js",
-          "module": "./app/helpers/props/gameStateProps.js",
-          "moduleName": "./app/helpers/props/gameStateProps.js",
-          "type": "cjs require",
-          "userRequest": "./../utils",
-          "loc": "8:13-34"
-        },
-        {
-          "moduleId": 331,
+          "moduleId": 332,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/statsProps.js",
           "module": "./app/helpers/props/statsProps.js",
           "moduleName": "./app/helpers/props/statsProps.js",
           "type": "cjs require",
           "userRequest": "../utils",
           "loc": "8:13-32"
-        },
-        {
-          "moduleId": 332,
-          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/teamProps.js",
-          "module": "./app/helpers/props/teamProps.js",
-          "moduleName": "./app/helpers/props/teamProps.js",
-          "type": "cjs require",
-          "userRequest": "./../utils",
-          "loc": "8:13-34"
         }
       ],
       "usedExports": true,
@@ -6200,9 +6200,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactMount.js",
-      "issuerId": 226,
-      "issuerName": "./~/react-dom/lib/ReactMount.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/ReactElement.js",
+      "issuerId": 37,
+      "issuerName": "./~/react/lib/ReactElement.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7018,9 +7018,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 559,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 557,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7110,7 +7110,7 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/config/routes.js",
-      "issuerId": 312,
+      "issuerId": 314,
       "issuerName": "./app/config/routes.js",
       "failed": false,
       "errors": 0,
@@ -7126,7 +7126,7 @@
           "loc": "16:18-39"
         },
         {
-          "moduleId": 300,
+          "moduleId": 302,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Mlb/Mlb.js",
           "module": "./app/components/Mlb/Mlb.js",
           "moduleName": "./app/components/Mlb/Mlb.js",
@@ -7135,7 +7135,7 @@
           "loc": "14:18-39"
         },
         {
-          "moduleId": 301,
+          "moduleId": 303,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nba/Nba.js",
           "module": "./app/components/Nba/Nba.js",
           "moduleName": "./app/components/Nba/Nba.js",
@@ -7144,7 +7144,7 @@
           "loc": "14:18-39"
         },
         {
-          "moduleId": 303,
+          "moduleId": 305,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nhl/Nhl.js",
           "module": "./app/components/Nhl/Nhl.js",
           "moduleName": "./app/components/Nhl/Nhl.js",
@@ -7153,7 +7153,7 @@
           "loc": "14:18-39"
         },
         {
-          "moduleId": 308,
+          "moduleId": 310,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
           "module": "./app/components/Scoreboard/Scoreboard.js",
           "moduleName": "./app/components/Scoreboard/Scoreboard.js",
@@ -7162,7 +7162,7 @@
           "loc": "14:18-39"
         },
         {
-          "moduleId": 312,
+          "moduleId": 314,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/config/routes.js",
           "module": "./app/config/routes.js",
           "moduleName": "./app/config/routes.js",
@@ -7942,9 +7942,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/baseFlatten.js",
-      "issuerId": 523,
-      "issuerName": "./~/velocity-react/~/lodash/internal/baseFlatten.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/baseIsEqual.js",
+      "issuerId": 93,
+      "issuerName": "./~/velocity-react/~/lodash/internal/baseIsEqual.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8548,7 +8548,7 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/config/routes.js",
-      "issuerId": 312,
+      "issuerId": 314,
       "issuerName": "./app/config/routes.js",
       "failed": false,
       "errors": 0,
@@ -8573,7 +8573,7 @@
           "loc": "12:19-42"
         },
         {
-          "moduleId": 295,
+          "moduleId": 297,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Header/Header.js",
           "module": "./app/components/Header/Header.js",
           "moduleName": "./app/components/Header/Header.js",
@@ -8582,7 +8582,7 @@
           "loc": "12:19-42"
         },
         {
-          "moduleId": 296,
+          "moduleId": 298,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Home/Home.js",
           "module": "./app/components/Home/Home.js",
           "moduleName": "./app/components/Home/Home.js",
@@ -8591,7 +8591,7 @@
           "loc": "12:19-42"
         },
         {
-          "moduleId": 312,
+          "moduleId": 314,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/config/routes.js",
           "module": "./app/config/routes.js",
           "moduleName": "./app/config/routes.js",
@@ -8640,9 +8640,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/node_modules/lodash/object/omit.js",
-      "issuerId": 262,
-      "issuerName": "./~/velocity-react/~/lodash/object/omit.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/node_modules/lodash/lang/isEqual.js",
+      "issuerId": 261,
+      "issuerName": "./~/velocity-react/~/lodash/lang/isEqual.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8787,14 +8787,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Mlb/MlbContainer.js",
-      "issuerId": 319,
+      "issuerId": 321,
       "issuerName": "./app/containers/Mlb/MlbContainer.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 308,
+          "moduleId": 310,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
           "module": "./app/components/Scoreboard/Scoreboard.js",
           "moduleName": "./app/components/Scoreboard/Scoreboard.js",
@@ -8803,7 +8803,7 @@
           "loc": "18:11-33"
         },
         {
-          "moduleId": 319,
+          "moduleId": 321,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Mlb/MlbContainer.js",
           "module": "./app/containers/Mlb/MlbContainer.js",
           "moduleName": "./app/containers/Mlb/MlbContainer.js",
@@ -8812,7 +8812,7 @@
           "loc": "17:11-33"
         },
         {
-          "moduleId": 320,
+          "moduleId": 322,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nba/NbaContainer.js",
           "module": "./app/containers/Nba/NbaContainer.js",
           "moduleName": "./app/containers/Nba/NbaContainer.js",
@@ -8821,7 +8821,7 @@
           "loc": "17:11-33"
         },
         {
-          "moduleId": 322,
+          "moduleId": 324,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nhl/NhlContainer.js",
           "module": "./app/containers/Nhl/NhlContainer.js",
           "moduleName": "./app/containers/Nhl/NhlContainer.js",
@@ -8914,9 +8914,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
-      "issuerId": 374,
-      "issuerName": "./~/history/lib/createBrowserHistory.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createHashHistory.js",
+      "issuerId": 375,
+      "issuerName": "./~/history/lib/createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9591,9 +9591,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
-      "issuerId": 374,
-      "issuerName": "./~/history/lib/createBrowserHistory.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createHashHistory.js",
+      "issuerId": 375,
+      "issuerName": "./~/history/lib/createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9646,9 +9646,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createMemoryHistory.js",
-      "issuerId": 376,
-      "issuerName": "./~/history/lib/createMemoryHistory.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createHashHistory.js",
+      "issuerId": 375,
+      "issuerName": "./~/history/lib/createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9866,9 +9866,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
-      "issuerId": 398,
-      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
+      "issuerId": 32,
+      "issuerName": "./~/react-dom/lib/DOMLazyTree.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9921,9 +9921,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
-      "issuerId": 398,
-      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactBrowserEventEmitter.js",
+      "issuerId": 55,
+      "issuerName": "./~/react-dom/lib/ReactBrowserEventEmitter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10196,9 +10196,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
-      "issuerId": 42,
-      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactCompositeComponent.js",
+      "issuerId": 396,
+      "issuerName": "./~/react-dom/lib/ReactCompositeComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10526,9 +10526,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ChangeEventPlugin.js",
-      "issuerId": 388,
-      "issuerName": "./~/react-dom/lib/ChangeEventPlugin.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactBrowserEventEmitter.js",
+      "issuerId": 55,
+      "issuerName": "./~/react-dom/lib/ReactBrowserEventEmitter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10636,9 +10636,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
-      "issuerId": 398,
-      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMContainerInfo.js",
+      "issuerId": 399,
+      "issuerName": "./~/react-dom/lib/ReactDOMContainerInfo.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10691,9 +10691,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/getComponents.js",
-      "issuerId": 462,
-      "issuerName": "./~/react-router/es/getComponents.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/TransitionUtils.js",
+      "issuerId": 458,
+      "issuerName": "./~/react-router/es/TransitionUtils.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11043,9 +11043,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/ReactComponent.js",
-      "issuerId": 88,
-      "issuerName": "./~/react/lib/ReactComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/ReactPureComponent.js",
+      "issuerId": 475,
+      "issuerName": "./~/react/lib/ReactPureComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11098,9 +11098,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 559,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 557,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11153,9 +11153,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 559,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 557,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11659,14 +11659,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nhl/NhlContainer.js",
-      "issuerId": 322,
+      "issuerId": 324,
       "issuerName": "./app/containers/Nhl/NhlContainer.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 322,
+          "moduleId": 324,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nhl/NhlContainer.js",
           "module": "./app/containers/Nhl/NhlContainer.js",
           "moduleName": "./app/containers/Nhl/NhlContainer.js",
@@ -11675,7 +11675,7 @@
           "loc": "19:15-41"
         },
         {
-          "moduleId": 324,
+          "moduleId": 326,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Scoreboard/ScoreboardContainer.js",
           "module": "./app/containers/Scoreboard/ScoreboardContainer.js",
           "moduleName": "./app/containers/Scoreboard/ScoreboardContainer.js",
@@ -11842,9 +11842,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/BrowserProtocol.js",
-      "issuerId": 63,
-      "issuerName": "./~/history/lib/BrowserProtocol.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/HashProtocol.js",
+      "issuerId": 372,
+      "issuerName": "./~/history/lib/HashProtocol.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17182,9 +17182,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactInjection.js",
-      "issuerId": 414,
-      "issuerName": "./~/react-dom/lib/ReactInjection.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/instantiateReactComponent.js",
+      "issuerId": 233,
+      "issuerName": "./~/react-dom/lib/instantiateReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17274,9 +17274,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactInjection.js",
-      "issuerId": 414,
-      "issuerName": "./~/react-dom/lib/ReactInjection.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/instantiateReactComponent.js",
+      "issuerId": 233,
+      "issuerName": "./~/react-dom/lib/instantiateReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17504,9 +17504,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPropagators.js",
-      "issuerId": 43,
-      "issuerName": "./~/react-dom/lib/EventPropagators.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
+      "issuerId": 42,
+      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17550,9 +17550,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPropagators.js",
-      "issuerId": 43,
-      "issuerName": "./~/react-dom/lib/EventPropagators.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
+      "issuerId": 42,
+      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17922,9 +17922,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/getComponents.js",
-      "issuerId": 462,
-      "issuerName": "./~/react-router/es/getComponents.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/matchRoutes.js",
+      "issuerId": 467,
+      "issuerName": "./~/react-router/es/matchRoutes.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -19010,9 +19010,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 559,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 557,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -19056,9 +19056,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 559,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 557,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -20230,7 +20230,7 @@
       "name": "./app/components/Game/Game.js",
       "index": 410,
       "index2": 498,
-      "size": 4781,
+      "size": 4757,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20259,10 +20259,84 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Game;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _velocityReact = require('velocity-react');\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _teamProps = require('helpers/props/teamProps');\n\nvar _gameStateProps = require('helpers/props/gameStateProps');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  game: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  expanded: _react.PropTypes.bool.isRequired,\n  showDetails: _react.PropTypes.func.isRequired\n};\n\nfunction Game(props) {\n  if (props.league === 'mlb') return _react2.default.createElement(MlbGame, props);\n  if (props.league === 'nba') return _react2.default.createElement(NbaGame, props);\n  if (props.league === 'nhl') return _react2.default.createElement(NhlGame, props);\n  return _react2.default.createElement(\n    'h1',\n    null,\n    'i hope this doesn\\'t run'\n  );\n}\n\nGame.propTypes = propTypes;\n\nvar transitionsConfig = {\n  enter: {\n    animation: 'slideDown',\n    duration: 220,\n    delay: 0\n  },\n  leave: {\n    animation: 'slideUp',\n    duration: 220,\n    delay: 220\n  }\n};\n\nfunction MlbGame(_ref) {\n  var game = _ref.game,\n      date = _ref.date,\n      league = _ref.league,\n      showDetails = _ref.showDetails,\n      expanded = _ref.expanded;\n\n  var gameState = (0, _gameStateProps.mlbGameStateProps)(game);\n  var awayTeam = (0, _teamProps.mlbTeamProps)(game, 'away', league);\n  var homeTeam = (0, _teamProps.mlbTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NbaGame(_ref2) {\n  var game = _ref2.game,\n      date = _ref2.date,\n      league = _ref2.league,\n      showDetails = _ref2.showDetails,\n      expanded = _ref2.expanded;\n\n  var gameState = (0, _gameStateProps.nbaGameStateProps)(game);\n  var awayTeam = (0, _teamProps.nbaTeamProps)(game, 'visitor', league);\n  var homeTeam = (0, _teamProps.nbaTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NhlGame(_ref3) {\n  var game = _ref3.game,\n      date = _ref3.date,\n      league = _ref3.league,\n      showDetails = _ref3.showDetails,\n      expanded = _ref3.expanded;\n\n  var gameState = (0, _gameStateProps.nhlGameStateProps)(game);\n  var awayTeam = (0, _teamProps.nhlTeamProps)(game, 'away', league);\n  var homeTeam = (0, _teamProps.nhlTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_components.Details, { game: game, date: date, league: league, expanded: expanded })\n    )\n  );\n}"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Game;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _velocityReact = require('velocity-react');\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _teamProps = require('./teamProps');\n\nvar _gameStateProps = require('./gameStateProps');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  game: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  expanded: _react.PropTypes.bool.isRequired,\n  showDetails: _react.PropTypes.func.isRequired\n};\n\nfunction Game(props) {\n  if (props.league === 'mlb') return _react2.default.createElement(MlbGame, props);\n  if (props.league === 'nba') return _react2.default.createElement(NbaGame, props);\n  if (props.league === 'nhl') return _react2.default.createElement(NhlGame, props);\n  return _react2.default.createElement(\n    'h1',\n    null,\n    'i hope this doesn\\'t run'\n  );\n}\n\nGame.propTypes = propTypes;\n\nvar transitionsConfig = {\n  enter: {\n    animation: 'slideDown',\n    duration: 220,\n    delay: 0\n  },\n  leave: {\n    animation: 'slideUp',\n    duration: 220,\n    delay: 220\n  }\n};\n\nfunction MlbGame(_ref) {\n  var game = _ref.game,\n      date = _ref.date,\n      league = _ref.league,\n      showDetails = _ref.showDetails,\n      expanded = _ref.expanded;\n\n  var gameState = (0, _gameStateProps.mlbGameStateProps)(game);\n  var awayTeam = (0, _teamProps.mlbTeamProps)(game, 'away', league);\n  var homeTeam = (0, _teamProps.mlbTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NbaGame(_ref2) {\n  var game = _ref2.game,\n      date = _ref2.date,\n      league = _ref2.league,\n      showDetails = _ref2.showDetails,\n      expanded = _ref2.expanded;\n\n  var gameState = (0, _gameStateProps.nbaGameStateProps)(game);\n  var awayTeam = (0, _teamProps.nbaTeamProps)(game, 'visitor', league);\n  var homeTeam = (0, _teamProps.nbaTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NhlGame(_ref3) {\n  var game = _ref3.game,\n      date = _ref3.date,\n      league = _ref3.league,\n      showDetails = _ref3.showDetails,\n      expanded = _ref3.expanded;\n\n  var gameState = (0, _gameStateProps.nhlGameStateProps)(game);\n  var awayTeam = (0, _teamProps.nhlTeamProps)(game, 'away', league);\n  var homeTeam = (0, _teamProps.nhlTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_components.Details, { game: game, date: date, league: league, expanded: expanded })\n    )\n  );\n}"
     },
     {
       "id": 294,
+      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/gameStateProps.js",
+      "name": "./app/components/Game/gameStateProps.js",
+      "index": 502,
+      "index2": 495,
+      "size": 2394,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
+      "issuerId": 293,
+      "issuerName": "./app/components/Game/Game.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 293,
+          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
+          "module": "./app/components/Game/Game.js",
+          "moduleName": "./app/components/Game/Game.js",
+          "type": "cjs require",
+          "userRequest": "./gameStateProps",
+          "loc": "20:22-49"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 7,
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nhlGameStateProps = exports.nbaGameStateProps = exports.mlbGameStateProps = undefined;\n\nvar _utils = require('helpers/utils');\n\n//  mlb game state props --> GameState component\nvar mlbGameStateProps = exports.mlbGameStateProps = function mlbGameStateProps(game) {\n  var isPlayoffs = game.game_type !== 'R';\n  var isDoubleHeader = game.double_header_sw === 'Y';\n  return {\n    gameState: game.status.ind === 'S' ? 0 : 2,\n    status: game.status.status,\n    time: game.time + ' ET',\n    periods: 9,\n    totalPeriods: game.linescore.inning.length,\n    overtime: game.linescore.inning.length,\n    doubleHeader: isDoubleHeader ? game.game_nbr : '',\n    playoffs: isPlayoffs ? {\n      series: game.series,\n      game: game.series_num,\n      maxGames: game.ser_games\n    } : {},\n    isDoubleHeader: isDoubleHeader,\n    isPlayoffs: isPlayoffs\n  };\n};\n\n//  nba game state props --> GameState component\nvar nbaGameStateProps = exports.nbaGameStateProps = function nbaGameStateProps(game) {\n  console.log(game.period_time.game_clock);\n  return {\n    gameState: Number(game.period_time.game_status) - 1,\n    status: game.period_time.period_status,\n    time: (0, _utils.formatTimezone)(game.startTimeUTC) + ' ET',\n    periods: 4,\n    currentPeriod: game.period_time.period_value,\n    currentTime: game.period.isEndOfPeriod ? 'END' : ('0' + game.period_time.game_clock).slice(0, 5),\n    isHalfTime: game.period.isHalftime,\n    totalPeriods: game.period_time.period_value,\n    overtime: game.period_time.period_value > 4 ? game.period_time.period_value > 5 ? game.period_time.period_value - 4 + 'OT' : 'OT' : '',\n    isPlayoffs: null\n  };\n};\n\n//  nhl game state props --> GameState component\nvar nhlGameStateProps = exports.nhlGameStateProps = function nhlGameStateProps(game) {\n  return {\n    gameState: game.status.codedGameState < 3 ? 0 : game.status.codedGameState < 6 ? 1 : 2,\n    status: game.status.codedGameState === '2' ? game.status.detailedState : game.status.abstractGameState,\n    time: (0, _utils.formatTimezone)(game.gameDate) + ' ET',\n    periods: 3,\n    currentPeriod: game.linescore.currentPeriod,\n    currentTime: game.linescore.currentPeriodTimeRemaining,\n    totalPeriods: game.linescore.periods.length,\n    overtime: game.linescore.currentPeriodOrdinal,\n    isPlayoffs: game.gameType === 'P'\n  };\n};"
+    },
+    {
+      "id": 295,
+      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/teamProps.js",
+      "name": "./app/components/Game/teamProps.js",
+      "index": 497,
+      "index2": 494,
+      "size": 2012,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
+      "issuerId": 293,
+      "issuerName": "./app/components/Game/Game.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 293,
+          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
+          "module": "./app/components/Game/Game.js",
+          "moduleName": "./app/components/Game/Game.js",
+          "type": "cjs require",
+          "userRequest": "./teamProps",
+          "loc": "18:17-39"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 7,
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nhlTeamProps = exports.nbaTeamProps = exports.mlbTeamProps = undefined;\n\nvar _utils = require('helpers/utils');\n\n//  mlb home + away team props --> Team component\nvar mlbTeamProps = exports.mlbTeamProps = function mlbTeamProps(game, side, league) {\n  var isAllStar = game.game_type === 'A';\n  return {\n    name: (0, _utils.shortenTeamName)(game[side + '_team_name']),\n    code: game[side + '_file_code'].toLowerCase(),\n    filetype: isAllStar ? 'png' : 'svg',\n    ws: game[side + '_win'],\n    ls: game[side + '_loss'],\n    score: game.linescore.r[side],\n    league: league\n  };\n};\n\n//  nba home + away team props --> Team component\nvar nbaTeamProps = exports.nbaTeamProps = function nbaTeamProps(game, side, league) {\n  if (game.id === '0031600001') {\n    console.log('hi');\n    // return {\n    //   name: shortenTeamName(game[side].nickname),\n    //   code: game[side].abbreviation.toLowerCase(),\n    //   league\n    // }\n  }\n  var side2 = side === 'home' ? 'hTeam' : 'vTeam';\n  var inGame = game.period.current;\n  return {\n    name: (0, _utils.shortenTeamName)(game[side].nickname),\n    code: game[side].abbreviation.toLowerCase(),\n    ws: game[side2].win,\n    ls: game[side2].loss,\n    score: inGame ? game[side].score : null,\n    league: league\n  };\n};\n\n//  nhl home + away team props --> Team component\nvar nhlTeamProps = exports.nhlTeamProps = function nhlTeamProps(game, side, league) {\n  var inGame = game.status.codedGameState > '2';\n  var isAllStar = game.gameType === 'A';\n  return {\n    name: (0, _utils.shortenTeamName)(game.teams[side].team.teamName),\n    code: game.teams[side].team.abbreviation.toLowerCase(),\n    ws: isAllStar ? null : String(game.teams[side].leagueRecord.wins),\n    ls: isAllStar ? null : String(game.teams[side].leagueRecord.losses),\n    ts: isAllStar ? null : String(game.teams[side].leagueRecord.ot),\n    score: inGame ? String(game.teams[side].score) : null,\n    league: league\n  };\n};"
+    },
+    {
+      "id": 296,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/GameState/GameState.js",
       "name": "./app/components/GameState/GameState.js",
       "index": 505,
@@ -20299,7 +20373,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = GameState;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _utils = require('helpers/utils');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction GameState(props) {\n  if (props.gameState === 0) return _react2.default.createElement(PreGameState, props);\n  if (props.gameState === 1) return _react2.default.createElement(InGameState, props);\n  if (props.gameState === 2) return _react2.default.createElement(PostGameState, props);\n}\n\nfunction PreGameState(_ref) {\n  var time = _ref.time;\n\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.gameStateContainer },\n    _react2.default.createElement(\n      'span',\n      null,\n      time\n    )\n  );\n}\n\nfunction InGameState(_ref2) {\n  var currentTime = _ref2.currentTime,\n      currentPeriod = _ref2.currentPeriod,\n      isHalfTime = _ref2.isHalfTime,\n      status = _ref2.status;\n\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.inGameStateContainer },\n    isHalfTime ? _react2.default.createElement(\n      'span',\n      null,\n      status\n    ) : _react2.default.createElement(\n      'span',\n      null,\n      currentTime + ' \\u2022 ' + currentPeriod,\n      _react2.default.createElement(\n        'sup',\n        null,\n        (0, _utils.inningSuffix)(String(currentPeriod))\n      )\n    )\n  );\n}\n\nfunction PostGameState(_ref3) {\n  var periods = _ref3.periods,\n      totalPeriods = _ref3.totalPeriods,\n      status = _ref3.status,\n      overtime = _ref3.overtime,\n      isDoubleHeader = _ref3.isDoubleHeader,\n      doubleHeader = _ref3.doubleHeader,\n      isPlayoffs = _ref3.isPlayoffs,\n      playoffs = _ref3.playoffs;\n\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.gameStateContainer },\n    _react2.default.createElement(\n      'span',\n      null,\n      totalPeriods > periods ? status + '/' + overtime : status\n    ),\n    isDoubleHeader && _react2.default.createElement(\n      'span',\n      null,\n      'Game ' + doubleHeader + ' of 2'\n    ),\n    isPlayoffs && _react2.default.createElement(\n      'span',\n      null,\n      playoffs.series + ' - Game ' + playoffs.game + ' of ' + playoffs.maxGames\n    )\n  );\n}"
     },
     {
-      "id": 295,
+      "id": 297,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Header/Header.js",
       "name": "./app/components/Header/Header.js",
       "index": 231,
@@ -20336,7 +20410,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Header;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouter = require('react-router');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Header(_ref) {\n  var isMenuOpen = _ref.isMenuOpen,\n      menuHeight = _ref.menuHeight,\n      triggerMenu = _ref.triggerMenu;\n\n  return _react2.default.createElement(\n    'header',\n    { className: isMenuOpen ? _styles.menuOpen : _styles.headerContainer },\n    _react2.default.createElement(\n      'div',\n      { className: _styles.logoContainer },\n      _react2.default.createElement(\n        _reactRouter.Link,\n        { to: '/' },\n        _react2.default.createElement('img', { className: _styles.logo, src: '/assets/img/uxscoreboard.svg', alt: 'uxscoreboard logo' })\n      ),\n      _react2.default.createElement(\n        'span',\n        { className: _styles.trigger, onClick: triggerMenu },\n        _react2.default.createElement('span', { className: _styles.triggerTop }),\n        _react2.default.createElement('span', { className: _styles.triggerBottom })\n      )\n    ),\n    _react2.default.createElement(\n      'nav',\n      { className: _styles.menuContainer, style: { maxHeight: menuHeight } },\n      _react2.default.createElement(\n        'menu',\n        { className: _styles.menuList },\n        _react2.default.createElement(\n          'li',\n          { className: _styles.menuItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.menuLink, to: '/mlb', activeClassName: 'active' },\n            'MLB'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.menuItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.menuLink, to: '/nba', activeClassName: 'active' },\n            'NBA'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.menuItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.menuLink, to: '/nfl', activeClassName: 'active' },\n            'NFL'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.menuItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.menuLink, to: '/nhl', activeClassName: 'active' },\n            'NHL'\n          )\n        ),\n        _react2.default.createElement('li', { className: _styles.menuBlock }),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.menuExtra },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.menuLinkExtra, to: '/about', activeClassName: 'active' },\n            'about'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.menuExtra },\n          _react2.default.createElement(\n            'a',\n            { className: _styles.menuLinkExtra, href: 'https://github.com/zacarellano/uxscoreboard' },\n            'source'\n          )\n        )\n      )\n    )\n  );\n}"
     },
     {
-      "id": 296,
+      "id": 298,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Home/Home.js",
       "name": "./app/components/Home/Home.js",
       "index": 226,
@@ -20373,7 +20447,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Home;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouter = require('react-router');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Home() {\n  return _react2.default.createElement(\n    'div',\n    { className: _styles.homeContainer },\n    _react2.default.createElement(\n      'div',\n      { className: _styles.uxscoreboard },\n      _react2.default.createElement(\n        'h1',\n        { className: _styles.name },\n        'uxscoreboard'\n      ),\n      _react2.default.createElement(\n        'h2',\n        { className: _styles.description },\n        'live sports scoreboard built on react.js'\n      )\n    ),\n    _react2.default.createElement(\n      'nav',\n      { className: _styles.leagueMenu },\n      _react2.default.createElement(\n        'menu',\n        { className: _styles.leagueList },\n        _react2.default.createElement(\n          'li',\n          { className: _styles.leagueItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.leagueLink, to: '/mlb' },\n            'MLB'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.leagueItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.leagueLink, to: '/nba' },\n            'NBA'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.leagueItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.leagueLink, to: '/nfl' },\n            'NFL'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.leagueItem },\n          _react2.default.createElement(\n            _reactRouter.Link,\n            { className: _styles.leagueLink, to: '/nhl' },\n            'NHL'\n          )\n        )\n      )\n    )\n  );\n}"
     },
     {
-      "id": 297,
+      "id": 299,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Leaders/Leaders.js",
       "name": "./app/components/Leaders/Leaders.js",
       "index": 541,
@@ -20410,7 +20484,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Leaders;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nrequire('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Leaders() {\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n      'h2',\n      null,\n      'leaders'\n    )\n  );\n}"
     },
     {
-      "id": 298,
+      "id": 300,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Loading/Loading.js",
       "name": "./app/components/Loading/Loading.js",
       "index": 247,
@@ -20447,7 +20521,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Loading;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Loading() {\n  return _react2.default.createElement(\n    'div',\n    { className: _styles.loadingContainer },\n    _react2.default.createElement(\n      'div',\n      { className: _styles.svgContainer },\n      _react2.default.createElement(\n        'svg',\n        { className: _styles.svg, viewBox: '25 25 50 50' },\n        _react2.default.createElement('circle', { className: _styles.svgPath, cx: 50, cy: 50, r: 20, fill: 'none', strokeWidth: 2, strokeMiterlimit: 10 })\n      )\n    )\n  );\n}"
     },
     {
-      "id": 299,
+      "id": 301,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Matchup/Matchup.js",
       "name": "./app/components/Matchup/Matchup.js",
       "index": 523,
@@ -20484,7 +20558,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Matchup;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _utils = require('helpers/utils');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  awayTeam: _react.PropTypes.string.isRequired,\n  homeTeam: _react.PropTypes.string.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  location: _react.PropTypes.string.isRequired,\n  venue: _react.PropTypes.string.isRequired\n};\n\nfunction Matchup(_ref) {\n  var awayTeam = _ref.awayTeam,\n      homeTeam = _ref.homeTeam,\n      date = _ref.date,\n      location = _ref.location,\n      venue = _ref.venue;\n\n  return _react2.default.createElement(\n    'header',\n    { className: _styles.matchupContainer },\n    _react2.default.createElement(\n      'h1',\n      { className: _styles.matchupTeams },\n      awayTeam + ' v. ' + homeTeam\n    ),\n    _react2.default.createElement(\n      'h2',\n      { className: _styles.matchupDate },\n      (0, _utils.formatDateStr)(date)\n    ),\n    _react2.default.createElement(\n      'h3',\n      { className: _styles.matchupLocation },\n      venue + ' \\u2022 ' + location\n    )\n  );\n}\n\nMatchup.propTypes = propTypes;"
     },
     {
-      "id": 300,
+      "id": 302,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Mlb/Mlb.js",
       "name": "./app/components/Mlb/Mlb.js",
       "index": 253,
@@ -20521,7 +20595,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Mlb;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  isLoading: _react.PropTypes.bool.isRequired,\n  isValid: _react.PropTypes.bool.isRequired,\n  scores: _react.PropTypes.object.isRequired,\n  year: _react.PropTypes.string.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired\n};\n\nvar defaultProps = {\n  league: 'mlb'\n};\n\nfunction Mlb(_ref) {\n  var isLoading = _ref.isLoading,\n      isValid = _ref.isValid,\n      scores = _ref.scores,\n      year = _ref.year,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league;\n\n  return _react2.default.createElement(\n    'div',\n    null,\n    isLoading ? _react2.default.createElement(_components.Loading, null) : isValid && scores ? _react2.default.createElement(_containers.ScoreboardContainer, { scores: scores, year: year, date: date, today: today, league: league }) : _react2.default.createElement(_components.NotFound, null)\n  );\n}\n\nMlb.propTypes = propTypes;\nMlb.defaultProps = defaultProps;"
     },
     {
-      "id": 301,
+      "id": 303,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nba/Nba.js",
       "name": "./app/components/Nba/Nba.js",
       "index": 254,
@@ -20558,7 +20632,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Nba;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  isLoading: _react.PropTypes.bool.isRequired,\n  isValid: _react.PropTypes.bool.isRequired,\n  scores: _react.PropTypes.object.isRequired,\n  year: _react.PropTypes.string.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired\n};\n\nvar defaultProps = {\n  league: 'nba'\n};\n\nfunction Nba(_ref) {\n  var isLoading = _ref.isLoading,\n      isValid = _ref.isValid,\n      scores = _ref.scores,\n      year = _ref.year,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league;\n\n  return _react2.default.createElement(\n    'div',\n    null,\n    isLoading ? _react2.default.createElement(_components.Loading, null) : isValid && scores ? _react2.default.createElement(_containers.ScoreboardContainer, { scores: scores, year: year, date: date, today: today, league: league }) : _react2.default.createElement(_components.NotFound, null)\n  );\n}\n\nNba.propTypes = propTypes;\nNba.defaultProps = defaultProps;"
     },
     {
-      "id": 302,
+      "id": 304,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nfl/Nfl.js",
       "name": "./app/components/Nfl/Nfl.js",
       "index": 255,
@@ -20595,7 +20669,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Nfl;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  isLoading: _react.PropTypes.bool.isRequired,\n  isValid: _react.PropTypes.bool.isRequired,\n  scores: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired\n};\n\nvar defaultProps = {\n  league: 'nfl'\n};\n\nfunction Nfl(_ref) {\n  var isLoading = _ref.isLoading,\n      isValid = _ref.isValid,\n      scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league;\n\n  return _react2.default.createElement(\n    'div',\n    null,\n    isLoading ? _react2.default.createElement(_components.Loading, null) : _react2.default.createElement(\n      'section',\n      { className: _styles.nflContainer },\n      _react2.default.createElement(\n        'h1',\n        null,\n        'sorry :/'\n      ),\n      _react2.default.createElement(\n        'h2',\n        null,\n        'coming soon.. '\n      )\n    )\n  );\n}\n\nNfl.propTypes = propTypes;\nNfl.defaultProps = defaultProps;"
     },
     {
-      "id": 303,
+      "id": 305,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nhl/Nhl.js",
       "name": "./app/components/Nhl/Nhl.js",
       "index": 258,
@@ -20632,7 +20706,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Nhl;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  isLoading: _react.PropTypes.bool.isRequired,\n  isValid: _react.PropTypes.bool.isRequired,\n  scores: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired\n};\n\nvar defaultProps = {\n  league: 'nhl'\n};\n\nfunction Nhl(_ref) {\n  var isLoading = _ref.isLoading,\n      isValid = _ref.isValid,\n      scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league;\n\n  return _react2.default.createElement(\n    'div',\n    null,\n    isLoading ? _react2.default.createElement(_components.Loading, null) : isValid && scores ? _react2.default.createElement(_components.Scoreboard, { scores: scores, date: date, today: today, league: league }) : _react2.default.createElement(_components.NotFound, null)\n  );\n}\n\nNhl.propTypes = propTypes;\nNhl.defaultProps = defaultProps;"
     },
     {
-      "id": 304,
+      "id": 306,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NoGames/NoGames.js",
       "name": "./app/components/NoGames/NoGames.js",
       "index": 250,
@@ -20669,7 +20743,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = NoGames;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction NoGames() {\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.noGamesContainer },\n    'no games today'\n  );\n}"
     },
     {
-      "id": 305,
+      "id": 307,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NotFound/NotFound.js",
       "name": "./app/components/NotFound/NotFound.js",
       "index": 244,
@@ -20706,7 +20780,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = NotFound;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction NotFound() {\n  return _react2.default.createElement(\n    'div',\n    { className: _styles.container },\n    _react2.default.createElement('img', { src: '/assets/img/mr_robot.png', alt: '' })\n  );\n}"
     },
     {
-      "id": 306,
+      "id": 308,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/PanelMenu/PanelMenu.js",
       "name": "./app/components/PanelMenu/PanelMenu.js",
       "index": 526,
@@ -20743,7 +20817,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PanelMenu;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction PanelMenu(_ref) {\n  var panel = _ref.panel,\n      switchPanel = _ref.switchPanel;\n\n  return _react2.default.createElement(\n    'menu',\n    { className: _styles.panelMenu },\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.panelList },\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'boxScore' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('boxScore');\n          } },\n        'box score'\n      ),\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'teamStats' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('teamStats');\n          } },\n        'team stats'\n      ),\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'playByPlay' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('playByPlay');\n          } },\n        'play-by-play'\n      )\n    )\n  );\n}"
     },
     {
-      "id": 307,
+      "id": 309,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Playoffs/Playoffs.js",
       "name": "./app/components/Playoffs/Playoffs.js",
       "index": 404,
@@ -20780,7 +20854,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Playoffs;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nrequire('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Playoffs() {\n  return _react2.default.createElement(\n    'h2',\n    null,\n    'playoffs'\n  );\n}"
     },
     {
-      "id": 308,
+      "id": 310,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
       "name": "./app/components/Scoreboard/Scoreboard.js",
       "index": 259,
@@ -20817,7 +20891,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Scoreboard;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _styles = require('./styles.css');\n\nvar _api = require('helpers/api');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  scores: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired\n};\n\nfunction Scoreboard(_ref) {\n  var scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league,\n      seasonState = _ref.seasonState;\n\n  var games = void 0;\n  if (league === 'mlb') {\n    games = scores.game === undefined ? _react2.default.createElement(_components.NoGames, null) : !Array.isArray(scores.game) ? _react2.default.createElement(_containers.GameContainer, { game: scores.game, date: date, league: league, key: scores.game.game_pk }) : scores.game.filter(function (item) {\n      return item.game_type !== 'S';\n    }).map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.game_pk });\n    });\n  }\n  if (league === 'nhl') {\n    games = !scores.dates.length ? _react2.default.createElement(_components.NoGames, null) : scores.dates[0].games.map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.gamePk });\n    });\n  }\n  if (league === 'nba') {\n    games = !scores.sports_content.games.game.length ? _react2.default.createElement(_components.NoGames, null) : scores.sports_content.games.game.map(function (item, index) {\n      var combined = Object.assign({}, scores.games[index], item);\n      (0, _api.getNbaGameDetails)(date, item.id).then(function (data) {\n        return Object.assign(combined, data.sports_content.game);\n      });\n      return _react2.default.createElement(_containers.GameContainer, { game: combined, date: date, league: league, key: item.id });\n    });\n  }\n  var allStarGame = false;\n  if (league === 'nba') {\n    allStarGame = scores.games.length === 1 && scores.games[0].tags[0] === 'AWASG';\n  }\n  return _react2.default.createElement(\n    'main',\n    { className: _styles.scoreboardContainer },\n    _react2.default.createElement(_containers.DateContainer, { date: date, today: today, league: league }),\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.gamesList },\n      games\n    ),\n    seasonState && seasonState.isAllStar && _react2.default.createElement(_components.AllStar, { img: allStarGame ? 'asg' : 'nola', league: league })\n  );\n}\n\nScoreboard.propTypes = propTypes;"
     },
     {
-      "id": 309,
+      "id": 311,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Stats/Stats.js",
       "name": "./app/components/Stats/Stats.js",
       "index": 533,
@@ -20854,7 +20928,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Stats;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _statsFns = require('helpers/statsFns');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }\n\nfunction Stats(_ref) {\n  var teams = _ref.teams,\n      stats = _objectWithoutProperties(_ref, ['teams']);\n\n  var statsHead = (0, _statsFns.formatStatsTableHead)(teams);\n  var statsBody = (0, _statsFns.formatStatsTableBody)(stats);\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.statsContainer },\n    _react2.default.createElement(\n      'table',\n      { className: _styles.statsTable },\n      _react2.default.createElement('thead', { className: _styles.statsTableHead, dangerouslySetInnerHTML: statsHead }),\n      _react2.default.createElement('tbody', { className: _styles.statsTableBody, dangerouslySetInnerHTML: statsBody })\n    )\n  );\n}"
     },
     {
-      "id": 310,
+      "id": 312,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Team/Team.js",
       "name": "./app/components/Team/Team.js",
       "index": 508,
@@ -20891,7 +20965,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Team;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nvar _team_colors = require('./team_colors.css');\n\nvar _team_colors2 = _interopRequireDefault(_team_colors);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Team(_ref) {\n  var name = _ref.name,\n      code = _ref.code,\n      _ref$filetype = _ref.filetype,\n      filetype = _ref$filetype === undefined ? 'svg' : _ref$filetype,\n      ws = _ref.ws,\n      ls = _ref.ls,\n      ts = _ref.ts,\n      score = _ref.score,\n      league = _ref.league;\n\n  return _react2.default.createElement(\n    'section',\n    { className: _team_colors2.default[code + '_' + league] },\n    _react2.default.createElement('img', { className: _styles.teamLogo, src: '/assets/img/' + league + '/teams/' + code + '.' + filetype, alt: name }),\n    _react2.default.createElement(\n      'div',\n      { className: _styles.teamInfo },\n      _react2.default.createElement(\n        'div',\n        { className: _styles.teamLeft },\n        _react2.default.createElement(\n          'span',\n          { className: _styles.teamName },\n          name.length >= 9 ? _react2.default.createElement(\n            'small',\n            null,\n            name\n          ) : name\n        ),\n        ws && ls && _react2.default.createElement(\n          'span',\n          { className: _styles.teamRecord },\n          '(' + ws + '-' + ls + (ts ? '-' + ts : '') + ')'\n        )\n      ),\n      _react2.default.createElement(\n        'div',\n        { className: _styles.teamRight },\n        score && _react2.default.createElement(\n          'span',\n          { className: _styles.teamScore },\n          score\n        )\n      )\n    )\n  );\n}"
     },
     {
-      "id": 311,
+      "id": 313,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Test/Test.js",
       "name": "./app/components/Test/Test.js",
       "index": 544,
@@ -20928,7 +21002,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Test;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Test() {\n  return _react2.default.createElement(\n    'div',\n    { className: _styles.loadingContainer },\n    _react2.default.createElement(\n      'div',\n      { className: _styles.svgContainer },\n      _react2.default.createElement(\n        'svg',\n        { className: _styles.svg, viewBox: '25 25 50 50' },\n        _react2.default.createElement('circle', { className: _styles.svgPath, cx: 50, cy: 50, r: 20, fill: 'none', strokeWidth: 2, strokeMiterlimit: 10 })\n      )\n    )\n  );\n}"
     },
     {
-      "id": 312,
+      "id": 314,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/config/routes.js",
       "name": "./app/config/routes.js",
       "index": 166,
@@ -20965,7 +21039,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouter = require('react-router');\n\nvar _containers = require('containers');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar routes = _react2.default.createElement(\n  _reactRouter.Router,\n  { history: _reactRouter.browserHistory },\n  _react2.default.createElement(\n    _reactRouter.Route,\n    { path: '/', component: _containers.MainContainer },\n    _react2.default.createElement(_reactRouter.IndexRoute, { component: _containers.HomeContainer }),\n    _react2.default.createElement(\n      _reactRouter.Route,\n      { path: '/mlb' },\n      _react2.default.createElement(_reactRouter.IndexRoute, { component: _containers.MlbContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores', component: _containers.MlbContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores/:date', component: _containers.MlbContainer })\n    ),\n    _react2.default.createElement(\n      _reactRouter.Route,\n      { path: '/nba' },\n      _react2.default.createElement(_reactRouter.IndexRoute, { component: _containers.NbaContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores', component: _containers.NbaContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores/:date', component: _containers.NbaContainer })\n    ),\n    _react2.default.createElement(\n      _reactRouter.Route,\n      { path: '/nfl' },\n      _react2.default.createElement(_reactRouter.IndexRoute, { component: _containers.NflContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores', component: _containers.NflContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores/:week', component: _containers.NflContainer })\n    ),\n    _react2.default.createElement(\n      _reactRouter.Route,\n      { path: '/nhl' },\n      _react2.default.createElement(_reactRouter.IndexRoute, { component: _containers.NhlContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores', component: _containers.NhlContainer }),\n      _react2.default.createElement(_reactRouter.Route, { path: 'scores/:date', component: _containers.NhlContainer })\n    ),\n    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _containers.AboutContainer }),\n    _react2.default.createElement(_reactRouter.Route, { path: '/test', component: _containers.TestContainer }),\n    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _containers.NotFoundContainer })\n  )\n);\n\nexports.default = routes;"
     },
     {
-      "id": 313,
+      "id": 315,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/About/AboutContainer.js",
       "name": "./app/containers/About/AboutContainer.js",
       "index": 550,
@@ -21002,7 +21076,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar AboutContainer = function (_Component) {\n  _inherits(AboutContainer, _Component);\n\n  function AboutContainer() {\n    _classCallCheck(this, AboutContainer);\n\n    return _possibleConstructorReturn(this, (AboutContainer.__proto__ || Object.getPrototypeOf(AboutContainer)).apply(this, arguments));\n  }\n\n  _createClass(AboutContainer, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.About, null);\n    }\n  }]);\n\n  return AboutContainer;\n}(_react.Component);\n\nexports.default = AboutContainer;"
     },
     {
-      "id": 314,
+      "id": 316,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Date/DateContainer.js",
       "name": "./app/containers/Date/DateContainer.js",
       "index": 558,
@@ -21039,7 +21113,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar DateContainer = function (_Component) {\n  _inherits(DateContainer, _Component);\n\n  function DateContainer() {\n    _classCallCheck(this, DateContainer);\n\n    var _this = _possibleConstructorReturn(this, (DateContainer.__proto__ || Object.getPrototypeOf(DateContainer)).call(this));\n\n    _this.state = {\n      width: 0\n    };\n    _this.getScreenWidth = _this.getScreenWidth.bind(_this);\n    return _this;\n  }\n\n  _createClass(DateContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.getScreenWidth();\n      window.addEventListener('resize', this.getScreenWidth, false);\n    }\n  }, {\n    key: 'componentWillUnmount',\n    value: function componentWillUnmount() {\n      window.removeEventListener('resize', this.getScreenWidth, false);\n    }\n  }, {\n    key: 'getScreenWidth',\n    value: function getScreenWidth() {\n      this.setState({\n        'width': window.innerWidth\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Date, _extends({}, this.state, this.props));\n    }\n  }]);\n\n  return DateContainer;\n}(_react.Component);\n\nexports.default = DateContainer;"
     },
     {
-      "id": 315,
+      "id": 317,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Details/DetailsContainer.js",
       "name": "./app/containers/Details/DetailsContainer.js",
       "index": 560,
@@ -21076,7 +21150,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar DetailsContainer = function (_Component) {\n  _inherits(DetailsContainer, _Component);\n\n  function DetailsContainer() {\n    _classCallCheck(this, DetailsContainer);\n\n    var _this = _possibleConstructorReturn(this, (DetailsContainer.__proto__ || Object.getPrototypeOf(DetailsContainer)).call(this));\n\n    _this.state = { panel: '', details: {} };\n    _this.switchPanel = _this.switchPanel.bind(_this);\n    return _this;\n  }\n\n  _createClass(DetailsContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.setState({ panel: 'boxScore' });\n    }\n  }, {\n    key: 'switchPanel',\n    value: function switchPanel(newPanel) {\n      this.setState({ panel: newPanel });\n    }\n  }, {\n    key: 'updateDetails',\n    value: function updateDetails(newDetails) {\n      this.setState({ details: newDetails });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Details, _extends({ switchPanel: this.switchPanel }, this.state, this.props));\n    }\n  }]);\n\n  return DetailsContainer;\n}(_react.Component);\n\nexports.default = DetailsContainer;"
     },
     {
-      "id": 316,
+      "id": 318,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Game/GameContainer.js",
       "name": "./app/containers/Game/GameContainer.js",
       "index": 559,
@@ -21113,7 +21187,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar GameContainer = function (_Component) {\n  _inherits(GameContainer, _Component);\n\n  function GameContainer() {\n    _classCallCheck(this, GameContainer);\n\n    var _this = _possibleConstructorReturn(this, (GameContainer.__proto__ || Object.getPrototypeOf(GameContainer)).call(this));\n\n    _this.state = { expanded: false };\n    _this.showDetails = _this.showDetails.bind(_this);\n    return _this;\n  }\n\n  _createClass(GameContainer, [{\n    key: 'showDetails',\n    value: function showDetails() {\n      this.setState({ expanded: !this.state.expanded });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Game, _extends({ showDetails: this.showDetails }, this.state, this.props));\n    }\n  }]);\n\n  return GameContainer;\n}(_react.Component);\n\nexports.default = GameContainer;"
     },
     {
-      "id": 317,
+      "id": 319,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Home/HomeContainer.js",
       "name": "./app/containers/Home/HomeContainer.js",
       "index": 549,
@@ -21150,7 +21224,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar HomeContainer = function (_Component) {\n  _inherits(HomeContainer, _Component);\n\n  function HomeContainer() {\n    _classCallCheck(this, HomeContainer);\n\n    return _possibleConstructorReturn(this, (HomeContainer.__proto__ || Object.getPrototypeOf(HomeContainer)).apply(this, arguments));\n  }\n\n  _createClass(HomeContainer, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Home, null);\n    }\n  }]);\n\n  return HomeContainer;\n}(_react.Component);\n\nexports.default = HomeContainer;"
     },
     {
-      "id": 318,
+      "id": 320,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Main/MainContainer.js",
       "name": "./app/containers/Main/MainContainer.js",
       "index": 224,
@@ -21187,7 +21261,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar MainContainer = function (_Component) {\n  _inherits(MainContainer, _Component);\n\n  function MainContainer() {\n    _classCallCheck(this, MainContainer);\n\n    var _this = _possibleConstructorReturn(this, (MainContainer.__proto__ || Object.getPrototypeOf(MainContainer)).call(this));\n\n    _this.state = {\n      screenWidth: 0,\n      menuHeight: 0,\n      isMenuOpen: false\n    };\n    _this.getScreenWidth = _this.getScreenWidth.bind(_this);\n    _this.triggerMenu = _this.triggerMenu.bind(_this);\n    _this.hideMenu = _this.hideMenu.bind(_this);\n    return _this;\n  }\n\n  _createClass(MainContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.getScreenWidth();\n      window.addEventListener('resize', this.getScreenWidth);\n    }\n  }, {\n    key: 'componentWillUnmount',\n    value: function componentWillUnmount() {\n      window.removeEventListener('resize', this.getScreenWidth);\n    }\n  }, {\n    key: 'getScreenWidth',\n    value: function getScreenWidth() {\n      var _this2 = this;\n\n      this.setState({ 'screenWidth': window.innerWidth }, function () {\n        var header = document.querySelector('header');\n        var navHeight = header.querySelector('nav').scrollHeight;\n        if (_this2.state.screenWidth >= 667) {\n          _this2.setState({ menuHeight: 'initial' });\n        } else {\n          _this2.setState({ menuHeight: _this2.state.isMenuOpen ? navHeight : 0 });\n        }\n      });\n    }\n  }, {\n    key: 'triggerMenu',\n    value: function triggerMenu() {\n      var header = document.querySelector('header');\n      var navHeight = header.querySelector('nav').scrollHeight;\n      if (this.state.isMenuOpen) {\n        window.removeEventListener('click', this.hideMenu);\n      } else {\n        window.addEventListener('click', this.hideMenu);\n      }\n      this.setState({\n        isMenuOpen: !this.state.isMenuOpen,\n        menuHeight: !this.state.isMenuOpen ? navHeight : 0\n      });\n    }\n  }, {\n    key: 'hideMenu',\n    value: function hideMenu(event) {\n      var el = event.target || event.srcElement;\n      while (el) {\n        if (el.nodeName === 'A') {\n          window.removeEventListener('click', this.hideMenu);\n          this.triggerMenu();\n        }\n        el = el.parentNode;\n      }\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var menuHeight = this.state.isMenuOpen ? 'calc(100% + ' + this.state.menuHeight / 2 + 'px)' : '100%';\n      return _react2.default.createElement(\n        'div',\n        { className: _styles.mainContainer, style: { height: menuHeight } },\n        _react2.default.createElement(_components.Header, _extends({ triggerMenu: this.triggerMenu }, this.state)),\n        _react2.default.createElement(\n          'main',\n          { className: _styles.innerContainer },\n          this.props.children\n        ),\n        _react2.default.createElement(_components.Footer, null)\n      );\n    }\n  }]);\n\n  return MainContainer;\n}(_react.Component);\n\nexports.default = MainContainer;"
     },
     {
-      "id": 319,
+      "id": 321,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Mlb/MlbContainer.js",
       "name": "./app/containers/Mlb/MlbContainer.js",
       "index": 552,
@@ -21224,7 +21298,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _utils = require('helpers/utils');\n\nvar _api = require('helpers/api');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar MlbContainer = function (_Component) {\n  _inherits(MlbContainer, _Component);\n\n  function MlbContainer() {\n    _classCallCheck(this, MlbContainer);\n\n    var _this = _possibleConstructorReturn(this, (MlbContainer.__proto__ || Object.getPrototypeOf(MlbContainer)).call(this));\n\n    _this.state = {\n      isLoading: true,\n      isValid: false,\n      scores: {},\n      year: '',\n      date: '',\n      today: ''\n    };\n    return _this;\n  }\n\n  _createClass(MlbContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      this.setState({ today: (0, _utils.getTodaysDate)() }, function () {\n        _this2.makeRequest(_this2.props.routeParams.date);\n      });\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.makeRequest(nextProps.routeParams.date);\n    }\n  }, {\n    key: 'makeRequest',\n    value: function makeRequest() {\n      var _this3 = this;\n\n      var dt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.today;\n\n      if ((0, _utils.isValidDate)(dt)) {\n        this.setState({ isValid: true });\n      }\n      (0, _api.getMlbScores)(dt).then(function (currentScores) {\n        var games = currentScores.data.games;\n        _this3.cleanGameData(games);\n        _this3.setState({\n          isLoading: false,\n          scores: games,\n          year: currentScores.data.games.year,\n          date: dt\n        });\n      }).catch(function (error) {\n        _this3.setState({\n          isLoading: false,\n          date: dt\n        });\n        throw new Error(error);\n      });\n    }\n  }, {\n    key: 'cleanGameData',\n    value: function cleanGameData(scores) {\n      if (scores.game !== undefined) {\n        if (scores.game[0] === undefined) {\n          if (scores.game.linescore === undefined) {\n            scores.game.linescore = {\n              r: { away: null, home: null },\n              h: { away: null, home: null },\n              e: { away: null, home: null },\n              inning: { 0: { away: null, home: null },\n                1: { away: null, home: null },\n                2: { away: null, home: null },\n                3: { away: null, home: null },\n                4: { away: null, home: null },\n                5: { away: null, home: null },\n                6: { away: null, home: null },\n                7: { away: null, home: null },\n                8: { away: null, home: null }\n              }\n            };\n          }\n          if (scores.game.review === undefined) {\n            scores.game.review = {\n              challenges_away_remaining: { null: null },\n              challenges_home_remaining: { null: null }\n            };\n          }\n          return scores.game;\n        } else {\n          scores.game.map(function (game) {\n            if (game.linescore === undefined) {\n              game.linescore = {\n                r: { away: null, home: null },\n                h: { away: null, home: null },\n                e: { away: null, home: null },\n                inning: { 0: { away: null, home: null },\n                  1: { away: null, home: null },\n                  2: { away: null, home: null },\n                  3: { away: null, home: null },\n                  4: { away: null, home: null },\n                  5: { away: null, home: null },\n                  6: { away: null, home: null },\n                  7: { away: null, home: null },\n                  8: { away: null, home: null }\n                }\n              };\n            }\n            if (game.review === undefined) {\n              game.review = {\n                challenges_away_remaining: { null: null },\n                challenges_home_remaining: { null: null }\n              };\n            }\n            if (game.alerts === undefined) {\n              game.alerts = {\n                text: { null: null }\n              };\n            }\n          });\n        }\n      }\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Mlb, this.state);\n    }\n  }]);\n\n  return MlbContainer;\n}(_react.Component);\n\nexports.default = MlbContainer;"
     },
     {
-      "id": 320,
+      "id": 322,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nba/NbaContainer.js",
       "name": "./app/containers/Nba/NbaContainer.js",
       "index": 553,
@@ -21261,7 +21335,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _utils = require('helpers/utils');\n\nvar _api = require('helpers/api');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar NbaContainer = function (_Component) {\n  _inherits(NbaContainer, _Component);\n\n  function NbaContainer() {\n    _classCallCheck(this, NbaContainer);\n\n    var _this = _possibleConstructorReturn(this, (NbaContainer.__proto__ || Object.getPrototypeOf(NbaContainer)).call(this));\n\n    _this.state = {\n      isLoading: true,\n      isValid: false,\n      scores: {},\n      year: '',\n      date: '',\n      today: ''\n    };\n    return _this;\n  }\n\n  _createClass(NbaContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      this.setState({ today: (0, _utils.getTodaysDate)() }, function () {\n        _this2.makeRequest(_this2.props.routeParams.date);\n      });\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.makeRequest(nextProps.routeParams.date);\n    }\n  }, {\n    key: 'makeRequest',\n    value: function makeRequest() {\n      var _this3 = this;\n\n      var dt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.today;\n\n      if ((0, _utils.isValidDate)(dt)) {\n        this.setState({ isValid: true });\n      }\n      (0, _api.getNbaScores)(dt).then(function (currentScores) {\n        _this3.setState({\n          isLoading: false,\n          scores: currentScores,\n          year: currentScores.sports_content.sports_meta.season_meta.season_year,\n          date: dt\n        });\n      }).catch(function (error) {\n        _this3.setState({\n          isLoading: false,\n          date: dt\n        });\n        throw new Error(error);\n      });\n    }\n  }, {\n    key: 'cleanGameData',\n    value: function cleanGameData(scores) {\n      if (scores.game !== undefined) {\n        scores.game.map(function (game) {\n          if (game.visitor.linescores === undefined) {\n            game.visitor.linescores = {\n              period: { 0: { score: null },\n                1: { score: null },\n                2: { score: null },\n                3: { score: null }\n              }\n            };\n          }\n          if (game.home.linescores === undefined) {\n            game.home.linescores = {\n              period: { 0: { score: null },\n                1: { score: null },\n                2: { score: null },\n                3: { score: null }\n              }\n            };\n          }\n          if (game.home.stats.points === undefined) {\n            game.home.stats.points = null;\n          }\n          if (game.visitor.stats.points === undefined) {\n            game.visitor.stats.points = null;\n          }\n        });\n      }\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Nba, this.state);\n    }\n  }]);\n\n  return NbaContainer;\n}(_react.Component);\n\nexports.default = NbaContainer;"
     },
     {
-      "id": 321,
+      "id": 323,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nfl/NflContainer.js",
       "name": "./app/containers/Nfl/NflContainer.js",
       "index": 554,
@@ -21298,7 +21372,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar NflContainer = function (_Component) {\n  _inherits(NflContainer, _Component);\n\n  function NflContainer() {\n    _classCallCheck(this, NflContainer);\n\n    var _this = _possibleConstructorReturn(this, (NflContainer.__proto__ || Object.getPrototypeOf(NflContainer)).call(this));\n\n    _this.state = {\n      isLoading: true,\n      isValid: false,\n      scores: {},\n      date: '',\n      today: ''\n    };\n    return _this;\n  }\n\n  _createClass(NflContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.setState({ isLoading: false });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Nfl, this.state);\n    }\n  }]);\n\n  return NflContainer;\n}(_react.Component);\n\nexports.default = NflContainer;"
     },
     {
-      "id": 322,
+      "id": 324,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Nhl/NhlContainer.js",
       "name": "./app/containers/Nhl/NhlContainer.js",
       "index": 555,
@@ -21335,7 +21409,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _utils = require('helpers/utils');\n\nvar _api = require('helpers/api');\n\nvar _seasons = require('helpers/seasons');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar NhlContainer = function (_Component) {\n  _inherits(NhlContainer, _Component);\n\n  function NhlContainer() {\n    _classCallCheck(this, NhlContainer);\n\n    var _this = _possibleConstructorReturn(this, (NhlContainer.__proto__ || Object.getPrototypeOf(NhlContainer)).call(this));\n\n    _this.state = {\n      isLoading: true,\n      isValid: false,\n      scores: {},\n      date: '',\n      today: ''\n    };\n    return _this;\n  }\n\n  _createClass(NhlContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      this.setState({ today: (0, _utils.getTodaysDate)() }, function () {\n        _this2.makeRequest(_this2.props.routeParams.date);\n      });\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.makeRequest(nextProps.routeParams.date);\n    }\n  }, {\n    key: 'makeRequest',\n    value: function makeRequest() {\n      var _this3 = this;\n\n      var dt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.today;\n\n      if ((0, _utils.isValidDate)(dt)) {\n        this.setState({ isValid: true });\n      }\n      (0, _api.getNhlScores)(dt).then(function (currentScores) {\n        _this3.setState({\n          isLoading: false,\n          scores: currentScores,\n          date: dt\n        });\n      }).catch(function (error) {\n        _this3.setState({\n          isLoading: false,\n          date: dt\n        });\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Nhl, this.state);\n    }\n  }]);\n\n  return NhlContainer;\n}(_react.Component);\n\nexports.default = NhlContainer;"
     },
     {
-      "id": 323,
+      "id": 325,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/NotFound/NotFoundContainer.js",
       "name": "./app/containers/NotFound/NotFoundContainer.js",
       "index": 551,
@@ -21372,7 +21446,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar NotFoundContainer = function (_Component) {\n  _inherits(NotFoundContainer, _Component);\n\n  function NotFoundContainer() {\n    _classCallCheck(this, NotFoundContainer);\n\n    return _possibleConstructorReturn(this, (NotFoundContainer.__proto__ || Object.getPrototypeOf(NotFoundContainer)).apply(this, arguments));\n  }\n\n  _createClass(NotFoundContainer, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.NotFound, null);\n    }\n  }]);\n\n  return NotFoundContainer;\n}(_react.Component);\n\nexports.default = NotFoundContainer;"
     },
     {
-      "id": 324,
+      "id": 326,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Scoreboard/ScoreboardContainer.js",
       "name": "./app/containers/Scoreboard/ScoreboardContainer.js",
       "index": 557,
@@ -21409,7 +21483,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _seasons = require('helpers/seasons');\n\nvar _utils = require('helpers/utils');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar ScoreboardContainer = function (_Component) {\n  _inherits(ScoreboardContainer, _Component);\n\n  function ScoreboardContainer() {\n    _classCallCheck(this, ScoreboardContainer);\n\n    var _this = _possibleConstructorReturn(this, (ScoreboardContainer.__proto__ || Object.getPrototypeOf(ScoreboardContainer)).call(this));\n\n    _this.state = {\n      isPreseason: false,\n      isSeason: false,\n      isAllStar: false,\n      isPlayoffs: false,\n      isFinals: false\n    };\n    return _this;\n  }\n\n  _createClass(ScoreboardContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.checkSeason(this.props.date);\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.checkSeason(nextProps.date);\n    }\n  }, {\n    key: 'checkSeason',\n    value: function checkSeason(day) {\n      var dates = _seasons.seasons[this.props.league].seasons[this.props.year];\n      this.setState({\n        isPreseason: (0, _utils.checkDay)(day, dates.preseason.start, dates.preseason.end),\n        isSeason: (0, _utils.checkDay)(day, dates.season.start, dates.season.end),\n        isAllStar: (0, _utils.checkDay)(day, dates.season.allstar.start, dates.season.allstar.end),\n        isPlayoffs: (0, _utils.checkDay)(day, dates.playoffs.start, dates.playoffs.end),\n        isFinals: (0, _utils.checkDay)(day, dates.playoffs.finals.start, dates.playoffs.finals.end)\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Scoreboard, _extends({ seasonState: this.state }, this.props));\n    }\n  }]);\n\n  return ScoreboardContainer;\n}(_react.Component);\n\nexports.default = ScoreboardContainer;"
     },
     {
-      "id": 325,
+      "id": 327,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Test/TestContainer.js",
       "name": "./app/containers/Test/TestContainer.js",
       "index": 561,
@@ -21446,7 +21520,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar TestContainer = function (_Component) {\n  _inherits(TestContainer, _Component);\n\n  function TestContainer() {\n    _classCallCheck(this, TestContainer);\n\n    return _possibleConstructorReturn(this, (TestContainer.__proto__ || Object.getPrototypeOf(TestContainer)).apply(this, arguments));\n  }\n\n  _createClass(TestContainer, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(_components.Test, null);\n    }\n  }]);\n\n  return TestContainer;\n}(_react.Component);\n\nexports.default = TestContainer;"
     },
     {
-      "id": 326,
+      "id": 328,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/boxScoreFns.js",
       "name": "./app/helpers/boxScoreFns.js",
       "index": 530,
@@ -21483,7 +21557,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\n// format table heading row\nvar formatBoxScoreTableHead = exports.formatBoxScoreTableHead = function formatBoxScoreTableHead(periods, totalPeriods, league, overtimes) {\n  var width = overtimes > 3 ? '25%' : overtimes ? '30%' : '40%';\n  var result = '<thead><tr><th style=\"width:' + width + '\"></th>';\n  for (var i = 1; i <= periods; i++) {\n    result += '<th>' + i + '</th>';\n  }\n  if (totalPeriods > periods) {\n    for (var _i = periods + 1; _i <= totalPeriods; _i++) {\n      if (league === 'mlb') {\n        result += '<th>' + _i + '</th>';\n      } else {\n        result += '<th>' + (_i > periods + 1 ? _i - periods + 'OT' : 'OT') + '</th>';\n      }\n    }\n  }\n  if (league === 'mlb') {\n    result += '<th>R</th><th>H</th><th>E</th>';\n  } else {\n    result += '<th>T</th>';\n  }\n  result += '</tr></thead>';\n  return { __html: result };\n};\n\nvar formatBoxScoreTableBodyRow = exports.formatBoxScoreTableBodyRow = function formatBoxScoreTableBodyRow(team, score, side, linescore, periods, totalPeriods, league) {\n  var result = '<th>' + team + '</th>';\n  for (var i = 0; i < Math.max(periods, totalPeriods); i++) {\n    if (league === 'nhl') {\n      if (linescore[i]) {\n        result += '<td>' + linescore[i][side].goals + '</td>';\n      } else {\n        result += '<td></td>';\n      }\n    }\n    if (league === 'nba') {\n      if (linescore[side][i] && i < totalPeriods) {\n        result += '<td>' + linescore[side][i].score + '</td>';\n      } else {\n        result += '<td></td>';\n      }\n    }\n    if (league === 'mlb') {\n      if (linescore.inning[i][side]) {\n        result += '<td>' + linescore.inning[i][side] + '</td>';\n      } else {\n        result += '<td></td>';\n      }\n    }\n  }\n  result += '<td><strong>' + score + '</strong></td>';\n  if (league === 'mlb') {\n    result += '<td><strong>' + linescore.h[side] + '</strong></td>';\n    result += '<td><strong>' + linescore.e[side] + '</strong></td>';\n  }\n  return { __html: result };\n};"
     },
     {
-      "id": 327,
+      "id": 329,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/diamondFns.js",
       "name": "./app/helpers/diamondFns.js",
       "index": 538,
@@ -21520,7 +21594,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar createDiamondImage = exports.createDiamondImage = function createDiamondImage(runners) {\n  var file = 'diamond';\n  if (!runners) return file;\n  if (runners.runner_on_1b) file += '_1b';\n  if (runners.runner_on_2b) file += '_2b';\n  if (runners.runner_on_3b) file += '_3b';\n  return file;\n};\n\nvar fillCircles = function fillCircles(numCircles, numFilled) {\n  var counter = 0;\n  var result = '';\n  while (counter < numFilled) {\n    result += '<span class=\"circle circleFilled\"></span>';\n    counter++;\n  }\n  while (counter < numCircles) {\n    result += '<span class=\"circle\"></span>';\n    counter++;\n  }\n  return { __html: result };\n};\n\nvar ballsCount = exports.ballsCount = function ballsCount(balls, inningState) {\n  if (inningState === 'Middle' || inningState === 'End') return fillCircles(4, 0);else if (balls === '1') return fillCircles(4, 1);else if (balls === '2') return fillCircles(4, 2);else if (balls === '3') return fillCircles(4, 3);else if (balls === '4') return fillCircles(4, 4);else return fillCircles(4, 0);\n};\n\nvar strikesOutsCount = exports.strikesOutsCount = function strikesOutsCount(strikesOuts, inningState) {\n  if (inningState === 'Middle' || inningState === 'End') return fillCircles(3, 0);else if (strikesOuts === '1') return fillCircles(3, 1);else if (strikesOuts === '2') return fillCircles(3, 2);else if (strikesOuts === '3') return fillCircles(3, 3);else return fillCircles(3, 0);\n};"
     },
     {
-      "id": 328,
+      "id": 330,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/boxScoreProps.js",
       "name": "./app/helpers/props/boxScoreProps.js",
       "index": 519,
@@ -21557,44 +21631,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nhlBoxScoreProps = exports.nbaBoxScoreProps = exports.mlbBoxScoreProps = undefined;\n\nvar _utils = require('../utils');\n\n//  mlb box score props --> BoxScore component\nvar mlbBoxScoreProps = exports.mlbBoxScoreProps = function mlbBoxScoreProps(game, league) {\n  return {\n    awayTeam: (0, _utils.shortenTeamName)(game.away_team_name),\n    homeTeam: (0, _utils.shortenTeamName)(game.home_team_name),\n    awayScore: game.linescore.r.away,\n    homeScore: game.linescore.r.home,\n    linescore: game.linescore,\n    periods: 9,\n    totalPeriods: game.linescore.inning.length,\n    overtimes: game.linescore.inning.length > 9 ? game.linescore.inning.length - 9 : 0,\n    league: league\n  };\n};\n\n//  nba box score props --> BoxScore component\nvar nbaBoxScoreProps = exports.nbaBoxScoreProps = function nbaBoxScoreProps(game, league) {\n  var inGame = game.period.current;\n  return {\n    awayTeam: (0, _utils.shortenTeamName)(game.visitor.nickname),\n    homeTeam: (0, _utils.shortenTeamName)(game.home.nickname),\n    awayScore: inGame ? game.vTeam.score : '',\n    homeScore: inGame ? game.hTeam.score : '',\n    linescore: {\n      away: game.vTeam.linescore,\n      home: game.hTeam.linescore\n    },\n    points: inGame ? game.home.stats.points : '',\n    periods: 4,\n    totalPeriods: Number(game.period_time.period_value),\n    overtimes: game.period_time.period_value > 4 ? Number(game.period_time.period_value) - 4 : 0,\n    league: league\n  };\n};\n\n//  nhl box score props --> BoxScore component\nvar nhlBoxScoreProps = exports.nhlBoxScoreProps = function nhlBoxScoreProps(game, league) {\n  var inGame = game.status.codedGameState > '2';\n  var isAllStar = game.gameType === 'A';\n  return {\n    awayTeam: (0, _utils.shortenTeamName)(game.teams.away.team.teamName),\n    homeTeam: (0, _utils.shortenTeamName)(game.teams.home.team.teamName),\n    awayScore: inGame ? game.linescore.teams.away.goals : '',\n    homeScore: inGame ? game.linescore.teams.home.goals : '',\n    linescore: game.linescore.periods,\n    periods: isAllStar ? 2 : 3,\n    totalPeriods: game.linescore.periods.length,\n    league: league\n  };\n};"
     },
     {
-      "id": 329,
-      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/gameStateProps.js",
-      "name": "./app/helpers/props/gameStateProps.js",
-      "index": 502,
-      "index2": 495,
-      "size": 2327,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        0
-      ],
-      "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
-      "issuerId": 293,
-      "issuerName": "./app/components/Game/Game.js",
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "reasons": [
-        {
-          "moduleId": 293,
-          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
-          "module": "./app/components/Game/Game.js",
-          "moduleName": "./app/components/Game/Game.js",
-          "type": "cjs require",
-          "userRequest": "helpers/props/gameStateProps",
-          "loc": "20:22-61"
-        }
-      ],
-      "usedExports": true,
-      "providedExports": null,
-      "depth": 7,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nhlGameStateProps = exports.nbaGameStateProps = exports.mlbGameStateProps = undefined;\n\nvar _utils = require('./../utils');\n\n//  mlb game state props --> GameState component\nvar mlbGameStateProps = exports.mlbGameStateProps = function mlbGameStateProps(game) {\n  var isPlayoffs = game.game_type !== 'R';\n  var isDoubleHeader = game.double_header_sw === 'Y';\n  return {\n    gameState: game.status.ind === 'S' ? 0 : 2,\n    status: game.status.status,\n    time: game.time + ' ET',\n    periods: 9,\n    totalPeriods: game.linescore.inning.length,\n    overtime: game.linescore.inning.length,\n    doubleHeader: isDoubleHeader ? game.game_nbr : '',\n    playoffs: isPlayoffs ? {\n      series: game.series,\n      game: game.series_num,\n      maxGames: game.ser_games\n    } : {},\n    isDoubleHeader: isDoubleHeader,\n    isPlayoffs: isPlayoffs\n  };\n};\n\n//  nba game state props --> GameState component\nvar nbaGameStateProps = exports.nbaGameStateProps = function nbaGameStateProps(game) {\n  return {\n    gameState: Number(game.period_time.game_status) - 1,\n    status: game.period_time.period_status,\n    time: (0, _utils.formatTimezone)(game.startTimeUTC) + ' ET',\n    periods: 4,\n    currentPeriod: game.period_time.period_value,\n    currentTime: game.period.isEndOfPeriod ? 'END' : game.period_time.game_clock,\n    isHalfTime: game.period.isHalftime,\n    totalPeriods: game.period_time.period_value,\n    overtime: game.period_time.period_value > 4 ? game.period_time.period_value > 5 ? game.period_time.period_value - 4 + 'OT' : 'OT' : '',\n    isPlayoffs: null\n  };\n};\n\n//  nhl game state props --> GameState component\nvar nhlGameStateProps = exports.nhlGameStateProps = function nhlGameStateProps(game) {\n  return {\n    gameState: game.status.codedGameState < 3 ? 0 : game.status.codedGameState < 6 ? 1 : 2,\n    status: game.status.codedGameState === '2' ? game.status.detailedState : game.status.abstractGameState,\n    time: (0, _utils.formatTimezone)(game.gameDate) + ' ET',\n    periods: 3,\n    currentPeriod: game.linescore.currentPeriod,\n    currentTime: game.linescore.currentPeriodTimeRemaining,\n    totalPeriods: game.linescore.periods.length,\n    overtime: game.linescore.currentPeriodOrdinal,\n    isPlayoffs: game.gameType === 'P'\n  };\n};"
-    },
-    {
-      "id": 330,
+      "id": 331,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/matchupProps.js",
       "name": "./app/helpers/props/matchupProps.js",
       "index": 518,
@@ -21631,7 +21668,7 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\n//  mlb matchup props --> Matchup component\nvar mlbMatchupProps = exports.mlbMatchupProps = function mlbMatchupProps(game, date) {\n  return {\n    awayTeam: game.away_team_name,\n    homeTeam: game.home_team_name,\n    location: game.location,\n    venue: game.venue,\n    date: date\n  };\n};\n\n//  nba matchup props --> Matchup component\nvar nbaMatchupProps = exports.nbaMatchupProps = function nbaMatchupProps(game, date) {\n  return {\n    awayTeam: game.visitor.nickname,\n    homeTeam: game.home.nickname,\n    location: game.city + ', ' + game.state + '.',\n    venue: game.arena,\n    date: date\n  };\n};\n\n//  nhl matchup props --> Matchup component\nvar nhlMatchupProps = exports.nhlMatchupProps = function nhlMatchupProps(game, date) {\n  var isAllStar = game.gameType === 'A';\n  return {\n    awayTeam: game.teams.away.team.teamName,\n    homeTeam: game.teams.home.team.teamName,\n    location: isAllStar ? 'Los Angeles' : game.teams.home.team.venue.city,\n    venue: game.venue.name,\n    date: date\n  };\n};"
     },
     {
-      "id": 331,
+      "id": 332,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/statsProps.js",
       "name": "./app/helpers/props/statsProps.js",
       "index": 520,
@@ -21668,43 +21705,6 @@
       "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nbaStatsProps = undefined;\n\nvar _utils = require('../utils');\n\n//  nba stats props --> Stats component\nvar nbaStatsProps = exports.nbaStatsProps = function nbaStatsProps(game) {\n  var awayStats = game.visitor.stats;\n  var homeStats = game.home.stats;\n  var inGame = game.period.current;\n  var empty = ['', ''];\n  return {\n    'teams': [(0, _utils.shortenTeamName)(game.visitor.nickname), (0, _utils.shortenTeamName)(game.home.nickname)],\n    'Points': inGame ? [awayStats.points, homeStats.points] : empty,\n    'Field-Goal %': inGame ? [awayStats.field_goals_percentage, homeStats.field_goals_percentage] : empty,\n    '3-Point %': inGame ? [awayStats.three_pointers_percentage, homeStats.three_pointers_percentage] : empty,\n    'Free-Throw %': inGame ? [awayStats.free_throws_percentage, homeStats.free_throws_percentage] : empty,\n    'Rebounds': inGame ? [Number(awayStats.rebounds_defensive) + Number(awayStats.rebounds_offensive) + Number(awayStats.team_rebounds), Number(homeStats.rebounds_defensive) + Number(homeStats.rebounds_offensive) + Number(homeStats.team_rebounds)] : empty,\n    'Assists': inGame ? [awayStats.assists, homeStats.assists] : empty,\n    'Blocks': inGame ? [awayStats.blocks, homeStats.blocks] : empty,\n    'Fouls': inGame ? [awayStats.fouls, homeStats.fouls] : empty,\n    'Steals': inGame ? [awayStats.steals, homeStats.steals] : empty,\n    'Turnovers': inGame ? [awayStats.turnovers, homeStats.turnovers] : empty\n  };\n};"
     },
     {
-      "id": 332,
-      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/props/teamProps.js",
-      "name": "./app/helpers/props/teamProps.js",
-      "index": 497,
-      "index2": 494,
-      "size": 2009,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        0
-      ],
-      "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
-      "issuerId": 293,
-      "issuerName": "./app/components/Game/Game.js",
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "reasons": [
-        {
-          "moduleId": 293,
-          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/Game.js",
-          "module": "./app/components/Game/Game.js",
-          "moduleName": "./app/components/Game/Game.js",
-          "type": "cjs require",
-          "userRequest": "helpers/props/teamProps",
-          "loc": "18:17-51"
-        }
-      ],
-      "usedExports": true,
-      "providedExports": null,
-      "depth": 7,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nhlTeamProps = exports.nbaTeamProps = exports.mlbTeamProps = undefined;\n\nvar _utils = require('./../utils');\n\n//  mlb home + away team props --> Team component\nvar mlbTeamProps = exports.mlbTeamProps = function mlbTeamProps(game, side, league) {\n  var isAllStar = game.game_type === 'A';\n  return {\n    name: (0, _utils.shortenTeamName)(game[side + '_team_name']),\n    code: game[side + '_file_code'].toLowerCase(),\n    filetype: isAllStar ? 'png' : 'svg',\n    ws: game[side + '_win'],\n    ls: game[side + '_loss'],\n    score: game.linescore.r[side],\n    league: league\n  };\n};\n\n//  nba home + away team props --> Team component\nvar nbaTeamProps = exports.nbaTeamProps = function nbaTeamProps(game, side, league) {\n  if (game.id === '0031600001') {\n    console.log('hi');\n    // return {\n    //   name: shortenTeamName(game[side].nickname),\n    //   code: game[side].abbreviation.toLowerCase(),\n    //   league\n    // }\n  }\n  var side2 = side === 'home' ? 'hTeam' : 'vTeam';\n  var inGame = game.period.current;\n  return {\n    name: (0, _utils.shortenTeamName)(game[side].nickname),\n    code: game[side].abbreviation.toLowerCase(),\n    ws: game[side2].win,\n    ls: game[side2].loss,\n    score: inGame ? game[side].score : null,\n    league: league\n  };\n};\n\n//  nhl home + away team props --> Team component\nvar nhlTeamProps = exports.nhlTeamProps = function nhlTeamProps(game, side, league) {\n  var inGame = game.status.codedGameState > '2';\n  var isAllStar = game.gameType === 'A';\n  return {\n    name: (0, _utils.shortenTeamName)(game.teams[side].team.teamName),\n    code: game.teams[side].team.abbreviation.toLowerCase(),\n    ws: isAllStar ? null : String(game.teams[side].leagueRecord.wins),\n    ls: isAllStar ? null : String(game.teams[side].leagueRecord.losses),\n    ts: isAllStar ? null : String(game.teams[side].leagueRecord.ot),\n    score: inGame ? String(game.teams[side].score) : null,\n    league: league\n  };\n};"
-    },
-    {
       "id": 333,
       "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/helpers/statsFns.js",
       "name": "./app/helpers/statsFns.js",
@@ -21720,14 +21720,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Stats/Stats.js",
-      "issuerId": 309,
+      "issuerId": 311,
       "issuerName": "./app/components/Stats/Stats.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 309,
+          "moduleId": 311,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Stats/Stats.js",
           "module": "./app/components/Stats/Stats.js",
           "moduleName": "./app/components/Stats/Stats.js",
@@ -27641,14 +27641,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/GameState/GameState.js",
-      "issuerId": 294,
+      "issuerId": 296,
       "issuerName": "./app/components/GameState/GameState.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 294,
+          "moduleId": 296,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/GameState/GameState.js",
           "module": "./app/components/GameState/GameState.js",
           "moduleName": "./app/components/GameState/GameState.js",
@@ -27678,14 +27678,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Header/Header.js",
-      "issuerId": 295,
+      "issuerId": 297,
       "issuerName": "./app/components/Header/Header.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 295,
+          "moduleId": 297,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Header/Header.js",
           "module": "./app/components/Header/Header.js",
           "moduleName": "./app/components/Header/Header.js",
@@ -27715,14 +27715,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Home/Home.js",
-      "issuerId": 296,
+      "issuerId": 298,
       "issuerName": "./app/components/Home/Home.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 296,
+          "moduleId": 298,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Home/Home.js",
           "module": "./app/components/Home/Home.js",
           "moduleName": "./app/components/Home/Home.js",
@@ -27752,14 +27752,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Leaders/Leaders.js",
-      "issuerId": 297,
+      "issuerId": 299,
       "issuerName": "./app/components/Leaders/Leaders.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 297,
+          "moduleId": 299,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Leaders/Leaders.js",
           "module": "./app/components/Leaders/Leaders.js",
           "moduleName": "./app/components/Leaders/Leaders.js",
@@ -27789,14 +27789,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Loading/Loading.js",
-      "issuerId": 298,
+      "issuerId": 300,
       "issuerName": "./app/components/Loading/Loading.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 298,
+          "moduleId": 300,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Loading/Loading.js",
           "module": "./app/components/Loading/Loading.js",
           "moduleName": "./app/components/Loading/Loading.js",
@@ -27826,14 +27826,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Matchup/Matchup.js",
-      "issuerId": 299,
+      "issuerId": 301,
       "issuerName": "./app/components/Matchup/Matchup.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 299,
+          "moduleId": 301,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Matchup/Matchup.js",
           "module": "./app/components/Matchup/Matchup.js",
           "moduleName": "./app/components/Matchup/Matchup.js",
@@ -27863,14 +27863,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nfl/Nfl.js",
-      "issuerId": 302,
+      "issuerId": 304,
       "issuerName": "./app/components/Nfl/Nfl.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 302,
+          "moduleId": 304,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nfl/Nfl.js",
           "module": "./app/components/Nfl/Nfl.js",
           "moduleName": "./app/components/Nfl/Nfl.js",
@@ -27900,14 +27900,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NoGames/NoGames.js",
-      "issuerId": 304,
+      "issuerId": 306,
       "issuerName": "./app/components/NoGames/NoGames.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 304,
+          "moduleId": 306,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NoGames/NoGames.js",
           "module": "./app/components/NoGames/NoGames.js",
           "moduleName": "./app/components/NoGames/NoGames.js",
@@ -27937,14 +27937,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NotFound/NotFound.js",
-      "issuerId": 305,
+      "issuerId": 307,
       "issuerName": "./app/components/NotFound/NotFound.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 305,
+          "moduleId": 307,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NotFound/NotFound.js",
           "module": "./app/components/NotFound/NotFound.js",
           "moduleName": "./app/components/NotFound/NotFound.js",
@@ -27974,14 +27974,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/PanelMenu/PanelMenu.js",
-      "issuerId": 306,
+      "issuerId": 308,
       "issuerName": "./app/components/PanelMenu/PanelMenu.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 306,
+          "moduleId": 308,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/PanelMenu/PanelMenu.js",
           "module": "./app/components/PanelMenu/PanelMenu.js",
           "moduleName": "./app/components/PanelMenu/PanelMenu.js",
@@ -28011,14 +28011,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Playoffs/Playoffs.js",
-      "issuerId": 307,
+      "issuerId": 309,
       "issuerName": "./app/components/Playoffs/Playoffs.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 307,
+          "moduleId": 309,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Playoffs/Playoffs.js",
           "module": "./app/components/Playoffs/Playoffs.js",
           "moduleName": "./app/components/Playoffs/Playoffs.js",
@@ -28048,14 +28048,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
-      "issuerId": 308,
+      "issuerId": 310,
       "issuerName": "./app/components/Scoreboard/Scoreboard.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 308,
+          "moduleId": 310,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
           "module": "./app/components/Scoreboard/Scoreboard.js",
           "moduleName": "./app/components/Scoreboard/Scoreboard.js",
@@ -28085,14 +28085,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Stats/Stats.js",
-      "issuerId": 309,
+      "issuerId": 311,
       "issuerName": "./app/components/Stats/Stats.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 309,
+          "moduleId": 311,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Stats/Stats.js",
           "module": "./app/components/Stats/Stats.js",
           "moduleName": "./app/components/Stats/Stats.js",
@@ -28122,14 +28122,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Team/Team.js",
-      "issuerId": 310,
+      "issuerId": 312,
       "issuerName": "./app/components/Team/Team.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 310,
+          "moduleId": 312,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Team/Team.js",
           "module": "./app/components/Team/Team.js",
           "moduleName": "./app/components/Team/Team.js",
@@ -28159,14 +28159,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Team/Team.js",
-      "issuerId": 310,
+      "issuerId": 312,
       "issuerName": "./app/components/Team/Team.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 310,
+          "moduleId": 312,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Team/Team.js",
           "module": "./app/components/Team/Team.js",
           "moduleName": "./app/components/Team/Team.js",
@@ -28196,14 +28196,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Test/Test.js",
-      "issuerId": 311,
+      "issuerId": 313,
       "issuerName": "./app/components/Test/Test.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 311,
+          "moduleId": 313,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Test/Test.js",
           "module": "./app/components/Test/Test.js",
           "moduleName": "./app/components/Test/Test.js",
@@ -28233,14 +28233,14 @@
       ],
       "assets": [],
       "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Main/MainContainer.js",
-      "issuerId": 318,
+      "issuerId": 320,
       "issuerName": "./app/containers/Main/MainContainer.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 318,
+          "moduleId": 320,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Main/MainContainer.js",
           "module": "./app/containers/Main/MainContainer.js",
           "moduleName": "./app/containers/Main/MainContainer.js",

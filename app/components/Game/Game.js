@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { GameState, Team, Expand, Details } from 'components'
 import { DetailsContainer } from 'containers'
-import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from 'helpers/props/teamProps'
-import { mlbGameStateProps, nbaGameStateProps, nhlGameStateProps } from 'helpers/props/gameStateProps'
+import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from './props/team'
+import { mlbGameStateProps, nbaGameStateProps, nhlGameStateProps } from './props/gameState'
 import { gameItem, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
 
 const propTypes = {

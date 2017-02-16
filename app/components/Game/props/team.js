@@ -1,5 +1,5 @@
 
-import { shortenTeamName } from './../utils'
+import { shortenTeamName } from 'helpers/utils'
 
 //  mlb home + away team props --> Team component
 export const mlbTeamProps = (game, side, league) => {

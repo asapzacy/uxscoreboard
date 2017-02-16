@@ -7,7 +7,7 @@ export default function PanelMenu({ panel, switchPanel }) {
       <ul className={panelList}>
         <li className={panel === 'boxScore' ? activated : panelItem} onClick={() => switchPanel('boxScore')}>{'box score'}</li>
         <li className={panel === 'teamStats' ? activated : panelItem} onClick={() => switchPanel('teamStats')}>{'team stats'}</li>
-        <li className={panel === 'playByPlay' ? activated : panelItem} onClick={() => switchPanel('playByPlay')}>{'play-by-play'}</li>
+        <li className={panel === 'leaders' ? activated : panelItem} onClick={() => switchPanel('leaders')}>{'leaders'}</li>
       </ul>
     </menu>
   )

@@ -1,5 +1,5 @@
 
-import { formatTimezone } from './../utils'
+import { formatTimezone } from 'helpers/utils'
 
 //  mlb game state props --> GameState component
 export const mlbGameStateProps = (game) => {
@@ -26,6 +26,7 @@ export const mlbGameStateProps = (game) => {
 
 //  nba game state props --> GameState component
 export const nbaGameStateProps = (game) => {
+  console.log(game.period_time.game_clock)
   return {
     gameState: Number(game.period_time.game_status) - 1,
     status: game.period_time.period_status,

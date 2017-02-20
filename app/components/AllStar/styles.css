@@ -1,0 +1,14 @@
+
+/* -------  all-star container  ------- */
+.allStarContainer {
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* -------  all-star logo  ------- */
+.allStarLogo {
+  width:80%;
+  max-width:444px;
+}

@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "2.2.1",
-  "hash": "7c244017acf17981281e",
+  "hash": "d072ba44dec22aede65c",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
@@ -13,7 +13,7 @@
   "assets": [
     {
       "name": "bundle.js",
-      "size": 818144,
+      "size": 819201,
       "chunks": [
         0
       ],
@@ -56,7 +56,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 2057569,
+      "size": 2058672,
       "names": [
         "main"
       ],
@@ -64,7 +64,7 @@
         "bundle.js",
         "bundle.js.map"
       ],
-      "hash": "afef52ee2ee51297ec46",
+      "hash": "15c0dce6eee677d07540",
       "parents": [],
       "origins": [
         {
@@ -4180,9 +4180,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 28,
-      "issuerName": "./~/react/lib/React.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactUpdates.js",
+      "issuerId": 18,
+      "issuerName": "./~/react-dom/lib/ReactUpdates.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4917,7 +4917,7 @@
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Loading/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "10:59-296"
+          "loc": "3:10-247"
         },
         {
           "moduleId": 347,
@@ -4926,7 +4926,7 @@
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Loading/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "3:10-247"
+          "loc": "10:59-296"
         },
         {
           "moduleId": 349,
@@ -4953,7 +4953,7 @@
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/NoGames/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "10:59-296"
+          "loc": "3:10-247"
         },
         {
           "moduleId": 350,
@@ -4962,7 +4962,7 @@
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/NoGames/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "3:10-247"
+          "loc": "10:59-296"
         },
         {
           "moduleId": 355,
@@ -5184,9 +5184,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/Link.js",
-      "issuerId": 237,
-      "issuerName": "./~/react-router/es/Link.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/Router.js",
+      "issuerId": 457,
+      "issuerName": "./~/react-router/es/Router.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5474,9 +5474,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/ReactChildren.js",
-      "issuerId": 470,
-      "issuerName": "./~/react/lib/ReactChildren.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/fbjs/lib/warning.js",
+      "issuerId": 4,
+      "issuerName": "./~/fbjs/lib/warning.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5610,9 +5610,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactReconciler.js",
-      "issuerId": 34,
-      "issuerName": "./~/react-dom/lib/ReactReconciler.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactMount.js",
+      "issuerId": 226,
+      "issuerName": "./~/react-dom/lib/ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5746,18 +5746,18 @@
       "reasons": [
         {
           "moduleId": 294,
-          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/gameStateProps.js",
-          "module": "./app/components/Game/gameStateProps.js",
-          "moduleName": "./app/components/Game/gameStateProps.js",
+          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/props/gameState.js",
+          "module": "./app/components/Game/props/gameState.js",
+          "moduleName": "./app/components/Game/props/gameState.js",
           "type": "cjs require",
           "userRequest": "helpers/utils",
           "loc": "8:13-37"
         },
         {
           "moduleId": 295,
-          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/teamProps.js",
-          "module": "./app/components/Game/teamProps.js",
-          "moduleName": "./app/components/Game/teamProps.js",
+          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/props/team.js",
+          "module": "./app/components/Game/props/team.js",
+          "moduleName": "./app/components/Game/props/team.js",
           "type": "cjs require",
           "userRequest": "helpers/utils",
           "loc": "8:13-37"
@@ -6200,9 +6200,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/ReactElement.js",
-      "issuerId": 37,
-      "issuerName": "./~/react/lib/ReactElement.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactMount.js",
+      "issuerId": 226,
+      "issuerName": "./~/react-dom/lib/ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8170,9 +8170,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ChangeEventPlugin.js",
-      "issuerId": 388,
-      "issuerName": "./~/react-dom/lib/ChangeEventPlugin.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/BeforeInputEventPlugin.js",
+      "issuerId": 386,
+      "issuerName": "./~/react-dom/lib/BeforeInputEventPlugin.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8914,9 +8914,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createHashHistory.js",
-      "issuerId": 375,
-      "issuerName": "./~/history/lib/createHashHistory.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
+      "issuerId": 374,
+      "issuerName": "./~/history/lib/createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9591,9 +9591,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createHashHistory.js",
-      "issuerId": 375,
-      "issuerName": "./~/history/lib/createHashHistory.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
+      "issuerId": 374,
+      "issuerName": "./~/history/lib/createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9646,9 +9646,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createHashHistory.js",
-      "issuerId": 375,
-      "issuerName": "./~/history/lib/createHashHistory.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
+      "issuerId": 374,
+      "issuerName": "./~/history/lib/createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10752,9 +10752,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/Link.js",
-      "issuerId": 237,
-      "issuerName": "./~/react-router/es/Link.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/withRouter.js",
+      "issuerId": 468,
+      "issuerName": "./~/react-router/es/withRouter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11043,9 +11043,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/ReactPureComponent.js",
-      "issuerId": 475,
-      "issuerName": "./~/react/lib/ReactPureComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react/lib/ReactComponent.js",
+      "issuerId": 88,
+      "issuerName": "./~/react/lib/ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11842,9 +11842,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/HashProtocol.js",
-      "issuerId": 372,
-      "issuerName": "./~/history/lib/HashProtocol.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/history/lib/BrowserProtocol.js",
+      "issuerId": 63,
+      "issuerName": "./~/history/lib/BrowserProtocol.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17504,9 +17504,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
-      "issuerId": 42,
-      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPropagators.js",
+      "issuerId": 43,
+      "issuerName": "./~/react-dom/lib/EventPropagators.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17550,9 +17550,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
-      "issuerId": 42,
-      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPropagators.js",
+      "issuerId": 43,
+      "issuerName": "./~/react-dom/lib/EventPropagators.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17922,9 +17922,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/matchRoutes.js",
-      "issuerId": 467,
-      "issuerName": "./~/react-router/es/matchRoutes.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/getComponents.js",
+      "issuerId": 462,
+      "issuerName": "./~/react-router/es/getComponents.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -19971,7 +19971,7 @@
       "name": "./app/components/AllStar/AllStar.js",
       "index": 407,
       "index2": 403,
-      "size": 559,
+      "size": 640,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20000,7 +20000,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = AllStar;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nrequire('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction AllStar(_ref) {\n  var league = _ref.league,\n      img = _ref.img;\n\n  return _react2.default.createElement(\n    'section',\n    null,\n    _react2.default.createElement('img', { src: '/assets/img/' + league + '/other/' + img + '.svg' })\n  );\n}"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = AllStar;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction AllStar(_ref) {\n  var league = _ref.league,\n      img = _ref.img;\n\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.allStarContainer },\n    _react2.default.createElement('img', { className: _styles.allStarLogo, src: '/assets/img/' + league + '/other/' + img + '.svg' })\n  );\n}"
     },
     {
       "id": 287,
@@ -20082,7 +20082,7 @@
       "name": "./app/components/Details/Details.js",
       "index": 517,
       "index2": 516,
-      "size": 3230,
+      "size": 3409,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20111,7 +20111,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Details;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _matchupProps = require('helpers/props/matchupProps');\n\nvar _boxScoreProps = require('helpers/props/boxScoreProps');\n\nvar _statsProps = require('helpers/props/statsProps');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  game: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired\n};\n\nfunction Details(props) {\n  if (props.league === 'mlb') return _react2.default.createElement(MlbDetails, props);\n  if (props.league === 'nba') return _react2.default.createElement(NbaDetails, props);\n  if (props.league === 'nhl') return _react2.default.createElement(NhlDetails, props);\n  return _react2.default.createElement(\n    'h1',\n    null,\n    'i hope this doesn\\'t run'\n  );\n}\n\nDetails.propTypes = propTypes;\n\nfunction MlbDetails(_ref) {\n  var game = _ref.game,\n      date = _ref.date,\n      league = _ref.league,\n      panel = _ref.panel,\n      switchPanel = _ref.switchPanel;\n\n  var matchupProps = (0, _matchupProps.mlbMatchupProps)(game, date);\n  var boxScoreProps = (0, _boxScoreProps.mlbBoxScoreProps)(game, league);\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.detailsContainer },\n    _react2.default.createElement(_components.Matchup, matchupProps),\n    _react2.default.createElement(_components.PanelMenu, { panel: panel, switchPanel: switchPanel }),\n    panel === 'boxScore' && _react2.default.createElement(_components.BoxScore, boxScoreProps),\n    panel === 'boxScore' && _react2.default.createElement(_components.Diamond, null)\n  );\n}\n\nfunction NbaDetails(_ref2) {\n  var game = _ref2.game,\n      date = _ref2.date,\n      league = _ref2.league,\n      panel = _ref2.panel,\n      switchPanel = _ref2.switchPanel;\n\n  var matchupProps = (0, _matchupProps.nbaMatchupProps)(game, date);\n  var boxScoreProps = (0, _boxScoreProps.nbaBoxScoreProps)(game, league);\n  var statsProps = (0, _statsProps.nbaStatsProps)(game);\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.detailsContainer },\n    _react2.default.createElement(_components.Matchup, matchupProps),\n    _react2.default.createElement(_components.PanelMenu, { panel: panel, switchPanel: switchPanel }),\n    panel === 'boxScore' && _react2.default.createElement(_components.BoxScore, boxScoreProps),\n    panel === 'teamStats' && _react2.default.createElement(_components.Stats, statsProps)\n  );\n}\n\nfunction NhlDetails(_ref3) {\n  var game = _ref3.game,\n      date = _ref3.date,\n      league = _ref3.league;\n\n  var matchupProps = (0, _matchupProps.nhlMatchupProps)(game, date);\n  var boxScoreProps = (0, _boxScoreProps.nhlBoxScoreProps)(game, league);\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.detailsContainer },\n    _react2.default.createElement(_components.Matchup, matchupProps),\n    _react2.default.createElement(_components.BoxScore, boxScoreProps)\n  );\n}"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Details;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _matchupProps = require('helpers/props/matchupProps');\n\nvar _boxScoreProps = require('helpers/props/boxScoreProps');\n\nvar _statsProps = require('helpers/props/statsProps');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  game: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  panel: _react.PropTypes.string.isRequired,\n  switchPanel: _react.PropTypes.func.isRequired\n};\n\nfunction Details(props) {\n  if (props.league === 'mlb') return _react2.default.createElement(MlbDetails, props);\n  if (props.league === 'nba') return _react2.default.createElement(NbaDetails, props);\n  if (props.league === 'nhl') return _react2.default.createElement(NhlDetails, props);\n  return _react2.default.createElement(\n    'h1',\n    null,\n    'i hope this doesn\\'t run'\n  );\n}\n\nDetails.propTypes = propTypes;\n\nfunction MlbDetails(_ref) {\n  var game = _ref.game,\n      date = _ref.date,\n      league = _ref.league,\n      panel = _ref.panel,\n      switchPanel = _ref.switchPanel;\n\n  var matchupProps = (0, _matchupProps.mlbMatchupProps)(game, date);\n  var boxScoreProps = (0, _boxScoreProps.mlbBoxScoreProps)(game, league);\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.detailsContainer },\n    _react2.default.createElement(_components.Matchup, matchupProps),\n    _react2.default.createElement(_components.PanelMenu, { panel: panel, switchPanel: switchPanel }),\n    panel === 'boxScore' && _react2.default.createElement(_components.BoxScore, boxScoreProps),\n    panel === 'boxScore' && _react2.default.createElement(_components.Diamond, null)\n  );\n}\n\nfunction NbaDetails(_ref2) {\n  var game = _ref2.game,\n      date = _ref2.date,\n      league = _ref2.league,\n      panel = _ref2.panel,\n      switchPanel = _ref2.switchPanel;\n\n  var matchupProps = (0, _matchupProps.nbaMatchupProps)(game, date);\n  var boxScoreProps = (0, _boxScoreProps.nbaBoxScoreProps)(game, league);\n  var statsProps = (0, _statsProps.nbaStatsProps)(game);\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.detailsContainer },\n    _react2.default.createElement(_components.Matchup, matchupProps),\n    _react2.default.createElement(_components.PanelMenu, { panel: panel, switchPanel: switchPanel }),\n    panel === 'boxScore' && _react2.default.createElement(_components.BoxScore, boxScoreProps),\n    panel === 'teamStats' && _react2.default.createElement(_components.Stats, statsProps),\n    panel === 'leaders' && _react2.default.createElement(_components.Leaders, null)\n  );\n}\n\nfunction NhlDetails(_ref3) {\n  var game = _ref3.game,\n      date = _ref3.date,\n      league = _ref3.league;\n\n  var matchupProps = (0, _matchupProps.nhlMatchupProps)(game, date);\n  var boxScoreProps = (0, _boxScoreProps.nhlBoxScoreProps)(game, league);\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.detailsContainer },\n    _react2.default.createElement(_components.Matchup, matchupProps),\n    _react2.default.createElement(_components.BoxScore, boxScoreProps)\n  );\n}"
     },
     {
       "id": 290,
@@ -20230,7 +20230,7 @@
       "name": "./app/components/Game/Game.js",
       "index": 410,
       "index2": 498,
-      "size": 4757,
+      "size": 4704,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20259,15 +20259,15 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Game;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _velocityReact = require('velocity-react');\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _teamProps = require('./teamProps');\n\nvar _gameStateProps = require('./gameStateProps');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  game: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  expanded: _react.PropTypes.bool.isRequired,\n  showDetails: _react.PropTypes.func.isRequired\n};\n\nfunction Game(props) {\n  if (props.league === 'mlb') return _react2.default.createElement(MlbGame, props);\n  if (props.league === 'nba') return _react2.default.createElement(NbaGame, props);\n  if (props.league === 'nhl') return _react2.default.createElement(NhlGame, props);\n  return _react2.default.createElement(\n    'h1',\n    null,\n    'i hope this doesn\\'t run'\n  );\n}\n\nGame.propTypes = propTypes;\n\nvar transitionsConfig = {\n  enter: {\n    animation: 'slideDown',\n    duration: 220,\n    delay: 0\n  },\n  leave: {\n    animation: 'slideUp',\n    duration: 220,\n    delay: 220\n  }\n};\n\nfunction MlbGame(_ref) {\n  var game = _ref.game,\n      date = _ref.date,\n      league = _ref.league,\n      showDetails = _ref.showDetails,\n      expanded = _ref.expanded;\n\n  var gameState = (0, _gameStateProps.mlbGameStateProps)(game);\n  var awayTeam = (0, _teamProps.mlbTeamProps)(game, 'away', league);\n  var homeTeam = (0, _teamProps.mlbTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NbaGame(_ref2) {\n  var game = _ref2.game,\n      date = _ref2.date,\n      league = _ref2.league,\n      showDetails = _ref2.showDetails,\n      expanded = _ref2.expanded;\n\n  var gameState = (0, _gameStateProps.nbaGameStateProps)(game);\n  var awayTeam = (0, _teamProps.nbaTeamProps)(game, 'visitor', league);\n  var homeTeam = (0, _teamProps.nbaTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NhlGame(_ref3) {\n  var game = _ref3.game,\n      date = _ref3.date,\n      league = _ref3.league,\n      showDetails = _ref3.showDetails,\n      expanded = _ref3.expanded;\n\n  var gameState = (0, _gameStateProps.nhlGameStateProps)(game);\n  var awayTeam = (0, _teamProps.nhlTeamProps)(game, 'away', league);\n  var homeTeam = (0, _teamProps.nhlTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_components.Details, { game: game, date: date, league: league, expanded: expanded })\n    )\n  );\n}"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Game;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _velocityReact = require('velocity-react');\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _team = require('./props/team');\n\nvar _gameState = require('./props/gameState');\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  game: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  expanded: _react.PropTypes.bool.isRequired,\n  showDetails: _react.PropTypes.func.isRequired\n};\n\nfunction Game(props) {\n  if (props.league === 'mlb') return _react2.default.createElement(MlbGame, props);\n  if (props.league === 'nba') return _react2.default.createElement(NbaGame, props);\n  if (props.league === 'nhl') return _react2.default.createElement(NhlGame, props);\n  return _react2.default.createElement(\n    'h1',\n    null,\n    'i hope this doesn\\'t run'\n  );\n}\n\nGame.propTypes = propTypes;\n\nvar transitionsConfig = {\n  enter: {\n    animation: 'slideDown',\n    duration: 220,\n    delay: 0\n  },\n  leave: {\n    animation: 'slideUp',\n    duration: 220,\n    delay: 220\n  }\n};\n\nfunction MlbGame(_ref) {\n  var game = _ref.game,\n      date = _ref.date,\n      league = _ref.league,\n      showDetails = _ref.showDetails,\n      expanded = _ref.expanded;\n\n  var gameState = (0, _gameState.mlbGameStateProps)(game);\n  var awayTeam = (0, _team.mlbTeamProps)(game, 'away', league);\n  var homeTeam = (0, _team.mlbTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NbaGame(_ref2) {\n  var game = _ref2.game,\n      date = _ref2.date,\n      league = _ref2.league,\n      showDetails = _ref2.showDetails,\n      expanded = _ref2.expanded;\n\n  var gameState = (0, _gameState.nbaGameStateProps)(game);\n  var awayTeam = (0, _team.nbaTeamProps)(game, 'visitor', league);\n  var homeTeam = (0, _team.nbaTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_containers.DetailsContainer, { game: game, date: date, league: league })\n    )\n  );\n}\n\nfunction NhlGame(_ref3) {\n  var game = _ref3.game,\n      date = _ref3.date,\n      league = _ref3.league,\n      showDetails = _ref3.showDetails,\n      expanded = _ref3.expanded;\n\n  var gameState = (0, _gameState.nhlGameStateProps)(game);\n  var awayTeam = (0, _team.nhlTeamProps)(game, 'away', league);\n  var homeTeam = (0, _team.nhlTeamProps)(game, 'home', league);\n  return _react2.default.createElement(\n    'li',\n    { className: _styles.gameItem },\n    _react2.default.createElement(_components.GameState, gameState),\n    _react2.default.createElement(_components.Team, awayTeam),\n    _react2.default.createElement(_components.Team, homeTeam),\n    _react2.default.createElement(_components.Expand, { expanded: expanded, showDetails: showDetails }),\n    _react2.default.createElement(\n      _velocityReact.VelocityTransitionGroup,\n      { className: expanded ? _styles.detailsExpanded : _styles.details, enter: transitionsConfig.enter, leave: transitionsConfig.leave },\n      expanded && _react2.default.createElement(_components.Details, { game: game, date: date, league: league, expanded: expanded })\n    )\n  );\n}"
     },
     {
       "id": 294,
-      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/gameStateProps.js",
-      "name": "./app/components/Game/gameStateProps.js",
+      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/props/gameState.js",
+      "name": "./app/components/Game/props/gameState.js",
       "index": 502,
       "index2": 495,
-      "size": 2394,
+      "size": 2374,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20289,19 +20289,19 @@
           "module": "./app/components/Game/Game.js",
           "moduleName": "./app/components/Game/Game.js",
           "type": "cjs require",
-          "userRequest": "./gameStateProps",
-          "loc": "20:22-49"
+          "userRequest": "./props/gameState",
+          "loc": "20:17-45"
         }
       ],
       "usedExports": true,
       "providedExports": null,
       "depth": 7,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nhlGameStateProps = exports.nbaGameStateProps = exports.mlbGameStateProps = undefined;\n\nvar _utils = require('helpers/utils');\n\n//  mlb game state props --> GameState component\nvar mlbGameStateProps = exports.mlbGameStateProps = function mlbGameStateProps(game) {\n  var isPlayoffs = game.game_type !== 'R';\n  var isDoubleHeader = game.double_header_sw === 'Y';\n  return {\n    gameState: game.status.ind === 'S' ? 0 : 2,\n    status: game.status.status,\n    time: game.time + ' ET',\n    periods: 9,\n    totalPeriods: game.linescore.inning.length,\n    overtime: game.linescore.inning.length,\n    doubleHeader: isDoubleHeader ? game.game_nbr : '',\n    playoffs: isPlayoffs ? {\n      series: game.series,\n      game: game.series_num,\n      maxGames: game.ser_games\n    } : {},\n    isDoubleHeader: isDoubleHeader,\n    isPlayoffs: isPlayoffs\n  };\n};\n\n//  nba game state props --> GameState component\nvar nbaGameStateProps = exports.nbaGameStateProps = function nbaGameStateProps(game) {\n  console.log(game.period_time.game_clock);\n  return {\n    gameState: Number(game.period_time.game_status) - 1,\n    status: game.period_time.period_status,\n    time: (0, _utils.formatTimezone)(game.startTimeUTC) + ' ET',\n    periods: 4,\n    currentPeriod: game.period_time.period_value,\n    currentTime: game.period.isEndOfPeriod ? 'END' : ('0' + game.period_time.game_clock).slice(0, 5),\n    isHalfTime: game.period.isHalftime,\n    totalPeriods: game.period_time.period_value,\n    overtime: game.period_time.period_value > 4 ? game.period_time.period_value > 5 ? game.period_time.period_value - 4 + 'OT' : 'OT' : '',\n    isPlayoffs: null\n  };\n};\n\n//  nhl game state props --> GameState component\nvar nhlGameStateProps = exports.nhlGameStateProps = function nhlGameStateProps(game) {\n  return {\n    gameState: game.status.codedGameState < 3 ? 0 : game.status.codedGameState < 6 ? 1 : 2,\n    status: game.status.codedGameState === '2' ? game.status.detailedState : game.status.abstractGameState,\n    time: (0, _utils.formatTimezone)(game.gameDate) + ' ET',\n    periods: 3,\n    currentPeriod: game.linescore.currentPeriod,\n    currentTime: game.linescore.currentPeriodTimeRemaining,\n    totalPeriods: game.linescore.periods.length,\n    overtime: game.linescore.currentPeriodOrdinal,\n    isPlayoffs: game.gameType === 'P'\n  };\n};"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.nhlGameStateProps = exports.nbaGameStateProps = exports.mlbGameStateProps = undefined;\n\nvar _utils = require('helpers/utils');\n\n//  mlb game state props --> GameState component\nvar mlbGameStateProps = exports.mlbGameStateProps = function mlbGameStateProps(game) {\n  var isPlayoffs = game.game_type !== 'R';\n  var isDoubleHeader = game.double_header_sw === 'Y';\n  return {\n    gameState: game.status.ind === 'S' ? 0 : 2,\n    status: game.status.status,\n    time: game.time + ' ET',\n    periods: 9,\n    totalPeriods: game.linescore.inning.length,\n    overtime: game.linescore.inning.length,\n    doubleHeader: isDoubleHeader ? game.game_nbr : '',\n    playoffs: isPlayoffs ? {\n      series: game.series,\n      game: game.series_num,\n      maxGames: game.ser_games\n    } : {},\n    isDoubleHeader: isDoubleHeader,\n    isPlayoffs: isPlayoffs\n  };\n};\n\n//  nba game state props --> GameState component\nvar nbaGameStateProps = exports.nbaGameStateProps = function nbaGameStateProps(game) {\n  console.log(game.period_time.game_clock);\n  return {\n    gameState: Number(game.period_time.game_status) - 1,\n    status: game.period_time.period_status,\n    time: (0, _utils.formatTimezone)(game.startTimeUTC) + ' ET',\n    periods: 4,\n    currentPeriod: game.period_time.period_value,\n    currentTime: game.period.isEndOfPeriod ? 'END' : game.period_time.game_clock,\n    isHalfTime: game.period.isHalftime,\n    totalPeriods: game.period_time.period_value,\n    overtime: game.period_time.period_value > 4 ? game.period_time.period_value > 5 ? game.period_time.period_value - 4 + 'OT' : 'OT' : '',\n    isPlayoffs: null\n  };\n};\n\n//  nhl game state props --> GameState component\nvar nhlGameStateProps = exports.nhlGameStateProps = function nhlGameStateProps(game) {\n  return {\n    gameState: game.status.codedGameState < 3 ? 0 : game.status.codedGameState < 6 ? 1 : 2,\n    status: game.status.codedGameState === '2' ? game.status.detailedState : game.status.abstractGameState,\n    time: (0, _utils.formatTimezone)(game.gameDate) + ' ET',\n    periods: 3,\n    currentPeriod: game.linescore.currentPeriod,\n    currentTime: game.linescore.currentPeriodTimeRemaining,\n    totalPeriods: game.linescore.periods.length,\n    overtime: game.linescore.currentPeriodOrdinal,\n    isPlayoffs: game.gameType === 'P'\n  };\n};"
     },
     {
       "id": 295,
-      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/teamProps.js",
-      "name": "./app/components/Game/teamProps.js",
+      "identifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Game/props/team.js",
+      "name": "./app/components/Game/props/team.js",
       "index": 497,
       "index2": 494,
       "size": 2012,
@@ -20326,8 +20326,8 @@
           "module": "./app/components/Game/Game.js",
           "moduleName": "./app/components/Game/Game.js",
           "type": "cjs require",
-          "userRequest": "./teamProps",
-          "loc": "18:17-39"
+          "userRequest": "./props/team",
+          "loc": "18:12-35"
         }
       ],
       "usedExports": true,
@@ -20785,7 +20785,7 @@
       "name": "./app/components/PanelMenu/PanelMenu.js",
       "index": 526,
       "index2": 522,
-      "size": 1372,
+      "size": 1361,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20814,7 +20814,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PanelMenu;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction PanelMenu(_ref) {\n  var panel = _ref.panel,\n      switchPanel = _ref.switchPanel;\n\n  return _react2.default.createElement(\n    'menu',\n    { className: _styles.panelMenu },\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.panelList },\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'boxScore' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('boxScore');\n          } },\n        'box score'\n      ),\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'teamStats' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('teamStats');\n          } },\n        'team stats'\n      ),\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'playByPlay' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('playByPlay');\n          } },\n        'play-by-play'\n      )\n    )\n  );\n}"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PanelMenu;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction PanelMenu(_ref) {\n  var panel = _ref.panel,\n      switchPanel = _ref.switchPanel;\n\n  return _react2.default.createElement(\n    'menu',\n    { className: _styles.panelMenu },\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.panelList },\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'boxScore' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('boxScore');\n          } },\n        'box score'\n      ),\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'teamStats' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('teamStats');\n          } },\n        'team stats'\n      ),\n      _react2.default.createElement(\n        'li',\n        { className: panel === 'leaders' ? _styles.activated : _styles.panelItem, onClick: function onClick() {\n            return switchPanel('leaders');\n          } },\n        'leaders'\n      )\n    )\n  );\n}"
     },
     {
       "id": 309,
@@ -20859,7 +20859,7 @@
       "name": "./app/components/Scoreboard/Scoreboard.js",
       "index": 259,
       "index2": 281,
-      "size": 2901,
+      "size": 2952,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20888,7 +20888,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Scoreboard;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _styles = require('./styles.css');\n\nvar _api = require('helpers/api');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  scores: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired\n};\n\nfunction Scoreboard(_ref) {\n  var scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league,\n      seasonState = _ref.seasonState;\n\n  var games = void 0;\n  if (league === 'mlb') {\n    games = scores.game === undefined ? _react2.default.createElement(_components.NoGames, null) : !Array.isArray(scores.game) ? _react2.default.createElement(_containers.GameContainer, { game: scores.game, date: date, league: league, key: scores.game.game_pk }) : scores.game.filter(function (item) {\n      return item.game_type !== 'S';\n    }).map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.game_pk });\n    });\n  }\n  if (league === 'nhl') {\n    games = !scores.dates.length ? _react2.default.createElement(_components.NoGames, null) : scores.dates[0].games.map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.gamePk });\n    });\n  }\n  if (league === 'nba') {\n    games = !scores.sports_content.games.game.length ? _react2.default.createElement(_components.NoGames, null) : scores.sports_content.games.game.map(function (item, index) {\n      var combined = Object.assign({}, scores.games[index], item);\n      (0, _api.getNbaGameDetails)(date, item.id).then(function (data) {\n        return Object.assign(combined, data.sports_content.game);\n      });\n      return _react2.default.createElement(_containers.GameContainer, { game: combined, date: date, league: league, key: item.id });\n    });\n  }\n  var allStarGame = false;\n  if (league === 'nba') {\n    allStarGame = scores.games.length === 1 && scores.games[0].tags[0] === 'AWASG';\n  }\n  return _react2.default.createElement(\n    'main',\n    { className: _styles.scoreboardContainer },\n    _react2.default.createElement(_containers.DateContainer, { date: date, today: today, league: league }),\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.gamesList },\n      games\n    ),\n    seasonState && seasonState.isAllStar && _react2.default.createElement(_components.AllStar, { img: allStarGame ? 'asg' : 'nola', league: league })\n  );\n}\n\nScoreboard.propTypes = propTypes;"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Scoreboard;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _styles = require('./styles.css');\n\nvar _api = require('helpers/api');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  scores: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  seasonState: _react.PropTypes.object.isRequired\n};\n\nfunction Scoreboard(_ref) {\n  var scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league,\n      seasonState = _ref.seasonState;\n\n  var games = void 0;\n  if (league === 'mlb') {\n    games = scores.game === undefined ? _react2.default.createElement(_components.NoGames, null) : !Array.isArray(scores.game) ? _react2.default.createElement(_containers.GameContainer, { game: scores.game, date: date, league: league, key: scores.game.game_pk }) : scores.game.filter(function (item) {\n      return item.game_type !== 'S';\n    }).map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.game_pk });\n    });\n  }\n  if (league === 'nhl') {\n    games = !scores.dates.length ? _react2.default.createElement(_components.NoGames, null) : scores.dates[0].games.map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.gamePk });\n    });\n  }\n  if (league === 'nba') {\n    games = !scores.sports_content.games.game.length ? _react2.default.createElement(_components.NoGames, null) : scores.sports_content.games.game.map(function (item, index) {\n      var combined = Object.assign({}, scores.games[index], item);\n      (0, _api.getNbaGameDetails)(date, item.id).then(function (data) {\n        return Object.assign(combined, data.sports_content.game);\n      });\n      return _react2.default.createElement(_containers.GameContainer, { game: combined, date: date, league: league, key: item.id });\n    });\n  }\n  var allStarGame = false;\n  if (league === 'nba') {\n    allStarGame = scores.games.length === 1 && scores.games[0].tags[0] === 'AWASG';\n  }\n  return _react2.default.createElement(\n    'main',\n    { className: _styles.scoreboardContainer },\n    _react2.default.createElement(_containers.DateContainer, { date: date, today: today, league: league }),\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.gamesList },\n      games\n    ),\n    seasonState && seasonState.isAllStar && _react2.default.createElement(_components.AllStar, { img: allStarGame ? 'asg' : 'nola', league: league })\n  );\n}\n\nScoreboard.propTypes = propTypes;"
     },
     {
       "id": 311,
@@ -21784,7 +21784,7 @@
       "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/AllStar/styles.css",
       "index": 409,
       "index2": 401,
-      "size": 261,
+      "size": 1044,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -21813,7 +21813,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 8,
-      "source": "exports = module.exports = require(\"./../../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \"\", \"\", {\"version\":3,\"sources\":[],\"names\":[],\"mappings\":\"\",\"file\":\"styles.css\",\"sourceRoot\":\"webpack://\"}]);\n\n// exports\n"
+      "source": "exports = module.exports = require(\"./../../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".styles__allStarContainer___aC5NC{-ms-flex:1;flex:1;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}.styles__allStarLogo___3kAMC{width:80%;max-width:444px}\", \"\", {\"version\":3,\"sources\":[\"/./components/AllStar/styles.css\"],\"names\":[],\"mappings\":\"AAEA,kCACE,WAAO,AAAP,OAAO,AACP,oBAAa,AAAb,aAAa,AACb,qBAAuB,AAAvB,uBAAuB,AACvB,sBAAmB,AAAnB,kBAAmB,CACpB,AAGD,6BACE,UAAU,AACV,eAAgB,CACjB\",\"file\":\"styles.css\",\"sourcesContent\":[\"\\n/* -------  all-star container  ------- */\\n.allStarContainer {\\n  flex:1;\\n  display:flex;\\n  justify-content:center;\\n  align-items:center;\\n}\\n\\n/* -------  all-star logo  ------- */\\n.allStarLogo {\\n  width:80%;\\n  max-width:444px;\\n}\\n\"],\"sourceRoot\":\"webpack://\"}]);\n\n// exports\nexports.locals = {\n\t\"allStarContainer\": \"styles__allStarContainer___aC5NC\",\n\t\"allStarLogo\": \"styles__allStarLogo___3kAMC\"\n};"
     },
     {
       "id": 336,
@@ -22487,7 +22487,7 @@
       "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Scoreboard/styles.css",
       "index": 261,
       "index2": 253,
-      "size": 1117,
+      "size": 1210,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -22516,7 +22516,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 8,
-      "source": "exports = module.exports = require(\"./../../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".styles__scoreboardContainer___MRhsS{height:100%}.styles__gamesList___1265h{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:start;align-items:flex-start;-ms-flex-wrap:wrap;flex-wrap:wrap}.styles__gamesHeader___OAqYU{color:#bdbdbd;font-size:1.25em;margin-top:3em}\", \"\", {\"version\":3,\"sources\":[\"/./components/Scoreboard/styles.css\"],\"names\":[],\"mappings\":\"AAAA,qCAAuB,WAAY,CAAE,AACrC,2BAAa,oBAAa,AAAb,aAAa,qBAAA,uBAAuB,qBAAA,uBAAuB,mBAAA,cAAc,CAAE,AACxF,6BAAe,cAAc,iBAAiB,cAAc,CAAE\",\"file\":\"styles.css\",\"sourcesContent\":[\".scoreboardContainer { height:100%; }\\n.gamesList { display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap }\\n.gamesHeader { color:#bdbdbd;font-size:1.25em;margin-top:3em }\\n\"],\"sourceRoot\":\"webpack://\"}]);\n\n// exports\nexports.locals = {\n\t\"scoreboardContainer\": \"styles__scoreboardContainer___MRhsS\",\n\t\"gamesList\": \"styles__gamesList___1265h\",\n\t\"gamesHeader\": \"styles__gamesHeader___OAqYU\"\n};"
+      "source": "exports = module.exports = require(\"./../../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".styles__scoreboardContainer___MRhsS{height:100%;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.styles__gamesList___1265h{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:start;align-items:flex-start;-ms-flex-wrap:wrap;flex-wrap:wrap}\", \"\", {\"version\":3,\"sources\":[\"/./components/Scoreboard/styles.css\"],\"names\":[],\"mappings\":\"AAEA,qCACE,YAAY,AACZ,oBAAa,AAAb,aAAa,AACb,0BAAsB,AAAtB,qBAAsB,CACvB,AAGD,2BACE,oBAAa,AAAb,aAAa,AACb,qBAAuB,AAAvB,uBAAuB,AACvB,qBAAuB,AAAvB,uBAAuB,AACvB,mBAAe,AAAf,cAAe,CAChB\",\"file\":\"styles.css\",\"sourcesContent\":[\"\\n/* -------  scoreboard container  ------- */\\n.scoreboardContainer {\\n  height:100%;\\n  display:flex;\\n  flex-direction:column;\\n}\\n\\n/* -------  games list  ------- */\\n.gamesList {\\n  display:flex;\\n  justify-content:center;\\n  align-items:flex-start;\\n  flex-wrap:wrap;\\n}\\n\"],\"sourceRoot\":\"webpack://\"}]);\n\n// exports\nexports.locals = {\n\t\"scoreboardContainer\": \"styles__scoreboardContainer___MRhsS\",\n\t\"gamesList\": \"styles__gamesList___1265h\"\n};"
     },
     {
       "id": 355,
@@ -27358,7 +27358,7 @@
           "moduleName": "./app/components/AllStar/AllStar.js",
           "type": "cjs require",
           "userRequest": "./styles.css",
-          "loc": "12:0-23"
+          "loc": "12:14-37"
         }
       ],
       "usedExports": true,

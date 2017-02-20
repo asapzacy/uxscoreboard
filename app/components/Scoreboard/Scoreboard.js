@@ -8,7 +8,8 @@ const propTypes = {
   scores: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
   today: PropTypes.string.isRequired,
-  league: PropTypes.string.isRequired
+  league: PropTypes.string.isRequired,
+  seasonState: PropTypes.object.isRequired
 }
 
 export default function Scoreboard({ scores, date, today, league, seasonState }) {

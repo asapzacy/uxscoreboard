@@ -8,7 +8,9 @@ import { detailsContainer } from './styles.css'
 const propTypes = {
   game: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
-  league: PropTypes.string.isRequired
+  league: PropTypes.string.isRequired,
+  panel: PropTypes.string.isRequired,
+  switchPanel: PropTypes.func.isRequired
 }
 
 export default function Details(props) {

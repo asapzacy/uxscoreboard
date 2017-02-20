@@ -1,3 +1,15 @@
-.scoreboardContainer { height:100%; }
-.gamesList { display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap }
-.gamesHeader { color:#bdbdbd;font-size:1.25em;margin-top:3em }
+
+/* -------  scoreboard container  ------- */
+.scoreboardContainer {
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+/* -------  games list  ------- */
+.gamesList {
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}

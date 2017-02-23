@@ -15,7 +15,7 @@ const propTypes = {
 export default function Scoreboard({ scores, date, today, league, seasonState }) {
   let games
   if (league === 'mlb') {
-    games = scores.game === undefined
+    games = scores.game === undefined || seasonState.isPreseason
       ? <NoGames />
       : !Array.isArray(scores.game)
         ? <GameContainer game={scores.game} date={date} league={league} key={scores.game.game_pk} />
@@ -44,7 +44,7 @@ export default function Scoreboard({ scores, date, today, league, seasonState })
     <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
       <ul className={gamesList}>
-        {games}
+        { games }
       </ul>
       { seasonState && seasonState.isAllStar && <AllStar img={allStarGame ? 'asg' : 'nola'} league={league} /> }
     </main>

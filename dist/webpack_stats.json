@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "2.2.1",
-  "hash": "d072ba44dec22aede65c",
+  "hash": "a43eff17247b1054b583",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
@@ -13,7 +13,7 @@
   "assets": [
     {
       "name": "bundle.js",
-      "size": 819201,
+      "size": 819216,
       "chunks": [
         0
       ],
@@ -56,7 +56,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 2058672,
+      "size": 2058699,
       "names": [
         "main"
       ],
@@ -64,7 +64,7 @@
         "bundle.js",
         "bundle.js.map"
       ],
-      "hash": "15c0dce6eee677d07540",
+      "hash": "eb0948c964e45334f305",
       "parents": [],
       "origins": [
         {
@@ -5030,9 +5030,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/setInnerHTML.js",
-      "issuerId": 59,
-      "issuerName": "./~/react-dom/lib/setInnerHTML.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/BeforeInputEventPlugin.js",
+      "issuerId": 386,
+      "issuerName": "./~/react-dom/lib/BeforeInputEventPlugin.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9866,9 +9866,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
-      "issuerId": 32,
-      "issuerName": "./~/react-dom/lib/DOMLazyTree.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
+      "issuerId": 398,
+      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9921,9 +9921,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactBrowserEventEmitter.js",
-      "issuerId": 55,
-      "issuerName": "./~/react-dom/lib/ReactBrowserEventEmitter.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
+      "issuerId": 398,
+      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10196,9 +10196,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactCompositeComponent.js",
-      "issuerId": 396,
-      "issuerName": "./~/react-dom/lib/ReactCompositeComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
+      "issuerId": 42,
+      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10526,9 +10526,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactBrowserEventEmitter.js",
-      "issuerId": 55,
-      "issuerName": "./~/react-dom/lib/ReactBrowserEventEmitter.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ChangeEventPlugin.js",
+      "issuerId": 388,
+      "issuerName": "./~/react-dom/lib/ChangeEventPlugin.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10636,9 +10636,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMContainerInfo.js",
-      "issuerId": 399,
-      "issuerName": "./~/react-dom/lib/ReactDOMContainerInfo.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
+      "issuerId": 398,
+      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10752,9 +10752,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/withRouter.js",
-      "issuerId": 468,
-      "issuerName": "./~/react-router/es/withRouter.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/Link.js",
+      "issuerId": 237,
+      "issuerName": "./~/react-router/es/Link.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17182,9 +17182,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/instantiateReactComponent.js",
-      "issuerId": 233,
-      "issuerName": "./~/react-dom/lib/instantiateReactComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactInjection.js",
+      "issuerId": 414,
+      "issuerName": "./~/react-dom/lib/ReactInjection.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17274,9 +17274,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/instantiateReactComponent.js",
-      "issuerId": 233,
-      "issuerName": "./~/react-dom/lib/instantiateReactComponent.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactInjection.js",
+      "issuerId": 414,
+      "issuerName": "./~/react-dom/lib/ReactInjection.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -20859,7 +20859,7 @@
       "name": "./app/components/Scoreboard/Scoreboard.js",
       "index": 259,
       "index2": 281,
-      "size": 2952,
+      "size": 2979,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20888,7 +20888,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Scoreboard;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _styles = require('./styles.css');\n\nvar _api = require('helpers/api');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  scores: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  seasonState: _react.PropTypes.object.isRequired\n};\n\nfunction Scoreboard(_ref) {\n  var scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league,\n      seasonState = _ref.seasonState;\n\n  var games = void 0;\n  if (league === 'mlb') {\n    games = scores.game === undefined ? _react2.default.createElement(_components.NoGames, null) : !Array.isArray(scores.game) ? _react2.default.createElement(_containers.GameContainer, { game: scores.game, date: date, league: league, key: scores.game.game_pk }) : scores.game.filter(function (item) {\n      return item.game_type !== 'S';\n    }).map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.game_pk });\n    });\n  }\n  if (league === 'nhl') {\n    games = !scores.dates.length ? _react2.default.createElement(_components.NoGames, null) : scores.dates[0].games.map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.gamePk });\n    });\n  }\n  if (league === 'nba') {\n    games = !scores.sports_content.games.game.length ? _react2.default.createElement(_components.NoGames, null) : scores.sports_content.games.game.map(function (item, index) {\n      var combined = Object.assign({}, scores.games[index], item);\n      (0, _api.getNbaGameDetails)(date, item.id).then(function (data) {\n        return Object.assign(combined, data.sports_content.game);\n      });\n      return _react2.default.createElement(_containers.GameContainer, { game: combined, date: date, league: league, key: item.id });\n    });\n  }\n  var allStarGame = false;\n  if (league === 'nba') {\n    allStarGame = scores.games.length === 1 && scores.games[0].tags[0] === 'AWASG';\n  }\n  return _react2.default.createElement(\n    'main',\n    { className: _styles.scoreboardContainer },\n    _react2.default.createElement(_containers.DateContainer, { date: date, today: today, league: league }),\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.gamesList },\n      games\n    ),\n    seasonState && seasonState.isAllStar && _react2.default.createElement(_components.AllStar, { img: allStarGame ? 'asg' : 'nola', league: league })\n  );\n}\n\nScoreboard.propTypes = propTypes;"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = Scoreboard;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _components = require('components');\n\nvar _containers = require('containers');\n\nvar _styles = require('./styles.css');\n\nvar _api = require('helpers/api');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar propTypes = {\n  scores: _react.PropTypes.object.isRequired,\n  date: _react.PropTypes.string.isRequired,\n  today: _react.PropTypes.string.isRequired,\n  league: _react.PropTypes.string.isRequired,\n  seasonState: _react.PropTypes.object.isRequired\n};\n\nfunction Scoreboard(_ref) {\n  var scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league,\n      seasonState = _ref.seasonState;\n\n  var games = void 0;\n  if (league === 'mlb') {\n    games = scores.game === undefined || seasonState.isPreseason ? _react2.default.createElement(_components.NoGames, null) : !Array.isArray(scores.game) ? _react2.default.createElement(_containers.GameContainer, { game: scores.game, date: date, league: league, key: scores.game.game_pk }) : scores.game.filter(function (item) {\n      return item.game_type !== 'S';\n    }).map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.game_pk });\n    });\n  }\n  if (league === 'nhl') {\n    games = !scores.dates.length ? _react2.default.createElement(_components.NoGames, null) : scores.dates[0].games.map(function (item) {\n      return _react2.default.createElement(_containers.GameContainer, { game: item, date: date, league: league, key: item.gamePk });\n    });\n  }\n  if (league === 'nba') {\n    games = !scores.sports_content.games.game.length ? _react2.default.createElement(_components.NoGames, null) : scores.sports_content.games.game.map(function (item, index) {\n      var combined = Object.assign({}, scores.games[index], item);\n      (0, _api.getNbaGameDetails)(date, item.id).then(function (data) {\n        return Object.assign(combined, data.sports_content.game);\n      });\n      return _react2.default.createElement(_containers.GameContainer, { game: combined, date: date, league: league, key: item.id });\n    });\n  }\n  var allStarGame = false;\n  if (league === 'nba') {\n    allStarGame = scores.games.length === 1 && scores.games[0].tags[0] === 'AWASG';\n  }\n  return _react2.default.createElement(\n    'main',\n    { className: _styles.scoreboardContainer },\n    _react2.default.createElement(_containers.DateContainer, { date: date, today: today, league: league }),\n    _react2.default.createElement(\n      'ul',\n      { className: _styles.gamesList },\n      games\n    ),\n    seasonState && seasonState.isAllStar && _react2.default.createElement(_components.AllStar, { img: allStarGame ? 'asg' : 'nola', league: league })\n  );\n}\n\nScoreboard.propTypes = propTypes;"
     },
     {
       "id": 311,

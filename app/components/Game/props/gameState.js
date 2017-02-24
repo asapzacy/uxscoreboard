@@ -8,7 +8,7 @@ export const mlbGameStateProps = (game) => {
   return {
     gameState: game.status.ind === 'S' ? 0 : 2,
     status: game.status.status,
-    time: `${game.time} ET`,
+    time: `${game.time} ${game.ampm} ${game.time_zone}`,
     periods: 9,
     totalPeriods: game.linescore.inning.length,
     overtime: game.linescore.inning.length,

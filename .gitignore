@@ -1,4 +1,4 @@
 node_modules
 .DS_Store
-dist/webpack.stats.json
-dist/webpack.stats.html
+dist/webpack_stats.html
+dist/webpack_stats.json

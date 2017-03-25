@@ -8,7 +8,7 @@
 .teamLeft span { padding:2px 8px;background:#fff;box-shadow:#070707 0 0 1px 1px }
 .teamName { margin-bottom:5%;font-size:120%;max-width:150px }
 .teamName small { font-size:88% }
-.teamRecord { display:table;font-size:70%;font-weight:700 }
+.teamRecord { margin-right:auto;font-size:70%;font-weight:700 }
 
 .teamRight { flex:1 }
 .teamScore { display:block;font-size:160%;text-align:center }

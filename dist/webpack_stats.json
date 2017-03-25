@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "2.2.1",
-  "hash": "015ec4107602346c3db5",
+  "hash": "296ec82c57c6d6f1fa54",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
@@ -13,7 +13,7 @@
   "assets": [
     {
       "name": "bundle.js",
-      "size": 819237,
+      "size": 817043,
       "chunks": [
         0
       ],
@@ -23,7 +23,7 @@
     },
     {
       "name": "bundle.js.map",
-      "size": 268,
+      "size": 267,
       "chunks": [
         0
       ],
@@ -56,7 +56,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 2058732,
+      "size": 2055398,
       "names": [
         "main"
       ],
@@ -64,7 +64,7 @@
         "bundle.js",
         "bundle.js.map"
       ],
-      "hash": "9f35307fa97d0fe506f0",
+      "hash": "9c10112f176f56b9cb91",
       "parents": [],
       "origins": [
         {
@@ -1113,7 +1113,7 @@
       "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Team/styles.css",
       "index": 510,
       "index2": 502,
-      "size": 2645,
+      "size": 2655,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -2051,7 +2051,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 8,
-      "source": "exports = module.exports = require(\"./../../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".styles__teamContainer___89RAa{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;padding:2px 0}.styles__teamLogo___2IxZo{height:75px;-ms-flex:1;flex:1}.styles__teamLogo___2IxZo[src$=\\\".png\\\"]{width:75px}.styles__teamInfo___1cBFS{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;-ms-flex:2;flex:2}.styles__teamLeft___38PMI{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex:2;flex:2}.styles__teamLeft___38PMI span{padding:2px 8px;background:#fff;box-shadow:0 0 1px 1px #070707}.styles__teamName___3x94Z{margin-bottom:5%;font-size:120%;max-width:150px}.styles__teamName___3x94Z small{font-size:88%}.styles__teamRecord___2d6d7{display:table;font-size:70%;font-weight:700}.styles__teamRight___2hgQo{-ms-flex:1;flex:1}.styles__teamScore___3d2FQ{display:block;font-size:160%;text-align:center}\", \"\", {\"version\":3,\"sources\":[\"/./components/Team/styles.css\"],\"names\":[],\"mappings\":\"AAAA,+BAAiB,oBAAa,AAAb,aAAa,sBAAA,mBAAmB,aAAa,CAAE,AAEhE,0BAAY,YAAY,WAAA,MAAM,CAAE,AAChC,uCAAyB,UAAU,CAAE,AACrC,0BAAY,oBAAa,AAAb,aAAa,sBAAA,mBAAmB,sBAAA,8BAA8B,WAAA,MAAM,CAAE,AAElF,0BAAY,oBAAa,AAAb,aAAa,0BAAA,sBAAsB,WAAA,MAAM,CAAE,AACvD,+BAAiB,gBAAgB,gBAAgB,8BAA8B,CAAE,AACjF,0BAAY,iBAAiB,eAAe,eAAe,CAAE,AAC7D,gCAAkB,aAAa,CAAE,AACjC,4BAAc,cAAc,cAAc,eAAe,CAAE,AAE3D,2BAAa,WAAM,AAAN,MAAM,CAAE,AACrB,2BAAa,cAAc,eAAe,iBAAiB,CAAE\",\"file\":\"styles.css\",\"sourcesContent\":[\".teamContainer { display:flex;align-items:center;padding:2px 0 }\\n\\n.teamLogo { height:75px;flex:1 }\\n.teamLogo[src$='.png'] { width:75px }\\n.teamInfo { display:flex;align-items:center;justify-content:space-between;flex:2 }\\n\\n.teamLeft { display:flex;flex-direction:column;flex:2 }\\n.teamLeft span { padding:2px 8px;background:#fff;box-shadow:#070707 0 0 1px 1px }\\n.teamName { margin-bottom:5%;font-size:120%;max-width:150px }\\n.teamName small { font-size:88% }\\n.teamRecord { display:table;font-size:70%;font-weight:700 }\\n\\n.teamRight { flex:1 }\\n.teamScore { display:block;font-size:160%;text-align:center }\\n\"],\"sourceRoot\":\"webpack://\"}]);\n\n// exports\nexports.locals = {\n\t\"teamContainer\": \"styles__teamContainer___89RAa\",\n\t\"teamLogo\": \"styles__teamLogo___2IxZo\",\n\t\"teamInfo\": \"styles__teamInfo___1cBFS\",\n\t\"teamLeft\": \"styles__teamLeft___38PMI\",\n\t\"teamName\": \"styles__teamName___3x94Z\",\n\t\"teamRecord\": \"styles__teamRecord___2d6d7\",\n\t\"teamRight\": \"styles__teamRight___2hgQo\",\n\t\"teamScore\": \"styles__teamScore___3d2FQ\"\n};"
+      "source": "exports = module.exports = require(\"./../../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".styles__teamContainer___89RAa{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;padding:2px 0}.styles__teamLogo___2IxZo{height:75px;-ms-flex:1;flex:1}.styles__teamLogo___2IxZo[src$=\\\".png\\\"]{width:75px}.styles__teamInfo___1cBFS{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;-ms-flex:2;flex:2}.styles__teamLeft___38PMI{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex:2;flex:2}.styles__teamLeft___38PMI span{padding:2px 8px;background:#fff;box-shadow:0 0 1px 1px #070707}.styles__teamName___3x94Z{margin-bottom:5%;font-size:120%;max-width:150px}.styles__teamName___3x94Z small{font-size:88%}.styles__teamRecord___2d6d7{margin-right:auto;font-size:70%;font-weight:700}.styles__teamRight___2hgQo{-ms-flex:1;flex:1}.styles__teamScore___3d2FQ{display:block;font-size:160%;text-align:center}\", \"\", {\"version\":3,\"sources\":[\"/./components/Team/styles.css\"],\"names\":[],\"mappings\":\"AAAA,+BAAiB,oBAAa,AAAb,aAAa,sBAAA,mBAAmB,aAAa,CAAE,AAEhE,0BAAY,YAAY,WAAA,MAAM,CAAE,AAChC,uCAAyB,UAAU,CAAE,AACrC,0BAAY,oBAAa,AAAb,aAAa,sBAAA,mBAAmB,sBAAA,8BAA8B,WAAA,MAAM,CAAE,AAElF,0BAAY,oBAAa,AAAb,aAAa,0BAAA,sBAAsB,WAAA,MAAM,CAAE,AACvD,+BAAiB,gBAAgB,gBAAgB,8BAA8B,CAAE,AACjF,0BAAY,iBAAiB,eAAe,eAAe,CAAE,AAC7D,gCAAkB,aAAa,CAAE,AACjC,4BAAc,kBAAkB,cAAc,eAAe,CAAE,AAE/D,2BAAa,WAAM,AAAN,MAAM,CAAE,AACrB,2BAAa,cAAc,eAAe,iBAAiB,CAAE\",\"file\":\"styles.css\",\"sourcesContent\":[\".teamContainer { display:flex;align-items:center;padding:2px 0 }\\n\\n.teamLogo { height:75px;flex:1 }\\n.teamLogo[src$='.png'] { width:75px }\\n.teamInfo { display:flex;align-items:center;justify-content:space-between;flex:2 }\\n\\n.teamLeft { display:flex;flex-direction:column;flex:2 }\\n.teamLeft span { padding:2px 8px;background:#fff;box-shadow:#070707 0 0 1px 1px }\\n.teamName { margin-bottom:5%;font-size:120%;max-width:150px }\\n.teamName small { font-size:88% }\\n.teamRecord { margin-right:auto;font-size:70%;font-weight:700 }\\n\\n.teamRight { flex:1 }\\n.teamScore { display:block;font-size:160%;text-align:center }\\n\"],\"sourceRoot\":\"webpack://\"}]);\n\n// exports\nexports.locals = {\n\t\"teamContainer\": \"styles__teamContainer___89RAa\",\n\t\"teamLogo\": \"styles__teamLogo___2IxZo\",\n\t\"teamInfo\": \"styles__teamInfo___1cBFS\",\n\t\"teamLeft\": \"styles__teamLeft___38PMI\",\n\t\"teamName\": \"styles__teamName___3x94Z\",\n\t\"teamRecord\": \"styles__teamRecord___2d6d7\",\n\t\"teamRight\": \"styles__teamRight___2hgQo\",\n\t\"teamScore\": \"styles__teamScore___3d2FQ\"\n};"
     },
     {
       "id": 2,
@@ -4424,9 +4424,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/About/AboutContainer.js",
-      "issuerId": 315,
-      "issuerName": "./app/containers/About/AboutContainer.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/containers/Main/MainContainer.js",
+      "issuerId": 320,
+      "issuerName": "./app/containers/Main/MainContainer.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4935,22 +4935,13 @@
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Nfl/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "3:10-247"
+          "loc": "10:51-288"
         },
         {
           "moduleId": 349,
           "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/zacarellano/Desktop/uxscoreboard/node_modules/postcss-loader/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/Nfl/styles.css",
           "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Nfl/styles.css",
           "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/Nfl/styles.css",
-          "type": "cjs require",
-          "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
-          "loc": "10:51-288"
-        },
-        {
-          "moduleId": 350,
-          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/zacarellano/Desktop/uxscoreboard/node_modules/postcss-loader/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NoGames/styles.css",
-          "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/NoGames/styles.css",
-          "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/NoGames/styles.css",
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
           "loc": "3:10-247"
@@ -4963,6 +4954,15 @@
           "type": "cjs require",
           "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
           "loc": "10:59-296"
+        },
+        {
+          "moduleId": 350,
+          "moduleIdentifier": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/zacarellano/Desktop/uxscoreboard/node_modules/postcss-loader/index.js!/Users/zacarellano/Desktop/uxscoreboard/app/components/NoGames/styles.css",
+          "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/NoGames/styles.css",
+          "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./app/components/NoGames/styles.css",
+          "type": "cjs require",
+          "userRequest": "-!./../../../node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"importLoaders\":1}!./../../../node_modules/postcss-loader/index.js!styles/shared.css",
+          "loc": "3:10-247"
         },
         {
           "moduleId": 355,
@@ -8978,9 +8978,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactChildReconciler.js",
-      "issuerId": 394,
-      "issuerName": "./~/react-dom/lib/ReactChildReconciler.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/flattenChildren.js",
+      "issuerId": 440,
+      "issuerName": "./~/react-dom/lib/flattenChildren.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10031,9 +10031,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactChildReconciler.js",
-      "issuerId": 394,
-      "issuerName": "./~/react-dom/lib/ReactChildReconciler.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/flattenChildren.js",
+      "issuerId": 440,
+      "issuerName": "./~/react-dom/lib/flattenChildren.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10752,9 +10752,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/Link.js",
-      "issuerId": 237,
-      "issuerName": "./~/react-router/es/Link.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-router/es/withRouter.js",
+      "issuerId": 468,
+      "issuerName": "./~/react-router/es/withRouter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10988,9 +10988,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactChildReconciler.js",
-      "issuerId": 394,
-      "issuerName": "./~/react-dom/lib/ReactChildReconciler.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/flattenChildren.js",
+      "issuerId": 440,
+      "issuerName": "./~/react-dom/lib/flattenChildren.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -17826,9 +17826,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/ReactChildReconciler.js",
-      "issuerId": 394,
-      "issuerName": "./~/react-dom/lib/ReactChildReconciler.js",
+      "issuer": "/Users/zacarellano/Desktop/uxscoreboard/node_modules/react-dom/lib/flattenChildren.js",
+      "issuerId": 440,
+      "issuerName": "./~/react-dom/lib/flattenChildren.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -19934,7 +19934,7 @@
       "name": "./app/components/About/About.js",
       "index": 240,
       "index2": 237,
-      "size": 3905,
+      "size": 561,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -19963,7 +19963,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 6,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = About;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction About() {\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.aboutContainer },\n    _react2.default.createElement(\n      'h1',\n      { className: _styles.aboutHeader },\n      'uxscoreboard'\n    ),\n    _react2.default.createElement(\n      'p',\n      { className: _styles.aboutIntro },\n      'I’ve always been a big sports fan growing up, whether playing or watching, paintball to basketball, it didn’t matter. I wanted to build a significantly better sports scoreboard... and pick up ',\n      _react2.default.createElement(\n        'a',\n        { className: _styles.aboutLink, href: 'https://facebook.github.io/react/', title: 'React Documentation' },\n        'react.js'\n      ),\n      ' along the way.'\n    ),\n    _react2.default.createElement(\n      'section',\n      { className: _styles.aboutSection },\n      _react2.default.createElement(\n        'h2',\n        { className: _styles.aboutSubHeader },\n        'what I made'\n      ),\n      _react2.default.createElement(\n        'p',\n        { className: _styles.aboutInfo },\n        'The original idea was to recreate and improve upon your typical ESPN sports scoreboard website—without the advertisements, and with an emphasis on design and interaction.'\n      ),\n      _react2.default.createElement(\n        'p',\n        { className: _styles.aboutInfo },\n        'I also wanted it to...'\n      ),\n      _react2.default.createElement(\n        'ul',\n        { className: _styles.aboutList },\n        _react2.default.createElement(\n          'li',\n          { className: _styles.aboutListItem },\n          'support all major sports, MLB/NBA/NHL/NFL'\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.aboutListItem },\n          'be quick'\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.aboutListItem },\n          'for the URLs to be functional–whether sharing with friends, bookmarking, or browsing around the site, every valid URL will show the necessary content'\n        )\n      ),\n      _react2.default.createElement(\n        'p',\n        { className: _styles.aboutInfo },\n        'It started with just the MLB, because they make their game data accessible and easy to use. Eventually, after a little digging around, I was able to find public and updated json files for the NBA, NFL, and NHL.'\n      ),\n      _react2.default.createElement(\n        'p',\n        { className: _styles.aboutInfo },\n        'Moving forward, I want to one day be able to add soccer, my favorite sport, despite the lack of (public) available data.'\n      )\n    ),\n    _react2.default.createElement(\n      'section',\n      { className: _styles.aboutSection },\n      _react2.default.createElement(\n        'h2',\n        { className: _styles.aboutSubHeader },\n        'what I used'\n      ),\n      _react2.default.createElement(\n        'p',\n        { className: _styles.aboutInfo },\n        ''\n      ),\n      _react2.default.createElement(\n        'ul',\n        { className: _styles.aboutList },\n        _react2.default.createElement(\n          'li',\n          { className: _styles.aboutListItem },\n          ''\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.aboutListItem },\n          ''\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.aboutListItem },\n          ''\n        ),\n        _react2.default.createElement(\n          'li',\n          { className: _styles.aboutListItem },\n          ''\n        )\n      )\n    )\n  );\n}"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = About;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _styles = require('./styles.css');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction About() {\n  return _react2.default.createElement(\n    'section',\n    { className: _styles.aboutContainer },\n    _react2.default.createElement(\n      'h1',\n      { className: _styles.aboutHeader },\n      'uxscoreboard'\n    )\n  );\n}"
     },
     {
       "id": 286,

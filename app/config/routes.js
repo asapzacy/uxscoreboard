@@ -1,7 +1,8 @@
 import React from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { MainContainer, HomeContainer, MlbContainer, NbaContainer,
-  NflContainer, NhlContainer, AboutContainer, NotFoundContainer, TestContainer } from 'containers'
+  NflContainer, NhlContainer, AboutContainer, NotFoundContainer,
+  MapContainer, TestContainer } from 'containers'
 
 const routes = (
   <Router history={browserHistory}>
@@ -16,6 +17,7 @@ const routes = (
         <IndexRoute component={NbaContainer} />
         <Route path='scores' component={NbaContainer} />
         <Route path='scores/:date' component={NbaContainer} />
+        <Route path='map' component={MapContainer} />
       </Route>
       <Route path='/nfl'>
         <IndexRoute component={NflContainer} />

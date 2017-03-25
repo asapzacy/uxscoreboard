@@ -56,12 +56,12 @@ class MainContainer extends Component {
     }
   }
   render() {
-    const menuHeight = this.state.isMenuOpen ? `calc(100% + ${this.state.menuHeight / 2}px)` : '100%'
+    const appHeight = { height: this.state.isMenuOpen ? `calc(100% + ${this.state.menuHeight / 2}px)` : '100%' }
     return (
-      <div className={mainContainer} style={{height:menuHeight}}>
+      <div className={mainContainer} style={appHeight}>
         <Header triggerMenu={this.triggerMenu} {...this.state} />
         <main className={innerContainer}>
-          {this.props.children}
+          { this.props.children }
         </main>
         <Footer />
       </div>

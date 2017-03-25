@@ -21,6 +21,7 @@ class NbaContainer extends Component {
     })
   }
   componentWillReceiveProps(nextProps) {
+    console.log('run')
     this.makeRequest(nextProps.routeParams.date)
   }
   makeRequest(dt = this.state.today) {

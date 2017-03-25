@@ -3,6 +3,8 @@ import { Scoreboard } from 'components'
 import { seasons } from 'helpers/seasons'
 import { checkDay } from 'helpers/utils'
 
+import { findDOMNode } from 'react-dom'
+
 class ScoreboardContainer extends Component {
   constructor() {
     super()
@@ -15,6 +17,12 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
+    // const el = findDOMNode(this)
+    // el.style.opacity = 0
+    // requestAnimationFrame(() => {
+    //   el.style.transition = 'opacity 0.44s'
+    //   el.style.opacity = 1
+    // })
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {

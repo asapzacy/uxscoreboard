@@ -88,12 +88,12 @@
 .dal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#007dc5 40%,transparent 0%) }
 .den_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002d62 40%,transparent 0%) }
 .det_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ed174c 40%,transparent 0%) }
-.gsw_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#fdb927 40%,transparent 0%) }
+.gsw_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .hou_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .ind_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffc633 40%,transparent 0%) }
 .lac_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .lal_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
-.mem_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#6189b9 40%,transparent 0%) }
+.mem_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#bbd1e4 40%,transparent 0%) }
 .mia_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .mil_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#00471b 40%,transparent 0%) }
 .min_nba  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#005083 40%,transparent 0%) }

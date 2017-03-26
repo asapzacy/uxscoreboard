@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { VelocityTransitionGroup, VelocityComponent } from 'velocity-react'
-import 'velocity-animate/velocity.ui';
+import 'velocity-animate/velocity.ui'
 
 import { NoGames, AllStar } from 'components'
 import { GameContainer, DateContainer } from 'containers'
@@ -20,7 +20,7 @@ const config = {
     animation: 'transition.slideRightIn',
     duration: 1000,
     delay: 1000,
-    // display: 'inherit'
+    display: 'initial'
   },
   leave: {
     animation: 'transition.slideLeftOut',

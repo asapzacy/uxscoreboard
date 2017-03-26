@@ -45,36 +45,6 @@ class NbaContainer extends Component {
         throw new Error(error)
       })
   }
-  cleanGameData(scores) {
-    if (scores.game !== undefined) {
-      scores.game.map((game) => {
-        if (game.visitor.linescores === undefined) {
-          game.visitor.linescores = {
-            period: { 0: { score: null },
-                      1: { score: null },
-                      2: { score: null },
-                      3: { score: null }
-                    }
-          }
-        }
-        if (game.home.linescores === undefined) {
-          game.home.linescores = {
-            period: { 0: { score: null },
-                      1: { score: null },
-                      2: { score: null },
-                      3: { score: null }
-                    }
-          }
-        }
-        if (game.home.stats.points === undefined) {
-          game.home.stats.points = null
-        }
-        if (game.visitor.stats.points === undefined) {
-          game.visitor.stats.points = null
-        }
-      })
-    }
-  }
   render() {
     return <Nba {...this.state} />
   }

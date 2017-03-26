@@ -6,9 +6,14 @@
   font-size:1.1em;
   border:2px solid #f5f5f5;
   margin:1em;
-  flex:1 1 calc(320px - 2em);
+  flex:1 1 calc(33.3% - 2em);
   max-width:420px;
   min-width:320px;
+}
+
+.fuckSafari {
+  flex-basis:320px;
+  composes:gameItem;
 }
 
 .details {

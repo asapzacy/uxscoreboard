@@ -4,7 +4,7 @@ import { GameState, Team, Expand, Details } from 'components'
 import { DetailsContainer } from 'containers'
 import { mlbTeamProps, nbaTeamProps, nhlTeamProps } from './props/team'
 import { mlbGameStateProps, nbaGameStateProps, nhlGameStateProps } from './props/gameState'
-import { gameItem, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
+import { gameItem, fuckSafari, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
@@ -24,6 +24,7 @@ export default function Game(props) {
 
 Game.propTypes = propTypes
 
+var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
 
 const transitionsConfig = {
   enter: {
@@ -43,7 +44,7 @@ function MlbGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = mlbTeamProps(game, 'away', league)
   const homeTeam = mlbTeamProps(game, 'home', league)
   return (
-    <li className={gameItem}>
+    <li className={isSafari ? fuckSafari : gameItem}>
       <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
@@ -60,7 +61,7 @@ function NbaGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nbaTeamProps(game, 'visitor', league)
   const homeTeam = nbaTeamProps(game, 'home', league)
   return (
-    <li className={gameItem}>
+    <li className={isSafari ? fuckSafari : gameItem}>
       <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
@@ -77,7 +78,7 @@ function NhlGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nhlTeamProps(game, 'away', league)
   const homeTeam = nhlTeamProps(game, 'home', league)
   return (
-    <li className={gameItem}>
+    <li className={isSafari ? fuckSafari : gameItem}>
       <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />

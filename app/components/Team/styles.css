@@ -1,14 +1,72 @@
-.teamContainer { display:flex;align-items:center;padding:2px 0 }
 
-.teamLogo { height:75px;flex:1 }
-.teamLogo[src$='.png'] { width:75px }
-.teamInfo { display:flex;align-items:center;justify-content:space-between;flex:2 }
+/* -------  team container  ------- */
+.teamContainer {
+  display:flex;
+  align-items:center;
+  padding:2px 0;
+}
 
-.teamLeft { display:flex;flex-direction:column;flex:2 }
-.teamLeft span { padding:2px 8px;background:#fff;box-shadow:#070707 0 0 1px 1px }
-.teamName { margin-bottom:5%;font-size:120%;max-width:150px }
-.teamName small { font-size:88% }
-.teamRecord { margin-right:auto;font-size:70%;font-weight:700 }
+/* -------  team logo  ------- */
+.teamLogo {
+  height:75px;
+  flex:1;
+}
 
-.teamRight { flex:1 }
-.teamScore { display:block;font-size:160%;text-align:center }
+/* -------  team logo - png  ------- */
+.teamLogo[src$='.png'] {
+  width:75px;
+}
+
+/* -------  team info  ------- */
+.teamInfo {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex:2;
+}
+
+/* -------  team left  ------- */
+.teamLeft {
+  display:flex;
+  flex-direction:column;
+  flex:2;
+}
+
+/* -------  team left - span  ------- */
+.teamLeft span {
+  padding:2px 8px;
+  background:#fff;
+  box-shadow:#070707 0 0 1px 1px;
+}
+
+/* -------  team name  ------- */
+.teamName {
+  margin-bottom:5%;
+  font-size:120%;
+  max-width:150px;
+}
+
+/* -------  team name - small  ------- */
+.teamName small {
+  font-size:88%;
+}
+
+/* -------  team record  ------- */
+.teamRecord {
+  display:table;
+  margin-right:auto;
+  font-size:70%;
+  font-weight:700;
+}
+
+/* -------  team right  ------- */
+.teamRight {
+  flex:1;
+}
+
+/* -------  team score  ------- */
+.teamScore {
+  display:block;
+  font-size:160%;
+  text-align:center;
+}

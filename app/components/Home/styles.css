@@ -14,8 +14,7 @@
   flex:1;
   flex-direction:column;
   justify-content:center;
-  position:relative;
-  top:5%;
+  margin:2.5% 0 -2.5%;
 }
 /* -------  name  ------- */
 .name {
@@ -23,7 +22,8 @@
 }
 /* -------  description  ------- */
 .description {
-  font-size:1.1em;
+  font-size:1.15em;
+  letter-spacing:0;
   color:#bdbdbd;
 }
 
@@ -32,7 +32,6 @@
   width:80%;
   flex:1;
   font-size:1.2em;
-  letter-spacing:3px;
 }
 /* -------  league list  ------- */
 .leagueList {

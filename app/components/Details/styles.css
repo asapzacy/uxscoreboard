@@ -2,7 +2,7 @@
 /* -------  details container  ------- */
 .detailsContainer {
   font-size:0.9em;
-  padding:0.8em 0.4em;
+  padding:0.4em;
   flex-direction:column;
   text-align:center;
 }

@@ -18,10 +18,11 @@
 /* -------  icon  ------- */
 .icon {
   backface-visibility:hidden;
+  transform:rotate(0deg) translateZ(0);
   transition:transform 0.22s;
 }
 
 /* -------  expanded icon - icon  ------- */
 .expandedIcon .icon {
-  transform:rotate(180deg);
+  transform:rotate(180deg) translateZ(0);
 }

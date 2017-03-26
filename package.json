@@ -10,7 +10,7 @@
     "server": "node server.js",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",
-    "svgo": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;"
+    "images": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;"
   },
   "author": "Zac Arellano",
   "license": "ISC",

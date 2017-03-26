@@ -4,7 +4,7 @@ import { GameContainer, DateContainer } from 'containers'
 import { getNbaGameDetails } from 'helpers/api'
 import { VelocityTransitionGroup } from 'velocity-react'
 import 'velocity-animate/velocity.ui'
-import { scoreboardContainer, gamesList, gamesHeader } from './styles.css'
+import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
 
 const propTypes = {
   scores: PropTypes.object.isRequired,
@@ -17,13 +17,13 @@ const propTypes = {
 const config = {
   enter: {
     animation: 'transition.slideRightIn',
-    duration: 1000,
-    delay: 1000,
+    duration: 220,
+    delay: 220,
     display: 'initial'
   },
   leave: {
     animation: 'transition.slideLeftOut',
-    duration: 1000,
+    duration: 220,
     delay: 0,
     display: 'none'
   }
@@ -57,12 +57,11 @@ export default function Scoreboard({ scores, date, today, league, seasonState })
   if (league === 'nba') {
     allStarGame = scores.games.length === 1 && scores.games[0].tags && scores.games[0].tags[0] === 'AWASG'
   }
-  const test = { display: 'inherit', flexWrap: 'inherit', alignItems: 'inherit', justifyContent: 'inherit' }
   return (
     <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
         <ul className={gamesList}>
-          <VelocityTransitionGroup style={test} {...config}>
+          <VelocityTransitionGroup className={fadeContainer} {...config}>
             { games }
           </VelocityTransitionGroup>
         </ul>

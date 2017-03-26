@@ -13,3 +13,12 @@
   align-items:flex-start;
   flex-wrap:wrap;
 }
+
+/* -------  fade container  ------- */
+.fadeContainer {
+  width:100%;
+  display:inherit;
+  flex-wrap:inherit;
+  align-items:inherit;
+  justify-content:inherit;
+}

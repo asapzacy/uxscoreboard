@@ -9,6 +9,7 @@
   align-items:center;
   justify-content:center;
 }
+
 /* -------  expanded icon  ------- */
 .expandedIcon {
   composes:iconContainer;
@@ -16,9 +17,11 @@
 
 /* -------  icon  ------- */
 .icon {
+  backface-visibility:hidden;
   transition:transform 0.22s;
 }
-/* -------  icon - expanded icon  ------- */
+
+/* -------  expanded icon - icon  ------- */
 .expandedIcon .icon {
-  transform:rotate(180deg)
+  transform:rotate(180deg);
 }

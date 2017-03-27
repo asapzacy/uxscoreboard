@@ -7,6 +7,7 @@ class NbaContainer extends Component {
   constructor() {
     super()
     this.state = {
+      cache: {},
       isLoading: true,
       isValid: false,
       scores: {},
@@ -28,22 +29,35 @@ class NbaContainer extends Component {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    getNbaScores(dt)
-      .then((currentScores) => {
-        this.setState({
-          isLoading: false,
-          scores: currentScores,
-          year: currentScores.sports_content.sports_meta.season_meta.season_year,
-          date: dt
-        })
+    if (this.state.cache[dt]) {
+      this.setState({
+        isLoading: false,
+        scores: this.state.cache[dt],
+        year: this.state.cache[dt].sports_content.sports_meta.season_meta.season_year,
+        date: dt
       })
-      .catch((error) =>  {
-        this.setState({
-          isLoading: false,
-          date: dt
+    } else {
+      getNbaScores(dt)
+        .then((currentScores) => {
+          const test = this.state.cache
+          test[dt] = currentScores
+          console.log('fetched')
+          this.setState({
+            cache: test,
+            isLoading: false,
+            scores: currentScores,
+            year: currentScores.sports_content.sports_meta.season_meta.season_year,
+            date: dt
+          })
         })
-        throw new Error(error)
-      })
+        .catch((error) =>  {
+          this.setState({
+            isLoading: false,
+            date: dt
+          })
+          throw new Error(error)
+        })
+    }
   }
   render() {
     return <Nba {...this.state} />

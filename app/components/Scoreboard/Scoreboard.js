@@ -4,6 +4,7 @@ import { GameContainer, DateContainer } from 'containers'
 import { getNbaGameDetails } from 'helpers/api'
 import { VelocityTransitionGroup } from 'velocity-react'
 import 'velocity-animate/velocity.ui'
+import { velocity } from 'config/velocity'
 import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
 
 const propTypes = {
@@ -14,22 +15,8 @@ const propTypes = {
   seasonState: PropTypes.object.isRequired
 }
 
-const config = {
-  enter: {
-    animation: 'transition.slideRightIn',
-    duration: 220,
-    delay: 220,
-    display: 'initial'
-  },
-  leave: {
-    animation: 'transition.slideLeftOut',
-    duration: 220,
-    delay: 0,
-    display: 'none'
-  }
-}
 
-export default function Scoreboard({ scores, date, today, league, seasonState }) {
+export default function Scoreboard({ scores, date, today, league, seasonState, direction }) {
   let games
   if (league === 'mlb') {
     games = scores.game === undefined || seasonState.isPreseason
@@ -57,11 +44,12 @@ export default function Scoreboard({ scores, date, today, league, seasonState })
   if (league === 'nba') {
     allStarGame = scores.games.length === 1 && scores.games[0].tags && scores.games[0].tags[0] === 'AWASG'
   }
+  console.log(`hi: ${direction.enter}`)
   return (
     <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
         <ul className={gamesList}>
-          <VelocityTransitionGroup className={fadeContainer} {...config}>
+          <VelocityTransitionGroup className={fadeContainer} {...velocity(direction.enter)}>
             { games }
           </VelocityTransitionGroup>
         </ul>

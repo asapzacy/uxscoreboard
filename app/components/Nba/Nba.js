@@ -16,18 +16,18 @@ const defaultProps = {
   league: 'nba'
 }
 
-export default function Nba({ isLoading, isValid, scores, year, date, today, league }) {
-  return (
-    <div>
-      { isLoading
-        ? <Loading />
-        : isValid && scores
-          ? <ScoreboardContainer scores={scores} year={year} date={date} today={today} league={league} />
-          : <NotFound />
-      }
-    </div>
-  )
-}
+const Nba = ({ isLoading, isValid, scores, year, date, today, league }) => (
+  <div>
+    { isLoading
+      ? <Loading />
+      : isValid && scores
+        ? <ScoreboardContainer scores={scores} year={year} date={date} today={today} league={league} />
+        : <NotFound />
+    }
+  </div>
+)
 
 Nba.propTypes = propTypes
 Nba.defaultProps = defaultProps
+
+export default Nba

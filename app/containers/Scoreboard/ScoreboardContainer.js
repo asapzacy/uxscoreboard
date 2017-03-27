@@ -21,20 +21,21 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
-    this.setState({ direction: { enter: 'Up' } })
+    this.setState({ direction: { enter: 'Left', leave: 'Right' } })
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {
-    let enter
     if (this.props.date > nextProps.date) {
-      enter = 'Left'
+      this.setState({ direction: { enter: 'Left', leave: 'Right' } })
     } else if (this.props.date < nextProps.date) {
-      enter = 'Right'
+      this.setState({ direction: { enter: 'Right', leave: 'Left' } })
     }
-    this.setState({ direction: { enter } })
     this.checkSeason(nextProps.date)
    }
   checkSeason(day) {
+    if (this.props.league !== 'nba') {
+      return
+    }
     const dates = seasons[this.props.league].seasons[this.props.year]
     this.setState({
       seasonState: {

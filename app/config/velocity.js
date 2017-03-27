@@ -2,15 +2,13 @@
 
 export const velocity = (direction = 'Up') => ({
   enter: {
-    // animation: `transition.slide${direction}In`,
-    // translateX: [ 0, -400 ],
-    animation: `transition.slide${direction ? direction : 'Up'}BigIn`,
+    animation: `transition.slide${direction ? direction : 'Up'}In`,
     duration: 440,
     delay: 220,
     display: 'initial'
   },
   leave: {
-    animation: `transition.slide${direction === 'Left' ? 'Right' : direction === 'Right' ? 'Left' : direction}BigOut`,
+    animation: `transition.slide${direction === 'Left' ? 'Right' : direction === 'Right' ? 'Left' : direction}Out`,
     duration: 220,
     delay: 0,
   }

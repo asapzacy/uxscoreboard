@@ -1,0 +1,56 @@
+
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+
+.appear {
+  opacity:0;
+}
+
+.appear.appearActive {
+  opacity:1;
+  transition:opacity 0.66s;
+}
+
+.leftEnter {
+  opacity:0;
+  transform:translateX(-10vw);
+}
+.leftEnter.leftEnterActive {
+  opacity:1;
+  transform:translateX(0);
+  transition:opacity 0.44s 0.44s, transform 0.44s 0.44s;
+}
+
+.rightEnter {
+  opacity:0;
+  transform:translateX(10vw);
+}
+.rightEnter.rightEnterActive {
+  opacity:1;
+  transform:translateX(0);
+  transition:opacity 0.44s 0.44s, transform 0.44s 0.44s;
+}
+
+.leftLeave {
+  opacity:1;
+  transform:translateX(0);
+}
+.leftLeave.leftLeaveActive {
+  opacity:0;
+  transform:translateX(-10vw);
+  transition:opacity 0.44s 0s, transform 0.44s 0s;
+}
+
+.rightLeave {
+  opacity:1;
+  transform:translateX(0);
+}
+.rightLeave.rightLeaveActive {
+  opacity:0;
+  transform:translateX(10vw);
+  transition:opacity 0.44s 0s, transform 0.44s 0s;
+}
+
+
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */

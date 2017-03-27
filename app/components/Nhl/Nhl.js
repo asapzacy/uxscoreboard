@@ -21,7 +21,7 @@ export default function Nhl({ isLoading, isValid, scores, date, today, league })
       { isLoading
         ? <Loading />
         : isValid && scores
-          ? <Scoreboard scores={scores} date={date} today={today} league={league} />
+          ? <ScoreboardContainer scores={scores} year={2016} date={date} today={today} league={league} />
           : <NotFound />
       }
     </div>

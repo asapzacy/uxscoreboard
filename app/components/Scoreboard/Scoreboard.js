@@ -5,7 +5,17 @@ import { getNbaGameDetails } from 'helpers/api'
 import { VelocityTransitionGroup } from 'velocity-react'
 import 'velocity-animate/velocity.ui'
 import { velocity } from 'config/velocity'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import CSSTransitionGroup from 'react-addons-css-transition-group'
 import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
+
+import { transitions } from 'config/transitions'
+
+import { appear, appearActive, leftEnter, leftEnterActive, rightEnter,
+  rightEnterActive, leftLeave, leftLeaveActive, rightLeave, rightLeaveActive } from './react.css'
+
+
+// import { enter, enterActive, leave, leaveActive, appear, appearActive } from './styles.css'
 
 const propTypes = {
   scores: PropTypes.object.isRequired,
@@ -44,15 +54,56 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
   if (league === 'nba') {
     allStarGame = scores.games.length === 1 && scores.games[0].tags && scores.games[0].tags[0] === 'AWASG'
   }
-  console.log(`hi: ${direction.enter}`)
+  console.log(direction)
   return (
     <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
-        <ul className={gamesList}>
+      {/* <ReactCSSTransitionGroup
+        className={gamesList}
+        component={'span'}
+        transitionName={'ay'}
+        transitionEnterTimeout={2000}
+        transitionLeaveTimeout={2000}
+      >
+        { games }
+         <ul className={gamesList}>
+          { games }
+        </ul>
+      </ReactCSSTransitionGroup> */}
+      {/* <ReactCSSTransitionGroup
+        component={'section'}
+        // className={gamesList}
+        transitionName={styles}
+        transitionAppear={true}
+        transitionAppearTimeout={660}
+        transitionEnterTimeout={2200}
+        transitionLeaveTimeout={2200}
+      > */}
+      <ReactCSSTransitionGroup
+        component={'ul'}
+        className={gamesList}
+        // key={date}
+        // transitionName={styles}
+        transitionName={{
+          appear: appear,
+          appearActive: appearActive,
+          enter: direction.enter === 'Left' ? leftEnter : rightEnter,
+          enterActive: direction.enter === 'Left' ? leftEnterActive : rightEnterActive,
+          leave: direction.leave === 'Left' ? rightLeave : leftLeave,
+          leaveActive: direction.leave === 'Left' ? rightLeaveActive : leftLeaveActive
+        }}
+        transitionAppear={true}
+        transitionAppearTimeout={660}
+        transitionEnterTimeout={440}
+        transitionLeaveTimeout={220}
+      >
+           { games }
+      </ReactCSSTransitionGroup>
+        {/* <ul className={gamesList}>
           <VelocityTransitionGroup className={fadeContainer} {...velocity(direction.enter)}>
             { games }
           </VelocityTransitionGroup>
-        </ul>
+        </ul> */}
       { seasonState && seasonState.isAllStar && <AllStar img={allStarGame ? 'asg' : 'nola'} league={league} /> }
     </main>
   )

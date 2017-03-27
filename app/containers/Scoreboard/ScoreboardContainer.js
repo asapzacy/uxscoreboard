@@ -11,13 +11,15 @@ class ScoreboardContainer extends Component {
       isSeason: false,
       isAllStar: false,
       isPlayoffs: false,
-      isFinals: false
+      isFinals: false,
+      direction: 'Up'
     }
   }
   componentDidMount() {
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps)
     this.checkSeason(nextProps.date)
    }
   checkSeason(day) {

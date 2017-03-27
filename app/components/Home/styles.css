@@ -10,7 +10,6 @@
 
 /* -------  uxscoreboard  ------- */
 .uxscoreboard {
-  min-height:333px;
   display:flex;
   flex:1;
   flex-direction:column;

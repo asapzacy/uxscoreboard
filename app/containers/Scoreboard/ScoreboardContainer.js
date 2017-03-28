@@ -21,7 +21,7 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
-    this.setState({ direction: { enter: 'Up', leave: 'Down' } })
+    // this.setState({ direction: { enter: 'Up', leave: 'Down' } })
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {
@@ -33,7 +33,7 @@ class ScoreboardContainer extends Component {
     this.checkSeason(nextProps.date)
    }
   checkSeason(day) {
-    if (this.props.league !== 'nba') {
+    if (this.props.league === 'nhl' || this.props.league === 'nfl') {
       return
     }
     const dates = seasons[this.props.league].seasons[this.props.year]

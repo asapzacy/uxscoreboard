@@ -15,16 +15,15 @@ export const mlbTeamProps = (game, side, league) => {
   }
 }
 
+export const nflTeamProps = (game, side, league) => {
+  return {
+    name: game[`${side}nn`],
+    league
+  }
+}
+
 //  nba home + away team props --> Team component
 export const nbaTeamProps = (game, side, league) => {
-  if (game.id === '0031600001') {
-    console.log('hi')
-    // return {
-    //   name: shortenTeamName(game[side].nickname),
-    //   code: game[side].abbreviation.toLowerCase(),
-    //   league
-    // }
-  }
   const side2 = side === 'home' ? 'hTeam' : 'vTeam'
   const inGame = game.period.current
   return {

@@ -4,8 +4,8 @@ export const seasons =  {
     seasons: {
       2016: {
         season: {
-          start: '20160403',
-          end: '20161102'
+          start: 20160403,
+          end: 20161102
         }
       },
       2017: {

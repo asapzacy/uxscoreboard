@@ -4,9 +4,8 @@ import { GameContainer, DateContainer } from 'containers'
 import { getNbaGameDetails } from 'helpers/api'
 import { VelocityTransitionGroup } from 'velocity-react'
 import 'velocity-animate/velocity.ui'
-import { velocity } from 'config/velocity'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { scoreboardContainer, gamesList, fadeContainer, appear, appearActive } from './styles.css'
+import { velocity_scoreboard } from 'config/velocity'
+import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
 
 const propTypes = {
   scores: PropTypes.object.isRequired,
@@ -25,11 +24,6 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
         ? <GameContainer game={scores.game} date={date} league={league} key={scores.game.game_pk} />
         : scores.game.filter(item => item.game_type !== 'S').map(item => <GameContainer game={item} date={date} league={league} key={item.game_pk} />)
   }
-  if (league === 'nhl') {
-    games = !scores.dates.length
-      ? <NoGames />
-      : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)
-  }
   if (league === 'nba') {
     games = !scores.sports_content.games.game.length
       ? <NoGames />
@@ -40,6 +34,16 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
         return <GameContainer game={combined} date={date} league={league} key={item.id} />
       })
   }
+  if (league === 'nhl') {
+    games = !scores.dates.length
+      ? <NoGames />
+      : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)
+  }
+  if (league === 'nfl') {
+    games = !scores.g.length
+      ? <NoGames />
+      : scores.g.map(item => <GameContainer game={item['$']} date={date} league={league} key={item['$'].eid} />)
+  }
   let allStarGame = false
   if (league === 'nba') {
     allStarGame = scores.games.length === 1 && scores.games[0].tags && scores.games[0].tags[0] === 'AWASG'
@@ -47,7 +51,7 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
   return (
     <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
-          <VelocityTransitionGroup className={fadeContainer} {...velocity(direction)}>
+          <VelocityTransitionGroup className={fadeContainer} {...velocity_scoreboard(direction)}>
             <ul className={gamesList} key={date}>
               { games }
             </ul>

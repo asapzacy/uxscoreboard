@@ -94,6 +94,12 @@ const base = {
   },
   resolve: {
     modules: [ PATHS.app, 'node_modules' ]
+  },
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   }
 }
 

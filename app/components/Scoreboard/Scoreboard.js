@@ -42,7 +42,7 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
   if (league === 'nfl') {
     games = !scores.g.length
       ? <NoGames />
-      : scores.g.map(item => <GameContainer game={item['$']} date={date} league={league} key={item['$'].eid} />)
+      : scores.g.map(item => <GameContainer game={item.$} date={date} league={league} key={item.$.eid} />)
   }
   let allStarGame = false
   if (league === 'nba') {

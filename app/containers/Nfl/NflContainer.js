@@ -36,7 +36,7 @@ class NflContainer extends Component {
           this.setState({
             isLoading: false,
             scores: result.ss.gms[0],
-            year: result.ss.gms[0]['$'].y,
+            year: result.ss.gms[0].$.y,
             date: dt
           })
         })

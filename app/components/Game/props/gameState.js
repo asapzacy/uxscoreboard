@@ -54,3 +54,16 @@ export const nhlGameStateProps = (game) => {
     isPlayoffs: game.gameType === 'P'
   }
 }
+
+//  nfl game state props --> GameState component
+export const nflGameStateProps = (game) => {
+  const isOT = game.q === 'FO'
+  const isFinal = game.q === 'F' || isOT
+  return {
+    gameState: (isFinal || isOt) ? 2 : 0,
+    status: isFinal ? 'Final' : 'x',
+    periods: 4,
+    totalPeriods: isOT ? 5 : 4,
+    overtime: 'OT'
+  }
+}

@@ -4,7 +4,7 @@ import { DetailsContainer } from 'containers'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { velocity_game } from 'config/velocity'
 import { mlbTeamProps, nbaTeamProps, nflTeamProps, nhlTeamProps } from './props/team'
-import { mlbGameStateProps, nbaGameStateProps, nhlGameStateProps } from './props/gameState'
+import { mlbGameStateProps, nflGameStateProps, nbaGameStateProps, nhlGameStateProps } from './props/gameState'
 import { gameItem, fuckSafari, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
 
 const propTypes = {
@@ -43,17 +43,15 @@ const NbaGame = ({ game, date, league, showDetails, expanded }) => (
 
 const NflGame = ({ game, date, league, showDetails, expanded }) => (
   <li className={isSafari ? fuckSafari : gameItem}>
+    <GameState {...nflGameStateProps(game)} />
     <Team {...nflTeamProps(game, 'h', league)} />
     <Team {...nflTeamProps(game, 'v', league)} />
     <Expand expanded={expanded} showDetails={showDetails} />
     <VelocityTransitionGroup className={expanded ? detailsExpanded : details} {...velocity_game}>
-      <h2>{'details'}</h2>
       { expanded && <DetailsContainer game={game} date={date} league={league} /> }
     </VelocityTransitionGroup>
   </li>
 )
-
-
 
 
 function MlbGame({ game, date, league, showDetails, expanded }) {

@@ -1,6 +1,5 @@
 import axios from 'axios'
-// import StattleshipAPI from 'node-stattleship'
-// import { token } from 'config/stattleship'
+
 const CORS = 'https://cors-anywhere.herokuapp.com/'
 
 const dateObject = (dt) => {
@@ -20,7 +19,7 @@ export const getMlbScores = (dt) => {
 }
 
 // axios request - nba scores
-export function getNbaScores(dt) {
+export const getNbaScores = (dt) => {
   const url = `${CORS}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
   const url2 = `${CORS}http://data.nba.net/data/10s/prod/v2/${dt}/scoreboard.json`
   return axios.all([axios.get(url), axios.get(url2)])
@@ -29,7 +28,7 @@ export function getNbaScores(dt) {
 }
 
 // axios request - nba game details
-export function getNbaGameDetails(dt,id) {
+export const getNbaGameDetails = (dt, id) => {
   const url = `${CORS}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
   return axios.get(url)
     .then(gameDetails => gameDetails.data)
@@ -38,8 +37,7 @@ export function getNbaGameDetails(dt,id) {
 
 // axios request - nfl scores
 export const getNflScores = (dt) => {
-  const { yyyy, mm, dd } = dateObject(dt)
-  const url = `http://www.nfl.com/ajax/scorestrip?season=2016&seasonType=REG&week=1`
+  const url = `${CORS}https://www.nfl.com/ajax/scorestrip?season=2016&seasonType=REG&week=1`
   return axios.get(url)
     .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)

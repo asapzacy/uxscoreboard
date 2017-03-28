@@ -19,14 +19,14 @@
 
 /* -------  other info  ------- */
 .otherInfo {
-  width:48%;
+  width:33%;
   display:flex;
   align-items:flex-end;
 }
 
 /* -------  bso container  ------- */
 .bsoContainer {
-  margin:0 0 5% 5%;
+  margin-bottom:25%;
   text-align:left;
 }
 /* -------  bso  ------- */

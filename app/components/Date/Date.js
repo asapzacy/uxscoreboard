@@ -3,8 +3,7 @@ import { Link } from 'react-router'
 import moment from 'moment'
 import AngleRight from 'react-icons/lib/fa/angle-right'
 import AngleLeft from 'react-icons/lib/fa/angle-left'
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink } from './styles.css'
+import { dateMenu, dateList, arrowItem, dateLink, mainLink } from './styles.css'
 
 const propTypes = {
   width: PropTypes.number.isRequired,
@@ -18,11 +17,11 @@ const Date = ({ width, ...props }) => (
   <nav className={dateMenu}>
     <menu className={dateList}>
       <li className={arrowItem}><Day {...props} diff={-1} isArrow={true} /></li>
-      { width >= 1331 && <li className={dateItem}><Day {...props} diff={-2} isArrow={false} /></li> }
-      { width >= 667 && <li className={dateItem}><Day {...props} diff={-1} isArrow={false} /></li> }
-      <li className={dateItem}><Day {...props} diff={0} isArrow={false} /></li>
-      { width >= 667 && <li className={dateItem}><Day {...props} diff={1} isArrow={false} /></li> }
-      { width >= 1331 && <li className={dateItem}><Day {...props} diff={2} isArrow={false} /></li> }
+      { width >= 1331 && <li><Day {...props} diff={-2} isArrow={false} /></li> }
+      { width >= 667 && <li><Day {...props} diff={-1} isArrow={false} /></li> }
+      <li><Day {...props} diff={0} isArrow={false} /></li>
+      { width >= 667 && <li><Day {...props} diff={1} isArrow={false} /></li> }
+      { width >= 1331 && <li><Day {...props} diff={2} isArrow={false} /></li> }
       <li className={arrowItem}><Day {...props} diff={1} isArrow={true} /></li>
     </menu>
   </nav>

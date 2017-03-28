@@ -2,7 +2,9 @@
 /* -------  date menu  ------- */
 .dateMenu {
   height:3em;
+  letter-spacing:0;
 }
+
 /* -------  date list  ------- */
 .dateList {
   height:100%;
@@ -10,21 +12,21 @@
   justify-content:space-between;
   align-items:center;
 }
-/* -------  date item  ------- */
-.dateItem {
-}
+
 /* -------  arrow item  ------- */
 .arrowItem {
   font-size:1.2em;
-  composes:dateItem;
 }
+
 /* -------  date list  ------- */
 .arrowItem a {
   display:flex;
 }
+
 .dateLink {
   padding:0.4em;
 }
+
 .mainLink {
   composes:dateLink;
 }

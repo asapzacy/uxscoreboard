@@ -1,7 +1,6 @@
 
 /* -------  scoreboard container  ------- */
 .scoreboardContainer {
-  margin-bottom:2em;
   height:100%;
   display:flex;
   flex-direction:column;

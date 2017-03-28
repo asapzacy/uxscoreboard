@@ -17,7 +17,6 @@ const Date = ({ width, ...props }) => (
   <nav className={dateMenu}>
     { props.league !== 'nfl' &&
       <menu className={dateList}>
-        { props.league }
         <li className={arrowItem}><Day {...props} diff={-1} isArrow={true} /></li>
         { width >= 1331 && <li><Day {...props} diff={-2} isArrow={false} /></li> }
         { width >= 667 && <li><Day {...props} diff={-1} isArrow={false} /></li> }

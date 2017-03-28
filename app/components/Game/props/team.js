@@ -20,6 +20,8 @@ export const nflTeamProps = (game, side, league) => {
   return {
     name: team[0].toUpperCase() + team.slice(1),
     code: game[side].toLowerCase(),
+    ws: '0',
+    ls: '0',
     score: game[`${side}s`],
     league
   }

@@ -15,20 +15,24 @@ const propTypes = {
 // TODO: implement a calendar
 const Date = ({ width, ...props }) => (
   <nav className={dateMenu}>
-    <menu className={dateList}>
-      <li className={arrowItem}><Day {...props} diff={-1} isArrow={true} /></li>
-      { width >= 1331 && <li><Day {...props} diff={-2} isArrow={false} /></li> }
-      { width >= 667 && <li><Day {...props} diff={-1} isArrow={false} /></li> }
-      <li><Day {...props} diff={0} isArrow={false} /></li>
-      { width >= 667 && <li><Day {...props} diff={1} isArrow={false} /></li> }
-      { width >= 1331 && <li><Day {...props} diff={2} isArrow={false} /></li> }
-      <li className={arrowItem}><Day {...props} diff={1} isArrow={true} /></li>
-    </menu>
+    { props.league !== 'nfl' &&
+      <menu className={dateList}>
+        { props.league }
+        <li className={arrowItem}><Day {...props} diff={-1} isArrow={true} /></li>
+        { width >= 1331 && <li><Day {...props} diff={-2} isArrow={false} /></li> }
+        { width >= 667 && <li><Day {...props} diff={-1} isArrow={false} /></li> }
+        <li><Day {...props} diff={0} isArrow={false} /></li>
+        { width >= 667 && <li><Day {...props} diff={1} isArrow={false} /></li> }
+        { width >= 1331 && <li><Day {...props} diff={2} isArrow={false} /></li> }
+        <li className={arrowItem}><Day {...props} diff={1} isArrow={true} /></li>
+      </menu>
+    }
   </nav>
 )
 
-export default Date
 Date.propTypes = propTypes
+
+export default Date
 
 // TODO: remove the arrows at end of last season//start of next season
 function Day({ date, today, league, diff, isArrow }) {

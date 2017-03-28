@@ -1,6 +1,7 @@
 
 /* -------  scoreboard container  ------- */
 .scoreboardContainer {
+  margin-bottom:2em;
   height:100%;
   display:flex;
   flex-direction:column;
@@ -17,8 +18,22 @@
 /* -------  fade container  ------- */
 .fadeContainer {
   width:100%;
-  display:inherit;
-  flex-wrap:inherit;
-  align-items:inherit;
-  justify-content:inherit;
+  position:relative;
 }
+
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */
+
+/* -------  appear  ------- */
+.appear {
+  opacity:0;
+}
+
+/* -------  appear active - appear  ------- */
+.appear.appearActive {
+  opacity:1;
+  transition:opacity 0.66s;
+}
+
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */

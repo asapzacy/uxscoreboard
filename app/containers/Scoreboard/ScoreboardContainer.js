@@ -15,13 +15,13 @@ class ScoreboardContainer extends Component {
         isFinals: false,
       },
       direction: {
-        enter: '',
-        leave: ''
+        enter: 'Up',
+        leave: 'Down'
       }
     }
   }
   componentDidMount() {
-    this.setState({ direction: { enter: 'Left', leave: 'Right' } })
+    this.setState({ direction: { enter: 'Up', leave: 'Down' } })
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {

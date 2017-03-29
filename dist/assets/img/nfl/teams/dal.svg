@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>dallas-cowboys</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="NFL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="dallas-cowboys">
-            <g id="svg" transform="translate(73.000000, 82.000000)">
-                <polyline id="Fill-1" fill="#002244" points="253.33696 215.56436 366.531928 133.350351 226.616612 133.350351 183.336126 0.392134831 140.055639 133.350351 0.0559331551 133.350351 113.335291 215.56436 70.0557861 348.607865 183.336126 266.393857 296.616465 348.607865 253.33696 215.56436"></polyline>
-                <polyline id="Fill-2" fill="#FFFFFF" points="241.642024 211.81261 335.971818 143.329202 219.361003 143.329202 183.336126 32.54425 147.310267 143.329202 30.7014144 143.329202 125.030227 211.81261 89.0063316 322.595601 183.336126 254.113174 277.66592 322.595601 241.642024 211.81261"></polyline>
-                <polyline id="Fill-3" fill="#002244" points="232.591647 208.912772 312.238497 151.090531 213.726473 151.090531 183.336126 57.5330421 152.945778 151.090531 54.433754 151.090531 134.080604 208.912772 103.689275 302.383992 183.336126 244.647039 262.983957 302.383992 232.591647 208.912772"></polyline>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>dallas-cowboys</title><defs><path id="a" d="M.254 349.604h369.017V.494H.254z"/></defs><g fill="none" fill-rule="evenodd"><g transform="translate(71 81)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path fill="#FFF" fill-rule="nonzero" mask="url(#b)" d="M369.271 134.028h-140.03L184.635.494l-44.61 133.534H0l114.726 82.22-44.041 133.61 113.95-81.482 113.96 81.326-44.055-133.449 114.731-82.225"/></g><path fill="#024" fill-rule="nonzero" d="M255.635 97.385l-41.028 122.627H86.492l105.105 75.32-40.422 122.622 104.482-74.695 104.448 74.695-40.44-122.623 105.11-75.319H296.66L255.635 97.385"/><path fill="#FFF" fill-rule="nonzero" d="M255.635 131.182l-32.992 99.325H118.87l85.138 61.01-32.742 99.322 84.625-60.497 84.112 60.497-32.742-99.317 85.142-61.015H288.623l-32.988-99.325"/><path fill="#024" fill-rule="nonzero" d="M255.635 160.393l-25.93 78.467h-81.972l67.251 48.2-25.871 78.466 66.862-47.796 66.179 47.796-25.876-78.463 67.256-48.203h-81.972l-25.927-78.467"/></g></svg>

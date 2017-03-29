@@ -16,6 +16,7 @@ const propTypes = {
 export default function Details(props) {
   if (props.league === 'mlb') return <MlbDetails {...props} />
   if (props.league === 'nba') return <NbaDetails {...props} />
+  // if (props.league === 'nfl') return <NflDetails {...props} />
   if (props.league === 'nhl') return <NhlDetails {...props} />
   return <h1>{'i hope this doesn\'t run'}</h1>
 }
@@ -23,18 +24,14 @@ export default function Details(props) {
 Details.propTypes = propTypes
 
 
-function MlbDetails({ game, date, league, panel, switchPanel }) {
-  const matchupProps = mlbMatchupProps(game, date)
-  const boxScoreProps = mlbBoxScoreProps(game, league)
-  return (
-    <section className={detailsContainer}>
-      <Matchup {...matchupProps} />
-      <PanelMenu panel={panel} switchPanel={switchPanel} />
-      { panel === 'boxScore' && <BoxScore {...boxScoreProps} /> }
-      { panel === 'boxScore' && <Diamond /> }
-    </section>
-  )
-}
+const MlbDetails = ({ game, date, league, panel, switchPanel }) => (
+  <section className={detailsContainer}>
+    <Matchup {...mlbMatchupProps(game, date)} />
+    <PanelMenu panel={panel} switchPanel={switchPanel} />
+    { panel === 'boxScore' && <BoxScore {...mlbBoxScoreProps(game, league)} /> }
+    { panel === 'boxScore' && <Diamond /> }
+  </section>
+)
 
 function NbaDetails({ game, date, league, panel, switchPanel }) {
   const matchupProps = nbaMatchupProps(game, date)

@@ -26,6 +26,11 @@ const Date = ({ width, ...props }) => (
         <li className={arrowItem}><Day {...props} diff={1} isArrow={true} /></li>
       </menu>
     }
+    { props.league === 'nfl' &&
+      <menu className={dateList} style={{justifyContent:'center'}}>
+        <li>{'[ coming soon ]'}</li>
+      </menu>
+    }
   </nav>
 )
 

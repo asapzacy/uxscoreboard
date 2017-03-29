@@ -48,6 +48,11 @@ function NbaDetails({ game, date, league, panel, switchPanel }) {
   )
 }
 
+const NflDetails = ({  }) => (
+  <section className={detailsContainer}>
+    x
+  </section>
+)
 
 
 function NhlDetails({ game, date, league }) {

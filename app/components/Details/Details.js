@@ -16,9 +16,8 @@ const propTypes = {
 export default function Details(props) {
   if (props.league === 'mlb') return <MlbDetails {...props} />
   if (props.league === 'nba') return <NbaDetails {...props} />
-  // if (props.league === 'nfl') return <NflDetails {...props} />
+  if (props.league === 'nfl') return <NflDetails {...props} />
   if (props.league === 'nhl') return <NhlDetails {...props} />
-  return <h1>{'i hope this doesn\'t run'}</h1>
 }
 
 Details.propTypes = propTypes
@@ -48,9 +47,14 @@ function NbaDetails({ game, date, league, panel, switchPanel }) {
   )
 }
 
+const s = {
+  padding: '4% 12%',
+  fontWeight: 700,
+  letterSpacing: 0,
+}
 const NflDetails = ({  }) => (
   <section className={detailsContainer}>
-    x
+    <h4 style={s}>{'coming soon'}</h4>
   </section>
 )
 

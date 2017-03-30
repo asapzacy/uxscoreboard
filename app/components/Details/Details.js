@@ -32,20 +32,16 @@ const MlbDetails = ({ game, date, league, panel, switchPanel }) => (
   </section>
 )
 
-function NbaDetails({ game, date, league, panel, switchPanel }) {
-  const matchupProps = nbaMatchupProps(game, date)
-  const boxScoreProps = nbaBoxScoreProps(game, league)
-  const statsProps = nbaStatsProps(game)
-  return (
-    <section className={detailsContainer}>
-      <Matchup {...matchupProps} />
-      <PanelMenu panel={panel} switchPanel={switchPanel} />
-      { panel === 'boxScore' && <BoxScore {...boxScoreProps} /> }
-      { panel === 'teamStats' && <Stats {...statsProps} /> }
-      { panel === 'leaders' && <Leaders /> }
-    </section>
-  )
-}
+const NbaDetails = ({ game, date, league, panel, switchPanel }) => (
+  <section className={detailsContainer}>
+    <Matchup {...nbaMatchupProps(game, date)} />
+    <PanelMenu panel={panel} switchPanel={switchPanel} />
+    { panel === 'boxScore' && <BoxScore {...nbaBoxScoreProps(game, league)} /> }
+    { panel === 'teamStats' && <Stats {...nbaStatsProps(game)} /> }
+    { panel === 'leaders' && <Leaders /> }
+  </section>
+)
+
 
 const s = {
   padding: '4% 12%',
@@ -59,13 +55,9 @@ const NflDetails = ({  }) => (
 )
 
 
-function NhlDetails({ game, date, league }) {
-  const matchupProps = nhlMatchupProps(game, date)
-  const boxScoreProps = nhlBoxScoreProps(game, league)
-  return (
-    <section className={detailsContainer}>
-      <Matchup {...matchupProps} />
-      <BoxScore {...boxScoreProps} />
-    </section>
-  )
-}
+const NhlDetails = ({ game, date, league }) => (
+  <section className={detailsContainer}>
+    <Matchup {...nhlMatchupProps(game, date)} />
+    <BoxScore {...nhlBoxScoreProps(game, league)} />
+  </section>
+)

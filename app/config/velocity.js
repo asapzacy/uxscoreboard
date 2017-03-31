@@ -33,8 +33,8 @@ export const velocity_game = {
 export const velocity_scoreboard = (direction) => ({
   enter: {
     animation: `transition.slide${direction.enter}${direction.enter !== 'Up' ? 'Big' : ''}In`,
-    duration: direction.enter === 'Up' ? 1220 : 660,
-    delay: direction.enter === 'Up' ? 0 : 435,
+    duration: direction.enter === 'Up' ? 1440 : 480,
+    delay: direction.enter === 'Up' ? 0 : 316,
     display: 'flex',
     style: {
       position: 'relative',
@@ -46,7 +46,7 @@ export const velocity_scoreboard = (direction) => ({
   runOnMount: true,
   leave: {
     animation: `transition.slide${direction.leave}BigOut`,
-    duration: 660,
+    duration: 480,
     delay: 0,
     display: 'none',
     style: {

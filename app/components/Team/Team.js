@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react'
 import { teamContainer, teamLogo, teamInfo, teamLeft, teamRight, teamName,
   teamRecord, teamScore } from './styles.css'
 import teamColors from './team_colors.css'
-// import { data } from './data'
 
 const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league }) => (
   <section className={teamColors[`${code}_${league}`]}>

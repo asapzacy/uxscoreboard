@@ -12,53 +12,58 @@ class NbaContainer extends Component {
       isValid: false,
       isError: false,
       scores: {},
+      cache: {},
       year: '',
       date: '',
       today: ''
     }
   }
   componentDidMount() {
-    this.setState({ today: getTodaysDate() }, () => {
-      this.makeRequest(this.props.routeParams.date)
-    })
+    this.init()
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
+  }
+  init() {
+    ref.once('value', (snapshot) => {
+      this.setState({
+        cache: snapshot.val().nba.scores,
+        today: getTodaysDate()
+      }, () => this.makeRequest(this.props.routeParams.date))
+    })
   }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    ref.once('value', (snapshot) => {
-      if (dt !== this.state.today && snapshot.hasChild(`nba/scores/${dt}`)) {
-        const currentScores = snapshot.val().nba.scores[dt]
-        console.log('go')
-        this.setState({
-          isLoading: false,
-          scores: currentScores,
-          year: currentScores.sports_content.sports_meta.season_meta.season_year,
-          date: dt
+    const currentScores = this.state.cache[dt] && this.state.cache[dt]
+    if (dt !== this.state.today && true) {
+      console.log('go')
+      this.setState({
+        isLoading: false,
+        scores: currentScores,
+        year: currentScores.sports_content.sports_meta.season_meta.season_year,
+        date: dt
+      })
+    } else {
+      getNbaScores(dt)
+        .then((currentScores) => {
+          this.setState({
+            isLoading: false,
+            scores: currentScores,
+            year: currentScores.sports_content.sports_meta.season_meta.season_year,
+            date: dt
+          }, () => this.saveScores())
         })
-      } else {
-        getNbaScores(dt)
-          .then((currentScores) => {
-            this.setState({
-              isLoading: false,
-              scores: currentScores,
-              year: currentScores.sports_content.sports_meta.season_meta.season_year,
-              date: dt
-            }, () => this.saveScores())
+        .catch((error) =>  {
+          this.setState({
+            isLoading: false,
+            isError: true,
+            date: dt
           })
-          .catch((error) =>  {
-            this.setState({
-              isLoading: false,
-              isError: true,
-              date: dt
-            })
-            throw new Error(error)
-          })
-      }
-    })
+          throw new Error(error)
+        })
+    }
   }
   saveScores() {
     ref.child(`nba/scores/${this.state.date}`)

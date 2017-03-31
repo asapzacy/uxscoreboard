@@ -2,6 +2,7 @@
 /* -------  date menu  ------- */
 .dateMenu {
   height:3em;
+  margin:0.25em 0 -0.25em;
   letter-spacing:0;
 }
 
@@ -10,21 +11,45 @@
   height:100%;
   display:flex;
   justify-content:space-between;
-  align-items:center;
+  /*align-items:center;*/
 }
+
+/* -------  date item  ------- */
+.dateItem {
+  flex-basis:50%;
+  justify-content:center;
+}
+.dateItem:first-child {
+  /*justify-content:flex-start;*/
+  background:purple;
+}
+.dateItem:last-child {
+  /*justify-content:flex-end;*/
+  background:red;
+}
+.dateItem:first-child,
+.dateItem:last-child {
+  flex-basis:10%;
+}
+
 
 /* -------  arrow item  ------- */
 .arrowItem {
   font-size:1.2em;
+  flex-basis:10%;
 }
 
 /* -------  date list  ------- */
 .arrowItem a {
-  display:flex;
+  /*display:flex;*/
 }
 
 .dateLink {
-  padding:0.4em;
+  /*padding:0.4em;*/
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:inherit;
 }
 
 .mainLink {

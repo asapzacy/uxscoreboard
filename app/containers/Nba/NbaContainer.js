@@ -23,7 +23,7 @@ class NbaContainer extends Component {
       this.setState({
         cache: snapshot.val().nba.scores,
         today: getTodaysDate()
-      }, () => this.makeRequest(this.props.routeParams.date))
+      }, () => this.makeRequest())
     })
   }
   componentWillReceiveProps(nextProps) {
@@ -35,7 +35,6 @@ class NbaContainer extends Component {
     }
     const currentScores = this.state.cache[dt]
     if (dt !== this.state.today && currentScores) {
-      console.log('go')
       this.setState({
         isLoading: false,
         scores: currentScores,
@@ -65,8 +64,7 @@ class NbaContainer extends Component {
   saveScores() {
     ref.child(`nba/scores/${this.state.date}`)
       .set(this.state.scores)
-      .then(() => this.setState({ isSaved: true }))
-    console.log(`nba scores - ${this.state.date} - saved to firebase. . . `)
+      .then(() => console.log(`nba scores - ${this.state.date} - saved to firebase. . . `))
   }
   render() {
     return <Nba {...this.state} />

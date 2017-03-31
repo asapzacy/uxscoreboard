@@ -58,6 +58,12 @@ const productionPlugin = new webpack.DefinePlugin({
   }
 })
 
+const sharedPlugins = [
+  HTMLWebpackPluginConfig,
+  postcssPlugin,
+  new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+]
+
 const base = {
   entry: [
     PATHS.app
@@ -113,12 +119,23 @@ const developmentConfig = {
     host: HOST,
     port: PORT
   },
-  plugins: [ HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin(), browserSyncPlugin, postcssPlugin ]
+  plugins: [
+    ...sharedPlugins,
+    new webpack.HotModuleReplacementPlugin(),
+    browserSyncPlugin
+  ]
 }
 
 const productionConfig = {
   devtool: 'cheap-module-source-map',
-  plugins: [ HTMLWebpackPluginConfig, productionPlugin, postcssPlugin, statsWriterPlugin, visualizerPlugin ]
+  plugins: [
+    ...sharedPlugins,
+    productionPlugin,
+    statsWriterPlugin,
+    visualizerPlugin,
+    new webpack.optimize.AggressiveMergingPlugin()
+
+  ]
 }
 
 export default Object.assign({}, base, isProduction ? productionConfig : developmentConfig)

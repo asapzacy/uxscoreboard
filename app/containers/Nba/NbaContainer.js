@@ -19,12 +19,6 @@ class NbaContainer extends Component {
     }
   }
   componentDidMount() {
-    this.init()
-  }
-  componentWillReceiveProps(nextProps) {
-    this.makeRequest(nextProps.routeParams.date)
-  }
-  init() {
     ref.once('value', (snapshot) => {
       this.setState({
         cache: snapshot.val().nba.scores,
@@ -32,12 +26,15 @@ class NbaContainer extends Component {
       }, () => this.makeRequest(this.props.routeParams.date))
     })
   }
+  componentWillReceiveProps(nextProps) {
+    this.makeRequest(nextProps.routeParams.date)
+  }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    const currentScores = this.state.cache[dt] && this.state.cache[dt]
-    if (dt !== this.state.today && true) {
+    const currentScores = this.state.cache[dt]
+    if (dt !== this.state.today && currentScores) {
       console.log('go')
       this.setState({
         isLoading: false,

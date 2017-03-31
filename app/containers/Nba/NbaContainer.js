@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import { Nba } from 'components'
 import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
+import { ref } from 'config/firebase'
 
 class NbaContainer extends Component {
   constructor() {
     super()
     this.state = {
-      cache: {},
       isLoading: true,
       isValid: false,
+      isError: false,
       scores: {},
       year: '',
       date: '',
@@ -28,35 +29,42 @@ class NbaContainer extends Component {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    if (this.state.cache[dt]) {
-      this.setState({
-        isLoading: false,
-        scores: this.state.cache[dt],
-        year: this.state.cache[dt].sports_content.sports_meta.season_meta.season_year,
-        date: dt
-      })
-    } else {
-      getNbaScores(dt)
-        .then((currentScores) => {
-          const test = this.state.cache
-          test[dt] = currentScores
-          console.log('fetched')
-          this.setState({
-            cache: test,
-            isLoading: false,
-            scores: currentScores,
-            year: currentScores.sports_content.sports_meta.season_meta.season_year,
-            date: dt
-          })
+    ref.once('value', (snapshot) => {
+      if (dt !== this.state.today && snapshot.hasChild(`nba/scores/${dt}`)) {
+        const currentScores = snapshot.val().nba.scores[dt]
+        console.log('go')
+        this.setState({
+          isLoading: false,
+          scores: currentScores,
+          year: currentScores.sports_content.sports_meta.season_meta.season_year,
+          date: dt
         })
-        .catch((error) =>  {
-          this.setState({
-            isLoading: false,
-            date: dt
+      } else {
+        getNbaScores(dt)
+          .then((currentScores) => {
+            this.setState({
+              isLoading: false,
+              scores: currentScores,
+              year: currentScores.sports_content.sports_meta.season_meta.season_year,
+              date: dt
+            }, () => this.saveScores())
           })
-          throw new Error(error)
-        })
-    }
+          .catch((error) =>  {
+            this.setState({
+              isLoading: false,
+              isError: true,
+              date: dt
+            })
+            throw new Error(error)
+          })
+      }
+    })
+  }
+  saveScores() {
+    ref.child(`nba/scores/${this.state.date}`)
+      .set(this.state.scores)
+      .then(() => this.setState({ isSaved: true }))
+    console.log(`nba scores - ${this.state.date} - saved to firebase. . . `)
   }
   render() {
     return <Nba {...this.state} />

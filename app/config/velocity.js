@@ -1,14 +1,32 @@
 
+export const velocity_home = {
+  enter: {
+    animation: 'fadeIn',
+    duration: 440,
+    delay: 0,
+    display: 'block',
+  },
+  runOnMount: true,
+  component: 'main',
+  leave: {
+    animation: 'slideUp',
+    duration: 220,
+    delay: 220,
+    display: 'block'
+
+  }
+}
+
 export const velocity_game = {
   enter: {
     animation: 'slideDown',
-    duration:220,
-    delay:0
+    duration: 220,
+    delay: 0
   },
   leave: {
     animation: 'slideUp',
-    duration:220,
-    delay:220
+    duration: 220,
+    delay: 220
   }
 }
 

@@ -7,7 +7,7 @@
     "start": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
     "wake": "atom . && open http://localhost:8080 && yarn start",
     "build": "webpack -p --progress --colors",
-    "server": "node server.js",
+    "node": "node server.js",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",
     "images": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;"
@@ -19,6 +19,7 @@
     "cls-bluebird": "^2.0.1",
     "compression": "^1.6.2",
     "express": "^4.14.1",
+    "firebase": "^3.7.4",
     "moment": "^2.17.1",
     "moment-timezone": "^0.5.11",
     "node-stattleship": "^1.1.1",

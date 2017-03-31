@@ -51,11 +51,11 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
   return (
     <main className={scoreboardContainer}>
       <DateContainer date={date} today={today} league={league} />
-          <VelocityTransitionGroup className={fadeContainer} {...velocity_scoreboard(direction)}>
-            <ul className={gamesList} key={date}>
-              { games }
-            </ul>
-          </VelocityTransitionGroup>
+        <VelocityTransitionGroup className={fadeContainer} {...velocity_scoreboard(direction)}>
+          <ul className={gamesList} key={date}>
+            { games }
+          </ul>
+        </VelocityTransitionGroup>
       { seasonState && seasonState.isAllStar && <AllStar img={allStarGame ? 'asg' : 'nola'} league={league} /> }
     </main>
   )

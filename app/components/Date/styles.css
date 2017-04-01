@@ -17,20 +17,21 @@
   font-size:1.06em;
   letter-spacing:0;
   font-weight:400;
+  display:flex;
+  align-items:stretch;
 }
 
 /* -------  arrow item  ------- */
 .arrowItem {
   font-size:1.12em;
   padding-bottom:1px;
+  composes:dateItem;
 }
 
 /* -------  date link  ------- */
 .dateLink {
-  height:100%;
   display:flex;
   align-items:center;
-  justify-content:center;
   padding:0 0.66em;
 }
 

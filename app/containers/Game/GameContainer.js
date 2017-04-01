@@ -8,6 +8,7 @@ class GameContainer extends Component {
     this.showDetails = this.showDetails.bind(this)
   }
   showDetails() {
+    console.log(this)
     this.setState({ expanded: !this.state.expanded })
   }
   render() {

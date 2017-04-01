@@ -19,15 +19,16 @@ class NbaContainer extends Component {
     }
   }
   componentDidMount() {
-    ref.once('value', (snapshot) => {
-      this.setState({
-        cache: snapshot.val().nba.scores,
-        today: getTodaysDate()
-      }, () => this.makeRequest())
+    this.setState({ today: getTodaysDate()  }, () => {
+      this.makeRequest(this.props.routeParams.date)
+      this.makeFirebase()
     })
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.date !== nextState.date
   }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
@@ -60,6 +61,11 @@ class NbaContainer extends Component {
           throw new Error(error)
         })
     }
+  }
+  makeFirebase() {
+    ref.once('value', (snapshot) => {
+      this.setState({ cache: snapshot.val().nba.scores })
+    })
   }
   saveScores() {
     ref.child(`nba/scores/${this.state.date}`)

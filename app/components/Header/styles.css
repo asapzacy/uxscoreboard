@@ -83,7 +83,7 @@
 }
 
 /* -------  menu link - ::after  ------- */
-.menuLink::after,:global(.active::after) {
+.menuLink::after, :global(.active::after) {
   content:'';
   display:block;
   height:2px;

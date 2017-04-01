@@ -1,13 +1,9 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import moment from 'moment'
-import AngleRight from 'react-icons/lib/fa/angle-right'
-import AngleLeft from 'react-icons/lib/fa/angle-left'
-import ArrowRight from 'react-icons/lib/io/ios-arrow-right'
-import ArrowLeft from 'react-icons/lib/io/ios-arrow-left'
 import ArrowBack from 'react-icons/lib/io/ios-arrow-back'
-import Left from 'react-icons/lib/md/keyboard-arrow-left'
-import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink } from './styles.css'
+import ArrowForward from 'react-icons/lib/io/ios-arrow-forward'
+import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink, dateText, mainText } from './styles.css'
 
 const propTypes = {
   width: PropTypes.number.isRequired,
@@ -21,7 +17,7 @@ const Date = ({ width, ...props }) => (
   <nav className={dateMenu}>
     { props.league !== 'nfl' &&
       <menu className={dateList}>
-        <li className={dateItem}><Day {...props} diff={-1} isArrow /></li>
+        <li className={arrowItem}><Day {...props} diff={-1} isArrow /></li>
         { width >= 1331 &&
         <li className={dateItem}><Day {...props} diff={-2} /></li> }
         { width >= 667 &&
@@ -31,7 +27,7 @@ const Date = ({ width, ...props }) => (
         <li className={dateItem}><Day {...props} diff={1} /></li> }
         { width >= 1331 &&
         <li className={dateItem}><Day {...props} diff={2} /></li> }
-        <li className={dateItem}><Day {...props} diff={1} isArrow /></li>
+        <li className={arrowItem}><Day {...props} diff={1} isArrow /></li>
       </menu>
     }
     { props.league === 'nfl' &&
@@ -59,8 +55,8 @@ function Day({ date, today, league, diff, isArrow }) {
   return (
     <Link className={isMainLink ? mainLink : dateLink} to={`/${league}/scores/${url}`} title={title}>
       { !isArrow
-        ? <span>{formattedDate}</span>
-        : diff < 0 ? <ArrowLeft /> : <AngleRight />
+        ? <span className={isMainLink ? mainText : dateText}>{formattedDate}</span>
+        : diff < 0 ? <ArrowBack /> : <ArrowForward />
       }
     </Link>
   )

@@ -9,6 +9,7 @@
   flex:1 1 calc(33.3% - 2em);
   max-width:420px;
   min-width:320px;
+  cursor:pointer;
 }
 
 .fuckSafari {

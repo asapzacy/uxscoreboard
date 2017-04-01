@@ -30,7 +30,7 @@ Game.propTypes = propTypes
 
 
 const NbaGame = ({ game, date, league, showDetails, expanded }) => (
-  <li className={isSafari ? fuckSafari : gameItem}>
+  <li className={isSafari ? fuckSafari : gameItem} onClick={showDetails}>
     <GameState {...nbaGameStateProps(game)} />
     <Team {...nbaTeamProps(game, 'visitor', league)} />
     <Team {...nbaTeamProps(game, 'home', league)} />
@@ -42,7 +42,7 @@ const NbaGame = ({ game, date, league, showDetails, expanded }) => (
 )
 
 const NflGame = ({ game, date, league, showDetails, expanded }) => (
-  <li className={isSafari ? fuckSafari : gameItem}>
+  <li className={isSafari ? fuckSafari : gameItem} onClick={showDetails}>
     <GameState {...nflGameStateProps(game)} />
     <Team {...nflTeamProps(game, 'h', league)} />
     <Team {...nflTeamProps(game, 'v', league)} />
@@ -60,10 +60,12 @@ function MlbGame({ game, date, league, showDetails, expanded }) {
   const homeTeam = mlbTeamProps(game, 'home', league)
   return (
     <li className={isSafari ? fuckSafari : gameItem}>
+      <span onClick={showDetails}>
       <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />
       <Expand expanded={expanded} showDetails={showDetails} />
+    </span>
       <VelocityTransitionGroup className={expanded ? detailsExpanded : details} {...velocity_game}>
         { expanded && <DetailsContainer game={game} date={date} league={league} /> }
       </VelocityTransitionGroup>
@@ -76,7 +78,7 @@ function NhlGame({ game, date, league, showDetails, expanded }) {
   const awayTeam = nhlTeamProps(game, 'away', league)
   const homeTeam = nhlTeamProps(game, 'home', league)
   return (
-    <li className={isSafari ? fuckSafari : gameItem}>
+    <li className={isSafari ? fuckSafari : gameItem} onClick={showDetails}>
       <GameState {...gameState} />
       <Team {...awayTeam} />
       <Team {...homeTeam} />

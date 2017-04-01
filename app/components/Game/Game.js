@@ -5,17 +5,19 @@ import { VelocityTransitionGroup } from 'velocity-react'
 import { velocity_game } from 'config/velocity'
 import { mlbTeamProps, nbaTeamProps, nflTeamProps, nhlTeamProps } from './props/team'
 import { mlbGameStateProps, nflGameStateProps, nbaGameStateProps, nhlGameStateProps } from './props/gameState'
-import { gameItem, fuckSafari, expandIcon, expandedIcon, details, detailsExpanded } from './styles.css'
+import { gameItem, topHalf, details, detailsExpanded } from './styles.css'
 
 const propTypes = {
   game: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
   league: PropTypes.string.isRequired,
-  expanded: PropTypes.bool.isRequired,
-  showDetails: PropTypes.func.isRequired
+  isExpanded: PropTypes.bool.isRequired,
+  showDetails: PropTypes.func.isRequired,
+  isHovered: PropTypes.bool.isRequired,
+  scaleGame: PropTypes.func.isRequired
 }
 
-var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
+var fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
 
 export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
@@ -29,63 +31,58 @@ export default function Game(props) {
 Game.propTypes = propTypes
 
 
-const NbaGame = ({ game, date, league, showDetails, expanded }) => (
-  <li className={isSafari ? fuckSafari : gameItem} onClick={showDetails}>
-    <GameState {...nbaGameStateProps(game)} />
-    <Team {...nbaTeamProps(game, 'visitor', league)} />
-    <Team {...nbaTeamProps(game, 'home', league)} />
-    <Expand expanded={expanded} showDetails={showDetails} />
-    <VelocityTransitionGroup className={expanded ? detailsExpanded : details} {...velocity_game}>
-      { expanded && <DetailsContainer game={game} date={date} league={league} /> }
-    </VelocityTransitionGroup>
-  </li>
-)
-
-const NflGame = ({ game, date, league, showDetails, expanded }) => (
-  <li className={isSafari ? fuckSafari : gameItem} onClick={showDetails}>
-    <GameState {...nflGameStateProps(game)} />
-    <Team {...nflTeamProps(game, 'h', league)} />
-    <Team {...nflTeamProps(game, 'v', league)} />
-    <Expand expanded={expanded} showDetails={showDetails} />
-    <VelocityTransitionGroup className={expanded ? detailsExpanded : details} {...velocity_game}>
-      { expanded && <DetailsContainer game={game} date={date} league={league} /> }
-    </VelocityTransitionGroup>
-  </li>
-)
-
-
-function MlbGame({ game, date, league, showDetails, expanded }) {
-  const gameState = mlbGameStateProps(game)
-  const awayTeam = mlbTeamProps(game, 'away', league)
-  const homeTeam = mlbTeamProps(game, 'home', league)
-  return (
-    <li className={isSafari ? fuckSafari : gameItem}>
-      <span onClick={showDetails}>
-      <GameState {...gameState} />
-      <Team {...awayTeam} />
-      <Team {...homeTeam} />
-      <Expand expanded={expanded} showDetails={showDetails} />
+const NbaGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+    <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
+      <GameState {...nbaGameStateProps(game)} />
+      <Team {...nbaTeamProps(game, 'visitor', league)} />
+      <Team {...nbaTeamProps(game, 'home', league)} />
+      <Expand isExpanded={isExpanded} />
     </span>
-      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} {...velocity_game}>
-        { expanded && <DetailsContainer game={game} date={date} league={league} /> }
-      </VelocityTransitionGroup>
-    </li>
-  )
-}
+    <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+    </VelocityTransitionGroup>
+  </li>
+)
 
-function NhlGame({ game, date, league, showDetails, expanded }) {
-  const gameState = nhlGameStateProps(game)
-  const awayTeam = nhlTeamProps(game, 'away', league)
-  const homeTeam = nhlTeamProps(game, 'home', league)
-  return (
-    <li className={isSafari ? fuckSafari : gameItem} onClick={showDetails}>
-      <GameState {...gameState} />
-      <Team {...awayTeam} />
-      <Team {...homeTeam} />
-      <Expand expanded={expanded} showDetails={showDetails} />
-      <VelocityTransitionGroup className={expanded ? detailsExpanded : details} {...velocity_game}>
-        { expanded && <Details game={game} date={date} league={league} expanded={expanded} /> }
-      </VelocityTransitionGroup>
-    </li>
-  )
-}
+const NflGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+    <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
+      <GameState {...nflGameStateProps(game)} />
+      <Team {...nflTeamProps(game, 'h', league)} />
+      <Team {...nflTeamProps(game, 'v', league)} />
+      <Expand isExpanded={isExpanded} />
+    </span>
+    <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+    </VelocityTransitionGroup>
+  </li>
+)
+
+const MlbGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+    <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
+      <GameState {...mlbGameStateProps(game)} />
+      <Team {...mlbTeamProps(game, 'away', league)} />
+      <Team {...mlbTeamProps(game, 'home', league)} />
+      <Expand isExpanded={isExpanded} />
+    </span>
+    <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+    </VelocityTransitionGroup>
+  </li>
+)
+
+const NhlGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+    <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
+      <GameState {...nhlGameStateProps(game)} />
+      <Team {...nhlTeamProps(game, 'away', league)} />
+      <Team {...nhlTeamProps(game, 'home', league)} />
+      <Expand isExpanded={isExpanded} />
+    </span>
+    <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+    </VelocityTransitionGroup>
+  </li>
+)

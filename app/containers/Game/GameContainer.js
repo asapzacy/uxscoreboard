@@ -4,15 +4,21 @@ import { Game } from 'components'
 class GameContainer extends Component {
   constructor() {
     super()
-    this.state = { expanded: false }
+    this.state = {
+      isExpanded: false,
+      isHovered: false
+    }
     this.showDetails = this.showDetails.bind(this)
+    this.scaleGame = this.scaleGame.bind(this)
   }
   showDetails() {
-    console.log(this)
-    this.setState({ expanded: !this.state.expanded })
+    this.setState({ isExpanded: !this.state.isExpanded })
+  }
+  scaleGame() {
+    this.setState({ isHovered: !this.state.isHovered })
   }
   render() {
-    return <Game showDetails={this.showDetails} {...this.state} {...this.props} />
+    return <Game showDetails={this.showDetails} scaleGame={this.scaleGame} {...this.state} {...this.props} />
   }
 }
 

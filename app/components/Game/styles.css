@@ -9,14 +9,16 @@
   flex:1 1 calc(33.3% - 2em);
   max-width:420px;
   min-width:320px;
+  transition:transform 0.44s;
+}
+
+/* -------  top half  ------- */
+.topHalf {
+  display:block;
   cursor:pointer;
 }
 
-.fuckSafari {
-  flex-basis:320px;
-  composes:gameItem;
-}
-
+/* -------  details  ------- */
 .details {
   display:block;
   opacity:0;
@@ -25,6 +27,7 @@
   transition-delay:0s;
 }
 
+/* -------  details expanded  ------- */
 .detailsExpanded {
   display:block;
   opacity:1;

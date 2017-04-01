@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import moment from 'moment'
 import ArrowBack from 'react-icons/lib/io/ios-arrow-back'
 import ArrowForward from 'react-icons/lib/io/ios-arrow-forward'
-import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink, dateText, mainText } from './styles.css'
+import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink, dateText } from './styles.css'
 
 const propTypes = {
   width: PropTypes.number.isRequired,
@@ -47,15 +47,13 @@ function Day({ date, today, league, diff, isArrow }) {
   const day = moment(date).add(diff, 'days')
   const url = day.format('YYYYMMDD')
   const isMainLink = diff === 0
-  // let dayOfTheWeek = today === url ? 'today' : day.format('dddd')
-  // dayOfTheWeek = isMainLink ? dayOfTheWeek : day.format('ddd')
   const dayOfTheWeek = today === url ? 'today' : isMainLink ? day.format('dddd') :  day.format('ddd')
   const formattedDate = `${dayOfTheWeek}, ${day.format('MMM D')}`.toLowerCase()
   const title = `${league.toUpperCase()} scores - ${day.format('MMMM D, YYYY')} | uxscoreboard`
   return (
     <Link className={isMainLink ? mainLink : dateLink} to={`/${league}/scores/${url}`} title={title}>
       { !isArrow
-        ? <span className={isMainLink ? mainText : dateText}>{formattedDate}</span>
+        ? <span className={isMainLink ? dateText : ''}>{formattedDate}</span>
         : diff < 0 ? <ArrowBack /> : <ArrowForward />
       }
     </Link>

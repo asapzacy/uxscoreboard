@@ -3,7 +3,7 @@
 
 ![uxscoreboard preview](https://uxscoreboard.com/assets/img/other/uxscoreboard_preview.png)
 
-A sports scoreboard web app built on react.js and es6; features all MLB, NBA, NFL (coming soon), and NHL season and playoff games.
+A sports scoreboard web app built on ES6 and React.js—features all MLB, NBA, NFL, and NHL season and playoff games.
 
 ## Usage
 ```

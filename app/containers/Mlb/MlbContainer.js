@@ -84,18 +84,18 @@ class MlbContainer extends Component {
       if (scores.game[0] === undefined) {
         if (scores.game.linescore === undefined) {
           scores.game.linescore = {
-            r: { away: '4', home: '4' },
-            h: { away: '4', home: '4' },
-            e: { away: '4', home: '4' },
-            inning: { 0: { away: '4', home: '4' },
-                      1: { away: '4', home: '4' },
-                      2: { away: '4', home: '4' },
-                      3: { away: '4', home: '4' },
-                      4: { away: '4', home: '4' },
-                      5: { away: '4', home: '4' },
-                      6: { away: '4', home: '4' },
-                      7: { away: '4', home: '4' },
-                      8: { away: '4', home: '4' }
+            r: { away: '', home: '' },
+            h: { away: '', home: '' },
+            e: { away: '', home: '' },
+            inning: { 0: { away: '', home: '' },
+                      1: { away: '', home: '' },
+                      2: { away: '', home: '' },
+                      3: { away: '', home: '' },
+                      4: { away: '', home: '' },
+                      5: { away: '', home: '' },
+                      6: { away: '', home: '' },
+                      7: { away: '', home: '' },
+                      8: { away: '', home: '' }
                     }
           }
         }
@@ -105,18 +105,18 @@ class MlbContainer extends Component {
         scores.game.map((game) => {
           if (game.linescore === undefined) {
             game.linescore = {
-              r: { away: '4', home: '4' },
-              h: { away: '4', home: '4' },
-              e: { away: '4', home: '4' },
-              inning: { 0: { away: '4', home: '4' },
-                        1: { away: '4', home: '4' },
-                        2: { away: '4', home: '4' },
-                        3: { away: '4', home: '4' },
-                        4: { away: '4', home: '4' },
-                        5: { away: '4', home: '4' },
-                        6: { away: '4', home: '4' },
-                        7: { away: '4', home: '4' },
-                        8: { away: '4', home: '4' }
+              r: { away: '', home: '' },
+              h: { away: '', home: '' },
+              e: { away: '', home: '' },
+              inning: { 0: { away: '', home: '' },
+                        1: { away: '', home: '' },
+                        2: { away: '', home: '' },
+                        3: { away: '', home: '' },
+                        4: { away: '', home: '' },
+                        5: { away: '', home: '' },
+                        6: { away: '', home: '' },
+                        7: { away: '', home: '' },
+                        8: { away: '', home: '' }
                       }
             }
           }

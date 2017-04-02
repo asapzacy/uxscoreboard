@@ -16,7 +16,7 @@ export const formatBoxScoreTableHead = (periods, totalPeriods, league, overtimes
     }
   }
   if (league === 'mlb') {
-    result += '<th style="width:8px"></th>'
+    result += '<th style="width:6px"></th>'
     result += '<th>R</th><th>H</th><th>E</th>'
   } else {
     result += '<th>T</th>'

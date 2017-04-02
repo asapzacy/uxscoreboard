@@ -6,14 +6,15 @@ export const mlbGameStateProps = (game) => {
   const isPlayoffs = game.game_type !== 'R'
   const isDoubleHeader = game.double_header_sw === 'Y'
   const inningState = game.status.inning_state
-  const inGame = inningState !== 'Middle' && inningState !== 'End'
+  const inGame = inningState && inningState !== 'Middle' && inningState !== 'End'
+  const preGame = game.status.ind === 'S' || game.status.ind === 'P' || game.status.ind === 'PW'
   return {
-    gameState: game.status.ind === 'S' ? 0 : game.status.status === 'In Progress' ? 1 : 2,
+    gameState: preGame ? 0 : game.status.ind === 'I' ? 1 : 2,
     status: game.status.status,
     time: `${game.time} ${game.ampm} ${game.time_zone}`,
     periods: 9,
     currentTime: inGame && `${game.status.o} ${game.status.o === '1' ? 'out' : 'outs'}`,
-    currentPeriod: `${inningState} ${game.status.inning}`,
+    currentPeriod: `${inningState === 'End' ? inningState.toUpperCase() : inningState} ${game.status.inning}`,
     totalPeriods: game.linescore.inning.length,
     overtime: game.linescore.inning.length,
     doubleHeader: isDoubleHeader ? game.game_nbr : '',

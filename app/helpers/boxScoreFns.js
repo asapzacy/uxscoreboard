@@ -44,9 +44,17 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
       }
     }
     if (league === 'mlb') {
-      if (linescore.inning[i][side]) {
-        console.log(linescore.inning[i][side])
-        result += `<td>${linescore.inning[i][side]}</td>`
+      let score
+      if (i === 0 && linescore.inning[side]) {
+        score = linescore.inning[side] !== '' ? Number(linescore.inning[side]) : ''
+        result += score ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`
+      } else if (linescore.inning[i]) {
+        if (linescore.inning[i][side]) {
+          score = linescore.inning[i][side] !== '' ? Number(linescore.inning[i][side]) : ''
+          result += score ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`          
+        } else {
+          result += '<td></td>'
+        }
       } else {
         result += '<td></td>'
       }
@@ -57,8 +65,8 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
   }
   result += `<td><strong>${score}</strong></td>`
   if (league === 'mlb') {
-    result += `<td><strong>${linescore.h[side]}</strong></td>`
-    result += `<td><strong>${linescore.e[side]}</strong></td>`
+    result += `<td>${linescore.h[side]}</td>`
+    result += `<td>${linescore.e[side]}</td>`
   }
   return { __html: result }
 }

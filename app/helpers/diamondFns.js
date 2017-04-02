@@ -9,43 +9,23 @@ export const createDiamondImage = (runners) => {
 }
 
 const fillCircles = (numCircles, numFilled) => {
-  let counter = 0
+  let count = 0
   let result = ''
-  while (counter < numFilled) {
+  while (count < numFilled) {
     result += '<span class="circle circleFilled"></span>'
-    counter++
+    count += 1
   }
-  while (counter < numCircles) {
+  while (count < numCircles) {
     result += '<span class="circle"></span>'
-    counter++
+    count += 1
   }
   return { __html: result }
 }
 
-export const ballsCount = (balls, inningState) => {
-  if (inningState === 'Middle' || inningState === 'End')
-    return fillCircles(4, 0)
-  else if (balls === '1')
-    return fillCircles(4, 1)
-  else if (balls === '2')
-    return fillCircles(4, 2)
-  else if (balls === '3')
-    return fillCircles(4, 3)
-  else if (balls === '4')
-    return fillCircles(4, 4)
-  else
-    return fillCircles(4, 0)
-}
-
-export const strikesOutsCount = (strikesOuts, inningState) => {
-  if (inningState === 'Middle' || inningState === 'End')
-    return fillCircles(3, 0)
-  else if (strikesOuts === '1')
-    return fillCircles(3, 1)
-  else if (strikesOuts === '2')
-    return fillCircles(3, 2)
-  else if (strikesOuts === '3')
-    return fillCircles(3, 3)
-  else
-    return fillCircles(3, 0)
+export const ballsCount = (balls, maxBalls, inningState) => {
+  if (!inningState || inningState === 'Middle' || inningState === 'End') {
+    return fillCircles(maxBalls, 0)
+  } else {
+    return fillCircles(maxBalls, Number(balls))
+  }
 }

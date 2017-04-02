@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { Matchup, PanelMenu, BoxScore, Stats, Diamond, Leaders } from 'components'
 import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
 import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
+import { mlbDiamondProps } from 'helpers/props/diamondProps'
 import { nbaStatsProps } from 'helpers/props/statsProps'
 import { detailsContainer } from './styles.css'
 
@@ -27,8 +28,12 @@ const MlbDetails = ({ game, date, league, panel, switchPanel }) => (
   <section className={detailsContainer}>
     <Matchup {...mlbMatchupProps(game, date)} />
     <PanelMenu panel={panel} switchPanel={switchPanel} />
-    { panel === 'boxScore' && <BoxScore {...mlbBoxScoreProps(game, league)} /> }
-    { panel === 'boxScore' && <Diamond /> }
+    { panel === 'boxScore' &&
+      <span>
+        <BoxScore {...mlbBoxScoreProps(game, league)} />
+        <Diamond {...mlbDiamondProps(game)} />
+      </span>
+    }
   </section>
 )
 

@@ -3,7 +3,7 @@ import { createDiamondImage, ballsCount, strikesOutsCount } from 'helpers/diamon
 import { diamondContainer, baseballFieldContainer, baseballField, otherInfo,
   bsoContainer, bso, bsoHeading, bsoData, runnersOnBase, hitterPitcher } from './styles.css'
 
-export default function Diamond() {
+export default function Diamond({ balls, strikes, outs, inningState, runners }) {
   const img = createDiamondImage()
   const config = {
     balls: '0',
@@ -11,28 +11,25 @@ export default function Diamond() {
     outs: '0',
     inningState: ''
   }
-  const ballsData = ballsCount(config.balls, config.inningState)
-  const strikesData = strikesOutsCount(config.strikes, config.inningState)
-  const outsData = strikesOutsCount(config.outs, config.inningState)
   return (
     <section className={diamondContainer}>
       <div className={baseballFieldContainer}>
-        <img className={baseballField} src={`/assets/img/mlb/other/${img}.svg`} />
+        <img className={baseballField} src={`/assets/img/mlb/other/${createDiamondImage(runners)}.svg`} />
       </div>
       <div className={otherInfo}>
 
         <section className={bsoContainer}>
           <div className={bso}>
             <h2 className={bsoHeading}>{'B:'}</h2>
-            <span dangerouslySetInnerHTML={ballsData}></span>
+            <span dangerouslySetInnerHTML={ballsCount(balls, 4, inningState)}></span>
           </div>
           <div className={bso}>
             <h2 className={bsoHeading}>{'S:'}</h2>
-            <span dangerouslySetInnerHTML={strikesData}></span>
+            <span dangerouslySetInnerHTML={ballsCount(strikes, 3, inningState)}></span>
           </div>
           <div className={bso}>
             <h2 className={bsoHeading}>{'O:'}</h2>
-            <span dangerouslySetInnerHTML={outsData}></span>
+            <span dangerouslySetInnerHTML={ballsCount(outs, 3, inningState)}></span>
           </div>
         </section>
 

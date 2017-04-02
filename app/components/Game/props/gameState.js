@@ -5,11 +5,15 @@ import { formatTimezone } from 'helpers/utils'
 export const mlbGameStateProps = (game) => {
   const isPlayoffs = game.game_type !== 'R'
   const isDoubleHeader = game.double_header_sw === 'Y'
+  const inningState = game.status.inning_state
+  const inGame = inningState !== 'Middle' && inningState !== 'End'
   return {
-    gameState: game.status.ind === 'S' ? 0 : 2,
+    gameState: game.status.ind === 'S' ? 0 : game.status.status === 'In Progress' ? 1 : 2,
     status: game.status.status,
     time: `${game.time} ${game.ampm} ${game.time_zone}`,
     periods: 9,
+    currentTime: inGame && `${game.status.o} ${game.status.o === '1' ? 'out' : 'outs'}`,
+    currentPeriod: `${inningState} ${game.status.inning}`,
     totalPeriods: game.linescore.inning.length,
     overtime: game.linescore.inning.length,
     doubleHeader: isDoubleHeader ? game.game_nbr : '',
@@ -33,7 +37,7 @@ export const nbaGameStateProps = (game) => {
     periods: 4,
     currentPeriod: game.period_time.period_value,
     currentTime: game.period.isEndOfPeriod ? 'END' : game.period_time.game_clock,
-    isHalfTime: game.period.isHalftime,
+    isHalfTime: game.period.isHalftime || game.period_time.period_status === 'Halftime',
     totalPeriods: game.period_time.period_value,
     overtime: game.period_time.period_value > 4 ? game.period_time.period_value > 5 ? `${game.period_time.period_value - 4}OT` : 'OT' : '',
     isPlayoffs: null

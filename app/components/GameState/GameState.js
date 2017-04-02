@@ -1,35 +1,33 @@
 import React, { PropTypes } from 'react'
-import { inningSuffix } from 'helpers/utils'
+import { periodSuffix } from 'helpers/utils'
 import { gameStateContainer, inGameStateContainer } from './styles.css'
 
 export default function GameState(props) {
   if (props.gameState === 0) return <PreGameState {...props} />
   if (props.gameState === 1) return <InGameState {...props} />
   if (props.gameState === 2) return <PostGameState {...props} />
+  return <h1>{'ay'}</h1>
 }
 
 
-function PreGameState({ time }) {
-  return (
-    <section className={gameStateContainer}>
-      <span>{time}</span>
-    </section>
-  )
-}
+const PreGameState = ({ time }) => (
+  <section className={gameStateContainer}>
+    <span>{time}</span>
+  </section>
+)
 
 function InGameState({ currentTime, currentPeriod, isHalfTime, status }) {
   return (
     <section className={inGameStateContainer}>
       { isHalfTime
         ? <span>{status}</span>
-        : <span>{`${currentTime} • ${currentPeriod}`}<sup>{inningSuffix(String(currentPeriod))}</sup></span>
+        : <span>{currentTime && `${currentTime} • `}{currentPeriod}<sup>{periodSuffix(currentPeriod)}</sup></span>
       }
     </section>
   )
 }
 
-function PostGameState({ periods, totalPeriods, status, overtime,
-   isDoubleHeader, doubleHeader, isPlayoffs, playoffs }) {
+function PostGameState({ periods, totalPeriods, status, overtime, isDoubleHeader, doubleHeader, isPlayoffs, playoffs }) {
   return (
     <section className={gameStateContainer}>
       <span>{totalPeriods > periods ? `${status}/${overtime}` : status}</span>

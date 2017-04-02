@@ -43,11 +43,12 @@ export function formatTimezone(time) {
   return moment(time).tz('America/New_York').format('h:mm A')
 }
 
-export function inningSuffix(inning) {
-  switch (inning) {
-    case '1' || '21': return 'st'
-    case '2' || '22': return 'nd'
-    case '3' || '23': return 'rd'
-    default: return 'th'
+export const periodSuffix = (period) => {
+  const x = String(period).slice(-1)
+  switch (x) {
+    case '1': return 'st'
+    case '2': return 'nd'
+    case '3': return 'rd'
+    default:  return 'th'
   }
 }

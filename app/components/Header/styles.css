@@ -161,8 +161,13 @@
     margin-top:1px;
     transition:width 0.22s;
   }
-  .menuLink:hover::after , :global(.active::after) {
+  :global(.active::after) {
     width:100%;
+  }
+  @media (hover) {
+    .menuLink:hover::after {
+      width:100%;
+    }
   }
   .menuBlock {
     height:30px;

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Mlb } from 'components'
 import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
+import { ref } from 'config/firebase'
 
 class MlbContainer extends Component {
   constructor() {
@@ -9,67 +10,93 @@ class MlbContainer extends Component {
     this.state = {
       isLoading: true,
       isValid: false,
+      isError: false,
       scores: {},
+      cache: {},
       year: '',
       date: '',
       today: ''
     }
   }
   componentDidMount() {
-    this.setState({ today: getTodaysDate() }, () => {
+    this.setState({ today: getTodaysDate()  }, () => {
       this.makeRequest(this.props.routeParams.date)
+      this.getCache()
     })
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.date !== nextState.date
+  }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    getMlbScores(dt)
-      .then((currentScores) => {
-        const games = currentScores.data.games
-        this.cleanGameData(games)
-        this.setState({
-          isLoading: false,
-          scores: games,
-          year: currentScores.data.games.year,
-          date: dt
-        })
+    const currentScores = this.state.cache[dt]
+    if (dt !== this.state.today && currentScores) {
+      const games = currentScores
+      this.cleanGameData(games)
+      this.setState({
+        isLoading: false,
+        scores: games,
+        year: games.year,
+        date: dt
       })
-      .catch((error) =>  {
-        this.setState({
-          isLoading: false,
-          date: dt
+    } else {
+      getMlbScores(dt)
+        .then((currentScores) => {
+          const games = currentScores.data.games
+          this.cleanGameData(games)
+          this.setState({
+            isLoading: false,
+            scores: games,
+            year: games.year,
+            date: dt
+          }, () => this.saveScores())
         })
-        throw new Error(error)
-      })
+        .catch((error) =>  {
+          this.setState({
+            isLoading: false,
+            isError: true,
+            date: dt
+          })
+          throw new Error(error)
+        })
+    }
+  }
+  getCache() {
+    ref.once('value', (snapshot) => {
+      this.setState({ cache: snapshot.val().mlb.scores })
+    })
+  }
+  saveScores() {
+    ref.child(`mlb/scores/${this.state.date}`)
+      .set(this.state.scores)
+      .then(() => console.log(`mlb scores - ${this.state.date} - saved to firebase. . . `))
+    const temp = this.state.cache
+    temp[this.state.date] = this.state.scores
+    this.setState({ cache: temp })
   }
   cleanGameData(scores) {
     if (scores.game !== undefined) {
       if (scores.game[0] === undefined) {
         if (scores.game.linescore === undefined) {
           scores.game.linescore = {
-            r: { away: null, home: null },
-            h: { away: null, home: null },
-            e: { away: null, home: null },
-            inning: { 0: { away: null, home: null },
-                      1: { away: null, home: null },
-                      2: { away: null, home: null },
-                      3: { away: null, home: null },
-                      4: { away: null, home: null },
-                      5: { away: null, home: null },
-                      6: { away: null, home: null },
-                      7: { away: null, home: null },
-                      8: { away: null, home: null }
+            r: { away: '4', home: '4' },
+            h: { away: '4', home: '4' },
+            e: { away: '4', home: '4' },
+            inning: { 0: { away: '4', home: '4' },
+                      1: { away: '4', home: '4' },
+                      2: { away: '4', home: '4' },
+                      3: { away: '4', home: '4' },
+                      4: { away: '4', home: '4' },
+                      5: { away: '4', home: '4' },
+                      6: { away: '4', home: '4' },
+                      7: { away: '4', home: '4' },
+                      8: { away: '4', home: '4' }
                     }
-          }
-        }
-        if (scores.game.review === undefined) {
-          scores.game.review = {
-            challenges_away_remaining: { null },
-            challenges_home_remaining: { null }
           }
         }
         return scores.game
@@ -78,30 +105,19 @@ class MlbContainer extends Component {
         scores.game.map((game) => {
           if (game.linescore === undefined) {
             game.linescore = {
-              r: { away: null, home: null },
-              h: { away: null, home: null },
-              e: { away: null, home: null },
-              inning: { 0: { away: null, home: null },
-                        1: { away: null, home: null },
-                        2: { away: null, home: null },
-                        3: { away: null, home: null },
-                        4: { away: null, home: null },
-                        5: { away: null, home: null },
-                        6: { away: null, home: null },
-                        7: { away: null, home: null },
-                        8: { away: null, home: null }
+              r: { away: '4', home: '4' },
+              h: { away: '4', home: '4' },
+              e: { away: '4', home: '4' },
+              inning: { 0: { away: '4', home: '4' },
+                        1: { away: '4', home: '4' },
+                        2: { away: '4', home: '4' },
+                        3: { away: '4', home: '4' },
+                        4: { away: '4', home: '4' },
+                        5: { away: '4', home: '4' },
+                        6: { away: '4', home: '4' },
+                        7: { away: '4', home: '4' },
+                        8: { away: '4', home: '4' }
                       }
-            }
-          }
-          if (game.review === undefined) {
-            game.review = {
-              challenges_away_remaining: { null },
-              challenges_home_remaining: { null }
-            }
-          }
-          if (game.alerts === undefined) {
-            game.alerts = {
-              text: { null }
             }
           }
         })

@@ -3,6 +3,7 @@ import { shortenTeamName } from '../utils'
 
 //  mlb box score props --> BoxScore component
 export const mlbBoxScoreProps = (game, league) => {
+  const size = Object.keys(game.linescore.inning).length
   return {
     awayTeam: shortenTeamName(game.away_team_name),
     homeTeam: shortenTeamName(game.home_team_name),
@@ -10,8 +11,8 @@ export const mlbBoxScoreProps = (game, league) => {
     homeScore: game.linescore.r.home,
     linescore: game.linescore,
     periods: 9,
-    totalPeriods: game.linescore.inning.length,
-    overtimes: game.linescore.inning.length > 9 ? game.linescore.inning.length - 9 : 0,
+    totalPeriods: size,
+    overtimes: size > 9 ? size - 9 : 0,
     league
   }
 }
@@ -19,6 +20,7 @@ export const mlbBoxScoreProps = (game, league) => {
 //  nba box score props --> BoxScore component
 export const nbaBoxScoreProps = (game, league) => {
   const inGame = game.period.current
+  const size = Number(game.period_time.period_value)
   return {
     awayTeam: shortenTeamName(game.visitor.nickname),
     homeTeam: shortenTeamName(game.home.nickname),
@@ -30,8 +32,8 @@ export const nbaBoxScoreProps = (game, league) => {
     },
     points: inGame ? game.home.stats.points : '',
     periods: 4,
-    totalPeriods: Number(game.period_time.period_value),
-    overtimes: game.period_time.period_value > 4 ? Number(game.period_time.period_value) - 4 : 0,
+    totalPeriods: size,
+    overtimes: game.period_time.period_value > 4 ? size - 4 : 0,
     league
   }
 }

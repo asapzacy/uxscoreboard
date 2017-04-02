@@ -21,7 +21,7 @@ class NbaContainer extends Component {
   componentDidMount() {
     this.setState({ today: getTodaysDate()  }, () => {
       this.makeRequest(this.props.routeParams.date)
-      this.makeFirebase()
+      this.getCache()
     })
   }
   componentWillReceiveProps(nextProps) {
@@ -62,7 +62,7 @@ class NbaContainer extends Component {
         })
     }
   }
-  makeFirebase() {
+  getCache() {
     ref.once('value', (snapshot) => {
       this.setState({ cache: snapshot.val().nba.scores })
     })

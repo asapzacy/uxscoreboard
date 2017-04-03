@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { homeContainer, uxscoreboard, name, description, leagueMenu,
-  leagueList,leagueItem, leagueLink } from './styles.css'
+import { homeContainer, uxscoreboard, name, description, leagueMenu, leagueList,
+  leagueItem, leagueLink, mlbLink, nbaLink, nflLink, nhlLink } from './styles.css'
 
 const Home = () => (
   <div className={homeContainer}>
@@ -11,10 +11,10 @@ const Home = () => (
     </div>
     <nav className={leagueMenu}>
       <menu className={leagueList}>
-        <li className={leagueItem}><Link className={leagueLink} to='/mlb'>{'MLB'}</Link></li>
-        <li className={leagueItem}><Link className={leagueLink} to='/nba'>{'NBA'}</Link></li>
-        <li className={leagueItem}><Link className={leagueLink} to='/nfl'>{'NFL'}</Link></li>
-        <li className={leagueItem}><Link className={leagueLink} to='/nhl'>{'NHL'}</Link></li>
+        <li className={leagueItem}><Link className={mlbLink} to='/mlb'>{'MLB'}</Link></li>
+        <li className={leagueItem}><Link className={nbaLink} to='/nba'>{'NBA'}</Link></li>
+        <li className={leagueItem}><Link className={nflLink} to='/nfl'>{'NFL'}</Link></li>
+        <li className={leagueItem}><Link className={nhlLink} to='/nhl'>{'NHL'}</Link></li>
       </menu>
     </nav>
   </div>

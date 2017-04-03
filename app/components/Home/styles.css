@@ -61,7 +61,6 @@
   box-shadow:inset 0 0 0 0.35em #070707;
 }
 
-@media (hover) {
 
   .leagueLink::after {
     content:'';
@@ -81,12 +80,11 @@
   }
 
   .mlbLink, .nbaLink, .nflLink, .nhlLink { composes:leagueLink }
-  .mlbLink::after { background-image:url('/assets/icons/baseball.svg') }
-  .nbaLink::after { background-image:url('/assets/icons/basketball.svg') }
-  .nflLink::after { background-image:url('/assets/icons/football.svg') }
-  .nhlLink::after { background-image:url('/assets/icons/hockey.svg');background-size:100% 60% }
+  .mlbLink::after { background-image:url('https://uxscoreboard.com/assets/icons/baseball.svg') }
+  .nbaLink::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball.svg') }
+  .nflLink::after { background-image:url('https://uxscoreboard.com/assets/icons/football.svg') }
+  .nhlLink::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey.svg');background-size:100% 56.6% }
 
-}
 
 
 /* -------------------------------- */

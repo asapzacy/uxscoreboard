@@ -4,7 +4,7 @@ import { shortenTeamName } from 'helpers/utils'
 //  mlb home + away team props --> Team component
 export const mlbTeamProps = (game, side, league) => {
   const isAllStar = game.game_type === 'A'
-  const hasStarted = game.status.ind === 'I' || game.status.status === 'Game Over'
+  const hasStarted = game.status.ind === 'I' || game.status.ind === 'F' || game.status.status === 'Game Over' || game.status.status === 'Final'
   return {
     name: shortenTeamName(game[`${side}_team_name`]),
     code: game[`${side}_file_code`].toLowerCase(),

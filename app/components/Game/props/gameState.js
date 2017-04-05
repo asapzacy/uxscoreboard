@@ -8,7 +8,7 @@ export const mlbGameStateProps = (game) => {
   const inningState = game.status.inning_state
   const inGame = game.status.ind === 'I' || game.status.status === 'In Progress' || game.status.ind === 'MF'
   const inBetween = inningState && inningState !== 'Middle' && inningState !== 'End'
-  const preGame = game.status.ind === 'S' || game.status.ind === 'P' || game.status.ind === 'PW' || game.status.ind === 'PR'
+  const preGame = game.status.ind === 'S' || game.status.ind === 'P' || game.status.ind === 'PW' || game.status.ind === 'PR' || game.status.ind === 'DR'
   return {
     gameState: preGame ? 0 : inGame ? 1 : 2,
     status: game.status.status === 'Game Over' || game.status.ind === 'F' ? 'Final' : game.status.status,

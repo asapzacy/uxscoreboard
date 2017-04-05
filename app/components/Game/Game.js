@@ -17,7 +17,7 @@ const propTypes = {
   scaleGame: PropTypes.func.isRequired
 }
 
-var fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
+const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
 
 export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
@@ -25,7 +25,6 @@ export default function Game(props) {
   if (props.league === 'nfl') return <NflGame {...props} />
   if (props.league === 'nhl') return <NhlGame {...props} />
   return <h1>{'i hope this doesn\'t run'}</h1>
-
 }
 
 Game.propTypes = propTypes

@@ -51,7 +51,7 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
       } else if (linescore.inning[i]) {
         if (linescore.inning[i][side]) {
           score = linescore.inning[i][side] !== '' ? Number(linescore.inning[i][side]) : ''
-          result += score ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`          
+          result += score ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`
         } else {
           result += '<td></td>'
         }

@@ -25,7 +25,6 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
         : scores.game.filter(item => item.game_type !== 'S').map(item => <GameContainer game={item} date={date} league={league} key={item.game_pk} />)
   }
   if (league === 'nba') {
-    // console.log(scores.sports_content.games)
     games = scores.numGames === 0 || !scores.sports_content.games.game.length
       ? <NoGames />
       : scores.sports_content.games.game.map((item, index) => {
@@ -36,6 +35,7 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
       })
   }
   if (league === 'nhl') {
+    scores.dates[0].games.map(item => console.log(item))
     games = !scores.dates.length
       ? <NoGames />
       : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)

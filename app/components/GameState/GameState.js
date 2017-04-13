@@ -10,9 +10,10 @@ export default function GameState(props) {
 }
 
 
-const PreGameState = ({ time }) => (
+const PreGameState = ({ time, isPlayoffs, playoffs }) => (
   <section className={gameStateContainer}>
     <span>{time}</span>
+    { isPlayoffs && <span>{`Game ${playoffs.game} of ${playoffs.maxGames}`}</span> }
   </section>
 )
 
@@ -32,7 +33,7 @@ function PostGameState({ periods, totalPeriods, status, overtime, isDoubleHeader
     <section className={gameStateContainer}>
       <span>{totalPeriods > periods ? `${status}/${overtime}` : status}</span>
       { isDoubleHeader && <span>{`Game ${doubleHeader} of 2`}</span> }
-      { isPlayoffs && <span>{`${playoffs.series} - Game ${playoffs.game} of ${playoffs.maxGames}`}</span> }
+      { isPlayoffs && <span>{`Game ${playoffs.game} of ${playoffs.maxGames}`}</span> }
     </section>
   )
 }

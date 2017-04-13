@@ -36,6 +36,7 @@ class NhlContainer extends Component {
         })
       })
       .catch((error) =>  {
+        console.log(error)
         this.setState({
           isLoading: false,
           date: dt

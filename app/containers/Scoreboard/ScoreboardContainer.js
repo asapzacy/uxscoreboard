@@ -21,7 +21,6 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
-    // this.setState({ direction: { enter: 'Up', leave: 'Down' } })
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {

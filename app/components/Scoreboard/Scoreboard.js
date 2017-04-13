@@ -25,7 +25,8 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
         : scores.game.filter(item => item.game_type !== 'S').map(item => <GameContainer game={item} date={date} league={league} key={item.game_pk} />)
   }
   if (league === 'nba') {
-    games = !scores.sports_content.games.game.length
+    // console.log(scores.sports_content.games)
+    games = scores.numGames === 0 || !scores.sports_content.games.game.length
       ? <NoGames />
       : scores.sports_content.games.game.map((item, index) => {
         let combined = Object.assign({}, scores.games[index], item)
@@ -46,7 +47,9 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
   }
   let allStarGame = false
   if (league === 'nba') {
-    allStarGame = scores.games.length === 1 && scores.games[0].tags && scores.games[0].tags[0] === 'AWASG'
+    if (scores.numGames !== 0) {
+      allStarGame = scores.games.length === 1 && scores.games[0].tags && scores.games[0].tags[0] === 'AWASG'
+    }
   }
   return (
     <main className={scoreboardContainer}>

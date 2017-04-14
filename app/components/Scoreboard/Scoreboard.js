@@ -35,7 +35,6 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
       })
   }
   if (league === 'nhl') {
-    scores.dates[0].games.map(item => console.log(item))
     games = !scores.dates.length
       ? <NoGames />
       : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)

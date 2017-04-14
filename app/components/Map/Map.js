@@ -13,7 +13,6 @@ const Map = ({ sport }) => (
     <ReactMapboxGl {...mapbox} containerStyle={s}>
       <Layer type='symbol' id='marker' layout={{ 'icon-image': 'marker-15' }}>
         { Object.keys(stadiums[sport]).map((item, index) => {
-            console.log(stadiums[sport][item])
             return <Feature coordinates={stadiums[sport][item]} key={index} />
           })
         }

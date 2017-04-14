@@ -1,4 +1,3 @@
-
 import { formatTimezone } from 'helpers/utils'
 
 //  mlb game state props --> GameState component

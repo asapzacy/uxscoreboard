@@ -40,9 +40,9 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
       if (linescore[side]) {
         if (linescore[side][i] && i < totalPeriods) {
           result += `<td>${linescore[side][i].score}</td>`
+        } else {
+          result += '<td></td>'
         }
-      } else {
-        result += '<td></td>'
       }
     }
     if (league === 'mlb') {

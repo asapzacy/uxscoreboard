@@ -17,7 +17,7 @@
 .socialContainer a {
   font-size:2.2em;
   line-height:1;
-  padding:1%;
+  padding:0.6% 1.2%;
   margin:0 0.66em;
   border:4px solid transparent;
   transition:color 0.22s, border-color 0.22s;

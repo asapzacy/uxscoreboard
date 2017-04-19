@@ -30,8 +30,11 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
   const end = Math.max(periods, totalPeriods)
   for (let i = 0; i < end; i++) {
     if (league === 'nhl') {
+      let score
       if (linescore[i]) {
-        result += `<td>${linescore[i][side].goals}</td>`
+        score = linescore[i][side].goals !== '' ? Number(linescore[i][side].goals) : ''
+        result += score ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`
+        // result += `<td>${linescore[i][side].goals}</td>`
       } else {
         result += '<td></td>'
       }

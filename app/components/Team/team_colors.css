@@ -134,6 +134,7 @@
 .jax_nfl { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#006778 40%,transparent 0%) }
 .kc_nfl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#ffffff 40%,transparent 0%) }
 .la_nfl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002244 40%,transparent 0%) }
+.lac_nfl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#0073cf 40%,transparent 0%) }
 .mia_nfl { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#008e97 40%,transparent 0%) }
 .min_nfl { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#3b0083 40%,transparent 0%) }
 .ne_nfl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#002244 40%,transparent 0%) }
@@ -143,7 +144,6 @@
 .oak_nfl { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#000000 40%,transparent 0%) }
 .phi_nfl { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#004953 40%,transparent 0%) }
 .pit_nfl { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#000000 40%,transparent 0%) }
-.sd_nfl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#0073cf 40%,transparent 0%) }
 .sea_nfl { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#213d5a 40%,transparent 0%) }
 .sf_nfl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#b3995d 40%,transparent 0%) }
 .tb_nfl  { composes:teamContainer from './styles.css';background-image:linear-gradient(to right,#34302b 40%,transparent 0%) }

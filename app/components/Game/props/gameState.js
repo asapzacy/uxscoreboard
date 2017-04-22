@@ -81,8 +81,9 @@ export const nflGameStateProps = (game) => {
   const isOT = game.q === 'FO'
   const isFinal = game.q === 'F' || isOT
   return {
-    gameState: (isFinal || isOt) ? 2 : 0,
+    gameState: (isFinal || isOT) ? 2 : 0,
     status: isFinal ? 'Final' : 'x',
+    time: `${game.t} ET`,
     periods: 4,
     totalPeriods: isOT ? 5 : 4,
     overtime: 'OT'

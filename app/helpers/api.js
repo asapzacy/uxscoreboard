@@ -37,7 +37,7 @@ export const getNbaGameDetails = (dt, id) => {
 
 // axios request - nfl scores
 export const getNflScores = (dt) => {
-  const url = `${CORS}https://www.nfl.com/ajax/scorestrip?season=2016&seasonType=REG&week=1`
+  const url = `${CORS}https://www.nfl.com/ajax/scorestrip?season=2017&seasonType=REG&week=1`
   return axios.get(url)
     .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)

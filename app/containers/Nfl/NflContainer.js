@@ -3,7 +3,6 @@ import { Nfl } from 'components'
 import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
 import { getNflScores } from 'helpers/api'
 import { parseString } from 'xml2js'
-// const parse = require('xml2js').parseString
 
 class NflContainer extends Component {
   constructor() {
@@ -32,7 +31,6 @@ class NflContainer extends Component {
     getNflScores(dt)
       .then((currentScores) => {
         parseString(currentScores, (err, result) => {
-          console.log(result)
           this.setState({
             isLoading: false,
             scores: result.ss.gms[0],

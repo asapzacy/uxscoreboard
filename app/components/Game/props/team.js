@@ -33,12 +33,11 @@ export const nbaTeamProps = (game, side, league) => {
   const side2 = side === 'home' ? 'hTeam' : 'vTeam'
   const inGame = Boolean(game.period.current)
   const isPlayoffs = Boolean(game.playoffs)
-  const name = shortenTeamName(game[side].nickname)
   return {
-    name: isPlayoffs ? `#${game.playoffs[`${side}_seed`]} ${name}` : name,
+    name: shortenTeamName(game[side].nickname),
     code: game[side].abbreviation.toLowerCase(),
-    ws: isPlayoffs ? game[side2].seriesWin : game[side2].win,
-    ls: isPlayoffs ? game[side2].seriesLoss : game[side2].loss,
+    ws: isPlayoffs ? game.playoffs.home_wins : game[side2].win,
+    ls: isPlayoffs ? game.playoffs.visitor_wins : game[side2].loss,
     score: inGame && game[side].score,
     league
   }

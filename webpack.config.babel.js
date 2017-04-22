@@ -134,7 +134,6 @@ const productionConfig = {
     statsWriterPlugin,
     visualizerPlugin,
     new webpack.optimize.AggressiveMergingPlugin()
-
   ]
 }
 

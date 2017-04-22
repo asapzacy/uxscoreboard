@@ -18,6 +18,8 @@ const propTypes = {
 }
 
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
+const style = (isHovered) => ({ flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)' })
+// const style2 = { flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)' }
 
 export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
@@ -29,9 +31,9 @@ export default function Game(props) {
 
 Game.propTypes = propTypes
 
-
 const NbaGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+  // <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+  <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nbaGameStateProps(game)} />
       <Team {...nbaTeamProps(game, 'visitor', league)} />

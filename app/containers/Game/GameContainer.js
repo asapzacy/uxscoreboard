@@ -18,10 +18,14 @@ class GameContainer extends Component {
     })
   }
   showDetails() {
-    this.setState({ isExpanded: !this.state.isExpanded })
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    })
   }
   scaleGame() {
-    this.setState({ isHovered: !this.state.isiOS && !this.state.isHovered })
+    this.setState({
+      isHovered: !this.state.isiOS && !this.state.isHovered
+    })
   }
   render() {
     return <Game showDetails={this.showDetails} scaleGame={this.scaleGame} {...this.state} {...this.props} />

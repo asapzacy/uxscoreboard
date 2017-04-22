@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Header, Footer, Test } from 'components'
+import WebFont from 'webfontloader'
 import { mainContainer, innerContainer } from './styles.css'
 
 class MainContainer extends Component {
@@ -15,11 +16,19 @@ class MainContainer extends Component {
     this.hideMenu = this.hideMenu.bind(this)
   }
   componentDidMount() {
+    this.loadFonts()
     this.getScreenWidth()
     window.addEventListener('resize', this.getScreenWidth)
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this.getScreenWidth)
+  }
+  loadFonts() {
+    WebFont.load({
+      google: { families: [ 'Comfortaa' ] },
+      active() { document.getElementById('app').classList.add('fonts-loaded') },
+      classes: false
+    })
   }
   getScreenWidth() {
     this.setState({ 'screenWidth': window.innerWidth }, () => {

@@ -19,7 +19,6 @@ body {
   background:#070707;
   color:#e0e0e0;
   font:400 16px/1.45 'Avenir Next',Avenir,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
-  font-family:'Comfortaa',cursive;
   letter-spacing:1px;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
@@ -27,4 +26,6 @@ body {
 }
 
 /* -------  app  ------- */
-#app { width:100%;height:100% }
+#app { width:100%;height:100%;opacity:0;transition:opacity 1s }
+
+#app.fonts-loaded { font-family:'Comfortaa',cursive;opacity:1 }

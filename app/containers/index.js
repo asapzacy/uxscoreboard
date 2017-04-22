@@ -24,7 +24,7 @@ export GameContainer from './Game/GameContainer'
 export DetailsContainer from './Details/DetailsContainer'
 
 /* -------  map container  ------- */
-export MapContainer from './Map/MapContainer'
+// export MapContainer from './Map/MapContainer'
 
 /* -------  test container  ------- */
 export TestContainer from './Test/TestContainer'

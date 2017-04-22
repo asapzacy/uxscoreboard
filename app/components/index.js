@@ -38,7 +38,7 @@ export Diamond from './Diamond/Diamond'
 export Leaders from './Leaders/Leaders'
 
 /* -------  map component  ------- */
-export Map from './Map/Map'
+// export Map from './Map/Map'
 
 /* -------  test component  ------- */
 export Test from './Test/Test'

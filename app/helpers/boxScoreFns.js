@@ -34,7 +34,6 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
       if (linescore[i]) {
         score = linescore[i][side].goals !== '' ? Number(linescore[i][side].goals) : ''
         result += score ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`
-        // result += `<td>${linescore[i][side].goals}</td>`
       } else {
         result += '<td></td>'
       }
@@ -43,9 +42,9 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
       if (linescore[side]) {
         if (linescore[side][i] && i < totalPeriods) {
           result += `<td>${linescore[side][i].score}</td>`
-        } else {
-          result += '<td></td>'
         }
+      } else {
+        result += '<td></td>'
       }
     }
     if (league === 'mlb') {

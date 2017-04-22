@@ -30,14 +30,15 @@ export const nflTeamProps = (game, side, league) => {
 
 //  nba home + away team props --> Team component
 export const nbaTeamProps = (game, side, league) => {
-  const side2 = side === 'home' ? 'hTeam' : 'vTeam'
+  const isHome = side === 'home'
+  const side2 = isHome ? 'hTeam' : 'vTeam'
   const inGame = Boolean(game.period.current)
   const isPlayoffs = Boolean(game.playoffs)
   return {
     name: shortenTeamName(game[side].nickname),
     code: game[side].abbreviation.toLowerCase(),
-    ws: isPlayoffs ? game.playoffs.home_wins : game[side2].win,
-    ls: isPlayoffs ? game.playoffs.visitor_wins : game[side2].loss,
+    ws: isPlayoffs ? isHome ? game.playoffs.home_wins : game.playoffs.visitor_wins : game[side2].win,
+    ls: isPlayoffs ? isHome ? game.playoffs.visitor_wins : game.playoffs.home_wins : game[side2].loss,
     score: inGame && game[side].score,
     league
   }

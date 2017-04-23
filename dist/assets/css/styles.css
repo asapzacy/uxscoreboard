@@ -28,5 +28,5 @@ body {
 /* -------  app  ------- */
 #app { width:100%;height:100%;opacity:0;transition:opacity 1.8s }
 
-/* -------  fonts loaded  ------- */
-#app.fonts-loaded { font-family:'Comfortaa',cursive;opacity:1 }
+/* -------  go  ------- */
+#app.go { font-family:'Comfortaa',cursive;opacity:1 }

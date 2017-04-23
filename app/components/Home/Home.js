@@ -7,7 +7,7 @@ const Home = () => (
   <div className={homeContainer}>
     <div className={uxscoreboard}>
       <h1 className={name}>{'uxscoreboard'}</h1>
-      <h2 className={description}>{'live sports scoreboard built on react.js'}</h2>
+      <h2 className={description}>{'live sports scoreboard built on React.js'}</h2>
     </div>
     <nav className={leagueMenu}>
       <menu className={leagueList}>

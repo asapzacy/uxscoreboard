@@ -26,7 +26,7 @@ class MainContainer extends Component {
   loadFonts() {
     WebFont.load({
       google: { families: [ 'Comfortaa' ] },
-      active() { document.getElementById('app').classList.add('fonts-loaded') },
+      active() { document.getElementById('app').classList.add('go') },
       classes: false
     })
   }

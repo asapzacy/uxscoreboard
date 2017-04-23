@@ -25,9 +25,19 @@ class ScoreboardContainer extends Component {
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.date > nextProps.date) {
-      this.setState({ direction: { enter: 'Left', leave: 'Right' } })
+      this.setState({
+        direction: {
+          enter: 'Left',
+          leave: 'Right'
+        }
+      })
     } else if (this.props.date < nextProps.date) {
-      this.setState({ direction: { enter: 'Right', leave: 'Left' } })
+      this.setState({
+        direction: {
+          enter: 'Right',
+          leave: 'Left'
+        }
+      })
     }
     this.checkSeason(nextProps.date)
    }

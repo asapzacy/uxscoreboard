@@ -1,7 +1,7 @@
 {
   "name": "uxscoreboard",
   "version": "1.0.0",
-  "description": "A sports scoreboard web app built on react.js and es6; features all MLB, NBA, NFL (coming soon), and NHL season and playoff games.",
+  "description": "A sports scoreboard web app built on ES6 and React.js—features MLB, NBA, NFL, and NHL games.",
   "main": "server.js",
   "scripts": {
     "start": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
@@ -23,6 +23,7 @@
     "moment-timezone": "^0.5.11",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-ga": "^2.2.0",
     "react-icons": "^2.2.3",
     "react-router": "^3.0.2",
     "velocity-react": "^1.2.1",

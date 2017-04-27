@@ -39,7 +39,6 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
       }
     }
     if (league === 'nba') {
-      console.log(linescore)
       if (linescore[side]) {
         if (linescore[side][i] && i < totalPeriods) {
           const score = linescore[side][i].score

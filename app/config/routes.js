@@ -1,10 +1,11 @@
 import React from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { logPage } from './analytics'
 import { MainContainer, HomeContainer, MlbContainer, NbaContainer,
-  NflContainer, NhlContainer, AboutContainer, NotFoundContainer, TestContainer } from 'containers'
+NflContainer, NhlContainer, AboutContainer, NotFoundContainer, TestContainer } from 'containers'
 
 const routes = (
-  <Router history={browserHistory}>
+  <Router history={browserHistory} onUpdate={logPage}>
     <Route path='/' component={MainContainer}>
       <IndexRoute component={HomeContainer} />
       <Route path='/mlb'>

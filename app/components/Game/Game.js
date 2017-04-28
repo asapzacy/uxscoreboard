@@ -1,24 +1,14 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { GameState, Team, Expand, Details } from 'components'
 import { DetailsContainer } from 'containers'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { velocity_game } from 'config/velocity'
-import { mlbTeamProps, nbaTeamProps, nflTeamProps, nhlTeamProps } from './props/team'
-import { mlbGameStateProps, nflGameStateProps, nbaGameStateProps, nhlGameStateProps } from './props/gameState'
+import { mlbTeamProps, nbaTeamProps, nflTeamProps, nhlTeamProps } from '../Team/props'
+import { mlbGameStateProps, nflGameStateProps, nbaGameStateProps, nhlGameStateProps } from '../GameState/props'
 import { gameItem, topHalf, details, detailsExpanded } from './styles.css'
 
-const propTypes = {
-  game: PropTypes.object.isRequired,
-  date: PropTypes.string.isRequired,
-  league: PropTypes.string.isRequired,
-  isExpanded: PropTypes.bool.isRequired,
-  showDetails: PropTypes.func.isRequired,
-  isHovered: PropTypes.bool.isRequired,
-  scaleGame: PropTypes.func.isRequired
-}
-
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
-const style = (isHovered) => ({ flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)' })
+const style = (isHovered) => ({ flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.01)' })
 
 export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
@@ -27,8 +17,6 @@ export default function Game(props) {
   if (props.league === 'nhl') return <NhlGame {...props} />
   return <h1>{'i hope this doesn\'t run'}</h1>
 }
-
-Game.propTypes = propTypes
 
 const NbaGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
   <li className={gameItem} style={style(isHovered)}>
@@ -45,7 +33,7 @@ const NbaGame = ({ game, date, league, isExpanded, showDetails, isHovered, scale
 )
 
 const NflGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+  <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nflGameStateProps(game)} />
       <Team {...nflTeamProps(game, 'h', league)} />
@@ -59,7 +47,7 @@ const NflGame = ({ game, date, league, isExpanded, showDetails, isHovered, scale
 )
 
 const MlbGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+  <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...mlbGameStateProps(game)} />
       <Team {...mlbTeamProps(game, 'away', league)} />
@@ -73,7 +61,7 @@ const MlbGame = ({ game, date, league, isExpanded, showDetails, isHovered, scale
 )
 
 const NhlGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={{flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0125)'}}>
+  <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nhlGameStateProps(game)} />
       <Team {...nhlTeamProps(game, 'away', league)} />

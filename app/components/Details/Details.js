@@ -1,18 +1,10 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { Matchup, PanelMenu, BoxScore, Stats, Diamond, Leaders } from 'components'
-import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from 'helpers/props/matchupProps'
+import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from '../Matchup/props'
 import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
 import { mlbDiamondProps } from 'helpers/props/diamondProps'
 import { nbaStatsProps } from 'helpers/props/statsProps'
 import { detailsContainer } from './styles.css'
-
-const propTypes = {
-  game: PropTypes.object.isRequired,
-  date: PropTypes.string.isRequired,
-  league: PropTypes.string.isRequired,
-  panel: PropTypes.string.isRequired,
-  switchPanel: PropTypes.func.isRequired
-}
 
 export default function Details(props) {
   if (props.league === 'mlb') return <MlbDetails {...props} />
@@ -21,19 +13,17 @@ export default function Details(props) {
   if (props.league === 'nhl') return <NhlDetails {...props} />
 }
 
-Details.propTypes = propTypes
-
 
 const MlbDetails = ({ game, date, league, panel, switchPanel }) => (
   <section className={detailsContainer}>
     <Matchup {...mlbMatchupProps(game, date)} />
     <PanelMenu panel={panel} switchPanel={switchPanel} />
-    { panel === 'boxScore' &&
+    {/* { panel === 'boxScore' &&
       <span>
         <BoxScore {...mlbBoxScoreProps(game, league)} />
         <Diamond {...mlbDiamondProps(game)} />
       </span>
-    }
+    } */}
   </section>
 )
 

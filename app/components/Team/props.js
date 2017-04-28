@@ -1,21 +1,21 @@
-
 import { shortenTeamName } from 'helpers/utils'
 
 //  mlb home + away team props --> Team component
 export const mlbTeamProps = (game, side, league) => {
   const isAllStar = game.game_type === 'A'
-  const hasStarted = game.status.ind === 'I' || game.status.ind === 'F' || game.status.status === 'Game Over' || game.status.status === 'Final' || game.status.ind === 'MF'
+  const hasStarted = game.status.statusCode === 'I' || game.status.statusCode === 'F'
   return {
-    name: shortenTeamName(game[`${side}_team_name`]),
-    code: game[`${side}_file_code`].toLowerCase(),
+    name: shortenTeamName(game.teams[side].team.teamName),
+    code: game.teams[side].team.fileCode,
     filetype: isAllStar ? 'png' : 'svg',
-    ws: game[`${side}_win`],
-    ls: game[`${side}_loss`],
-    score: hasStarted && game.linescore.r[side],
+    ws: game.teams[side].leagueRecord.wins,
+    ls: game.teams[side].leagueRecord.losses,
+    score: hasStarted && String(game.teams[side].score),
     league
   }
 }
 
+//  nfl home + away team props --> Team component
 export const nflTeamProps = (game, side, league) => {
   const team =  game[`${side}nn`]
   return {

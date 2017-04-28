@@ -2,29 +2,26 @@ import { formatTimezone } from 'helpers/utils'
 
 //  mlb game state props --> GameState component
 export const mlbGameStateProps = (game) => {
-  const isPlayoffs = game.game_type !== 'R'
-  const isDoubleHeader = game.double_header_sw === 'Y'
-  const inningState = game.status.inning_state
-  const inGame = game.status.ind === 'I' || game.status.status === 'In Progress' || game.status.ind === 'MF'
+  const isPlayoffs = game.gameType !== 'R'
+  const isDoubleHeader = game.doubleHeader === 'S'
+  const inGame = game.status.statusCode === 'I'
+  const inningState = inGame ? game.linescore.inningState : ''
   const inBetween = inningState && inningState !== 'Middle' && inningState !== 'End'
-  const preGame = game.status.ind === 'S' || game.status.ind === 'P' || game.status.ind === 'PW' || game.status.ind === 'PR'
-  const isDelayed = game.status.ind === 'DR' || game.status.ind === 'PR'
-  const time = `${game.time} ${game.ampm} ${game.time_zone}`
   return {
-    gameState: preGame || isDelayed ? 0 : inGame ? 1 : 2,
-    status: game.status.status === 'Game Over' || game.status.ind === 'F' ? 'Final' : game.status.status,
-    time: isDelayed ? `${time} - ${game.status.status} (${game.status.reason})` : time,
+    gameState: inGame ? 1 : game.status.statusCode === 'F' ? 2 : 0,
+    status: game.status.detailedState,
+    time: `${formatTimezone(game.gameDate)} ET`,
     periods: 9,
-    currentTime: inBetween && `${game.status.o} ${game.status.o === '1' ? 'out' : 'outs'}`,
-    currentPeriod: `${inningState === 'End' ? inningState.toUpperCase() : inningState} ${game.status.inning}`,
-    totalPeriods: game.linescore.inning.length,
-    overtime: game.linescore.inning.length,
-    doubleHeader: isDoubleHeader ? game.game_nbr : '',
+    currentTime: inBetween && `${game.linescore.outs} ${game.linescore.outs === 1 ? 'out' : 'outs'}`,
+    currentPeriod: `${inningState === 'End' ? inningState.toUpperCase() : inningState} ${game.linescore.currentInning}`,
+    totalPeriods: game.linescore.innings.length,
+    overtime: game.linescore.innings.length,
+    doubleHeader: isDoubleHeader ? game.gameNumber : '',
     playoffs: isPlayoffs ?
       {
-        series: game.series,
-        game: game.series_num,
-        maxGames:game.ser_games
+        series: '',
+        game: 0,
+        maxGames: 7
       } : {},
     isDoubleHeader,
     isPlayoffs

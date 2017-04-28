@@ -24,23 +24,26 @@ class ScoreboardContainer extends Component {
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {
-    if (this.props.date > nextProps.date) {
-      this.setState({
-        direction: {
-          enter: 'Left',
-          leave: 'Right'
-        }
-      })
-    } else if (this.props.date < nextProps.date) {
-      this.setState({
-        direction: {
-          enter: 'Right',
-          leave: 'Left'
-        }
-      })
-    }
     this.checkSeason(nextProps.date)
-   }
+    this.checkDirection(this.props.date, nextProps.date)
+  }
+  checkDirection(oldDate, newDate) {
+    let enterDirection
+    let leaveDirection
+    if (oldDate > newDate) {
+      enterDirection = 'Left'
+      leaveDirection = 'Right'
+    } else if (oldDate < newDate) {
+      enterDirection = 'Right'
+      leaveDirection = 'Left'
+    }
+    this.setState({
+      direction: {
+        enter: enterDirection,
+        leave: leaveDirection
+      }
+    })
+  }
   checkSeason(day) {
     if (this.props.league === 'nhl' || this.props.league === 'nfl') {
       return

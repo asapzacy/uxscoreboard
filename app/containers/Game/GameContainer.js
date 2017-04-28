@@ -13,19 +13,14 @@ class GameContainer extends Component {
     this.scaleGame = this.scaleGame.bind(this)
   }
   componentDidMount() {
-    this.setState({
-      isiOS: /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
-    })
+    const testDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+    this.setState({ isiOS: testDevice })
   }
   showDetails() {
-    this.setState({
-      isExpanded: !this.state.isExpanded
-    })
+    this.setState({ isExpanded: !this.state.isExpanded })
   }
   scaleGame() {
-    this.setState({
-      isHovered: !this.state.isiOS && !this.state.isHovered
-    })
+    this.setState({ isHovered: !this.state.isiOS && !this.state.isHovered })
   }
   render() {
     return <Game showDetails={this.showDetails} scaleGame={this.scaleGame} {...this.state} {...this.props} />

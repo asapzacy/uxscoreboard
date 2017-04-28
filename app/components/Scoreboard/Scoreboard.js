@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { NoGames, AllStar } from 'components'
 import { GameContainer, DateContainer } from 'containers'
 import { getNbaGameDetails } from 'helpers/api'
@@ -7,22 +7,12 @@ import 'velocity-animate/velocity.ui'
 import { velocity_scoreboard } from 'config/velocity'
 import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
 
-const propTypes = {
-  scores: PropTypes.object.isRequired,
-  date: PropTypes.string.isRequired,
-  today: PropTypes.string.isRequired,
-  league: PropTypes.string.isRequired,
-  seasonState: PropTypes.object.isRequired
-}
-
 export default function Scoreboard({ scores, date, today, league, seasonState, direction }) {
   let games
   if (league === 'mlb') {
-    games = scores.game === undefined || seasonState.isPreseason
+    games = !scores.length || seasonState.isPreseason
       ? <NoGames />
-      : !Array.isArray(scores.game)
-        ? <GameContainer game={scores.game} date={date} league={league} key={scores.game.game_pk} />
-        : scores.game.filter(item => item.game_type !== 'S').map(item => <GameContainer game={item} date={date} league={league} key={item.game_pk} />)
+      : scores.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)
   }
   if (league === 'nba') {
     games = scores.numGames === 0 || !scores.sports_content.games.game.length
@@ -62,5 +52,3 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
     </main>
   )
 }
-
-Scoreboard.propTypes = propTypes

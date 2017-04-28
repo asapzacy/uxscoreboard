@@ -12,8 +12,7 @@ const dateObject = (dt) => {
 // axios request - mlb scores
 export const getMlbScores = (dt) => {
   const { yyyy, mm, dd } = dateObject(dt)
-  const api = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${mm}/${dd}/${yyyy}&sortBy=gameDate&hydrate=linescore(runners),flags,team,review`
-  const url = `${CORS}http://gd2.mlb.com/components/game/mlb/year_${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
+  const api = `${CORS}https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${mm}/${dd}/${yyyy}&sortBy=gameDate&hydrate=linescore(runners),flags,team,review`
   return axios.get(api)
     .then(currentScores => currentScores.data)
     .catch(currentScores => currentScores.status)

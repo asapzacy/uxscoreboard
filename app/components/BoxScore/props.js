@@ -1,14 +1,13 @@
-
-import { shortenTeamName } from '../utils'
+import { shortenTeamName } from 'helpers/utils'
 
 //  mlb box score props --> BoxScore component
 export const mlbBoxScoreProps = (game, league) => {
-  const size = Object.keys(game.linescore.inning).length
+  const size = game.linescore.innings ? game.linescore.innings.length : 0
   return {
-    awayTeam: shortenTeamName(game.away_team_name),
-    homeTeam: shortenTeamName(game.home_team_name),
-    awayScore: game.linescore.r.away,
-    homeScore: game.linescore.r.home,
+    awayTeam: shortenTeamName(game.teams.away.team.teamName),
+    homeTeam: shortenTeamName(game.teams.home.team.teamName),
+    awayScore: game.linescore.teams.away.runs || '',
+    homeScore: game.linescore.teams.home.runs || '',
     linescore: game.linescore,
     periods: 9,
     totalPeriods: size,

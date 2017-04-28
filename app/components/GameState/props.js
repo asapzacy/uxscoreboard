@@ -4,18 +4,20 @@ import { formatTimezone } from 'helpers/utils'
 export const mlbGameStateProps = (game) => {
   const isPlayoffs = game.gameType !== 'R'
   const isDoubleHeader = game.doubleHeader === 'S'
-  const inGame = game.status.statusCode === 'I'
+  const inGame = game.status.abstractGameCode === 'L'
+  const isOver = game.status.abstractGameCode === 'F'
+  const hasStarted = inGame || isOver
   const inningState = inGame ? game.linescore.inningState : ''
   const inBetween = inningState && inningState !== 'Middle' && inningState !== 'End'
   return {
-    gameState: inGame ? 1 : game.status.statusCode === 'F' ? 2 : 0,
-    status: game.status.detailedState,
+    gameState: inGame ? 1 : isOver ? 2 : 0,
+    status: game.status.abstractGameState,
     time: `${formatTimezone(game.gameDate)} ET`,
     periods: 9,
     currentTime: inBetween && `${game.linescore.outs} ${game.linescore.outs === 1 ? 'out' : 'outs'}`,
-    currentPeriod: `${inningState === 'End' ? inningState.toUpperCase() : inningState} ${game.linescore.currentInning}`,
-    totalPeriods: game.linescore.innings.length,
-    overtime: game.linescore.innings.length,
+    currentPeriod: inGame && `${inningState === 'End' ? inningState.toUpperCase() : inningState} ${game.linescore.currentInning}`,
+    totalPeriods: hasStarted && game.linescore.innings.length,
+    overtime: hasStarted && game.linescore.innings.length,
     doubleHeader: isDoubleHeader ? game.gameNumber : '',
     playoffs: isPlayoffs ?
       {

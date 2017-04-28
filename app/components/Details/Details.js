@@ -1,8 +1,8 @@
 import React from 'react'
 import { Matchup, PanelMenu, BoxScore, Stats, Diamond, Leaders } from 'components'
 import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from '../Matchup/props'
-import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from 'helpers/props/boxScoreProps'
-import { mlbDiamondProps } from 'helpers/props/diamondProps'
+import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from '../BoxScore/props'
+import { mlbDiamondProps } from '../Diamond/props'
 import { nbaStatsProps } from 'helpers/props/statsProps'
 import { detailsContainer } from './styles.css'
 
@@ -18,12 +18,12 @@ const MlbDetails = ({ game, date, league, panel, switchPanel }) => (
   <section className={detailsContainer}>
     <Matchup {...mlbMatchupProps(game, date)} />
     <PanelMenu panel={panel} switchPanel={switchPanel} />
-    {/* { panel === 'boxScore' &&
+    { panel === 'boxScore' &&
       <span>
         <BoxScore {...mlbBoxScoreProps(game, league)} />
         <Diamond {...mlbDiamondProps(game)} />
       </span>
-    } */}
+    }
   </section>
 )
 

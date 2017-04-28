@@ -3,10 +3,10 @@ import { createDiamondImage, ballsCount } from 'helpers/diamondFns'
 import { diamondContainer, baseballFieldContainer, baseballField, otherInfo,
   bsoContainer, bso, bsoHeading, bsoData, runnersOnBase, hitterPitcher } from './styles.css'
 
-const Diamond = ({ balls, strikes, outs, inningState, runners }) => (
+const Diamond = ({ balls, strikes, outs, inningState, offense }) => (
   <section className={diamondContainer}>
     <div className={baseballFieldContainer}>
-      <img className={baseballField} src={`/assets/img/mlb/other/${createDiamondImage(runners)}.svg`} />
+      <img className={baseballField} src={`/assets/img/mlb/other/${createDiamondImage(offense)}.svg`} />
     </div>
     <div className={otherInfo}>
       <section className={bsoContainer}>

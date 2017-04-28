@@ -54,8 +54,12 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
     if (league === 'mlb') {
       let score
       if (linescore.innings && linescore.innings[i]) {
-        score = linescore.innings[i][side].runs !== undefined ? Number(linescore.innings[i][side].runs) : ''
-        result += score > 0 ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`
+        if (linescore.innings[i][side]) {
+          score = linescore.innings[i][side].runs >= 0 ? linescore.innings[i][side].runs : ''
+          result += score > 0 ? `<td><strong>${score}</strong></td>` : `<td>${score}</td>`
+        } else {
+          result += '<td></td>'
+        }
       } else {
         result += '<td></td>'
       }
@@ -66,14 +70,11 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
   }
   result += `<td><strong>${score}</strong></td>`
   if (league === 'mlb') {
-    if (Number.isInteger(linescore.teams[side].hits)) {
+    if (linescore && linescore.teams[side].hits >= 0 && linescore.teams[side].errors >= 0) {
       result += `<td>${linescore.teams[side].hits}</td>`
-    } else {
-      result += '<td></td>'
-    }
-    if (Number.isInteger(linescore.teams[side].errors)) {
       result += `<td>${linescore.teams[side].errors}</td>`
     } else {
+      result += '<td></td>'
       result += '<td></td>'
     }
   }

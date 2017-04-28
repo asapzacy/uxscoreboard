@@ -36,11 +36,10 @@ class MlbContainer extends Component {
     }
     const currentScores = this.state.cache[dt]
     if (dt !== this.state.today && currentScores) {
-      const games = currentScores
       this.setState({
         isLoading: false,
-        scores: games,
-        year: games[0].season,
+        scores: currentScores,
+        year: currentScores[0].season,
         date: dt
       })
     } else {

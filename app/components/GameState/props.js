@@ -6,12 +6,13 @@ export const mlbGameStateProps = (game) => {
   const isDoubleHeader = game.doubleHeader === 'S'
   const inGame = game.status.abstractGameCode === 'L'
   const isOver = game.status.abstractGameCode === 'F'
-  const hasStarted = inGame || isOver
+  const isDelayed = game.status.codedGameState === 'D'
+  const hasStarted = (inGame || isOver) && !isDelayed
   const inningState = inGame ? game.linescore.inningState : ''
   const inBetween = inningState && inningState !== 'Middle' && inningState !== 'End'
   return {
     gameState: inGame ? 1 : isOver ? 2 : 0,
-    status: game.status.abstractGameState,
+    status: isDelayed ? `${game.status.detailedState} - (${game.status.reason})` : game.status.abstractGameState,
     time: `${formatTimezone(game.gameDate)} ET`,
     periods: 9,
     currentTime: inBetween && `${game.linescore.outs} ${game.linescore.outs === 1 ? 'out' : 'outs'}`,

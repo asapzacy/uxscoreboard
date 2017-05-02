@@ -12,6 +12,7 @@
 /* -------  table container  ------- */
 .tableContainer {
   font-size:0.8em;
+  letter-spacing:0;
   display:flex;
   align-items:flex-start;
 }
@@ -21,15 +22,11 @@
   table-layout:fixed;
   border-collapse:collapse;
 }
-/* -------  table th  ------- */
+/* -------  table tr  ------- */
 .table tr {
   height:3em;
 }
-/* -------  table th  ------- */
-.table th {
-  letter-spacing:0;
-}
-/* -------  table th  ------- */
+/* -------  table tr th - first child  ------- */
 .table tr th:first-child {
   text-align:left;
   width:40%;
@@ -39,7 +36,7 @@
 .tableHead {
   border-bottom:1px solid #e0e0e0;
 }
-/* -------  table body  ------- */
+/* -------  table tr - evens  ------- */
 .tableBody tr:nth-of-type(even) {
   background:#f5f5f5;
 }

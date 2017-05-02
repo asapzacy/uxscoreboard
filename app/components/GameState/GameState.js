@@ -3,6 +3,8 @@ import { periodSuffix } from 'helpers/utils'
 import { gameStateContainer, inGameStateContainer } from './styles.css'
 
 export default function GameState(props) {
+
+  console.log(props)
   if (props.gameState === 0) return <PreGameState {...props} />
   if (props.gameState === 1) return <InGameState {...props} />
   if (props.gameState === 2) return <PostGameState {...props} />

@@ -4,7 +4,7 @@ import { formatTimezone } from 'helpers/utils'
 export const mlbGameStateProps = (game) => {
   const isPlayoffs = game.gameType !== 'R'
   const isDoubleHeader = game.doubleHeader === 'S'
-  const inGame = game.status.abstractGameCode === 'L'
+  const inGame = game.status.abstractGameCode === 'L' && game.status.codedGameState !== 'P'
   const isOver = game.status.abstractGameCode === 'F'
   const isDelayed = game.status.codedGameState === 'D'
   const hasStarted = (inGame || isOver) && !isDelayed

@@ -7,8 +7,8 @@ export const mlbBoxScoreProps = (game, league) => {
   return {
     awayTeam: shortenTeamName(game.teams.away.team.teamName),
     homeTeam: shortenTeamName(game.teams.home.team.teamName),
-    awayScore: hasStarted && game.linescore.teams.away.runs ? game.linescore.teams.away.runs : '',
-    homeScore: hasStarted && game.linescore.teams.home.runs ? game.linescore.teams.home.runs : '',
+    awayScore: hasStarted && game.linescore.teams.away.runs !== undefined ? game.linescore.teams.away.runs : '',
+    homeScore: hasStarted && game.linescore.teams.home.runs !== undefined ? game.linescore.teams.home.runs : '',
     linescore: game.linescore ? game.linescore : '',
     periods: 9,
     totalPeriods: size,

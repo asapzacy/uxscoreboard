@@ -49,11 +49,12 @@ export const nhlTeamProps = (game, side, league) => {
   const inGame = game.status.codedGameState > '2'
   const isAllStar = game.gameType === 'A'
   const isPlayoffs = game.gameType === 'P'
+  const teamArray = side === 'away' ? 0 : 1
   return {
     name: shortenTeamName(game.teams[side].team.teamName),
     code: game.teams[side].team.abbreviation.toLowerCase(),
-    ws: !isAllStar && String(game.teams[side].leagueRecord.wins),
-    ls: !isAllStar && String(game.teams[side].leagueRecord.losses),
+    ws: !isAllStar && isPlayoffs ? String(game.seriesSummary.series.matchupTeams[teamArray].seriesRecord.wins) : String(game.teams[side].leagueRecord.wins),
+    ls: !isAllStar && isPlayoffs ? String(game.seriesSummary.series.matchupTeams[teamArray].seriesRecord.losses) : String(game.teams[side].leagueRecord.losses),
     ts: (!isAllStar && !isPlayoffs) && String(game.teams[side].leagueRecord.ot),
     score: inGame && String(game.teams[side].score),
     league

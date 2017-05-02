@@ -10,10 +10,11 @@ export const mlbGameStateProps = (game) => {
   const hasStarted = (inGame || isOver) && !isDelayed
   const inningState = inGame ? game.linescore.inningState : ''
   const inBetween = inningState && inningState !== 'Middle' && inningState !== 'End'
+  const time = `${formatTimezone(game.gameDate)} ET`
   return {
     gameState: inGame ? 1 : isOver ? 2 : 0,
     status: game.status.abstractGameState,
-    time: isDelayed ? `${game.status.detailedState} - (${game.status.reason})` : `${formatTimezone(game.gameDate)} ET`,
+    time: isDelayed ? `${time} - ${game.status.detailedState} (${game.status.reason})` : time,
     periods: 9,
     currentTime: inBetween && `${game.linescore.outs} ${game.linescore.outs === 1 ? 'out' : 'outs'}`,
     currentPeriod: inGame && `${inningState === 'End' ? inningState.toUpperCase() : inningState} ${game.linescore.currentInning}`,

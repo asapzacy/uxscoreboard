@@ -15,8 +15,8 @@ class ScoreboardContainer extends Component {
         isFinals: false,
       },
       direction: {
-        enter: 'Up',
-        leave: 'Down'
+        enter: '',
+        leave: ''
       }
     }
   }

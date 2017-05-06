@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Nba } from 'components'
-import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
+import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
 import { ref } from 'config/firebase'
 

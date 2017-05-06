@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Nhl } from 'components'
-import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
+import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNhlScores } from 'helpers/api'
 import { seasons } from 'helpers/seasons'
 

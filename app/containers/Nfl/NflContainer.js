@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Nfl } from 'components'
-import { getTodaysDate, isValidDate, isInSeason } from 'helpers/utils'
+import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNflScores } from 'helpers/api'
 import { parseString } from 'xml2js'
 

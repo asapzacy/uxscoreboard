@@ -17,17 +17,6 @@ export const isValidDate = (dt) => dt.length === 8 && Number.isInteger(Number(dt
 
 export const checkDay = (day, start, end) => (day >= start) && (day <= end)
 
-// check if date is in season
-// if not - return date closest to start of next season or end of last season
-// TODO: add next season start dates !!
-export const isInSeason = (dt, start, end) => {
-  if (dt >= start && dt <= end) return dt
-  if (Math.abs(dt - start) <= Math.abs(dt - end)) return start
-  if (Math.abs(dt - end) <= Math.abs(dt - start)) return end
-  return dt
-}
-
-
 export const shortenTeamName = (name) => {
   switch(name) {
     case 'Blue Jackets':  return 'Jackets'

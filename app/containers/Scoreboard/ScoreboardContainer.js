@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Scoreboard } from 'components'
 import { seasons } from 'helpers/seasons'
-import { checkDay } from 'helpers/utils'
+import { checkDay, formatDateStr } from 'helpers/utils'
 
 class ScoreboardContainer extends Component {
   constructor() {
@@ -21,11 +21,15 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
+    this.updatePageTitle()
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {
     this.checkSeason(nextProps.date)
     this.checkDirection(this.props.date, nextProps.date)
+  }
+  updatePageTitle() {
+    document.title = `uxscoreboard | ${this.props.league.toUpperCase()}`
   }
   checkDirection(oldDate, newDate) {
     let enterDirection

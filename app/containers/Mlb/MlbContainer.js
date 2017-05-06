@@ -36,6 +36,7 @@ class MlbContainer extends Component {
   }
   updatePageTitle() {
     document.title = `uxscoreboard | ${this.props.league.toUpperCase()}`
+    document.getElementsByTagName('meta')['description'].content = `uxscoreboard | live ${this.props.league.toUpperCase()} scores`
   }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
@@ -60,7 +61,7 @@ class MlbContainer extends Component {
       })
       .then(() => this.saveScores())
       .then(() => this.refreshScores(dt))
-   }
+  }
   delay() {
     if (this.state.isLoading) {
       this.delayId = setTimeout(() => {
@@ -70,7 +71,7 @@ class MlbContainer extends Component {
   }
   refreshScores(dt) {
     clearTimeout(this.refreshId)
-    this.refreshId = setTimeout(() => this.makeRequest(dt), 30000)
+    this.refreshId = setTimeout(() => this.makeRequest(dt), 300000)
   }
   getCache() {
     ref.once('value', (snapshot) => {

@@ -1,16 +1,9 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { Link } from 'react-router'
 import moment from 'moment'
 import ArrowBack from 'react-icons/lib/io/ios-arrow-back'
 import ArrowForward from 'react-icons/lib/io/ios-arrow-forward'
 import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink, dateText } from './styles.css'
-
-const propTypes = {
-  width: PropTypes.number.isRequired,
-  date: PropTypes.string.isRequired,
-  today: PropTypes.string.isRequired,
-  league: PropTypes.string.isRequired
-}
 
 // TODO: implement a calendar
 const Date = ({ width, ...props }) => (
@@ -38,7 +31,6 @@ const Date = ({ width, ...props }) => (
   </nav>
 )
 
-Date.propTypes = propTypes
 
 export default Date
 

@@ -45,7 +45,7 @@
   display:inline-block;
   margin:0 2px;
   border-radius:50%;
-  background:#bababa;
+  background:#d4d4d4;
 }
 :global(.circle::after) {
   content:'';
@@ -63,9 +63,6 @@
 :global(.circle.circleFilled::after) {
   opacity:1;
 }
-/*:global(.bso:first-child .circle::after) {
-  background:#00ba21
-}*/
 
 
 

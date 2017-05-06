@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Footer, Test } from 'components'
+import { Header, Footer } from 'components'
 import WebFont from 'webfontloader'
 import { mainContainer, innerContainer } from './styles.css'
 
@@ -26,7 +26,7 @@ class MainContainer extends Component {
   loadFonts() {
     WebFont.load({
       google: { families: [ 'Comfortaa:300,400,700' ] },
-      active() { document.getElementById('app').classList.add('go') },
+      active() { document.getElementById('app').classList.add('ready') },
       classes: false
     })
   }

@@ -1,15 +1,6 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { Loading, Scoreboard, NotFound } from 'components'
 import { ScoreboardContainer } from 'containers'
-
-const propTypes = {
-  isLoading: PropTypes.bool.isRequired,
-  isValid: PropTypes.bool.isRequired,
-  scores: PropTypes.object.isRequired,
-  date: PropTypes.string.isRequired,
-  today: PropTypes.string.isRequired,
-  league: PropTypes.string.isRequired
-}
 
 const defaultProps = {
   league: 'nhl'
@@ -28,5 +19,4 @@ export default function Nhl({ isLoading, isValid, scores, date, today, league })
   )
 }
 
-Nhl.propTypes = propTypes
 Nhl.defaultProps = defaultProps

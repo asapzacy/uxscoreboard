@@ -17,12 +17,14 @@ class MlbContainer extends Component {
       date: '',
       today: ''
     }
+    this.makeRequest = this.makeRequest.bind(this)
   }
   componentDidMount() {
     this.setState({ today: getTodaysDate()  }, () => {
       this.makeRequest(this.props.routeParams.date)
       this.getCache()
     })
+    // setInterval(this.makeRequest, 1000)
   }
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
@@ -30,18 +32,24 @@ class MlbContainer extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.date !== nextState.date
   }
+  componentWillUnmount() {
+    clearInterval(this.makeRequest)
+  }
   makeRequest(dt = this.state.today) {
+    console.log('go')
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    const currentScores = this.state.cache[dt]
-    if (dt !== this.state.today && currentScores) {
-      this.setState({
-        isLoading: false,
-        scores: currentScores,
-        year: currentScores[0].season,
-        date: dt
-      })
+    if (dt !== this.state.today) {
+      const currentScores = this.state.cache[dt]
+      if (currentScores) {
+        this.setState({
+          isLoading: false,
+          scores: currentScores,
+          year: currentScores[0].season,
+          date: dt
+        })
+      }
     } else {
       getMlbScores(dt)
         .then((currentScores) => {

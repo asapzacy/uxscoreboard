@@ -3,7 +3,7 @@ import { shortenTeamName } from 'helpers/utils'
 //  mlb home + away team props --> Team component
 export const mlbTeamProps = (game, side, league) => {
   const isAllStar = game.game_type === 'A'
-  const hasStarted = game.status.statusCode === 'I' || game.status.statusCode === 'F' || game.status.statusCode === 'O'
+  const hasStarted = game.status.abstractGameCode === 'L' || game.status.codedGameState === 'I' || game.status.statusCode === 'F' || game.status.statusCode === 'O'
   return {
     name: shortenTeamName(game.teams[side].team.teamName),
     code: game.teams[side].team.fileCode,

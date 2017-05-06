@@ -17,16 +17,15 @@ const PreGameState = ({ time, isPlayoffs, playoffs }) => (
   </section>
 )
 
-function InGameState({ currentTime, currentPeriod, isHalfTime, status }) {
-  return (
-    <section className={inGameStateContainer}>
-      { isHalfTime
-        ? <span>{status}</span>
-        : <span>{currentTime && `${currentTime} • `}{currentPeriod}<sup>{periodSuffix(currentPeriod)}</sup></span>
-      }
-    </section>
-  )
-}
+const InGameState = ({ currentTime, currentPeriod, isHalfTime, status, inGameDelay }) => (
+  <section className={inGameStateContainer} style={{justifyContent:inGameDelay && 'space-between'}}>
+    { inGameDelay && <span>{status}</span> }
+    { isHalfTime
+      ? <span>{status}</span>
+      : <span>{currentTime && `${currentTime} • `}{currentPeriod}<sup>{periodSuffix(currentPeriod)}</sup></span>
+    }
+  </section>
+)
 
 function PostGameState({ periods, totalPeriods, status, overtime, isDoubleHeader, doubleHeader, isPlayoffs, playoffs }) {
   return (

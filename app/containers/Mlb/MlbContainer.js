@@ -20,6 +20,7 @@ class MlbContainer extends Component {
     this.makeRequest = this.makeRequest.bind(this)
   }
   componentDidMount() {
+    this.updatePageTitle()
     this.setState({ today: getTodaysDate() }, () => {
       this.makeRequest(this.props.routeParams.date)
       this.getCache()
@@ -32,6 +33,9 @@ class MlbContainer extends Component {
   componentWillUnmount() {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
+  }
+  updatePageTitle() {
+    document.title = `uxscoreboard | ${this.props.league.toUpperCase()}`
   }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
@@ -56,7 +60,7 @@ class MlbContainer extends Component {
       })
       .then(() => this.saveScores())
       .then(() => this.refreshScores(dt))
-  }
+   }
   delay() {
     if (this.state.isLoading) {
       this.delayId = setTimeout(() => {
@@ -83,4 +87,5 @@ class MlbContainer extends Component {
   }
 }
 
+MlbContainer.defaultProps = { league: 'mlb' }
 export default MlbContainer

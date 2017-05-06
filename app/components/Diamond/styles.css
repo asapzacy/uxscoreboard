@@ -39,10 +39,6 @@
   width:1.25em;
   letter-spacing:-1px;
 }
-/* -------  bso data  ------- */
-.bsoData {
-}
-
 :global(.circle) {
   width:11px;
   height:11px;
@@ -61,9 +57,15 @@
   opacity:0;
   transition:0.44s opacity;
 }
+.bso:first-child :global(.circleFilled::after) {
+  background:#00ba21;
+}
 :global(.circle.circleFilled::after) {
   opacity:1;
 }
+/*:global(.bso:first-child .circle::after) {
+  background:#00ba21
+}*/
 
 
 

@@ -27,6 +27,7 @@ export const formatBoxScoreTableHead = (periods, totalPeriods, league, overtimes
 
 export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods, totalPeriods, league) => {
   let result = `<th>${team}</th>`
+  // result += `<span class='scores'>`
   const end = Math.max(periods, totalPeriods)
   for (let i = 0; i < end; i++) {
     if (league === 'nhl') {
@@ -65,6 +66,7 @@ export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods
       }
     }
   }
+  // result += '</span>'
   if (league === 'mlb') {
     result += '<td></td>'
   }

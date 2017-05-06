@@ -15,7 +15,7 @@ export const mlbGameStateProps = (game) => {
   return {
     gameState: inGame ? 1 : isOver && !isDelayed ? 2 : 0,
     status: inGameDelay ? `${game.status.detailedState} - (${game.status.reason})` : game.status.abstractGameState,
-    time: isDelayed ? `${time} - ${game.status.detailedState} (${game.status.reason})` : time,
+    time: isDelayed ? `${time} - ${game.status.detailedState} (${game.status.reason.split(' ').pop()})` : time,
     periods: 9,
     currentTime: inBetween && `${game.linescore.outs} ${game.linescore.outs === 1 ? 'out' : 'outs'}`,
     currentPeriod: inGame && `${inningState === 'End' ? inningState.toUpperCase() : inningState} ${game.linescore.currentInning}`,

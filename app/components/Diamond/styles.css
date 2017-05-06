@@ -49,12 +49,21 @@
   display:inline-block;
   margin:0 2px;
   border-radius:50%;
-  background:#aaa;
+  background:#bababa;
 }
-:global(.circleFilled) {
+:global(.circle::after) {
+  content:'';
+  display:block;
+  height:100%;
+  width:100%;
+  border-radius:100%;
   background:#ba0021;
+  opacity:0;
+  transition:0.44s opacity;
 }
-
+:global(.circle.circleFilled::after) {
+  opacity:1;
+}
 
 
 

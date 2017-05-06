@@ -6,7 +6,7 @@ export default function GameState(props) {
   if (props.gameState === 0) return <PreGameState {...props} />
   if (props.gameState === 1) return <InGameState {...props} />
   if (props.gameState === 2) return <PostGameState {...props} />
-  return <h1>{'ay'}</h1>
+  return
 }
 
 
@@ -18,21 +18,16 @@ const PreGameState = ({ time, isPlayoffs, playoffs }) => (
 )
 
 const InGameState = ({ currentTime, currentPeriod, isHalfTime, status, inGameDelay }) => (
-  <section className={inGameStateContainer} style={{justifyContent:inGameDelay && 'space-between'}}>
-    { inGameDelay && <span>{status}</span> }
-    { isHalfTime
-      ? <span>{status}</span>
-      : <span>{currentTime && `${currentTime} • `}{currentPeriod}<sup>{periodSuffix(currentPeriod)}</sup></span>
-    }
+  <section className={inGameStateContainer}>
+    { !isHalfTime && <span>{currentTime && `${currentTime} • `}{currentPeriod}<sup>{periodSuffix(currentPeriod)}</sup></span> }
+    { (isHalfTime || inGameDelay) && <span>{status}</span> }
   </section>
 )
 
-function PostGameState({ periods, totalPeriods, status, overtime, isDoubleHeader, doubleHeader, isPlayoffs, playoffs }) {
-  return (
-    <section className={gameStateContainer}>
-      <span>{totalPeriods > periods ? `${status}/${overtime}` : status}</span>
-      { isDoubleHeader && <span>{`Game ${doubleHeader} of 2`}</span> }
-      { isPlayoffs && <span>{`Game ${playoffs.game} of ${playoffs.maxGames}`}</span> }
-    </section>
-  )
-}
+const PostGameState = ({ periods, totalPeriods, status, overtime, isDoubleHeader, doubleHeader, isPlayoffs, playoffs }) => (
+  <section className={gameStateContainer}>
+    <span>{totalPeriods > periods ? `${status}/${overtime}` : status}</span>
+    { isDoubleHeader && <span>{`Game ${doubleHeader} of 2`}</span> }
+    { isPlayoffs && <span>{`Game ${playoffs.game} of ${playoffs.maxGames}`}</span> }
+  </section>
+)

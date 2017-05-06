@@ -1,22 +1,4 @@
 
-export const velocity_home = {
-  enter: {
-    animation: 'fadeIn',
-    duration: 440,
-    delay: 0,
-    display: 'block',
-  },
-  runOnMount: true,
-  component: 'main',
-  leave: {
-    animation: 'slideUp',
-    duration: 220,
-    delay: 220,
-    display: 'block'
-
-  }
-}
-
 export const velocity_game = {
   enter: {
     animation: 'slideDown',
@@ -33,8 +15,8 @@ export const velocity_game = {
 export const velocity_scoreboard = (direction) => ({
   enter: {
     animation: `transition.slide${direction.enter ? direction.enter : 'Up'}${direction.enter ? 'Big' : ''}In`,
-    duration: !direction.enter ? 1440 : 480,
-    delay: !direction.enter ? 0 : 316,
+    duration: direction.enter ? 480 : 1440,
+    delay: direction.enter ? 315 : 0,
     display: 'flex',
     style: {
       position: 'relative',

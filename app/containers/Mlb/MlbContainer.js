@@ -20,56 +20,53 @@ class MlbContainer extends Component {
     this.makeRequest = this.makeRequest.bind(this)
   }
   componentDidMount() {
-    this.setState({ today: getTodaysDate()  }, () => {
+    this.setState({ today: getTodaysDate() }, () => {
       this.makeRequest(this.props.routeParams.date)
       this.getCache()
     })
-    // setInterval(this.makeRequest, 1000)
   }
   componentWillReceiveProps(nextProps) {
+    clearTimeout(this.refreshId)
     this.makeRequest(nextProps.routeParams.date)
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.date !== nextState.date
-  }
   componentWillUnmount() {
-    clearInterval(this.makeRequest)
+    clearTimeout(this.delayId)
+    clearTimeout(this.refreshId)
   }
   makeRequest(dt = this.state.today) {
-    console.log('go')
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    if (dt !== this.state.today) {
-      const currentScores = this.state.cache[dt]
-      if (currentScores) {
+    getMlbScores(dt)
+      .then((currentScores) => {
+        const games = currentScores.dates[0].games
+        this.setState({
+          scores: games,
+          year: games[0].season,
+          date: dt
+        }, () => this.delay())
+      })
+      .catch((error) =>  {
         this.setState({
           isLoading: false,
-          scores: currentScores,
-          year: currentScores[0].season,
+          isError: true,
           date: dt
         })
-      }
-    } else {
-      getMlbScores(dt)
-        .then((currentScores) => {
-          const games = currentScores.dates[0].games
-          this.setState({
-            isLoading: false,
-            scores: games,
-            year: games[0].season,
-            date: dt
-          }, () => this.saveScores())
-        })
-        .catch((error) =>  {
-          this.setState({
-            isLoading: false,
-            isError: true,
-            date: dt
-          })
-          throw new Error(error)
-        })
+        throw new Error(error)
+      })
+      .then(() => this.saveScores())
+      .then(() => this.refreshScores(dt))
+  }
+  delay() {
+    if (this.state.isLoading) {
+      this.delayId = setTimeout(() => {
+        this.setState({ isLoading: false })
+      }, 960)
     }
+  }
+  refreshScores(dt) {
+    clearTimeout(this.refreshId)
+    this.refreshId = setTimeout(() => this.makeRequest(dt), 30000)
   }
   getCache() {
     ref.once('value', (snapshot) => {

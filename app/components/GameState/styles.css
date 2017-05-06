@@ -11,6 +11,6 @@
 
 /* -------  in-game state container  ------- */
 .inGameStateContainer {
-  justify-content:flex-end;
+  flex-direction:row-reverse;
   composes:gameStateContainer;
 }

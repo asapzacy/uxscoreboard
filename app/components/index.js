@@ -6,6 +6,7 @@ export Footer from './Footer/Footer'
 
 /* -------  random components  ------- */
 export About from './About/About'
+export Social from './Social/Social'
 export NotFound from './NotFound/NotFound'
 export Loading from './Loading/Loading'
 export NoGames from './NoGames/NoGames'

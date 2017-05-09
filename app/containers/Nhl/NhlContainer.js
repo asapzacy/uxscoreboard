@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Nhl } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNhlScores } from 'helpers/api'
-import { seasons } from 'helpers/seasons'
 
 class NhlContainer extends Component {
   constructor() {
@@ -23,7 +22,7 @@ class NhlContainer extends Component {
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(dt=this.state.today) {
+  makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
@@ -39,8 +38,10 @@ class NhlContainer extends Component {
         console.log(error)
         this.setState({
           isLoading: false,
+          isError: true,
           date: dt
         })
+        throw new Error(error)
       })
   }
   render() {

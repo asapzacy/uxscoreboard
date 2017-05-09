@@ -21,15 +21,11 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
-    this.updatePageTitle()
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {
     this.checkSeason(nextProps.date)
     this.checkDirection(this.props.date, nextProps.date)
-  }
-  updatePageTitle() {
-    document.title = `uxscoreboard | ${this.props.league.toUpperCase()}`
   }
   checkDirection(oldDate, newDate) {
     let enterDirection

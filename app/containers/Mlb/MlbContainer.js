@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Mlb } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
+import { updatePageInfo } from 'config/metadata'
 import { ref } from 'config/firebase'
 
 class MlbContainer extends Component {
@@ -20,7 +21,11 @@ class MlbContainer extends Component {
     this.makeRequest = this.makeRequest.bind(this)
   }
   componentDidMount() {
-    this.updatePageTitle()
+    const pageInfo = {
+      title: `uxscoreboard | ${this.props.league.toUpperCase()}`,
+      desc: `uxscoreboard | live ${this.props.league.toUpperCase()} scores`
+    }
+    updatePageInfo(pageInfo)
     this.setState({ today: getTodaysDate() }, () => {
       this.makeRequest(this.props.routeParams.date)
       this.getCache()
@@ -33,10 +38,6 @@ class MlbContainer extends Component {
   componentWillUnmount() {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
-  }
-  updatePageTitle() {
-    document.title = `uxscoreboard | ${this.props.league.toUpperCase()}`
-    document.getElementsByTagName('meta')['description'].content = `uxscoreboard | live ${this.props.league.toUpperCase()} scores`
   }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
@@ -59,8 +60,8 @@ class MlbContainer extends Component {
         })
         throw new Error(error)
       })
-      .then(() => this.saveScores())
       .then(() => this.refreshScores(dt))
+      .then(() => this.saveScores())
   }
   delay() {
     if (this.state.isLoading) {
@@ -71,7 +72,7 @@ class MlbContainer extends Component {
   }
   refreshScores(dt) {
     clearTimeout(this.refreshId)
-    this.refreshId = setTimeout(() => this.makeRequest(dt), 300000)
+    this.refreshId = setTimeout(() => this.makeRequest(dt), 100000)
   }
   getCache() {
     ref.once('value', (snapshot) => {

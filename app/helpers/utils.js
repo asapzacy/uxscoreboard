@@ -41,8 +41,8 @@ export function formatTimezone(time) {
 }
 
 export const periodSuffix = (period) => {
-  const digit = period.split(' ').pop()
-  const x = !(digit >= 10 && digit <= 20) && String(period).slice(-1)
+  let digit = String(period).replace(/[^0-9]/g,'')
+  let x = (digit <= 10 || digit >= 20) ? digit.slice(-1) : ''
   switch (x) {
     case '1': return 'st'
     case '2': return 'nd'

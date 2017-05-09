@@ -8,14 +8,13 @@ import { mlbGameStateProps, nflGameStateProps, nbaGameStateProps, nhlGameStatePr
 import { gameItem, topHalf, details, detailsExpanded } from './styles.css'
 
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
-const style = (isHovered) => ({ flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.01)' })
+const style = (isHovered) => ({ flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0075)' })
 
 export default function Game(props) {
   if (props.league === 'mlb') return <MlbGame {...props} />
   if (props.league === 'nba') return <NbaGame {...props} />
   if (props.league === 'nfl') return <NflGame {...props} />
   if (props.league === 'nhl') return <NhlGame {...props} />
-  return <h1>{'i hope this doesn\'t run'}</h1>
 }
 
 const NbaGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (

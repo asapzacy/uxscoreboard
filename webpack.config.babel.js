@@ -121,8 +121,8 @@ const developmentConfig = {
   },
   plugins: [
     ...sharedPlugins,
-    new webpack.HotModuleReplacementPlugin(),
-    browserSyncPlugin
+    browserSyncPlugin,
+    new webpack.HotModuleReplacementPlugin()
   ]
 }
 
@@ -133,7 +133,8 @@ const productionConfig = {
     productionPlugin,
     statsWriterPlugin,
     visualizerPlugin,
-    new webpack.optimize.AggressiveMergingPlugin()
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin()
   ]
 }
 

@@ -1,30 +1,80 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { headerContainer, logoContainer, logo, trigger, triggerTop,
+import { Social } from 'components'
+import { headerContainer, menuOpen, logoContainer, logo, trigger, triggerTop,
   triggerBottom, menuContainer, menuList, menuItem, menuBlock, menuExtra,
-  menuLink, menuLinkExtra, menuOpen } from './styles.css'
+  menuLink, menuLinkExtra, menuIcon, menuText, menuFooter } from './styles.css'
 
-export default function Header({isMenuOpen, menuHeight, triggerMenu}) {
+const Header = ({ isMenuOpen, menuHeight, triggerMenu }) => (
+  <header className={isMenuOpen ? menuOpen : headerContainer}>
+    <Logo triggerMenu={triggerMenu} />
+    <Menu menuHeight={menuHeight} />
+  </header>
+)
+
+export default Header
+
+
+const Logo = ({ triggerMenu }) => (
+  <section className={logoContainer}>
+    <Link to='/' title={'uxscoreboard'}>
+      <img className={logo} src={'./assets/img/uxscoreboard.svg'} alt={'uxscoreboard'} title={'uxscoreboard logo'} />
+    </Link>
+    <span className={trigger} onClick={triggerMenu}>
+      <span className={triggerTop}></span>
+      <span className={triggerBottom}></span>
+    </span>
+  </section>
+)
+
+const mainLinks = [
+  { name: 'MLB', icon: 'baseball',  },
+  { name: 'NBA', icon: 'basketball' },
+  { name: 'NFL', icon: 'football'   },
+  { name: 'NHL', icon: 'hockey'     }
+]
+const extraLinks = [
+  { name: 'about' },
+  { name: 'source', url: 'https://github.com/zacarellano/uxscoreboard' }
+]
+
+const Menu = ({ menuHeight }) => (
+  <nav className={menuContainer} style={{maxHeight:menuHeight}}>
+    <menu className={menuList}>
+      { mainLinks.map((el, i) => <MenuItem {...el} key={i} />) }
+      <span className={menuBlock}></span>
+      { extraLinks.map((el, i) => <ExtraMenuItem {...el} key={i} />) }
+    </menu>
+    <footer className={menuFooter}>
+      <Social />
+    </footer>
+  </nav>
+)
+
+
+const MenuItem = ({ name, icon }) => {
+  console.log(name, icon)
   return (
-    <header className={isMenuOpen ? menuOpen : headerContainer}>
-      <div className={logoContainer}>
-        <Link to='/'><img className={logo} src={'/assets/img/uxscoreboard.svg'} alt={'uxscoreboard'}/></Link>
-        <span className={trigger} onClick={triggerMenu}>
-          <span className={triggerTop}></span>
-          <span className={triggerBottom}></span>
+    <li className={menuItem}>
+      <Link className={menuLink} to={`/${name.toLowerCase()}`} title={`uxscoreboard | ${name} scores`} activeClassName='active'>
+        <span className={menuText}>
+          <span className={menuIcon} style={{backgroundImage:`url('./assets/icons/${icon}.svg')`}}></span>
+          {name}
         </span>
-      </div>
-      <nav className={menuContainer} style={{maxHeight:menuHeight}}>
-        <menu className={menuList}>
-          <li className={menuItem}><Link className={menuLink} to='/mlb' activeClassName='active'>{'MLB'}</Link></li>
-          <li className={menuItem}><Link className={menuLink} to='/nba' activeClassName='active'>{'NBA'}</Link></li>
-          <li className={menuItem}><Link className={menuLink} to='/nfl' activeClassName='active'>{'NFL'}</Link></li>
-          <li className={menuItem}><Link className={menuLink} to='/nhl' activeClassName='active'>{'NHL'}</Link></li>
-          <li className={menuBlock}></li>
-          <li className={menuExtra}><Link className={menuLinkExtra} to='/about' activeClassName='active'>{'about'}</Link></li>
-          <li className={menuExtra}><a className={menuLinkExtra} href='https://github.com/zacarellano/uxscoreboard'>{'source'}</a></li>
-        </menu>
-      </nav>
-    </header>
+      </Link>
+    </li>
   )
 }
+
+const ExtraMenuItem = ({ name, url }) => (
+  <li className={menuExtra}>
+    { url
+      ? <a className={menuLinkExtra} href={url} title={`uxscoreboard | ${name}`}>
+          <span className={menuText}>{name}</span>
+        </a>
+      : <Link className={menuLinkExtra} to={`/${name}`} title={`uxscoreboard | ${name}`} activeClassName={'active'}>
+          <span className={menuText}>{name}</span>
+        </Link>
+    }
+  </li>
+)

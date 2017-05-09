@@ -21,7 +21,7 @@
 .logo {
   display:block;
   height:48px;
-  padding:1%;
+  padding:2%;
 }
 
 /* -------  trigger  ------- */
@@ -57,13 +57,14 @@
 
 /* -------  menu container  ------- */
 .menuContainer {
+  background:#fff;
   overflow:hidden;
   transition:0.22s max-height;
 }
 
 /* -------  menu list  ------- */
 .menuList {
-  padding:0.75em 1em;
+  padding:0.75em 1em 0;
 }
 
 /* -------  menu item  ------- */
@@ -73,13 +74,13 @@
 
 /* -------  menu item  ------- */
 .menuBlock {
+  display:block;
   height:0.5em;
 }
 
 /* -------  menu link  ------- */
 .menuLink {
   display:block;
-  transition:0.22s color;
 }
 
 /* -------  menu link - ::after  ------- */
@@ -112,6 +113,34 @@
   transform:rotate(45deg);
 }
 
+
+.menuIcon {
+  content:'';
+  display:inline-block;
+  height:1em;
+  width:1.5em;
+  margin:0.2em 0.2em 0em 0;
+  float:left;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+.menuText {
+  display:inline-block;
+  transform:translateX(0px);
+  transition:transform 0.22s;
+}
+
+.menuLink:hover .menuText {
+  transform:translateX(6px);
+}
+
+.menuFooter {
+  height:2em;
+  font-size:1.6em;
+  color:#070707;
+}
 
 /* -------------------------------- */
 /* -------     >= 667px     ------- */

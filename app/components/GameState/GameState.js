@@ -10,9 +10,10 @@ export default function GameState(props) {
 }
 
 
-const PreGameState = ({ time, isPlayoffs, playoffs }) => (
+const PreGameState = ({ time, isPlayoffs, playoffs, isDoubleHeader, doubleHeader }) => (
   <section className={gameStateContainer}>
     <span>{time}</span>
+    { isDoubleHeader && <span>{`Game ${doubleHeader} of 2`}</span> }
     { isPlayoffs && <span>{`Game ${playoffs.game} of ${playoffs.maxGames}`}</span> }
   </section>
 )

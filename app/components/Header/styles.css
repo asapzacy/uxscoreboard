@@ -21,7 +21,7 @@
 .logo {
   display:block;
   height:48px;
-  padding:2%;
+  padding:1.5%;
 }
 
 /* -------  trigger  ------- */
@@ -94,7 +94,6 @@
 /* -------  menu link - extra  ------- */
 .menuLinkExtra {
   font-size:85%;
-  letter-spacing:0;
   composes:menuLink;
 }
 
@@ -133,13 +132,19 @@
 }
 
 .menuLink:hover .menuText {
-  transform:translateX(6px);
+  transform:translateX(10%);
 }
 
 .menuFooter {
   height:2em;
   font-size:1.6em;
   color:#070707;
+}
+
+@media only screen and (min-width:550px) and (max-width:667px) {
+  .headerContainer {
+    font-size:1.25em;
+  }
 }
 
 /* -------------------------------- */
@@ -160,11 +165,13 @@
   .logoContainer {
     padding:0;
   }
+
   .trigger {
     display:none;
   }
 
   .menuContainer {
+    background:initial;
     flex-grow:1;
     max-width:667px;
   }
@@ -180,9 +187,6 @@
   }
   .menuExtra {
     margin:6px 0.5% 0;
-  }
-  .menuLink:hover {
-    color:initial;
   }
   .menuLink::after, :global(.active::after) {
     width:0;
@@ -204,4 +208,8 @@
     background:#070707;
     margin:0 1%;
   }
+  .menuLink:hover .menuText {
+    transform:none;
+  }
+
 }

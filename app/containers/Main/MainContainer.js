@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Footer } from 'components'
+import { Header, Footer, Social } from 'components'
 import WebFont from 'webfontloader'
 import { mainContainer, innerContainer } from './styles.css'
 
@@ -35,7 +35,7 @@ class MainContainer extends Component {
       const header = document.querySelector('header')
       const navHeight = header.querySelector('nav').scrollHeight
       if (this.state.screenWidth >= 667) {
-        this.setState({ menuHeight: 'initial' })
+        this.setState({ menuHeight: 'initial', isMenuOpen: false })
       } else {
         this.setState({ menuHeight: this.state.isMenuOpen ? navHeight : 0 })
       }

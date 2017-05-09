@@ -2,18 +2,19 @@
 /* -------  footer container  ------- */
 .footerContainer {
   width:100%;
+  height:6em;
 }
 
 /* -------  social container  ------- */
-.socialContainer {
+/*.socialContainer {
   display:flex;
   height:6em;
   justify-content:center;
   align-items:center;
-}
+}*/
 
 /* -------  social container - a  ------- */
-.socialContainer a {
+/*.socialContainer a {
   font-size:2.2em;
   line-height:0;
   padding:0.25em 0.5em;
@@ -21,8 +22,8 @@
   border:4px solid transparent;
   transition:color 0.22s, border-color 0.22s;
 }
-
+*/
 /* -------  social container - a - hover  ------- */
-.socialContainer a:hover {
+/*.socialContainer a:hover {
   border-color:#bdbdbd;
-}
+}*/

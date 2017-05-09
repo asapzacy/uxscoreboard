@@ -13,7 +13,7 @@
 .innerContainer {
   width:96%;
   display:flex;
-  flex:1 0 50%;
+  flex:1 0 auto;
   max-width:1600px;
 }
 

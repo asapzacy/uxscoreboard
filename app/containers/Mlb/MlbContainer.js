@@ -60,7 +60,7 @@ class MlbContainer extends Component {
         })
         throw new Error(error)
       })
-      .then(() => this.refreshScores(dt))
+      .then(() => this.refreshScores(dt, 30))
       .then(() => this.saveScores())
   }
   delay() {
@@ -70,9 +70,9 @@ class MlbContainer extends Component {
       }, 960)
     }
   }
-  refreshScores(dt) {
+  refreshScores(dt, seconds) {
     clearTimeout(this.refreshId)
-    this.refreshId = setTimeout(() => this.makeRequest(dt), 100000)
+    this.refreshId = setTimeout(() => this.makeRequest(dt), seconds * 1000)
   }
   getCache() {
     ref.once('value', (snapshot) => {

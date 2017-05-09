@@ -4,7 +4,7 @@
   height:100%;
   display:flex;
   flex-direction:column;
-  margin-bottom:4em;
+  padding-bottom:2em;
 }
 
 /* -------  games list  ------- */

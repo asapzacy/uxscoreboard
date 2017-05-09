@@ -5,10 +5,10 @@ import { homeContainer, uxscoreboard, name, description, leagueMenu, leagueList,
 
 const Home = () => (
   <div className={homeContainer}>
-    <div className={uxscoreboard}>
+    <section className={uxscoreboard}>
       <h1 className={name}>{'uxscoreboard'}</h1>
-      <h2 className={description}>{'live sports scoreboard built on React.js'}</h2>
-    </div>
+      <h2 className={description}>{'live sports scoreboard built on ES6 and React.js'}</h2>
+    </section>
     <nav className={leagueMenu}>
       <menu className={leagueList}>
         <li className={leagueItem}><Link className={mlbLink} to='/mlb'>{'MLB'}</Link></li>

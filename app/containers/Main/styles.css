@@ -14,6 +14,7 @@
   width:96%;
   display:flex;
   flex:1 0 auto;
+  min-height:60%;
   max-width:1600px;
 }
 

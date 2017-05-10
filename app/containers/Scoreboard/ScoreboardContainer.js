@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Scoreboard } from 'components'
 import { seasons } from 'helpers/seasons'
-import { checkDay, formatDateStr } from 'helpers/utils'
+import { checkDay, formatLastUpdatedString } from 'helpers/utils'
 
 class ScoreboardContainer extends Component {
   constructor() {
     super()
     this.state = {
+      lastUpdated: 0,
       seasonState: {
         isPreseason: false,
         isSeason: false,
@@ -21,27 +22,29 @@ class ScoreboardContainer extends Component {
     }
   }
   componentDidMount() {
+    this.updateTime()
     this.checkSeason(this.props.date)
   }
   componentWillReceiveProps(nextProps) {
+    this.updateTime()
     this.checkSeason(nextProps.date)
     this.checkDirection(this.props.date, nextProps.date)
   }
+  updateTime() {
+    this.setState({ lastUpdated: formatLastUpdatedString() })
+  }
   checkDirection(oldDate, newDate) {
-    let enterDirection
-    let leaveDirection
+    let enter
+    let leave
     if (oldDate > newDate) {
-      enterDirection = 'Left'
-      leaveDirection = 'Right'
+      enter = 'Left'
+      leave = 'Right'
     } else if (oldDate < newDate) {
-      enterDirection = 'Right'
-      leaveDirection = 'Left'
+      enter = 'Right'
+      leave = 'Left'
     }
     this.setState({
-      direction: {
-        enter: enterDirection,
-        leave: leaveDirection
-      }
+      direction: { enter, leave }
     })
   }
   checkSeason(day) {

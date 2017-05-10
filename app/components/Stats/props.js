@@ -1,5 +1,4 @@
-
-import { shortenTeamName } from '../utils'
+import { shortenTeamName } from 'helpers/utils'
 
 //  nba stats props --> Stats component
 export const nbaStatsProps = (game) => {

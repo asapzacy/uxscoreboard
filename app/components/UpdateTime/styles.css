@@ -1,0 +1,11 @@
+
+.updateTimeContainer {
+  text-align:right;
+  font-size:0.66em;
+  margin-top:2em;
+}
+
+.updateTime strong {
+  letter-spacing:0;
+  margin-right:0.5em;
+}

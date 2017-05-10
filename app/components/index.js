@@ -37,9 +37,7 @@ export BoxScore from './BoxScore/BoxScore'
 export Stats from './Stats/Stats'
 export Diamond from './Diamond/Diamond'
 export Leaders from './Leaders/Leaders'
-
-/* -------  map component  ------- */
-// export Map from './Map/Map'
+export UpdateTime from './UpdateTime/UpdateTime'
 
 /* -------  test component  ------- */
 export Test from './Test/Test'

@@ -17,7 +17,7 @@ export default function Game(props) {
   if (props.league === 'nhl') return <NhlGame {...props} />
 }
 
-const NbaGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
   <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nbaGameStateProps(game)} />
@@ -26,12 +26,12 @@ const NbaGame = ({ game, date, league, isExpanded, showDetails, isHovered, scale
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
     </VelocityTransitionGroup>
   </li>
 )
 
-const NflGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
   <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nflGameStateProps(game)} />
@@ -40,12 +40,12 @@ const NflGame = ({ game, date, league, isExpanded, showDetails, isHovered, scale
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
     </VelocityTransitionGroup>
   </li>
 )
 
-const MlbGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+const MlbGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
   <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...mlbGameStateProps(game)} />
@@ -54,12 +54,12 @@ const MlbGame = ({ game, date, league, isExpanded, showDetails, isHovered, scale
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
     </VelocityTransitionGroup>
   </li>
 )
 
-const NhlGame = ({ game, date, league, isExpanded, showDetails, isHovered, scaleGame }) => (
+const NhlGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
   <li className={gameItem} style={style(isHovered)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nhlGameStateProps(game)} />
@@ -68,7 +68,7 @@ const NhlGame = ({ game, date, league, isExpanded, showDetails, isHovered, scale
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} /> }
+      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
     </VelocityTransitionGroup>
   </li>
 )

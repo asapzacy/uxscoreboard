@@ -32,6 +32,10 @@ export function formatDateUrl() {
   return moment().format('YYYYMMDD')
 }
 
+export function formatLastUpdatedString() {
+  return moment().format('L h:mm:ss A')
+}
+
 export function formatDateStr(dt) {
   return moment(dt).format('MMMM D, YYYY')
 }

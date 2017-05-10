@@ -7,12 +7,12 @@ import 'velocity-animate/velocity.ui'
 import { velocity_scoreboard } from 'config/velocity'
 import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
 
-export default function Scoreboard({ scores, date, today, league, seasonState, direction }) {
+export default function Scoreboard({ scores, date, today, league, seasonState, direction, lastUpdated }) {
   let games
   if (league === 'mlb') {
     games = !scores.length || seasonState.isPreseason
       ? <NoGames />
-      : scores.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)
+      : scores.map(item => <GameContainer game={item} date={date} league={league} lastUpdated={lastUpdated} key={item.gamePk} />)
   }
   if (league === 'nba') {
     games = scores.numGames === 0 || !scores.sports_content.games.game.length
@@ -21,18 +21,18 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
         let combined = Object.assign({}, scores.games[index], item)
         getNbaGameDetails(date, item.id)
           .then(data => Object.assign(combined, data.sports_content.game))
-        return <GameContainer game={combined} date={date} league={league} key={item.id} />
+        return <GameContainer game={combined} date={date} league={league} lastUpdated={lastUpdated} key={item.id} />
       })
   }
   if (league === 'nhl') {
     games = !scores.dates.length
       ? <NoGames />
-      : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} key={item.gamePk} />)
+      : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} lastUpdated={lastUpdated} key={item.gamePk} />)
   }
   if (league === 'nfl') {
     games = !scores.g.length
       ? <NoGames />
-      : scores.g.map(item => <GameContainer game={item.$} date={date} league={league} key={item.$.eid} />)
+      : scores.g.map(item => <GameContainer game={item.$} date={date} league={league} lastUpdated={lastUpdated} key={item.$.eid} />)
   }
   let allStarGame = false
   if (league === 'nba') {
@@ -45,7 +45,7 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
       <DateContainer date={date} today={today} league={league} />
         <VelocityTransitionGroup className={fadeContainer} {...velocity_scoreboard(direction)}>
           <ul className={gamesList} key={date}>
-            { games }
+            {games}
           </ul>
         </VelocityTransitionGroup>
       { seasonState && seasonState.isAllStar && <AllStar img={allStarGame ? 'asg' : 'nola'} league={league} /> }

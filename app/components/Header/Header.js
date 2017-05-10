@@ -54,19 +54,17 @@ const Menu = ({ menuHeight, screenWidth }) => (
 )
 
 
-const MenuItem = ({ name, icon, screenWidth }) => {
-  console.log(name, icon)
-  return (
-    <li className={menuItem}>
-      <Link className={menuLink} to={`/${name.toLowerCase()}`} title={`uxscoreboard | ${name} scores`} activeClassName='active'>
-        <span className={menuText}>
-          { screenWidth < 667 && <span className={menuIcon} style={{backgroundImage:`url('/assets/icons/${icon}.svg')`}}></span> }
-          {name}
-        </span>
-      </Link>
-    </li>
-  )
-}
+const MenuItem = ({ name, icon, screenWidth }) => (
+  <li className={menuItem}>
+    <Link className={menuLink} to={`/${name.toLowerCase()}`} title={`uxscoreboard | ${name} scores`} activeClassName='active'>
+      <span className={menuText}>
+        { screenWidth < 667 && <span className={menuIcon} style={{backgroundImage:`url('/assets/icons/${icon}.svg')`}}></span> }
+        {name}
+      </span>
+    </Link>
+  </li>
+)
+
 
 const ExtraMenuItem = ({ name, url }) => (
   <li className={menuExtra}>

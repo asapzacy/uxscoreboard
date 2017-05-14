@@ -55,7 +55,7 @@
   border-radius:100%;
   background:#ba0021;
   opacity:0;
-  transition:0.44s opacity;
+  transition:opacity 0.88s;
 }
 .bso:first-child :global(.circleFilled::after) {
   background:#00ba21;

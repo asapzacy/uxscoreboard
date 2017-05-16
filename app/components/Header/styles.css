@@ -194,6 +194,10 @@
   .menuExtra {
     margin:6px 0.5% 0;
   }
+  .menuExtra:last-child {
+    margin-bottom:inherit;
+  }
+
   .menuLink::after, :global(.active::after) {
     width:0;
     margin-right:auto;

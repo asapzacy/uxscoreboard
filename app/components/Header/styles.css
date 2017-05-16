@@ -133,7 +133,6 @@
   display:inline-block;
   transform:translateX(0px);
   transition:transform 0.22s;
-  white-space:nowrap;
 }
 
 @media (hover) {

@@ -121,7 +121,7 @@
 
   /* -------  uxscoreboard  ------- */
   .uxscoreboard {
-    font-size:2.2em;
+    font-size:2em;
   }
 
 }
@@ -130,5 +130,10 @@
 /* -------     > 1331px     ------- */
 /* -------------------------------- */
 @media only screen and (min-width:1331px) {
+
+  /* -------  uxscoreboard  ------- */
+  .uxscoreboard {
+    font-size:2.2em;
+  }
 
 }

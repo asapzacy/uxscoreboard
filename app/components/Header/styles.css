@@ -108,12 +108,12 @@
 
 /* -------  menu open - trigger line - top  ------- */
 .menuOpen .triggerTop {
-  transform:rotate(-45deg);
+  transform:rotate(-135deg);
 }
 
 /* -------  menu open - trigger line - bottom  ------- */
 .menuOpen .triggerBottom {
-  transform:rotate(45deg);
+  transform:rotate(135deg);
 }
 
 

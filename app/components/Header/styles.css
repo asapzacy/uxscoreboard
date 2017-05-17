@@ -69,11 +69,11 @@
 
 /* -------  menu item  ------- */
 .menuItem, .menuExtra {
-  margin-bottom:0.8em;
+  margin-bottom:0.4em;
 }
 
 .menuExtra:last-child {
-  margin-bottom:0.4em;
+  margin-bottom:0.2em;
 }
 
 /* -------  menu item  ------- */
@@ -85,6 +85,7 @@
 /* -------  menu link  ------- */
 .menuLink {
   display:block;
+  padding-top:0.4em;
 }
 
 /* -------  menu link - ::after  ------- */
@@ -196,6 +197,9 @@
   }
   .menuExtra:last-child {
     margin-bottom:inherit;
+  }
+  .menuLink {
+    padding-top:0;
   }
 
   .menuLink::after, :global(.active::after) {

@@ -85,7 +85,7 @@
 /* -------  menu link  ------- */
 .menuLink {
   display:block;
-  padding-top:0.4em;
+  padding:0.2em 0;
 }
 
 /* -------  menu link - ::after  ------- */
@@ -199,7 +199,7 @@
     margin-bottom:inherit;
   }
   .menuLink {
-    padding-top:0;
+    padding:0.2em;
   }
 
   .menuLink::after, :global(.active::after) {

@@ -1,10 +1,9 @@
-.container {
-  text-align: center;
-  margin: 0 auto 10em;
-  width:74%;
-}
 
-.header {
-  font-weight: 100;
-  font-size: 5em;
+.notFoundContainer {
+  height:100%;
+  width:100%;
+  background-image:url('https://uxscoreboard.com/assets/img/mr_robot.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center center;
 }

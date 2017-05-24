@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { formatBoxScoreTableHead, formatBoxScoreTableBodyRow } from 'helpers/boxScoreFns'
 import { boxScoreContainer, boxScoreTable, boxScoreTableHead, boxScoreTableBody, boxScoreTableRow } from './styles.css'
 

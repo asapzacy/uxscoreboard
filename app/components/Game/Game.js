@@ -10,12 +10,16 @@ import { gameItem, topHalf, details, detailsExpanded } from './styles.css'
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
 const style = (isHovered) => ({ flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0075)' })
 
-export default function Game(props) {
-  if (props.league === 'mlb') return <MlbGame {...props} />
-  if (props.league === 'nba') return <NbaGame {...props} />
-  if (props.league === 'nfl') return <NflGame {...props} />
-  if (props.league === 'nhl') return <NhlGame {...props} />
+const Game = (props) => {
+  switch (props.league) {
+    case 'mlb': return <MlbGame {...props} />
+    case 'nba': return <NbaGame {...props} />
+    case 'nfl': return <NflGame {...props} />
+    case 'nhl': return <NhlGame {...props} />
+  }
 }
+
+export default Game
 
 const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
   <li className={gameItem} style={style(isHovered)}>

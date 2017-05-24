@@ -20,3 +20,7 @@
   width:100%;
   position:relative;
 }
+
+.fadeContainer, .gamesList {
+  height:100%;
+}

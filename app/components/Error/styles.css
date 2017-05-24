@@ -1,0 +1,15 @@
+
+/* -------  no games container  ------- */
+.errorContainer {
+  font-size:1.2em;
+  padding:0.8em 1.6em;
+  text-align:center;
+  border:1px solid currentColor;
+  composes:standardContainer from 'styles/shared.css';
+}
+
+@media only screen and (min-width:667px) {
+  .errorContainer {
+    font-size:1.6em;
+  }
+}

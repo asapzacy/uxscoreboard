@@ -1,10 +1,12 @@
 import React from 'react'
-import { container, header } from './styles.css'
+import { notFoundContainer } from './styles.css'
 
-export default function NotFound() {
-  return (
-    <div className={container}>
-      <img src='/assets/img/mr_robot.png' alt='' />
-    </div>
-  )
-}
+const goBack = () => window.history.go(-1)
+
+const NotFound = () => (
+  <section className={notFoundContainer}>
+    <span onClick={() => window.history.go(-1)}>{'<-- go back to safety'}</span>
+  </section>
+)
+
+export default NotFound

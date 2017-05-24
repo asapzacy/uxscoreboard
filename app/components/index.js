@@ -10,6 +10,7 @@ export Social from './Social/Social'
 export NotFound from './NotFound/NotFound'
 export Loading from './Loading/Loading'
 export NoGames from './NoGames/NoGames'
+export Error from './Error/Error'
 
 /* -------  league components  ------- */
 export Mlb from './Mlb/Mlb'

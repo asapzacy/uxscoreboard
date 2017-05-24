@@ -1,5 +1,5 @@
 import React from 'react'
-import { NoGames, AllStar } from 'components'
+import { NoGames, Error, AllStar } from 'components'
 import { GameContainer, DateContainer } from 'containers'
 import { getNbaGameDetails } from 'helpers/api'
 import { VelocityTransitionGroup } from 'velocity-react'
@@ -7,7 +7,7 @@ import 'velocity-animate/velocity.ui'
 import { velocity_scoreboard } from 'config/velocity'
 import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
 
-export default function Scoreboard({ scores, date, today, league, seasonState, direction, lastUpdated }) {
+export default function Scoreboard({ scores, date, today, league, seasonState, direction, lastUpdated, isError }) {
   let games
   if (league === 'mlb') {
     games = !scores.length || seasonState.isPreseason
@@ -45,7 +45,7 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
       <DateContainer date={date} today={today} league={league} />
         <VelocityTransitionGroup className={fadeContainer} {...velocity_scoreboard(direction)}>
           <ul className={gamesList} key={date}>
-            {games}
+            { isError ? <Error /> : games }
           </ul>
         </VelocityTransitionGroup>
       { seasonState && seasonState.isAllStar && <AllStar img={allStarGame ? 'asg' : 'nola'} league={league} /> }

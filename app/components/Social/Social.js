@@ -7,11 +7,11 @@ import { socialContainer, socialLink, iconOutline, iconFull } from './styles.css
 
 const Social = () => (
   <section className={socialContainer}>
-    <a className={socialLink} href='https://twitter.com/uxscoreboard' title='uxscoreboard | twitter'>
+    <a className={socialLink} href='https://twitter.com/asapzacy' title='twitter | asapzacy'>
       <span className={iconFull}><TwitterFull /></span>
       <span className={iconOutline}><TwitterOutline /></span>
     </a>
-    <a className={socialLink} href='https://github.com/zacarellano/uxscoreboard' title='uxscoreboard | github'>
+    <a className={socialLink} href='https://github.com/zacarellano/uxscoreboard' title='github | uxscoreboard'>
       <span className={iconFull}><GithubFull /></span>
       <span className={iconOutline}><GithubOutline /></span>
     </a>

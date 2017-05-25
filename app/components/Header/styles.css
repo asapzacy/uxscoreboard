@@ -200,12 +200,12 @@
   }
   .menuLink {
     padding-top:0;
+    position:relative;
   }
 
   .menuLink::after, :global(.active::after) {
     width:0;
-    margin-right:auto;
-    margin-top:1px;
+    position:absolute;
     transition:width 0.22s;
   }
   :global(.active::after) {
@@ -223,7 +223,8 @@
     margin:0 1%;
   }
   .menuLink:hover .menuText {
-    transform:none;
+    transform:initial;
+    transition:initial;
   }
 
 }

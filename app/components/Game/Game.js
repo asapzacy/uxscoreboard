@@ -8,7 +8,11 @@ import { mlbGameStateProps, nflGameStateProps, nbaGameStateProps, nhlGameStatePr
 import { gameItem, topHalf, details, detailsExpanded } from './styles.css'
 
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
-const style = (isHovered) => ({ flexBasis: fuckSafari && '320px', transform: isHovered && 'scale(1.0075)' })
+
+const style = (isHovered) => ({
+  flexBasis: fuckSafari && '320px',
+  transform: isHovered && 'translateY(-2px)'
+})
 
 const Game = (props) => {
   switch (props.league) {

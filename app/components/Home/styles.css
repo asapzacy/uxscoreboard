@@ -25,7 +25,7 @@
 .description {
   font-size:1.15em;
   letter-spacing:0;
-  color:#bdbdbd;
+  color:#3f3f3f;
 }
 
 /* -------  league menu  ------- */
@@ -50,8 +50,8 @@
   display:block;
   padding:8%;
   margin:12%;
-  border:2px solid #e0e0e0;
-  border-radius:4px;
+  border:2px solid #545454;
+  border-radius:3px;
   position:relative;
   transition:color 0.11s,background-color 0.22s,box-shadow 0.22s;
   transition-delay:0.11s;
@@ -59,8 +59,8 @@
 /* -------  league link - :hover  ------- */
 .leagueLink:hover {
   color:transparent;
-  background:#e0e0e0;
-  box-shadow:inset 0 0 0 0.33em #070707;
+  background:#3f3f3f;
+  box-shadow:inset 0 0 0 0.33em #e0e0e0;
 }
 
 
@@ -82,10 +82,10 @@
 }
 
 .mlbLink, .nbaLink, .nflLink, .nhlLink { composes:leagueLink }
-.mlbLink::after { background-image:url('https://uxscoreboard.com/assets/icons/baseball.svg') }
-.nbaLink::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball.svg') }
-.nflLink::after { background-image:url('https://uxscoreboard.com/assets/icons/football.svg') }
-.nhlLink::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey.svg');top:19%;bottom:19% }
+.mlbLink::after { background-image:url('https://uxscoreboard.com/assets/icons/baseball_light.svg') }
+.nbaLink::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball_light.svg') }
+.nflLink::after { background-image:url('https://uxscoreboard.com/assets/icons/football_light.svg') }
+.nhlLink::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey_light.svg');top:19%;bottom:19% }
 
 
 

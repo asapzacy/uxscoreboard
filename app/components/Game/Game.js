@@ -9,9 +9,10 @@ import { gameItem, topHalf, details, detailsExpanded } from './styles.css'
 
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
 
-const style = (isHovered) => ({
+const style = (isHovered, isExpanded) => ({
   flexBasis: fuckSafari && '320px',
-  transform: isHovered && 'translateY(-2px)'
+  transform: isHovered && 'translateY(-2px)',
+  boxShadow: (isHovered || isExpanded) && '0 9px 17.5px rgba(50,50,93,.1),0 4px 7.5px rgba(0,0,0,.07)'
 })
 
 const Game = (props) => {
@@ -26,7 +27,7 @@ const Game = (props) => {
 export default Game
 
 const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={style(isHovered)}>
+  <li className={gameItem} style={style(isHovered, isExpanded)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nbaGameStateProps(game)} />
       <Team {...nbaTeamProps(game, 'visitor', league)} />
@@ -40,7 +41,7 @@ const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isH
 )
 
 const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={style(isHovered)}>
+  <li className={gameItem} style={style(isHovered, isExpanded)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nflGameStateProps(game)} />
       <Team {...nflTeamProps(game, 'h', league)} />
@@ -54,7 +55,7 @@ const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isH
 )
 
 const MlbGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={style(isHovered)}>
+  <li className={gameItem} style={style(isHovered, isExpanded)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...mlbGameStateProps(game)} />
       <Team {...mlbTeamProps(game, 'away', league)} />
@@ -68,7 +69,7 @@ const MlbGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isH
 )
 
 const NhlGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={gameItem} style={style(isHovered)}>
+  <li className={gameItem} style={style(isHovered, isExpanded)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nhlGameStateProps(game)} />
       <Team {...nhlTeamProps(game, 'away', league)} />

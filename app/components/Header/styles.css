@@ -21,7 +21,7 @@
 .logo {
   display:block;
   height:48px;
-  padding:1.5%;
+  padding:1.2%;
 }
 
 /* -------  trigger  ------- */
@@ -92,7 +92,7 @@
 .menuLink::after, :global(.active::after) {
   content:'';
   display:block;
-  height:2px;
+  height:1px;
   background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
 }
 
@@ -129,19 +129,18 @@
   background-repeat:no-repeat;
   background-position:center center;
 }
-
-.menuText {
-  display:inline-block;
-  transform:translateX(0px);
-  transition:transform 0.22s;
-}
-
-@media (hover) {
-  .menuLink:hover .menuText {
-    transform:translateX(10%);
+@media only screen and (max-width:666px) {
+  .menuText {
+    display:inline-block;
+    transform:translateX(0px);
+    transition:transform 0.22s;
+  }
+  @media (hover) {
+    .menuLink:hover .menuText {
+      transform:translateX(10%);
+    }
   }
 }
-
 .menuFooter {
   height:2em;
   font-size:1.6em;
@@ -222,8 +221,14 @@
     background:#070707;
     margin:0 1%;
   }
+  .menuLink {
+    display:block;
+    padding:4px 0;
+  }
+  .menuLink::after {
+    bottom:2px;
+  }
   .menuLink:hover .menuText {
-    transform:initial;
     transition:initial;
   }
 

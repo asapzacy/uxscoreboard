@@ -16,8 +16,8 @@ sup { font-size:66% }
 
 /* -------  body  ------- */
 body {
-  background:#070707;
-  color:#e0e0e0;
+  background:#e0e0e0;
+  color:#070707;
   font:400 16px/1.45 'Avenir Next',Avenir,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
   letter-spacing:1px;
   text-rendering:optimizeLegibility;

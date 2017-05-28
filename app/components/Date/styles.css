@@ -1,18 +1,14 @@
 
-/* -------  date menu  ------- */
+/* -------  Date  ------- */
 .dateMenu {
   height:3em;
   margin:0.25em 0 -0.25em;
 }
-
-/* -------  date list  ------- */
 .dateList {
   height:100%;
   display:flex;
   justify-content:space-between;
 }
-
-/* -------  date item  ------- */
 .dateItem {
   font-size:1.06em;
   letter-spacing:0;
@@ -20,91 +16,64 @@
   display:flex;
   align-items:stretch;
 }
-
-/* -------  arrow item  ------- */
 .arrowItem {
   font-size:1.12em;
   padding-bottom:1px;
   composes:dateItem;
 }
-
-/* -------  date link  ------- */
 .dateLink {
   display:flex;
   align-items:center;
   padding:0 0.66em;
 }
-
 .mainLink {
   composes:dateLink;
 }
-
 .dateText {
   white-space:nowrap;
 }
 
-/* -------------------------------- */
-/* -------     >  667px     ------- */
-/* -------------------------------- */
 @media only screen and (min-width:667px) {
-
-  /* -------  date menu  ------- */
   .dateMenu {
     margin:0.75em 0 0.25em;
   }
-
-  /* -------  date link  ------- */
   .dateLink {
-    opacity:0.8;
+    opacity:0.75;
     transition:opacity 0.22s;
   }
-
-  /* -------  main link, date link - hover  ------- */
   .dateLink:hover {
     opacity:1;
   }
-
-  /* -------  main link  ------- */
   .mainLink {
     opacity:1;
     font-size:110%;
   }
-
-  /* -------  date text - after  ------- */
   .dateText::after {
     content:'';
     display:block;
     height:2px;
-    background:#a8a8a8;
+    background:#9b9b9b;
   }
 
-  /* -------  date item  ------- */
   .dateItem {
     font-size:1.12em;
   }
-  /* -------  arrow item  ------- */
   .arrowItem {
     font-size:1.18em;
   }
 
 }
 
-/* -------------------------------- */
-/* -------     > 1331px     ------- */
-/* -------------------------------- */
 @media only screen and (min-width:1331px) {
 
-  /* -------  date menu  ------- */
   .dateMenu {
     margin:1em 0 0.75em;
   }
 
-  /* -------  date item  ------- */
   .dateItem {
     font-size:1.18em;
   }
 
-  /* -------  arrow item  ------- */
   .arrowItem {
     font-size:1.24em;
   }

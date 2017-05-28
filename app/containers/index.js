@@ -28,3 +28,5 @@ export DetailsContainer from './Details/DetailsContainer'
 
 /* -------  test container  ------- */
 export TestContainer from './Test/TestContainer'
+
+export TeamContainer from './Team/TeamContainer'

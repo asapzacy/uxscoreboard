@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
 import { StatsWriterPlugin } from 'webpack-stats-plugin'
 import VisualizerPlugin from 'webpack-visualizer-plugin'
+import DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plugin'
 import autoprefixer from 'autoprefixer'
 
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
@@ -50,6 +51,10 @@ const statsWriterPlugin = new StatsWriterPlugin({
 
 const visualizerPlugin = new VisualizerPlugin({
   filename: './webpack_stats.html'
+})
+
+const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
+  verbose: true
 })
 
 const productionPlugin = new webpack.DefinePlugin({
@@ -123,6 +128,7 @@ const developmentConfig = {
   plugins: [
     ...sharedPlugins,
     browserSyncPlugin,
+    duplicatePackageCheckerPlugin,
     new webpack.HotModuleReplacementPlugin()
   ]
 }

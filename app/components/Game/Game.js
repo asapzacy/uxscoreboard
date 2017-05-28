@@ -44,8 +44,8 @@ const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isH
   <li className={gameItem} style={style(isHovered, isExpanded)}>
     <span className={topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nflGameStateProps(game)} />
-      <Team {...nflTeamProps(game, 'h', league)} />
       <Team {...nflTeamProps(game, 'v', league)} />
+      <Team {...nflTeamProps(game, 'h', league)} />
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? detailsExpanded : details} {...velocity_game}>

@@ -25,7 +25,11 @@ const Date = ({ width, ...props }) => (
     }
     { props.league === 'nfl' &&
       <menu className={dateList} style={{justifyContent:'center'}}>
-        <li>{'[ coming soon ]'}</li>
+        <li className={dateItem}>
+          <Link className={mainLink} to={`/nfl`}>
+            <span className={dateText}>{'Week 1'}</span>
+          </Link>
+        </li>
       </menu>
     }
   </nav>

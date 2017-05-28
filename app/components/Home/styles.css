@@ -1,5 +1,5 @@
 
-/* -------  home container  ------- */
+/* -------  Home  ------- */
 .homeContainer {
   display:flex;
   text-align:center;
@@ -7,8 +7,6 @@
   justify-content:center;
   flex-direction:column;
 }
-
-/* -------  uxscoreboard  ------- */
 .uxscoreboard {
   display:flex;
   flex:1;
@@ -17,53 +15,44 @@
   margin:2.5% 0 -2.5%;
   width:90%;
 }
-/* -------  name  ------- */
 .name {
   font-size:2.2em;
 }
-/* -------  description  ------- */
 .description {
   font-size:1.15em;
   letter-spacing:0;
   color:#545454;
 }
-
-/* -------  league menu  ------- */
 .leagueMenu {
   width:80%;
   flex:1;
   font-size:1.2em;
 }
-/* -------  league list  ------- */
 .leagueList {
   display:flex;
   flex-flow:row wrap;
   justify-content:center;
 }
-/* -------  league item  ------- */
 .leagueItem {
   width:50%;
   max-width:250px;
 }
-/* -------  league link  ------- */
 .leagueLink {
   display:block;
   padding:8%;
   margin:12%;
+  background:#e0e0e0;
   border:2px solid #545454;
   border-radius:3px;
   position:relative;
   transition:color 0.11s,background-color 0.22s,box-shadow 0.22s;
   transition-delay:0.11s;
 }
-/* -------  league link - :hover  ------- */
 .leagueLink:hover {
   color:transparent;
   background:#3f3f3f;
   box-shadow:inset 0 0 0 0.33em #e0e0e0;
 }
-
-
 .leagueLink::after {
   content:'';
   display:block;
@@ -71,29 +60,21 @@
   background-size:contain;
   background-position:center center;
   position:absolute;
-  top:13%;bottom:13%;left:0;right:0;
+  top:15%;bottom:15%;left:0;right:0;
   opacity:0;
   transition:opacity 0.22s;
 }
-
 .leagueLink:hover::after {
   opacity:1;
   transition-delay:0.11s;
 }
-
 .mlbLink, .nbaLink, .nflLink, .nhlLink { composes:leagueLink }
 .mlbLink::after { background-image:url('https://uxscoreboard.com/assets/icons/baseball_light.svg') }
 .nbaLink::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball_light.svg') }
 .nflLink::after { background-image:url('https://uxscoreboard.com/assets/icons/football_light.svg') }
-.nhlLink::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey_light.svg');top:19%;bottom:19% }
+.nhlLink::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey_light.svg');top:20%;bottom:20% }
 
-
-
-/* -------------------------------- */
-/* -------     >  667px     ------- */
-/* -------------------------------- */
 @media only screen and (min-width:667px) {
-
   @media (orientation:portrait) {
     .uxscoreboard {
       font-size:1.8em;
@@ -105,7 +86,6 @@
       margin-bottom:2.5%;
     }
   }
-
   .leagueMenu {
     width:90%;
   }
@@ -114,26 +94,14 @@
   }
 }
 
-/* -------------------------------- */
-/* -------     >  999px     ------- */
-/* -------------------------------- */
 @media only screen and (min-width:999px) {
-
-  /* -------  uxscoreboard  ------- */
   .uxscoreboard {
     font-size:2em;
   }
-
 }
 
-/* -------------------------------- */
-/* -------     > 1331px     ------- */
-/* -------------------------------- */
 @media only screen and (min-width:1331px) {
-
-  /* -------  uxscoreboard  ------- */
   .uxscoreboard {
     font-size:2.2em;
   }
-
 }

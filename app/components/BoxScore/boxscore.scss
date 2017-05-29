@@ -1,0 +1,14 @@
+
+/* -------  BoxScore  ------- */
+.container {
+  composes:tableContainer from 'styles/shared.css';
+}
+.table {
+  composes:table from 'styles/shared.css';
+}
+.tableHead {
+  composes:tableHead from 'styles/shared.css';
+}
+.tableBody {
+  composes:tableBody from 'styles/shared.css'
+}

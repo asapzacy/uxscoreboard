@@ -11,13 +11,14 @@
 
 /* -------  table container  ------- */
 .tableContainer {
-  font-size:0.8em;
   letter-spacing:0;
   display:flex;
   align-items:flex-start;
+  flex-direction:column;
 }
 /* -------  table  ------- */
 .table {
+  font-size:0.8em;
   width:100%;
   table-layout:fixed;
   border-collapse:collapse;

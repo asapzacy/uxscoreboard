@@ -29,15 +29,12 @@ export Game from './Game/Game'
 export GameState from './GameState/GameState'
 export Team from './Team/Team'
 export Expand from './Expand/Expand'
-
-/* -------  details components  ------- */
 export Details from './Details/Details'
 export Matchup from './Matchup/Matchup'
 export PanelMenu from './PanelMenu/PanelMenu'
 export BoxScore from './BoxScore/BoxScore'
 export Stats from './Stats/Stats'
 export Diamond from './Diamond/Diamond'
-export Leaders from './Leaders/Leaders'
 export UpdateTime from './UpdateTime/UpdateTime'
 
 /* -------  test component  ------- */

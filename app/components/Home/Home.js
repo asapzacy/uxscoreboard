@@ -1,20 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { homeContainer, uxscoreboard, name, description, leagueMenu, leagueList,
-  leagueItem, leagueLink, mlbLink, nbaLink, nflLink, nhlLink } from './styles.css'
+import Item from './Item'
+import { app_pages } from 'data/app_pages'
+import s from './Home.scss'
 
 const Home = () => (
-  <div className={homeContainer}>
-    <section className={uxscoreboard}>
-      <h1 className={name}>{'uxscoreboard'}</h1>
-      <h2 className={description}>{'live sports scoreboard built on ES6 and React.js'}</h2>
+  <div className={s.container}>
+    <section className={s.uxscoreboard}>
+      <h1 className={s.name}>{'uxscoreboard'}</h1>
+      <h2 className={s.description}>{'live sports scoreboard built on ES6 and React.js'}</h2>
     </section>
-    <nav className={leagueMenu}>
-      <menu className={leagueList}>
-        <li className={leagueItem}><Link className={mlbLink} to='/mlb'>{'MLB'}</Link></li>
-        <li className={leagueItem}><Link className={nbaLink} to='/nba'>{'NBA'}</Link></li>
-        <li className={leagueItem}><Link className={nflLink} to='/nfl'>{'NFL'}</Link></li>
-        <li className={leagueItem}><Link className={nhlLink} to='/nhl'>{'NHL'}</Link></li>
+    <nav className={s.menu}>
+      <menu className={s.list}>
+        { app_pages.mainLinks.map((el, i) => (
+          <Item league={el.name} key={i}/>)
+        )}
       </menu>
     </nav>
   </div>

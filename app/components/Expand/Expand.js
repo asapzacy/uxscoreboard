@@ -1,10 +1,10 @@
 import React from 'react'
 import ArrowDown from 'react-icons/lib/io/ios-arrow-down'
-import { iconContainer, icon } from './styles.css'
+import s from './expand.scss'
 
 const Expand = ({ isExpanded }) => (
-  <section className={iconContainer}>
-    <span className={icon} style={{transform: isExpanded && 'rotate(180deg) translateZ(0)'}}>
+  <section className={s.container}>
+    <span className={isExpanded ? s.iconExpanded : s.icon}>
       <ArrowDown />
     </span>
   </section>

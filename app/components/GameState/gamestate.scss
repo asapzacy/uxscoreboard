@@ -1,0 +1,14 @@
+
+/* -------  GameState  ------- */
+.container {
+  display:flex;
+  justify-content:space-between;
+  font-size:0.8em;
+  padding:7px 14px;
+  letter-spacing:0.5px;
+  line-height:1;
+}
+.inGame {
+  flex-direction:row-reverse;
+  composes:container;
+}

@@ -3,38 +3,37 @@ import { Link } from 'react-router'
 import moment from 'moment'
 import ArrowBack from 'react-icons/lib/io/ios-arrow-back'
 import ArrowForward from 'react-icons/lib/io/ios-arrow-forward'
-import { dateMenu, dateList, dateItem, arrowItem, dateLink, mainLink, dateText } from './styles.css'
+import s from './date.scss'
 
 // TODO: implement a calendar
 const Date = ({ width, ...props }) => (
-  <nav className={dateMenu}>
+  <nav className={s.menu}>
     { props.league !== 'nfl' &&
-      <menu className={dateList}>
-        <li className={arrowItem}><Day {...props} diff={-1} isArrow /></li>
+      <menu className={s.list}>
+        <li className={s.arrow}><Day {...props} diff={-1} isArrow /></li>
         { width >= 1331 &&
-        <li className={dateItem}><Day {...props} diff={-2} /></li> }
+        <li className={s.item}><Day {...props} diff={-2} /></li> }
         { width >= 667 &&
-        <li className={dateItem}><Day {...props} diff={-1} /></li> }
-        <li className={dateItem}><Day {...props} diff={0} /></li>
+        <li className={s.item}><Day {...props} diff={-1} /></li> }
+        <li className={s.item}><Day {...props} diff={0} /></li>
         { width >= 667 &&
-        <li className={dateItem}><Day {...props} diff={1} /></li> }
+        <li className={s.item}><Day {...props} diff={1} /></li> }
         { width >= 1331 &&
-        <li className={dateItem}><Day {...props} diff={2} /></li> }
-        <li className={arrowItem}><Day {...props} diff={1} isArrow /></li>
+        <li className={s.item}><Day {...props} diff={2} /></li> }
+        <li className={s.arrow}><Day {...props} diff={1} isArrow /></li>
       </menu>
     }
     { props.league === 'nfl' &&
-      <menu className={dateList} style={{justifyContent:'center'}}>
-        <li className={dateItem}>
-          <Link className={mainLink} to={`/nfl`}>
-            <span className={dateText}>{'Week 1'}</span>
+      <menu className={s.list} style={{justifyContent:'center'}}>
+        <li className={s.item}>
+          <Link className={s.mainLink} to={`/nfl`}>
+            <span className={s.text}>{'week 1'}</span>
           </Link>
         </li>
       </menu>
     }
   </nav>
 )
-
 
 export default Date
 
@@ -47,9 +46,9 @@ function Day({ date, today, league, diff, isArrow }) {
   const formattedDate = `${dayOfTheWeek}, ${day.format('MMM D')}`.toLowerCase()
   const title = `${league.toUpperCase()} scores - ${day.format('MMMM D, YYYY')} | uxscoreboard`
   return (
-    <Link className={isMainLink ? mainLink : dateLink} to={`/${league}/scores/${url}`} title={title}>
+    <Link className={isMainLink ? s.mainLink : s.link} to={`/${league}/scores/${url}`} title={title}>
       { !isArrow
-        ? <span className={isMainLink ? dateText : ''}>{formattedDate}</span>
+        ? <span className={isMainLink ? s.text : ''}>{formattedDate}</span>
         : diff < 0 ? <ArrowBack /> : <ArrowForward />
       }
     </Link>

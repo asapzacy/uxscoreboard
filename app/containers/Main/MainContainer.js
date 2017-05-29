@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Header, Footer } from 'components'
 import WebFont from 'webfontloader'
-import { mainContainer, innerContainer } from './styles.css'
+import s from './main.scss'
 
 class MainContainer extends Component {
   constructor() {
@@ -9,12 +9,11 @@ class MainContainer extends Component {
     this.state = {
       screenWidth: 0,
       menuHeight: 0,
-      isMenuOpen: false,
+      isMenuOpen: false
     }
-    this.getScreenWidth = this.getScreenWidth.bind(this)
     this.triggerMenu = this.triggerMenu.bind(this)
-    this.hideMenu = this.hideMenu.bind(this)
-  }
+    this.getScreenWidth = this.getScreenWidth.bind(this)
+}
   componentDidMount() {
     this.loadFonts()
     this.getScreenWidth()
@@ -69,9 +68,9 @@ class MainContainer extends Component {
     const { isMenuOpen, menuHeight } = this.state
     const appHeight = { height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%' }
     return (
-      <div className={mainContainer} style={appHeight}>
+      <div className={s.container} style={appHeight}>
         <Header triggerMenu={this.triggerMenu} {...this.state} />
-        <main className={innerContainer}>
+        <main className={s.innerContainer}>
           {this.props.children}
         </main>
         <Footer />

@@ -1,16 +1,18 @@
 
-/* -------  icon container  ------- */
-.iconContainer {
+/* ------- Expand  ------- */
+.container {
   width:100%;
   height:0.9em;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-
-/* -------  icon  ------- */
 .icon {
   backface-visibility:hidden;
   transform:rotate(0deg) translateZ(0);
-  transition:transform 0.22s;
+  transition:transform 0.33s;
+}
+.iconExpanded {
+  transform:rotate(180deg) translateZ(0);
+  composes:icon;
 }

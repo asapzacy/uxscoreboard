@@ -1,81 +1,75 @@
 
 /* -------  Date  ------- */
-.dateMenu {
+.menu {
   height:3em;
   margin:0.25em 0 -0.25em;
 }
-.dateList {
+.list {
   height:100%;
   display:flex;
   justify-content:space-between;
 }
-.dateItem {
+.item {
   font-size:1.06em;
   letter-spacing:0;
   font-weight:400;
   display:flex;
   align-items:stretch;
 }
-.arrowItem {
+.arrow {
   font-size:1.12em;
   padding-bottom:1px;
-  composes:dateItem;
+  composes:item;
 }
-.dateLink {
+.link {
   display:flex;
   align-items:center;
   padding:0 0.66em;
 }
 .mainLink {
-  composes:dateLink;
+  composes:link;
 }
-.dateText {
+.text {
   white-space:nowrap;
 }
 
-@media only screen and (min-width:667px) {
-  .dateMenu {
+@media only screen and (min-width:$medium) {
+  .menu {
     margin:0.75em 0 0.25em;
   }
-  .dateLink {
+  .link {
     opacity:0.75;
     transition:opacity 0.22s;
   }
-  .dateLink:hover {
+  .link:hover {
     opacity:1;
   }
   .mainLink {
     opacity:1;
     font-size:110%;
   }
-  .dateText::after {
+  .text::after {
     content:'';
     display:block;
     height:2px;
-    background:#9b9b9b;
+    background:$grey4;
   }
-
-  .dateItem {
+  .item {
     font-size:1.12em;
   }
-  .arrowItem {
+  .arrow {
     font-size:1.18em;
   }
-
 }
 
-@media only screen and (min-width:1331px) {
-
-  .dateMenu {
+@media only screen and (min-width:$xlarge) {
+  .menu {
     margin:1em 0 0.75em;
   }
-
-  .dateItem {
+  .item {
     font-size:1.18em;
   }
-
-  .arrowItem {
+  .arrow {
     font-size:1.24em;
   }
-
 }

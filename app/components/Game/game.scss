@@ -1,10 +1,9 @@
 
 /* -------  Game  ------- */
-.gameItem {
-  background:#f5f5f5;
-  color:#070707;
+.item {
+  background:$white;
   font-size:1.1em;
-  border:2px solid #f5f5f5;
+  border:2px solid $white;
   margin:1em;
   flex:1 1 calc(33.3% - 2em);
   max-width:420px;
@@ -30,6 +29,6 @@
   opacity:1;
   transition-duration:0.66s;
   transition-delay:0.33s;
-  background:#fff;
+  background:$realwhite;
   composes:details;
 }

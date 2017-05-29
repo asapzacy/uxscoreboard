@@ -1,16 +1,17 @@
 import React from 'react'
 import { formatBoxScoreTableHead, formatBoxScoreTableBodyRow } from 'helpers/boxScoreFns'
-import { boxScoreContainer, boxScoreTable, boxScoreTableHead, boxScoreTableBody, boxScoreTableRow } from './styles.css'
+import s from './boxscore.scss'
 
-const BoxScore = ({ awayTeam, homeTeam, awayScore, homeScore,linescore, periods, totalPeriods, league, overtimes }) => (
-  <section className={boxScoreContainer}>
-    <table className={boxScoreTable}>
-      <thead className={boxScoreTableHead} dangerouslySetInnerHTML={formatBoxScoreTableHead(periods, totalPeriods, league, overtimes)}></thead>
-      <tbody className={boxScoreTableBody}>
-        <tr className={boxScoreTableRow} dangerouslySetInnerHTML={formatBoxScoreTableBodyRow(awayTeam, awayScore, 'away', linescore, periods, totalPeriods, league)}></tr>
-        <tr className={boxScoreTableRow} dangerouslySetInnerHTML={formatBoxScoreTableBodyRow(homeTeam, homeScore, 'home', linescore, periods, totalPeriods, league)}></tr>
+const BoxScore = ({ awayTeam, homeTeam, awayScore, homeScore, linescore, periods, totalPeriods, league, overtimes, children }) => (
+  <section className={s.container}>
+    <table className={s.table}>
+      <thead className={s.tableHead} dangerouslySetInnerHTML={formatBoxScoreTableHead(periods, totalPeriods, league, overtimes)}></thead>
+      <tbody className={s.tableBody}>
+        <tr dangerouslySetInnerHTML={formatBoxScoreTableBodyRow(awayTeam, awayScore, 'away', linescore, periods, totalPeriods, league)}></tr>
+        <tr dangerouslySetInnerHTML={formatBoxScoreTableBodyRow(homeTeam, homeScore, 'home', linescore, periods, totalPeriods, league)}></tr>
       </tbody>
     </table>
+    {children}
   </section>
 )
 

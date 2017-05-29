@@ -1,6 +1,6 @@
 
-/* -------  main container  ------- */
-.mainContainer {
+/* -------  MainContainer  ------- */
+.container {
   width:100%;
   display:flex;
   align-items:center;
@@ -8,8 +8,6 @@
   flex-direction:column;
   transition:0.44s height;
 }
-
-/* -------  inner container  ------- */
 .innerContainer {
   width:96%;
   display:flex;
@@ -17,8 +15,6 @@
   min-height:60%;
   max-width:1600px;
 }
-
-/* -------  inner container - > div:first-child  ------- */
 .innerContainer > div:first-child {
   width:100%;
 }

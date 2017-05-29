@@ -1,40 +1,35 @@
 
-/* -------  diamond container  ------- */
-.diamondContainer {
+/* -------  Diamond  ------- */
+.container {
   margin-top:1.5em;
   display:flex;
   justify-content:space-around;
 }
-
-/* -------  baseball field container  ------- */
-.baseballFieldContainer {
+.leftSide {
   width:48%;
   display:flex;
   align-items:center;
   flex-direction:column;
 }
-/* -------  baseball field  ------- */
-.baseballField {
-  padding:4%;
-}
-
-/* -------  other info  ------- */
-.otherInfo {
+.rightSide {
   width:33%;
   display:flex;
   align-items:flex-end;
 }
-
-/* -------  bso container  ------- */
 .bsoContainer {
   margin-bottom:25%;
   text-align:left;
 }
-/* -------  bso  ------- */
-.bso {
+.runnersContainer { }
+.matchupContainer { }
+
+/* -------  BaseballField  ------- */
+.baseballField {
+  padding:4%;
 }
-/* -------  bso heading  ------- */
-.bsoHeading {
+
+/* -------  BSO  ------- */
+.label {
   font:1.1em/100% monospace;
   display:inline-block;
   width:1.25em;
@@ -46,29 +41,21 @@
   display:inline-block;
   margin:0 2px;
   border-radius:50%;
-  background:#d4d4d4;
+  background:$grey2;
 }
 :global(.circle::after) {
   content:'';
   display:block;
   height:100%;
   width:100%;
-  border-radius:100%;
-  background:#ba0021;
+  border-radius:50%;
+  background:$red;
   opacity:0;
-  transition:opacity 0.88s;
+  transition:opacity 1.22s;
 }
 .bso:first-child :global(.circleFilled::after) {
-  background:#00ba21;
+  background:$green;
 }
-:global(.circle.circleFilled::after) {
+:global(.circleFilled::after) {
   opacity:1;
-}
-
-
-
-.runnersOnBase {
-
-}
-.hitterPitcher {
 }

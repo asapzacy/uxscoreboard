@@ -4,57 +4,55 @@ import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from '../Matchup/pr
 import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from '../BoxScore/props'
 import { mlbDiamondProps } from '../Diamond/props'
 import { nbaStatsProps } from '../Stats/props'
-import { detailsContainer } from './styles.css'
+import s from './Details.scss'
 
-export default function Details(props) {
-  if (props.league === 'mlb') return <MlbDetails {...props} />
-  if (props.league === 'nba') return <NbaDetails {...props} />
-  if (props.league === 'nfl') return <NflDetails {...props} />
-  if (props.league === 'nhl') return <NhlDetails {...props} />
+const Details = (props) => {
+  switch (props.league) {
+    case 'mlb': return <MlbDetails {...props} />
+    case 'nba': return <NbaDetails {...props} />
+    case 'nfl': return <NflDetails {...props} />
+    case 'nhl': return <NhlDetails {...props} />
+  }
 }
 
+export default Details
 
 const MlbDetails = ({ game, date, league, panel, switchPanel, lastUpdated }) => (
-  <section className={detailsContainer}>
+  <section className={s.container}>
     <Matchup {...mlbMatchupProps(game, date)} />
     <PanelMenu panel={panel} switchPanel={switchPanel} />
     { panel === 'boxScore' &&
-      <span>
-        <BoxScore {...mlbBoxScoreProps(game, league)} />
+      <BoxScore {...mlbBoxScoreProps(game, league)}>
         <Diamond {...mlbDiamondProps(game)} />
-      </span>
+      </BoxScore>
     }
     <UpdateTime lastUpdated={lastUpdated} />
   </section>
 )
 
 const NbaDetails = ({ game, date, league, panel, switchPanel, lastUpdated }) => (
-  <section className={detailsContainer}>
+  <section className={s.container}>
     <Matchup {...nbaMatchupProps(game, date)} />
     <PanelMenu panel={panel} switchPanel={switchPanel} />
     { panel === 'boxScore' && <BoxScore {...nbaBoxScoreProps(game, league)} /> }
     { panel === 'teamStats' && <Stats {...nbaStatsProps(game)} /> }
-    { panel === 'leaders' && <Leaders /> }
     <UpdateTime lastUpdated={lastUpdated} />
   </section>
 )
 
-
-const s = {
-  padding: '6% 12%',
-  fontWeight: 700,
-  letterSpacing: 0,
-}
 const NflDetails = ({ lastUpdated }) => (
-  <section className={detailsContainer}>
-    <h4 style={s}>{'coming soon'}</h4>
+  <section className={s.container}>
+    <br />
+    <br />
+    <br />
+    <br />
     <UpdateTime lastUpdated={lastUpdated} />
   </section>
 )
 
 
 const NhlDetails = ({ game, date, league, lastUpdated }) => (
-  <section className={detailsContainer}>
+  <section className={s.container}>
     <Matchup {...nhlMatchupProps(game, date)} />
     <BoxScore {...nhlBoxScoreProps(game, league)} />
     <UpdateTime lastUpdated={lastUpdated} />

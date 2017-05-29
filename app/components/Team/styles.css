@@ -1,18 +1,14 @@
 
-/* -------  team container  ------- */
+/* -------  Team  ------- */
 .teamContainer {
   display:flex;
   align-items:center;
   padding:2px 0;
 }
-
-/* -------  team logo  ------- */
 .teamLogo {
   height:75px;
   flex:1;
 }
-
-/* -------  team logo - png  ------- */
 .teamLogo[src$='.png'] {
   width:75px;
 }

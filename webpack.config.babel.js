@@ -101,6 +101,30 @@ const base = {
           },
           { loader: 'postcss-loader' }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              minimize: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]',
+              importLoaders: 1
+            }
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader' },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: path.resolve(__dirname, './app/styles/_variables.scss')
+            }
+          }
+        ]
       }
     ]
   },

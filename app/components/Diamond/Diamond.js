@@ -1,30 +1,21 @@
 import React from 'react'
-import { createDiamondImage, ballsCount } from 'helpers/diamondFns'
-import { diamondContainer, baseballFieldContainer, baseballField, otherInfo,
-  bsoContainer, bso, bsoHeading, runnersOnBase, hitterPitcher } from './styles.css'
+import BaseballField from './BaseballField'
+import BSO from './BSO'
+import s from './diamond.scss'
 
 const Diamond = ({ balls, strikes, outs, inningState, offense }) => (
-  <section className={diamondContainer}>
-    <div className={baseballFieldContainer}>
-      <img className={baseballField} src={`/assets/img/mlb/other/${createDiamondImage(offense)}.svg`} />
+  <section className={s.container}>
+    <div className={s.leftSide}>
+      <BaseballField offense={offense} />
     </div>
-    <div className={otherInfo}>
-      <section className={bsoContainer}>
-        <div className={bso}>
-          <h2 className={bsoHeading}>{'B:'}</h2>
-          <span dangerouslySetInnerHTML={ballsCount(balls, 4, inningState)}></span>
-        </div>
-        <div className={bso}>
-          <h2 className={bsoHeading}>{'S:'}</h2>
-          <span dangerouslySetInnerHTML={ballsCount(strikes, 3, inningState)}></span>
-        </div>
-        <div className={bso}>
-          <h2 className={bsoHeading}>{'O:'}</h2>
-          <span dangerouslySetInnerHTML={ballsCount(outs, 3, inningState)}></span>
-        </div>
+    <div className={s.rightSide}>
+      <section className={s.bsoContainer}>
+        <BSO label={'B'} filled={balls} max={4} state={inningState} />
+        <BSO label={'S'} filled={strikes} max={3} state={inningState} />
+        <BSO label={'O'} filled={outs} max={3} state={inningState} />
       </section>
-      <section className={runnersOnBase}></section>
-      <section className={hitterPitcher}></section>
+      <section className={s.runnersContainer}></section>
+      <section className={s.matchupContainer}></section>
     </div>
   </section>
 )

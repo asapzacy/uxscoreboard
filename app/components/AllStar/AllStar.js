@@ -1,9 +1,9 @@
 import React from 'react'
-import { allStarContainer, allStarLogo } from './styles.css'
+import s from './allstar.scss'
 
 const AllStar = ({ league, img }) => (
-  <section className={allStarContainer}>
-    <img className={allStarLogo} src={`/assets/img/${league}/other/${img}.svg`} />
+  <section className={s.container}>
+    <img className={s.logo} src={`/assets/img/${league}/other/${img}.svg`} />
   </section>
 )
 

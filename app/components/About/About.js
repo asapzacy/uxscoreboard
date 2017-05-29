@@ -1,9 +1,9 @@
 import React from 'react'
-import { aboutContainer, aboutHeader } from './styles.css'
+import s from './about.scss'
 
 const About = () => (
-  <section className={aboutContainer}>
-    <h1 className={aboutHeader}>{'uxscoreboard'}</h1>
+  <section className={s.container}>
+    <h1 className={s.heading}>{'uxscoreboard'}</h1>
   </section>
 )
 

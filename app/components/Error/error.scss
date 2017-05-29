@@ -1,6 +1,6 @@
 
-/* -------  no games container  ------- */
-.errorContainer {
+/* -------  Error  ------- */
+.container {
   font-size:1.2em;
   padding:0.8em 1.6em;
   text-align:center;
@@ -8,8 +8,8 @@
   composes:standardContainer from 'styles/shared.css';
 }
 
-@media only screen and (min-width:667px) {
-  .errorContainer {
+@media only screen and (min-width:$medium) {
+  .container {
     font-size:1.6em;
   }
 }

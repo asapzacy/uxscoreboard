@@ -1,5 +1,5 @@
 
-/* -------  main container  ------- */
+/* -------  base containers  ------- */
 export MainContainer from './Main/MainContainer'
 
 /* -------  random containers  ------- */
@@ -19,14 +19,7 @@ export DateContainer from './Date/DateContainer'
 
 /* -------  game container  ------- */
 export GameContainer from './Game/GameContainer'
-
-/* -------  details container  ------- */
 export DetailsContainer from './Details/DetailsContainer'
-
-/* -------  map container  ------- */
-// export MapContainer from './Map/MapContainer'
 
 /* -------  test container  ------- */
 export TestContainer from './Test/TestContainer'
-
-export TeamContainer from './Team/TeamContainer'

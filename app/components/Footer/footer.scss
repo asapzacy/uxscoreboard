@@ -1,6 +1,6 @@
 
 /* -------  Footer  ------- */
-.footerContainer {
+.container {
   width:100%;
   flex:0 0 2.5em;
   font-size:2.2em;
@@ -9,8 +9,8 @@
   align-items:center;
   justify-content:center;
 }
-@media only screen and (min-width:999px) {
-  .footerContainer {
+@media only screen and (min-width:$large) {
+  .container {
     font-size:2.8em;
   }
 }

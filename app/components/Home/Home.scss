@@ -1,6 +1,6 @@
 
 /* -------  Home  ------- */
-.homeContainer {
+.container {
   display:flex;
   text-align:center;
   align-items:center;
@@ -21,39 +21,39 @@
 .description {
   font-size:1.15em;
   letter-spacing:0;
-  color:#545454;
+  color:$grey5;
 }
-.leagueMenu {
+.menu {
   width:80%;
   flex:1;
   font-size:1.2em;
 }
-.leagueList {
+.list {
   display:flex;
   flex-flow:row wrap;
   justify-content:center;
 }
-.leagueItem {
+.item {
   width:50%;
   max-width:250px;
 }
-.leagueLink {
+.link {
   display:block;
   padding:8%;
   margin:12%;
-  background:#e0e0e0;
-  border:2px solid #545454;
+  background:$grey1;
+  border:2px solid $grey5;
   border-radius:3px;
   position:relative;
   transition:color 0.11s,background-color 0.22s,box-shadow 0.22s;
   transition-delay:0.11s;
 }
-.leagueLink:hover {
+.link:hover {
   color:transparent;
-  background:#3f3f3f;
-  box-shadow:inset 0 0 0 0.33em #e0e0e0;
+  background:$grey5;
+  box-shadow:inset 0 0 0 0.33em $grey1;
 }
-.leagueLink::after {
+.link::after {
   content:'';
   display:block;
   background-repeat:no-repeat;
@@ -64,17 +64,20 @@
   opacity:0;
   transition:opacity 0.22s;
 }
-.leagueLink:hover::after {
+.link:hover::after {
   opacity:1;
   transition-delay:0.11s;
 }
-.mlbLink, .nbaLink, .nflLink, .nhlLink { composes:leagueLink }
-.mlbLink::after { background-image:url('https://uxscoreboard.com/assets/icons/baseball_light.svg') }
-.nbaLink::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball_light.svg') }
-.nflLink::after { background-image:url('https://uxscoreboard.com/assets/icons/football_light.svg') }
-.nhlLink::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey_light.svg');top:20%;bottom:20% }
+.MLB, .NBA, .NFL, .NHL { composes:link }
+.MLB::after { background-image:url('https://uxscoreboard.com/assets/icons/baseball_light.svg') }
+.NBA::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball_light.svg') }
+.NFL::after { background-image:url('https://uxscoreboard.com/assets/icons/football_light.svg') }
+.NHL::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey_light.svg');top:20%;bottom:20% }
 
-@media only screen and (min-width:667px) {
+
+@media only screen and (min-width:$medium) {
+
+  /* -------  Home  ------- */
   @media (orientation:portrait) {
     .uxscoreboard {
       font-size:1.8em;
@@ -86,21 +89,27 @@
       margin-bottom:2.5%;
     }
   }
-  .leagueMenu {
+  .meny {
     width:90%;
   }
-  .leagueItem {
+  .item {
     width:25%;
   }
 }
 
-@media only screen and (min-width:999px) {
+
+@media only screen and (min-width:$large) {
+
+  /* -------  Home  ------- */
   .uxscoreboard {
     font-size:2em;
   }
 }
 
-@media only screen and (min-width:1331px) {
+
+@media only screen and (min-width:$xlarge) {
+
+  /* -------  Home  ------- */
   .uxscoreboard {
     font-size:2.2em;
   }

@@ -1,8 +1,8 @@
 import React from 'react'
-import { errorContainer } from './styles.css'
+import s from './error.scss'
 
 const Error = () => (
-  <li className={errorContainer}>{'there was an error :('}</li>
+  <li className={s.container}>{'there was an error :('}</li>
 )
 
 export default Error

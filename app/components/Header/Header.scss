@@ -1,15 +1,16 @@
 
-/* -------  header container - menu closed  ------- */
-.headerContainer {
-  background:#f5f5f5;
-  color:#070707;
+/* -------  Header  ------- */
+.container {
+  background:$white;
+  color:$black;
   width:100%;
   font-size:1.2em;
   z-index:10;
 }
-
-/* -------  logo container  ------- */
-.logoContainer {
+.menuOpen {
+  composes:container;
+}
+.innerContainer {
   height:60px;
   padding:0 2%;
   display:flex;
@@ -17,108 +18,78 @@
   align-items:center;
 }
 
-/* -------  logo  ------- */
+
+/* -------  Logo  ------- */
 .logo {
   display:block;
   height:48px;
   padding:1.2%;
 }
 
-/* -------  trigger  ------- */
+/* -------  Trigger  ------- */
 .trigger {
   width:52px;
   height:52px;
   position:relative;
   cursor:pointer;
 }
-
-/* -------  trigger line  ------- */
 .triggerLine {
   height:2px;
   width:24px;
   display:block;
-  background:#070707;
+  background:$black;
   position:absolute;
   top:25px;left:14px;
   transition:transform 0.22s;
 }
-
-/* -------  trigger line - top  ------- */
 .triggerTop {
   transform:translateY(-4px);
   composes:triggerLine;
 }
-
-/* -------  trigger line - bottom  ------- */
 .triggerBottom {
   transform:translateY(4px);
   composes:triggerLine;
 }
-
-/* -------  menu container  ------- */
-.menuContainer {
-  background:#fff;
-  overflow:hidden;
-  transition:0.22s max-height;
+.menuOpen .triggerTop {
+  transform:rotate(-135deg);
+}
+.menuOpen .triggerBottom {
+  transform:rotate(135deg);
 }
 
-/* -------  menu list  ------- */
-.menuList {
+/* -------  Menu  ------- */
+.menu {
+  background:$realwhite;
+  overflow:hidden;
+  transition:max-height 0.22s;
+}
+.list {
   padding:0.75em 1em 0;
 }
-
-/* -------  menu item  ------- */
-.menuItem, .menuExtra {
+.item, .extra {
   margin-bottom:0.4em;
 }
-
-.menuExtra:last-child {
+.extra:last-child {
   margin-bottom:0.2em;
 }
-
-/* -------  menu item  ------- */
-.menuBlock {
+.block {
   display:block;
   height:0.5em;
 }
-
-/* -------  menu link  ------- */
-.menuLink {
+.link {
   display:block;
   padding-top:0.4em;
 }
-
-/* -------  menu link - ::after  ------- */
-.menuLink::after, :global(.active::after) {
+.link::after, :global(.active::after) {
   content:'';
   display:block;
   height:1px;
   background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
 }
-
-/* -------  menu link - extra  ------- */
-.menuLinkExtra {
+.extra .link {
   font-size:85%;
-  composes:menuLink;
 }
-
-/* -------  menu open - header container  ------- */
-.menuOpen {
-  composes:headerContainer;
-}
-
-/* -------  menu open - trigger line - top  ------- */
-.menuOpen .triggerTop {
-  transform:rotate(-135deg);
-}
-
-/* -------  menu open - trigger line - bottom  ------- */
-.menuOpen .triggerBottom {
-  transform:rotate(135deg);
-}
-
-
-.menuIcon {
+.icon {
   content:'';
   display:inline-block;
   height:1em;
@@ -129,36 +100,44 @@
   background-repeat:no-repeat;
   background-position:center center;
 }
+
+/* -------  Footer  ------- */
+.footer {
+  height:2em;
+  font-size:1.6em;
+  color:$black;
+}
+
+
 @media only screen and (max-width:666px) {
-  .menuText {
+
+  /* -------  Menu  ------- */
+  .text {
     display:inline-block;
     transform:translateX(0px);
     transition:transform 0.22s;
   }
   @media (hover) {
-    .menuLink:hover .menuText {
+    .link:hover .text {
       transform:translateX(10%);
     }
   }
 }
-.menuFooter {
-  height:2em;
-  font-size:1.6em;
-  color:#070707;
-}
 
-@media only screen and (min-width:550px) and (max-width:667px) {
-  .headerContainer {
+
+@media only screen and (min-width:550px) and (max-width:$medium) {
+
+  /* -------  Header  ------- */
+  .container {
     font-size:1.25em;
   }
 }
 
-/* -------------------------------- */
-/* -------     >= 667px     ------- */
-/* -------------------------------- */
-@media only screen and (min-width:667px) {
 
-  .headerContainer {
+@media only screen and (min-width:$medium) {
+
+  /* -------  Header  ------- */
+  .container {
     line-height:1;
     height:60px;
     padding:0 2%;
@@ -167,42 +146,42 @@
     justify-content:space-between;
     flex-shrink:0;
   }
-
-  .logoContainer {
+  .innerContainer {
     padding:0;
   }
 
+  /* -------  Trigger  ------- */
   .trigger {
     display:none;
   }
 
-  .menuContainer {
+  /* -------  Menu  ------- */
+  .menu {
     background:initial;
     flex-grow:1;
     max-width:667px;
   }
-  .menuList {
+  .list {
     padding:0;
     margin-left:6.66%;
     display:flex;
     justify-content:space-between;
     align-items:center;
   }
-  .menuItem {
+  .item {
     margin:6px 1% 0;
   }
-  .menuExtra {
+  .extra {
     margin:6px 0.5% 0;
   }
-  .menuExtra:last-child {
+  .extra:last-child {
     margin-bottom:inherit;
   }
-  .menuLink {
+  .link {
     padding-top:0;
     position:relative;
   }
-
-  .menuLink::after, :global(.active::after) {
+  .link::after, :global(.active::after) {
     width:0;
     position:absolute;
     transition:width 0.22s;
@@ -211,25 +190,24 @@
     width:100%;
   }
   @media (hover) {
-    .menuLink:hover::after {
+    .link:hover::after {
       width:100%;
     }
   }
-  .menuBlock {
+  .block {
     height:30px;
     width:2px;
-    background:#070707;
+    background:$black;
     margin:0 1%;
   }
-  .menuLink {
+  .link {
     display:block;
     padding:4px 0;
   }
-  .menuLink::after {
+  .link::after {
     bottom:2px;
   }
-  .menuLink:hover .menuText {
+  .link:hover .text {
     transition:initial;
   }
-
 }

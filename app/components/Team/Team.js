@@ -1,26 +1,27 @@
-import React, { PropTypes } from 'react'
-import { teamContainer, teamLogo, teamInfo, teamLeft, teamRight, teamName, teamRecord, teamScore } from './styles.css'
-import teamColors from './team_colors.css'
+import React from 'react'
 import { team_colors } from 'data/team_colors'
+import s from './Team.scss'
 
-const s = (code, league) => ({
+const createBgImage = (code, league) => ({
   backgroundImage:code !== 'nyy' && `linear-gradient(to right,${team_colors[league][code]} 40%,transparent 0%)`
 })
 
 const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league }) => (
-  <section className={code === 'nyy' ? teamColors[`${code}_${league}`] : teamContainer}
-      style={s(code,league)}
-  >
-    <img className={teamLogo} src={`/assets/img/${league}/teams/${code}.${filetype}`} alt={name} />
-    <div className={teamInfo}>
-      <div className={teamLeft}>
-        <span className={teamName}>{ name.length >= 9 ? <small>{name}</small> : name }</span>
-        { (ws && ls) && <span className={teamRecord}>{`(${ws}-${ls}${ts ? `-${ts}` : ''})`}</span> }
-      </div>
-      <div className={teamRight}>
-        { score && <span className={teamScore}>{score}</span> }
-      </div>
-    </div>
+  <section className={code !== 'nyy' ? s.container : s[code]} style={createBgImage(code, league)}>
+    <img className={s.logo} src={`/assets/img/${league}/teams/${code}.${filetype}`} alt={name} />
+    <main className={s.info}>
+      <section className={s.leftSide}>
+        <span className={s.name}>{ name.length >= 9 ? <small>{name}</small> : name }</span>
+        { (ws && ls) &&
+          <span className={s.record}>{`(${ws}-${ls}${ts ? `-${ts}` : ''})`}</span>
+        }
+      </section>
+      <section className={s.rightSide}>
+        { score &&
+          <span className={s.score}>{score}</span>
+        }
+      </section>
+    </main>
   </section>
 )
 

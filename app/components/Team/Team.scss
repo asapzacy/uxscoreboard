@@ -1,0 +1,67 @@
+
+/* -------  Team  ------- */
+.container {
+  display:flex;
+  align-items:center;
+  padding:2px 0;
+}
+.logo {
+  height:75px;
+  flex:1;
+}
+.logo[src$='.png'] {
+  width:75px;
+}
+.info {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex:2;
+}
+.leftSide {
+  display:flex;
+  flex-direction:column;
+  flex:2;
+}
+.rightSide {
+  flex:1;
+}
+.name, .record {
+  padding:2px 8px;
+  background:$realwhite;
+  box-shadow:$black 0 0 1px 1px;
+}
+.name {
+  margin-bottom:8px;
+  font-size:120%;
+  max-width:150px;
+}
+.name small {
+  font-size:88%;
+}
+.record {
+  display:table;
+  margin-right:auto;
+  font-size:70%;
+  font-weight:700;
+}
+.score {
+  display:block;
+  font-size:160%;
+  text-align:center;
+}
+/*  edge case for the custom Yankees background-image... ___go_Giants__¯\_(ツ)_/¯ ___  */
+.nyy {
+  position:relative;
+  composes:container;
+}
+.nyy * {
+  z-index:1;
+}
+.nyy::before {
+  content:'';
+  position:absolute;
+  left:0;top:0;
+  width:40%;height:100%;
+  background:linear-gradient(to right,#ffffff 86%,#142448 14%) -27.5% 100% / 15px;
+}

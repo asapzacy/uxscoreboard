@@ -1,14 +1,10 @@
 import React from 'react'
-import { loadingContainer, svgContainer, svg, svgPath } from './styles.css'
+import s from './Test.scss'
 
-export default function Test() {
-  return (
-    <div className={loadingContainer}>
-      <div className={svgContainer}>
-        <svg className={svg} viewBox={'25 25 50 50'}>
-          <circle className={svgPath} cx={50} cy={50} r={20} fill={'none'} strokeWidth={2} strokeMiterlimit={10} />
-        </svg>
-      </div>
-    </div>
-  )
-}
+const Test = () => (
+  <div className={s.container}>
+    <h1 className={s.text}>{'test'}</h1>
+  </div>
+)
+
+export default Test

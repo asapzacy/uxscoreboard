@@ -7,6 +7,7 @@ export Footer from './Footer/Footer'
 export Home from './Home/Home'
 export About from './About/About'
 export NotFound from './NotFound/NotFound'
+export Test from './Test/Test'
 
 /* -------  random components  ------- */
 export Social from './Social/Social'
@@ -19,7 +20,6 @@ export NoGames from './NoGames/NoGames'
 /* -------  scoreboard components  ------- */
 export Scoreboard from './Scoreboard/Scoreboard'
 export Date from './Date/Date'
-export Playoffs from './Playoffs/Playoffs'
 export AllStar from './AllStar/AllStar'
 
 /* -------  game components  ------- */
@@ -34,6 +34,3 @@ export BoxScore from './BoxScore/BoxScore'
 export Stats from './Stats/Stats'
 export Diamond from './Diamond/Diamond'
 export UpdateTime from './UpdateTime/UpdateTime'
-
-/* -------  test component  ------- */
-export Test from './Test/Test'

@@ -1,13 +1,15 @@
 
 /* -------  PanelMenu  ------- */
 .menu {
-  height:2em;
+  height:1.95em;
+  width:75%;
+  overflow:hidden;
+  border-radius:2px;
   border:1px solid $grey4;
-  width:77.5%;
-  margin:0.5em auto 1.5em;
+  margin:0.75em auto 1.5em;
 }
 .list {
   display:flex;
-  font-size:0.75em;
+  font-size:0.7em;
   height:100%;
 }

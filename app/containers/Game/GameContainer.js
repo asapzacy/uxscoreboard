@@ -23,7 +23,13 @@ class GameContainer extends Component {
     this.setState({ isHovered: !this.state.isiOS && !this.state.isHovered })
   }
   render() {
-    return <Game showDetails={this.showDetails} scaleGame={this.scaleGame} {...this.state} {...this.props} />
+    return (
+      <Game showDetails={this.showDetails}
+        scaleGame={this.scaleGame}
+        {...this.state}
+        {...this.props}
+      />
+    )
   }
 }
 

@@ -1,13 +1,13 @@
 import React from 'react'
-import { updateTimeContainer, updateTime } from './styles.css'
+import s from './UpdateTime.scss'
 
 const UpdateTime = ({ lastUpdated }) => (
-  <section className={updateTimeContainer}>
-    <span className={updateTime}>
-      <strong>{`last updated: `}</strong>
+  <footer className={s.container}>
+    <span className={s.text}>
+      <strong>{'last updated:'}</strong>
       {lastUpdated}
     </span>
-  </section>
+  </footer>
 )
 
 export default UpdateTime

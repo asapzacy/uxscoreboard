@@ -3,9 +3,7 @@ import { About } from 'components'
 
 class AboutContainer extends Component {
   render() {
-    return (
-      <About />
-    )
+    return <About />
   }
 }
 

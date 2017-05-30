@@ -3,9 +3,7 @@ import { Test } from 'components'
 
 class TestContainer extends Component {
   render() {
-    return (
-      <Test />
-    )
+    return <Test />
   }
 }
 

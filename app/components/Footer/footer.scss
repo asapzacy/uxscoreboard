@@ -3,7 +3,7 @@
 .container {
   width:100%;
   flex:0 0 2.5em;
-  font-size:2.2em;
+  font-size:2.4em;
   color:$black;;
   display:flex;
   align-items:center;
@@ -11,6 +11,6 @@
 }
 @media only screen and (min-width:$large) {
   .container {
-    font-size:2.8em;
+    font-size:3em;
   }
 }

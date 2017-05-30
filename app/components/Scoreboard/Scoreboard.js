@@ -5,7 +5,7 @@ import { getNbaGameDetails } from 'helpers/api'
 import { VelocityTransitionGroup } from 'velocity-react'
 import 'velocity-animate/velocity.ui'
 import { velocity_scoreboard } from 'config/velocity'
-import { scoreboardContainer, gamesList, fadeContainer } from './styles.css'
+import s from './Scoreboard.scss'
 
 export default function Scoreboard({ scores, date, today, league, seasonState, direction, lastUpdated, isError }) {
   let games
@@ -41,10 +41,10 @@ export default function Scoreboard({ scores, date, today, league, seasonState, d
     }
   }
   return (
-    <main className={scoreboardContainer}>
+    <main className={s.container}>
       <DateContainer date={date} today={today} league={league} />
-        <VelocityTransitionGroup className={fadeContainer} {...velocity_scoreboard(direction)}>
-          <ul className={gamesList} key={date}>
+        <VelocityTransitionGroup className={s.fade} {...velocity_scoreboard(direction)}>
+          <ul className={s.list} key={date}>
             { isError ? <NoGames text={'there was an error :('} /> : games }
           </ul>
         </VelocityTransitionGroup>

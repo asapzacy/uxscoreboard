@@ -1,11 +1,12 @@
 
-/* -------  base containers  ------- */
+/* -------  base container  ------- */
 export MainContainer from './Main/MainContainer'
 
 /* -------  random containers  ------- */
 export HomeContainer from './Home/HomeContainer'
 export AboutContainer from './About/AboutContainer'
 export NotFoundContainer from './NotFound/NotFoundContainer'
+export TestContainer from './Test/TestContainer'
 
 /* -------  league containers  ------- */
 export MlbContainer from './Mlb/MlbContainer'
@@ -17,9 +18,6 @@ export NhlContainer from './Nhl/NhlContainer'
 export ScoreboardContainer from './Scoreboard/ScoreboardContainer'
 export DateContainer from './Date/DateContainer'
 
-/* -------  game container  ------- */
+/* -------  game containers  ------- */
 export GameContainer from './Game/GameContainer'
 export DetailsContainer from './Details/DetailsContainer'
-
-/* -------  test container  ------- */
-export TestContainer from './Test/TestContainer'

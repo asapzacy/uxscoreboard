@@ -1,94 +1,9 @@
 
-/* -------  standard container  ------- */
-.standardContainer {
+.standard {
   margin-top:24%;
 }
 @media only screen and (min-width:667px) {
-  .standardContainer {
+  .standard {
     margin-top:12%;
   }
-}
-
-/* -------  table container  ------- */
-.tableContainer {
-  letter-spacing:0;
-  display:flex;
-  align-items:flex-start;
-  flex-direction:column;
-}
-/* -------  table  ------- */
-.table {
-  font-size:0.8em;
-  width:100%;
-  table-layout:fixed;
-  border-collapse:collapse;
-}
-/* -------  table tr  ------- */
-.table tr {
-  height:3em;
-}
-/* -------  table tr th - first child  ------- */
-.table tr th:first-child {
-  text-align:left;
-  width:40%;
-  padding-left:2%;
-}
-/* -------  table head  ------- */
-.tableHead {
-  border-bottom:1px solid #e0e0e0;
-}
-/* -------  table tr - evens  ------- */
-.tableBody tr:nth-of-type(even) {
-  background:#f5f5f5;
-}
-
-
-.scoreboardContainer {
-  width: 93.33%;
-  margin: 0 auto 16em;
-  text-align: center;
-}
-
-.scoresContainer {
-  display: flex;
-  text-align: left;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.scoresContainer h1 {
-  color: #bdbdbd;
-  font-weight: 100;
-  font-size: 3.5em;
-  margin: 2em 0;
-}
-
-.gameContainer {
-  background: #f5f5f5;
-  color: #070707;
-  border: 2px solid #f5f5f5;
-  margin: 2.2%;
-  flex-basis: 28%;
-}
-
-.expandIcon {
-  cursor: pointer;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gameInfo {
-  height: 40px;
-  padding: 0 20px;
-  font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.gameInfo sup {
-  font-size: 70%;
 }

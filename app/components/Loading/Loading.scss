@@ -1,7 +1,7 @@
 
 /* -------  Loading  ------- */
 .container {
-  composes:standardContainer from 'styles/shared.css';
+  composes:standard from 'styles/shared.css';
 }
 .svgContainer {
   position:relative;

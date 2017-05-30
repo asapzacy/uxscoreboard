@@ -27,6 +27,4 @@ body {
 
 /* -------  app  ------- */
 #app { width:100%;height:100%;opacity:0;transition:opacity 1.22s 0.22s }
-
-/* -------  go  ------- */
 #app.ready { font-family:'Comfortaa',cursive;opacity:1 }

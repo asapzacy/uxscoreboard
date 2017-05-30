@@ -7,8 +7,8 @@ const createBgImage = (code, league) => ({
 })
 
 const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league }) => (
-  <section className={code !== 'nyy' ? s.container : s[code]} style={createBgImage(code, league)}>
-    <img className={s.logo} src={`/assets/img/${league}/teams/${code}.${filetype}`} alt={name} />
+  <section className={code === 'nyy' ? s[code] : s.container} style={createBgImage(code, league)}>
+    <img className={s.logo} src={`/assets/img/${league}/teams/${code}.${filetype}`} alt={`${name} Logo | uxscoreboard`} />
     <main className={s.info}>
       <section className={s.leftSide}>
         <span className={s.name}>{ name.length >= 9 ? <small>{name}</small> : name }</span>

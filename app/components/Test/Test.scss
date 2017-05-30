@@ -1,0 +1,8 @@
+
+/* -------  Test  ------- */
+.container {
+  composes:flexy from 'styles/_utils.scss'
+}
+.text {
+  font-size:2.8em;
+}

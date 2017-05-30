@@ -8,7 +8,6 @@ export const createDiamond = (offense) => {
   return file
 }
 
-
 export const createBsoCount = (filled, max, state) => {
   if (!state || state === 'Middle' || state === 'End') {
     return fillCircles(0, max)

@@ -3,8 +3,8 @@
 .container {
   font-size:1.2em;
   padding:0.8em 1.6em;
-  border:1px solid $grey4;
-  composes:standardContainer from 'styles/shared.css';
+  border:1px solid currentColor;
+  composes:standard from 'styles/shared.css';
 }
 
 

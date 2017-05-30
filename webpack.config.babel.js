@@ -61,7 +61,7 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin({
   disable: !isProduction,
-  filename: 'app.css'
+  filename: 'assets/css/app.css'
 })
 
 const productionPlugin = new webpack.DefinePlugin({

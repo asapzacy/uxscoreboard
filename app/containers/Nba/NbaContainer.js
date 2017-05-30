@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Nba } from 'components'
+import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
 import { ref } from 'config/firebase'
@@ -70,11 +70,13 @@ class NbaContainer extends Component {
   saveScores() {
     ref.child(`nba/scores/${this.state.date}`)
       .set(this.state.scores)
-      .then(() => console.log(`nba scores - ${this.state.date} - saved to firebase. . . `))
+      .then(() => console.log(`nba scores updated.. `))
   }
   render() {
-    return <Nba {...this.state} />
+    return <League {...this.state} league={this.props.league} />
   }
 }
+
+NbaContainer.defaultProps = { league: 'nba' }
 
 export default NbaContainer

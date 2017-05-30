@@ -17,11 +17,11 @@ const Details = (props) => {
 
 export default Details
 
-const MlbDetails = ({ game, date, league, panel, switchPanel, lastUpdated }) => (
+const MlbDetails = ({ game, date, league, panels, activePanel, switchPanel, lastUpdated }) => (
   <section className={s.container}>
     <Matchup {...mlbMatchupProps(game, date)} />
-    <PanelMenu panel={panel} switchPanel={switchPanel} />
-    { panel === 'boxScore' &&
+    <PanelMenu panels={panels} activePanel={activePanel} switchPanel={switchPanel} />
+    { activePanel === 'box score' &&
       <BoxScore {...mlbBoxScoreProps(game, league)}>
         <Diamond {...mlbDiamondProps(game)} />
       </BoxScore>
@@ -30,12 +30,16 @@ const MlbDetails = ({ game, date, league, panel, switchPanel, lastUpdated }) => 
   </section>
 )
 
-const NbaDetails = ({ game, date, league, panel, switchPanel, lastUpdated }) => (
+const NbaDetails = ({ game, date, league, panels, activePanel, switchPanel, lastUpdated }) => (
   <section className={s.container}>
     <Matchup {...nbaMatchupProps(game, date)} />
-    <PanelMenu panel={panel} switchPanel={switchPanel} />
-    { panel === 'boxScore' && <BoxScore {...nbaBoxScoreProps(game, league)} /> }
-    { panel === 'teamStats' && <Stats {...nbaStatsProps(game)} /> }
+    <PanelMenu panels={panels} activePanel={activePanel} switchPanel={switchPanel} />
+    { activePanel === 'box score' &&
+      <BoxScore {...nbaBoxScoreProps(game, league)} />
+    }
+    { activePanel === 'team stats' &&
+      <Stats {...nbaStatsProps(game)} />
+    }
     <UpdateTime lastUpdated={lastUpdated} />
   </section>
 )

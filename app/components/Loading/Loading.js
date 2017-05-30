@@ -1,14 +1,14 @@
 import React from 'react'
-import { loadingContainer, svgContainer, svg, svgPath } from './styles.css'
+import s from './Loading.scss'
 
-export default function Loading() {
-  return (
-    <div className={loadingContainer}>
-      <div className={svgContainer}>
-        <svg className={svg} viewBox={'25 25 50 50'}>
-          <circle className={svgPath} cx={50} cy={50} r={20} fill={'none'} strokeWidth={2} strokeMiterlimit={10} />
-        </svg>
-      </div>
+const Loading = () => (
+  <section className={s.container}>
+    <div className={s.svgContainer}>
+      <svg className={s.svg} viewBox={'25 25 50 50'}>
+        <circle className={s.path} cx={50} cy={50} r={20} fill={'none'} strokeWidth={2} strokeMiterlimit={10} />
+      </svg>
     </div>
-  )
-}
+  </section>
+)
+
+export default Loading

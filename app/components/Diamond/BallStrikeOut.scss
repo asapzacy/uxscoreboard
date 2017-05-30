@@ -1,0 +1,32 @@
+
+/* -------  BSO  ------- */
+.label {
+  font:1.1em/100% monospace;
+  display:inline-block;
+  width:1.25em;
+  letter-spacing:-1px;
+}
+:global(.circle) {
+  width:11px;
+  height:11px;
+  display:inline-block;
+  margin:0 2px;
+  border-radius:50%;
+  background:$grey2;
+}
+:global(.circle::after) {
+  content:'';
+  display:block;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  background:$red;
+  opacity:0;
+  transition:opacity 1.22s;
+}
+.bso:first-child :global(.circleFilled::after) {
+  background:$green;
+}
+:global(.circleFilled::after) {
+  opacity:1;
+}

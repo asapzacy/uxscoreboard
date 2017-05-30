@@ -1,6 +1,6 @@
 import React from 'react'
 import ArrowDown from 'react-icons/lib/io/ios-arrow-down'
-import s from './expand.scss'
+import s from './Expand.scss'
 
 const Expand = ({ isExpanded }) => (
   <section className={s.container}>

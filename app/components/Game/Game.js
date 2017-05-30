@@ -5,7 +5,7 @@ import { VelocityTransitionGroup } from 'velocity-react'
 import { velocity_game } from 'config/velocity'
 import { mlbTeamProps, nbaTeamProps, nflTeamProps, nhlTeamProps } from '../Team/props'
 import { mlbGameStateProps, nflGameStateProps, nbaGameStateProps, nhlGameStateProps } from '../GameState/props'
-import s from './game.scss'
+import s from './Game.scss'
 
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
 

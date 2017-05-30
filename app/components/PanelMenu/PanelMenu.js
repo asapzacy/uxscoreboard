@@ -1,14 +1,15 @@
 import React from 'react'
-import { panelMenu, panelList, panelItem, activated } from './styles.css'
+import Panel from './Panel'
+import s from './PanelMenu.scss'
 
-export default function PanelMenu({ panel, switchPanel }) {
-  return (
-    <menu className={panelMenu}>
-      <ul className={panelList}>
-        <li className={panel === 'boxScore' ? activated : panelItem} onClick={() => switchPanel('boxScore')}>{'box score'}</li>
-        <li className={panel === 'teamStats' ? activated : panelItem} onClick={() => switchPanel('teamStats')}>{'team stats'}</li>
-        <li className={panel === 'leaders' ? activated : panelItem} onClick={() => switchPanel('leaders')}>{'leaders'}</li>
-      </ul>
-    </menu>
-  )
-}
+const PanelMenu = ({ panels, activePanel, switchPanel }) => (
+  <menu className={s.menu}>
+    <ul className={s.list}>
+      { panels.map((el, i) => (
+          <Panel panel={el} isActive={el === activePanel} fn={switchPanel} key={i} />)
+      )}
+    </ul>
+  </menu>
+)
+
+export default PanelMenu

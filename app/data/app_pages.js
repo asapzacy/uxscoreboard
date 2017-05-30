@@ -1,13 +1,14 @@
 
 export const app_pages = {
   mainLinks: [
-    { name: 'MLB', icon: 'baseball',  },
-    { name: 'NBA', icon: 'basketball' },
-    { name: 'NFL', icon: 'football'   },
-    { name: 'NHL', icon: 'hockey'     }
+    { name: 'MLB', url: 'mlb', icon: 'baseball',  },
+    { name: 'NBA', url: 'nba', icon: 'basketball' },
+    { name: 'NFL', url: 'nfl', icon: 'football'   },
+    { name: 'NHL', url: 'nhl', icon: 'hockey'     },
+    { name: 'MLS', url: 'mls', icon: 'soccer'     }
   ],
   extraLinks: [
-    { name: 'about' },
-    { name: 'source', url: 'https://github.com/zacarellano/uxscoreboard' }
+    { name: 'about',  url: 'about' },
+    { name: 'source', url: 'https://github.com/zacarellano/uxscoreboard', isOutsideSource: true }
   ]
 }

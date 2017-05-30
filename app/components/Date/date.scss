@@ -11,7 +11,6 @@
 }
 .item {
   font-size:1.06em;
-  letter-spacing:0;
   font-weight:400;
   display:flex;
   align-items:stretch;
@@ -32,6 +31,13 @@
 .text {
   white-space:nowrap;
 }
+.text::after {
+  content:'';
+  display:block;
+  height:1px;
+  background:$grey3;
+}
+
 
 @media only screen and (min-width:$medium) {
   .menu {
@@ -49,10 +55,7 @@
     font-size:110%;
   }
   .text::after {
-    content:'';
-    display:block;
     height:2px;
-    background:$grey3;
   }
   .item {
     font-size:1.12em;

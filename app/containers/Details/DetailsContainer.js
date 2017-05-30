@@ -4,14 +4,21 @@ import { Details } from 'components'
 class DetailsContainer extends Component {
   constructor() {
     super()
-    this.state = { panel: '', details: {} }
+    this.state = {
+      details: {},
+      panels: [],
+      activePanel: ''
+     }
     this.switchPanel = this.switchPanel.bind(this)
   }
   componentDidMount() {
-    this.setState({ panel: 'boxScore' })
+    this.setState({
+      panels: [ 'box score', 'team stats', 'leaders' ],
+      activePanel: 'box score'
+    })
   }
   switchPanel(newPanel) {
-    this.setState({ panel: newPanel })
+    this.setState({ activePanel: newPanel })
   }
   updateDetails(newDetails) {
     this.setState({ details: newDetails })

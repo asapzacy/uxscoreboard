@@ -1,11 +1,13 @@
-import webpack from 'webpack'
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
-import { StatsWriterPlugin } from 'webpack-stats-plugin'
-import VisualizerPlugin from 'webpack-visualizer-plugin'
-import DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plugin'
-import autoprefixer from 'autoprefixer'
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
+const VisualizerPlugin = require('webpack-visualizer-plugin')
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
+const autoprefixer = require('autoprefixer')
 
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 const isProduction = LAUNCH_COMMAND === 'build'
@@ -20,7 +22,7 @@ const PATHS = {
   build: path.join(__dirname, 'dist')
 }
 
-const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
   filename: 'index.html',
   inject: 'body'
@@ -57,6 +59,11 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
   verbose: true
 })
 
+const extractTextPlugin = new ExtractTextPlugin({
+  disable: !isProduction,
+  filename: 'app.css'
+})
+
 const productionPlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: JSON.stringify('production')
@@ -64,15 +71,13 @@ const productionPlugin = new webpack.DefinePlugin({
 })
 
 const sharedPlugins = [
-  HTMLWebpackPluginConfig,
+  htmlWebpackPlugin,
   postcssPlugin,
+  extractTextPlugin,
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 ]
 
 const base = {
-  entry: [
-    PATHS.app
-  ],
   output: {
     path: PATHS.build,
     filename: 'bundle.js',
@@ -85,25 +90,33 @@ const base = {
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      {
-        test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              modules: true,
-              minimize: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              importLoaders: 1
+      isProduction ? {
+        test: /\.s?css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                modules: true,
+                minimize: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]',
+                importLoaders: 1
+              }
+            },
+            { loader: 'postcss-loader' },
+            { loader: 'sass-loader' },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: path.resolve(__dirname, './app/styles/_variables.scss')
+              }
             }
-          },
-          { loader: 'postcss-loader' }
-        ]
-      },
-      {
-        test: /\.scss$/,
+          ]
+        })
+      } : {
+        test: /\.s?css$/,
         use: [
           { loader: 'style-loader' },
           {
@@ -140,9 +153,16 @@ const base = {
 }
 
 const developmentConfig = {
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    PATHS.app
+  ],
   devtool: 'cheap-module-inline-source-map',
   devServer: {
     contentBase: PATHS.build,
+    publicPath: '/',
     hot: true,
     inline: true,
     historyApiFallback: true,
@@ -153,11 +173,14 @@ const developmentConfig = {
     ...sharedPlugins,
     browserSyncPlugin,
     duplicatePackageCheckerPlugin,
+    new DashboardPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 }
 
 const productionConfig = {
+  entry: [ PATHS.app ],
   devtool: 'cheap-module-source-map',
   plugins: [
     ...sharedPlugins,
@@ -169,4 +192,4 @@ const productionConfig = {
   ]
 }
 
-export default Object.assign({}, base, isProduction ? productionConfig : developmentConfig)
+module.exports = Object.assign({}, base, isProduction ? productionConfig : developmentConfig)

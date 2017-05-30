@@ -11,7 +11,7 @@ strong { font-weight:700 }
 figure { text-align:center }
 figcaption { font-size:0.9em }
 table, hr { border:0 }
-nav { letter-spacing:0 }
+nav, menu { letter-spacing:0 }
 sup { font-size:66% }
 
 /* -------  body  ------- */

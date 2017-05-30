@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './about.scss'
+import s from './About.scss'
 
 const About = () => (
   <section className={s.container}>

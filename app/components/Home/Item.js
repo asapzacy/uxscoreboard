@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router'
-import s from './Home.scss'
+import s from './Item.scss'
 
-const Item = ({ league }) => (
+const Item = ({ league, url }) => (
   <li className={s.item}>
-    <Link className={s[league]} to={`/${league}`}>{league}</Link></li>
+    <Link className={s[url]} to={`/${url}`} title={`uxscoreboard | ${league} scores`}>
+      {league}
+    </Link>
+  </li>
 )
 
 export default Item

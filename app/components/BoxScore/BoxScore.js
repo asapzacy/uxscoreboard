@@ -1,6 +1,6 @@
 import React from 'react'
 import { formatBoxScoreTableHead, formatBoxScoreTableBodyRow } from 'helpers/boxScoreFns'
-import s from './boxscore.scss'
+import s from './BoxScore.scss'
 
 const BoxScore = ({ awayTeam, homeTeam, awayScore, homeScore, linescore, periods, totalPeriods, league, overtimes, children }) => (
   <section className={s.container}>

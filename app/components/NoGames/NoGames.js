@@ -1,8 +1,8 @@
 import React from 'react'
-import { noGamesContainer } from './styles.css'
+import s from './NoGames.scss'
 
-const NoGames = () => (
-  <li className={noGamesContainer}>{'no games today'}</li>
+const NoGames = ({ text }) => (
+  <li className={s.container}>{text}</li>
 )
 
 export default NoGames

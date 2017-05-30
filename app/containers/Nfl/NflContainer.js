@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Nfl } from 'components'
+import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNflScores } from 'helpers/api'
 import { parseString } from 'xml2js'
@@ -10,6 +10,7 @@ class NflContainer extends Component {
     this.state = {
       isLoading: true,
       isValid: false,
+      isError: false,
       scores: {},
       year: '',
       date: '',
@@ -42,14 +43,17 @@ class NflContainer extends Component {
       .catch((error) =>  {
         this.setState({
           isLoading: false,
+          isError: true,
           date: dt
         })
         throw new Error(error)
       })
   }
   render() {
-    return <Nfl {...this.state} />
+    return <League {...this.state} league={this.props.league} />
   }
 }
+
+NflContainer.defaultProps = { league: 'nfl' }
 
 export default NflContainer

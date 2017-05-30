@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router'
 import s from './Header.scss'
 
-const Extra = ({ name, url }) => (
+const Extra = ({ name, url, isOutsideSource }) => (
   <li className={s.extra}>
-    { url
+    { isOutsideSource
       ? <a className={s.link} href={url} title={`uxscoreboard | ${name}`}>
           <span className={s.text}>{name}</span>
         </a>
-      : <Link className={s.link} to={`/${name}`} title={`uxscoreboard | ${name}`} activeClassName={'active'}>
+      : <Link className={s.link} to={`/${url}`} title={`uxscoreboard | ${name}`} activeClassName={'active'}>
           <span className={s.text}>{name}</span>
         </Link>
     }

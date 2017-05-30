@@ -12,7 +12,7 @@ const Home = () => (
     <nav className={s.menu}>
       <menu className={s.list}>
         { app_pages.mainLinks.map((el, i) => (
-          <Item league={el.name} key={i}/>)
+          <Item league={el.name} url={el.url} key={i}/>)
         )}
       </menu>
     </nav>

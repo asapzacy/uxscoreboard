@@ -1,6 +1,6 @@
 import React from 'react'
 import { Social } from 'components'
-import s from './footer.scss'
+import s from './Footer.scss'
 
 const Footer = () => (
   <footer className={s.container}>

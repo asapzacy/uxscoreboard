@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Nhl } from 'components'
+import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNhlScores } from 'helpers/api'
 
@@ -9,7 +9,9 @@ class NhlContainer extends Component {
     this.state = {
       isLoading: true,
       isValid: false,
+      isError: false,
       scores: {},
+      year: '',
       date: '',
       today: ''
     }
@@ -31,11 +33,11 @@ class NhlContainer extends Component {
         this.setState({
           isLoading: false,
           scores: currentScores,
+          year: '20162017',
           date: dt
         })
       })
       .catch((error) =>  {
-        console.log(error)
         this.setState({
           isLoading: false,
           isError: true,
@@ -45,8 +47,9 @@ class NhlContainer extends Component {
       })
   }
   render() {
-    return <Nhl {...this.state} />
+    return <League {...this.state} league={this.props.league} />
   }
 }
 
+NhlContainer.defaultProps = { league: 'nhl' }
 export default NhlContainer

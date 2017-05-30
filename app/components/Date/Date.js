@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import moment from 'moment'
 import ArrowBack from 'react-icons/lib/io/ios-arrow-back'
 import ArrowForward from 'react-icons/lib/io/ios-arrow-forward'
-import s from './date.scss'
+import s from './Date.scss'
 
 // TODO: implement a calendar
 const Date = ({ width, ...props }) => (

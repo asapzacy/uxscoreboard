@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './allstar.scss'
+import s from './AllStar.scss'
 
 const AllStar = ({ league, img }) => (
   <section className={s.container}>

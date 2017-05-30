@@ -1,22 +1,20 @@
 
 /* -------  base components  ------- */
-export Home from './Home/Home'
 export Header from './Header/Header'
 export Footer from './Footer/Footer'
 
-/* -------  random components  ------- */
+/* -------  page components  ------- */
+export Home from './Home/Home'
 export About from './About/About'
-export Social from './Social/Social'
 export NotFound from './NotFound/NotFound'
-export Loading from './Loading/Loading'
-export NoGames from './NoGames/NoGames'
-export Error from './Error/Error'
+
+/* -------  random components  ------- */
+export Social from './Social/Social'
 
 /* -------  league components  ------- */
-export Mlb from './Mlb/Mlb'
-export Nba from './Nba/Nba'
-export Nfl from './Nfl/Nfl'
-export Nhl from './Nhl/Nhl'
+export League from './League/League'
+export Loading from './Loading/Loading'
+export NoGames from './NoGames/NoGames'
 
 /* -------  scoreboard components  ------- */
 export Scoreboard from './Scoreboard/Scoreboard'

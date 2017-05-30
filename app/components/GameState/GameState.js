@@ -1,6 +1,6 @@
 import React from 'react'
 import { periodSuffix } from 'helpers/utils'
-import s from './gamestate.scss'
+import s from './GameState.scss'
 
 const GameState = (props) => {
   switch (props.gameState) {

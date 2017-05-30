@@ -33,8 +33,8 @@
   flex-flow:row wrap;
   justify-content:center;
 }
-@media only screen and (min-width:$medium) {
 
+@media only screen and (min-width:$medium) {
   /* -------  Home  ------- */
   @media (orientation:portrait) {
     .uxscoreboard {
@@ -55,18 +55,14 @@
   }
 }
 
-
 @media only screen and (min-width:$large) {
-
   /* -------  Home  ------- */
   .uxscoreboard {
     font-size:2em;
   }
 }
 
-
 @media only screen and (min-width:$xlarge) {
-
   /* -------  Home  ------- */
   .uxscoreboard {
     font-size:2.2em;

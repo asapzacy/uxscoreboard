@@ -8,7 +8,7 @@
   display:block;
   padding:8%;
   margin:8%;
-  line-height:1.2;
+  line-height:1.15;
   background:$grey1;
   border:2px solid $grey5;
   border-radius:3px;
@@ -36,8 +36,9 @@
   opacity:1;
   transition-delay:0.11s;
 }
-.mlb, .nba, .nfl, .nhl, .mls { composes:link }
+.mlb, .mls, .nba, .nfl, .nhl { composes:link }
 .mlb::after { background-image:url('https://uxscoreboard.com/assets/icons/baseball_light.svg') }
+.mls::after { background-image:url('https://uxscoreboard.com/assets/icons/soccer_light.svg') }
 .nba::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball_light.svg') }
 .nfl::after { background-image:url('https://uxscoreboard.com/assets/icons/football_light.svg') }
 .nhl::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey_light.svg');top:20%;bottom:20% }

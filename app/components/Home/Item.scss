@@ -1,7 +1,7 @@
 
 /* -------  Item  ------- */
 .item {
-  width:50%;
+  flex-basis:50%;
   max-width:240px;
 }
 .link {
@@ -42,3 +42,14 @@
 .nba::after { background-image:url('https://uxscoreboard.com/assets/icons/basketball_light.svg') }
 .nfl::after { background-image:url('https://uxscoreboard.com/assets/icons/football_light.svg') }
 .nhl::after { background-image:url('https://uxscoreboard.com/assets/icons/hockey_light.svg');top:20%;bottom:20% }
+
+@media only screen and (min-width:$medium) {
+  .item {
+    flex-basis:33.3%;
+  }
+}
+@media only screen and (min-width:$xlarge) {
+  .item {
+    flex-basis:20%;
+  }
+}

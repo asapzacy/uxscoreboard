@@ -16,10 +16,10 @@
   width:90%;
 }
 .name {
-  font-size:2.2em;
+  font-size:2.12em;
 }
 .description {
-  font-size:1.28em;
+  font-size:1.22em;
   letter-spacing:0;
   color:$grey5;
 }
@@ -38,7 +38,7 @@
   /* -------  Home  ------- */
   @media (orientation:portrait) {
     .uxscoreboard {
-      font-size:1.8em;
+      font-size:1.6em;
     }
   }
   @media (orientation:landscape) {
@@ -47,22 +47,26 @@
       margin-bottom:2.5%;
     }
   }
-  .meny {
-    width:90%;
-  }
-  .item {
-    width:25%;
+  .menu {
+    width:70%;
   }
 }
 
 @media only screen and (min-width:$large) {
   /* -------  Home  ------- */
   .uxscoreboard {
-    font-size:2em;
+    font-size:1.8em;
   }
 }
 
 @media only screen and (min-width:$xlarge) {
+  /* -------  Home  ------- */
+  .uxscoreboard {
+    font-size:2em;
+  }
+}
+
+@media only screen and (min-width:$xxlarge) {
   /* -------  Home  ------- */
   .uxscoreboard {
     font-size:2.2em;

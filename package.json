@@ -6,7 +6,7 @@
   "scripts": {
     "start": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
     "wake": "atom . && open http://localhost:8080 && yarn start",
-    "build": "webpack -p --progress --colors",
+    "build": "NODE_ENV='production' webpack -p --progress --colors",
     "wipe": "rm -rf node_modules && yarn",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",

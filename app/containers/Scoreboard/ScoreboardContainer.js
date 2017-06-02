@@ -64,25 +64,18 @@ class ScoreboardContainer extends Component {
     }, () => this.updateBgImg())
   }
   updateBgImg() {
-    if (this.state.seasonState.isAllStar) {
-      console.log('asg')
-    }
-    if (this.state.seasonState.isPlayoffs) {
-      console.log('p')
-    }
-    let bgImg = ''
+    let img = ''
     if (this.state.seasonState.isPlayoffs) {
       if (this.state.seasonState.isFinals) {
-        bgImg = `url(/assets/img/${this.props.league}/other/finals.svg)`
+        img = `url(/assets/img/${this.props.league}/other/finals.svg)`
       } else {
-        bgImg = `url(/assets/img/${this.props.league}/other/playoffs.svg)`
+        img = `url(/assets/img/${this.props.league}/other/playoffs.svg)`
       }
     }
     if (this.state.seasonState.isAllStar) {
-      console.log('hi')
-      bgImg = `url(/assets/img/${this.props.league}/other/all-star-game.svg)`
+      img = `url(/assets/img/${this.props.league}/other/all-star-game.svg)`
     }
-    this.setState({ bgImg })
+    this.setState({ bgImg: img })
   }
   render() {
     return <Scoreboard {...this.state} {...this.props} />

@@ -1,15 +1,28 @@
 
 /* -------  NoGames  ------- */
 .container {
-  font-size:1.2em;
+  margin:1em;
+  height:205px;
+  display:flex;
+  align-items:center;
+  font-size:1.1em;
+}
+.text {
+  letter-spacing:0;
+  text-align:center;
   padding:0.8em 1.6em;
   border:1px solid currentColor;
-  composes:standard from 'styles/shared.css';
+  border-radius:2px;
 }
 
-
 @media only screen and (min-width:$medium) {
-  .noGamesContainer {
-    font-size:1.6em;
+  .text {
+    font-size:1.2em;
+  }
+}
+
+@media only screen and (min-width:$xlarge) {
+  .text {
+    font-size:1.3em;
   }
 }

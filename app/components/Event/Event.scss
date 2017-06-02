@@ -1,0 +1,19 @@
+
+/* -------  Event  ------- */
+.container {
+  flex:1;
+  margin-top:2.5em;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.logo {
+  width:80%;
+  max-width:444px;
+}
+
+@media only screen and (min-width:$large) {
+  .logo {
+    max-width:555px;
+  }
+}

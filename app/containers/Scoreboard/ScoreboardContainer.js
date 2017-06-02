@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Scoreboard } from 'components'
-import { seasons } from 'helpers/seasons'
+import { seasons } from 'data/league_dates'
 import { checkDay, formatLastUpdatedString } from 'helpers/utils'
 
 class ScoreboardContainer extends Component {
@@ -8,12 +8,13 @@ class ScoreboardContainer extends Component {
     super()
     this.state = {
       lastUpdated: 0,
+      bgImg: false,
       seasonState: {
         isPreseason: false,
         isSeason: false,
         isAllStar: false,
         isPlayoffs: false,
-        isFinals: false,
+        isFinals: false
       },
       direction: {
         enter: '',
@@ -28,12 +29,12 @@ class ScoreboardContainer extends Component {
   componentWillReceiveProps(nextProps) {
     this.updateTime()
     this.checkSeason(nextProps.date)
-    this.checkDirection(this.props.date, nextProps.date)
+    this.updateDirection(this.props.date, nextProps.date)
   }
   updateTime() {
     this.setState({ lastUpdated: formatLastUpdatedString() })
   }
-  checkDirection(oldDate, newDate) {
+  updateDirection(oldDate, newDate) {
     let enter
     let leave
     if (oldDate > newDate) {
@@ -60,7 +61,28 @@ class ScoreboardContainer extends Component {
         isPlayoffs: checkDay(day, dates.playoffs.start, dates.playoffs.end),
         isFinals: checkDay(day, dates.playoffs.finals.start, dates.playoffs.finals.end)
       }
-    })
+    }, () => this.updateBgImg())
+  }
+  updateBgImg() {
+    if (this.state.seasonState.isAllStar) {
+      console.log('asg')
+    }
+    if (this.state.seasonState.isPlayoffs) {
+      console.log('p')
+    }
+    let bgImg = ''
+    if (this.state.seasonState.isPlayoffs) {
+      if (this.state.seasonState.isFinals) {
+        bgImg = `url(/assets/img/${this.props.league}/other/finals.svg)`
+      } else {
+        bgImg = `url(/assets/img/${this.props.league}/other/playoffs.svg)`
+      }
+    }
+    if (this.state.seasonState.isAllStar) {
+      console.log('hi')
+      bgImg = `url(/assets/img/${this.props.league}/other/all-star-game.svg)`
+    }
+    this.setState({ bgImg })
   }
   render() {
     return <Scoreboard {...this.state} {...this.props} />

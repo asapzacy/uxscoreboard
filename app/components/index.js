@@ -20,7 +20,7 @@ export NoGames from './NoGames/NoGames'
 /* -------  scoreboard components  ------- */
 export Scoreboard from './Scoreboard/Scoreboard'
 export Date from './Date/Date'
-export AllStar from './AllStar/AllStar'
+export Event from './Event/Event'
 
 /* -------  game components  ------- */
 export Game from './Game/Game'

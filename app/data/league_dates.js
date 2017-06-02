@@ -34,25 +34,25 @@ export const seasons =  {
   },
   nba: {
     seasons: {
-      2016: {
+      '2016': {
         preseason: {
-          start: 20161001,
-          end: 20161024
+          start: '20161001',
+          end: '20161024'
         },
         season:  {
-          start: 20161025,
-          end: 20170412,
+          start: '20161025',
+          end: '20170412',
           allstar: {
-            start: 20170217,
-            end: 20170222
+            start: '20170217',
+            end: '20170222'
           }
         },
         playoffs: {
-          start: 20170415,
-          end: 20170529,
+          start: '20170415',
+          end: '20170618',
           finals: {
-            start: 20170601,
-            end: 20170618
+            start: '20170601',
+            end: '20170618'
           }
         },
       }

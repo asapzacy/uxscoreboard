@@ -12,6 +12,10 @@ export const getMlbScores = (dt) => {
     .catch(currentScores => currentScores.status)
 }
 
+export const getMlbGameDetails = (id) => {
+  const api = `r`
+}
+
 // axios request - nba scores
 export const getNbaScores = (dt) => {
   const api = `${CORS}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`

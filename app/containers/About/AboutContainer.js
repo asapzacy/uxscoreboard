@@ -4,7 +4,7 @@ import { About } from 'components'
 import axios from 'axios'
 
 const testing = (dt = '20170602') => {
-  const url = `http://localhost:9091/api/mlb/scores/${dt}`
+  const url = `/api/mlb/scores/${dt}`
   return axios.get(url)
     .then(response => response.data)
     .catch(error => error.status)

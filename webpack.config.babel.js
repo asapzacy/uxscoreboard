@@ -167,7 +167,12 @@ const developmentConfig = {
     inline: true,
     historyApiFallback: true,
     host: HOST,
-    port: PORT
+    port: PORT,
+    proxy: {
+      '/api/**': {
+        target: 'http://localhost:9090'
+      }
+    }
   },
   plugins: [
     ...sharedPlugins,

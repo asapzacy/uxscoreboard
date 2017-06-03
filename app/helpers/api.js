@@ -13,7 +13,7 @@ export const getMlbScores = (dt) => {
 }
 
 export const expressAPICall = (dt) => {
-  const api = `http://localhost:9090/api/mlb/scores/${dt}`
+  const api = `https://localhost:9090/api/mlb/scores/${dt}`
   return axios.get(api)
     .then(response => response.data)
     .catch(error => error.status)

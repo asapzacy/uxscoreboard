@@ -4,7 +4,9 @@
   "description": "A sports scoreboard web app built on ES6 and React.js—features MLB, NBA, NFL, and NHL games.",
   "main": "server.js",
   "scripts": {
-    "start": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
+    "react": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
+    "node": "nodemon server.js",
+    "start": "yarn react | yarn node",
     "wake": "atom . && open http://localhost:8080 && yarn start",
     "build": "NODE_ENV='production' webpack -p --progress --colors",
     "wipe": "rm -rf node_modules && yarn",
@@ -17,6 +19,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "compression": "^1.6.2",
+    "cors": "^2.8.3",
     "express": "^4.14.1",
     "firebase": "^3.7.4",
     "moment": "^2.17.1",

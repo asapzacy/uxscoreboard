@@ -91,7 +91,7 @@ const base = {
         loader: 'babel-loader'
       },
       isProduction ? {
-        test: /\.s?css$/,
+        test: /\.(scss)|(css)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -116,7 +116,7 @@ const base = {
           ]
         })
       } : {
-        test: /\.s?css$/,
+        test: /\.(scss)|(css)$/,
         use: [
           { loader: 'style-loader' },
           {

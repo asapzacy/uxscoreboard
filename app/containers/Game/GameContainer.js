@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { Game } from 'components'
+import { getNbaGameDetails } from 'helpers/api'
 
 class GameContainer extends Component {
   constructor() {
     super()
     this.state = {
+      details: {},
       isExpanded: false,
       isHovered: false,
       isiOS: false

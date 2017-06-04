@@ -25,6 +25,7 @@
     "moment": "^2.17.1",
     "moment-timezone": "^0.5.11",
     "react": "^15.5.4",
+    "react-document-title": "^2.0.3",
     "react-dom": "^15.5.4",
     "react-ga": "^2.2.0",
     "react-icons": "^2.2.3",

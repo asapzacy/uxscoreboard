@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Header, Footer } from 'components'
+import DocumentTitle from 'react-document-title'
 import WebFont from 'webfontloader'
 import s from './Main.scss'
 
@@ -69,6 +70,7 @@ class MainContainer extends Component {
     const { isMenuOpen, menuHeight } = this.state
     const appHeight = { height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%' }
     return (
+      <DocumentTitle title={'uxscoreboard'}>
       <div className={s.outerContainer} style={appHeight}>
         <Header triggerMenu={this.triggerMenu} {...this.state} />
         <main className={s.innerContainer}>
@@ -76,6 +78,7 @@ class MainContainer extends Component {
         </main>
         <Footer />
       </div>
+    </DocumentTitle>
     )
   }
 }

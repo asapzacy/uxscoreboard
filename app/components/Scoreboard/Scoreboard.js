@@ -15,13 +15,15 @@ export default function Scoreboard({ bgImg, scores, date, today, league, seasonS
       : scores.map(item => <GameContainer game={item} date={date} league={league} lastUpdated={lastUpdated} key={item.gamePk} />)
   }
   if (league === 'nba') {
-    games = scores.numGames === 0 || !scores.sports_content.games.game.length
+    games = !scores.length
       ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'sorry, there was an error :('} />
-      : scores.sports_content.games.game.map((item, index) => {
-        let combined = Object.assign({}, scores.games[index], item)
-        getNbaGameDetails(date, item.id)
-          .then(data => Object.assign(combined, data.sports_content.game))
-        return <GameContainer game={combined} date={date} league={league} lastUpdated={lastUpdated} key={item.id} />
+      : scores.map((el, i) => {
+          getNbaGameDetails(date, el.id)
+            .then(details => {
+              el.home = details.sports_content.game.home
+              el.visitor = details.sports_content.game.visitor
+            })
+          return <GameContainer game={el} id={el.id} date={date} league={league} lastUpdated={lastUpdated} key={i} />
       })
   }
   if (league === 'nhl') {

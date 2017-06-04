@@ -1,11 +1,9 @@
 
 /* -------  Home  ------- */
 .container {
-  display:flex;
   text-align:center;
-  align-items:center;
-  justify-content:center;
   flex-direction:column;
+  composes:flexy from 'styles/_utils.scss'
 }
 .uxscoreboard {
   display:flex;
@@ -16,10 +14,10 @@
   width:90%;
 }
 .name {
-  font-size:2.12em;
+  font-size:2.33em;
 }
 .description {
-  font-size:1.22em;
+  font-size:1.33em;
   letter-spacing:0;
   color:$grey5;
 }

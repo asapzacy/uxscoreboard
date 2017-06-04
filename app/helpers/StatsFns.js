@@ -19,8 +19,8 @@ export const formatStatsTableBody = (stats) => {
       result += `<td>${awayTeam}</td>`
       result += `<td>${homeTeam}</td>`
     } else {
-      result += awayTeam > homeTeam ? `<td><strong>${awayTeam}</strong></td>` : `<td>${awayTeam}</td>`
-      result += awayTeam < homeTeam ? `<td><strong>${homeTeam}</strong></td>` : `<td>${homeTeam}</td>`
+      result += parseInt(awayTeam) > parseInt(homeTeam) ? `<td><strong>${awayTeam}</strong></td>` : `<td>${awayTeam}</td>`
+      result += parseInt(awayTeam) < parseInt(homeTeam) ? `<td><strong>${homeTeam}</strong></td>` : `<td>${homeTeam}</td>`
     }
     result += '</tr>'
   }

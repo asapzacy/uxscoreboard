@@ -38,8 +38,8 @@ export const nbaTeamProps = (game, side, league) => {
   return {
     name: shortenTeamName(game[side].nickname),
     code: game[side].abbreviation.toLowerCase(),
-    ws: isPlayoffs ? isHome ? game.playoffs.home_wins : game.playoffs.visitor_wins : game[side2].win,
-    ls: isPlayoffs ? isHome ? game.playoffs.visitor_wins : game.playoffs.home_wins : game[side2].loss,
+    ws: isPlayoffs ? isHome ? game.playoffs.hTeam.seriesWin : game.playoffs.vTeam.seriesWin : game[side2].win,
+    ls: isPlayoffs ? isHome ? game.playoffs.vTeam.seriesWin : game.playoffs.hTeam.seriesWin : game[side2].loss,
     score: inGame && game[side].score,
     league
   }

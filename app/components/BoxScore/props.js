@@ -30,7 +30,6 @@ export const nbaBoxScoreProps = (game, league) => {
       away: game.vTeam.linescore,
       home: game.hTeam.linescore
     },
-    points: inGame ? game.home.stats.points : '',
     periods: 4,
     totalPeriods: size,
     overtimes: game.period_time.period_value > 4 ? size - 4 : 0,

@@ -3,41 +3,25 @@ import { dateObject } from './utils'
 
 const CORS = 'https://cors-anywhere.herokuapp.com/'
 
-// axios request - mlb scores
 export const getMlbScores = (dt) => {
-  const { yyyy, mm, dd } = dateObject(dt)
-  const api = `${CORS}https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${mm}/${dd}/${yyyy}&sortBy=gameDate&hydrate=linescore(runners),flags,team,review`
+  const api = `/api/mlb/scores/${dt}`
   return axios.get(api)
-    .then(currentScores => currentScores.data)
-    .catch(currentScores => currentScores.status)
-}
-
-export const expressAPICall = (dt) => {
-  const api = `https://localhost:9090/api/mlb/scores/${dt}`
-  return axios.get(api)
-    .then(response => response.data)
+    .then(scores => scores.data)
     .catch(error => error.status)
 }
 
-export const getMlbGameDetails = (id) => {
-  const api = `r`
-}
-
-// axios request - nba scores
 export const getNbaScores = (dt) => {
-  const api = `${CORS}http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
-  const api2 = `${CORS}http://data.nba.net/data/10s/prod/v2/${dt}/scoreboard.json`
-  return axios.all([axios.get(api), axios.get(api2)])
-    .then(axios.spread((details, standings) => Object.assign({}, details.data, standings.data)))
-    .catch(currentScores => currentScores.status)
+  const api = `/api/nba/scores/${dt}`
+  return axios.get(api)
+    .then(scores => scores.data)
+    .catch(error => error.status)
 }
 
-// axios request - nba game details
 export const getNbaGameDetails = (dt, id) => {
-  const api = `${CORS}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
-  return axios.get(api)
-    .then(gameDetails => gameDetails.data)
-    .catch(gameDetails => gameDetails.status)
+  const url = `${CORS}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
+  return axios.get(url)
+    .then(details => details.data)
+    .catch(error => error.status)
 }
 
 

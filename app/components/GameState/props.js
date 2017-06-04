@@ -51,7 +51,7 @@ export const nbaGameStateProps = (game) => {
     playoffs: isPlayoffs ?
       {
         series: null,
-        game: game.playoffs.game_number,
+        game: game.playoffs.gameNumInSeries,
         maxGames: 7
       } : {},
     isPlayoffs

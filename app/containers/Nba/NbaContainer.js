@@ -27,30 +27,27 @@ class NbaContainer extends Component {
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.date !== nextState.date
-  }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
-    const currentScores = this.state.cache[dt]
-    if (dt !== this.state.today && currentScores) {
+    if (this.state.cache[dt] && dt !== this.state.today) {
+      const data = this.state.cache[dt]
       this.setState({
         isLoading: false,
-        scores: currentScores,
-        year: currentScores.sports_content.sports_meta.season_meta.season_year,
+        scores: data.games,
+        year: data.year,
         date: dt
       })
     } else {
       getNbaScores(dt)
-        .then((currentScores) => {
+        .then((data) => {
           this.setState({
             isLoading: false,
-            scores: currentScores,
-            year: currentScores.sports_content.sports_meta.season_meta.season_year,
+            scores: data.games,
+            year: data.year,
             date: dt
-          }, () => this.saveScores())
+          }, () => this.saveScores(data))
         })
         .catch((error) =>  {
           this.setState({
@@ -67,9 +64,9 @@ class NbaContainer extends Component {
       this.setState({ cache: snapshot.val().nba.scores })
     })
   }
-  saveScores() {
+  saveScores(data) {
     ref.child(`nba/scores/${this.state.date}`)
-      .set(this.state.scores)
+      .set(data)
       .then(() => console.log(`nba scores updated.. `))
   }
   render() {

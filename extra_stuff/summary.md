@@ -24,61 +24,61 @@ then --> [localhost:8080](http://localhost:8080)
 ## Overview
 This is how the project is set-up for the most part.
 
-- [server.js](./server.js): Node.js / Express server - pretty simple; basically just serves a static `bundle.js` file using `app.use(express.static('dist'))`. This is running on `localhost:9090` and uses [nodemon](https://github.com/remy/nodemon) in development. I am currently in the process of moving all 3rd party API calls (source of game scores) from the frontend to the backend, located at `localhost:9090/api`. Before, I was using a cheap *hack* to get around the CORS issue of HTTP --> HTTPS by proxying all requests through `https://cors-anywhere.herokuapp.com/`. It works, but I'd like to move all requests on my own server.
+- [server.js](../server.js): Node.js / Express server - pretty simple; basically just serves a static `bundle.js` file using `app.use(express.static('dist'))`. This is running on `localhost:9090` and uses [nodemon](https://github.com/remy/nodemon) in development. I am currently in the process of moving all 3rd party API calls (source of game scores) from the frontend to the backend, located at `localhost:9090/api`. Before, I was using a cheap *hack* to get around the CORS issue of HTTP --> HTTPS by proxying all requests through `https://cors-anywhere.herokuapp.com/`. It works, but I'd like to move all requests on my own server.
 
-- [`/dist`](./dist): production files - `/assets` contains all static files including: `/css`, `/icons`, `/img`, `/js`, and `/other`. Webpack builds out the `index.html`, `app.css`, and `bundle.js` files when running `yarn build`, along with `webpack_stats.html` + `webpack_stats.json` (these files aren't pushed to git, but can be viewed at `localhost:8080/webpack_stats.html`).
+- [`/dist`](../dist): production files - `/assets` contains all static files including: `/css`, `/icons`, `/img`, `/js`, and `/other`. Webpack builds out the `index.html`, `app.css`, and `bundle.js` files when running `yarn build`, along with `webpack_stats.html` + `webpack_stats.json` (these files aren't pushed to git, but can be viewed at `localhost:8080/webpack_stats.html`).
 
-- [`/app`](./app): development code -
+- [`/app`](../app): development code -
 
-  - [`/containers`]('./app/containers'): all of the _stateful_ containers; each container component includes:
+  - [`/containers`]('../app/containers'): all of the _stateful_ containers; each container component includes:
     - lifecycle methods
     - initialize and update any state
     - bind methods and pass down to children components
     - pass down state / props to children as well
 
 
-  - [`/components`](./app/components): all of the _stateless_ presentational components; functional and pure components that take in props and output JSX / HTML. This is the bulk of the project. Each component has its' own CSS module for styling. I recently upgraded the project to use .scss syntax. Therefore, (using `<Game />` as an example) each component is a directory comprised of:
+  - [`/components`](../app/components): all of the _stateless_ presentational components; functional and pure components that take in props and output JSX / HTML. This is the bulk of the project. Each component has its' own CSS module for styling. I recently upgraded the project to use .scss syntax. Therefore, (using `<Game />` as an example) each component is a directory comprised of:
     - `Game.js` - takes in props --> outputs HTML
     - `Game.scss` - CSS modules that get compiled into this format -
       - `Game__item___2ZbBG`
       - i.e. `Component__className___hash`
 
 
-  - [`/config`](./app/config): config files -
-    - [`routes.js`](./app/config/routes.js) - I use React Router (v3) and export an object of different containers to be displayed per route
-    - [`analytics.js`](./app/config/analytics.js) - Google Analytics config
-    - [`firebase.js`](./app/config/firebase.js) - Google Firebase config
-    - [`metadata.js`](./app/config/metadata.js) - update `<head></head>` metadata per page (in the process of upgrading to [react-helmet](https://github.com/nfl/react-helmet))
-    - [`velocity.js`](./app/config/velocity.js) - animation settings
+  - [`/config`](../app/config): config files -
+    - [`routes.js`](../app/config/routes.js) - I use React Router (v3) and export an object of different containers to be displayed per route
+    - [`analytics.js`](../app/config/analytics.js) - Google Analytics config
+    - [`firebase.js`](../app/config/firebase.js) - Google Firebase config
+    - [`metadata.js`](../app/config/metadata.js) - update `<head></head>` metadata per page (in the process of upgrading to [react-helmet](https://github.com/nfl/react-helmet))
+    - [`velocity.js`](../app/config/velocity.js) - animation settings
 
 
-  - [`/data`](./app/data): data files -
-    - [`app_pages.js`](./app/data/app_pages.js) - navigation / page info
-    - [`league_dates`](./app/data/league_dates.js) - season dates for each league to check for various parts of the season -
+  - [`/data`](../app/data): data files -
+    - [`app_pages.js`](../app/data/app_pages.js) - navigation / page info
+    - [`league_dates`](../app/data/league_dates.js) - season dates for each league to check for various parts of the season -
       - `isPreseason`
       - `isSeason`
       - `isAllStar`
       - `isPlayoffs`
       - `isFinals`
-    - [`stadiums.js`](./app/data/stadiums.js) - (now removed) I was in the process of integrating [MapBox](https://www.mapbox.com/) to visualize a day of games across a map of America using stadium geolocation
-    - [`team_colors.js`](./app/data/team_colors.js) - hex colors for all 120+ teams (most hex values / SVG logos came from [teamcolors](https://github.com/jimniels/teamcolors))
+    - [`stadiums.js`](../app/data/stadiums.js) - (now removed) I was in the process of integrating [MapBox](https://www.mapbox.com/) to visualize a day of games across a map of America using stadium geolocation
+    - [`team_colors.js`](../app/data/team_colors.js) - hex colors for all 120+ teams (most hex values / SVG logos came from [teamcolors](https://github.com/jimniels/teamcolors))
 
 
-  - [`/helpers`](./app/helpers): helper files, the most important ones are -
-    - [`api.js`](./app/helpers/api.js) - all API calls to backend `localhost:9090/api`
-    - [`utils.js`](./app/helpers/utils.js) - various utility functions, mostly having to do with formatting of dates using the moment.js package
+  - [`/helpers`](../app/helpers): helper files, the most important ones are -
+    - [`api.js`](../app/helpers/api.js) - all API calls to backend `localhost:9090/api`
+    - [`utils.js`](../app/helpers/utils.js) - various utility functions, mostly having to do with formatting of dates using the moment.js package
 
 
-  - [`/styles`](./app/styles): shared styles -
-    - [`_variables.scss`](./app/styles/_variables.scss) - sass variables
-    - [`_elements.scss`](./app/styles/_elements.scss) - styling for HTML elements
-    - [`_utils.scss`](./app/styles/_utils.scss) - styling for class utilities
+  - [`/styles`](../app/styles): shared styles -
+    - [`_variables.scss`](../app/styles/_variables.scss) - sass variables
+    - [`_elements.scss`](../app/styles/_elements.scss) - styling for HTML elements
+    - [`_utils.scss`](../app/styles/_utils.scss) - styling for class utilities
 
 
 ## Code Sample
 I'll walk through two files - one being a stateful container, the other a presentational component.
 
-### [`MlbContainer.js`](./app/container/MlbContainer.js) - container component
+### [`MlbContainer.js`](../app/container/MlbContainer.js) - container component
 This container covers everything MLB (each league has it's own container, where they fetch data, parse it, save it, and feed it down to a `<League />` child). Here's a brief list of how this container works..
 
 1.  `<MlbContainer />` is created, and sets its' initial state like so -
@@ -107,7 +107,7 @@ This container covers everything MLB (each league has it's own container, where 
   b. `this.saveScores()` is called , which will save the new `this.state.scores` object to Firebase.
 
 
-### [`Team.js`](./app/components/Team.js) - presentational component
+### [`Team.js`](../app/components/Team.js) - presentational component
 This is one of the main, and most-used, components of the project. Every `<Game />` component consists of two `<Team />` components. Every `<Team />` takes in the following props:
   - `name` - team name (i.e. 'Giants')
   - `code` - 2-3 letter team code (i.e. 'sfg')
@@ -153,7 +153,7 @@ const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league }) => (
 Here's a rundown of all the packages I use.
 
 ### development
-- [webpack 2](https://webpack.js.org/) - pretty much does everything listed below - I have one webpack file ([weback.config.babel.js]('./webpack-config/babel.js')) which handles both development and production builds
+- [webpack 2](https://webpack.js.org/) - pretty much does everything listed below - I have one webpack file ([weback.config.babel.js]('../webpack-config/babel.js')) which handles both development and production builds
 - [webpack-dev-server](https://github.com/webpack/webpack-dev-server) & [react-hot-loader](https://github.com/gaearon/react-hot-loader) - automatic (and quick) page updates
 - [babel](https://babeljs.io/) - use all ES6/ES7 features including stage-0 stuff (file itself - [`.babelrc`](.babelrc))
 - [svgo](https://github.com/svg/svgo) - I can run `yarn images` from the command line and this package will find and compress every .svg file

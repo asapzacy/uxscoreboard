@@ -72,6 +72,7 @@ class NbaContainer extends Component {
     ref.child(`nba/scores/${this.state.date}`)
       .set(data)
       .then(() => console.log(`nba scores updated.. `))
+      .then(() => this.getCache())
   }
   render() {
     return <League {...this.state} league={this.props.league} />

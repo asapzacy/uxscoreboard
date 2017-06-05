@@ -87,6 +87,7 @@ class MlbContainer extends Component {
     ref.child(`mlb/scores/${this.state.date}`)
       .set(this.state.scores)
       .then(() => console.log(`mlb scores updated.. `))
+      .then(() => this.getCache())
   }
   render() {
     return <League {...this.state} league={this.props.league} />

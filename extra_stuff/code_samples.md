@@ -26,15 +26,18 @@ This container covers everything MLB (each league has it's own container, where 
 
 1.  `<MlbContainer />` is created and the `constructor()` sets initial state like so -
     ```
-    this.state = {
-      isLoading: true,
-      isValid: false,
-      isError: false,
-      scores: {},
-      cache: {},
-      year: '',
-      date: '',
-      today: ''
+    constructor() {
+      super()
+      this.state = {
+        isLoading: true,
+        isValid: false,
+        isError: false,
+        scores: {},
+        cache: {},
+        year: '',
+        date: '',
+        today: ''
+      }
     }
     ```
 
@@ -147,7 +150,7 @@ This is one of the most-used components in the project.
     - `score` - team score **if the game has started** (i.e. `55`)
     - `league` - to locate the path of the logo (i.e. `mlb`)
 
-2. All-in-all, this what the code looks like:
+2. All-in-all, the code looks like this:
 
 *note - the New York Yankees have a custom styling / css class that creates pinstripes, so it's a little annoying, but I manually have to check each team to set its' `className` and `background-image` accordingly.*
 ```

@@ -18,7 +18,7 @@ then --> [localhost:8080](http://localhost:8080)
 ## Code Samples
 I'll walk through two files - one being a stateful container and the other a presentational component.
 
-### [`MlbContainer.js`](../app/container/MlbContainer.js) - container component
+### 1. [`MlbContainer.js`](../app/containers/Mlb/MlbContainer.js) - container component
 This container covers everything MLB (each league has it's own container, where they fetch data, parse it, save it, and feed it down to children components). Here's a brief list of how this container works..
 
 ![MlbContainer preview](https://raw.githubusercontent.com/zacarellano/uxscoreboard/master/dist/assets/other/MlbContainer_preview.png)
@@ -131,21 +131,21 @@ delay() {
   ```
 
 
-### [`Team.js`](../app/components/Team.js) - presentational component
+### 2. [`Team.js`](../app/components/Team.js) - presentational component
 This is one of the most-used components in the project.
 
 ![Team preview](https://raw.githubusercontent.com/zacarellano/uxscoreboard/master/dist/assets/other/Team_preview.png)
 
 
 1. Every `<Game />` consists of two `<Team />`s  and every `<Team />` has the following characteristics (passed in as props):
-    - `name` - team name (i.e. 'Giants')
-    - `code` - 2-3 letter team code (i.e. 'sfg')
-    - `filetype` - In one case I have 2 .png logos, everything else is SVG (i.e. 'svg')
-    - `ws` - team wins (i.e. '100')
-    - `ls` - team losses (i.e. '99')
-    - `ts` - team ties, only NHL / NFL have ties (i.e. '1')
-    - `score` - team score if the game has started (i.e. '55')
-    - `league` - to locate the directory of the logo (i.e. 'mlb')
+    - `name` - team name (i.e. `Giants`)
+    - `code` - 2-3 letter team code (i.e. `sfg`)
+    - `filetype` - In one case I have 2 .png logos, everything else is SVG (i.e. `svg`)
+    - `ws` - team wins (i.e. `100`)
+    - `ls` - team losses (i.e. `99`)
+    - `ts` - team ties, only NHL / NFL have ties (i.e. `1`)
+    - `score` - team score **if the game has started** (i.e. `55`)
+    - `league` - to locate the path of the logo (i.e. `mlb`)
 
 2. All-in-all, this what the code looks like:
 

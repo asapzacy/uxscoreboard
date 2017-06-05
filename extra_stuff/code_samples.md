@@ -122,7 +122,7 @@ delay() {
     }
     ```
 
-  6. One last thing, the whole web app mainly relies on React Router and using `this.props.routeParams.date`, so.. whenever this prop gets updated, now `<MlbContainer />` knows it's a new date and needs to fetch the new scores accordingly.
+  6. One last thing, the whole web app mainly relies on [React Router v3](https://github.com/ReactTraining/react-router/tree/v3/docs) and using `this.props.routeParams.date`, so.. whenever this prop (url) gets updated, now `<MlbContainer />` knows it's a new date and needs to fetch the new scores accordingly.
   ```
   componentWillReceiveProps(nextProps) {
     clearTimeout(this.refreshId)
@@ -131,7 +131,7 @@ delay() {
   ```
 
 
-### 2. [`Team.js`](../app/components/Team.js) - presentational component
+### 2. [`Team.js`](../app/components/Team/Team.js) - presentational component
 This is one of the most-used components in the project.
 
 ![Team preview](https://raw.githubusercontent.com/zacarellano/uxscoreboard/master/dist/assets/other/Team_preview.png)

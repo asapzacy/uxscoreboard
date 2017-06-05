@@ -35,7 +35,7 @@ class NbaContainer extends Component {
       const data = this.state.cache[dt]
       this.setState({
         isLoading: false,
-        scores: data.games,
+        scores: data.games || [],
         year: data.year,
         date: dt
       })
@@ -61,7 +61,11 @@ class NbaContainer extends Component {
   }
   getCache() {
     ref.once('value', (snapshot) => {
-      this.setState({ cache: snapshot.val().nba.scores })
+      if (snapshot.hasChild('nba')) {
+        this.setState({
+          cache: snapshot.val().nba.scores
+        })
+      }
     })
   }
   saveScores(data) {

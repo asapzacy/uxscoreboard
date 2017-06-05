@@ -76,7 +76,11 @@ class MlbContainer extends Component {
   }
   getCache() {
     ref.once('value', (snapshot) => {
-      this.setState({ cache: snapshot.val().mlb.scores })
+      if (snapshot.hasChild('mlb')) {
+        this.setState({
+          cache: snapshot.val().mlb.scores
+        })
+      }
     })
   }
   saveScores() {

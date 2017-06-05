@@ -26,7 +26,15 @@ This is how the project is set-up for the most part.
 
 - [server.js](../server.js): Node.js / Express server - pretty simple; basically just serves a static `bundle.js` file using `app.use(express.static('dist'))`. This is running on `localhost:9090` and uses [nodemon](https://github.com/remy/nodemon) in development. I am currently in the process of moving all 3rd party API calls (source of game scores) from the frontend to the backend, located at `localhost:9090/api`. Before, I was using a cheap *hack* to get around the CORS issue of HTTP --> HTTPS by proxying all requests through `https://cors-anywhere.herokuapp.com/`. It works, but I'd like to move all requests on my own server.
 
-- [`/dist`](../dist): production files - `/assets` contains all static files including: `/css`, `/icons`, `/img`, `/js`, and `/other`. Webpack builds out the `index.html`, `app.css`, and `bundle.js` files when running `yarn build`, along with `webpack_stats.html` + `webpack_stats.json` (these files aren't pushed to git, but can be viewed at `localhost:8080/webpack_stats.html`).
+- [`/dist`](../dist): production files -
+  - [`/assets`](../dist/assets): all static files:
+    - `/css`
+    - `/icons`
+    - `/img`
+    - `/js`
+    - `/other`
+  - also... webpack will build the `index.html`, `app.css`, and `bundle.js` files when running `yarn build`, and it creates a `webpack_stats.html` + `webpack_stats.json` (these files aren't pushed to git, but can be viewed at `localhost:8080/webpack_stats.html`).
+
 
 - [`/app`](../app): development code -
 
@@ -35,24 +43,18 @@ This is how the project is set-up for the most part.
     - initialize and update any state
     - bind methods and pass down to children components
     - pass down state / props to children as well
-
-
   - [`/components`](../app/components): all of the _stateless_ presentational components; functional and pure components that take in props and output JSX / HTML. This is the bulk of the project. Each component has its' own CSS module for styling. I recently upgraded the project to use .scss syntax. Therefore, (using `<Game />` as an example) each component is a directory comprised of:
     - `Game.js` - takes in props --> outputs HTML
     - `Game.scss` - CSS modules that get compiled into this format -
       - `Game__item___2ZbBG`
       - i.e. `Component__className___hash`
-
-
   - [`/config`](../app/config): config files -
     - [`routes.js`](../app/config/routes.js) - I use React Router (v3) and export an object of different containers to be displayed per route
     - [`analytics.js`](../app/config/analytics.js) - Google Analytics config
     - [`firebase.js`](../app/config/firebase.js) - Google Firebase config
     - [`metadata.js`](../app/config/metadata.js) - update `<head></head>` metadata per page (in the process of upgrading to [react-helmet](https://github.com/nfl/react-helmet))
     - [`velocity.js`](../app/config/velocity.js) - animation settings
-
-
-  - [`/data`](../app/data): data files -
+  - [`/data`](../app/data): static data -
     - [`app_pages.js`](../app/data/app_pages.js) - navigation / page info
     - [`league_dates`](../app/data/league_dates.js) - season dates for each league to check for various parts of the season -
       - `isPreseason`
@@ -62,13 +64,9 @@ This is how the project is set-up for the most part.
       - `isFinals`
     - [`stadiums.js`](../app/data/stadiums.js) - (now removed) I was in the process of integrating [MapBox](https://www.mapbox.com/) to visualize a day of games across a map of America using stadium geolocation
     - [`team_colors.js`](../app/data/team_colors.js) - hex colors for all 120+ teams (most hex values / SVG logos came from [teamcolors](https://github.com/jimniels/teamcolors))
-
-
   - [`/helpers`](../app/helpers): helper files, the most important ones are -
     - [`api.js`](../app/helpers/api.js) - all API calls to backend `localhost:9090/api`
     - [`utils.js`](../app/helpers/utils.js) - various utility functions, mostly having to do with formatting of dates using the moment.js package
-
-
   - [`/styles`](../app/styles): shared styles -
     - [`_variables.scss`](../app/styles/_variables.scss) - sass variables
     - [`_elements.scss`](../app/styles/_elements.scss) - styling for HTML elements
@@ -76,7 +74,7 @@ This is how the project is set-up for the most part.
 
 
 ## Code Sample
-I'll walk through two files - one being a stateful container, the other a presentational component.
+I'll walk through two files - one being a stateful container and the other a presentational component.
 
 ### [`MlbContainer.js`](../app/container/MlbContainer.js) - container component
 This container covers everything MLB (each league has it's own container, where they fetch data, parse it, save it, and feed it down to a `<League />` child). Here's a brief list of how this container works..
@@ -95,20 +93,24 @@ This container covers everything MLB (each league has it's own container, where 
     }
     ```
 2. On `componentDidMount()`, mainly two things happen -
-  a. calls `this.makeRequest()` using today's date in the format `20170604`
-  b. calls `this.getCache()` which syncs with firebase and saves the MLB portion of my firebase data to `this.state.cache`. I do this in order to minimize requests to firebase, instead of calling it every time I need something.
+
+    a.) calls `this.makeRequest()` using today's date in the format `20170604`
+
+    b.) calls `this.getCache()` which syncs with firebase and saves the MLB portion of my firebase data to `this.state.cache`. I do this in order to minimize requests to firebase, instead of calling it every time I need something.
 
 3. `this.makeRequest()` is called which fetches our scores data. This makes a call to `getMlbScores()`, which in turn calls <code>\`localhost:9090/api/mlb/scores/${date}\`</code> on the backend. The Node.js server makes a request to the actual MLB API and receives a JSON file, then parses it, and sends the data back to the frontend. From here, `this.state.scores` is updated with the current scores array, `this.state.year` is updated to the current season year of the scores returned (i.e. `2016`), and a call to `this.delay()` is made.
 
 4. `this.delay()` creates a fake _sense_ of data actually loading. In 960ms, `this.state.isLoading` is set to false. I should mention, when `isLoading` is set to `true` (initially), a `<Loading />` component is showed, when `isLoading` is changed to `false`, the `{...this.state}` is passed down to a `<League />` component which later handles the data and passes down to other children.
 
 5. After `this.delay()` is called, two more processes happen -
-  a. `this.refreshScores()` is called, which creates a timeout (default is 30s), and will continually call `this.makeRequest()` every 30 seconds to update the scores.
-  b. `this.saveScores()` is called , which will save the new `this.state.scores` object to Firebase.
+
+    a.) `this.refreshScores()` is called, which creates a timeout (default is 30s), and will continually call `this.makeRequest()` every 30 seconds to update the scores.
+
+    b.) `this.saveScores()` is called , which will save the new `this.state.scores` object to Firebase.
 
 
 ### [`Team.js`](../app/components/Team.js) - presentational component
-This is one of the main, and most-used, components of the project. Every `<Game />` component consists of two `<Team />` components. Every `<Team />` takes in the following props:
+This is one of the most-used components in the project. Every `<Game />` consists of two `<Team />`s  and every `<Team />` has the following characteristics (as props):
   - `name` - team name (i.e. 'Giants')
   - `code` - 2-3 letter team code (i.e. 'sfg')
   - `filetype` - I used SVGs for everything I can, in one case (MLB All-Star game) I could only locate .png files (i.e. 'svg')
@@ -120,7 +122,7 @@ This is one of the main, and most-used, components of the project. Every `<Game 
 
 All-in-all, this what the code looks like:
 
-** note - the New York Yankees have a custom styling / css class that creates pinstripes, so it's a little annoying, but I manually have to check each team to set its' `className` and `background-image` accordingly. *
+*note - the New York Yankees have a custom styling / css class that creates pinstripes, so it's a little annoying, but I manually have to check each team to set its' `className` and `background-image` accordingly.*
 
 ```
 const createBgImage = (code, league) => ({

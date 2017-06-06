@@ -4,11 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
 const VisualizerPlugin = require('webpack-visualizer-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
+const PostcssAssetsPlugin = require('postcss-assets-webpack-plugin')
 const autoprefixer = require('autoprefixer')
+const mqpacker = require('css-mqpacker')
+const cssnano = require('cssnano')
+
 
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 const isProduction = LAUNCH_COMMAND === 'build'
@@ -46,6 +48,15 @@ const postcssPlugin = new webpack.LoaderOptionsPlugin({
   }
 })
 
+const postcssAssetsPlugin = new PostcssAssetsPlugin({
+  test: /\.css$/,
+  log: false,
+  plugins: [
+    mqpacker({ sort: true }),
+    cssnano
+  ]
+})
+
 const statsWriterPlugin = new StatsWriterPlugin({
   filename: './webpack_stats.json',
   fields: null,
@@ -62,7 +73,7 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin({
   disable: !isProduction,
-  filename: 'assets/css/app.css'
+  filename: 'assets/css/app.[hash].css'
 })
 
 const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
@@ -90,7 +101,7 @@ const sharedPlugins = [
 const base = {
   output: {
     path: PATHS.build,
-    filename: 'assets/js/bundle.js',
+    filename: 'assets/js/bundle.[hash].js',
     publicPath: '/'
   },
   module: {
@@ -188,7 +199,6 @@ const developmentConfig = {
     ...sharedPlugins,
     browserSyncPlugin,
     duplicatePackageCheckerPlugin,
-    new DashboardPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
@@ -201,9 +211,9 @@ const productionConfig = {
     ...sharedPlugins,
     productionPlugin,
     uglifyJsPlugin,
+    postcssAssetsPlugin,
     statsWriterPlugin,
     visualizerPlugin,
-    new BundleAnalyzerPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin()
   ]

@@ -1,19 +1,27 @@
 
 /* -------  Event  ------- */
-.container {
-  flex:1;
-  margin-top:2.5em;
-  display:flex;
-  align-items:flex-start;
-  justify-content:center;
+.event {
+  width:100%;
+  height:8em;
+  margin-top:6vh;
 }
-.logo {
-  width:80%;
-  max-width:444px;
+
+@media only screen and (min-width:$medium) {
+  .event {
+    height:9em;
+    margin-top:9vh;
+  }
 }
 
 @media only screen and (min-width:$large) {
-  .logo {
-    max-width:555px;
+  .event {
+    height:10em;
+    margin-top:12vh;
+  }
+}
+@media only screen and (min-width:$xlarge) {
+  .event {
+    height:11em;
+    margin-top:15vh;
   }
 }

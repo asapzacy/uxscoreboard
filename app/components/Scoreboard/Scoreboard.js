@@ -42,9 +42,7 @@ export default function Scoreboard({ bgImg, scores, date, today, league, seasonS
       <VelocityTransitionGroup className={s.fade} {...velocity_scoreboard(direction)}>
         <ul className={s.list} key={date}>
           {games}
-          { bgImg &&
-            <li style={{background:`${bgImg} center center / 90% 100% no-repeat`}} className={s.extra}></li>
-          }
+          { bgImg && <Event bgImg={bgImg} /> }
         </ul>
       </VelocityTransitionGroup>
     </main>

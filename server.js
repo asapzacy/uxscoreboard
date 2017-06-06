@@ -12,7 +12,7 @@ app.use(compression())
 app.use(cors())
 app.use(express.static('dist'))
 
-const parseDateStr = (dt) => {
+const parseDate = (dt) => {
   const yyyy = dt.slice(0, 4)
   const mm = dt.slice(4, 6)
   const dd = dt.slice(6, dt.length)
@@ -20,7 +20,7 @@ const parseDateStr = (dt) => {
 }
 
 app.get('/api/mlb/scores/:dt', (req, res) => {
-  const { yyyy, mm, dd } = parseDateStr(req.params.dt)
+  const { yyyy, mm, dd } = parseDate(req.params.dt)
   const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${mm}/${dd}/${yyyy}&sortBy=gameDate&hydrate=linescore(runners),flags,team,review`
   return axios.get(url)
     .then(scores => res.send(scores.data))

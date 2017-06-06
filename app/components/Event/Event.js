@@ -1,10 +1,8 @@
 import React from 'react'
 import s from './Event.scss'
 
-const Event = ({ league, img }) => (
-  <section className={s.container}>
-    <img className={s.logo} src={`/assets/img/${league}/other/${img}.svg`} />
-  </section>
+const Event = ({ bgImg }) => (
+  <li className={s.event} style={{background:`${bgImg} center center / contain no-repeat`}}></li>
 )
 
 export default Event

@@ -21,7 +21,7 @@ const routes = (
       <Route path='/nfl'>
         <IndexRoute component={NflContainer} />
         <Route path='scores' component={NflContainer} />
-        <Route path='scores/:week' component={NflContainer} />
+        <Route path='scores/week/:week' component={NflContainer} />
       </Route>
       <Route path='/nhl'>
         <IndexRoute component={NhlContainer} />

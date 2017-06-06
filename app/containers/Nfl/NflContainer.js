@@ -2,49 +2,41 @@ import React, { Component } from 'react'
 import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNflScores } from 'helpers/api'
-import { parseString } from 'xml2js'
 
 class NflContainer extends Component {
   constructor() {
     super()
     this.state = {
       isLoading: true,
-      isValid: false,
+      isValid: true,
       isError: false,
       scores: {},
       year: '',
-      date: '',
-      today: ''
+      today: '',
+      week: 1
     }
   }
   componentDidMount() {
     this.setState({ today: getTodaysDate() }, () => {
-      this.makeRequest(this.props.routeParams.date)
+      this.makeRequest(this.props.routeParams.week)
     })
   }
   componentWillReceiveProps(nextProps) {
-    this.makeRequest(nextProps.routeParams.date)
+    this.makeRequest(nextProps.routeParams.week)
   }
-  makeRequest(dt = this.state.today) {
-    if (isValidDate(dt)) {
-      this.setState({ isValid: true })
-    }
-    getNflScores(dt)
-      .then((currentScores) => {
-        parseString(currentScores, (err, result) => {
-          this.setState({
-            isLoading: false,
-            scores: result.ss.gms[0],
-            year: result.ss.gms[0].$.y,
-            date: dt
-          })
+  makeRequest(week = this.state.week) {
+    getNflScores(week)
+      .then((data) => {
+        this.setState({
+          isLoading: false,
+          scores: data.games,
+          year: data.year
         })
       })
       .catch((error) =>  {
         this.setState({
           isLoading: false,
-          isError: true,
-          date: dt
+          isError: true
         })
         throw new Error(error)
       })

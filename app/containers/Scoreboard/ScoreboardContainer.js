@@ -8,7 +8,7 @@ class ScoreboardContainer extends Component {
     super()
     this.state = {
       lastUpdated: 0,
-      bgImg: false,
+      bgImg: '',
       seasonState: {
         isPreseason: false,
         isSeason: false,
@@ -24,11 +24,11 @@ class ScoreboardContainer extends Component {
   }
   componentDidMount() {
     this.updateTime()
-    this.checkSeason(this.props.date)
+    this.checkSeason(this.props.date || this.props.week)
   }
   componentWillReceiveProps(nextProps) {
     this.updateTime()
-    this.checkSeason(nextProps.date)
+    this.checkSeason(nextProps.date || nextProps.week)
     this.updateDirection(this.props.date, nextProps.date)
   }
   updateTime() {
@@ -49,19 +49,18 @@ class ScoreboardContainer extends Component {
     })
   }
   checkSeason(day) {
-    if (this.props.league === 'nhl' || this.props.league === 'nfl') {
-      return
+    if (this.props.league !== 'nhl' && this.props.league !== 'nfl') {
+      const dates = seasons[this.props.league].seasons[this.props.year]
+      this.setState({
+        seasonState: {
+          isPreseason: checkDay(day, dates.preseason.start, dates.preseason.end),
+          isSeason: checkDay(day, dates.season.start, dates.season.end),
+          isAllStar: checkDay(day, dates.season.allstar.start, dates.season.allstar.end),
+          isPlayoffs: checkDay(day, dates.playoffs.start, dates.playoffs.end),
+          isFinals: checkDay(day, dates.playoffs.finals.start, dates.playoffs.finals.end)
+        }
+      }, () => this.updateBgImg())
     }
-    const dates = seasons[this.props.league].seasons[this.props.year]
-    this.setState({
-      seasonState: {
-        isPreseason: checkDay(day, dates.preseason.start, dates.preseason.end),
-        isSeason: checkDay(day, dates.season.start, dates.season.end),
-        isAllStar: checkDay(day, dates.season.allstar.start, dates.season.allstar.end),
-        isPlayoffs: checkDay(day, dates.playoffs.start, dates.playoffs.end),
-        isFinals: checkDay(day, dates.playoffs.finals.start, dates.playoffs.finals.end)
-      }
-    }, () => this.updateBgImg())
   }
   updateBgImg() {
     let img = ''

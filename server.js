@@ -4,6 +4,7 @@ const path = require('path')
 const compression = require('compression')
 const cors = require('cors')
 const axios = require('axios')
+const parseString = require('xml2js').parseString
 const port = process.env.PORT || 9090
 
 const app = express()
@@ -40,6 +41,24 @@ app.get('/api/nba/scores/:dt', (req, res) => {
       }, [])
       res.send(scores)
     }))
+    .catch(error => res.send(error.status))
+})
+
+app.get('/api/nfl/scores/week/:week', (req, res) => {
+  const { week } = req.params
+  const url = `https://www.nfl.com/ajax/scorestrip?season=2017&seasonType=REG&week=${week}`
+  return axios.get(url)
+    .then(scores => {
+      parseString(scores.data, (err, result) => {
+        const scores = {}
+        scores.year = result.ss.gms[0].$.y
+        scores.games = result.ss.gms[0].g.reduce((arr, el, i) => {
+          arr.push(el.$)
+          return arr
+        }, [])
+        res.send(scores)
+      })
+    })
     .catch(error => res.send(error.status))
 })
 

@@ -24,21 +24,19 @@ export const getNbaGameDetails = (dt, id) => {
     .catch(error => error.status)
 }
 
-
-export const getNflScores2 = () => {
-  const api = `http://www.nfl.com/liveupdate/scores/scores.json`
+export const getNflScores = (week) => {
+  const api = `/api/nfl/scores/week/${week}`
   return axios.get(api)
-    .then(currentScores => currentScores.data)
-    .catch(currentScores => currentScores.status)
+    .then(scores => scores.data)
+    .catch(error => error.status)
 }
 
-// axios request - nfl scores
-export const getNflScores = (dt) => {
-  const api = `${CORS}https://www.nfl.com/ajax/scorestrip?season=2017&seasonType=REG&week=1`
-  return axios.get(api)
-    .then(currentScores => currentScores.data)
-    .catch(currentScores => currentScores.status)
-}
+// export const getNflScores = (dt) => {
+//   const api = `${CORS}https://www.nfl.com/ajax/scorestrip?season=2017&seasonType=REG&week=1`
+//   return axios.get(api)
+//     .then(currentScores => currentScores.data)
+//     .catch(currentScores => currentScores.status)
+// }
 
 // axios request - nhl scores
 export const getNhlScores = (dt) => {

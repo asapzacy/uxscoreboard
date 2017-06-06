@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
 const VisualizerPlugin = require('webpack-visualizer-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
@@ -64,6 +65,15 @@ const extractTextPlugin = new ExtractTextPlugin({
   filename: 'assets/css/app.css'
 })
 
+const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
+  compress: { warnings: false, screw_ie8: true },
+  comments: false,
+  sourceMap: true,
+  mangle: true,
+  minimize: true,
+  beautify: false
+})
+
 const productionPlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: JSON.stringify('production')
@@ -74,7 +84,7 @@ const sharedPlugins = [
   htmlWebpackPlugin,
   postcssPlugin,
   extractTextPlugin,
-  new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+  new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 ]
 
 const base = {
@@ -190,8 +200,10 @@ const productionConfig = {
   plugins: [
     ...sharedPlugins,
     productionPlugin,
+    uglifyJsPlugin,
     statsWriterPlugin,
     visualizerPlugin,
+    new BundleAnalyzerPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin()
   ]

@@ -32,9 +32,9 @@ export default function Scoreboard({ bgImg, scores, date, today, league, seasonS
       : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} lastUpdated={lastUpdated} key={item.gamePk} />)
   }
   if (league === 'nfl') {
-    games = !scores.g.length
+    games = !scores.length
       ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'sorry, there was an error :('} />
-      : scores.g.map(item => <GameContainer game={item.$} date={date} league={league} lastUpdated={lastUpdated} key={item.$.eid} />)
+      : scores.map(el => <GameContainer game={el} date={date} league={league} lastUpdated={lastUpdated} key={el.eid} />)
   }
   return (
     <main className={s.container}>

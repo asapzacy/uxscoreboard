@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 const express = require('express')
 const path = require('path')
-const compression = require('compression')
+// const compression = require('compression')
 const cors = require('cors')
 const axios = require('axios')
 const parseString = require('xml2js').parseString
 const port = process.env.PORT || 9090
 
 const app = express()
-app.use(compression())
+// app.use(compression())
 app.use(cors())
 app.use(express.static('dist'))
 
@@ -62,11 +62,11 @@ app.get('/api/nfl/scores/week/:week', (req, res) => {
     .catch(error => res.send(error.status))
 })
 
-app.get('*.js', (req, res, next) => {
-  req.url = req.url + '.gz'
-  res.set('Content-Encoding', 'gzip')
-  next()
-})
+// app.get('*.js', (req, res, next) => {
+//   req.url = req.url + '.gz'
+//   res.set('Content-Encoding', 'gzip')
+//   next()
+// })
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve('dist/index.html'))

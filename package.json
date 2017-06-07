@@ -8,10 +8,11 @@
     "server": "nodemon server.js",
     "start": "yarn dev | yarn server",
     "wake": "atom . && open http://localhost:8080 && yarn start",
-    "build": "NODE_ENV='production' webpack -p --progress --colors",
+    "build": "yarn bust && NODE_ENV='production' webpack -p --progress --colors",
     "wipe": "rm -rf node_modules && yarn",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",
+    "bust": "rm -rf dist/assets/css/app.* dist/assets/js/bundle.*",
     "images": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;"
   },
   "author": "Zac Arellano",

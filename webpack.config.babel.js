@@ -74,16 +74,15 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin({
   disable: !isProduction,
-  filename: 'assets/css/app.css'
+  filename: 'assets/css/app.[hash].css'
 })
 
 const compressionPlugin = new CompressionPlugin({
-  asset: [path].gz,
+  asset: '[path].gz[query]',
   algorithm: 'gzip',
-  test: /\.js$|\.css$|\.html$/,
+  test: /\.(js|css|html)$/,
   threshold: 1024,
   minRatio: 0.8
-
 })
 
 const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
@@ -111,7 +110,7 @@ const sharedPlugins = [
 const base = {
   output: {
     path: PATHS.build,
-    filename: 'assets/js/bundle.js',
+    filename: 'assets/js/bundle.[hash].js',
     publicPath: '/'
   },
   module: {

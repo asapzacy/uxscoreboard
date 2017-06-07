@@ -62,6 +62,12 @@ app.get('/api/nfl/scores/week/:week', (req, res) => {
     .catch(error => res.send(error.status))
 })
 
+app.get('*.js', (req, res, next) => {
+  req.url = req.url + '.gz'
+  res.set('Content-Encoding', 'gzip')
+  next()
+})
+
 app.get('*', (req, res) => {
   res.sendFile(path.resolve('dist/index.html'))
 })

@@ -6,6 +6,7 @@ const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
 const VisualizerPlugin = require('webpack-visualizer-plugin')
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 const PostcssAssetsPlugin = require('postcss-assets-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 const mqpacker = require('css-mqpacker')
@@ -73,7 +74,16 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin({
   disable: !isProduction,
-  filename: 'assets/css/app.[hash].css'
+  filename: 'assets/css/app.css'
+})
+
+const compressionPlugin = new CompressionPlugin({
+  asset: [path].gz,
+  algorithm: 'gzip',
+  test: /\.js$|\.css$|\.html$/,
+  threshold: 1024,
+  minRatio: 0.8
+
 })
 
 const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
@@ -101,7 +111,7 @@ const sharedPlugins = [
 const base = {
   output: {
     path: PATHS.build,
-    filename: 'assets/js/bundle.[hash].js',
+    filename: 'assets/js/bundle.js',
     publicPath: '/'
   },
   module: {
@@ -210,6 +220,7 @@ const productionConfig = {
   plugins: [
     ...sharedPlugins,
     productionPlugin,
+    compressionPlugin,
     uglifyJsPlugin,
     postcssAssetsPlugin,
     statsWriterPlugin,

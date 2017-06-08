@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 require('firebase/database')
 
 const config = {
-  apiKey: 'AIzaSyAwOMmYoSMg4Mq1kT0NIWGpc6nb_AmiqsE',
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: 'uxscoreboard.firebaseapp.com',
   databaseURL: 'https://uxscoreboard.firebaseio.com',
   projectId: 'uxscoreboard',

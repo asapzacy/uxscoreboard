@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import routes from './config/routes'
 import Perf from 'react-addons-perf'
+require('dotenv').config()
 
 const renderApp = (routes) => {
   render(

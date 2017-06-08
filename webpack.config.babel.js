@@ -12,7 +12,6 @@ const autoprefixer = require('autoprefixer')
 const mqpacker = require('css-mqpacker')
 const cssnano = require('cssnano')
 
-
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 const isProduction = LAUNCH_COMMAND === 'build'
 process.env.BABEL_ENV = LAUNCH_COMMAND
@@ -74,13 +73,13 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin({
   disable: !isProduction,
-  filename: 'assets/css/app.[hash].css'
+  filename: 'assets/css/app_[hash:6]_.css'
 })
 
 const compressionPlugin = new CompressionPlugin({
   asset: '[path].gz[query]',
   algorithm: 'gzip',
-  test: /\.(js|css|html)$/,
+  test: /\.(js|css)$/,
   threshold: 1024,
   minRatio: 0.8
 })
@@ -110,7 +109,7 @@ const sharedPlugins = [
 const base = {
   output: {
     path: PATHS.build,
-    filename: 'assets/js/bundle.[hash].js',
+    filename: 'assets/js/bundle_[hash:6]_.js',
     publicPath: '/'
   },
   module: {
@@ -195,6 +194,7 @@ const developmentConfig = {
     publicPath: '/',
     hot: true,
     inline: true,
+    compress: true,
     historyApiFallback: true,
     host: HOST,
     port: PORT,

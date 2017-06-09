@@ -7,7 +7,7 @@ const Home = () => (
   <div className={s.container}>
     <section className={s.uxscoreboard}>
       <h1 className={s.name}>{'uxscoreboard'}</h1>
-      <h2 className={s.description}>{'live sports scoreboard built on ES6 and React.js'}</h2>
+      <h2 className={s.description}>{'live sports scoreboard built on ES6, React, and Node.js'}</h2>
     </section>
     <nav className={s.menu}>
       <menu className={s.list}>

@@ -2,31 +2,31 @@
 export const seasons =  {
   mlb: {
     seasons: {
-      2016: {
+      '2016': {
         season: {
-          start: 20160403,
-          end: 20161102
+          start: '20160403',
+          end: '20161102'
         }
       },
-      2017: {
+      '2017': {
         preseason: {
-          start: 20170222,
-          end: 20170401
+          start: '20170222',
+          end: '20170401'
         },
         season: {
-          start: 20170402,
-          end: 20171001,
+          start: '20170402',
+          end: '20171001',
           allstar: {
-            start: 20170710,
-            end: 20170713
+            start: '20170710',
+            end: '20170713'
           }
         },
         playoffs: {
-          start: 20171003,
-          end: 20171022,
+          start: '20171003',
+          end: '20171022',
           finals: {
-            start: 20171024,
-            end: 20171101
+            start: '20171024',
+            end: '20171101'
           }
         }
       }
@@ -49,10 +49,10 @@ export const seasons =  {
         },
         playoffs: {
           start: '20170415',
-          end: '20170618',
+          end: '20170612',
           finals: {
             start: '20170601',
-            end: '20170618'
+            end: '20170612'
           }
         },
       }

@@ -1,7 +1,6 @@
 import moment from 'moment'
 import timezone from 'moment-timezone/builds/moment-timezone.min'
 
-
 export const dateObject = (dt) => {
   const yyyy = dt.slice(0, 4)
   const mm = dt.slice(4, 6)

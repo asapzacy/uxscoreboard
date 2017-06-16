@@ -12,7 +12,7 @@
     "wipe": "rm -rf node_modules && yarn",
     "lint": "eslint app/.; exit 0",
     "fix": "eslint --fix app/.; exit 0",
-    "bust": "rm -rf dist/assets/css/app.* dist/assets/js/bundle.*",
+    "bust": "rm -rf dist/assets/css/app* dist/assets/js/bundle*",
     "images": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;"
   },
   "author": "Zac Arellano",

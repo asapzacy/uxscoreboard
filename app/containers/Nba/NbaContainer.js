@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
+import { seasons } from 'data/league_dates'
 import { ref } from 'config/firebase'
 
 class NbaContainer extends Component {
@@ -27,7 +28,7 @@ class NbaContainer extends Component {
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(dt = this.state.today) {
+  makeRequest(dt = '20170612') {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

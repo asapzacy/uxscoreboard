@@ -31,13 +31,6 @@ export const getNflScores = (week) => {
     .catch(error => error.status)
 }
 
-// export const getNflScores = (dt) => {
-//   const api = `${CORS}https://www.nfl.com/ajax/scorestrip?season=2017&seasonType=REG&week=1`
-//   return axios.get(api)
-//     .then(currentScores => currentScores.data)
-//     .catch(currentScores => currentScores.status)
-// }
-
 // axios request - nhl scores
 export const getNhlScores = (dt) => {
   const { yyyy, mm, dd } = dateObject(dt)

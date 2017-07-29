@@ -75,10 +75,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zacarellano/uxscoreboard.git"
+    "url": "git+https://github.com/asapzacy/uxscoreboard.git"
   },
   "bugs": {
-    "url": "https://github.com/zacarellano/uxscoreboard/issues"
+    "url": "https://github.com/asapzacy/uxscoreboard/issues"
   },
   "homepage": "https://uxscoreboard.com"
 }

@@ -16,6 +16,7 @@ renderApp(routes)
 
 if (module.hot) {
   window.Perf = Perf
+  document.head.querySelector('link[rel=icon]').href = '/favicon-dev.png'
   module.hot.accept('./config/routes', () => {
     const newRoutes = require('./config/routes').default
     renderApp(newRoutes)

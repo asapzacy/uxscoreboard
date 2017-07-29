@@ -1,4 +1,3 @@
-
 /* -------  base components  ------- */
 export Header from './Header/Header'
 export Footer from './Footer/Footer'
@@ -26,6 +25,7 @@ export Event from './Event/Event'
 export Game from './Game/Game'
 export GameState from './GameState/GameState'
 export Team from './Team/Team'
+export Logo from './Logo/Logo'
 export Expand from './Expand/Expand'
 export Details from './Details/Details'
 export Matchup from './Matchup/Matchup'

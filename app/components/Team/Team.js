@@ -1,14 +1,15 @@
 import React from 'react'
+import { Logo } from 'components'
 import { team_colors } from 'data/team_colors'
 import s from './Team.scss'
 
-const createBgImage = (code, league) => ({
-  backgroundImage:code !== 'nyy' && `linear-gradient(to right,${team_colors[league][code]} 40%,transparent 0%)`
+const makeBgImg = (code, league, isLoaded) => ({
+  backgroundImage:code !== 'nyy' && `linear-gradient(to right,${team_colors[league][code]} 40%,transparent 0%)`,
 })
 
-const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league }) => (
-  <section className={code === 'nyy' ? s[code] : s.container} style={createBgImage(code, league)}>
-    <img className={s.logo} src={`/assets/img/${league}/teams/${code}.${filetype}`} alt={`${name} Logo | uxscoreboard`} />
+const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league, hasLoaded, logoHasLoaded }) => (
+  <section className={code === 'nyy' ? s[code] : s.container} style={makeBgImg(code, league)}>
+    <Logo src={`/assets/img/${league}/teams/${code}.${filetype}`} name={name} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
     <main className={s.info}>
       <section className={s.leftSide}>
         <span className={s.name}>{ name.length >= 9 ? <small>{name}</small> : name }</span>

@@ -1,4 +1,3 @@
-
 /* -------  base container  ------- */
 export MainContainer from './Main/MainContainer'
 
@@ -20,4 +19,5 @@ export DateContainer from './Date/DateContainer'
 
 /* -------  game containers  ------- */
 export GameContainer from './Game/GameContainer'
+export TeamContainer from './Team/TeamContainer'
 export DetailsContainer from './Details/DetailsContainer'

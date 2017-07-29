@@ -5,13 +5,13 @@
   font-size:1.1em;
   border:2px solid $white;
   margin:1em;
+  color:rgba(7,7,7,0);
   flex:1 1 calc(33.3% - 2em);
   max-width:420px;
   min-width:320px;
   border-radius:2px;
   box-shadow:0 7.5px 17.5px rgba(50,50,93,.1), 0 2.5px 7.5px rgba(0,0,0,.07);
-  transition-property:transform, box-shadow;
-  transition-duration:0.44s;
+  transition:transform 0.44s,box-shadow 0.44s,color 0.77s 0.77s;
 }
 .topHalf {
   display:block;

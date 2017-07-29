@@ -1,0 +1,10 @@
+
+.container {
+  height:75px;
+  flex:1;
+  opacity:0;
+  transition:opacity 0.77s 0.77s;
+}
+.container[src$='.png'] {
+  width:75px;
+}

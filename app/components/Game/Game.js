@@ -1,5 +1,5 @@
 import React from 'react'
-import { GameState, Team, Expand, Details } from 'components'
+import { GameState, Expand, Details, Team } from 'components'
 import { DetailsContainer } from 'containers'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { velocity_game } from 'config/velocity'
@@ -9,10 +9,11 @@ import s from './Game.scss'
 
 const fuckSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
 
-const style = (isHovered, isExpanded) => ({
+const getGameStyles = (isHovered, isExpanded, hasLoaded) => ({
   flexBasis: fuckSafari && '320px',
   transform: isHovered && 'translateY(-2px)',
-  boxShadow: (isHovered || isExpanded) && '0 9px 17.5px rgba(50,50,93,.1),0 4px 7.5px rgba(0,0,0,.07)'
+  boxShadow: (isHovered || isExpanded) && '0 9px 17.5px rgba(50,50,93,.1),0 4px 7.5px rgba(0,0,0,.07)',
+  color: hasLoaded && 'rgba(7,7,7,1)'
 })
 
 const Game = (props) => {
@@ -26,12 +27,12 @@ const Game = (props) => {
 
 export default Game
 
-const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={s.item} style={style(isHovered, isExpanded)}>
+const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
+  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
     <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nbaGameStateProps(game)} />
-      <Team {...nbaTeamProps(game, 'visitor', league)} />
-      <Team {...nbaTeamProps(game, 'home', league)} />
+      <Team {...nbaTeamProps(game, 'visitor', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
+      <Team {...nbaTeamProps(game, 'home', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
@@ -40,12 +41,12 @@ const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isH
   </li>
 )
 
-const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={s.item} style={style(isHovered, isExpanded)}>
+const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
+  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
     <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nflGameStateProps(game)} />
-      <Team {...nflTeamProps(game, 'v', league)} />
-      <Team {...nflTeamProps(game, 'h', league)} />
+      <Team {...nflTeamProps(game, 'v', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
+      <Team {...nflTeamProps(game, 'h', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
@@ -54,12 +55,12 @@ const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isH
   </li>
 )
 
-const MlbGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={s.item} style={style(isHovered, isExpanded)}>
+const MlbGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
+  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
     <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...mlbGameStateProps(game)} />
-      <Team {...mlbTeamProps(game, 'away', league)} />
-      <Team {...mlbTeamProps(game, 'home', league)} />
+      <Team {...mlbTeamProps(game, 'away', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
+      <Team {...mlbTeamProps(game, 'home', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
@@ -68,12 +69,12 @@ const MlbGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isH
   </li>
 )
 
-const NhlGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame }) => (
-  <li className={s.item} style={style(isHovered, isExpanded)}>
+const NhlGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
+  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
     <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
       <GameState {...nhlGameStateProps(game)} />
-      <Team {...nhlTeamProps(game, 'away', league)} />
-      <Team {...nhlTeamProps(game, 'home', league)} />
+      <Team {...nhlTeamProps(game, 'away', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
+      <Team {...nhlTeamProps(game, 'home', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
       <Expand isExpanded={isExpanded} />
     </span>
     <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>

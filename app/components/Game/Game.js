@@ -1,5 +1,5 @@
 import React from 'react'
-import { GameState, Expand, Details, Team } from 'components'
+import { GameState, Team, Expand, Details } from 'components'
 import { DetailsContainer } from 'containers'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { velocity_game } from 'config/velocity'

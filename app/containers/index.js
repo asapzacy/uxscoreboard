@@ -19,5 +19,5 @@ export DateContainer from './Date/DateContainer'
 
 /* -------  game containers  ------- */
 export GameContainer from './Game/GameContainer'
-export TeamContainer from './Team/TeamContainer'
+export LogoContainer from './Logo/LogoContainer'
 export DetailsContainer from './Details/DetailsContainer'

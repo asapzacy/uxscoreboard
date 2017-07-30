@@ -12,7 +12,6 @@ const GameState = (props) => {
 
 export default GameState
 
-
 const PreGameState = ({ time, isPlayoffs, playoffs, isDoubleHeader, doubleHeader }) => (
   <section className={s.container}>
     <span>{time}</span>

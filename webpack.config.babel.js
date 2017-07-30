@@ -188,7 +188,7 @@ const developmentConfig = {
     'webpack/hot/only-dev-server',
     PATHS.app
   ],
-  devtool: 'cheap-module-inline-source-map',
+  // devtool: 'cheap-module-inline-source-map',
   devServer: {
     contentBase: PATHS.build,
     publicPath: '/',

@@ -16,7 +16,7 @@
     "fix": "eslint --fix app/.; exit 0",
     "bust": "rm -rf dist/assets/css/app* dist/assets/js/bundle*",
     "images": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;",
-    "prepush": "yarn build && git add dist/**/bundle* && git commit --ammend --no-edit"
+    "prepush": "yarn build && git add dist/**/bundle* && git commit --amend --no-edit"
   },
   "author": "Zac Arellano",
   "license": "MIT",

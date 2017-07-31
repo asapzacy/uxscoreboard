@@ -16,7 +16,7 @@
     "fix": "eslint --fix app/.; exit 0",
     "bust": "rm -rf dist/**/*/bundle.*",
     "images": "find ./dist/assets -name '*.svg' -type f -exec svgo '{}' \\;",
-    "prepush": "echo 'Building bundles.. ' && yarn build && git add dist && echo 'Committing bundles.. ' && git commit --amend --no-edit && git pull && echo 'Done.'"
+    "prepush": "echo 'Building bundles.. ' && yarn build && git pull && git add dist && echo 'Committing bundles.. ' && git commit --amend --no-edit && echo 'Done.'"
   },
   "author": "Zac Arellano",
   "license": "MIT",

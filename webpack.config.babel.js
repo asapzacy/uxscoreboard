@@ -58,13 +58,13 @@ const postcssAssetsPlugin = new PostcssAssetsPlugin({
 })
 
 const statsWriterPlugin = new StatsWriterPlugin({
-  filename: './webpack_stats.json',
+  filename: './stats/webpack_stats.json',
   fields: null,
   stats: { chunkModules: true }
 })
 
 const visualizerPlugin = new VisualizerPlugin({
-  filename: './webpack_stats.html'
+  filename: './stats/webpack_stats.html'
 })
 
 const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
@@ -73,7 +73,7 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin({
   disable: !isProduction,
-  filename: 'assets/css/app_[hash:6]_.css'
+  filename: 'assets/css/bundle.[hash:12].css'
 })
 
 const compressionPlugin = new CompressionPlugin({
@@ -109,7 +109,7 @@ const sharedPlugins = [
 const base = {
   output: {
     path: PATHS.build,
-    filename: 'assets/js/bundle_[hash:6]_.js',
+    filename: 'assets/js/bundle.[hash:12].js',
     publicPath: '/'
   },
   module: {
@@ -130,7 +130,7 @@ const base = {
                 sourceMap: true,
                 modules: true,
                 minimize: true,
-                localIdentName: '[name]__[local]___[hash:base64:5]',
+                localIdentName: '[name]_[local]___[hash:base64:5]',
                 importLoaders: 1
               }
             },

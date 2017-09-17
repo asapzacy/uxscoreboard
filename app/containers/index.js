@@ -1,23 +1,41 @@
-/* -------  base container  ------- */
-export MainContainer from './Main/MainContainer'
 
-/* -------  random containers  ------- */
-export HomeContainer from './Home/HomeContainer'
-export AboutContainer from './About/AboutContainer'
-export NotFoundContainer from './NotFound/NotFoundContainer'
-export TestContainer from './Test/TestContainer'
+/* -------  base container  ------- */
+import MainContainer from './Main/MainContainer'
+
+/* -------  page containers  ------- */
+import HomeContainer from './Home/HomeContainer'
+import AboutContainer from './About/AboutContainer'
+import NotFoundContainer from './NotFound/NotFoundContainer'
+import TestContainer from './Test/TestContainer'
 
 /* -------  league containers  ------- */
-export MlbContainer from './Mlb/MlbContainer'
-export NbaContainer from './Nba/NbaContainer'
-export NflContainer from './Nfl/NflContainer'
-export NhlContainer from './Nhl/NhlContainer'
+import MlbContainer from './Mlb/MlbContainer'
+import NbaContainer from './Nba/NbaContainer'
+import NflContainer from './Nfl/NflContainer'
+import NhlContainer from './Nhl/NhlContainer'
 
 /* -------  scoreboard containers  ------- */
-export ScoreboardContainer from './Scoreboard/ScoreboardContainer'
-export DateContainer from './Date/DateContainer'
+import ScoreboardContainer from './Scoreboard/ScoreboardContainer'
+import DateContainer from './Date/DateContainer'
 
 /* -------  game containers  ------- */
-export GameContainer from './Game/GameContainer'
-export LogoContainer from './Logo/LogoContainer'
-export DetailsContainer from './Details/DetailsContainer'
+import GameContainer from './Game/GameContainer'
+import LogoContainer from './Logo/LogoContainer'
+import DetailsContainer from './Details/DetailsContainer'
+
+export {
+  MainContainer,
+  HomeContainer,
+  AboutContainer,
+  NotFoundContainer,
+  TestContainer,
+  MlbContainer,
+  NbaContainer,
+  NflContainer,
+  NhlContainer,
+  ScoreboardContainer,
+  DateContainer,
+  GameContainer,
+  LogoContainer,
+  DetailsContainer
+}

@@ -28,7 +28,7 @@ class NbaContainer extends Component {
   componentWillReceiveProps(nextProps) {
     this.makeRequest(nextProps.routeParams.date)
   }
-  makeRequest(dt = '20170612') {
+  makeRequest(dt) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

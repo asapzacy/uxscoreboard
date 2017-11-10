@@ -49,7 +49,7 @@ class ScoreboardContainer extends Component {
     })
   }
   checkSeason(day) {
-    if (this.props.league !== 'nhl' && this.props.league !== 'nfl') {
+    if (this.props.league !== 'nba' || this.props.league !== 'nhl' && this.props.league !== 'nfl') {
       const dates = seasons[this.props.league].seasons[this.props.year]
       this.setState({
         seasonState: {

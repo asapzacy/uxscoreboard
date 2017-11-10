@@ -39,7 +39,7 @@ export const seasons =  {
           start: '20161001',
           end: '20161024'
         },
-        season:  {
+        season: {
           start: '20161025',
           end: '20170412',
           allstar: {
@@ -54,7 +54,13 @@ export const seasons =  {
             start: '20170601',
             end: '20170612'
           }
-        },
+        }
+      },
+      '2017': {
+        season: {
+          start: '20171017',
+          end: '20170411'
+        }
       }
     }
   },

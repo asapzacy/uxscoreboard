@@ -2,20 +2,20 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "e55f22a8a3b4971397c2",
+  "hash": "c3bbe302c1184151a2a4",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
-      "assets/js/bundle.e55f22a8a3b4.js",
-      "assets/css/bundle.e55f22a8a3b4.css",
-      "assets/js/bundle.e55f22a8a3b4.js.map",
-      "assets/css/bundle.e55f22a8a3b4.css.map"
+      "assets/js/bundle.c3bbe302c118.js",
+      "assets/css/bundle.c3bbe302c118.css",
+      "assets/js/bundle.c3bbe302c118.js.map",
+      "assets/css/bundle.c3bbe302c118.css.map"
     ]
   },
   "assets": [
     {
-      "name": "assets/js/bundle.e55f22a8a3b4.js",
-      "size": 601786,
+      "name": "assets/js/bundle.c3bbe302c118.js",
+      "size": 601907,
       "chunks": [
         0
       ],
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "name": "assets/css/bundle.e55f22a8a3b4.css",
+      "name": "assets/css/bundle.c3bbe302c118.css",
       "size": 14992,
       "chunks": [
         0
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "name": "assets/js/bundle.e55f22a8a3b4.js.map",
+      "name": "assets/js/bundle.c3bbe302c118.js.map",
       "size": 147,
       "chunks": [
         0
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "name": "assets/css/bundle.e55f22a8a3b4.css.map",
+      "name": "assets/css/bundle.c3bbe302c118.css.map",
       "size": 16049,
       "chunks": [
         0
@@ -54,14 +54,14 @@
       ]
     },
     {
-      "name": "assets/css/bundle.e55f22a8a3b4.css.gz",
-      "size": 4112,
+      "name": "assets/css/bundle.c3bbe302c118.css.gz",
+      "size": 4111,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "assets/js/bundle.e55f22a8a3b4.js.gz",
-      "size": 181722,
+      "name": "assets/js/bundle.c3bbe302c118.js.gz",
+      "size": 181702,
       "chunks": [],
       "chunkNames": []
     },
@@ -78,10 +78,10 @@
         0
       ],
       "assets": [
-        "assets/js/bundle.e55f22a8a3b4.js",
-        "assets/css/bundle.e55f22a8a3b4.css",
-        "assets/js/bundle.e55f22a8a3b4.js.map",
-        "assets/css/bundle.e55f22a8a3b4.css.map"
+        "assets/js/bundle.c3bbe302c118.js",
+        "assets/css/bundle.c3bbe302c118.css",
+        "assets/js/bundle.c3bbe302c118.js.map",
+        "assets/css/bundle.c3bbe302c118.css.map"
       ]
     }
   },
@@ -92,17 +92,17 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 1771628,
+      "size": 1771836,
       "names": [
         "main"
       ],
       "files": [
-        "assets/js/bundle.e55f22a8a3b4.js",
-        "assets/css/bundle.e55f22a8a3b4.css",
-        "assets/js/bundle.e55f22a8a3b4.js.map",
-        "assets/css/bundle.e55f22a8a3b4.css.map"
+        "assets/js/bundle.c3bbe302c118.js",
+        "assets/css/bundle.c3bbe302c118.css",
+        "assets/js/bundle.c3bbe302c118.js.map",
+        "assets/css/bundle.c3bbe302c118.css.map"
       ],
-      "hash": "bd08cb985cb714966ceb",
+      "hash": "eab3b695778b68a07324",
       "parents": [],
       "origins": [
         {
@@ -2948,9 +2948,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Router.js",
-      "issuerId": 407,
-      "issuerName": "./~/react-router/es/Router.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Link.js",
+      "issuerId": 140,
+      "issuerName": "./~/react-router/es/Link.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3102,9 +3102,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Router.js",
-      "issuerId": 407,
-      "issuerName": "./~/react-router/es/Router.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Link.js",
+      "issuerId": 140,
+      "issuerName": "./~/react-router/es/Link.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3821,9 +3821,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Router.js",
-      "issuerId": 407,
-      "issuerName": "./~/react-router/es/Router.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Link.js",
+      "issuerId": 140,
+      "issuerName": "./~/react-router/es/Link.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5321,9 +5321,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
-      "issuerId": 488,
-      "issuerName": "./~/velocity-react/velocity-component.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
+      "issuerId": 490,
+      "issuerName": "./~/velocity-react/velocity-transition-group.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6512,9 +6512,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/baseIsEqual.js",
-      "issuerId": 94,
-      "issuerName": "./~/velocity-react/~/lodash/internal/baseIsEqual.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/baseFlatten.js",
+      "issuerId": 454,
+      "issuerName": "./~/velocity-react/~/lodash/internal/baseFlatten.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6843,9 +6843,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/ChangeEventPlugin.js",
-      "issuerId": 319,
-      "issuerName": "./~/react-dom/lib/ChangeEventPlugin.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/BeforeInputEventPlugin.js",
+      "issuerId": 317,
+      "issuerName": "./~/react-dom/lib/BeforeInputEventPlugin.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7147,9 +7147,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/lang/isEqual.js",
-      "issuerId": 162,
-      "issuerName": "./~/velocity-react/~/lodash/lang/isEqual.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/object/omit.js",
+      "issuerId": 163,
+      "issuerName": "./~/velocity-react/~/lodash/object/omit.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7357,9 +7357,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
-      "issuerId": 302,
-      "issuerName": "./~/history/lib/createBrowserHistory.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createHashHistory.js",
+      "issuerId": 303,
+      "issuerName": "./~/history/lib/createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7970,9 +7970,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
-      "issuerId": 302,
-      "issuerName": "./~/history/lib/createBrowserHistory.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createHashHistory.js",
+      "issuerId": 303,
+      "issuerName": "./~/history/lib/createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8025,9 +8025,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
-      "issuerId": 302,
-      "issuerName": "./~/history/lib/createBrowserHistory.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createHashHistory.js",
+      "issuerId": 303,
+      "issuerName": "./~/history/lib/createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9531,9 +9531,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
-      "issuerId": 488,
-      "issuerName": "./~/velocity-react/velocity-component.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
+      "issuerId": 490,
+      "issuerName": "./~/velocity-react/velocity-transition-group.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9586,9 +9586,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
-      "issuerId": 488,
-      "issuerName": "./~/velocity-react/velocity-component.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
+      "issuerId": 490,
+      "issuerName": "./~/velocity-react/velocity-transition-group.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10234,7 +10234,7 @@
       "name": "./app/data/league_dates.js",
       "index": 513,
       "index2": 508,
-      "size": 1190,
+      "size": 1298,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -10276,7 +10276,7 @@
         "seasons"
       ],
       "depth": 5,
-      "source": "\nexport var seasons = {\n  mlb: {\n    seasons: {\n      '2016': {\n        season: {\n          start: '20160403',\n          end: '20161102'\n        }\n      },\n      '2017': {\n        preseason: {\n          start: '20170222',\n          end: '20170401'\n        },\n        season: {\n          start: '20170402',\n          end: '20171001',\n          allstar: {\n            start: '20170710',\n            end: '20170713'\n          }\n        },\n        playoffs: {\n          start: '20171003',\n          end: '20171022',\n          finals: {\n            start: '20171024',\n            end: '20171101'\n          }\n        }\n      }\n    }\n  },\n  nba: {\n    seasons: {\n      '2016': {\n        preseason: {\n          start: '20161001',\n          end: '20161024'\n        },\n        season: {\n          start: '20161025',\n          end: '20170412',\n          allstar: {\n            start: '20170217',\n            end: '20170222'\n          }\n        },\n        playoffs: {\n          start: '20170415',\n          end: '20170612',\n          finals: {\n            start: '20170601',\n            end: '20170612'\n          }\n        }\n      }\n    }\n  },\n  nhl: {\n    start: '20161012',\n    end: '20170409'\n  }\n};"
+      "source": "\nexport var seasons = {\n  mlb: {\n    seasons: {\n      '2016': {\n        season: {\n          start: '20160403',\n          end: '20161102'\n        }\n      },\n      '2017': {\n        preseason: {\n          start: '20170222',\n          end: '20170401'\n        },\n        season: {\n          start: '20170402',\n          end: '20171001',\n          allstar: {\n            start: '20170710',\n            end: '20170713'\n          }\n        },\n        playoffs: {\n          start: '20171003',\n          end: '20171022',\n          finals: {\n            start: '20171024',\n            end: '20171101'\n          }\n        }\n      }\n    }\n  },\n  nba: {\n    seasons: {\n      '2016': {\n        preseason: {\n          start: '20161001',\n          end: '20161024'\n        },\n        season: {\n          start: '20161025',\n          end: '20170412',\n          allstar: {\n            start: '20170217',\n            end: '20170222'\n          }\n        },\n        playoffs: {\n          start: '20170415',\n          end: '20170612',\n          finals: {\n            start: '20170601',\n            end: '20170612'\n          }\n        }\n      },\n      '2017': {\n        season: {\n          start: '20171017',\n          end: '20170411'\n        }\n      }\n    }\n  },\n  nhl: {\n    start: '20161012',\n    end: '20170409'\n  }\n};"
     },
     {
       "id": 107,
@@ -10575,9 +10575,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/BrowserProtocol.js",
-      "issuerId": 63,
-      "issuerName": "./~/history/lib/BrowserProtocol.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/HashProtocol.js",
+      "issuerId": 300,
+      "issuerName": "./~/history/lib/HashProtocol.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11361,9 +11361,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
-      "issuerId": 46,
-      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/EventPropagators.js",
+      "issuerId": 47,
+      "issuerName": "./~/react-dom/lib/EventPropagators.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11407,9 +11407,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/EventPluginHub.js",
-      "issuerId": 46,
-      "issuerName": "./~/react-dom/lib/EventPluginHub.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/EventPropagators.js",
+      "issuerId": 47,
+      "issuerName": "./~/react-dom/lib/EventPropagators.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -12869,9 +12869,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
-      "issuerId": 488,
-      "issuerName": "./~/velocity-react/velocity-component.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
+      "issuerId": 490,
+      "issuerName": "./~/velocity-react/velocity-transition-group.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -12915,9 +12915,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
-      "issuerId": 488,
-      "issuerName": "./~/velocity-react/velocity-component.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
+      "issuerId": 490,
+      "issuerName": "./~/velocity-react/velocity-transition-group.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -15938,7 +15938,7 @@
       "name": "./app/containers/Nba/NbaContainer.js",
       "index": 512,
       "index2": 509,
-      "size": 4722,
+      "size": 4822,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -15971,7 +15971,7 @@
         "default"
       ],
       "depth": 4,
-      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { League } from 'components';\nimport { getTodaysDate, isValidDate } from 'helpers/utils';\nimport { getNbaScores } from 'helpers/api';\nimport { seasons } from 'data/league_dates';\nimport { ref } from 'config/firebase';\n\nvar NbaContainer = function (_Component) {\n  _inherits(NbaContainer, _Component);\n\n  function NbaContainer() {\n    _classCallCheck(this, NbaContainer);\n\n    var _this = _possibleConstructorReturn(this, (NbaContainer.__proto__ || Object.getPrototypeOf(NbaContainer)).call(this));\n\n    _this.state = {\n      isLoading: true,\n      isValid: false,\n      isError: false,\n      scores: {},\n      cache: {},\n      year: '',\n      date: '',\n      today: ''\n    };\n    return _this;\n  }\n\n  _createClass(NbaContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      this.setState({ today: getTodaysDate() }, function () {\n        _this2.makeRequest(_this2.props.routeParams.date);\n        _this2.getCache();\n      });\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.makeRequest(nextProps.routeParams.date);\n    }\n  }, {\n    key: 'makeRequest',\n    value: function makeRequest(dt) {\n      var _this3 = this;\n\n      if (isValidDate(dt)) {\n        this.setState({ isValid: true });\n      }\n      if (this.state.cache[dt] && dt !== this.state.today) {\n        var data = this.state.cache[dt];\n        this.setState({\n          isLoading: false,\n          scores: data.games || [],\n          year: data.year,\n          date: dt\n        });\n      } else {\n        getNbaScores(dt).then(function (data) {\n          _this3.setState({\n            isLoading: false,\n            scores: data.games,\n            year: data.year,\n            date: dt\n          }, function () {\n            return _this3.saveScores(data);\n          });\n        }).catch(function (error) {\n          _this3.setState({\n            isLoading: false,\n            isError: true,\n            date: dt\n          });\n          throw new Error(error);\n        });\n      }\n    }\n  }, {\n    key: 'getCache',\n    value: function getCache() {\n      var _this4 = this;\n\n      ref.once('value', function (snapshot) {\n        if (snapshot.hasChild('nba')) {\n          _this4.setState({\n            cache: snapshot.val().nba.scores\n          });\n        }\n      });\n    }\n  }, {\n    key: 'saveScores',\n    value: function saveScores(data) {\n      var _this5 = this;\n\n      ref.child('nba/scores/' + this.state.date).set(data).then(function () {\n        return console.log('nba scores updated.. ');\n      }).then(function () {\n        return _this5.getCache();\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(League, _extends({}, this.state, { league: this.props.league }));\n    }\n  }]);\n\n  return NbaContainer;\n}(Component);\n\nNbaContainer.defaultProps = { league: 'nba' };\n\nexport default NbaContainer;"
+      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { League } from 'components';\nimport { getTodaysDate, isValidDate } from 'helpers/utils';\nimport { getNbaScores } from 'helpers/api';\nimport { seasons } from 'data/league_dates';\nimport { ref } from 'config/firebase';\n\nvar NbaContainer = function (_Component) {\n  _inherits(NbaContainer, _Component);\n\n  function NbaContainer() {\n    _classCallCheck(this, NbaContainer);\n\n    var _this = _possibleConstructorReturn(this, (NbaContainer.__proto__ || Object.getPrototypeOf(NbaContainer)).call(this));\n\n    _this.state = {\n      isLoading: true,\n      isValid: false,\n      isError: false,\n      scores: {},\n      cache: {},\n      year: '',\n      date: '',\n      today: ''\n    };\n    return _this;\n  }\n\n  _createClass(NbaContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      this.setState({ today: getTodaysDate() }, function () {\n        _this2.makeRequest(_this2.props.routeParams.date);\n        _this2.getCache();\n      });\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.makeRequest(nextProps.routeParams.date);\n    }\n  }, {\n    key: 'makeRequest',\n    value: function makeRequest() {\n      var _this3 = this;\n\n      var dt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.today;\n\n      if (isValidDate(dt)) {\n        this.setState({ isValid: true });\n      }\n      if (this.state.cache[dt] && dt !== this.state.today) {\n        var data = this.state.cache[dt];\n        this.setState({\n          isLoading: false,\n          scores: data.games || [],\n          year: data.year,\n          date: dt\n        });\n      } else {\n        getNbaScores(dt).then(function (data) {\n          _this3.setState({\n            isLoading: false,\n            scores: data.games,\n            year: data.year,\n            date: dt\n          }, function () {\n            return _this3.saveScores(data);\n          });\n        }).catch(function (error) {\n          _this3.setState({\n            isLoading: false,\n            isError: true,\n            date: dt\n          });\n          throw new Error(error);\n        });\n      }\n    }\n  }, {\n    key: 'getCache',\n    value: function getCache() {\n      var _this4 = this;\n\n      ref.once('value', function (snapshot) {\n        if (snapshot.hasChild('nba')) {\n          _this4.setState({\n            cache: snapshot.val().nba.scores\n          });\n        }\n      });\n    }\n  }, {\n    key: 'saveScores',\n    value: function saveScores(data) {\n      var _this5 = this;\n\n      ref.child('nba/scores/' + this.state.date).set(data).then(function () {\n        return console.log('nba scores updated.. ');\n      }).then(function () {\n        return _this5.getCache();\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(League, _extends({}, this.state, { league: this.props.league }));\n    }\n  }]);\n\n  return NbaContainer;\n}(Component);\n\nNbaContainer.defaultProps = { league: 'nba' };\n\nexport default NbaContainer;"
     },
     {
       "id": 239,
@@ -16135,7 +16135,7 @@
         "default"
       ],
       "depth": 4,
-      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { Scoreboard } from 'components';\nimport { seasons } from 'data/league_dates';\nimport { checkDay, formatLastUpdatedString } from 'helpers/utils';\n\nvar ScoreboardContainer = function (_Component) {\n  _inherits(ScoreboardContainer, _Component);\n\n  function ScoreboardContainer() {\n    _classCallCheck(this, ScoreboardContainer);\n\n    var _this = _possibleConstructorReturn(this, (ScoreboardContainer.__proto__ || Object.getPrototypeOf(ScoreboardContainer)).call(this));\n\n    _this.state = {\n      lastUpdated: 0,\n      bgImg: '',\n      seasonState: {\n        isPreseason: false,\n        isSeason: false,\n        isAllStar: false,\n        isPlayoffs: false,\n        isFinals: false\n      },\n      direction: {\n        enter: '',\n        leave: ''\n      }\n    };\n    return _this;\n  }\n\n  _createClass(ScoreboardContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.updateTime();\n      this.checkSeason(this.props.date || this.props.week);\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.updateTime();\n      this.checkSeason(nextProps.date || nextProps.week);\n      this.updateDirection(this.props.date, nextProps.date);\n    }\n  }, {\n    key: 'updateTime',\n    value: function updateTime() {\n      this.setState({ lastUpdated: formatLastUpdatedString() });\n    }\n  }, {\n    key: 'updateDirection',\n    value: function updateDirection(oldDate, newDate) {\n      var enter = void 0;\n      var leave = void 0;\n      if (oldDate > newDate) {\n        enter = 'Left';\n        leave = 'Right';\n      } else if (oldDate < newDate) {\n        enter = 'Right';\n        leave = 'Left';\n      }\n      this.setState({\n        direction: { enter: enter, leave: leave }\n      });\n    }\n  }, {\n    key: 'checkSeason',\n    value: function checkSeason(day) {\n      var _this2 = this;\n\n      if (this.props.league !== 'nba' || this.props.league !== 'nhl' && this.props.league !== 'nfl') {\n        var dates = seasons[this.props.league].seasons[this.props.year];\n        this.setState({\n          seasonState: {\n            isPreseason: checkDay(day, dates.preseason.start, dates.preseason.end),\n            isSeason: checkDay(day, dates.season.start, dates.season.end),\n            isAllStar: checkDay(day, dates.season.allstar.start, dates.season.allstar.end),\n            isPlayoffs: checkDay(day, dates.playoffs.start, dates.playoffs.end),\n            isFinals: checkDay(day, dates.playoffs.finals.start, dates.playoffs.finals.end)\n          }\n        }, function () {\n          return _this2.updateBgImg();\n        });\n      }\n    }\n  }, {\n    key: 'updateBgImg',\n    value: function updateBgImg() {\n      var img = '';\n      if (this.state.seasonState.isPlayoffs) {\n        if (this.state.seasonState.isFinals) {\n          img = 'url(/assets/img/' + this.props.league + '/other/finals.svg)';\n        } else {\n          img = 'url(/assets/img/' + this.props.league + '/other/playoffs.svg)';\n        }\n      }\n      if (this.state.seasonState.isAllStar) {\n        img = 'url(/assets/img/' + this.props.league + '/other/all-star-game.svg)';\n      }\n      this.setState({ bgImg: img });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(Scoreboard, _extends({}, this.state, this.props));\n    }\n  }]);\n\n  return ScoreboardContainer;\n}(Component);\n\nexport default ScoreboardContainer;"
+      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { Scoreboard } from 'components';\nimport { seasons } from 'data/league_dates';\nimport { checkDay, formatLastUpdatedString } from 'helpers/utils';\n\nvar ScoreboardContainer = function (_Component) {\n  _inherits(ScoreboardContainer, _Component);\n\n  function ScoreboardContainer() {\n    _classCallCheck(this, ScoreboardContainer);\n\n    var _this = _possibleConstructorReturn(this, (ScoreboardContainer.__proto__ || Object.getPrototypeOf(ScoreboardContainer)).call(this));\n\n    _this.state = {\n      lastUpdated: 0,\n      bgImg: '',\n      seasonState: {\n        isPreseason: false,\n        isSeason: false,\n        isAllStar: false,\n        isPlayoffs: false,\n        isFinals: false\n      },\n      direction: {\n        enter: '',\n        leave: ''\n      }\n    };\n    return _this;\n  }\n\n  _createClass(ScoreboardContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.updateTime();\n      this.checkSeason(this.props.date || this.props.week);\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.updateTime();\n      this.checkSeason(nextProps.date || nextProps.week);\n      this.updateDirection(this.props.date, nextProps.date);\n    }\n  }, {\n    key: 'updateTime',\n    value: function updateTime() {\n      this.setState({ lastUpdated: formatLastUpdatedString() });\n    }\n  }, {\n    key: 'updateDirection',\n    value: function updateDirection(oldDate, newDate) {\n      var enter = void 0;\n      var leave = void 0;\n      if (oldDate > newDate) {\n        enter = 'Left';\n        leave = 'Right';\n      } else if (oldDate < newDate) {\n        enter = 'Right';\n        leave = 'Left';\n      }\n      this.setState({\n        direction: { enter: enter, leave: leave }\n      });\n    }\n  }, {\n    key: 'checkSeason',\n    value: function checkSeason(day) {\n      var _this2 = this;\n\n      if (this.props.league !== 'nba' && this.props.league !== 'nhl' && this.props.league !== 'nfl') {\n        var dates = seasons[this.props.league].seasons[this.props.year];\n        this.setState({\n          seasonState: {\n            isPreseason: checkDay(day, dates.preseason.start, dates.preseason.end),\n            isSeason: checkDay(day, dates.season.start, dates.season.end),\n            isAllStar: checkDay(day, dates.season.allstar.start, dates.season.allstar.end),\n            isPlayoffs: checkDay(day, dates.playoffs.start, dates.playoffs.end),\n            isFinals: checkDay(day, dates.playoffs.finals.start, dates.playoffs.finals.end)\n          }\n        }, function () {\n          return _this2.updateBgImg();\n        });\n      }\n    }\n  }, {\n    key: 'updateBgImg',\n    value: function updateBgImg() {\n      var img = '';\n      if (this.state.seasonState.isPlayoffs) {\n        if (this.state.seasonState.isFinals) {\n          img = 'url(/assets/img/' + this.props.league + '/other/finals.svg)';\n        } else {\n          img = 'url(/assets/img/' + this.props.league + '/other/playoffs.svg)';\n        }\n      }\n      if (this.state.seasonState.isAllStar) {\n        img = 'url(/assets/img/' + this.props.league + '/other/all-star-game.svg)';\n      }\n      this.setState({ bgImg: img });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(Scoreboard, _extends({}, this.state, this.props));\n    }\n  }]);\n\n  return ScoreboardContainer;\n}(Component);\n\nexport default ScoreboardContainer;"
     },
     {
       "id": 243,
@@ -27190,19 +27190,19 @@
           "initial": true,
           "entry": true,
           "extraAsync": false,
-          "size": 3804,
+          "size": 3678,
           "names": [],
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "c350bf0f068f58e48e13",
+          "hash": "cfc5c88177ca0d34f5e2",
           "parents": [],
           "origins": [
             {
               "moduleId": 1,
-              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
+              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
               "loc": "",
               "reasons": []
             }
@@ -27225,18 +27225,18 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
+          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
           "issuerId": 1,
-          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
+          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
             {
               "moduleId": 1,
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
-              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
               "type": "cjs require",
               "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
               "loc": "1:27-86"
@@ -27249,11 +27249,11 @@
         },
         {
           "id": 1,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
-          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
           "index": 0,
           "index2": 1,
-          "size": 1544,
+          "size": 1418,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -27272,7 +27272,7 @@
           "usedExports": true,
           "providedExports": null,
           "depth": 0,
-          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".BallStrikeOut_label___2sxTK{font:1.1em/100% monospace;display:inline-block;width:1.25em;letter-spacing:-1px}.circle{width:11px;height:11px;display:inline-block;margin:0 2px;border-radius:50%;background:#d3d3d3}.circle:after{content:\\\"\\\";display:block;height:100%;width:100%;border-radius:50%;background:#ba0021;opacity:0;transition:opacity 1.22s}.BallStrikeOut_bso___3haML:first-child .circleFilled:after{background:#00ba21}.circleFilled:after{opacity:1}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss\"],\"names\":[],\"mappings\":\"AAAA,6BAAO,0BAA0B,qBAAqB,aAAa,mBAAmB,CAAC,QAAiB,WAAW,YAAY,qBAAqB,aAAa,kBAAkB,kBAAkB,CAAC,cAAwB,WAAW,cAAc,YAAY,WAAW,kBAAkB,mBAAmB,UAAU,wBAAwB,CAAC,2DAA+C,kBAAkB,CAAC,oBAA8B,SAAS,CAAC\",\"file\":\"BallStrikeOut.scss\",\"sourcesContent\":[\".label{font:1.1em/100% monospace;display:inline-block;width:1.25em;letter-spacing:-1px}:global(.circle){width:11px;height:11px;display:inline-block;margin:0 2px;border-radius:50%;background:#d3d3d3}:global(.circle::after){content:'';display:block;height:100%;width:100%;border-radius:50%;background:#ba0021;opacity:0;transition:opacity 1.22s}.bso:first-child :global(.circleFilled::after){background:#00ba21}:global(.circleFilled::after){opacity:1}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"label\": \"BallStrikeOut_label___2sxTK\",\n\t\"bso\": \"BallStrikeOut_bso___3haML\"\n};"
+          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".Diamond_container___1mVSf{margin-top:1.5em;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}.Diamond_leftSide___1-TwA{width:48%;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-direction:column;flex-direction:column}.Diamond_rightSide___t-Jij{width:33%;display:-ms-flexbox;display:flex;-ms-flex-align:end;align-items:flex-end}.Diamond_bsoContainer___rpcgc{margin-bottom:25%;text-align:left}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss\"],\"names\":[],\"mappings\":\"AAAA,2BAAW,iBAAiB,oBAAA,aAAa,yBAAA,4BAA4B,CAAC,0BAAU,UAAU,oBAAA,aAAa,sBAAA,mBAAmB,0BAAA,qBAAqB,CAAC,2BAAW,UAAU,oBAAA,aAAa,mBAAA,oBAAoB,CAAC,8BAAc,kBAAkB,eAAe,CAAC\",\"file\":\"Diamond.scss\",\"sourcesContent\":[\".container{margin-top:1.5em;display:flex;justify-content:space-around}.leftSide{width:48%;display:flex;align-items:center;flex-direction:column}.rightSide{width:33%;display:flex;align-items:flex-end}.bsoContainer{margin-bottom:25%;text-align:left}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"Diamond_container___1mVSf\",\n\t\"leftSide\": \"Diamond_leftSide___1-TwA\",\n\t\"rightSide\": \"Diamond_rightSide___t-Jij\",\n\t\"bsoContainer\": \"Diamond_bsoContainer___rpcgc\"\n};"
         }
       ],
       "filteredModules": 0,
@@ -27414,19 +27414,19 @@
           "initial": true,
           "entry": true,
           "extraAsync": false,
-          "size": 3678,
+          "size": 3804,
           "names": [],
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "cfc5c88177ca0d34f5e2",
+          "hash": "c350bf0f068f58e48e13",
           "parents": [],
           "origins": [
             {
               "moduleId": 1,
-              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
               "loc": "",
               "reasons": []
             }
@@ -27449,18 +27449,18 @@
             0
           ],
           "assets": [],
-          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
           "issuerId": 1,
-          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
             {
               "moduleId": 1,
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
+              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
               "type": "cjs require",
               "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
               "loc": "1:27-86"
@@ -27473,11 +27473,11 @@
         },
         {
           "id": 1,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss",
+          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BallStrikeOut.scss",
           "index": 0,
           "index2": 1,
-          "size": 1418,
+          "size": 1544,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -27496,7 +27496,7 @@
           "usedExports": true,
           "providedExports": null,
           "depth": 0,
-          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".Diamond_container___1mVSf{margin-top:1.5em;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}.Diamond_leftSide___1-TwA{width:48%;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-direction:column;flex-direction:column}.Diamond_rightSide___t-Jij{width:33%;display:-ms-flexbox;display:flex;-ms-flex-align:end;align-items:flex-end}.Diamond_bsoContainer___rpcgc{margin-bottom:25%;text-align:left}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss\"],\"names\":[],\"mappings\":\"AAAA,2BAAW,iBAAiB,oBAAA,aAAa,yBAAA,4BAA4B,CAAC,0BAAU,UAAU,oBAAA,aAAa,sBAAA,mBAAmB,0BAAA,qBAAqB,CAAC,2BAAW,UAAU,oBAAA,aAAa,mBAAA,oBAAoB,CAAC,8BAAc,kBAAkB,eAAe,CAAC\",\"file\":\"Diamond.scss\",\"sourcesContent\":[\".container{margin-top:1.5em;display:flex;justify-content:space-around}.leftSide{width:48%;display:flex;align-items:center;flex-direction:column}.rightSide{width:33%;display:flex;align-items:flex-end}.bsoContainer{margin-bottom:25%;text-align:left}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"Diamond_container___1mVSf\",\n\t\"leftSide\": \"Diamond_leftSide___1-TwA\",\n\t\"rightSide\": \"Diamond_rightSide___t-Jij\",\n\t\"bsoContainer\": \"Diamond_bsoContainer___rpcgc\"\n};"
+          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".BallStrikeOut_label___2sxTK{font:1.1em/100% monospace;display:inline-block;width:1.25em;letter-spacing:-1px}.circle{width:11px;height:11px;display:inline-block;margin:0 2px;border-radius:50%;background:#d3d3d3}.circle:after{content:\\\"\\\";display:block;height:100%;width:100%;border-radius:50%;background:#ba0021;opacity:0;transition:opacity 1.22s}.BallStrikeOut_bso___3haML:first-child .circleFilled:after{background:#00ba21}.circleFilled:after{opacity:1}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss\"],\"names\":[],\"mappings\":\"AAAA,6BAAO,0BAA0B,qBAAqB,aAAa,mBAAmB,CAAC,QAAiB,WAAW,YAAY,qBAAqB,aAAa,kBAAkB,kBAAkB,CAAC,cAAwB,WAAW,cAAc,YAAY,WAAW,kBAAkB,mBAAmB,UAAU,wBAAwB,CAAC,2DAA+C,kBAAkB,CAAC,oBAA8B,SAAS,CAAC\",\"file\":\"BallStrikeOut.scss\",\"sourcesContent\":[\".label{font:1.1em/100% monospace;display:inline-block;width:1.25em;letter-spacing:-1px}:global(.circle){width:11px;height:11px;display:inline-block;margin:0 2px;border-radius:50%;background:#d3d3d3}:global(.circle::after){content:'';display:block;height:100%;width:100%;border-radius:50%;background:#ba0021;opacity:0;transition:opacity 1.22s}.bso:first-child :global(.circleFilled::after){background:#00ba21}:global(.circleFilled::after){opacity:1}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"label\": \"BallStrikeOut_label___2sxTK\",\n\t\"bso\": \"BallStrikeOut_bso___3haML\"\n};"
         }
       ],
       "filteredModules": 0,

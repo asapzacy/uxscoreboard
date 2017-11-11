@@ -13,7 +13,7 @@ export const nbaMatchupProps = (game, date) => ({
   awayTeam: game.visitor.nickname,
   homeTeam: game.home.nickname,
   location: `${game.city}, ${game.state}.`,
-  venue: game.arena === 'AT&amp;T Center' ? 'AT&T Center' : game.arena,
+  venue: game.arena.name,
   date
 })
 

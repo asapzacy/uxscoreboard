@@ -2,20 +2,20 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "c3bbe302c1184151a2a4",
+  "hash": "75fc8592d5e6c8c44283",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
-      "assets/js/bundle.c3bbe302c118.js",
-      "assets/css/bundle.c3bbe302c118.css",
-      "assets/js/bundle.c3bbe302c118.js.map",
-      "assets/css/bundle.c3bbe302c118.css.map"
+      "assets/js/bundle.75fc8592d5e6.js",
+      "assets/css/bundle.75fc8592d5e6.css",
+      "assets/js/bundle.75fc8592d5e6.js.map",
+      "assets/css/bundle.75fc8592d5e6.css.map"
     ]
   },
   "assets": [
     {
-      "name": "assets/js/bundle.c3bbe302c118.js",
-      "size": 601907,
+      "name": "assets/js/bundle.75fc8592d5e6.js",
+      "size": 601853,
       "chunks": [
         0
       ],
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "name": "assets/css/bundle.c3bbe302c118.css",
+      "name": "assets/css/bundle.75fc8592d5e6.css",
       "size": 14992,
       "chunks": [
         0
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "name": "assets/js/bundle.c3bbe302c118.js.map",
+      "name": "assets/js/bundle.75fc8592d5e6.js.map",
       "size": 147,
       "chunks": [
         0
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "name": "assets/css/bundle.c3bbe302c118.css.map",
+      "name": "assets/css/bundle.75fc8592d5e6.css.map",
       "size": 16049,
       "chunks": [
         0
@@ -54,14 +54,14 @@
       ]
     },
     {
-      "name": "assets/css/bundle.c3bbe302c118.css.gz",
-      "size": 4111,
+      "name": "assets/css/bundle.75fc8592d5e6.css.gz",
+      "size": 4113,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "assets/js/bundle.c3bbe302c118.js.gz",
-      "size": 181702,
+      "name": "assets/js/bundle.75fc8592d5e6.js.gz",
+      "size": 181745,
       "chunks": [],
       "chunkNames": []
     },
@@ -78,10 +78,10 @@
         0
       ],
       "assets": [
-        "assets/js/bundle.c3bbe302c118.js",
-        "assets/css/bundle.c3bbe302c118.css",
-        "assets/js/bundle.c3bbe302c118.js.map",
-        "assets/css/bundle.c3bbe302c118.css.map"
+        "assets/js/bundle.75fc8592d5e6.js",
+        "assets/css/bundle.75fc8592d5e6.css",
+        "assets/js/bundle.75fc8592d5e6.js.map",
+        "assets/css/bundle.75fc8592d5e6.css.map"
       ]
     }
   },
@@ -92,17 +92,17 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 1771836,
+      "size": 1771866,
       "names": [
         "main"
       ],
       "files": [
-        "assets/js/bundle.c3bbe302c118.js",
-        "assets/css/bundle.c3bbe302c118.css",
-        "assets/js/bundle.c3bbe302c118.js.map",
-        "assets/css/bundle.c3bbe302c118.css.map"
+        "assets/js/bundle.75fc8592d5e6.js",
+        "assets/css/bundle.75fc8592d5e6.css",
+        "assets/js/bundle.75fc8592d5e6.js.map",
+        "assets/css/bundle.75fc8592d5e6.css.map"
       ],
-      "hash": "eab3b695778b68a07324",
+      "hash": "cbc7a07305113f88be74",
       "parents": [],
       "origins": [
         {
@@ -818,9 +818,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react/lib/ReactComponent.js",
-      "issuerId": 89,
-      "issuerName": "./~/react/lib/ReactComponent.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponentTree.js",
+      "issuerId": 6,
+      "issuerName": "./~/react-dom/lib/ReactDOMComponentTree.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -1224,9 +1224,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
-      "issuerName": "./~/react/lib/React.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/ReactDOM.js",
+      "issuerId": 328,
+      "issuerName": "./~/react-dom/lib/ReactDOM.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -2948,9 +2948,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Link.js",
-      "issuerId": 140,
-      "issuerName": "./~/react-router/es/Link.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Router.js",
+      "issuerId": 407,
+      "issuerName": "./~/react-router/es/Router.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3102,9 +3102,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Link.js",
-      "issuerId": 140,
-      "issuerName": "./~/react-router/es/Link.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Router.js",
+      "issuerId": 407,
+      "issuerName": "./~/react-router/es/Router.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3821,9 +3821,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Link.js",
-      "issuerId": 140,
-      "issuerName": "./~/react-router/es/Link.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-router/es/Router.js",
+      "issuerId": 407,
+      "issuerName": "./~/react-router/es/Router.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5321,9 +5321,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 490,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 488,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5597,9 +5597,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react/lib/ReactComponent.js",
-      "issuerId": 89,
-      "issuerName": "./~/react/lib/ReactComponent.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/ReactMount.js",
+      "issuerId": 127,
+      "issuerName": "./~/react-dom/lib/ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6512,9 +6512,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/baseFlatten.js",
-      "issuerId": 454,
-      "issuerName": "./~/velocity-react/~/lodash/internal/baseFlatten.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/baseIsEqual.js",
+      "issuerId": 94,
+      "issuerName": "./~/velocity-react/~/lodash/internal/baseIsEqual.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7147,9 +7147,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/object/omit.js",
-      "issuerId": 163,
-      "issuerName": "./~/velocity-react/~/lodash/object/omit.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/node_modules/lodash/lang/isEqual.js",
+      "issuerId": 162,
+      "issuerName": "./~/velocity-react/~/lodash/lang/isEqual.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7357,9 +7357,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createHashHistory.js",
-      "issuerId": 303,
-      "issuerName": "./~/history/lib/createHashHistory.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
+      "issuerId": 302,
+      "issuerName": "./~/history/lib/createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7970,9 +7970,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createHashHistory.js",
-      "issuerId": 303,
-      "issuerName": "./~/history/lib/createHashHistory.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
+      "issuerId": 302,
+      "issuerName": "./~/history/lib/createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8025,9 +8025,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createHashHistory.js",
-      "issuerId": 303,
-      "issuerName": "./~/history/lib/createHashHistory.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/createBrowserHistory.js",
+      "issuerId": 302,
+      "issuerName": "./~/history/lib/createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9531,9 +9531,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 490,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 488,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9586,9 +9586,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 490,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 488,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10575,9 +10575,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/HashProtocol.js",
-      "issuerId": 300,
-      "issuerName": "./~/history/lib/HashProtocol.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/history/lib/BrowserProtocol.js",
+      "issuerId": 63,
+      "issuerName": "./~/history/lib/BrowserProtocol.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -12869,9 +12869,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 490,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 488,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -12915,9 +12915,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-transition-group.js",
-      "issuerId": 490,
-      "issuerName": "./~/velocity-react/velocity-transition-group.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/velocity-react/velocity-component.js",
+      "issuerId": 488,
+      "issuerName": "./~/velocity-react/velocity-component.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -14944,7 +14944,7 @@
       "name": "./app/components/Matchup/props.js",
       "index": 455,
       "index2": 448,
-      "size": 1008,
+      "size": 962,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -14981,7 +14981,7 @@
         "nhlMatchupProps"
       ],
       "depth": 7,
-      "source": "\n//  mlb matchup props --> Matchup component\nexport var mlbMatchupProps = function mlbMatchupProps(game, date) {\n  return {\n    awayTeam: game.teams.away.team.teamName,\n    homeTeam: game.teams.home.team.teamName,\n    location: game.teams.home.team.locationName,\n    venue: game.venue.name,\n    date: date\n  };\n};\n\n//  nba matchup props --> Matchup component\nexport var nbaMatchupProps = function nbaMatchupProps(game, date) {\n  return {\n    awayTeam: game.visitor.nickname,\n    homeTeam: game.home.nickname,\n    location: game.city + ', ' + game.state + '.',\n    venue: game.arena === 'AT&amp;T Center' ? 'AT&T Center' : game.arena,\n    date: date\n  };\n};\n\n//  nhl matchup props --> Matchup component\nexport var nhlMatchupProps = function nhlMatchupProps(game, date) {\n  return {\n    awayTeam: game.teams.away.team.teamName,\n    homeTeam: game.teams.home.team.teamName,\n    location: game.gameType === 'A' ? 'Los Angeles' : game.teams.home.team.venue.city,\n    venue: game.venue.name,\n    date: date\n  };\n};"
+      "source": "\n//  mlb matchup props --> Matchup component\nexport var mlbMatchupProps = function mlbMatchupProps(game, date) {\n  return {\n    awayTeam: game.teams.away.team.teamName,\n    homeTeam: game.teams.home.team.teamName,\n    location: game.teams.home.team.locationName,\n    venue: game.venue.name,\n    date: date\n  };\n};\n\n//  nba matchup props --> Matchup component\nexport var nbaMatchupProps = function nbaMatchupProps(game, date) {\n  return {\n    awayTeam: game.visitor.nickname,\n    homeTeam: game.home.nickname,\n    location: game.city + ', ' + game.state + '.',\n    venue: game.arena.name,\n    date: date\n  };\n};\n\n//  nhl matchup props --> Matchup component\nexport var nhlMatchupProps = function nhlMatchupProps(game, date) {\n  return {\n    awayTeam: game.teams.away.team.teamName,\n    homeTeam: game.teams.home.team.teamName,\n    location: game.gameType === 'A' ? 'Los Angeles' : game.teams.home.team.venue.city,\n    venue: game.venue.name,\n    date: date\n  };\n};"
     },
     {
       "id": 215,
@@ -15692,7 +15692,7 @@
       "name": "./app/containers/Details/DetailsContainer.js",
       "index": 520,
       "index2": 516,
-      "size": 3021,
+      "size": 3097,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -15725,7 +15725,7 @@
         "default"
       ],
       "depth": 4,
-      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { Details } from 'components';\n\nvar DetailsContainer = function (_Component) {\n  _inherits(DetailsContainer, _Component);\n\n  function DetailsContainer() {\n    _classCallCheck(this, DetailsContainer);\n\n    var _this = _possibleConstructorReturn(this, (DetailsContainer.__proto__ || Object.getPrototypeOf(DetailsContainer)).call(this));\n\n    _this.state = {\n      details: {},\n      panels: [],\n      activePanel: ''\n    };\n    _this.switchPanel = _this.switchPanel.bind(_this);\n    return _this;\n  }\n\n  _createClass(DetailsContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.setState({\n        panels: ['box score', 'team stats', 'leaders'],\n        activePanel: 'box score'\n      });\n    }\n  }, {\n    key: 'switchPanel',\n    value: function switchPanel(newPanel) {\n      this.setState({ activePanel: newPanel });\n    }\n  }, {\n    key: 'updateDetails',\n    value: function updateDetails(newDetails) {\n      this.setState({ details: newDetails });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(Details, _extends({ switchPanel: this.switchPanel }, this.state, this.props));\n    }\n  }]);\n\n  return DetailsContainer;\n}(Component);\n\nexport default DetailsContainer;"
+      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { Details } from 'components';\n\nvar DetailsContainer = function (_Component) {\n  _inherits(DetailsContainer, _Component);\n\n  function DetailsContainer() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, DetailsContainer);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DetailsContainer.__proto__ || Object.getPrototypeOf(DetailsContainer)).call.apply(_ref, [this].concat(args))), _this), _this.state = { panels: [], activePanel: '' }, _this.switchPanel = function (newPanel) {\n      _this.setState({ activePanel: newPanel });\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(DetailsContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var defaultPanels = ['box score', 'team stats', 'leaders'];\n      this.setState({\n        panels: defaultPanels,\n        activePanel: defaultPanels[0]\n      });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(Details, _extends({}, this.state, this.props, {\n        switchPanel: this.switchPanel\n      }));\n    }\n  }]);\n\n  return DetailsContainer;\n}(Component);\n\nexport default DetailsContainer;"
     },
     {
       "id": 233,
@@ -27190,118 +27190,6 @@
           "initial": true,
           "entry": true,
           "extraAsync": false,
-          "size": 3678,
-          "names": [],
-          "files": [
-            "extract-text-webpack-plugin-output-filename"
-          ],
-          "hash": "cfc5c88177ca0d34f5e2",
-          "parents": [],
-          "origins": [
-            {
-              "moduleId": 1,
-              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
-              "loc": "",
-              "reasons": []
-            }
-          ]
-        }
-      ],
-      "modules": [
-        {
-          "id": 0,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/lib/css-base.js",
-          "name": "./~/css-loader/lib/css-base.js",
-          "index": 1,
-          "index2": 0,
-          "size": 2260,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            0
-          ],
-          "assets": [],
-          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-          "issuerId": 1,
-          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": 1,
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
-              "type": "cjs require",
-              "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
-              "loc": "1:27-86"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "depth": 1,
-          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
-        },
-        {
-          "id": 1,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
-          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
-          "index": 0,
-          "index2": 1,
-          "size": 1418,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            0
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "depth": 0,
-          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".Diamond_container___1mVSf{margin-top:1.5em;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}.Diamond_leftSide___1-TwA{width:48%;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-direction:column;flex-direction:column}.Diamond_rightSide___t-Jij{width:33%;display:-ms-flexbox;display:flex;-ms-flex-align:end;align-items:flex-end}.Diamond_bsoContainer___rpcgc{margin-bottom:25%;text-align:left}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss\"],\"names\":[],\"mappings\":\"AAAA,2BAAW,iBAAiB,oBAAA,aAAa,yBAAA,4BAA4B,CAAC,0BAAU,UAAU,oBAAA,aAAa,sBAAA,mBAAmB,0BAAA,qBAAqB,CAAC,2BAAW,UAAU,oBAAA,aAAa,mBAAA,oBAAoB,CAAC,8BAAc,kBAAkB,eAAe,CAAC\",\"file\":\"Diamond.scss\",\"sourcesContent\":[\".container{margin-top:1.5em;display:flex;justify-content:space-around}.leftSide{width:48%;display:flex;align-items:center;flex-direction:column}.rightSide{width:33%;display:flex;align-items:flex-end}.bsoContainer{margin-bottom:25%;text-align:left}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"Diamond_container___1mVSf\",\n\t\"leftSide\": \"Diamond_leftSide___1-TwA\",\n\t\"rightSide\": \"Diamond_rightSide___t-Jij\",\n\t\"bsoContainer\": \"Diamond_bsoContainer___rpcgc\"\n};"
-        }
-      ],
-      "filteredModules": 0,
-      "children": [],
-      "name": "extract-text-webpack-plugin"
-    },
-    {
-      "errors": [],
-      "warnings": [],
-      "publicPath": "/",
-      "assetsByChunkName": {},
-      "assets": [],
-      "entrypoints": {
-        "undefined": {
-          "chunks": [
-            0
-          ],
-          "assets": [
-            "extract-text-webpack-plugin-output-filename"
-          ]
-        }
-      },
-      "chunks": [
-        {
-          "id": 0,
-          "rendered": true,
-          "initial": true,
-          "entry": true,
-          "extraAsync": false,
           "size": 3034,
           "names": [],
           "files": [
@@ -27414,6 +27302,118 @@
           "initial": true,
           "entry": true,
           "extraAsync": false,
+          "size": 3678,
+          "names": [],
+          "files": [
+            "extract-text-webpack-plugin-output-filename"
+          ],
+          "hash": "cfc5c88177ca0d34f5e2",
+          "parents": [],
+          "origins": [
+            {
+              "moduleId": 1,
+              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+              "loc": "",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/lib/css-base.js",
+          "name": "./~/css-loader/lib/css-base.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2260,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+          "issuerId": 1,
+          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+              "type": "cjs require",
+              "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
+              "loc": "1:27-86"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 1,
+          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss",
+          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/Diamond.scss",
+          "index": 0,
+          "index2": 1,
+          "size": 1418,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 0,
+          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".Diamond_container___1mVSf{margin-top:1.5em;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}.Diamond_leftSide___1-TwA{width:48%;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-direction:column;flex-direction:column}.Diamond_rightSide___t-Jij{width:33%;display:-ms-flexbox;display:flex;-ms-flex-align:end;align-items:flex-end}.Diamond_bsoContainer___rpcgc{margin-bottom:25%;text-align:left}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/Diamond.scss\"],\"names\":[],\"mappings\":\"AAAA,2BAAW,iBAAiB,oBAAA,aAAa,yBAAA,4BAA4B,CAAC,0BAAU,UAAU,oBAAA,aAAa,sBAAA,mBAAmB,0BAAA,qBAAqB,CAAC,2BAAW,UAAU,oBAAA,aAAa,mBAAA,oBAAoB,CAAC,8BAAc,kBAAkB,eAAe,CAAC\",\"file\":\"Diamond.scss\",\"sourcesContent\":[\".container{margin-top:1.5em;display:flex;justify-content:space-around}.leftSide{width:48%;display:flex;align-items:center;flex-direction:column}.rightSide{width:33%;display:flex;align-items:flex-end}.bsoContainer{margin-bottom:25%;text-align:left}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"Diamond_container___1mVSf\",\n\t\"leftSide\": \"Diamond_leftSide___1-TwA\",\n\t\"rightSide\": \"Diamond_rightSide___t-Jij\",\n\t\"bsoContainer\": \"Diamond_bsoContainer___rpcgc\"\n};"
+        }
+      ],
+      "filteredModules": 0,
+      "children": [],
+      "name": "extract-text-webpack-plugin"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/",
+      "assetsByChunkName": {},
+      "assets": [],
+      "entrypoints": {
+        "undefined": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "extract-text-webpack-plugin-output-filename"
+          ]
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "extraAsync": false,
           "size": 3804,
           "names": [],
           "files": [
@@ -27497,118 +27497,6 @@
           "providedExports": null,
           "depth": 0,
           "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".BallStrikeOut_label___2sxTK{font:1.1em/100% monospace;display:inline-block;width:1.25em;letter-spacing:-1px}.circle{width:11px;height:11px;display:inline-block;margin:0 2px;border-radius:50%;background:#d3d3d3}.circle:after{content:\\\"\\\";display:block;height:100%;width:100%;border-radius:50%;background:#ba0021;opacity:0;transition:opacity 1.22s}.BallStrikeOut_bso___3haML:first-child .circleFilled:after{background:#00ba21}.circleFilled:after{opacity:1}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BallStrikeOut.scss\"],\"names\":[],\"mappings\":\"AAAA,6BAAO,0BAA0B,qBAAqB,aAAa,mBAAmB,CAAC,QAAiB,WAAW,YAAY,qBAAqB,aAAa,kBAAkB,kBAAkB,CAAC,cAAwB,WAAW,cAAc,YAAY,WAAW,kBAAkB,mBAAmB,UAAU,wBAAwB,CAAC,2DAA+C,kBAAkB,CAAC,oBAA8B,SAAS,CAAC\",\"file\":\"BallStrikeOut.scss\",\"sourcesContent\":[\".label{font:1.1em/100% monospace;display:inline-block;width:1.25em;letter-spacing:-1px}:global(.circle){width:11px;height:11px;display:inline-block;margin:0 2px;border-radius:50%;background:#d3d3d3}:global(.circle::after){content:'';display:block;height:100%;width:100%;border-radius:50%;background:#ba0021;opacity:0;transition:opacity 1.22s}.bso:first-child :global(.circleFilled::after){background:#00ba21}:global(.circleFilled::after){opacity:1}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"label\": \"BallStrikeOut_label___2sxTK\",\n\t\"bso\": \"BallStrikeOut_bso___3haML\"\n};"
-        }
-      ],
-      "filteredModules": 0,
-      "children": [],
-      "name": "extract-text-webpack-plugin"
-    },
-    {
-      "errors": [],
-      "warnings": [],
-      "publicPath": "/",
-      "assetsByChunkName": {},
-      "assets": [],
-      "entrypoints": {
-        "undefined": {
-          "chunks": [
-            0
-          ],
-          "assets": [
-            "extract-text-webpack-plugin-output-filename"
-          ]
-        }
-      },
-      "chunks": [
-        {
-          "id": 0,
-          "rendered": true,
-          "initial": true,
-          "entry": true,
-          "extraAsync": false,
-          "size": 2793,
-          "names": [],
-          "files": [
-            "extract-text-webpack-plugin-output-filename"
-          ],
-          "hash": "a86b9028517398bd97de",
-          "parents": [],
-          "origins": [
-            {
-              "moduleId": 1,
-              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-              "loc": "",
-              "reasons": []
-            }
-          ]
-        }
-      ],
-      "modules": [
-        {
-          "id": 0,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/lib/css-base.js",
-          "name": "./~/css-loader/lib/css-base.js",
-          "index": 1,
-          "index2": 0,
-          "size": 2260,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            0
-          ],
-          "assets": [],
-          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-          "issuerId": 1,
-          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": 1,
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-              "type": "cjs require",
-              "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
-              "loc": "1:27-86"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "depth": 1,
-          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
-        },
-        {
-          "id": 1,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-          "index": 0,
-          "index2": 1,
-          "size": 533,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            0
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "depth": 0,
-          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".BaseballField_baseballField___EnPe5{padding:4%}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss\"],\"names\":[],\"mappings\":\"AAAA,qCAAe,UAAU,CAAC\",\"file\":\"BaseballField.scss\",\"sourcesContent\":[\".baseballField{padding:4%}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"baseballField\": \"BaseballField_baseballField___EnPe5\"\n};"
         }
       ],
       "filteredModules": 0,
@@ -27803,6 +27691,118 @@
           "providedExports": null,
           "depth": 0,
           "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\nexports.i(require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\"), undefined);\n\n// module\nexports.push([module.id, \"\", \"\", {\"version\":3,\"sources\":[],\"names\":[],\"mappings\":\"\",\"file\":\"Stats.scss\",\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"Stats_container___1zdq- \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"tableContainer\"] + \"\",\n\t\"table\": \"Stats_table___3FEFx \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"table\"] + \"\",\n\t\"head\": \"Stats_head___QUPNz \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"tableHead\"] + \"\",\n\t\"body\": \"Stats_body___3TcdL \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"tableBody\"] + \"\"\n};"
+        }
+      ],
+      "filteredModules": 0,
+      "children": [],
+      "name": "extract-text-webpack-plugin"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/",
+      "assetsByChunkName": {},
+      "assets": [],
+      "entrypoints": {
+        "undefined": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "extract-text-webpack-plugin-output-filename"
+          ]
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "extraAsync": false,
+          "size": 2793,
+          "names": [],
+          "files": [
+            "extract-text-webpack-plugin-output-filename"
+          ],
+          "hash": "a86b9028517398bd97de",
+          "parents": [],
+          "origins": [
+            {
+              "moduleId": 1,
+              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+              "loc": "",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/lib/css-base.js",
+          "name": "./~/css-loader/lib/css-base.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2260,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+          "issuerId": 1,
+          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+              "type": "cjs require",
+              "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
+              "loc": "1:27-86"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 1,
+          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+          "index": 0,
+          "index2": 1,
+          "size": 533,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 0,
+          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".BaseballField_baseballField___EnPe5{padding:4%}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss\"],\"names\":[],\"mappings\":\"AAAA,qCAAe,UAAU,CAAC\",\"file\":\"BaseballField.scss\",\"sourcesContent\":[\".baseballField{padding:4%}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"baseballField\": \"BaseballField_baseballField___EnPe5\"\n};"
         }
       ],
       "filteredModules": 0,

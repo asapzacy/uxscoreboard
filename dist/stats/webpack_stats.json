@@ -2,20 +2,20 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "75fc8592d5e6c8c44283",
+  "hash": "7740ea848057f3003cdb",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
-      "assets/js/bundle.75fc8592d5e6.js",
-      "assets/css/bundle.75fc8592d5e6.css",
-      "assets/js/bundle.75fc8592d5e6.js.map",
-      "assets/css/bundle.75fc8592d5e6.css.map"
+      "assets/js/bundle.7740ea848057.js",
+      "assets/css/bundle.7740ea848057.css",
+      "assets/js/bundle.7740ea848057.js.map",
+      "assets/css/bundle.7740ea848057.css.map"
     ]
   },
   "assets": [
     {
-      "name": "assets/js/bundle.75fc8592d5e6.js",
-      "size": 601853,
+      "name": "assets/js/bundle.7740ea848057.js",
+      "size": 601747,
       "chunks": [
         0
       ],
@@ -24,8 +24,8 @@
       ]
     },
     {
-      "name": "assets/css/bundle.75fc8592d5e6.css",
-      "size": 14992,
+      "name": "assets/css/bundle.7740ea848057.css",
+      "size": 15045,
       "chunks": [
         0
       ],
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "name": "assets/js/bundle.75fc8592d5e6.js.map",
+      "name": "assets/js/bundle.7740ea848057.js.map",
       "size": 147,
       "chunks": [
         0
@@ -44,8 +44,8 @@
       ]
     },
     {
-      "name": "assets/css/bundle.75fc8592d5e6.css.map",
-      "size": 16049,
+      "name": "assets/css/bundle.7740ea848057.css.map",
+      "size": 16102,
       "chunks": [
         0
       ],
@@ -54,14 +54,14 @@
       ]
     },
     {
-      "name": "assets/css/bundle.75fc8592d5e6.css.gz",
-      "size": 4113,
+      "name": "assets/css/bundle.7740ea848057.css.gz",
+      "size": 4125,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "assets/js/bundle.75fc8592d5e6.js.gz",
-      "size": 181745,
+      "name": "assets/js/bundle.7740ea848057.js.gz",
+      "size": 181702,
       "chunks": [],
       "chunkNames": []
     },
@@ -78,10 +78,10 @@
         0
       ],
       "assets": [
-        "assets/js/bundle.75fc8592d5e6.js",
-        "assets/css/bundle.75fc8592d5e6.css",
-        "assets/js/bundle.75fc8592d5e6.js.map",
-        "assets/css/bundle.75fc8592d5e6.css.map"
+        "assets/js/bundle.7740ea848057.js",
+        "assets/css/bundle.7740ea848057.css",
+        "assets/js/bundle.7740ea848057.js.map",
+        "assets/css/bundle.7740ea848057.css.map"
       ]
     }
   },
@@ -92,17 +92,17 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 1771866,
+      "size": 1771612,
       "names": [
         "main"
       ],
       "files": [
-        "assets/js/bundle.75fc8592d5e6.js",
-        "assets/css/bundle.75fc8592d5e6.css",
-        "assets/js/bundle.75fc8592d5e6.js.map",
-        "assets/css/bundle.75fc8592d5e6.css.map"
+        "assets/js/bundle.7740ea848057.js",
+        "assets/css/bundle.7740ea848057.css",
+        "assets/js/bundle.7740ea848057.js.map",
+        "assets/css/bundle.7740ea848057.css.map"
       ],
-      "hash": "cbc7a07305113f88be74",
+      "hash": "d78609c32963ea2f7396",
       "parents": [],
       "origins": [
         {
@@ -818,9 +818,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponentTree.js",
-      "issuerId": 6,
-      "issuerName": "./~/react-dom/lib/ReactDOMComponentTree.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react/lib/ReactComponent.js",
+      "issuerId": 89,
+      "issuerName": "./~/react/lib/ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -1224,9 +1224,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/ReactDOM.js",
-      "issuerId": 328,
-      "issuerName": "./~/react-dom/lib/ReactDOM.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react/lib/React.js",
+      "issuerId": 39,
+      "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5597,9 +5597,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react-dom/lib/ReactMount.js",
-      "issuerId": 127,
-      "issuerName": "./~/react-dom/lib/ReactMount.js",
+      "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/react/lib/ReactComponent.js",
+      "issuerId": 89,
+      "issuerName": "./~/react/lib/ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -15030,7 +15030,7 @@
       "name": "./app/components/NotFound/NotFound.js",
       "index": 292,
       "index2": 288,
-      "size": 449,
+      "size": 195,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -15063,7 +15063,7 @@
         "default"
       ],
       "depth": 6,
-      "source": "import React from 'react';\nimport s from './NotFound.scss';\n\nvar goBack = function goBack() {\n  return window.history.go(-1);\n};\n\nvar NotFound = function NotFound() {\n  return React.createElement(\n    'article',\n    { className: s.container },\n    React.createElement(\n      'span',\n      { onClick: function onClick() {\n          return window.history.go(-1);\n        } },\n      'Mr. Robot wouldn\\'t go back'\n    )\n  );\n};\n\nexport default NotFound;"
+      "source": "import React from 'react';\nimport s from './NotFound.scss';\n\nvar NotFound = function NotFound() {\n  return React.createElement('article', { className: s.container });\n};\n\nexport default NotFound;"
     },
     {
       "id": 217,
@@ -26342,7 +26342,7 @@
       "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/NotFound/NotFound.scss",
       "index": 294,
       "index2": 286,
-      "size": 665,
+      "size": 798,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -26359,7 +26359,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 8,
-      "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".NotFound_container___xUtEd{width:100%;background:url(\\\"/assets/img/404/mr_robot-404.jpg\\\") 50%/contain no-repeat}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/NotFound/NotFound.scss\"],\"names\":[],\"mappings\":\"AAAA,4BAAW,WAAW,wEAAkF,CAAC\",\"file\":\"NotFound.scss\",\"sourcesContent\":[\".container{width:100%;background:url(\\\"/assets/img/404/mr_robot-404.jpg\\\") center center/contain no-repeat}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"NotFound_container___xUtEd\"\n};"
+      "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".NotFound_container___xUtEd{width:100%;position:absolute;top:0;right:0;bottom:0;left:0;background:#000 url(\\\"/assets/img/404/mr_robot-404.jpg\\\") 50%/contain no-repeat}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/NotFound/NotFound.scss\"],\"names\":[],\"mappings\":\"AAAA,4BAAW,WAAW,kBAAkB,MAAM,QAAQ,SAAS,OAAO,6EAAuF,CAAC\",\"file\":\"NotFound.scss\",\"sourcesContent\":[\".container{width:100%;position:absolute;top:0;right:0;bottom:0;left:0;background:#000 url(\\\"/assets/img/404/mr_robot-404.jpg\\\") center center/contain no-repeat}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"NotFound_container___xUtEd\"\n};"
     },
     {
       "id": 518,
@@ -27526,6 +27526,118 @@
           "initial": true,
           "entry": true,
           "extraAsync": false,
+          "size": 2793,
+          "names": [],
+          "files": [
+            "extract-text-webpack-plugin-output-filename"
+          ],
+          "hash": "a86b9028517398bd97de",
+          "parents": [],
+          "origins": [
+            {
+              "moduleId": 1,
+              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+              "loc": "",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/lib/css-base.js",
+          "name": "./~/css-loader/lib/css-base.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2260,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+          "issuerId": 1,
+          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+              "type": "cjs require",
+              "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
+              "loc": "1:27-86"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 1,
+          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
+          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
+          "index": 0,
+          "index2": 1,
+          "size": 533,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 0,
+          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".BaseballField_baseballField___EnPe5{padding:4%}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss\"],\"names\":[],\"mappings\":\"AAAA,qCAAe,UAAU,CAAC\",\"file\":\"BaseballField.scss\",\"sourcesContent\":[\".baseballField{padding:4%}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"baseballField\": \"BaseballField_baseballField___EnPe5\"\n};"
+        }
+      ],
+      "filteredModules": 0,
+      "children": [],
+      "name": "extract-text-webpack-plugin"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/",
+      "assetsByChunkName": {},
+      "assets": [],
+      "entrypoints": {
+        "undefined": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "extract-text-webpack-plugin-output-filename"
+          ]
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "extraAsync": false,
           "size": 5856,
           "names": [],
           "files": [
@@ -27691,118 +27803,6 @@
           "providedExports": null,
           "depth": 0,
           "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\nexports.i(require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\"), undefined);\n\n// module\nexports.push([module.id, \"\", \"\", {\"version\":3,\"sources\":[],\"names\":[],\"mappings\":\"\",\"file\":\"Stats.scss\",\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"Stats_container___1zdq- \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"tableContainer\"] + \"\",\n\t\"table\": \"Stats_table___3FEFx \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"table\"] + \"\",\n\t\"head\": \"Stats_head___QUPNz \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"tableHead\"] + \"\",\n\t\"body\": \"Stats_body___3TcdL \" + require(\"-!../../../node_modules/css-loader/index.js?{\\\"sourceMap\\\":true,\\\"modules\\\":true,\\\"minimize\\\":true,\\\"localIdentName\\\":\\\"[name]_[local]___[hash:base64:5]\\\",\\\"importLoaders\\\":1}!../../../node_modules/postcss-loader/index.js!styles/_elements.scss\").locals[\"tableBody\"] + \"\"\n};"
-        }
-      ],
-      "filteredModules": 0,
-      "children": [],
-      "name": "extract-text-webpack-plugin"
-    },
-    {
-      "errors": [],
-      "warnings": [],
-      "publicPath": "/",
-      "assetsByChunkName": {},
-      "assets": [],
-      "entrypoints": {
-        "undefined": {
-          "chunks": [
-            0
-          ],
-          "assets": [
-            "extract-text-webpack-plugin-output-filename"
-          ]
-        }
-      },
-      "chunks": [
-        {
-          "id": 0,
-          "rendered": true,
-          "initial": true,
-          "entry": true,
-          "extraAsync": false,
-          "size": 2793,
-          "names": [],
-          "files": [
-            "extract-text-webpack-plugin-output-filename"
-          ],
-          "hash": "a86b9028517398bd97de",
-          "parents": [],
-          "origins": [
-            {
-              "moduleId": 1,
-              "module": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-              "loc": "",
-              "reasons": []
-            }
-          ]
-        }
-      ],
-      "modules": [
-        {
-          "id": 0,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/lib/css-base.js",
-          "name": "./~/css-loader/lib/css-base.js",
-          "index": 1,
-          "index2": 0,
-          "size": 2260,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            0
-          ],
-          "assets": [],
-          "issuer": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-          "issuerId": 1,
-          "issuerName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": 1,
-              "moduleIdentifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-              "module": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-              "moduleName": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-              "type": "cjs require",
-              "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
-              "loc": "1:27-86"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "depth": 1,
-          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
-        },
-        {
-          "id": 1,
-          "identifier": "/Users/asapzacy/code/uxscoreboard/node_modules/css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!/Users/asapzacy/code/uxscoreboard/node_modules/postcss-loader/index.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-loader/lib/loader.js!/Users/asapzacy/code/uxscoreboard/node_modules/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss",
-          "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/Diamond/BaseballField.scss",
-          "index": 0,
-          "index2": 1,
-          "size": 533,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            0
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "depth": 0,
-          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".BaseballField_baseballField___EnPe5{padding:4%}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/Diamond/BaseballField.scss\"],\"names\":[],\"mappings\":\"AAAA,qCAAe,UAAU,CAAC\",\"file\":\"BaseballField.scss\",\"sourcesContent\":[\".baseballField{padding:4%}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"baseballField\": \"BaseballField_baseballField___EnPe5\"\n};"
         }
       ],
       "filteredModules": 0,
@@ -29992,12 +29992,12 @@
           "initial": true,
           "entry": true,
           "extraAsync": false,
-          "size": 2925,
+          "size": 3058,
           "names": [],
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "d2fdc99785e283185241",
+          "hash": "7a2195de8f28ff8f9fda",
           "parents": [],
           "origins": [
             {
@@ -30055,7 +30055,7 @@
           "name": "./~/css-loader?{\"sourceMap\":true,\"modules\":true,\"minimize\":true,\"localIdentName\":\"[name]_[local]___[hash:base64:5]\",\"importLoaders\":1}!./~/postcss-loader!./~/sass-loader/lib/loader.js!./~/sass-resources-loader/lib/loader.js?{\"resources\":\"/Users/asapzacy/code/uxscoreboard/app/styles/_variables.scss\"}!./app/components/NotFound/NotFound.scss",
           "index": 0,
           "index2": 1,
-          "size": 665,
+          "size": 798,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -30074,7 +30074,7 @@
           "usedExports": true,
           "providedExports": null,
           "depth": 0,
-          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".NotFound_container___xUtEd{width:100%;background:url(\\\"/assets/img/404/mr_robot-404.jpg\\\") 50%/contain no-repeat}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/NotFound/NotFound.scss\"],\"names\":[],\"mappings\":\"AAAA,4BAAW,WAAW,wEAAkF,CAAC\",\"file\":\"NotFound.scss\",\"sourcesContent\":[\".container{width:100%;background:url(\\\"/assets/img/404/mr_robot-404.jpg\\\") center center/contain no-repeat}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"NotFound_container___xUtEd\"\n};"
+          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".NotFound_container___xUtEd{width:100%;position:absolute;top:0;right:0;bottom:0;left:0;background:#000 url(\\\"/assets/img/404/mr_robot-404.jpg\\\") 50%/contain no-repeat}\", \"\", {\"version\":3,\"sources\":[\"/Users/asapzacy/code/uxscoreboard/app/components/NotFound/NotFound.scss\"],\"names\":[],\"mappings\":\"AAAA,4BAAW,WAAW,kBAAkB,MAAM,QAAQ,SAAS,OAAO,6EAAuF,CAAC\",\"file\":\"NotFound.scss\",\"sourcesContent\":[\".container{width:100%;position:absolute;top:0;right:0;bottom:0;left:0;background:#000 url(\\\"/assets/img/404/mr_robot-404.jpg\\\") center center/contain no-repeat}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\n\t\"container\": \"NotFound_container___xUtEd\"\n};"
         }
       ],
       "filteredModules": 0,

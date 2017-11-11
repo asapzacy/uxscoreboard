@@ -1,6 +1,8 @@
 
 /* -------  NotFound  ------- */
 .container {
-  width:100%;
-  background:url('/assets/img/404/mr_robot-404.jpg') center center / contain no-repeat;
+  width: 100%;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: $real_black url('/assets/img/404/mr_robot-404.jpg') center center / contain no-repeat;
 }

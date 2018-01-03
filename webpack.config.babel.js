@@ -106,9 +106,34 @@ const sharedPlugins = [
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 ]
 
+const sharedCssLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      sourceMap: true,
+      modules: true,
+      minimize: true,
+      localIdentName: '[name]_[local]___[hash:base64:5]',
+      importLoaders: 1
+    }
+  },
+  { loader: 'postcss-loader' },
+  { loader: 'sass-loader' },
+  {
+    loader: 'sass-resources-loader',
+    options: {
+      resources: [
+        path.resolve(__dirname, './app/styles/_variables.scss'),
+        // path.resolve(__dirname, './app/styles/_mixins.scss')
+      ]
+    }
+  }
+]
+
 const base = {
   output: {
     path: PATHS.build,
+    // filename: isProduction ? 'assets/js/bundle.[hash:12].min.js' : 'assets/js/bundle.[hash:12].js',
     filename: 'assets/js/bundle.[hash:12].js',
     publicPath: '/'
   },
@@ -123,50 +148,11 @@ const base = {
         test: /\.(scss)|(css)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-                modules: true,
-                minimize: true,
-                localIdentName: '[name]_[local]___[hash:base64:5]',
-                importLoaders: 1
-              }
-            },
-            { loader: 'postcss-loader' },
-            { loader: 'sass-loader' },
-            {
-              loader: 'sass-resources-loader',
-              options: {
-                resources: path.resolve(__dirname, './app/styles/_variables.scss')
-              }
-            }
-          ]
+          use: sharedCssLoaders
         })
       } : {
         test: /\.(scss)|(css)$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              modules: true,
-              minimize: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              importLoaders: 1
-            }
-          },
-          { loader: 'postcss-loader' },
-          { loader: 'sass-loader' },
-          {
-            loader: 'sass-resources-loader',
-            options: {
-              resources: path.resolve(__dirname, './app/styles/_variables.scss')
-            }
-          }
-        ]
+        use: [ { loader: 'style-loader' }, ...sharedCssLoaders ]
       }
     ]
   },
@@ -188,7 +174,7 @@ const developmentConfig = {
     'webpack/hot/only-dev-server',
     PATHS.app
   ],
-  // devtool: 'cheap-module-inline-source-map',
+  devtool: 'cheap-module-inline-source-map',
   devServer: {
     contentBase: PATHS.build,
     publicPath: '/',

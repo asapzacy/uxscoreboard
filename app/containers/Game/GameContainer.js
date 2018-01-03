@@ -21,9 +21,9 @@ class GameContainer extends Component {
     }))
   }
   scaleGame = () => {
-    this.setState({
-      isHovered: !this.state.isiOS && !this.state.isHovered
-    })
+    this.setState(prevState => ({
+      isHovered: !this.state.isiOS && !prevState.isHovered
+    }))
   }
   logoHasLoaded = () => {
     this.setState({ hasLoaded: true })

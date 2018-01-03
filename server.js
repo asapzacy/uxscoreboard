@@ -46,6 +46,14 @@ app.get('/api/nba/scores/:dt', (req, res) => {
     .catch(error => res.send(error.status))
 })
 
+app.get('/api/nba/scores/:dt/details/:id', (req, res) => {
+  const { dt, id } = req.params
+  const url = `http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
+  return axios.get(url)
+    .then(scores => res.send(scores.data))
+    .catch(error => res.send(error.status))
+})
+
 app.get('/api/nfl/scores/week/:week', (req, res) => {
   const { week } = req.params
   const url = `https://www.nfl.com/ajax/scorestrip?season=2017&seasonType=REG&week=${week}`

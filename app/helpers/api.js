@@ -18,8 +18,8 @@ export const getNbaScores = (dt) => {
 }
 
 export const getNbaGameDetails = (dt, id) => {
-  const url = `${CORS}http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
-  return axios.get(url)
+  const api = `/api/nba/scores/${dt}/details/${id}`
+  return axios.get(api)
     .then(details => details.data)
     .catch(error => error.status)
 }

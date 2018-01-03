@@ -11,12 +11,12 @@ export default function Scoreboard({ bgImg, scores, date, today, league, seasonS
   let games
   if (league === 'mlb') {
     games = !scores.length || seasonState.isPreseason
-      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'sorry, there was an error :('} />
+      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'woops! something went wrong.'} />
       : scores.map(item => <GameContainer game={item} date={date} league={league} lastUpdated={lastUpdated} key={item.gamePk} />)
   }
   if (league === 'nba') {
     games = !scores.length
-      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'sorry, there was an error :('} />
+      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'woops! something went wrong.'} />
       : scores.map((el, i) => {
           getNbaGameDetails(date, el.id)
             .then(details => {
@@ -28,12 +28,12 @@ export default function Scoreboard({ bgImg, scores, date, today, league, seasonS
   }
   if (league === 'nhl') {
     games = !scores.dates.length
-      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'sorry, there was an error :('} />
+      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'woops! something went wrong.'} />
       : scores.dates[0].games.map(item => <GameContainer game={item} date={date} league={league} lastUpdated={lastUpdated} key={item.gamePk} />)
   }
   if (league === 'nfl') {
     games = !scores.length
-      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'sorry, there was an error :('} />
+      ? <NoGames text={'no games today'} /> : isError ? <NoGames text={'woops! something went wrong.'} />
       : scores.map(el => <GameContainer game={el} date={date} league={league} lastUpdated={lastUpdated} key={el.eid} />)
   }
   return (

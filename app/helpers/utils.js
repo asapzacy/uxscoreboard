@@ -30,6 +30,8 @@ export const shortenTeamName = name => {
       return 'T-Wolves'
     case 'Trail Blazers':
       return 'Blazers'
+    case 'Golden Knights':
+      return 'Knights'
     default:
       return name
   }

@@ -137,6 +137,7 @@ export const team_colors = {
     tbl: '#002868',
     tor: '#002868',
     van: '#c4ced3',
+    vgk: '#333F42',
     wpg: '#041e41',
     wsh: '#cf0a2c',
 

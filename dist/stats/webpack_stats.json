@@ -2,20 +2,20 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "53285230583f3cd0a992",
+  "hash": "08ef9dd6a8ca582b49e1",
   "publicPath": "/",
   "assetsByChunkName": {
     "main": [
-      "assets/js/bundle.53285230583f.js",
-      "assets/css/bundle.53285230583f.css",
-      "assets/js/bundle.53285230583f.js.map",
-      "assets/css/bundle.53285230583f.css.map"
+      "assets/js/bundle.08ef9dd6a8ca.js",
+      "assets/css/bundle.08ef9dd6a8ca.css",
+      "assets/js/bundle.08ef9dd6a8ca.js.map",
+      "assets/css/bundle.08ef9dd6a8ca.css.map"
     ]
   },
   "assets": [
     {
-      "name": "assets/js/bundle.53285230583f.js",
-      "size": 601800,
+      "name": "assets/js/bundle.08ef9dd6a8ca.js",
+      "size": 601674,
       "chunks": [
         0
       ],
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "name": "assets/css/bundle.53285230583f.css",
+      "name": "assets/css/bundle.08ef9dd6a8ca.css",
       "size": 15045,
       "chunks": [
         0
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "name": "assets/js/bundle.53285230583f.js.map",
+      "name": "assets/js/bundle.08ef9dd6a8ca.js.map",
       "size": 147,
       "chunks": [
         0
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "name": "assets/css/bundle.53285230583f.css.map",
+      "name": "assets/css/bundle.08ef9dd6a8ca.css.map",
       "size": 16102,
       "chunks": [
         0
@@ -54,14 +54,14 @@
       ]
     },
     {
-      "name": "assets/css/bundle.53285230583f.css.gz",
-      "size": 4125,
+      "name": "assets/css/bundle.08ef9dd6a8ca.css.gz",
+      "size": 4124,
       "chunks": [],
       "chunkNames": []
     },
     {
-      "name": "assets/js/bundle.53285230583f.js.gz",
-      "size": 181737,
+      "name": "assets/js/bundle.08ef9dd6a8ca.js.gz",
+      "size": 181640,
       "chunks": [],
       "chunkNames": []
     },
@@ -78,10 +78,10 @@
         0
       ],
       "assets": [
-        "assets/js/bundle.53285230583f.js",
-        "assets/css/bundle.53285230583f.css",
-        "assets/js/bundle.53285230583f.js.map",
-        "assets/css/bundle.53285230583f.css.map"
+        "assets/js/bundle.08ef9dd6a8ca.js",
+        "assets/css/bundle.08ef9dd6a8ca.css",
+        "assets/js/bundle.08ef9dd6a8ca.js.map",
+        "assets/css/bundle.08ef9dd6a8ca.css.map"
       ]
     }
   },
@@ -92,17 +92,17 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 1771686,
+      "size": 1771675,
       "names": [
         "main"
       ],
       "files": [
-        "assets/js/bundle.53285230583f.js",
-        "assets/css/bundle.53285230583f.css",
-        "assets/js/bundle.53285230583f.js.map",
-        "assets/css/bundle.53285230583f.css.map"
+        "assets/js/bundle.08ef9dd6a8ca.js",
+        "assets/css/bundle.08ef9dd6a8ca.css",
+        "assets/js/bundle.08ef9dd6a8ca.js.map",
+        "assets/css/bundle.08ef9dd6a8ca.css.map"
       ],
-      "hash": "cca89d4081f3c4ed0c44",
+      "hash": "9b204906d913ef154dcd",
       "parents": [],
       "origins": [
         {
@@ -853,7 +853,7 @@
           "loc": "16:16-45"
         },
         {
-          "moduleId": 35,
+          "moduleId": 34,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMProperty.js",
           "module": "./~/react-dom/lib/DOMProperty.js",
           "moduleName": "./~/react-dom/lib/DOMProperty.js",
@@ -1225,7 +1225,7 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
@@ -1241,7 +1241,7 @@
           "loc": "18:14-41"
         },
         {
-          "moduleId": 36,
+          "moduleId": 35,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactReconciler.js",
           "module": "./~/react-dom/lib/ReactReconciler.js",
           "moduleName": "./~/react-dom/lib/ReactReconciler.js",
@@ -1250,7 +1250,7 @@
           "loc": "16:14-41"
         },
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -1259,7 +1259,7 @@
           "loc": "25:14-41"
         },
         {
-          "moduleId": 40,
+          "moduleId": 39,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
           "module": "./~/react/lib/ReactElement.js",
           "moduleName": "./~/react/lib/ReactElement.js",
@@ -1602,7 +1602,7 @@
           "loc": "14:21-52"
         },
         {
-          "moduleId": 35,
+          "moduleId": 34,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMProperty.js",
           "module": "./~/react-dom/lib/DOMProperty.js",
           "moduleName": "./~/react-dom/lib/DOMProperty.js",
@@ -1857,7 +1857,7 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
@@ -1882,7 +1882,7 @@
           "loc": "13:14-38"
         },
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -1891,7 +1891,7 @@
           "loc": "13:14-38"
         },
         {
-          "moduleId": 40,
+          "moduleId": 39,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
           "module": "./~/react/lib/ReactElement.js",
           "moduleName": "./~/react/lib/ReactElement.js",
@@ -2956,7 +2956,7 @@
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 33,
+          "moduleId": 32,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/history/lib/LocationUtils.js",
           "module": "./~/history/lib/LocationUtils.js",
           "moduleName": "./~/history/lib/LocationUtils.js",
@@ -2965,7 +2965,7 @@
           "loc": "10:17-37"
         },
         {
-          "moduleId": 37,
+          "moduleId": 36,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/PatternUtils.js",
           "module": "./~/react-router/es/PatternUtils.js",
           "moduleName": "./~/react-router/es/PatternUtils.js",
@@ -3545,7 +3545,7 @@
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 31,
+          "moduleId": 44,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/helpers/api.js",
           "module": "./app/helpers/api.js",
           "moduleName": "./app/helpers/api.js",
@@ -3694,15 +3694,15 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactReconciler.js",
-      "issuerId": 36,
-      "issuerName": "./~/react-dom/lib/ReactReconciler.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactMount.js",
+      "issuerId": 127,
+      "issuerName": "./~/react-dom/lib/ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 36,
+          "moduleId": 35,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactReconciler.js",
           "module": "./~/react-dom/lib/ReactReconciler.js",
           "moduleName": "./~/react-dom/lib/ReactReconciler.js",
@@ -4285,14 +4285,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
-      "issuerId": 40,
+      "issuerId": 39,
       "issuerName": "./~/react/lib/ReactElement.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 40,
+          "moduleId": 39,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
           "module": "./~/react/lib/ReactElement.js",
           "moduleName": "./~/react/lib/ReactElement.js",
@@ -4612,7 +4612,7 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/routerWarning.js",
-      "issuerId": 38,
+      "issuerId": 37,
       "issuerName": "./~/react-router/es/routerWarning.js",
       "failed": false,
       "errors": 0,
@@ -4628,7 +4628,7 @@
           "loc": "6:15-33"
         },
         {
-          "moduleId": 33,
+          "moduleId": 32,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/history/lib/LocationUtils.js",
           "module": "./~/history/lib/LocationUtils.js",
           "moduleName": "./~/history/lib/LocationUtils.js",
@@ -4637,7 +4637,7 @@
           "loc": "14:15-33"
         },
         {
-          "moduleId": 38,
+          "moduleId": 37,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/routerWarning.js",
           "module": "./~/react-router/es/routerWarning.js",
           "moduleName": "./~/react-router/es/routerWarning.js",
@@ -4728,7 +4728,7 @@
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 33,
+          "moduleId": 32,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/history/lib/LocationUtils.js",
           "module": "./~/history/lib/LocationUtils.js",
           "moduleName": "./~/history/lib/LocationUtils.js",
@@ -5113,9 +5113,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-icons/lib/io/social-twitter.js",
-      "issuerId": 402,
-      "issuerName": "./~/react-icons/lib/io/social-twitter.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-icons/lib/io/social-twitter-outline.js",
+      "issuerId": 401,
+      "issuerName": "./~/react-icons/lib/io/social-twitter-outline.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5490,100 +5490,6 @@
     },
     {
       "id": 31,
-      "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/helpers/api.js",
-      "name": "./app/helpers/api.js",
-      "index": 308,
-      "index2": 331,
-      "size": 1764,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        0
-      ],
-      "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Mlb/MlbContainer.js",
-      "issuerId": 237,
-      "issuerName": "./app/containers/Mlb/MlbContainer.js",
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "reasons": [
-        {
-          "moduleId": 219,
-          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
-          "module": "./app/components/Scoreboard/Scoreboard.js",
-          "moduleName": "./app/components/Scoreboard/Scoreboard.js",
-          "type": "harmony import",
-          "userRequest": "helpers/api",
-          "loc": "6:0-48"
-        },
-        {
-          "moduleId": 233,
-          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Game/GameContainer.js",
-          "module": "./app/containers/Game/GameContainer.js",
-          "moduleName": "./app/containers/Game/GameContainer.js",
-          "type": "harmony import",
-          "userRequest": "helpers/api",
-          "loc": "13:0-48"
-        },
-        {
-          "moduleId": 237,
-          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Mlb/MlbContainer.js",
-          "module": "./app/containers/Mlb/MlbContainer.js",
-          "moduleName": "./app/containers/Mlb/MlbContainer.js",
-          "type": "harmony import",
-          "userRequest": "helpers/api",
-          "loc": "14:0-43"
-        },
-        {
-          "moduleId": 238,
-          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Nba/NbaContainer.js",
-          "module": "./app/containers/Nba/NbaContainer.js",
-          "moduleName": "./app/containers/Nba/NbaContainer.js",
-          "type": "harmony import",
-          "userRequest": "helpers/api",
-          "loc": "14:0-43"
-        },
-        {
-          "moduleId": 239,
-          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Nfl/NflContainer.js",
-          "module": "./app/containers/Nfl/NflContainer.js",
-          "moduleName": "./app/containers/Nfl/NflContainer.js",
-          "type": "harmony import",
-          "userRequest": "helpers/api",
-          "loc": "14:0-43"
-        },
-        {
-          "moduleId": 240,
-          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Nhl/NhlContainer.js",
-          "module": "./app/containers/Nhl/NhlContainer.js",
-          "moduleName": "./app/containers/Nhl/NhlContainer.js",
-          "type": "harmony import",
-          "userRequest": "helpers/api",
-          "loc": "14:0-43"
-        }
-      ],
-      "usedExports": [
-        "getNhlScores",
-        "getNbaGameDetails",
-        "getNflScores",
-        "getNbaScores",
-        "getMlbScores"
-      ],
-      "providedExports": [
-        "getMlbScores",
-        "getNbaScores",
-        "getNbaGameDetails",
-        "getNflScores",
-        "getNhlScores"
-      ],
-      "depth": 5,
-      "source": "import axios from 'axios';\nimport { dateObject } from './utils';\n\nvar CORS = 'https://cors-anywhere.herokuapp.com/';\n\nexport var getMlbScores = function getMlbScores(dt) {\n  var api = '/api/mlb/scores/' + dt;\n  return axios.get(api).then(function (scores) {\n    return scores.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\nexport var getNbaScores = function getNbaScores(dt) {\n  var api = '/api/nba/scores/' + dt;\n  return axios.get(api).then(function (scores) {\n    return scores.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\nexport var getNbaGameDetails = function getNbaGameDetails(dt, id) {\n  var url = CORS + 'http://data.nba.com/data/10s/json/cms/noseason/game/' + dt + '/' + id + '/boxscore.json';\n  return axios.get(url).then(function (details) {\n    return details.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\nexport var getNflScores = function getNflScores(week) {\n  var api = '/api/nfl/scores/week/' + week;\n  return axios.get(api).then(function (scores) {\n    return scores.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\n// axios request - nhl scores\nexport var getNhlScores = function getNhlScores(dt) {\n  var _dateObject = dateObject(dt),\n      yyyy = _dateObject.yyyy,\n      mm = _dateObject.mm,\n      dd = _dateObject.dd;\n\n  var api = 'https://statsapi.web.nhl.com/api/v1/schedule?startDate=' + yyyy + '-' + mm + '-' + dd + '&endDate=' + yyyy + '-' + mm + '-' + dd + '&expand=schedule.teams,schedule.linescore,schedule.scoringplays,schedule.game.seriesSummary,seriesSummary.series';\n  return axios.get(api).then(function (currentScores) {\n    return currentScores.data;\n  }).catch(function (currentScores) {\n    return currentScores.status;\n  });\n};"
-    },
-    {
-      "id": 32,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/fbjs/lib/emptyObject.js",
       "name": "./~/fbjs/lib/emptyObject.js",
       "index": 20,
@@ -5597,9 +5503,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactPureComponent.js",
-      "issuerId": 428,
-      "issuerName": "./~/react/lib/ReactPureComponent.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactComponent.js",
+      "issuerId": 89,
+      "issuerName": "./~/react/lib/ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5665,7 +5571,7 @@
       "source": "/**\n * Copyright (c) 2013-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under the BSD-style license found in the\n * LICENSE file in the root directory of this source tree. An additional grant\n * of patent rights can be found in the PATENTS file in the same directory.\n *\n */\n\n'use strict';\n\nvar emptyObject = {};\n\nif (process.env.NODE_ENV !== 'production') {\n  Object.freeze(emptyObject);\n}\n\nmodule.exports = emptyObject;"
     },
     {
-      "id": 33,
+      "id": 32,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/history/lib/LocationUtils.js",
       "name": "./~/history/lib/LocationUtils.js",
       "index": 223,
@@ -5747,7 +5653,7 @@
       "source": "'use strict';\n\nexports.__esModule = true;\nexports.locationsAreEqual = exports.statesAreEqual = exports.createLocation = exports.createQuery = undefined;\n\nvar _typeof = typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; };\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _invariant = require('invariant');\n\nvar _invariant2 = _interopRequireDefault(_invariant);\n\nvar _warning = require('warning');\n\nvar _warning2 = _interopRequireDefault(_warning);\n\nvar _PathUtils = require('./PathUtils');\n\nvar _Actions = require('./Actions');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar createQuery = exports.createQuery = function createQuery(props) {\n  return _extends(Object.create(null), props);\n};\n\nvar createLocation = exports.createLocation = function createLocation() {\n  var input = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '/';\n  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Actions.POP;\n  var key = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;\n\n  var object = typeof input === 'string' ? (0, _PathUtils.parsePath)(input) : input;\n\n  process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(!object.path, 'Location descriptor objects should have a `pathname`, not a `path`.') : void 0;\n\n  var pathname = object.pathname || '/';\n  var search = object.search || '';\n  var hash = object.hash || '';\n  var state = object.state;\n\n  return {\n    pathname: pathname,\n    search: search,\n    hash: hash,\n    state: state,\n    action: action,\n    key: key\n  };\n};\n\nvar isDate = function isDate(object) {\n  return Object.prototype.toString.call(object) === '[object Date]';\n};\n\nvar statesAreEqual = exports.statesAreEqual = function statesAreEqual(a, b) {\n  if (a === b) return true;\n\n  var typeofA = typeof a === 'undefined' ? 'undefined' : _typeof(a);\n  var typeofB = typeof b === 'undefined' ? 'undefined' : _typeof(b);\n\n  if (typeofA !== typeofB) return false;\n\n  !(typeofA !== 'function') ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store functions in location state') : (0, _invariant2.default)(false) : void 0;\n\n  // Not the same object, but same type.\n  if (typeofA === 'object') {\n    !!(isDate(a) && isDate(b)) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store Date objects in location state') : (0, _invariant2.default)(false) : void 0;\n\n    if (!Array.isArray(a)) {\n      var keysofA = Object.keys(a);\n      var keysofB = Object.keys(b);\n      return keysofA.length === keysofB.length && keysofA.every(function (key) {\n        return statesAreEqual(a[key], b[key]);\n      });\n    }\n\n    return Array.isArray(b) && a.length === b.length && a.every(function (item, index) {\n      return statesAreEqual(item, b[index]);\n    });\n  }\n\n  // All other serializable types (string, number, boolean)\n  // should be strict equal.\n  return false;\n};\n\nvar locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {\n  return a.key === b.key &&\n  // a.action === b.action && // Different action !== location change.\n  a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && statesAreEqual(a.state, b.state);\n};"
     },
     {
-      "id": 34,
+      "id": 33,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
       "name": "./~/react-dom/lib/DOMLazyTree.js",
       "index": 84,
@@ -5829,7 +5735,7 @@
       "source": "/**\n * Copyright 2015-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under the BSD-style license found in the\n * LICENSE file in the root directory of this source tree. An additional grant\n * of patent rights can be found in the PATENTS file in the same directory.\n *\n */\n\n'use strict';\n\nvar DOMNamespaces = require('./DOMNamespaces');\nvar setInnerHTML = require('./setInnerHTML');\n\nvar createMicrosoftUnsafeLocalFunction = require('./createMicrosoftUnsafeLocalFunction');\nvar setTextContent = require('./setTextContent');\n\nvar ELEMENT_NODE_TYPE = 1;\nvar DOCUMENT_FRAGMENT_NODE_TYPE = 11;\n\n/**\n * In IE (8-11) and Edge, appending nodes with no children is dramatically\n * faster than appending a full subtree, so we essentially queue up the\n * .appendChild calls here and apply them so each node is added to its parent\n * before any children are added.\n *\n * In other browsers, doing so is slower or neutral compared to the other order\n * (in Firefox, twice as slow) so we only do this inversion in IE.\n *\n * See https://github.com/spicyj/innerhtml-vs-createelement-vs-clonenode.\n */\nvar enableLazy = typeof document !== 'undefined' && typeof document.documentMode === 'number' || typeof navigator !== 'undefined' && typeof navigator.userAgent === 'string' && /\\bEdge\\/\\d/.test(navigator.userAgent);\n\nfunction insertTreeChildren(tree) {\n  if (!enableLazy) {\n    return;\n  }\n  var node = tree.node;\n  var children = tree.children;\n  if (children.length) {\n    for (var i = 0; i < children.length; i++) {\n      insertTreeBefore(node, children[i], null);\n    }\n  } else if (tree.html != null) {\n    setInnerHTML(node, tree.html);\n  } else if (tree.text != null) {\n    setTextContent(node, tree.text);\n  }\n}\n\nvar insertTreeBefore = createMicrosoftUnsafeLocalFunction(function (parentNode, tree, referenceNode) {\n  // DocumentFragments aren't actually part of the DOM after insertion so\n  // appending children won't update the DOM. We need to ensure the fragment\n  // is properly populated first, breaking out of our lazy approach for just\n  // this level. Also, some <object> plugins (like Flash Player) will read\n  // <param> nodes immediately upon insertion into the DOM, so <object>\n  // must also be populated prior to insertion into the DOM.\n  if (tree.node.nodeType === DOCUMENT_FRAGMENT_NODE_TYPE || tree.node.nodeType === ELEMENT_NODE_TYPE && tree.node.nodeName.toLowerCase() === 'object' && (tree.node.namespaceURI == null || tree.node.namespaceURI === DOMNamespaces.html)) {\n    insertTreeChildren(tree);\n    parentNode.insertBefore(tree.node, referenceNode);\n  } else {\n    parentNode.insertBefore(tree.node, referenceNode);\n    insertTreeChildren(tree);\n  }\n});\n\nfunction replaceChildWithTree(oldNode, newTree) {\n  oldNode.parentNode.replaceChild(newTree.node, oldNode);\n  insertTreeChildren(newTree);\n}\n\nfunction queueChild(parentTree, childTree) {\n  if (enableLazy) {\n    parentTree.children.push(childTree);\n  } else {\n    parentTree.node.appendChild(childTree.node);\n  }\n}\n\nfunction queueHTML(tree, html) {\n  if (enableLazy) {\n    tree.html = html;\n  } else {\n    setInnerHTML(tree.node, html);\n  }\n}\n\nfunction queueText(tree, text) {\n  if (enableLazy) {\n    tree.text = text;\n  } else {\n    setTextContent(tree.node, text);\n  }\n}\n\nfunction toString() {\n  return this.node.nodeName;\n}\n\nfunction DOMLazyTree(node) {\n  return {\n    node: node,\n    children: [],\n    html: null,\n    text: null,\n    toString: toString\n  };\n}\n\nDOMLazyTree.insertTreeBefore = insertTreeBefore;\nDOMLazyTree.replaceChildWithTree = replaceChildWithTree;\nDOMLazyTree.queueChild = queueChild;\nDOMLazyTree.queueHTML = queueHTML;\nDOMLazyTree.queueText = queueText;\n\nmodule.exports = DOMLazyTree;"
     },
     {
-      "id": 35,
+      "id": 34,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMProperty.js",
       "name": "./~/react-dom/lib/DOMProperty.js",
       "index": 36,
@@ -5911,7 +5817,7 @@
       "source": "/**\n * Copyright 2013-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under the BSD-style license found in the\n * LICENSE file in the root directory of this source tree. An additional grant\n * of patent rights can be found in the PATENTS file in the same directory.\n *\n */\n\n'use strict';\n\nvar _prodInvariant = require('./reactProdInvariant');\n\nvar invariant = require('fbjs/lib/invariant');\n\nfunction checkMask(value, bitmask) {\n  return (value & bitmask) === bitmask;\n}\n\nvar DOMPropertyInjection = {\n  /**\n   * Mapping from normalized, camelcased property names to a configuration that\n   * specifies how the associated DOM property should be accessed or rendered.\n   */\n  MUST_USE_PROPERTY: 0x1,\n  HAS_BOOLEAN_VALUE: 0x4,\n  HAS_NUMERIC_VALUE: 0x8,\n  HAS_POSITIVE_NUMERIC_VALUE: 0x10 | 0x8,\n  HAS_OVERLOADED_BOOLEAN_VALUE: 0x20,\n\n  /**\n   * Inject some specialized knowledge about the DOM. This takes a config object\n   * with the following properties:\n   *\n   * isCustomAttribute: function that given an attribute name will return true\n   * if it can be inserted into the DOM verbatim. Useful for data-* or aria-*\n   * attributes where it's impossible to enumerate all of the possible\n   * attribute names,\n   *\n   * Properties: object mapping DOM property name to one of the\n   * DOMPropertyInjection constants or null. If your attribute isn't in here,\n   * it won't get written to the DOM.\n   *\n   * DOMAttributeNames: object mapping React attribute name to the DOM\n   * attribute name. Attribute names not specified use the **lowercase**\n   * normalized name.\n   *\n   * DOMAttributeNamespaces: object mapping React attribute name to the DOM\n   * attribute namespace URL. (Attribute names not specified use no namespace.)\n   *\n   * DOMPropertyNames: similar to DOMAttributeNames but for DOM properties.\n   * Property names not specified use the normalized name.\n   *\n   * DOMMutationMethods: Properties that require special mutation methods. If\n   * `value` is undefined, the mutation method should unset the property.\n   *\n   * @param {object} domPropertyConfig the config as described above.\n   */\n  injectDOMPropertyConfig: function (domPropertyConfig) {\n    var Injection = DOMPropertyInjection;\n    var Properties = domPropertyConfig.Properties || {};\n    var DOMAttributeNamespaces = domPropertyConfig.DOMAttributeNamespaces || {};\n    var DOMAttributeNames = domPropertyConfig.DOMAttributeNames || {};\n    var DOMPropertyNames = domPropertyConfig.DOMPropertyNames || {};\n    var DOMMutationMethods = domPropertyConfig.DOMMutationMethods || {};\n\n    if (domPropertyConfig.isCustomAttribute) {\n      DOMProperty._isCustomAttributeFunctions.push(domPropertyConfig.isCustomAttribute);\n    }\n\n    for (var propName in Properties) {\n      !!DOMProperty.properties.hasOwnProperty(propName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'injectDOMPropertyConfig(...): You\\'re trying to inject DOM property \\'%s\\' which has already been injected. You may be accidentally injecting the same DOM property config twice, or you may be injecting two configs that have conflicting property names.', propName) : _prodInvariant('48', propName) : void 0;\n\n      var lowerCased = propName.toLowerCase();\n      var propConfig = Properties[propName];\n\n      var propertyInfo = {\n        attributeName: lowerCased,\n        attributeNamespace: null,\n        propertyName: propName,\n        mutationMethod: null,\n\n        mustUseProperty: checkMask(propConfig, Injection.MUST_USE_PROPERTY),\n        hasBooleanValue: checkMask(propConfig, Injection.HAS_BOOLEAN_VALUE),\n        hasNumericValue: checkMask(propConfig, Injection.HAS_NUMERIC_VALUE),\n        hasPositiveNumericValue: checkMask(propConfig, Injection.HAS_POSITIVE_NUMERIC_VALUE),\n        hasOverloadedBooleanValue: checkMask(propConfig, Injection.HAS_OVERLOADED_BOOLEAN_VALUE)\n      };\n      !(propertyInfo.hasBooleanValue + propertyInfo.hasNumericValue + propertyInfo.hasOverloadedBooleanValue <= 1) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'DOMProperty: Value can be one of boolean, overloaded boolean, or numeric value, but not a combination: %s', propName) : _prodInvariant('50', propName) : void 0;\n\n      if (process.env.NODE_ENV !== 'production') {\n        DOMProperty.getPossibleStandardName[lowerCased] = propName;\n      }\n\n      if (DOMAttributeNames.hasOwnProperty(propName)) {\n        var attributeName = DOMAttributeNames[propName];\n        propertyInfo.attributeName = attributeName;\n        if (process.env.NODE_ENV !== 'production') {\n          DOMProperty.getPossibleStandardName[attributeName] = propName;\n        }\n      }\n\n      if (DOMAttributeNamespaces.hasOwnProperty(propName)) {\n        propertyInfo.attributeNamespace = DOMAttributeNamespaces[propName];\n      }\n\n      if (DOMPropertyNames.hasOwnProperty(propName)) {\n        propertyInfo.propertyName = DOMPropertyNames[propName];\n      }\n\n      if (DOMMutationMethods.hasOwnProperty(propName)) {\n        propertyInfo.mutationMethod = DOMMutationMethods[propName];\n      }\n\n      DOMProperty.properties[propName] = propertyInfo;\n    }\n  }\n};\n\n/* eslint-disable max-len */\nvar ATTRIBUTE_NAME_START_CHAR = ':A-Z_a-z\\\\u00C0-\\\\u00D6\\\\u00D8-\\\\u00F6\\\\u00F8-\\\\u02FF\\\\u0370-\\\\u037D\\\\u037F-\\\\u1FFF\\\\u200C-\\\\u200D\\\\u2070-\\\\u218F\\\\u2C00-\\\\u2FEF\\\\u3001-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFFD';\n/* eslint-enable max-len */\n\n/**\n * DOMProperty exports lookup objects that can be used like functions:\n *\n *   > DOMProperty.isValid['id']\n *   true\n *   > DOMProperty.isValid['foobar']\n *   undefined\n *\n * Although this may be confusing, it performs better in general.\n *\n * @see http://jsperf.com/key-exists\n * @see http://jsperf.com/key-missing\n */\nvar DOMProperty = {\n\n  ID_ATTRIBUTE_NAME: 'data-reactid',\n  ROOT_ATTRIBUTE_NAME: 'data-reactroot',\n\n  ATTRIBUTE_NAME_START_CHAR: ATTRIBUTE_NAME_START_CHAR,\n  ATTRIBUTE_NAME_CHAR: ATTRIBUTE_NAME_START_CHAR + '\\\\-.0-9\\\\u00B7\\\\u0300-\\\\u036F\\\\u203F-\\\\u2040',\n\n  /**\n   * Map from property \"standard name\" to an object with info about how to set\n   * the property in the DOM. Each object contains:\n   *\n   * attributeName:\n   *   Used when rendering markup or with `*Attribute()`.\n   * attributeNamespace\n   * propertyName:\n   *   Used on DOM node instances. (This includes properties that mutate due to\n   *   external factors.)\n   * mutationMethod:\n   *   If non-null, used instead of the property or `setAttribute()` after\n   *   initial render.\n   * mustUseProperty:\n   *   Whether the property must be accessed and mutated as an object property.\n   * hasBooleanValue:\n   *   Whether the property should be removed when set to a falsey value.\n   * hasNumericValue:\n   *   Whether the property must be numeric or parse as a numeric and should be\n   *   removed when set to a falsey value.\n   * hasPositiveNumericValue:\n   *   Whether the property must be positive numeric or parse as a positive\n   *   numeric and should be removed when set to a falsey value.\n   * hasOverloadedBooleanValue:\n   *   Whether the property can be used as a flag as well as with a value.\n   *   Removed when strictly equal to false; present without a value when\n   *   strictly equal to true; present with a value otherwise.\n   */\n  properties: {},\n\n  /**\n   * Mapping from lowercase property names to the properly cased version, used\n   * to warn in the case of missing properties. Available only in __DEV__.\n   *\n   * autofocus is predefined, because adding it to the property whitelist\n   * causes unintended side effects.\n   *\n   * @type {Object}\n   */\n  getPossibleStandardName: process.env.NODE_ENV !== 'production' ? { autofocus: 'autoFocus' } : null,\n\n  /**\n   * All of the isCustomAttribute() functions that have been injected.\n   */\n  _isCustomAttributeFunctions: [],\n\n  /**\n   * Checks whether a property name is a custom attribute.\n   * @method\n   */\n  isCustomAttribute: function (attributeName) {\n    for (var i = 0; i < DOMProperty._isCustomAttributeFunctions.length; i++) {\n      var isCustomAttributeFn = DOMProperty._isCustomAttributeFunctions[i];\n      if (isCustomAttributeFn(attributeName)) {\n        return true;\n      }\n    }\n    return false;\n  },\n\n  injection: DOMPropertyInjection\n};\n\nmodule.exports = DOMProperty;"
     },
     {
-      "id": 36,
+      "id": 35,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactReconciler.js",
       "name": "./~/react-dom/lib/ReactReconciler.js",
       "index": 67,
@@ -5993,7 +5899,7 @@
       "source": "/**\n * Copyright 2013-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under the BSD-style license found in the\n * LICENSE file in the root directory of this source tree. An additional grant\n * of patent rights can be found in the PATENTS file in the same directory.\n *\n */\n\n'use strict';\n\nvar ReactRef = require('./ReactRef');\nvar ReactInstrumentation = require('./ReactInstrumentation');\n\nvar warning = require('fbjs/lib/warning');\n\n/**\n * Helper to call ReactRef.attachRefs with this composite component, split out\n * to avoid allocations in the transaction mount-ready queue.\n */\nfunction attachRefs() {\n  ReactRef.attachRefs(this, this._currentElement);\n}\n\nvar ReactReconciler = {\n\n  /**\n   * Initializes the component, renders markup, and registers event listeners.\n   *\n   * @param {ReactComponent} internalInstance\n   * @param {ReactReconcileTransaction|ReactServerRenderingTransaction} transaction\n   * @param {?object} the containing host component instance\n   * @param {?object} info about the host container\n   * @return {?string} Rendered markup to be inserted into the DOM.\n   * @final\n   * @internal\n   */\n  mountComponent: function (internalInstance, transaction, hostParent, hostContainerInfo, context, parentDebugID // 0 in production and for roots\n  ) {\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onBeforeMountComponent(internalInstance._debugID, internalInstance._currentElement, parentDebugID);\n      }\n    }\n    var markup = internalInstance.mountComponent(transaction, hostParent, hostContainerInfo, context, parentDebugID);\n    if (internalInstance._currentElement && internalInstance._currentElement.ref != null) {\n      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);\n    }\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onMountComponent(internalInstance._debugID);\n      }\n    }\n    return markup;\n  },\n\n  /**\n   * Returns a value that can be passed to\n   * ReactComponentEnvironment.replaceNodeWithMarkup.\n   */\n  getHostNode: function (internalInstance) {\n    return internalInstance.getHostNode();\n  },\n\n  /**\n   * Releases any resources allocated by `mountComponent`.\n   *\n   * @final\n   * @internal\n   */\n  unmountComponent: function (internalInstance, safely) {\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onBeforeUnmountComponent(internalInstance._debugID);\n      }\n    }\n    ReactRef.detachRefs(internalInstance, internalInstance._currentElement);\n    internalInstance.unmountComponent(safely);\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onUnmountComponent(internalInstance._debugID);\n      }\n    }\n  },\n\n  /**\n   * Update a component using a new element.\n   *\n   * @param {ReactComponent} internalInstance\n   * @param {ReactElement} nextElement\n   * @param {ReactReconcileTransaction} transaction\n   * @param {object} context\n   * @internal\n   */\n  receiveComponent: function (internalInstance, nextElement, transaction, context) {\n    var prevElement = internalInstance._currentElement;\n\n    if (nextElement === prevElement && context === internalInstance._context) {\n      // Since elements are immutable after the owner is rendered,\n      // we can do a cheap identity compare here to determine if this is a\n      // superfluous reconcile. It's possible for state to be mutable but such\n      // change should trigger an update of the owner which would recreate\n      // the element. We explicitly check for the existence of an owner since\n      // it's possible for an element created outside a composite to be\n      // deeply mutated and reused.\n\n      // TODO: Bailing out early is just a perf optimization right?\n      // TODO: Removing the return statement should affect correctness?\n      return;\n    }\n\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, nextElement);\n      }\n    }\n\n    var refsChanged = ReactRef.shouldUpdateRefs(prevElement, nextElement);\n\n    if (refsChanged) {\n      ReactRef.detachRefs(internalInstance, prevElement);\n    }\n\n    internalInstance.receiveComponent(nextElement, transaction, context);\n\n    if (refsChanged && internalInstance._currentElement && internalInstance._currentElement.ref != null) {\n      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);\n    }\n\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);\n      }\n    }\n  },\n\n  /**\n   * Flush any dirty changes in a component.\n   *\n   * @param {ReactComponent} internalInstance\n   * @param {ReactReconcileTransaction} transaction\n   * @internal\n   */\n  performUpdateIfNecessary: function (internalInstance, transaction, updateBatchNumber) {\n    if (internalInstance._updateBatchNumber !== updateBatchNumber) {\n      // The component's enqueued batch number should always be the current\n      // batch or the following one.\n      process.env.NODE_ENV !== 'production' ? warning(internalInstance._updateBatchNumber == null || internalInstance._updateBatchNumber === updateBatchNumber + 1, 'performUpdateIfNecessary: Unexpected batch number (current %s, ' + 'pending %s)', updateBatchNumber, internalInstance._updateBatchNumber) : void 0;\n      return;\n    }\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, internalInstance._currentElement);\n      }\n    }\n    internalInstance.performUpdateIfNecessary(transaction);\n    if (process.env.NODE_ENV !== 'production') {\n      if (internalInstance._debugID !== 0) {\n        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);\n      }\n    }\n  }\n\n};\n\nmodule.exports = ReactReconciler;"
     },
     {
-      "id": 37,
+      "id": 36,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/PatternUtils.js",
       "name": "./~/react-router/es/PatternUtils.js",
       "index": 194,
@@ -6085,7 +5991,7 @@
       "source": "import invariant from 'invariant';\n\nfunction escapeRegExp(string) {\n  return string.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n}\n\nfunction _compilePattern(pattern) {\n  var regexpSource = '';\n  var paramNames = [];\n  var tokens = [];\n\n  var match = void 0,\n      lastIndex = 0,\n      matcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|\\*\\*|\\*|\\(|\\)|\\\\\\(|\\\\\\)/g;\n  while (match = matcher.exec(pattern)) {\n    if (match.index !== lastIndex) {\n      tokens.push(pattern.slice(lastIndex, match.index));\n      regexpSource += escapeRegExp(pattern.slice(lastIndex, match.index));\n    }\n\n    if (match[1]) {\n      regexpSource += '([^/]+)';\n      paramNames.push(match[1]);\n    } else if (match[0] === '**') {\n      regexpSource += '(.*)';\n      paramNames.push('splat');\n    } else if (match[0] === '*') {\n      regexpSource += '(.*?)';\n      paramNames.push('splat');\n    } else if (match[0] === '(') {\n      regexpSource += '(?:';\n    } else if (match[0] === ')') {\n      regexpSource += ')?';\n    } else if (match[0] === '\\\\(') {\n      regexpSource += '\\\\(';\n    } else if (match[0] === '\\\\)') {\n      regexpSource += '\\\\)';\n    }\n\n    tokens.push(match[0]);\n\n    lastIndex = matcher.lastIndex;\n  }\n\n  if (lastIndex !== pattern.length) {\n    tokens.push(pattern.slice(lastIndex, pattern.length));\n    regexpSource += escapeRegExp(pattern.slice(lastIndex, pattern.length));\n  }\n\n  return {\n    pattern: pattern,\n    regexpSource: regexpSource,\n    paramNames: paramNames,\n    tokens: tokens\n  };\n}\n\nvar CompiledPatternsCache = Object.create(null);\n\nexport function compilePattern(pattern) {\n  if (!CompiledPatternsCache[pattern]) CompiledPatternsCache[pattern] = _compilePattern(pattern);\n\n  return CompiledPatternsCache[pattern];\n}\n\n/**\n * Attempts to match a pattern on the given pathname. Patterns may use\n * the following special characters:\n *\n * - :paramName     Matches a URL segment up to the next /, ?, or #. The\n *                  captured string is considered a \"param\"\n * - ()             Wraps a segment of the URL that is optional\n * - *              Consumes (non-greedy) all characters up to the next\n *                  character in the pattern, or to the end of the URL if\n *                  there is none\n * - **             Consumes (greedy) all characters up to the next character\n *                  in the pattern, or to the end of the URL if there is none\n *\n *  The function calls callback(error, matched) when finished.\n * The return value is an object with the following properties:\n *\n * - remainingPathname\n * - paramNames\n * - paramValues\n */\nexport function matchPattern(pattern, pathname) {\n  // Ensure pattern starts with leading slash for consistency with pathname.\n  if (pattern.charAt(0) !== '/') {\n    pattern = '/' + pattern;\n  }\n\n  var _compilePattern2 = compilePattern(pattern),\n      regexpSource = _compilePattern2.regexpSource,\n      paramNames = _compilePattern2.paramNames,\n      tokens = _compilePattern2.tokens;\n\n  if (pattern.charAt(pattern.length - 1) !== '/') {\n    regexpSource += '/?'; // Allow optional path separator at end.\n  }\n\n  // Special-case patterns like '*' for catch-all routes.\n  if (tokens[tokens.length - 1] === '*') {\n    regexpSource += '$';\n  }\n\n  var match = pathname.match(new RegExp('^' + regexpSource, 'i'));\n  if (match == null) {\n    return null;\n  }\n\n  var matchedPath = match[0];\n  var remainingPathname = pathname.substr(matchedPath.length);\n\n  if (remainingPathname) {\n    // Require that the match ends at a path separator, if we didn't match\n    // the full path, so any remaining pathname is a new path segment.\n    if (matchedPath.charAt(matchedPath.length - 1) !== '/') {\n      return null;\n    }\n\n    // If there is a remaining pathname, treat the path separator as part of\n    // the remaining pathname for properly continuing the match.\n    remainingPathname = '/' + remainingPathname;\n  }\n\n  return {\n    remainingPathname: remainingPathname,\n    paramNames: paramNames,\n    paramValues: match.slice(1).map(function (v) {\n      return v && decodeURIComponent(v);\n    })\n  };\n}\n\nexport function getParamNames(pattern) {\n  return compilePattern(pattern).paramNames;\n}\n\nexport function getParams(pattern, pathname) {\n  var match = matchPattern(pattern, pathname);\n  if (!match) {\n    return null;\n  }\n\n  var paramNames = match.paramNames,\n      paramValues = match.paramValues;\n\n  var params = {};\n\n  paramNames.forEach(function (paramName, index) {\n    params[paramName] = paramValues[index];\n  });\n\n  return params;\n}\n\n/**\n * Returns a version of the given pattern with params interpolated. Throws\n * if there is a dynamic segment of the pattern for which there is no param.\n */\nexport function formatPattern(pattern, params) {\n  params = params || {};\n\n  var _compilePattern3 = compilePattern(pattern),\n      tokens = _compilePattern3.tokens;\n\n  var parenCount = 0,\n      pathname = '',\n      splatIndex = 0,\n      parenHistory = [];\n\n  var token = void 0,\n      paramName = void 0,\n      paramValue = void 0;\n  for (var i = 0, len = tokens.length; i < len; ++i) {\n    token = tokens[i];\n\n    if (token === '*' || token === '**') {\n      paramValue = Array.isArray(params.splat) ? params.splat[splatIndex++] : params.splat;\n\n      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Missing splat #%s for path \"%s\"', splatIndex, pattern) : invariant(false) : void 0;\n\n      if (paramValue != null) pathname += encodeURI(paramValue);\n    } else if (token === '(') {\n      parenHistory[parenCount] = '';\n      parenCount += 1;\n    } else if (token === ')') {\n      var parenText = parenHistory.pop();\n      parenCount -= 1;\n\n      if (parenCount) parenHistory[parenCount - 1] += parenText;else pathname += parenText;\n    } else if (token === '\\\\(') {\n      pathname += '(';\n    } else if (token === '\\\\)') {\n      pathname += ')';\n    } else if (token.charAt(0) === ':') {\n      paramName = token.substring(1);\n      paramValue = params[paramName];\n\n      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Missing \"%s\" parameter for path \"%s\"', paramName, pattern) : invariant(false) : void 0;\n\n      if (paramValue == null) {\n        if (parenCount) {\n          parenHistory[parenCount - 1] = '';\n\n          var curTokenIdx = tokens.indexOf(token);\n          var tokensSubset = tokens.slice(curTokenIdx, tokens.length);\n          var nextParenIdx = -1;\n\n          for (var _i = 0; _i < tokensSubset.length; _i++) {\n            if (tokensSubset[_i] == ')') {\n              nextParenIdx = _i;\n              break;\n            }\n          }\n\n          !(nextParenIdx > 0) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Path \"%s\" is missing end paren at segment \"%s\"', pattern, tokensSubset.join('')) : invariant(false) : void 0;\n\n          // jump to ending paren\n          i = curTokenIdx + nextParenIdx - 1;\n        }\n      } else if (parenCount) parenHistory[parenCount - 1] += encodeURIComponent(paramValue);else pathname += encodeURIComponent(paramValue);\n    } else {\n      if (parenCount) parenHistory[parenCount - 1] += token;else pathname += token;\n    }\n  }\n\n  !(parenCount <= 0) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Path \"%s\" is missing end paren', pattern) : invariant(false) : void 0;\n\n  return pathname.replace(/\\/+/g, '/');\n}"
     },
     {
-      "id": 38,
+      "id": 37,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/routerWarning.js",
       "name": "./~/react-router/es/routerWarning.js",
       "index": 191,
@@ -6170,7 +6076,7 @@
       "source": "import warning from 'warning';\n\nvar warned = {};\n\nexport default function routerWarning(falseToWarn, message) {\n  // Only issue deprecation warnings once.\n  if (message.indexOf('deprecated') !== -1) {\n    if (warned[message]) {\n      return;\n    }\n\n    warned[message] = true;\n  }\n\n  message = '[react-router] ' + message;\n\n  for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {\n    args[_key - 2] = arguments[_key];\n  }\n\n  warning.apply(undefined, [falseToWarn, message].concat(args));\n}\n\nexport function _resetWarned() {\n  warned = {};\n}"
     },
     {
-      "id": 39,
+      "id": 38,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
       "name": "./~/react/lib/React.js",
       "index": 3,
@@ -6252,7 +6158,7 @@
       "source": "/**\n * Copyright 2013-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under the BSD-style license found in the\n * LICENSE file in the root directory of this source tree. An additional grant\n * of patent rights can be found in the PATENTS file in the same directory.\n *\n */\n\n'use strict';\n\nvar _assign = require('object-assign');\n\nvar ReactChildren = require('./ReactChildren');\nvar ReactComponent = require('./ReactComponent');\nvar ReactPureComponent = require('./ReactPureComponent');\nvar ReactClass = require('./ReactClass');\nvar ReactDOMFactories = require('./ReactDOMFactories');\nvar ReactElement = require('./ReactElement');\nvar ReactPropTypes = require('./ReactPropTypes');\nvar ReactVersion = require('./ReactVersion');\n\nvar onlyChild = require('./onlyChild');\nvar warning = require('fbjs/lib/warning');\n\nvar createElement = ReactElement.createElement;\nvar createFactory = ReactElement.createFactory;\nvar cloneElement = ReactElement.cloneElement;\n\nif (process.env.NODE_ENV !== 'production') {\n  var canDefineProperty = require('./canDefineProperty');\n  var ReactElementValidator = require('./ReactElementValidator');\n  var didWarnPropTypesDeprecated = false;\n  createElement = ReactElementValidator.createElement;\n  createFactory = ReactElementValidator.createFactory;\n  cloneElement = ReactElementValidator.cloneElement;\n}\n\nvar __spread = _assign;\n\nif (process.env.NODE_ENV !== 'production') {\n  var warned = false;\n  __spread = function () {\n    process.env.NODE_ENV !== 'production' ? warning(warned, 'React.__spread is deprecated and should not be used. Use ' + 'Object.assign directly or another helper function with similar ' + 'semantics. You may be seeing this warning due to your compiler. ' + 'See https://fb.me/react-spread-deprecation for more details.') : void 0;\n    warned = true;\n    return _assign.apply(null, arguments);\n  };\n}\n\nvar React = {\n\n  // Modern\n\n  Children: {\n    map: ReactChildren.map,\n    forEach: ReactChildren.forEach,\n    count: ReactChildren.count,\n    toArray: ReactChildren.toArray,\n    only: onlyChild\n  },\n\n  Component: ReactComponent,\n  PureComponent: ReactPureComponent,\n\n  createElement: createElement,\n  cloneElement: cloneElement,\n  isValidElement: ReactElement.isValidElement,\n\n  // Classic\n\n  PropTypes: ReactPropTypes,\n  createClass: ReactClass.createClass,\n  createFactory: createFactory,\n  createMixin: function (mixin) {\n    // Currently a noop. Will be used to validate and trace mixins.\n    return mixin;\n  },\n\n  // This looks DOM specific but these are actually isomorphic helpers\n  // since they are just generating DOM strings.\n  DOM: ReactDOMFactories,\n\n  version: ReactVersion,\n\n  // Deprecated hook for JSX spread, don't use this for anything.\n  __spread: __spread\n};\n\n// TODO: Fix tests so that this deprecation warning doesn't cause failures.\nif (process.env.NODE_ENV !== 'production') {\n  if (canDefineProperty) {\n    Object.defineProperty(React, 'PropTypes', {\n      get: function () {\n        process.env.NODE_ENV !== 'production' ? warning(didWarnPropTypesDeprecated, 'Accessing PropTypes via the main React package is deprecated. Use ' + 'the prop-types package from npm instead.') : void 0;\n        didWarnPropTypesDeprecated = true;\n        return ReactPropTypes;\n      }\n    });\n  }\n}\n\nmodule.exports = React;"
     },
     {
-      "id": 40,
+      "id": 39,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
       "name": "./~/react/lib/ReactElement.js",
       "index": 9,
@@ -6267,14 +6173,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -6334,7 +6240,7 @@
       "source": "/**\n * Copyright 2014-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under the BSD-style license found in the\n * LICENSE file in the root directory of this source tree. An additional grant\n * of patent rights can be found in the PATENTS file in the same directory.\n *\n */\n\n'use strict';\n\nvar _assign = require('object-assign');\n\nvar ReactCurrentOwner = require('./ReactCurrentOwner');\n\nvar warning = require('fbjs/lib/warning');\nvar canDefineProperty = require('./canDefineProperty');\nvar hasOwnProperty = Object.prototype.hasOwnProperty;\n\nvar REACT_ELEMENT_TYPE = require('./ReactElementSymbol');\n\nvar RESERVED_PROPS = {\n  key: true,\n  ref: true,\n  __self: true,\n  __source: true\n};\n\nvar specialPropKeyWarningShown, specialPropRefWarningShown;\n\nfunction hasValidRef(config) {\n  if (process.env.NODE_ENV !== 'production') {\n    if (hasOwnProperty.call(config, 'ref')) {\n      var getter = Object.getOwnPropertyDescriptor(config, 'ref').get;\n      if (getter && getter.isReactWarning) {\n        return false;\n      }\n    }\n  }\n  return config.ref !== undefined;\n}\n\nfunction hasValidKey(config) {\n  if (process.env.NODE_ENV !== 'production') {\n    if (hasOwnProperty.call(config, 'key')) {\n      var getter = Object.getOwnPropertyDescriptor(config, 'key').get;\n      if (getter && getter.isReactWarning) {\n        return false;\n      }\n    }\n  }\n  return config.key !== undefined;\n}\n\nfunction defineKeyPropWarningGetter(props, displayName) {\n  var warnAboutAccessingKey = function () {\n    if (!specialPropKeyWarningShown) {\n      specialPropKeyWarningShown = true;\n      process.env.NODE_ENV !== 'production' ? warning(false, '%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://fb.me/react-special-props)', displayName) : void 0;\n    }\n  };\n  warnAboutAccessingKey.isReactWarning = true;\n  Object.defineProperty(props, 'key', {\n    get: warnAboutAccessingKey,\n    configurable: true\n  });\n}\n\nfunction defineRefPropWarningGetter(props, displayName) {\n  var warnAboutAccessingRef = function () {\n    if (!specialPropRefWarningShown) {\n      specialPropRefWarningShown = true;\n      process.env.NODE_ENV !== 'production' ? warning(false, '%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://fb.me/react-special-props)', displayName) : void 0;\n    }\n  };\n  warnAboutAccessingRef.isReactWarning = true;\n  Object.defineProperty(props, 'ref', {\n    get: warnAboutAccessingRef,\n    configurable: true\n  });\n}\n\n/**\n * Factory method to create a new React element. This no longer adheres to\n * the class pattern, so do not use new to call it. Also, no instanceof check\n * will work. Instead test $$typeof field against Symbol.for('react.element') to check\n * if something is a React Element.\n *\n * @param {*} type\n * @param {*} key\n * @param {string|object} ref\n * @param {*} self A *temporary* helper to detect places where `this` is\n * different from the `owner` when React.createElement is called, so that we\n * can warn. We want to get rid of owner and replace string `ref`s with arrow\n * functions, and as long as `this` and owner are the same, there will be no\n * change in behavior.\n * @param {*} source An annotation object (added by a transpiler or otherwise)\n * indicating filename, line number, and/or other information.\n * @param {*} owner\n * @param {*} props\n * @internal\n */\nvar ReactElement = function (type, key, ref, self, source, owner, props) {\n  var element = {\n    // This tag allow us to uniquely identify this as a React Element\n    $$typeof: REACT_ELEMENT_TYPE,\n\n    // Built-in properties that belong on the element\n    type: type,\n    key: key,\n    ref: ref,\n    props: props,\n\n    // Record the component responsible for creating this element.\n    _owner: owner\n  };\n\n  if (process.env.NODE_ENV !== 'production') {\n    // The validation flag is currently mutative. We put it on\n    // an external backing store so that we can freeze the whole object.\n    // This can be replaced with a WeakMap once they are implemented in\n    // commonly used development environments.\n    element._store = {};\n\n    // To make comparing ReactElements easier for testing purposes, we make\n    // the validation flag non-enumerable (where possible, which should\n    // include every environment we run tests in), so the test framework\n    // ignores it.\n    if (canDefineProperty) {\n      Object.defineProperty(element._store, 'validated', {\n        configurable: false,\n        enumerable: false,\n        writable: true,\n        value: false\n      });\n      // self and source are DEV only properties.\n      Object.defineProperty(element, '_self', {\n        configurable: false,\n        enumerable: false,\n        writable: false,\n        value: self\n      });\n      // Two elements created in two different places should be considered\n      // equal for testing purposes and therefore we hide it from enumeration.\n      Object.defineProperty(element, '_source', {\n        configurable: false,\n        enumerable: false,\n        writable: false,\n        value: source\n      });\n    } else {\n      element._store.validated = false;\n      element._self = self;\n      element._source = source;\n    }\n    if (Object.freeze) {\n      Object.freeze(element.props);\n      Object.freeze(element);\n    }\n  }\n\n  return element;\n};\n\n/**\n * Create and return a new ReactElement of the given type.\n * See https://facebook.github.io/react/docs/top-level-api.html#react.createelement\n */\nReactElement.createElement = function (type, config, children) {\n  var propName;\n\n  // Reserved names are extracted\n  var props = {};\n\n  var key = null;\n  var ref = null;\n  var self = null;\n  var source = null;\n\n  if (config != null) {\n    if (hasValidRef(config)) {\n      ref = config.ref;\n    }\n    if (hasValidKey(config)) {\n      key = '' + config.key;\n    }\n\n    self = config.__self === undefined ? null : config.__self;\n    source = config.__source === undefined ? null : config.__source;\n    // Remaining properties are added to a new props object\n    for (propName in config) {\n      if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {\n        props[propName] = config[propName];\n      }\n    }\n  }\n\n  // Children can be more than one argument, and those are transferred onto\n  // the newly allocated props object.\n  var childrenLength = arguments.length - 2;\n  if (childrenLength === 1) {\n    props.children = children;\n  } else if (childrenLength > 1) {\n    var childArray = Array(childrenLength);\n    for (var i = 0; i < childrenLength; i++) {\n      childArray[i] = arguments[i + 2];\n    }\n    if (process.env.NODE_ENV !== 'production') {\n      if (Object.freeze) {\n        Object.freeze(childArray);\n      }\n    }\n    props.children = childArray;\n  }\n\n  // Resolve default props\n  if (type && type.defaultProps) {\n    var defaultProps = type.defaultProps;\n    for (propName in defaultProps) {\n      if (props[propName] === undefined) {\n        props[propName] = defaultProps[propName];\n      }\n    }\n  }\n  if (process.env.NODE_ENV !== 'production') {\n    if (key || ref) {\n      if (typeof props.$$typeof === 'undefined' || props.$$typeof !== REACT_ELEMENT_TYPE) {\n        var displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;\n        if (key) {\n          defineKeyPropWarningGetter(props, displayName);\n        }\n        if (ref) {\n          defineRefPropWarningGetter(props, displayName);\n        }\n      }\n    }\n  }\n  return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);\n};\n\n/**\n * Return a function that produces ReactElements of a given type.\n * See https://facebook.github.io/react/docs/top-level-api.html#react.createfactory\n */\nReactElement.createFactory = function (type) {\n  var factory = ReactElement.createElement.bind(null, type);\n  // Expose the type on the factory and the prototype so that it can be\n  // easily accessed on elements. E.g. `<Foo />.type === Foo`.\n  // This should not be named `constructor` since this may not be the function\n  // that created the element, and it may not even be a constructor.\n  // Legacy hook TODO: Warn if this is accessed\n  factory.type = type;\n  return factory;\n};\n\nReactElement.cloneAndReplaceKey = function (oldElement, newKey) {\n  var newElement = ReactElement(oldElement.type, newKey, oldElement.ref, oldElement._self, oldElement._source, oldElement._owner, oldElement.props);\n\n  return newElement;\n};\n\n/**\n * Clone and return a new ReactElement using element as the starting point.\n * See https://facebook.github.io/react/docs/top-level-api.html#react.cloneelement\n */\nReactElement.cloneElement = function (element, config, children) {\n  var propName;\n\n  // Original props are copied\n  var props = _assign({}, element.props);\n\n  // Reserved names are extracted\n  var key = element.key;\n  var ref = element.ref;\n  // Self is preserved since the owner is preserved.\n  var self = element._self;\n  // Source is preserved since cloneElement is unlikely to be targeted by a\n  // transpiler, and the original source is probably a better indicator of the\n  // true owner.\n  var source = element._source;\n\n  // Owner will be preserved, unless ref is overridden\n  var owner = element._owner;\n\n  if (config != null) {\n    if (hasValidRef(config)) {\n      // Silently steal the ref from the parent.\n      ref = config.ref;\n      owner = ReactCurrentOwner.current;\n    }\n    if (hasValidKey(config)) {\n      key = '' + config.key;\n    }\n\n    // Remaining properties override existing props\n    var defaultProps;\n    if (element.type && element.type.defaultProps) {\n      defaultProps = element.type.defaultProps;\n    }\n    for (propName in config) {\n      if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {\n        if (config[propName] === undefined && defaultProps !== undefined) {\n          // Resolve default props\n          props[propName] = defaultProps[propName];\n        } else {\n          props[propName] = config[propName];\n        }\n      }\n    }\n  }\n\n  // Children can be more than one argument, and those are transferred onto\n  // the newly allocated props object.\n  var childrenLength = arguments.length - 2;\n  if (childrenLength === 1) {\n    props.children = children;\n  } else if (childrenLength > 1) {\n    var childArray = Array(childrenLength);\n    for (var i = 0; i < childrenLength; i++) {\n      childArray[i] = arguments[i + 2];\n    }\n    props.children = childArray;\n  }\n\n  return ReactElement(element.type, key, ref, self, source, owner, props);\n};\n\n/**\n * Verifies the object is a ReactElement.\n * See https://facebook.github.io/react/docs/top-level-api.html#react.isvalidelement\n * @param {?object} object\n * @return {boolean} True if `object` is a valid component.\n * @final\n */\nReactElement.isValidElement = function (object) {\n  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;\n};\n\nmodule.exports = ReactElement;"
     },
     {
-      "id": 41,
+      "id": 40,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/reactProdInvariant.js",
       "name": "./~/react/lib/reactProdInvariant.js",
       "index": 7,
@@ -6416,7 +6322,7 @@
       "source": "/**\n * Copyright (c) 2013-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under the BSD-style license found in the\n * LICENSE file in the root directory of this source tree. An additional grant\n * of patent rights can be found in the PATENTS file in the same directory.\n *\n * \n */\n'use strict';\n\n/**\n * WARNING: DO NOT manually require this module.\n * This is a replacement for `invariant(...)` used by the error code system\n * and will _only_ be required by the corresponding babel pass.\n * It always throws.\n */\n\nfunction reactProdInvariant(code) {\n  var argCount = arguments.length - 1;\n\n  var message = 'Minified React error #' + code + '; visit ' + 'http://facebook.github.io/react/docs/error-decoder.html?invariant=' + code;\n\n  for (var argIdx = 0; argIdx < argCount; argIdx++) {\n    message += '&args[]=' + encodeURIComponent(arguments[argIdx + 1]);\n  }\n\n  message += ' for the full message or use the non-minified dev environment' + ' for full errors and additional helpful warnings.';\n\n  var error = new Error(message);\n  error.name = 'Invariant Violation';\n  error.framesToPop = 1; // we don't care about reactProdInvariant's own frame\n\n  throw error;\n}\n\nmodule.exports = reactProdInvariant;"
     },
     {
-      "id": 42,
+      "id": 41,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/isLength.js",
       "name": "./~/velocity-react/~/lodash/internal/isLength.js",
       "index": 357,
@@ -6498,7 +6404,7 @@
       "source": "/**\n * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)\n * of an array-like value.\n */\nvar MAX_SAFE_INTEGER = 9007199254740991;\n\n/**\n * Checks if `value` is a valid array-like length.\n *\n * **Note:** This function is based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.\n */\nfunction isLength(value) {\n  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;\n}\n\nmodule.exports = isLength;\n"
     },
     {
-      "id": 43,
+      "id": 42,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/velocity-react/node_modules/lodash/internal/isObjectLike.js",
       "name": "./~/velocity-react/~/lodash/internal/isObjectLike.js",
       "index": 353,
@@ -6580,7 +6486,7 @@
       "source": "/**\n * Checks if `value` is object-like.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is object-like, else `false`.\n */\nfunction isObjectLike(value) {\n  return !!value && typeof value == 'object';\n}\n\nmodule.exports = isObjectLike;\n"
     },
     {
-      "id": 44,
+      "id": 43,
       "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
       "name": "./app/containers/index.js",
       "index": 252,
@@ -6681,6 +6587,91 @@
       ],
       "depth": 3,
       "source": "\n/* -------  base container  ------- */\nimport MainContainer from './Main/MainContainer';\n\n/* -------  page containers  ------- */\nimport HomeContainer from './Home/HomeContainer';\nimport AboutContainer from './About/AboutContainer';\nimport NotFoundContainer from './NotFound/NotFoundContainer';\nimport TestContainer from './Test/TestContainer';\n\n/* -------  league containers  ------- */\nimport MlbContainer from './Mlb/MlbContainer';\nimport NbaContainer from './Nba/NbaContainer';\nimport NflContainer from './Nfl/NflContainer';\nimport NhlContainer from './Nhl/NhlContainer';\n\n/* -------  scoreboard containers  ------- */\nimport ScoreboardContainer from './Scoreboard/ScoreboardContainer';\nimport DateContainer from './Date/DateContainer';\n\n/* -------  game containers  ------- */\nimport GameContainer from './Game/GameContainer';\nimport LogoContainer from './Logo/LogoContainer';\nimport DetailsContainer from './Details/DetailsContainer';\n\nexport { MainContainer, HomeContainer, AboutContainer, NotFoundContainer, TestContainer, MlbContainer, NbaContainer, NflContainer, NhlContainer, ScoreboardContainer, DateContainer, GameContainer, LogoContainer, DetailsContainer };"
+    },
+    {
+      "id": 44,
+      "identifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/helpers/api.js",
+      "name": "./app/helpers/api.js",
+      "index": 308,
+      "index2": 331,
+      "size": 1710,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Mlb/MlbContainer.js",
+      "issuerId": 237,
+      "issuerName": "./app/containers/Mlb/MlbContainer.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 219,
+          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/components/Scoreboard/Scoreboard.js",
+          "module": "./app/components/Scoreboard/Scoreboard.js",
+          "moduleName": "./app/components/Scoreboard/Scoreboard.js",
+          "type": "harmony import",
+          "userRequest": "helpers/api",
+          "loc": "6:0-48"
+        },
+        {
+          "moduleId": 237,
+          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Mlb/MlbContainer.js",
+          "module": "./app/containers/Mlb/MlbContainer.js",
+          "moduleName": "./app/containers/Mlb/MlbContainer.js",
+          "type": "harmony import",
+          "userRequest": "helpers/api",
+          "loc": "14:0-43"
+        },
+        {
+          "moduleId": 238,
+          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Nba/NbaContainer.js",
+          "module": "./app/containers/Nba/NbaContainer.js",
+          "moduleName": "./app/containers/Nba/NbaContainer.js",
+          "type": "harmony import",
+          "userRequest": "helpers/api",
+          "loc": "14:0-43"
+        },
+        {
+          "moduleId": 239,
+          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Nfl/NflContainer.js",
+          "module": "./app/containers/Nfl/NflContainer.js",
+          "moduleName": "./app/containers/Nfl/NflContainer.js",
+          "type": "harmony import",
+          "userRequest": "helpers/api",
+          "loc": "14:0-43"
+        },
+        {
+          "moduleId": 240,
+          "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/Nhl/NhlContainer.js",
+          "module": "./app/containers/Nhl/NhlContainer.js",
+          "moduleName": "./app/containers/Nhl/NhlContainer.js",
+          "type": "harmony import",
+          "userRequest": "helpers/api",
+          "loc": "14:0-43"
+        }
+      ],
+      "usedExports": [
+        "getNhlScores",
+        "getNbaGameDetails",
+        "getNflScores",
+        "getNbaScores",
+        "getMlbScores"
+      ],
+      "providedExports": [
+        "getMlbScores",
+        "getNbaScores",
+        "getNbaGameDetails",
+        "getNflScores",
+        "getNhlScores"
+      ],
+      "depth": 5,
+      "source": "import axios from 'axios';\nimport { dateObject } from './utils';\n\nvar CORS = 'https://cors-anywhere.herokuapp.com/';\n\nexport var getMlbScores = function getMlbScores(dt) {\n  var api = '/api/mlb/scores/' + dt;\n  return axios.get(api).then(function (scores) {\n    return scores.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\nexport var getNbaScores = function getNbaScores(dt) {\n  var api = '/api/nba/scores/' + dt;\n  return axios.get(api).then(function (scores) {\n    return scores.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\nexport var getNbaGameDetails = function getNbaGameDetails(dt, id) {\n  var api = '/api/nba/scores/' + dt + '/details/' + id;\n  return axios.get(api).then(function (details) {\n    return details.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\nexport var getNflScores = function getNflScores(week) {\n  var api = '/api/nfl/scores/week/' + week;\n  return axios.get(api).then(function (scores) {\n    return scores.data;\n  }).catch(function (error) {\n    return error.status;\n  });\n};\n\n// axios request - nhl scores\nexport var getNhlScores = function getNhlScores(dt) {\n  var _dateObject = dateObject(dt),\n      yyyy = _dateObject.yyyy,\n      mm = _dateObject.mm,\n      dd = _dateObject.dd;\n\n  var api = 'https://statsapi.web.nhl.com/api/v1/schedule?startDate=' + yyyy + '-' + mm + '-' + dd + '&endDate=' + yyyy + '-' + mm + '-' + dd + '&expand=schedule.teams,schedule.linescore,schedule.scoringplays,schedule.game.seriesSummary,seriesSummary.series';\n  return axios.get(api).then(function (currentScores) {\n    return currentScores.data;\n  }).catch(function (currentScores) {\n    return currentScores.status;\n  });\n};"
     },
     {
       "id": 45,
@@ -7301,7 +7292,7 @@
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 33,
+          "moduleId": 32,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/history/lib/LocationUtils.js",
           "module": "./~/history/lib/LocationUtils.js",
           "moduleName": "./~/history/lib/LocationUtils.js",
@@ -7613,9 +7604,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactDOMTextComponent.js",
-      "issuerId": 337,
-      "issuerName": "./~/react-dom/lib/ReactDOMTextComponent.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
+      "issuerId": 329,
+      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7685,7 +7676,7 @@
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 34,
+          "moduleId": 33,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
           "module": "./~/react-dom/lib/DOMLazyTree.js",
           "moduleName": "./~/react-dom/lib/DOMLazyTree.js",
@@ -8308,7 +8299,7 @@
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 34,
+          "moduleId": 33,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
           "module": "./~/react-dom/lib/DOMLazyTree.js",
           "moduleName": "./~/react-dom/lib/DOMLazyTree.js",
@@ -8741,14 +8732,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
-      "issuerId": 34,
+      "issuerId": 33,
       "issuerName": "./~/react-dom/lib/DOMLazyTree.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 34,
+          "moduleId": 33,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
           "module": "./~/react-dom/lib/DOMLazyTree.js",
           "moduleName": "./~/react-dom/lib/DOMLazyTree.js",
@@ -9070,9 +9061,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactDOMTextComponent.js",
-      "issuerId": 337,
-      "issuerName": "./~/react-dom/lib/ReactDOMTextComponent.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactDOMComponent.js",
+      "issuerId": 329,
+      "issuerName": "./~/react-dom/lib/ReactDOMComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9125,9 +9116,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/matchRoutes.js",
-      "issuerId": 417,
-      "issuerName": "./~/react-router/es/matchRoutes.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/TransitionUtils.js",
+      "issuerId": 408,
+      "issuerName": "./~/react-router/es/TransitionUtils.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9367,14 +9358,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -9476,9 +9467,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactPureComponent.js",
-      "issuerId": 428,
-      "issuerName": "./~/react/lib/ReactPureComponent.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactComponent.js",
+      "issuerId": 89,
+      "issuerName": "./~/react/lib/ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -11638,14 +11629,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
-      "issuerId": 34,
+      "issuerId": 33,
       "issuerName": "./~/react-dom/lib/DOMLazyTree.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 34,
+          "moduleId": 33,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/DOMLazyTree.js",
           "module": "./~/react-dom/lib/DOMLazyTree.js",
           "moduleName": "./~/react-dom/lib/DOMLazyTree.js",
@@ -11871,9 +11862,9 @@
         0
       ],
       "assets": [],
-      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/matchRoutes.js",
-      "issuerId": 417,
-      "issuerName": "./~/react-router/es/matchRoutes.js",
+      "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-router/es/getComponents.js",
+      "issuerId": 412,
+      "issuerName": "./~/react-router/es/getComponents.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -12224,14 +12215,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
-      "issuerId": 40,
+      "issuerId": 39,
       "issuerName": "./~/react/lib/ReactElement.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 40,
+          "moduleId": 39,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
           "module": "./~/react/lib/ReactElement.js",
           "moduleName": "./~/react/lib/ReactElement.js",
@@ -12277,7 +12268,7 @@
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 40,
+          "moduleId": 39,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/ReactElement.js",
           "module": "./~/react/lib/ReactElement.js",
           "moduleName": "./~/react/lib/ReactElement.js",
@@ -13128,14 +13119,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/helpers/api.js",
-      "issuerId": 31,
+      "issuerId": 44,
       "issuerName": "./app/helpers/api.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 31,
+          "moduleId": 44,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/helpers/api.js",
           "module": "./app/helpers/api.js",
           "moduleName": "./app/helpers/api.js",
@@ -15186,7 +15177,7 @@
         "default"
       ],
       "depth": 6,
-      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nimport React from 'react';\nimport { NoGames, Event } from 'components';\nimport { GameContainer, DateContainer } from 'containers';\nimport { getNbaGameDetails } from 'helpers/api';\nimport { VelocityTransitionGroup } from 'velocity-react';\nimport 'velocity-animate/velocity.ui';\nimport { velocity_scoreboard } from 'config/velocity';\nimport s from './Scoreboard.scss';\n\nexport default function Scoreboard(_ref) {\n  var bgImg = _ref.bgImg,\n      scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league,\n      seasonState = _ref.seasonState,\n      direction = _ref.direction,\n      lastUpdated = _ref.lastUpdated,\n      isError = _ref.isError;\n\n  var games = void 0;\n  if (league === 'mlb') {\n    games = !scores.length || seasonState.isPreseason ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'sorry, there was an error :(' }) : scores.map(function (item) {\n      return React.createElement(GameContainer, { game: item, date: date, league: league, lastUpdated: lastUpdated, key: item.gamePk });\n    });\n  }\n  if (league === 'nba') {\n    games = !scores.length ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'sorry, there was an error :(' }) : scores.map(function (el, i) {\n      getNbaGameDetails(date, el.id).then(function (details) {\n        el.home = details.sports_content.game.home;\n        el.visitor = details.sports_content.game.visitor;\n      });\n      return React.createElement(GameContainer, { game: el, id: el.id, date: date, league: league, lastUpdated: lastUpdated, key: i });\n    });\n  }\n  if (league === 'nhl') {\n    games = !scores.dates.length ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'sorry, there was an error :(' }) : scores.dates[0].games.map(function (item) {\n      return React.createElement(GameContainer, { game: item, date: date, league: league, lastUpdated: lastUpdated, key: item.gamePk });\n    });\n  }\n  if (league === 'nfl') {\n    games = !scores.length ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'sorry, there was an error :(' }) : scores.map(function (el) {\n      return React.createElement(GameContainer, { game: el, date: date, league: league, lastUpdated: lastUpdated, key: el.eid });\n    });\n  }\n  return React.createElement(\n    'main',\n    { className: s.container },\n    React.createElement(DateContainer, { date: date, today: today, league: league }),\n    React.createElement(\n      VelocityTransitionGroup,\n      _extends({ className: s.fade }, velocity_scoreboard(direction)),\n      React.createElement(\n        'ul',\n        { className: s.list, key: date },\n        games,\n        bgImg && React.createElement(Event, { bgImg: bgImg })\n      )\n    )\n  );\n}"
+      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nimport React from 'react';\nimport { NoGames, Event } from 'components';\nimport { GameContainer, DateContainer } from 'containers';\nimport { getNbaGameDetails } from 'helpers/api';\nimport { VelocityTransitionGroup } from 'velocity-react';\nimport 'velocity-animate/velocity.ui';\nimport { velocity_scoreboard } from 'config/velocity';\nimport s from './Scoreboard.scss';\n\nexport default function Scoreboard(_ref) {\n  var bgImg = _ref.bgImg,\n      scores = _ref.scores,\n      date = _ref.date,\n      today = _ref.today,\n      league = _ref.league,\n      seasonState = _ref.seasonState,\n      direction = _ref.direction,\n      lastUpdated = _ref.lastUpdated,\n      isError = _ref.isError;\n\n  var games = void 0;\n  if (league === 'mlb') {\n    games = !scores.length || seasonState.isPreseason ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'woops! something went wrong.' }) : scores.map(function (item) {\n      return React.createElement(GameContainer, { game: item, date: date, league: league, lastUpdated: lastUpdated, key: item.gamePk });\n    });\n  }\n  if (league === 'nba') {\n    games = !scores.length ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'woops! something went wrong.' }) : scores.map(function (el, i) {\n      getNbaGameDetails(date, el.id).then(function (details) {\n        el.home = details.sports_content.game.home;\n        el.visitor = details.sports_content.game.visitor;\n      });\n      return React.createElement(GameContainer, { game: el, id: el.id, date: date, league: league, lastUpdated: lastUpdated, key: i });\n    });\n  }\n  if (league === 'nhl') {\n    games = !scores.dates.length ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'woops! something went wrong.' }) : scores.dates[0].games.map(function (item) {\n      return React.createElement(GameContainer, { game: item, date: date, league: league, lastUpdated: lastUpdated, key: item.gamePk });\n    });\n  }\n  if (league === 'nfl') {\n    games = !scores.length ? React.createElement(NoGames, { text: 'no games today' }) : isError ? React.createElement(NoGames, { text: 'woops! something went wrong.' }) : scores.map(function (el) {\n      return React.createElement(GameContainer, { game: el, date: date, league: league, lastUpdated: lastUpdated, key: el.eid });\n    });\n  }\n  return React.createElement(\n    'main',\n    { className: s.container },\n    React.createElement(DateContainer, { date: date, today: today, league: league }),\n    React.createElement(\n      VelocityTransitionGroup,\n      _extends({ className: s.fade }, velocity_scoreboard(direction)),\n      React.createElement(\n        'ul',\n        { className: s.list, key: date },\n        games,\n        bgImg && React.createElement(Event, { bgImg: bgImg })\n      )\n    )\n  );\n}"
     },
     {
       "id": 220,
@@ -15620,14 +15611,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15661,14 +15652,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15702,14 +15693,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15733,7 +15724,7 @@
       "name": "./app/containers/Game/GameContainer.js",
       "index": 518,
       "index2": 514,
-      "size": 3471,
+      "size": 3514,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -15743,14 +15734,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15766,7 +15757,7 @@
         "default"
       ],
       "depth": 4,
-      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { Game } from 'components';\nimport { getNbaGameDetails } from 'helpers/api';\n\nvar GameContainer = function (_Component) {\n  _inherits(GameContainer, _Component);\n\n  function GameContainer() {\n    _classCallCheck(this, GameContainer);\n\n    var _this = _possibleConstructorReturn(this, (GameContainer.__proto__ || Object.getPrototypeOf(GameContainer)).call(this));\n\n    _this.state = {\n      details: {},\n      isExpanded: false,\n      isHovered: false,\n      isiOS: false,\n      hasLoaded: false\n    };\n    _this.showDetails = _this.showDetails.bind(_this);\n    _this.scaleGame = _this.scaleGame.bind(_this);\n    _this.logoHasLoaded = _this.logoHasLoaded.bind(_this);\n    return _this;\n  }\n\n  _createClass(GameContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var testDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;\n      if (testDevice) {\n        this.setState({ isiOS: true });\n      }\n    }\n  }, {\n    key: 'showDetails',\n    value: function showDetails() {\n      this.setState({ isExpanded: !this.state.isExpanded });\n    }\n  }, {\n    key: 'scaleGame',\n    value: function scaleGame() {\n      this.setState({ isHovered: !this.state.isiOS && !this.state.isHovered });\n    }\n  }, {\n    key: 'logoHasLoaded',\n    value: function logoHasLoaded() {\n      this.setState({ hasLoaded: true });\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(Game, _extends({\n        showDetails: this.showDetails,\n        scaleGame: this.scaleGame,\n        logoHasLoaded: this.logoHasLoaded\n      }, this.state, this.props));\n    }\n  }]);\n\n  return GameContainer;\n}(Component);\n\nexport default GameContainer;"
+      "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React, { Component } from 'react';\nimport { Game } from 'components';\n\nvar GameContainer = function (_Component) {\n  _inherits(GameContainer, _Component);\n\n  function GameContainer() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, GameContainer);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GameContainer.__proto__ || Object.getPrototypeOf(GameContainer)).call.apply(_ref, [this].concat(args))), _this), _this.state = {\n      isExpanded: false,\n      isHovered: false,\n      isiOS: false,\n      hasLoaded: false,\n      details: {}\n    }, _this.showDetails = function () {\n      _this.setState(function (prevState) {\n        return {\n          isExpanded: !prevState.isExpanded\n        };\n      });\n    }, _this.scaleGame = function () {\n      _this.setState({\n        isHovered: !_this.state.isiOS && !_this.state.isHovered\n      });\n    }, _this.logoHasLoaded = function () {\n      _this.setState({ hasLoaded: true });\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(GameContainer, [{\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      var testDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;\n      if (testDevice) {\n        this.setState({ isiOS: true });\n      }\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      return React.createElement(Game, _extends({}, this.props, this.state, {\n        showDetails: this.showDetails,\n        scaleGame: this.scaleGame,\n        logoHasLoaded: this.logoHasLoaded\n      }));\n    }\n  }]);\n\n  return GameContainer;\n}(Component);\n\nexport default GameContainer;"
     },
     {
       "id": 234,
@@ -15784,14 +15775,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15825,14 +15816,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15866,14 +15857,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15907,14 +15898,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15948,14 +15939,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -15989,14 +15980,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -16030,14 +16021,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -16071,14 +16062,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -16112,14 +16103,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -16153,14 +16144,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
-      "issuerId": 44,
+      "issuerId": 43,
       "issuerName": "./app/containers/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 44,
+          "moduleId": 43,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/babel-loader/lib/index.js!/Users/asapzacy/dev/projects/uxscoreboard/app/containers/index.js",
           "module": "./app/containers/index.js",
           "moduleName": "./app/containers/index.js",
@@ -20383,14 +20374,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactReconciler.js",
-      "issuerId": 36,
+      "issuerId": 35,
       "issuerName": "./~/react-dom/lib/ReactReconciler.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 36,
+          "moduleId": 35,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react-dom/lib/ReactReconciler.js",
           "module": "./~/react-dom/lib/ReactReconciler.js",
           "moduleName": "./~/react-dom/lib/ReactReconciler.js",
@@ -22967,14 +22958,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -23004,14 +22995,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -23041,14 +23032,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -23115,14 +23106,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -23152,14 +23143,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -23189,14 +23180,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",
@@ -23300,14 +23291,14 @@
       ],
       "assets": [],
       "issuer": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
-      "issuerId": 39,
+      "issuerId": 38,
       "issuerName": "./~/react/lib/React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
         {
-          "moduleId": 39,
+          "moduleId": 38,
           "moduleIdentifier": "/Users/asapzacy/dev/projects/uxscoreboard/node_modules/react/lib/React.js",
           "module": "./~/react/lib/React.js",
           "moduleName": "./~/react/lib/React.js",

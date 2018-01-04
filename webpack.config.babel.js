@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 8080
 const PROXY = `http://${HOST}:${PORT}`
 
 const PATHS = {
-  app: path.join(__dirname, 'app'),
+  app: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'dist')
 }
 
@@ -123,8 +123,7 @@ const sharedCssLoaders = [
     loader: 'sass-resources-loader',
     options: {
       resources: [
-        path.resolve(__dirname, './app/styles/_variables.scss'),
-        // path.resolve(__dirname, './app/styles/_mixins.scss')
+        path.resolve(__dirname, './src/styles/_variables.scss')
       ]
     }
   }

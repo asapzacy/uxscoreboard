@@ -45,11 +45,13 @@ class MlbContainer extends Component {
     }
     getMlbScores(dt)
       .then((currentScores) => {
-        const games = currentScores.dates[0].games
+        const gamedayDetails = currentScores.dates[0]
+        const scores = gamedayDetails !== undefined ? gamedayDetails.games : []
+        const year = scores[0] ? scores[0].season : (this.state.year || dt.slice(0, 4))
         this.setState({
-          scores: games,
-          year: games[0].season,
-          date: dt
+          date: dt,
+          scores,
+          year
         }, () => this.delay())
       })
       .catch((error) =>  {

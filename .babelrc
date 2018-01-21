@@ -4,5 +4,8 @@
     "react",
     "stage-0"
   ],
-  "plugins": [ "react-hot-loader/babel" ]
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-react-stateless-component-name"
+  ]
 }

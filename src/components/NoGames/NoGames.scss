@@ -13,16 +13,13 @@
   padding:0.8em 1.6em;
   border:1px solid currentColor;
   border-radius:2px;
+  background:$grey1;
+  text-transform:capitalize;
+  font-weight:lighter;
 }
 
 @media only screen and (min-width:$medium) {
   .text {
     font-size:1.2em;
-  }
-}
-
-@media only screen and (min-width:$xlarge) {
-  .text {
-    font-size:1.3em;
   }
 }

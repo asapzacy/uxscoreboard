@@ -1,8 +1,8 @@
 
 /* -------  Date  ------- */
 .menu {
-  height:3em;
-  margin:1em 0 0em;
+  height:3.5em;
+  margin:1em 0 0.25em;
   background:$grey1;
 }
 .list {
@@ -25,6 +25,9 @@
   display:flex;
   align-items:center;
   padding:0 0.66em;
+  span {
+    padding-bottom: 2px;
+  }
 }
 .mainLink {
   composes:link;
@@ -36,7 +39,7 @@
   content:'';
   display:block;
   height:1px;
-  background:$grey3;
+  background:$white;
 }
 
 

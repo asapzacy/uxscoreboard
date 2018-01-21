@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
+import { updatePageInfo } from 'config/metadata'
 import { getNhlScores } from 'helpers/api'
 
 class NhlContainer extends Component {
@@ -17,6 +18,11 @@ class NhlContainer extends Component {
     }
   }
   componentDidMount() {
+    const pageInfo = {
+      title: `${this.props.league.toUpperCase()} scores · uxscoreboard`,
+      desc: `live ${this.props.league.toUpperCase()} scores · uxscoreboard`
+    }
+    updatePageInfo(pageInfo)
     this.setState({ today: getTodaysDate() }, () => {
       this.makeRequest(this.props.routeParams.date)
     })

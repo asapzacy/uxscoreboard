@@ -22,8 +22,8 @@ class MlbContainer extends Component {
   }
   componentDidMount() {
     const pageInfo = {
-      title: `uxscoreboard | ${this.props.league.toUpperCase()}`,
-      desc: `uxscoreboard | live ${this.props.league.toUpperCase()} scores`
+      title: `${this.props.league.toUpperCase()} scores · uxscoreboard`,
+      desc: `live ${this.props.league.toUpperCase()} scores · uxscoreboard`
     }
     updatePageInfo(pageInfo)
     this.setState({ today: getTodaysDate() }, () => {
@@ -39,7 +39,7 @@ class MlbContainer extends Component {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
   }
-  makeRequest(dt = this.state.today) {
+  makeRequest(dt = '20171101') {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

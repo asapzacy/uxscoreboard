@@ -3,6 +3,7 @@ import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getNbaScores } from 'helpers/api'
 import { seasons } from 'data/league_dates'
+import { updatePageInfo } from 'config/metadata'
 import { ref } from 'config/firebase'
 
 class NbaContainer extends Component {
@@ -20,6 +21,11 @@ class NbaContainer extends Component {
     }
   }
   componentDidMount() {
+    const pageInfo = {
+      title: `${this.props.league.toUpperCase()} scores · uxscoreboard`,
+      desc: `live ${this.props.league.toUpperCase()} scores · uxscoreboard`
+    }
+    updatePageInfo(pageInfo)
     this.setState({ today: getTodaysDate()  }, () => {
       this.makeRequest(this.props.routeParams.date)
       this.getCache()

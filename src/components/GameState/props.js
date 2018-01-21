@@ -26,8 +26,8 @@ export const mlbGameStateProps = (game) => {
     playoffs: isPlayoffs ?
       {
         series: '',
-        game: 0,
-        maxGames: 7
+        game: game.seriesGameNumber,
+        maxGames: game.gamesInSeries
       } : {},
     isDoubleHeader,
     isPlayoffs,

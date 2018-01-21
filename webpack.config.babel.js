@@ -8,6 +8,7 @@ const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const PostcssAssetsPlugin = require('postcss-assets-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 const mqpacker = require('css-mqpacker')
 const cssnano = require('cssnano')
@@ -24,6 +25,10 @@ const PATHS = {
   app: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'dist')
 }
+
+const globalVariables = new webpack.DefinePlugin({
+  '__DEV__': !isProduction
+})
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
@@ -84,13 +89,16 @@ const compressionPlugin = new CompressionPlugin({
   minRatio: 0.8
 })
 
-const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
-  compress: { warnings: false, screw_ie8: true },
-  comments: false,
+const uglifyJsPlugin = new UglifyJsPlugin({
   sourceMap: true,
-  mangle: true,
-  minimize: true,
-  beautify: false
+  uglifyOptions: {
+    ecma: 8,
+    comments: false,
+    mangle: true,
+    minimize: true,
+    beautify: false,
+    compress: { warnings: false }
+  }
 })
 
 const productionPlugin = new webpack.DefinePlugin({
@@ -100,8 +108,8 @@ const productionPlugin = new webpack.DefinePlugin({
 })
 
 const sharedPlugins = [
+  globalVariables,
   htmlWebpackPlugin,
-  postcssPlugin,
   extractTextPlugin,
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 ]
@@ -117,13 +125,19 @@ const sharedCssLoaders = [
       importLoaders: 1
     }
   },
-  { loader: 'postcss-loader' },
+  {
+    loader: 'postcss-loader',
+    options: isProduction ? {
+      ident: 'postcss',
+      plugins: () => [ require('autoprefixer') ]
+    } : {}
+  },
   { loader: 'sass-loader' },
   {
     loader: 'sass-resources-loader',
     options: {
       resources: [
-        path.resolve(__dirname, './src/styles/_variables.scss')
+        path.resolve(PATHS.app, './styles/_variables.scss')
       ]
     }
   }
@@ -132,8 +146,7 @@ const sharedCssLoaders = [
 const base = {
   output: {
     path: PATHS.build,
-    // filename: isProduction ? 'assets/js/bundle.[hash:12].min.js' : 'assets/js/bundle.[hash:12].js',
-    filename: 'assets/js/bundle.[hash:12].js',
+    filename: isProduction ? 'assets/js/bundle.[hash:12].min.js' : 'assets/js/bundle.[hash:12].js',
     publicPath: '/'
   },
   module: {
@@ -206,6 +219,7 @@ const productionConfig = {
     productionPlugin,
     compressionPlugin,
     uglifyJsPlugin,
+    postcssPlugin,
     postcssAssetsPlugin,
     statsWriterPlugin,
     visualizerPlugin,

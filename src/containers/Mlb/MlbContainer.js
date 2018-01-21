@@ -60,8 +60,8 @@ class MlbContainer extends Component {
         })
         throw new Error(error)
       })
-      .then(() => this.refreshScores(dt, 30))
       .then(() => this.saveScores())
+      .then(() => this.refreshScores(dt, 30))
   }
   delay() {
     if (this.state.isLoading) {

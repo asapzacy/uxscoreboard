@@ -32,7 +32,12 @@ class NbaContainer extends Component {
     })
   }
   componentWillReceiveProps(nextProps) {
+    clearTimeout(this.refreshId)
     this.makeRequest(nextProps.routeParams.date)
+  }
+  componentWillUnmount() {
+    clearTimeout(this.delayId)
+    clearTimeout(this.refreshId)
   }
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
@@ -54,7 +59,7 @@ class NbaContainer extends Component {
             scores: data.games,
             year: data.year,
             date: dt
-          }, () => this.saveScores(data))
+          }, () => this.delay())
         })
         .catch((error) =>  {
           this.setState({
@@ -64,7 +69,20 @@ class NbaContainer extends Component {
           })
           throw new Error(error)
         })
+        .then(() => this.saveScores())
+        .then(() => this.refreshScores(dt, 30))
     }
+  }
+  delay() {
+    if (this.state.isLoading) {
+      this.delayId = setTimeout(() => {
+        this.setState({ isLoading: false })
+      }, 960)
+    }
+  }
+  refreshScores(dt, seconds) {
+    clearTimeout(this.refreshId)
+    this.refreshId = setTimeout(() => this.makeRequest(dt), seconds * 1000)
   }
   getCache() {
     ref.once('value', (snapshot) => {
@@ -75,9 +93,9 @@ class NbaContainer extends Component {
       }
     })
   }
-  saveScores(data) {
+  saveScores() {
     ref.child(`nba/scores/${this.state.date}`)
-      .set(data)
+      .set(this.state.scores)
       .then(() => console.log(`nba scores updated.. `))
       .then(() => this.getCache())
   }

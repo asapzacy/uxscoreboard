@@ -17,10 +17,8 @@
   flex:2;
 }
 .rightSide {
-  background:$real_white;
   padding:0.25em 0;
-  margin-right:5%;
-  border:1px solid $grey3;
+  margin:0 5%;
   border-radius:1px;
   flex-basis:70px;
 }
@@ -33,22 +31,24 @@
 }
 .name {
   margin-bottom:6px;
-  font-size:120%;
-  max-width:150px;
+  font-size:110%;
+  max-width:133px;
 }
 .name small {
-  font-size:88%;
+  font-size:100%;
+  letter-spacing:0px;
 }
 .record {
   display:table;
   margin-right:auto;
-  font-size:70%;
+  font-size:66.6%;
   font-weight:700;
   padding-top:3px;
+  font-weight:400;
 }
 .score {
   display:block;
-  font-size:140%;
+  font-size:125%;
   text-align:center;
   font-weight:lighter;
 }

@@ -17,7 +17,7 @@ const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league, hasLoad
           <span className={s.record}>{`(${ws}-${ls}${ts ? `-${ts}` : ''})`}</span>
         }
       </section>
-      <section className={s.rightSide}>
+      <section className={s.rightSide} style={{backgroundColor:score && '#fff'}}>
         { score &&
           <span className={s.score}>{score}</span>
         }

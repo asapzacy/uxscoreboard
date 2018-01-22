@@ -40,7 +40,7 @@
   background:$black;
   position:absolute;
   top:25px;left:14px;
-  transition:transform 0.22s;
+  transition:transform .44s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 .triggerTop {
   transform:translateY(-4px);
@@ -51,10 +51,10 @@
   composes:triggerLine;
 }
 .menuOpen .triggerTop {
-  transform:rotate(-135deg);
+  transform:rotate(135deg);
 }
 .menuOpen .triggerBottom {
-  transform:rotate(135deg);
+  transform:rotate(45deg);
 }
 
 /* -------  Menu  ------- */

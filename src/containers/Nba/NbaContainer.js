@@ -39,13 +39,12 @@ class NbaContainer extends Component {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
   }
-  async makeRequest(dt = this.state.today) {
+  makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
     if (this.state.cache[dt] && dt !== this.state.today) {
       const data = this.state.cache[dt]
-      const { games } = await data
       this.setState({
         isLoading: false,
         scores: data.games || [],
@@ -95,8 +94,10 @@ class NbaContainer extends Component {
     })
   }
   saveScores() {
+    const scores = { year: this.state.year, games: this.state.scores }
+    console.log(this.state)
     ref.child(`nba/scores/${this.state.date}`)
-      .set(this.state.scores)
+      .set(scores)
       .then(() => console.log(`nba scores updated.. `))
       .then(() => this.getCache())
   }

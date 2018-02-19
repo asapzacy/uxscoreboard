@@ -39,12 +39,12 @@ class NbaContainer extends Component {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
   }
-  makeRequest(dt = this.state.today) {
+  async makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
     if (this.state.cache[dt] && dt !== this.state.today) {
-      const data = await (this.state.cache[dt])
+      const data = this.state.cache[dt]
       const { games } = await data
       this.setState({
         isLoading: false,

@@ -6,6 +6,11 @@
   ],
   "plugins": [
     "react-hot-loader/babel",
-    "transform-react-stateless-component-name"
+    "transform-react-stateless-component-name",
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true
+    }]
   ]
 }

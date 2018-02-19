@@ -44,13 +44,14 @@ class NbaContainer extends Component {
       this.setState({ isValid: true })
     }
     if (this.state.cache[dt] && dt !== this.state.today) {
-      const data = this.state.cache[dt]
+      const data = await (this.state.cache[dt])
+      const { games } = await data
       this.setState({
         isLoading: false,
         scores: data.games || [],
         year: data.year,
         date: dt
-      })
+      }, () => this.saveScores())
     } else {
       getNbaScores(dt)
         .then((data) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { GameState, Team, Expand, Details } from 'components'
-import { DetailsContainer } from 'containers'
+import { DetailsContainer, ReactDinoContainer } from 'containers'
 import { VelocityTransitionGroup } from 'velocity-react'
 import { velocity_game } from 'config/velocity'
 import { mlbTeamProps, nbaTeamProps, nflTeamProps, nhlTeamProps } from '../Team/props'
@@ -16,69 +16,47 @@ const getGameStyles = (isHovered, isExpanded, hasLoaded) => ({
   color: hasLoaded && 'rgba(7,7,7,1)'
 })
 
-const Game = (props) => {
-  switch (props.league) {
-    case 'mlb': return <MlbGame {...props} />
-    case 'nba': return <NbaGame {...props} />
-    case 'nfl': return <NflGame {...props} />
-    case 'nhl': return <NhlGame {...props} />
+const Game = props => {
+  let awayTeamProps
+  let homeTeamProps
+  const { league, game } = props
+  const gameProps = nflGameStateProps(game)
+  if (league === 'mlb') {
+    awayTeamProps = mlbTeamProps(game, 'away', league)
+    homeTeamProps = mlbTeamProps(game, 'home', league)
+  } else if (league === 'nba') {
+    awayTeamProps = nbaTeamProps(game, 'visitor', league)
+    homeTeamProps = nbaTeamProps(game, 'home', league)
+  } else if (league === 'nfl') {
+    awayTeamProps = nflTeamProps(game, 'v', league)
+    homeTeamProps = nflTeamProps(game, 'h', league)
+  } else if (league === 'nhl') {
+    awayTeamProps = mlbTeamProps(game, 'away', league)
+    homeTeamProps = mlbTeamProps(game, 'home', league)
   }
+  const { isHovered, isExpanded, hasLoaded, showDetails, scaleGame } = props
+  return (
+    <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
+      <ReactDinoContainer
+        size={1}
+        seconds={1}
+        data={[gameProps, homeTeamProps, awayTeamProps]}
+        validateData={arr => arr.forEach(Object.keys.length)}
+        render={() => (
+          <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
+            <GameState {...gameProps} />
+            <Team {...awayTeamProps} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
+            <Team {...homeTeamProps} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
+            <Expand isExpanded={isExpanded} />
+          </span>
+        )} />
+      <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
+        { isExpanded && (
+          <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} />
+        )}
+      </VelocityTransitionGroup>
+    </li>
+  )
 }
 
 export default Game
-
-const NbaGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
-  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
-    <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
-      <GameState {...nbaGameStateProps(game)} />
-      <Team {...nbaTeamProps(game, 'visitor', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Team {...nbaTeamProps(game, 'home', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Expand isExpanded={isExpanded} />
-    </span>
-    <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
-    </VelocityTransitionGroup>
-  </li>
-)
-
-const NflGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
-  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
-    <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
-      <GameState {...nflGameStateProps(game)} />
-      <Team {...nflTeamProps(game, 'v', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Team {...nflTeamProps(game, 'h', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Expand isExpanded={isExpanded} />
-    </span>
-    <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
-    </VelocityTransitionGroup>
-  </li>
-)
-
-const MlbGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
-  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
-    <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
-      <GameState {...mlbGameStateProps(game)} />
-      <Team {...mlbTeamProps(game, 'away', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Team {...mlbTeamProps(game, 'home', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Expand isExpanded={isExpanded} />
-    </span>
-    <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
-    </VelocityTransitionGroup>
-  </li>
-)
-
-const NhlGame = ({ game, date, league, lastUpdated, isExpanded, showDetails, isHovered, scaleGame, hasLoaded, logoHasLoaded }) => (
-  <li className={s.item} style={getGameStyles(isHovered, isExpanded, hasLoaded)}>
-    <span className={s.topHalf} onClick={showDetails} onMouseEnter={scaleGame} onMouseLeave={scaleGame}>
-      <GameState {...nhlGameStateProps(game)} />
-      <Team {...nhlTeamProps(game, 'away', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Team {...nhlTeamProps(game, 'home', league)} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
-      <Expand isExpanded={isExpanded} />
-    </span>
-    <VelocityTransitionGroup className={isExpanded ? s.detailsExpanded : s.details} {...velocity_game}>
-      { isExpanded && <DetailsContainer game={game} date={date} league={league} lastUpdated={lastUpdated} /> }
-    </VelocityTransitionGroup>
-  </li>
-)

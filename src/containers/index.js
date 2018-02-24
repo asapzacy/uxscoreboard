@@ -1,41 +1,26 @@
 
 /* -------  base container  ------- */
-import MainContainer from './Main/MainContainer'
+export { MainContainer as default } from './Main/MainContainer'
 
 /* -------  page containers  ------- */
-import HomeContainer from './Home/HomeContainer'
-import AboutContainer from './About/AboutContainer'
-import NotFoundContainer from './NotFound/NotFoundContainer'
-import TestContainer from './Test/TestContainer'
+export { HomeContainer as default } from './Home/HomeContainer'
+export { AboutContainer as default } from './About/AboutContainer'
+export { NotFoundContainer as default } from './NotFound/NotFoundContainer'
+export { TestContainer as default } from './Test/TestContainer'
 
 /* -------  league containers  ------- */
-import MlbContainer from './Mlb/MlbContainer'
-import NbaContainer from './Nba/NbaContainer'
-import NflContainer from './Nfl/NflContainer'
-import NhlContainer from './Nhl/NhlContainer'
+export { MlbContainer as default } from './Mlb/MlbContainer'
+export { NbaContainer as default } from './Nba/NbaContainer'
+export { NflContainer as default } from './Nfl/NflContainer'
+export { NhlContainer as default } from './Nhl/NhlContainer'
 
 /* -------  scoreboard containers  ------- */
-import ScoreboardContainer from './Scoreboard/ScoreboardContainer'
-import DateContainer from './Date/DateContainer'
+export { ScoreboardContainer as default } from './Scoreboard/ScoreboardContainer'
+export { DateContainer as default } from './Date/DateContainer'
 
 /* -------  game containers  ------- */
-import GameContainer from './Game/GameContainer'
-import LogoContainer from './Logo/LogoContainer'
-import DetailsContainer from './Details/DetailsContainer'
+export { GameContainer as default } from './Game/GameContainer'
+export { LogoContainer as default } from './Logo/LogoContainer'
+export { DetailsContainer as default } from './Details/DetailsContainer'
 
-export {
-  MainContainer,
-  HomeContainer,
-  AboutContainer,
-  NotFoundContainer,
-  TestContainer,
-  MlbContainer,
-  NbaContainer,
-  NflContainer,
-  NhlContainer,
-  ScoreboardContainer,
-  DateContainer,
-  GameContainer,
-  LogoContainer,
-  DetailsContainer
-}
+export { ReactDinoContainer as default } from './ReactDino/ReactDinoContainer'

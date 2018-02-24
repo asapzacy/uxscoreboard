@@ -1,0 +1,30 @@
+
+/* -------  Spinner  ------- */
+
+$spinner_width: 3em;
+
+.spinner {
+  position: relative;
+  width: $spinner_width;
+  &::before {
+    content: '';
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid $grey6;
+    border-top-color: $black;
+    :global {
+      animation: spinner .6s linear infinite;
+    }
+    @include size(1.25em, 1.25em);
+    @include position(50%, 0, 50%, 0);
+  }
+}
+
+.input {
+  margin-left: -($spinner_width);
+  composes: spinner;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg) }
+}

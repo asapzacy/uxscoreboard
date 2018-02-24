@@ -1,63 +1,37 @@
 
 /* -------  base components  ------- */
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
-import Social from './Social/Social'
+export { Header as default } from './Header/Header'
+export { Footer as default } from './Footer/Footer'
+export { Social as default } from './Social/Social'
 
 /* -------  page components  ------- */
-import Home from './Home/Home'
-import About from './About/About'
-import NotFound from './NotFound/NotFound'
-import Test from './Test/Test'
+export { Home as default } from './Home/Home'
+export { About as default } from './About/About'
+export { NotFound as default } from './NotFound/NotFound'
+export { Test as default } from './Test/Test'
 
 /* -------  league components  ------- */
-import League from './League/League'
-import Loading from './Loading/Loading'
-import NoGames from './NoGames/NoGames'
+export { League as default } from './League/League'
+export { Loading as default } from './Loading/Loading'
+export { NoGames as default } from './NoGames/NoGames'
 
 /* -------  scoreboard components  ------- */
-import Scoreboard from './Scoreboard/Scoreboard'
-import Date from './Date/Date'
-import Event from './Event/Event'
+export { Scoreboard as default } from './Scoreboard/Scoreboard'
+export { Date as default } from './Date/Date'
+export { Event as default } from './Event/Event'
 
 /* -------  game components  ------- */
-import Game from './Game/Game'
-import GameState from './GameState/GameState'
-import Team from './Team/Team'
-import Logo from './Logo/Logo'
-import Expand from './Expand/Expand'
-import Details from './Details/Details'
-import Matchup from './Matchup/Matchup'
-import PanelMenu from './PanelMenu/PanelMenu'
-import BoxScore from './BoxScore/BoxScore'
-import Stats from './Stats/Stats'
-import Diamond from './Diamond/Diamond'
-import UpdateTime from './UpdateTime/UpdateTime'
+export { Game as default } from './Game/Game'
+export { GameState as default } from './GameState/GameState'
+export { Team as default } from './Team/Team'
+export { Logo as default } from './Logo/Logo'
+export { Expand as default } from './Expand/Expand'
+export { Details as default } from './Details/Details'
+export { Matchup as default } from './Matchup/Matchup'
+export { PanelMenu as default } from './PanelMenu/PanelMenu'
+export { BoxScore as default } from './BoxScore/BoxScore'
+export { Stats as default } from './Stats/Stats'
+export { Diamond as default } from './Diamond/Diamond'
+export { UpdateTime as default } from './UpdateTime/UpdateTime'
 
-export {
-  Header,
-  Footer,
-  Social,
-  Home,
-  About,
-  NotFound,
-  Test,
-  League,
-  Loading,
-  NoGames,
-  Scoreboard,
-  Date,
-  Event,
-  Game,
-  GameState,
-  Team,
-  Logo,
-  Expand,
-  Details,
-  Matchup,
-  PanelMenu,
-  BoxScore,
-  Stats,
-  Diamond,
-  UpdateTime
-}
+export { ReactDino as default } from './ReactDino/ReactDino'

@@ -12,7 +12,7 @@ const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 const isProduction = LAUNCH_COMMAND === 'build'
 process.env.BABEL_ENV = LAUNCH_COMMAND
 
-const HOST = process.env.HOST || 'localhost'
+const HOST = process.env.HOST || 'local.uxscoreboard.com'
 const DEV_PORT = process.env.DEV_PORT || 4444
 const API_PORT = process.env.API_PORT || 4545
 
@@ -156,7 +156,7 @@ const base = {
 const developmentConfig = {
   entry: [
     'react-hot-loader/patch',
-    `webpack-dev-server/client?http://localhost:${DEV_PORT}/`,
+    `webpack-dev-server/client?http://${HOST}:${DEV_PORT}/`,
     'webpack/hot/only-dev-server',
     PATHS.app
   ],
@@ -170,22 +170,23 @@ const developmentConfig = {
     historyApiFallback: true,
     host: HOST,
     port: DEV_PORT,
-    // disableHostCheck: true,
-    // watchOptions: {
-    //   ignored: /node_modules/,
-    //   aggregateTimeout: 300,
-    //   poll: 1000
-    // },
-    // headers: {
-    //   'Access-Control-Allow-Origin': '*'
-    // },
-    // allowedHosts: [
-    //   'localhost',
-    //   '.'
-    // ],
+    disableHostCheck: true,
+    watchOptions: {
+      ignored: /node_modules/,
+      aggregateTimeout: 300,
+      poll: 1000
+    },
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    allowedHosts: [
+      'localhost',
+      'uxscoreboard',
+      '.'
+    ],
     proxy: {
       '/api/**': {
-        target: `http://localhost:${API_PORT}`
+        target: `http://${HOST}:${API_PORT}`
       }
     }
   },
@@ -217,12 +218,12 @@ const productionConfig = {
 // const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 // const statsWriterPlugin = new StatsWriterPlugin({
-//   filename: '../stats/bundle.json',
+//   filename: path.join(PATHS.app, ('./stats/bundle.json',
 //   fields: null,
 //   stats: { chunkModules: true }
 // })
 // const visualizerPlugin = new VisualizerPlugin({
-//   filename: '../stats/bundle.html'
+//   filename: path.join(PATHS.app, ('./stats/bundle.html')
 // })
 // const bundleAnalyzerPlugin = new BundleAnalyzerPlugin()
 // productionConfig.plugins.push(

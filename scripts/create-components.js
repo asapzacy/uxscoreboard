@@ -49,7 +49,7 @@ const PATHS = {
 const writeFile = (filename, text) => {
   fs.writeFileSync(filename, text, 'utf-8', (err) => {
     if (err) throw err
-    console.log(`${filename} was successfully created!`) // eslint-disable-line
+    return
   })
 }
 
@@ -67,7 +67,7 @@ export default ${filename}
 `
 }
 
-const createRcScssText = filename => {
+const createRcSassText = filename => {
   return `
 /* -------  ${filename}  ------- */
 

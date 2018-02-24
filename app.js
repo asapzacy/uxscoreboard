@@ -5,14 +5,14 @@ const compression = require('compression')
 const cors = require('cors')
 const axios = require('axios')
 const parseString = require('xml2js').parseString
-const port = process.env.PORT || 9090
+const port = process.env.PORT || 4545
 
 const app = express()
 
 app.use(compression())
 app.use(cors())
 
-app.use(express.static('dist'))
+app.use(express.static('./dist'))
 
 const parseDate = (dt) => {
   const yyyy = dt.slice(0, 4)
@@ -73,7 +73,7 @@ app.get('/api/nfl/scores/week/:week', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve('dist/index.html'))
+  res.sendFile(path.resolve('./dist/index.html'))
 })
 
 app.listen(port, () => {

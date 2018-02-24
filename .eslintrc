@@ -1,31 +1,32 @@
 {
   "parser": "babel-eslint",
-  "env": {
-    "es6": true,
-    "browser": true
-  },
   "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
+    "ecmaVersion": 8,
     "ecmaFeatures": {
       "jsx": true,
       "experimentalObjectRestSpread": true
-    }
+    },
+    "sourceType": "module"
   },
-  "plugins": [ "react" ],
-  "extends": [ "eslint:recommended", "plugin:react/recommended", "standard" ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "__DEV__": true
+  },
+  "plugins": ["react"],
+  "extends": ["standard", "standard-react", "plugin:react/recommended"],
   "rules": {
-    "no-console": [ 2, { allow: [ "warn", "error" ] }],
-    "semi": [ 2, "never" ],
-    "no-extra-semi": 2,
-    "jsx-quotes": [ 2, "prefer-single" ],
-    "space-before-function-paren": [ "error", "never" ],
-    "react/jsx-boolean-value": [ 2, "always" ],
-    "react/jsx-closing-bracket-location": [ 2, { selfClosing: "after-props", nonEmpty: "after-props" }],
-    "react/jsx-curly-spacing": [ 2, "never", { "allowMultiline": false }],
-    "react/jsx-max-props-per-line": [ 2, { maximum: 3 }],
-    "react/jsx-no-literals": 2,
-    "react/self-closing-comp": 2,
-    "react/sort-comp": 2
+    "react/prop-types": "off",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
   }
 }

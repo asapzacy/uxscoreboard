@@ -1,74 +1,74 @@
 
 /* -------  Home  ------- */
 .container {
-  text-align:center;
-  flex-direction:column;
-  composes:flexy from 'styles/_utils.scss'
+  text-align: center;
+  flex-direction: column;
+  composes: flexy from 'styles/_utils.scss'
 }
 .uxscoreboard {
-  display:flex;
-  flex:1;
-  flex-direction:column;
-  justify-content:center;
-  margin:2.5% 0 -2.5%;
-  width:90%;
-  letter-spacing:0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5% 0 -2.5%;
+  width: 90%;
+  letter-spacing: 0;
 }
 .name {
-  font-size:2.1em;
-  text-shadow:3px 0px 0px $real_white;
+  font-size: 2.1em;
+  text-shadow: 3px 0px 0px $real_white;
 }
 .description {
-  font-size:1.15em;
-  line-height:1.15em;
-  color:$grey6;
+  font-size: 1.15em;
+  line-height: 1.15em;
+  color: $grey6;
 }
 .menu {
-  width:80%;
-  flex:1;
-  font-size:1.2em;
+  width: 80%;
+  flex: 1;
+  font-size: 1.2em;
 }
 .list {
-  display:flex;
-  flex-flow:row wrap;
-  justify-content:center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-@media only screen and (min-width:$medium) {
+@media only screen and (min-width: $mq_medium) {
   /* -------  Home  ------- */
-  @media (orientation:portrait) {
+  @media (orientation: portrait) {
     .uxscoreboard {
-      font-size:1.6em;
+      font-size: 1.6em;
     }
   }
-  @media (orientation:landscape) {
+  @media (orientation: landscape) {
     .uxscoreboard {
-      font-size:1.16em;
-      margin-bottom:2.5%;
+      font-size: 1.16em;
+      margin-bottom: 2.5%;
     }
   }
   .menu {
-    width:75%;
+    width: 75%;
   }
 }
 
-@media only screen and (min-width:$large) {
+@media only screen and (min-width: $mq_large) {
   /* -------  Home  ------- */
   .uxscoreboard {
-    font-size:1.6em;
+    font-size: 1.6em;
   }
 }
 
-@media only screen and (min-width:$xlarge) {
+@media only screen and (min-width: $mq_xlarge) {
   /* -------  Home  ------- */
   .uxscoreboard {
-    font-size:2em;
+    font-size: 2em;
   }
 }
 
-@media only screen and (min-width:$xxlarge) {
+@media only screen and (min-width: $mq_xxlarge) {
   /* -------  Home  ------- */
   .uxscoreboard {
-    font-size:2.2em;
+    font-size: 2.2em;
   }
 }

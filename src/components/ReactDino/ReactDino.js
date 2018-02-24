@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { Spinner } from 'components'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import s from './PreComponent.scss'
+import s from './ReactDino.scss'
 
 const ReactDino = ({ alignTop, size, children }) => {
   return (

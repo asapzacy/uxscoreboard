@@ -17,11 +17,11 @@ const renderApp = Component => {
   )
 }
 
-renderApp(AppContainer)
+renderApp(MainContainer)
 
 if (module.hot) {
   module.hot.accept('containers', () => {
-    renderApp(AppContainer)
+    renderApp(MainContainer)
   })
 }
 

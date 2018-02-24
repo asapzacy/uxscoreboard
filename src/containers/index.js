@@ -22,3 +22,5 @@ export { default as DateContainer } from './Date/DateContainer'
 export { default as GameContainer } from './Game/GameContainer'
 export { default as LogoContainer } from './Logo/LogoContainer'
 export { default as DetailsContainer } from './Details/DetailsContainer'
+
+export { default as ReactDinoContainer } from './ReactDino/ReactDinoContainer'

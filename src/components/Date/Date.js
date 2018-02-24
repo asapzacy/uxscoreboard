@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 import moment from 'moment'
 import ArrowBack from 'react-icons/lib/io/ios-arrow-back'
 import ArrowForward from 'react-icons/lib/io/ios-arrow-forward'
@@ -26,9 +26,9 @@ const Date = ({ width, ...props }) => (
     { props.league === 'nfl' &&
       <menu className={s.list} style={{justifyContent:'center'}}>
         <li className={s.item}>
-          <Link className={s.mainLink} to={`/nfl/scores/week/1`}>
+          {/* <Link className={s.mainLink} to={`/nfl/scores/week/1`}>
             <span className={s.text}>{'week 1'}</span>
-          </Link>
+          </Link> */}
         </li>
       </menu>
     }

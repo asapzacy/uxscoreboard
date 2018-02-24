@@ -33,3 +33,6 @@ export { default as BoxScore } from './BoxScore/BoxScore'
 export { default as Stats } from './Stats/Stats'
 export { default as Diamond } from './Diamond/Diamond'
 export { default as UpdateTime } from './UpdateTime/UpdateTime'
+
+export { default as ReactDino } from './ReactDino/ReactDino'
+export { default as Spinner } from './Spinner/Spinner'

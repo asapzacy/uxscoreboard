@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Header, Footer } from 'components'
+import { NbaContainer } from 'containers'
 import WebFont from 'webfontloader'
 import s from './Main.scss'
 
@@ -75,11 +76,11 @@ class MainContainer extends Component {
     const appHeight = { height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%' }
     return (
       <div className={s.outerContainer} style={appHeight}>
-        <Header triggerMenu={this.triggerMenu} {...this.state} />
+        {/* <Header triggerMenu={this.triggerMenu} {...this.state} /> */}
         <main className={s.innerContainer}>
-          {this.props.children}
+          <NbaContainer />
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }

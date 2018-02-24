@@ -1,0 +1,41 @@
+
+/* -------  Mix-ins  ------- */
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin color($color, $background) {
+  color: $color;
+  background-color: $background;
+}
+
+@mixin position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin flex($dir, $wrap, $align, $justify) {
+  display: flex;
+  flex-flow: $dir $wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}

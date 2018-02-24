@@ -1,73 +1,73 @@
 
 /* -------  Date  ------- */
 .menu {
-  height:3.5em;
-  margin:1em 0 0.25em;
-  background:$grey1;
+  height: 3.5em;
+  margin: 1em 0 0.25em;
+  background: $grey1;
 }
 .list {
-  height:100%;
-  display:flex;
-  justify-content:space-between;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .item {
-  font-size:1.06em;
-  font-weight:400;
-  display:flex;
-  align-items:stretch;
+  font-size: 1.06em;
+  font-weight: 400;
+  display: flex;
+  align-items: stretch;
 }
 .arrow {
-  font-size:1.12em;
-  padding-bottom:1px;
-  composes:item;
+  font-size: 1.12em;
+  padding-bottom: 1px;
+  composes: item;
 }
 .link {
-  display:flex;
-  align-items:center;
-  padding:0 0.66em;
+  display: flex;
+  align-items: center;
+  padding: 0 0.66em;
   span {
-    padding-bottom: 2px;
+    padding-bottom:  2px;
   }
 }
 .mainLink {
-  composes:link;
+  composes: link;
 }
 .text {
-  white-space:nowrap;
+  white-space: nowrap;
 }
 .text::after {
-  content:'';
-  display:block;
-  height:1px;
-  background:$real_white;
+  content: '';
+  display: block;
+  height: 1px;
+  background: $real_white;
 }
 
 
-@media only screen and (min-width:$medium) {
+@media only screen and (min-width: $mq_medium) {
   .link {
-    opacity:0.75;
-    transition:opacity 0.22s;
+    opacity: 0.75;
+    transition: opacity 0.22s;
   }
   .link:hover {
-    opacity:1;
+    opacity: 1;
   }
   .mainLink {
-    opacity:1;
-    font-size:110%;
+    opacity: 1;
+    font-size: 110%;
   }
   .item {
-    font-size:1.12em;
+    font-size: 1.12em;
   }
   .arrow {
-    font-size:1.18em;
+    font-size: 1.18em;
   }
 }
 
-@media only screen and (min-width:$xlarge) {
+@media only screen and (min-width: $mq_xlarge) {
   .item {
-    font-size:1.18em;
+    font-size: 1.18em;
   }
   .arrow {
-    font-size:1.24em;
+    font-size: 1.24em;
   }
 }

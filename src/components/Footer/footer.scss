@@ -1,16 +1,16 @@
 
 /* -------  Footer  ------- */
 .container {
-  width:100%;
-  flex:0 0 2.5em;
-  font-size:2.4em;
-  color:$black;;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  width: 100%;
+  flex: 0 0 2.5em;
+  font-size: 2.4em;
+  color: $black;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media only screen and (min-width:$large) {
+@media only screen and (min-width: $mq_large) {
   .container {
-    font-size:3em;
+    font-size: 3em;
   }
 }

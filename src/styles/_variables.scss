@@ -1,6 +1,7 @@
 
-/* -------  colors  ------- */
-/* ------------------------ */
+/**
+ * Colors
+ */
 $real_white: #ffffff;
 $white:      #f5f5f5;
 $grey1:      #e0e0e0;
@@ -14,10 +15,12 @@ $real_black: #000000;
 $red:        #ba0021;
 $green:      #00ba21;
 
-
-/* ---  media queries  ---- */
-/* ------------------------ */
-$medium:667px;
-$large:999px;
-$xlarge:1331px;
-$xxlarge:1663px;
+/**
+ * Media Queries
+ */
+$mq_xsmall:     335px;
+$mq_small:      667px;
+$mq_medium:     999px;
+$mq_large:      1331px;
+$mq_xlarge:     1690px;
+$mq_xxlarge:    2022px;

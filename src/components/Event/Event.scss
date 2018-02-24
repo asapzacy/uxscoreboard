@@ -1,27 +1,27 @@
 
 /* -------  Event  ------- */
 .event {
-  width:90%;
-  height:8em;
-  margin-top:6vh;
+  width: 90%;
+  height: 8em;
+  margin-top: 6vh;
 }
 
-@media only screen and (min-width:$medium) {
+@media only screen and (min-width: $mq_medium) {
   .event {
-    height:9em;
-    margin-top:9vh;
+    height: 9em;
+    margin-top: 9vh;
   }
 }
 
-@media only screen and (min-width:$large) {
+@media only screen and (min-width: $mq_large) {
   .event {
-    height:10em;
-    margin-top:12vh;
+    height: 10em;
+    margin-top: 12vh;
   }
 }
-@media only screen and (min-width:$xlarge) {
+@media only screen and (min-width: $mq_xlarge) {
   .event {
-    height:11em;
-    margin-top:15vh;
+    height: 11em;
+    margin-top: 15vh;
   }
 }

@@ -66,13 +66,13 @@ class ScoreboardContainer extends Component {
     let img = ''
     if (this.state.seasonState.isPlayoffs) {
       if (this.state.seasonState.isFinals) {
-        img = `url(/assets/img/${this.props.league}/other/finals.svg)`
+        img = `url(/assets/public/img/${this.props.league}/other/finals.svg)`
       } else {
-        img = `url(/assets/img/${this.props.league}/other/playoffs.svg)`
+        img = `url(/assets/public/img/${this.props.league}/other/playoffs.svg)`
       }
     }
     if (this.state.seasonState.isAllStar) {
-      img = `url(/assets/img/${this.props.league}/other/all-star-game.svg)`
+      img = `url(/assets/public/img/${this.props.league}/other/all-star-game.svg)`
     }
     this.setState({ bgImg: img })
   }

@@ -39,19 +39,19 @@
   composes: link;
 }
 .mlb::after {
-  background-image: url('/assets/icons/baseball_light.svg')
+  background-image: url('/assets/public/icons/baseball_light.svg')
 }
 .mls::after {
-  background-image: url('/assets/icons/soccer_light.svg')
+  background-image: url('/assets/public/icons/soccer_light.svg')
 }
 .nba::after {
-  background-image: url('/assets/icons/basketball_light.svg')
+  background-image: url('/assets/public/icons/basketball_light.svg')
 }
 .nfl::after {
-  background-image: url('/assets/icons/football_light.svg')
+  background-image: url('/assets/public/icons/football_light.svg')
 }
 .nhl::after {
-  background-image: url('/assets/icons/hockey_light.svg');
+  background-image: url('/assets/public/icons/hockey_light.svg');
   top: 20%;
   bottom: 20
 }

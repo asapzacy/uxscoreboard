@@ -1,7 +1,7 @@
 import React from 'react'
-import { Matchup, PanelMenu, BoxScore, Stats, Diamond, Leaders, UpdateTime } from 'components'
+import { Matchup, PanelMenu, Boxscore, Stats, Diamond, Leaders, UpdateTime } from 'components'
 import { mlbMatchupProps, nbaMatchupProps, nhlMatchupProps } from '../Matchup/props'
-import { mlbBoxScoreProps, nbaBoxScoreProps, nhlBoxScoreProps } from '../BoxScore/props'
+import { mlbBoxscoreProps, nbaBoxscoreProps, nhlBoxscoreProps } from '../Boxscore/props'
 import { mlbDiamondProps } from '../Diamond/props'
 import { nbaStatsProps } from '../Stats/props'
 import s from './Details.scss'
@@ -22,9 +22,9 @@ const MlbDetails = ({ game, date, league, panels, activePanel, switchPanel, last
     <Matchup {...mlbMatchupProps(game, date)} />
     <PanelMenu panels={panels} activePanel={activePanel} switchPanel={switchPanel} />
     { activePanel === 'box score' &&
-      <BoxScore {...mlbBoxScoreProps(game, league)}>
+      <Boxscore {...mlbBoxscoreProps(game, league)}>
         <Diamond {...mlbDiamondProps(game)} />
-      </BoxScore>
+      </Boxscore>
     }
     <UpdateTime lastUpdated={lastUpdated} />
   </section>
@@ -35,7 +35,7 @@ const NbaDetails = ({ game, date, league, panels, activePanel, switchPanel, last
     <Matchup {...nbaMatchupProps(game, date)} />
     <PanelMenu panels={panels} activePanel={activePanel} switchPanel={switchPanel} />
     { activePanel === 'box score' &&
-      <BoxScore {...nbaBoxScoreProps(game, league)} />
+      <Boxscore {...nbaBoxscoreProps(game, league)} />
     }
     { activePanel === 'team stats' &&
       <Stats {...nbaStatsProps(game)} />
@@ -58,7 +58,7 @@ const NflDetails = ({ lastUpdated }) => (
 const NhlDetails = ({ game, date, league, lastUpdated }) => (
   <section className={s.container}>
     <Matchup {...nhlMatchupProps(game, date)} />
-    <BoxScore {...nhlBoxScoreProps(game, league)} />
+    <Boxscore {...nhlBoxscoreProps(game, league)} />
     <UpdateTime lastUpdated={lastUpdated} />
   </section>
 )

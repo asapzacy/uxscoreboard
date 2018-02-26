@@ -1,4 +1,4 @@
-import { formatTimezone } from 'helpers/utils'
+import { formatTimezone } from 'utils/helpers'
 
 //  mlb game state props --> GameState component
 export const mlbGameStateProps = (game) => {

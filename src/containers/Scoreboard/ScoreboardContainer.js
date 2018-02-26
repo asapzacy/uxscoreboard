@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Scoreboard } from 'components'
 import { seasons } from 'data/league_dates'
-import { checkDay, formatLastUpdatedString } from 'helpers/utils'
+import { checkDay, formatLastUpdatedString } from 'utils/helpers'
 
 class ScoreboardContainer extends Component {
   constructor() {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { League } from 'components'
-import { getTodaysDate, isValidDate } from 'helpers/utils'
+import { getTodaysDate } from 'utils/helpers'
 import { updatePageInfo } from 'config/metadata'
-import { getNflScores } from 'helpers/api'
+import { getNflScores } from 'utils/api'
 
 class NflContainer extends Component {
   constructor() {

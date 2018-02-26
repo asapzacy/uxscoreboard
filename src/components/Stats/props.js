@@ -1,4 +1,4 @@
-import { shortenTeamName } from 'helpers/utils'
+import { shortenTeamName } from 'utils/helpers'
 
 //  nba stats props --> Stats component
 export const nbaStatsProps = (game) => {
@@ -7,7 +7,7 @@ export const nbaStatsProps = (game) => {
   const inGame = game.period.current
   const empty = ['', '']
   return {
-    'teams': [ shortenTeamName(game.visitor.nickname), shortenTeamName(game.home.nickname)],
+    'teams': [ shortenTeamName(game.visitor.nickname), shortenTeamName(game.home.nickname) ],
     'Points': inGame ? [ awayStats.points, homeStats.points ] : empty,
     'Field-Goal %': inGame ? [ `${awayStats.field_goals_percentage}%`, `${homeStats.field_goals_percentage}%` ] : empty,
     '3-Point %': inGame ? [ `${awayStats.three_pointers_percentage}%`, `${homeStats.three_pointers_percentage}%` ] : empty,
@@ -20,6 +20,6 @@ export const nbaStatsProps = (game) => {
     'Blocks': inGame ? [ awayStats.blocks, homeStats.blocks ] : empty,
     'Fouls': inGame ? [ awayStats.fouls, homeStats.fouls ] : empty,
     'Steals': inGame ? [ awayStats.steals, homeStats.steals ] : empty,
-    'Turnovers': inGame ? [ awayStats.turnovers, homeStats.turnovers] : empty
+    'Turnovers': inGame ? [ awayStats.turnovers, homeStats.turnovers ] : empty
   }
 }

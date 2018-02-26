@@ -1,5 +1,5 @@
 import React from 'react'
-import { createDiamond } from 'helpers/baseball'
+import { createDiamond } from 'utils/baseball'
 import s from './BaseballField.scss'
 
 const BaseballField = ({ offense }) => (

@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
-import { Header, Footer } from 'components'
-import { NbaContainer } from 'containers'
+import { Switch, Route } from 'react-router-dom'
 import WebFont from 'webfontloader'
+
+import { Header, Footer } from 'components'
+import { HomeContainer, NbaContainer } from 'containers'
 import s from './Main.scss'
 
 class MainContainer extends Component {
-  constructor() {
-    super()
-    this.state = {
-      screenWidth: 0,
-      menuHeight: 0,
-      isMenuOpen: false
-    }
-    this.triggerMenu = this.triggerMenu.bind(this)
-    this.hideMenu = this.hideMenu.bind(this)
-    this.getScreenWidth = this.getScreenWidth.bind(this)
-}
+  state = {
+    screenWidth: 0,
+    menuHeight: 0,
+    isMenuOpen: false
+  }
   componentDidMount() {
     this.loadFonts()
     this.getScreenWidth()
@@ -24,14 +20,14 @@ class MainContainer extends Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.getScreenWidth)
   }
-  loadFonts() {
+  loadFonts = () => {
     WebFont.load({
       google: { families: [ 'Comfortaa:300,400,700' ] },
       active() { document.getElementById('app').classList.add('ready') },
       classes: false
     })
   }
-  getScreenWidth() {
+  getScreenWidth = () => {
     this.setState({ 'screenWidth': window.innerWidth }, () => {
       const header = document.querySelector('header')
       const navHeight = header.querySelector('nav').scrollHeight
@@ -48,7 +44,7 @@ class MainContainer extends Component {
       }
     })
   }
-  triggerMenu() {
+  triggerMenu = () => {
     const header = document.querySelector('header')
     const navHeight = header.querySelector('nav').scrollHeight
     if (this.state.isMenuOpen) {
@@ -61,7 +57,7 @@ class MainContainer extends Component {
       menuHeight: !this.state.isMenuOpen ? navHeight : 0
     })
   }
-  hideMenu(event) {
+  hideMenu = event => {
     let el = event.target || event.srcElement
     while (el) {
       if (el.nodeName === 'A') {
@@ -73,14 +69,19 @@ class MainContainer extends Component {
   }
   render() {
     const { isMenuOpen, menuHeight } = this.state
-    const appHeight = { height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%' }
+    const styles = {
+      container: {
+        height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%'
+      }
+    }
     return (
-      <div className={s.outerContainer} style={appHeight}>
-        {/* <Header triggerMenu={this.triggerMenu} {...this.state} /> */}
+      <div className={s.outerContainer} style={styles.container}>
+        <Header triggerMenu={this.triggerMenu} {...this.state} />
         <main className={s.innerContainer}>
-          <NbaContainer />
+          <Switch>
+            <Route exact path={'/'} component={HomeContainer} />
+          </Switch>
         </main>
-        {/* <Footer /> */}
       </div>
     )
   }

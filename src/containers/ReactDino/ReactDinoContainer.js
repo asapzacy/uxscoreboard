@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react'
-import { PreComponent } from 'components'
+import React, { Component } from 'react'
+import { ReactDino } from 'components'
 import PropTypes from 'prop-types'
 
 class ReactDinoContainer extends Component {
@@ -38,7 +38,6 @@ class ReactDinoContainer extends Component {
     }, this.props.seconds * 1000)
   }
   render() {
-    console.log('rendered')
     if (this.state.isLoading) {
       return (
         <ReactDino {...this.props}>

@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
 import { League } from 'components'
-import { getTodaysDate, isValidDate } from 'helpers/utils'
-import { getNbaScores } from 'helpers/api'
+import { getTodaysDate, isValidDate } from 'utils/helpers'
+import { getNbaScores } from 'utils/api'
 import { seasons } from 'data/league_dates'
 import { updatePageInfo } from 'config/metadata'
 import { ref } from 'config/firebase'
 
 class NbaContainer extends Component {
-  constructor() {
-    super()
-    this.state = {
-      isLoading: true,
-      isValid: false,
-      isError: false,
-      scores: {},
-      cache: {},
-      year: '',
-      date: '',
-      today: ''
-    }
+  static defaultProps = { league: 'nba' }
+  state = {
+    isLoading: true,
+    isValid: false,
+    isError: false,
+    scores: {},
+    cache: {},
+    year: '',
+    date: '',
+    today: ''
   }
   componentDidMount() {
     const pageInfo = {
@@ -26,20 +24,20 @@ class NbaContainer extends Component {
       desc: `live ${this.props.league.toUpperCase()} scores · uxscoreboard`
     }
     updatePageInfo(pageInfo)
-    this.setState({ today: getTodaysDate()  }, () => {
-      this.makeRequest(this.props.routeParams.date)
+    this.setState({ today: getTodaysDate() }, () => {
+      this.makeRequest(this.props.today)
       this.getCache()
     })
   }
   componentWillReceiveProps(nextProps) {
     clearTimeout(this.refreshId)
-    this.makeRequest(nextProps.routeParams.date)
+    this.makeRequest(nextProps.date)
   }
   componentWillUnmount() {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
   }
-  makeRequest(dt = this.state.today) {
+  makeRequest = (dt = this.state.today) => {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
@@ -73,18 +71,20 @@ class NbaContainer extends Component {
         .then(() => this.refreshScores(dt, 30))
     }
   }
-  delay() {
+  delay = () => {
     if (this.state.isLoading) {
       this.delayId = setTimeout(() => {
         this.setState({ isLoading: false })
       }, 960)
     }
   }
-  refreshScores(dt, seconds) {
-    clearTimeout(this.refreshId)
-    this.refreshId = setTimeout(() => this.makeRequest(dt), seconds * 1000)
+  refreshScores = (dt, seconds) => {
+    if (!__DEV__) {
+      clearTimeout(this.refreshId)
+      this.refreshId = setTimeout(() => this.makeRequest(dt), seconds * 1000)
+    }
   }
-  getCache() {
+  getCache = () => {
     ref.once('value', (snapshot) => {
       if (snapshot.hasChild('nba')) {
         this.setState({
@@ -93,9 +93,8 @@ class NbaContainer extends Component {
       }
     })
   }
-  saveScores() {
+  saveScores = () => {
     const scores = { year: this.state.year, games: this.state.scores }
-    console.log(this.state)
     ref.child(`nba/scores/${this.state.date}`)
       .set(scores)
       .then(() => console.log(`nba scores updated.. `))
@@ -105,7 +104,5 @@ class NbaContainer extends Component {
     return <League {...this.state} league={this.props.league} />
   }
 }
-
-NbaContainer.defaultProps = { league: 'nba' }
 
 export default NbaContainer

@@ -1,5 +1,5 @@
 import React from 'react'
-import { formatDateStr } from 'helpers/utils'
+import { formatDateStr } from 'utils/helpers'
 import s from './Matchup.scss'
 
 const Matchup = ({ awayTeam, homeTeam, date, location, venue }) => (

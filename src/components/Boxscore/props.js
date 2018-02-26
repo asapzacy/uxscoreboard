@@ -1,4 +1,4 @@
-import { shortenTeamName } from 'helpers/utils'
+import { shortenTeamName } from 'utils/helpers'
 
 //  mlb box score props --> Boxscore component
 export const mlbBoxscoreProps = (game, league) => {

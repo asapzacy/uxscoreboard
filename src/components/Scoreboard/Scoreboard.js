@@ -1,7 +1,7 @@
 import React from 'react'
 import { NoGames, Event } from 'components'
 import { GameContainer, DateContainer } from 'containers'
-import { getNbaGameDetails } from 'helpers/api'
+import { getNbaGameDetails } from 'utils/api'
 import { VelocityTransitionGroup } from 'velocity-react'
 import 'velocity-animate/velocity.ui'
 import { velocity_scoreboard } from 'config/velocity'

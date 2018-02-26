@@ -1,5 +1,5 @@
 import React from 'react'
-import { periodSuffix } from 'helpers/utils'
+import { periodSuffix } from 'utils/helpers'
 import s from './GameState.scss'
 
 const GameState = (props) => {

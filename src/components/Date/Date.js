@@ -24,7 +24,7 @@ const Date = ({ width, ...props }) => (
       </menu>
     }
     { props.league === 'nfl' &&
-      <menu className={s.list} style={{justifyContent:'center'}}>
+      <menu className={s.list} style={{justifyContent: 'center'}}>
         <li className={s.item}>
           {/* <Link className={s.mainLink} to={`/nfl/scores/week/1`}>
             <span className={s.text}>{'week 1'}</span>
@@ -45,12 +45,13 @@ function Day({ date, today, league, diff, isArrow }) {
   const dayOfTheWeek = today === url ? 'today' : isMainLink ? day.format('dddd') :  day.format('ddd')
   const formattedDate = `${dayOfTheWeek}, ${day.format('MMM D')}`.toLowerCase()
   const title = `${league.toUpperCase()} scores - ${day.format('MMMM D, YYYY')} | uxscoreboard`
-  return (
-    <Link className={isMainLink ? s.mainLink : s.link} to={`/${league}/scores/${url}`} title={title}>
-      { !isArrow
-        ? <span className={isMainLink ? s.text : ''}>{formattedDate}</span>
-        : diff < 0 ? <ArrowBack /> : <ArrowForward />
-      }
-    </Link>
-  )
+  return null
+  // (
+    // <Link className={isMainLink ? s.mainLink : s.link} to={`/${league}/scores/${url}`} title={title}>
+    //   { !isArrow
+    //     ? <span className={isMainLink ? s.text : ''}>{formattedDate}</span>
+    //     : diff < 0 ? <ArrowBack /> : <ArrowForward />
+    //   }
+    // </Link>
+  // )
 }

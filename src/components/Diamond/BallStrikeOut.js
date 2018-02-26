@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBsoCount } from 'helpers/baseball'
+import { createBsoCount } from 'utils/baseball'
 import s from './BallStrikeOut.scss'
 
 const BallStrikeOut = ({ label, filled, max, state }) => (

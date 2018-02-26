@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { League } from 'components'
-import { getTodaysDate, isValidDate } from 'helpers/utils'
-import { getMlbScores } from 'helpers/api'
+import { getTodaysDate, isValidDate } from 'utils/helpers'
+import { getMlbScores } from 'utils/api'
 import { updatePageInfo } from 'config/metadata'
 import { ref } from 'config/firebase'
 

@@ -1,10 +1,12 @@
 
 /* -------  Home  ------- */
+
 .container {
   text-align: center;
   flex-direction: column;
   composes: flexy from 'styles/_utils.scss'
 }
+
 .uxscoreboard {
   display: flex;
   flex: 1;
@@ -14,20 +16,24 @@
   width: 90%;
   letter-spacing: 0;
 }
+
 .name {
   font-size: 2.1em;
-  text-shadow: 3px 0px 0px $real_white;
+  text-shadow: 3px 0px 0px $white;
 }
+
 .description {
   font-size: 1.15em;
   line-height: 1.15em;
   color: $grey6;
 }
+
 .menu {
   width: 80%;
   flex: 1;
   font-size: 1.2em;
 }
+
 .list {
   display: flex;
   flex-flow: row wrap;

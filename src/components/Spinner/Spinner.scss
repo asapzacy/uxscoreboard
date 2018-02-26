@@ -10,8 +10,8 @@ $spinner_width: 3em;
     content: '';
     margin: auto;
     border-radius: 50%;
-    border: 1px solid $grey6;
-    border-top-color: $black;
+    border: 1px solid $grey1;
+    border-top-color: $offblack;
     :global {
       animation: spinner .6s linear infinite;
     }

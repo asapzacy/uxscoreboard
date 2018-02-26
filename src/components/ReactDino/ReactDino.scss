@@ -1,6 +1,37 @@
 
-/* -------  ReactDino  ------- */
+/* -------  PreComponent  ------- */
 
 .container {
-  background: mediumseagreen;
+  overflow: auto;
+  background-color: $offwhite;
+  opacity: 1;
+  z-index: 11;
+  @include position(0, 0, 0, 0);
+  composes: fullSize flexyCentered from 'styles/_utils.scss';
+}
+
+.alignTop {
+  align-items: flex-start;
+  padding-top: 15%;
+  composes: container;
+}
+
+:global {
+  .fade-enter {
+    opacity: 0.01;
+  }
+
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  .fade-leave {
+    opacity: 1;
+  }
+
+  .fade-leave.fade-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
 }

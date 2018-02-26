@@ -1,42 +1,43 @@
 
 /* -------  Game  ------- */
 .item {
-  background:$white;
-  font-size:1em;
-  border:2px solid $white;
-  margin:1em;
-  color:rgba(7,7,7,0);
-  flex:1 1 calc(33.3% - 2em);
-  max-width:420px;
-  min-width:100%;
-  border-radius:2px;
-  box-shadow:0 7.5px 17.5px rgba(50,50,93,.1), 0 2.5px 7.5px rgba(0,0,0,.07);
-  transition:transform 0.44s,box-shadow 0.44s,color 0.77s 0.77s;
+  background: $offwhite;
+  font-size: 1em;
+  border: 2px solid $offwhite;
+  margin: 1em;
+  color: rgba(7,7,7,0);
+  flex: 1 1 calc(33.3% - 2em);
+  max-width: 420px;
+  min-width: 100%;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 7.5px 17.5px rgba(50,50,93,.1), 0 2.5px 7.5px rgba(0,0,0,.07);
+  transition: transform 0.44s,box-shadow 0.44s,color 0.77s 0.77s;
 }
 .topHalf {
-  display:block;
-  cursor:pointer;
+  display: block;
+  cursor: pointer;
 }
 .details {
-  display:block;
-  opacity:0;
-  transition-property:opacity;
-  transition-duration:0.22s;
-  transition-delay:0s;
+  display: block;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.22s;
+  transition-delay: 0s;
 }
 .detailsExpanded {
-  display:block;
-  opacity:1;
-  transition-duration:0.66s;
-  transition-delay:0.33s;
-  background:$real_white;
-  composes:details;
+  display: block;
+  opacity: 1;
+  transition-duration: 0.66s;
+  transition-delay: 0.33s;
+  background: $white;
+  composes: details;
 }
 
-@media only screen and (min-width:375px) {
+@media only screen and (min-width: 375px) {
   .item {
-    min-width:320px;
-    font-size:1.1em;
+    min-width: 320px;
+    font-size: 1.1em;
   }
 }
 

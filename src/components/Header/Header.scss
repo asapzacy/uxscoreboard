@@ -1,8 +1,8 @@
 
 /* -------  Header  ------- */
 .container {
-  background: $white;
-  color: $black;
+  background: $offwhite;
+  color: $offblack;
   width: 100%;
   font-size: 1.2em;
   z-index: 10;
@@ -37,7 +37,7 @@
   height: 2px;
   width: 24px;
   display: block;
-  background: $black;
+  background: $offblack;
   position: absolute;
   top: 25px;left: 14px;
   transition: transform .44s cubic-bezier(0.25,0.46,0.45,0.94);
@@ -59,7 +59,7 @@
 
 /* -------  Menu  ------- */
 .menu {
-  background: $real_white;
+  background: $white;
   overflow: hidden;
   transition: max-height 0.22s;
 }
@@ -106,7 +106,7 @@
 .footer {
   height: 2em;
   font-size: 1.6em;
-  color: $black;
+  color: $offblack;
 }
 
 
@@ -197,7 +197,7 @@
   .block {
     height: 30px;
     width: 2px;
-    background: $black;
+    background: $offblack;
     margin: 0 1%;
   }
   .link {

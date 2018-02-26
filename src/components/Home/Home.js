@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './Item'
-import { app_pages } from 'data/app_pages'
+import { APP_PAGES } from 'data/APP_PAGES'
 import s from './Home.scss'
 
 const Home = () => (
@@ -11,8 +11,8 @@ const Home = () => (
     </section>
     <nav className={s.menu}>
       <menu className={s.list}>
-        { app_pages.mainLinks.map((el, i) => (
-          <Item league={el.name} url={el.url} key={i}/>)
+        { APP_PAGES.mainLinks.map(page => (
+          <Item league={page.name} url={page.url} key={page.name} />)
         )}
       </menu>
     </nav>

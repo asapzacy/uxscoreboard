@@ -1,5 +1,7 @@
 .env
 .DS_Store
-node_modules
-dist/stats
 .vscode
+
+node_modules
+stats
+extra_stuff

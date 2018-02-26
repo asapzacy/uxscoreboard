@@ -1,14 +1,15 @@
 
-/* -------  BoxScore  ------- */
+/* -------  Boxscore  ------- */
+
 .container {
-  composes:tableContainer from 'styles/_elements.scss';
+  composes: tableContainer from 'styles/_elements.scss';
 }
 .table {
-  composes:table from 'styles/_elements.scss';
+  composes: table from 'styles/_elements.scss';
 }
 .head {
-  composes:tableHead from 'styles/_elements.scss';
+  composes: tableHead from 'styles/_elements.scss';
 }
 .body {
-  composes:tableBody from 'styles/_elements.scss'
+  composes: tableBody from 'styles/_elements.scss'
 }

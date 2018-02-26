@@ -1,6 +1,6 @@
 
 // format table heading row
-export const formatBoxScoreTableHead = (periods, totalPeriods, league, overtimes) => {
+export const formatBoxscoreTableHead = (periods, totalPeriods, league, overtimes) => {
   const width = overtimes > 3 ? '25%' : overtimes ? '30%' : '40%'
   let result = `<thead><tr><th style="width:${width}"></th>`
   for (let i = 1; i <= periods; i++) {
@@ -25,7 +25,7 @@ export const formatBoxScoreTableHead = (periods, totalPeriods, league, overtimes
   return { __html: result }
 }
 
-export const formatBoxScoreTableBodyRow = (team, score, side, linescore, periods, totalPeriods, league) => {
+export const formatBoxscoreTableBodyRow = (team, score, side, linescore, periods, totalPeriods, league) => {
   let result = `<th>${team}</th>`
   const end = Math.max(periods, totalPeriods)
   for (let i = 0; i < end; i++) {

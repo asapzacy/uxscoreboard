@@ -9,7 +9,7 @@ import { ref } from 'config/firebase'
 class NbaContainer extends Component {
   static defaultProps = { league: 'nba' }
   state = {
-    isLoading: true,
+    isLoading: false,
     isValid: false,
     isError: false,
     scores: {},
@@ -24,8 +24,8 @@ class NbaContainer extends Component {
       desc: `live ${this.props.league.toUpperCase()} scores · uxscoreboard`
     }
     updatePageInfo(pageInfo)
-    this.setState({ today: getTodaysDate() }, () => {
-      this.makeRequest(this.props.today)
+    this.setState({ today: getTodaysDate(), isLoading: true }, () => {
+      this.makeRequest(this.state.today)
       this.getCache()
     })
   }
@@ -38,6 +38,7 @@ class NbaContainer extends Component {
     clearTimeout(this.refreshId)
   }
   makeRequest = (dt = this.state.today) => {
+    if (!dt) return
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

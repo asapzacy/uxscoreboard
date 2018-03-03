@@ -14,7 +14,11 @@ moment.tz.add(
 
 export const getTodaysDate = () => moment().format('YYYYMMDD')
 
-export const isValidDate = dt => dt.length === 8 && Number.isInteger(Number(dt))
+export const isValidDate = dt => (
+  typeof dt === 'string' &&
+  dt.length === 8 &&
+  Number.isInteger(Number(dt))
+)
 
 export const checkDay = (day, start, end) => ((day >= start) && (day <= end))
 

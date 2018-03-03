@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import WebFont from 'webfontloader'
 
 import { Header, Footer } from 'components'
 import { HomeContainer, NbaContainer } from 'containers'
 import s from './Main.scss'
 
+@withRouter
 class MainContainer extends Component {
   state = {
     screenWidth: 0,
@@ -80,6 +81,7 @@ class MainContainer extends Component {
         <main className={s.innerContainer}>
           <Switch>
             <Route exact path={'/'} component={HomeContainer} />
+            <Route exact path={'/nba'} component={NbaContainer} />
           </Switch>
         </main>
       </div>

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Loading, NotFound } from 'components'
+import { Loading } from 'components'
 import { ScoreboardContainer } from 'containers'
 import s from './League.scss'
 
 const League = ({ isLoading, isValid, isError, scores, year, date, today, league }) => (
   <div className={s.container}>
-    { (isValid && scores) && (
+    { (isValid && scores) ? (
       <ScoreboardContainer
         scores={scores}
         year={year}
@@ -14,7 +14,8 @@ const League = ({ isLoading, isValid, isError, scores, year, date, today, league
         league={league}
         isError={isError}
       />
-    )}
+    ) : <Loading />
+    }
   </div>
 )
 

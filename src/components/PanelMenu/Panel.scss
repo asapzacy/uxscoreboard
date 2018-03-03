@@ -6,7 +6,7 @@
   height: 100%;
   cursor: pointer;
   transition: background 0.44s;
-  composes: flexy from 'styles/_utils.scss';
+  composes: flexyCentered from 'styles/_utils.scss';
 }
 
 .item:not(:last-child) {

@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { AppContainer as HotLoader } from 'react-hot-loader'
 require('dotenv').config()
 
-import { MainContainer } from 'containers'
+import { AppContainer } from 'containers'
 
 const renderApp = Component => {
   render(
@@ -17,11 +17,11 @@ const renderApp = Component => {
   )
 }
 
-renderApp(MainContainer)
+renderApp(AppContainer)
 
 if (module.hot) {
   module.hot.accept('containers', () => {
-    renderApp(MainContainer)
+    renderApp(AppContainer)
   })
 }
 

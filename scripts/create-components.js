@@ -67,7 +67,7 @@ export default ${filename}
 `
 }
 
-const createRcSassText = filename => {
+const createRcScssText = filename => {
   return `
 /* -------  ${filename}  ------- */
 

@@ -171,6 +171,7 @@ const developmentConfig = {
     host: HOST,
     port: DEV_PORT,
     disableHostCheck: true,
+    https: false,
     watchOptions: {
       ignored: /node_modules/,
       aggregateTimeout: 300,

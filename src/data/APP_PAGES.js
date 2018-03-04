@@ -25,6 +25,11 @@ export const APP_PAGES = {
       name: 'MLS',
       url: 'mls',
       icon: 'soccer'
+    },
+    {
+      name: 'March Madness',
+      url: 'march-madness',
+      icon: 'college-basketball'
     }
   ],
   extraLinks: [

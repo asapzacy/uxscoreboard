@@ -18,9 +18,12 @@ export { default as NhlContainer } from './Nhl/NhlContainer'
 export { default as ScoreboardContainer } from './Scoreboard/ScoreboardContainer'
 export { default as DateContainer } from './Date/DateContainer'
 
-/* -------  game containers  ------- */
+export { default as ReactDinoContainer } from './ReactDino/ReactDinoContainer'
 export { default as GameContainer } from './Game/GameContainer'
 export { default as LogoContainer } from './Logo/LogoContainer'
 export { default as DetailsContainer } from './Details/DetailsContainer'
 
-export { default as ReactDinoContainer } from './ReactDino/ReactDinoContainer'
+/**
+ * Views
+ */
+export { default as MarchMadnessContainer } from './Views/MarchMadness/MarchMadnessContainer'

@@ -3,7 +3,7 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 import WebFont from 'webfontloader'
 
 import { Header, Footer } from 'components'
-import { HomeContainer, NbaContainer } from 'containers'
+import { HomeContainer, NbaContainer, MarchMadnessContainer } from 'containers'
 import s from './Main.scss'
 
 @withRouter
@@ -82,6 +82,7 @@ class MainContainer extends Component {
           <Switch>
             <Route exact path={'/'} component={HomeContainer} />
             <Route exact path={'/nba'} component={NbaContainer} />
+            <Route exact path={'/march-madness'} component={MarchMadnessContainer} />
           </Switch>
         </main>
       </div>

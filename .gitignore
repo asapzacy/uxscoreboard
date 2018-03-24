@@ -1,6 +1,7 @@
 .env
 .DS_Store
 .vscode
+.yarn-error.log
 
 node_modules
 stats

@@ -4,10 +4,11 @@
   "description": "A sports scoreboard web app built on ES6, React, and Node.js—features MLB, NBA, NFL, NHL, and MLS (coming soon) games.",
   "main": "app.js",
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 9.0.0"
   },
   "scripts": {
     "dev": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
+    "dev:fresh": "yarn reset:all && yarn dev",
     "server": "nodemon app.js",
     "start": "concurrently 'yarn dev' 'yarn server' --names 'REACT,NODE' -c 'bgBlue.bold,bgMagenta.bold'",
     "start:fresh": "yarn reset:all && yarn start",
@@ -82,7 +83,6 @@
     "node-sass": "^4.7.2",
     "nodemon": "^1.15.1",
     "postcss-assets-webpack-plugin": "^1.1.0",
-    "postcss-composes": "^0.1.0",
     "postcss-loader": "^2.0.10",
     "prop-types": "^15.6.0",
     "react-hot-loader": "^4.0.0-rc.0",

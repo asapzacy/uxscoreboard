@@ -91,11 +91,10 @@ const sharedCssLoaders = [
   },
   {
     loader: 'postcss-loader',
-    options: {
-      plugins: isProduction
-        ? () => [ require('autoprefixer') ]
-        : () => [ require('postcss-composes') ]
-    }
+    options: isProduction ? {
+      ident: 'postcss',
+      plugins: () => [ require('autoprefixer') ]
+    } : {}
   },
   { loader: 'sass-loader' },
   {

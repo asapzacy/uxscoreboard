@@ -29,6 +29,28 @@ export const seasons =  {
             end: '20171101'
           }
         }
+      },
+      '2018': {
+        preseason: {
+          start: '20180222',
+          end: '20170328'
+        },
+        season: {
+          start: '20180329',
+          end: '20181031',
+          allstar: {
+            start: '20170710',
+            end: '20170713'
+          }
+        },
+        playoffs: {
+          start: '20171003',
+          end: '20171022',
+          finals: {
+            start: '20171024',
+            end: '20171101'
+          }
+        }
       }
     }
   },

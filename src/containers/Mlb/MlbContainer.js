@@ -39,7 +39,7 @@ class MlbContainer extends Component {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
   }
-  makeRequest(dt = '20171101') {
+  makeRequest(dt = '20180329') {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

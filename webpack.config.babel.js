@@ -40,7 +40,7 @@ const postcssPlugin = new webpack.LoaderOptionsPlugin({
   options: {
     context: PATHS.app,
     postcss: [
-      autoprefixer({ remove: false, browsers: ['last 2 versions'] })
+      autoprefixer({ browsers: ['last 2 versions'] })
     ]
   }
 })
@@ -181,18 +181,18 @@ const developmentConfig = {
     },
     allowedHosts: [
       'localhost',
-      'uxscoreboard',
+      '.uxscoreboard.com',
+      '.local.uxscoreboard.com',
       '.'
     ],
     proxy: {
       '/api/**': {
-        target: `http://${HOST}:${API_PORT}`
+        target: `http://${HOST}:${API_PORT}/`
       }
     }
   },
   plugins: [
     ...sharedPlugins,
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 }
@@ -201,11 +201,11 @@ const productionConfig = {
   plugins: [
     ...sharedPlugins,
     productionPlugin,
-    productionPlugin,
     postcssPlugin,
     postcssAssetsPlugin,
     extractTextPlugin,
     uglifyJsPlugin,
+    new webpack.NamedModulesPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin()

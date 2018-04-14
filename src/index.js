@@ -1,18 +1,17 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { AppContainer as HotLoader } from 'react-hot-loader'
-require('dotenv').config()
+import { BrowserRouter as ReactRouter } from 'react-router-dom'
+import { AppContainer as ReactHotLoader } from 'react-hot-loader'
 
 import { AppContainer } from 'containers'
 
 const renderApp = Component => {
   render(
-    <Router>
-      <HotLoader>
+    <ReactRouter>
+      <ReactHotLoader>
         <Component />
-      </HotLoader>
-    </Router>,
+      </ReactHotLoader>
+    </ReactRouter>,
     document.getElementById('app')
   )
 }

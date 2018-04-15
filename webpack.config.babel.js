@@ -1,9 +1,13 @@
 const webpack = require('webpack')
+
 const path = require('path')
+const fs = require('fs')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const PostcssAssetsPlugin = require('postcss-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
 const autoprefixer = require('autoprefixer')
 const mqpacker = require('css-mqpacker')
 const cssnano = require('cssnano')
@@ -40,7 +44,7 @@ const postcssPlugin = new webpack.LoaderOptionsPlugin({
   options: {
     context: PATHS.app,
     postcss: [
-      autoprefixer({ browsers: ['last 2 versions'] })
+      autoprefixer({ remove: false, browsers: ['last 2 versions'] })
     ]
   }
 })
@@ -170,7 +174,10 @@ const developmentConfig = {
     host: HOST,
     port: DEV_PORT,
     disableHostCheck: true,
-    https: false,
+    https: {
+      key: fs.readFileSync('./ssl/local.uxscoreboard.com.key'),
+      cert: fs.readFileSync('./ssl/local.uxscoreboard.com.crt')
+    },
     watchOptions: {
       ignored: /node_modules/,
       aggregateTimeout: 300,

@@ -3,6 +3,12 @@
 .vscode
 yarn-error.log
 
+ssl
+dist
+build
 node_modules
 stats
 extra_stuff
+
+bundle.*
+*.min.

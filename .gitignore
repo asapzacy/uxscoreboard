@@ -1,5 +1,8 @@
 .env
 .DS_Store
-node_modules
+
+.ssl/
+.vscode/
+node_modules/
 dist/stats
-.vscode
+dist/**/bundle*.js

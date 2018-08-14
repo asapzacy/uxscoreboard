@@ -83,6 +83,12 @@ export const seasons =  {
           start: '20171017',
           end: '20170411'
         }
+      },
+      '2018': {
+        season: {
+          start: '20181016',
+          end: '20180410'
+        }
       }
     }
   },

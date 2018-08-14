@@ -4,7 +4,9 @@
 .ssl/
 .vscode/
 
+yarn-error.log
 node_modules/
+
 dist/index.html
 dist/stats/
 dist/assets/build/

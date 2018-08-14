@@ -39,7 +39,7 @@ class NbaContainer extends Component {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
   }
-  makeRequest(dt = this.state.today) {
+  makeRequest(dt = seasons[this.props.league].seasons['2018'].season.start) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

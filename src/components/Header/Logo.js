@@ -4,7 +4,7 @@ import s from './Header.scss'
 
 const Logo = () => (
   <Link to='/' title={'uxscoreboard'}>
-    <img className={s.logo} src={'/assets/img/uxscoreboard.svg'} alt={'uxscoreboard'} />
+    <img className={s.logo} src={'/assets/static/img/uxscoreboard.svg'} alt={'uxscoreboard'} />
   </Link>
 )
 

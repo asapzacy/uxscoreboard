@@ -9,7 +9,7 @@ const makeBgImg = (code, league, isLoaded) => ({
 
 const Team = ({ name, code, filetype = 'svg', ws, ls, ts, score, league, hasLoaded, logoHasLoaded }) => (
   <section className={code === 'nyy' ? s[code] : s.container} style={makeBgImg(code, league)}>
-    <LogoContainer src={`/assets/img/${league}/teams/${code}.${filetype}`} name={name} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
+    <LogoContainer src={`/assets/static/img/${league}/teams/${code}.${filetype}`} name={name} hasLoaded={hasLoaded} logoHasLoaded={logoHasLoaded} />
     <main className={s.info}>
       <section className={s.leftSide}>
         <span className={s.name}>{ name.length >= 9 ? <small>{name}</small> : name }</span>

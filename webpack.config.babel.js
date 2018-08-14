@@ -78,7 +78,7 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin({
   disable: !isProduction,
-  filename: 'assets/css/bundle.[hash:12].css'
+  filename: 'assets/build/css/bundle.[hash:12].css'
 })
 
 const compressionPlugin = new CompressionPlugin({
@@ -146,7 +146,7 @@ const sharedCssLoaders = [
 const base = {
   output: {
     path: PATHS.build,
-    filename: isProduction ? 'assets/js/bundle.[hash:12].min.js' : 'assets/js/bundle.[hash:12].js',
+    filename: isProduction ? 'assets/build/js/bundle.[hash:12].min.js' : 'assets/build/js/bundle.[hash:12].js',
     publicPath: '/'
   },
   module: {

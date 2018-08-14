@@ -1,7 +1,7 @@
 
 # uxscoreboard
 
-![uxscoreboard preview](https://zac.codes/assets/img/projects/uxscoreboard_preview-xlarge.jpg)
+![uxscoreboard preview](https://zac.codes/assets/static/img/projects/uxscoreboard_preview-xlarge.jpg)
 
 uxscoreboard | A sports scoreboard web app built on ES6, React, and Node.js.
 

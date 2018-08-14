@@ -7,7 +7,7 @@ const Item = ({ name, url, icon, screenWidth }) => (
     <Link className={s.link} to={`/${url}`} title={`uxscoreboard | ${name} scores`} activeClassName='active'>
       <span className={s.text}>
         { screenWidth < 667 &&
-          <span className={s.icon} style={{backgroundImage:`url('/assets/icons/${icon}.svg')`}}></span>
+          <span className={s.icon} style={{backgroundImage:`url('/assets/static/icons/${icon}.svg')`}}></span>
         }
         {name}
       </span>

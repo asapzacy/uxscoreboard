@@ -36,11 +36,11 @@
   transition-delay:0.11s;
 }
 .mlb, .mls, .nba, .nfl, .nhl { composes:link }
-.mlb::after { background-image:url('/assets/icons/baseball_light.svg') }
-.mls::after { background-image:url('/assets/icons/soccer_light.svg') }
-.nba::after { background-image:url('/assets/icons/basketball_light.svg') }
-.nfl::after { background-image:url('/assets/icons/football_light.svg') }
-.nhl::after { background-image:url('/assets/icons/hockey_light.svg');top:20%;bottom:20% }
+.mlb::after { background-image:url('/assets/static/icons/baseball_light.svg') }
+.mls::after { background-image:url('/assets/static/icons/soccer_light.svg') }
+.nba::after { background-image:url('/assets/static/icons/basketball_light.svg') }
+.nfl::after { background-image:url('/assets/static/icons/football_light.svg') }
+.nhl::after { background-image:url('/assets/static/icons/hockey_light.svg');top:20%;bottom:20% }
 
 @media only screen and (min-width:$medium) {
   .item {

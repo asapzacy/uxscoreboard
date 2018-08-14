@@ -3,6 +3,8 @@
 
 .ssl/
 .vscode/
+
 node_modules/
-dist/stats
-dist/**/bundle*.js
+dist/index.html
+dist/stats/
+dist/assets/build/

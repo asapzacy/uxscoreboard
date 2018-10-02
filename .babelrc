@@ -1,16 +1,35 @@
 {
   "presets": [
-    [ "es2015", { "modules": false }],
-    "react",
-    "stage-0"
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["ie >= 10"]
+        },
+        "modules": false,
+        "useBuiltIns": true,
+        "debug": false
+      }
+    ],
+    "stage-0",
+    "react"
   ],
+  "ignore": ["node_modules"],
   "plugins": [
     "react-hot-loader/babel",
     "transform-react-stateless-component-name",
-    ["transform-runtime", {
-      "helpers": false,
-      "polyfill": false,
-      "regenerator": true
-    }]
-  ]
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["env"], "react", "stage-0"]
+    }
+  }
 }

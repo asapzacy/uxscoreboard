@@ -3,12 +3,19 @@ import { shortenTeamName } from 'helpers/utils'
 //  mlb box score props --> BoxScore component
 export const mlbBoxScoreProps = (game, league) => {
   const hasStarted = game.linescore
-  const size = hasStarted && game.linescore.innings ? game.linescore.innings.length : 0
+  const size =
+    hasStarted && game.linescore.innings ? game.linescore.innings.length : 0
   return {
     awayTeam: shortenTeamName(game.teams.away.team.teamName),
     homeTeam: shortenTeamName(game.teams.home.team.teamName),
-    awayScore: hasStarted && game.linescore.teams.away.runs !== undefined ? game.linescore.teams.away.runs : '',
-    homeScore: hasStarted && game.linescore.teams.home.runs !== undefined ? game.linescore.teams.home.runs : '',
+    awayScore:
+      hasStarted && game.linescore.teams.away.runs !== undefined
+        ? game.linescore.teams.away.runs
+        : '',
+    homeScore:
+      hasStarted && game.linescore.teams.home.runs !== undefined
+        ? game.linescore.teams.home.runs
+        : '',
     linescore: game.linescore ? game.linescore : '',
     periods: 9,
     totalPeriods: size,
@@ -26,7 +33,7 @@ export const nbaBoxScoreProps = (game, league) => {
     homeTeam: shortenTeamName(game.home.nickname),
     awayScore: inGame ? game.vTeam.score : '',
     homeScore: inGame ? game.hTeam.score : '',
-    linescore:  {
+    linescore: {
       away: game.vTeam.linescore,
       home: game.hTeam.linescore
     },

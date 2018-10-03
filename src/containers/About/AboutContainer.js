@@ -8,7 +8,6 @@ class AboutContainer extends Component {
       title: 'about · uxscoreboard'
     }
     updatePageInfo(pageInfo)
-
   }
   render() {
     return <About />

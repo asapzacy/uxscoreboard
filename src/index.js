@@ -5,11 +5,8 @@ import routes from './config/routes'
 import Perf from 'react-addons-perf'
 require('dotenv').config()
 
-const renderApp = (routes) => {
-  render(
-    <AppContainer>{routes}</AppContainer>,
-    document.getElementById('app')
-  )
+const renderApp = routes => {
+  render(<AppContainer>{routes}</AppContainer>, document.getElementById('app'))
 }
 
 renderApp(routes)

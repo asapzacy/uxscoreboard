@@ -1,5 +1,4 @@
-
-export const createDiamond = (offense) => {
+export const createDiamond = offense => {
   let file = 'diamond'
   if (!offense) return file
   if (offense.first) file += '_1b'

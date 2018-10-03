@@ -18,13 +18,11 @@ class DateContainer extends Component {
   }
   getScreenWidth() {
     this.setState({
-      'width': window.innerWidth
+      width: window.innerWidth
     })
   }
   render() {
-    return (
-      <Date {...this.state} {...this.props} />
-    )
+    return <Date {...this.state} {...this.props} />
   }
 }
 

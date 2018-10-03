@@ -1,5 +1,4 @@
-
-export const formatStatsTableHead = (teams) => {
+export const formatStatsTableHead = teams => {
   let result = '<thead><tr><th></th>'
   for (let i = 0; i < teams.length; i++) {
     result += `<th>${teams[i]}</th>`
@@ -8,8 +7,7 @@ export const formatStatsTableHead = (teams) => {
   return { __html: result }
 }
 
-
-export const formatStatsTableBody = (stats) => {
+export const formatStatsTableBody = stats => {
   let result = '<tbody>'
   for (let item in stats) {
     result += `<tr><th>${item}</th>`
@@ -19,8 +17,14 @@ export const formatStatsTableBody = (stats) => {
       result += `<td>${awayTeam}</td>`
       result += `<td>${homeTeam}</td>`
     } else {
-      result += parseInt(awayTeam) > parseInt(homeTeam) ? `<td><strong>${awayTeam}</strong></td>` : `<td>${awayTeam}</td>`
-      result += parseInt(awayTeam) < parseInt(homeTeam) ? `<td><strong>${homeTeam}</strong></td>` : `<td>${homeTeam}</td>`
+      result +=
+        parseInt(awayTeam) > parseInt(homeTeam)
+          ? `<td><strong>${awayTeam}</strong></td>`
+          : `<td>${awayTeam}</td>`
+      result +=
+        parseInt(awayTeam) < parseInt(homeTeam)
+          ? `<td><strong>${homeTeam}</strong></td>`
+          : `<td>${homeTeam}</td>`
     }
     result += '</tr>'
   }

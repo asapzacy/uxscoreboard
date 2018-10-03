@@ -1,5 +1,4 @@
-
-export const seasons =  {
+export const seasons = {
   mlb: {
     seasons: {
       '2016': {

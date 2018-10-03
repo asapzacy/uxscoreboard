@@ -32,14 +32,14 @@ class NflContainer extends Component {
   }
   makeRequest(week = this.state.week) {
     getNflScores(week)
-      .then((data) => {
+      .then(data => {
         this.setState({
           isLoading: false,
           scores: data.games,
           year: data.year
         })
       })
-      .catch((error) =>  {
+      .catch(error => {
         this.setState({
           isLoading: false,
           isError: true

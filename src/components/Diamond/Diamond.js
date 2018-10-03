@@ -11,11 +11,16 @@ const Diamond = ({ balls, strikes, outs, inningState, offense }) => (
     <div className={s.rightSide}>
       <section className={s.bsoContainer}>
         <BallStrikeOut label={'B'} filled={balls} max={4} state={inningState} />
-        <BallStrikeOut label={'S'} filled={strikes} max={3} state={inningState} />
+        <BallStrikeOut
+          label={'S'}
+          filled={strikes}
+          max={3}
+          state={inningState}
+        />
         <BallStrikeOut label={'O'} filled={outs} max={3} state={inningState} />
       </section>
-      <section className={s.runnersContainer}></section>
-      <section className={s.matchupContainer}></section>
+      <section className={s.runnersContainer} />
+      <section className={s.matchupContainer} />
     </div>
   </section>
 )

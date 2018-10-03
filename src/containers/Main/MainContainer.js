@@ -14,7 +14,7 @@ class MainContainer extends Component {
     this.triggerMenu = this.triggerMenu.bind(this)
     this.hideMenu = this.hideMenu.bind(this)
     this.getScreenWidth = this.getScreenWidth.bind(this)
-}
+  }
   componentDidMount() {
     this.loadFonts()
     this.getScreenWidth()
@@ -25,13 +25,15 @@ class MainContainer extends Component {
   }
   loadFonts() {
     WebFont.load({
-      google: { families: [ 'Comfortaa:300,400,700' ] },
-      active() { document.getElementById('app').classList.add('ready') },
+      google: { families: ['Comfortaa:300,400,700'] },
+      active() {
+        document.getElementById('app').classList.add('ready')
+      },
       classes: false
     })
   }
   getScreenWidth() {
-    this.setState({ 'screenWidth': window.innerWidth }, () => {
+    this.setState({ screenWidth: window.innerWidth }, () => {
       const header = document.querySelector('header')
       const navHeight = header.querySelector('nav').scrollHeight
       if (this.state.screenWidth >= 667) {
@@ -72,13 +74,13 @@ class MainContainer extends Component {
   }
   render() {
     const { isMenuOpen, menuHeight } = this.state
-    const appHeight = { height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%' }
+    const appHeight = {
+      height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%'
+    }
     return (
       <div className={s.outerContainer} style={appHeight}>
         <Header triggerMenu={this.triggerMenu} {...this.state} />
-        <main className={s.innerContainer}>
-          {this.props.children}
-        </main>
+        <main className={s.innerContainer}>{this.props.children}</main>
         <Footer />
       </div>
     )

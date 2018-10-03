@@ -10,4 +10,7 @@ const config = {
   messagingSenderId: '201013847832'
 }
 
-export const ref = firebase.initializeApp(config).database().ref()
+export const ref = firebase
+  .initializeApp(config)
+  .database()
+  .ref()

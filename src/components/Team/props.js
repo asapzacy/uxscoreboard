@@ -3,8 +3,12 @@ import { shortenTeamName } from 'helpers/utils'
 //  mlb home + away team props --> Team component
 export const mlbTeamProps = (game, side, league) => {
   const isAllStar = game.gameType === 'A'
-  const hasStarted = game.status.codedGameState !== 'P' &&
-    (game.status.abstractGameCode === 'L' || game.status.codedGameState === 'I' || game.status.statusCode === 'F' || game.status.statusCode === 'O')
+  const hasStarted =
+    game.status.codedGameState !== 'P' &&
+    (game.status.abstractGameCode === 'L' ||
+      game.status.codedGameState === 'I' ||
+      game.status.statusCode === 'F' ||
+      game.status.statusCode === 'O')
   return {
     name: shortenTeamName(game.teams[side].team.teamName),
     code: game.teams[side].team.fileCode,
@@ -18,7 +22,7 @@ export const mlbTeamProps = (game, side, league) => {
 
 //  nfl home + away team props --> Team component
 export const nflTeamProps = (game, side, league) => {
-  const team =  game[`${side}nn`]
+  const team = game[`${side}nn`]
   return {
     name: team[0].toUpperCase() + team.slice(1),
     code: game[side].toLowerCase(),
@@ -38,8 +42,16 @@ export const nbaTeamProps = (game, side, league) => {
   return {
     name: shortenTeamName(game[side].nickname),
     code: game[side].abbreviation.toLowerCase(),
-    ws: isPlayoffs ? isHome ? game.playoffs.hTeam.seriesWin : game.playoffs.vTeam.seriesWin : game[side2].win,
-    ls: isPlayoffs ? isHome ? game.playoffs.vTeam.seriesWin : game.playoffs.hTeam.seriesWin : game[side2].loss,
+    ws: isPlayoffs
+      ? isHome
+        ? game.playoffs.hTeam.seriesWin
+        : game.playoffs.vTeam.seriesWin
+      : game[side2].win,
+    ls: isPlayoffs
+      ? isHome
+        ? game.playoffs.vTeam.seriesWin
+        : game.playoffs.hTeam.seriesWin
+      : game[side2].loss,
     score: inGame && game[side].score,
     league
   }
@@ -54,9 +66,20 @@ export const nhlTeamProps = (game, side, league) => {
   return {
     name: shortenTeamName(game.teams[side].team.teamName),
     code: game.teams[side].team.abbreviation.toLowerCase(),
-    ws: !isAllStar && isPlayoffs ? String(game.seriesSummary.series.matchupTeams[teamArray].seriesRecord.wins) : String(game.teams[side].leagueRecord.wins),
-    ls: !isAllStar && isPlayoffs ? String(game.seriesSummary.series.matchupTeams[teamArray].seriesRecord.losses) : String(game.teams[side].leagueRecord.losses),
-    ts: (!isAllStar && !isPlayoffs) && String(game.teams[side].leagueRecord.ot),
+    ws:
+      !isAllStar && isPlayoffs
+        ? String(
+            game.seriesSummary.series.matchupTeams[teamArray].seriesRecord.wins
+          )
+        : String(game.teams[side].leagueRecord.wins),
+    ls:
+      !isAllStar && isPlayoffs
+        ? String(
+            game.seriesSummary.series.matchupTeams[teamArray].seriesRecord
+              .losses
+          )
+        : String(game.teams[side].leagueRecord.losses),
+    ts: !isAllStar && !isPlayoffs && String(game.teams[side].leagueRecord.ot),
     score: inGame && String(game.teams[side].score),
     league
   }

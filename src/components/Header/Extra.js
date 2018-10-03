@@ -4,14 +4,20 @@ import s from './Header.scss'
 
 const Extra = ({ name, url, isOutsideSource }) => (
   <li className={s.extra}>
-    { isOutsideSource
-      ? <a className={s.link} href={url} title={`uxscoreboard | ${name}`}>
-          <span className={s.text}>{name}</span>
-        </a>
-      : <Link className={s.link} to={`/${url}`} title={`uxscoreboard | ${name}`} activeClassName={'active'}>
-          <span className={s.text}>{name}</span>
-        </Link>
-    }
+    {isOutsideSource ? (
+      <a className={s.link} href={url} title={`uxscoreboard | ${name}`}>
+        <span className={s.text}>{name}</span>
+      </a>
+    ) : (
+      <Link
+        className={s.link}
+        to={`/${url}`}
+        title={`uxscoreboard | ${name}`}
+        activeClassName={'active'}
+      >
+        <span className={s.text}>{name}</span>
+      </Link>
+    )}
   </li>
 )
 

@@ -26,7 +26,7 @@ class NbaContainer extends Component {
       desc: `live ${this.props.league.toUpperCase()} scores · uxscoreboard`
     }
     updatePageInfo(pageInfo)
-    this.setState({ today: getTodaysDate()  }, () => {
+    this.setState({ today: getTodaysDate() }, () => {
       this.makeRequest(this.props.routeParams.date)
       this.getCache()
     })
@@ -45,23 +45,29 @@ class NbaContainer extends Component {
     }
     if (this.state.cache[dt] && dt !== this.state.today) {
       const data = this.state.cache[dt]
-      this.setState({
-        isLoading: false,
-        scores: data.games || [],
-        year: data.year,
-        date: dt
-      }, () => this.saveScores())
+      this.setState(
+        {
+          isLoading: false,
+          scores: data.games || [],
+          year: data.year,
+          date: dt
+        },
+        () => this.saveScores()
+      )
     } else {
       getNbaScores(dt)
-        .then((data) => {
-          this.setState({
-            isLoading: false,
-            scores: data.games,
-            year: data.year,
-            date: dt
-          }, () => this.delay())
+        .then(data => {
+          this.setState(
+            {
+              isLoading: false,
+              scores: data.games,
+              year: data.year,
+              date: dt
+            },
+            () => this.delay()
+          )
         })
-        .catch((error) =>  {
+        .catch(error => {
           this.setState({
             isLoading: false,
             isError: true,
@@ -85,7 +91,7 @@ class NbaContainer extends Component {
     this.refreshId = setTimeout(() => this.makeRequest(dt), seconds * 1000)
   }
   getCache() {
-    ref.once('value', (snapshot) => {
+    ref.once('value', snapshot => {
       if (snapshot.hasChild('nba')) {
         this.setState({
           cache: snapshot.val().nba.scores
@@ -96,7 +102,8 @@ class NbaContainer extends Component {
   saveScores() {
     const scores = { year: this.state.year, games: this.state.scores }
     console.log(this.state)
-    ref.child(`nba/scores/${this.state.date}`)
+    ref
+      .child(`nba/scores/${this.state.date}`)
       .set(scores)
       .then(() => console.log(`nba scores updated.. `))
       .then(() => this.getCache())

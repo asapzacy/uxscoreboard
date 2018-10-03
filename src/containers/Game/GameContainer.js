@@ -10,7 +10,8 @@ class GameContainer extends Component {
     details: {}
   }
   componentDidMount() {
-    const testDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+    const testDevice =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
     if (testDevice) {
       this.setState({ isiOS: true })
     }

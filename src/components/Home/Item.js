@@ -4,7 +4,11 @@ import s from './Item.scss'
 
 const Item = ({ league, url }) => (
   <li className={s.item}>
-    <Link className={s[url]} to={`/${url}`} title={`uxscoreboard | ${league} scores`}>
+    <Link
+      className={s[url]}
+      to={`/${url}`}
+      title={`uxscoreboard | ${league} scores`}
+    >
       {league}
     </Link>
   </li>

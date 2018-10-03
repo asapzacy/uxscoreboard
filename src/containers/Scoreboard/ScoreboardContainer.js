@@ -49,17 +49,36 @@ class ScoreboardContainer extends Component {
     })
   }
   checkSeason(day) {
-    if (this.props.league !== 'nba' && this.props.league !== 'nhl' && this.props.league !== 'nfl') {
+    if (
+      this.props.league !== 'nba' &&
+      this.props.league !== 'nhl' &&
+      this.props.league !== 'nfl'
+    ) {
       const dates = seasons[this.props.league].seasons[this.props.year]
-      this.setState({
-        seasonState: {
-          isPreseason: checkDay(day, dates.preseason.start, dates.preseason.end),
-          isSeason: checkDay(day, dates.season.start, dates.season.end),
-          isAllStar: checkDay(day, dates.season.allstar.start, dates.season.allstar.end),
-          isPlayoffs: checkDay(day, dates.playoffs.start, dates.playoffs.end),
-          isFinals: checkDay(day, dates.playoffs.finals.start, dates.playoffs.finals.end)
-        }
-      }, () => this.updateBgImg())
+      this.setState(
+        {
+          seasonState: {
+            isPreseason: checkDay(
+              day,
+              dates.preseason.start,
+              dates.preseason.end
+            ),
+            isSeason: checkDay(day, dates.season.start, dates.season.end),
+            isAllStar: checkDay(
+              day,
+              dates.season.allstar.start,
+              dates.season.allstar.end
+            ),
+            isPlayoffs: checkDay(day, dates.playoffs.start, dates.playoffs.end),
+            isFinals: checkDay(
+              day,
+              dates.playoffs.finals.start,
+              dates.playoffs.finals.end
+            )
+          }
+        },
+        () => this.updateBgImg()
+      )
     }
   }
   updateBgImg() {
@@ -72,7 +91,9 @@ class ScoreboardContainer extends Component {
       }
     }
     if (this.state.seasonState.isAllStar) {
-      img = `url(/assets/static/img/${this.props.league}/other/all-star-game.svg)`
+      img = `url(/assets/static/img/${
+        this.props.league
+      }/other/all-star-game.svg)`
     }
     this.setState({ bgImg: img })
   }

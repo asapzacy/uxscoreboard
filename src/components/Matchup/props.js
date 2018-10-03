@@ -1,4 +1,3 @@
-
 //  mlb matchup props --> Matchup component
 export const mlbMatchupProps = (game, date) => ({
   awayTeam: game.teams.away.team.teamName,
@@ -21,7 +20,8 @@ export const nbaMatchupProps = (game, date) => ({
 export const nhlMatchupProps = (game, date) => ({
   awayTeam: game.teams.away.team.teamName,
   homeTeam: game.teams.home.team.teamName,
-  location: game.gameType === 'A' ? 'Los Angeles' : game.teams.home.team.venue.city,
+  location:
+    game.gameType === 'A' ? 'Los Angeles' : game.teams.home.team.venue.city,
   venue: game.venue.name,
   date
 })

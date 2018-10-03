@@ -1,4 +1,3 @@
-
 export const team_colors = {
   mlb: {
     ana: '#ba0021',
@@ -13,8 +12,8 @@ export const team_colors = {
     cws: '#000000',
     det: '#ffffff',
     hou: '#002d62',
-    kc:  '#ffffff',
-    la:  '#ffffff',
+    kc: '#ffffff',
+    la: '#ffffff',
     mia: '#0077c8',
     mil: '#0a2351',
     min: '#d31145',
@@ -23,18 +22,18 @@ export const team_colors = {
     oak: '#003831',
     phi: '#e81828',
     pit: '#fdb827',
-    sd:  '#7f411c',
+    sd: '#7f411c',
     sea: '#005c5c',
-    sf:  '#000000',
+    sf: '#000000',
     stl: '#c41e3a',
-    tb:  '#8fbce6',
+    tb: '#8fbce6',
     tex: '#003278',
     tor: '#134a8e',
     was: '#ab0003',
 
     //  2016 All-Star Game
-    nl:  '#7f411c',
-    al:  '#fec325'
+    nl: '#7f411c',
+    al: '#fec325'
   },
   nba: {
     atl: '#e13a3e',
@@ -86,25 +85,25 @@ export const team_colors = {
     dal: '#002244',
     den: '#fb4f13',
     det: '#b0b7bc',
-    gb:  '#ffb612',
+    gb: '#ffb612',
     hou: '#031f2f',
     ind: '#ffffff',
     jax: '#006778',
-    kc:  '#ffffff',
-    la:  '#002244',
+    kc: '#ffffff',
+    la: '#002244',
     mia: '#008e97',
     min: '#3b0083',
-    ne:  '#002244',
-    no:  '#000000',
+    ne: '#002244',
+    no: '#000000',
     nyg: '#003d7e',
     nyj: '#ffffff',
     oak: '#000000',
     phi: '#004953',
     pit: '#000000',
-    sd:  '#0073cf',
+    sd: '#0073cf',
     sea: '#213d5a',
-    sf:  '#b3995d',
-    tb:  '#34302b',
+    sf: '#b3995d',
+    tb: '#34302b',
     ten: '#4b92db',
     was: '#660000'
   },
@@ -145,6 +144,6 @@ export const team_colors = {
     atl: '#ffb81c',
     cen: '#582c83',
     met: '#ffffff',
-    pac: '#010101',
+    pac: '#010101'
   }
 }

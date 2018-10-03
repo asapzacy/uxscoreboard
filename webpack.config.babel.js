@@ -27,7 +27,7 @@ const PATHS = {
 }
 
 const globalVariables = new webpack.DefinePlugin({
-  '__DEV__': !isProduction
+  __DEV__: !isProduction
 })
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
@@ -36,30 +36,28 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
-const browserSyncPlugin = new BrowserSyncPlugin({
-  host: HOST,
-  port: PORT,
-  proxy: PROXY,
-  open: false,
-  ui: { port: 8080, weinre: { port: 9090 }}
-}, { reload: false })
+const browserSyncPlugin = new BrowserSyncPlugin(
+  {
+    host: HOST,
+    port: PORT,
+    proxy: PROXY,
+    open: false,
+    ui: { port: 8080, weinre: { port: 9090 } }
+  },
+  { reload: false }
+)
 
 const postcssPlugin = new webpack.LoaderOptionsPlugin({
   options: {
     context: PATHS.app,
-    postcss: [
-      autoprefixer({ remove: false, browsers: ['last 2 versions'] })
-    ]
+    postcss: [autoprefixer({ remove: false, browsers: ['last 2 versions'] })]
   }
 })
 
 const postcssAssetsPlugin = new PostcssAssetsPlugin({
   test: /\.css$/,
   log: false,
-  plugins: [
-    mqpacker({ sort: true }),
-    cssnano
-  ]
+  plugins: [mqpacker({ sort: true }), cssnano]
 })
 
 const statsWriterPlugin = new StatsWriterPlugin({
@@ -127,18 +125,18 @@ const sharedCssLoaders = [
   },
   {
     loader: 'postcss-loader',
-    options: isProduction ? {
-      ident: 'postcss',
-      plugins: () => [ require('autoprefixer') ]
-    } : {}
+    options: isProduction
+      ? {
+          ident: 'postcss',
+          plugins: () => [require('autoprefixer')]
+        }
+      : {}
   },
   { loader: 'sass-loader' },
   {
     loader: 'sass-resources-loader',
     options: {
-      resources: [
-        path.resolve(PATHS.app, './styles/_variables.scss')
-      ]
+      resources: [path.resolve(PATHS.app, './styles/_variables.scss')]
     }
   }
 ]
@@ -146,7 +144,9 @@ const sharedCssLoaders = [
 const base = {
   output: {
     path: PATHS.build,
-    filename: isProduction ? 'assets/build/js/bundle.[hash:12].min.js' : 'assets/build/js/bundle.[hash:12].js',
+    filename: isProduction
+      ? 'assets/build/js/bundle.[hash:12].min.js'
+      : 'assets/build/js/bundle.[hash:12].js',
     publicPath: '/'
   },
   module: {
@@ -156,20 +156,22 @@ const base = {
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      isProduction ? {
-        test: /\.(scss)|(css)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: sharedCssLoaders
-        })
-      } : {
-        test: /\.(scss)|(css)$/,
-        use: [ { loader: 'style-loader' }, ...sharedCssLoaders ]
-      }
+      isProduction
+        ? {
+            test: /\.(scss)|(css)$/,
+            use: ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: sharedCssLoaders
+            })
+          }
+        : {
+            test: /\.(scss)|(css)$/,
+            use: [{ loader: 'style-loader' }, ...sharedCssLoaders]
+          }
     ]
   },
   resolve: {
-    modules: [ PATHS.app, 'node_modules' ]
+    modules: [PATHS.app, 'node_modules']
   },
   node: {
     console: true,
@@ -212,7 +214,7 @@ const developmentConfig = {
 }
 
 const productionConfig = {
-  entry: [ PATHS.app ],
+  entry: [PATHS.app],
   devtool: 'cheap-module-source-map',
   plugins: [
     ...sharedPlugins,
@@ -228,4 +230,8 @@ const productionConfig = {
   ]
 }
 
-module.exports = Object.assign({}, base, isProduction ? productionConfig : developmentConfig)
+module.exports = Object.assign(
+  {},
+  base,
+  isProduction ? productionConfig : developmentConfig
+)

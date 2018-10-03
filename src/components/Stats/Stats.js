@@ -5,11 +5,16 @@ import s from './Stats.scss'
 const Stats = ({ teams, ...stats }) => (
   <section className={s.container}>
     <table className={s.table}>
-      <thead className={s.head} dangerouslySetInnerHTML={formatStatsTableHead(teams)}></thead>
-      <tbody className={s.body} dangerouslySetInnerHTML={formatStatsTableBody(stats)}></tbody>
+      <thead
+        className={s.head}
+        dangerouslySetInnerHTML={formatStatsTableHead(teams)}
+      />
+      <tbody
+        className={s.body}
+        dangerouslySetInnerHTML={formatStatsTableBody(stats)}
+      />
     </table>
   </section>
-
 )
 
 export default Stats

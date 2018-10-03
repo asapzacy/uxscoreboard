@@ -7,13 +7,29 @@ import s from './Social.scss'
 
 const Social = () => (
   <section className={s.container}>
-    <a className={s.link} href='https://twitter.com/asapzacy' title='asapzacy | twitter'>
-      <span className={s.iconFull}><TwitterFull /></span>
-      <span className={s.iconOutline}><TwitterOutline /></span>
+    <a
+      className={s.link}
+      href="https://twitter.com/asapzacy"
+      title="asapzacy | twitter"
+    >
+      <span className={s.iconFull}>
+        <TwitterFull />
+      </span>
+      <span className={s.iconOutline}>
+        <TwitterOutline />
+      </span>
     </a>
-    <a className={s.link} href='https://github.com/zacarellano/uxscoreboard' title='uxscoreboard | github'>
-      <span className={s.iconFull}><GithubFull /></span>
-      <span className={s.iconOutline}><GithubOutline /></span>
+    <a
+      className={s.link}
+      href="https://github.com/zacarellano/uxscoreboard"
+      title="uxscoreboard | github"
+    >
+      <span className={s.iconFull}>
+        <GithubFull />
+      </span>
+      <span className={s.iconOutline}>
+        <GithubOutline />
+      </span>
     </a>
   </section>
 )

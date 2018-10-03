@@ -44,17 +44,22 @@ class MlbContainer extends Component {
       this.setState({ isValid: true })
     }
     getMlbScores(dt)
-      .then((currentScores) => {
+      .then(currentScores => {
         const gamedayDetails = currentScores.dates[0]
         const scores = gamedayDetails !== undefined ? gamedayDetails.games : []
-        const year = scores[0] ? scores[0].season : (this.state.year || dt.slice(0, 4))
-        this.setState({
-          date: dt,
-          scores,
-          year
-        }, () => this.delay())
+        const year = scores[0]
+          ? scores[0].season
+          : this.state.year || dt.slice(0, 4)
+        this.setState(
+          {
+            date: dt,
+            scores,
+            year
+          },
+          () => this.delay()
+        )
       })
-      .catch((error) =>  {
+      .catch(error => {
         this.setState({
           isLoading: false,
           isError: true,
@@ -81,7 +86,7 @@ class MlbContainer extends Component {
     this.refreshId = setTimeout(() => this.makeRequest(dt), seconds * 1000)
   }
   getCache() {
-    ref.once('value', (snapshot) => {
+    ref.once('value', snapshot => {
       if (snapshot.hasChild('mlb')) {
         this.setState({
           cache: snapshot.val().mlb.scores
@@ -90,7 +95,8 @@ class MlbContainer extends Component {
     })
   }
   saveScores() {
-    ref.child(`mlb/scores/${this.state.date}`)
+    ref
+      .child(`mlb/scores/${this.state.date}`)
       .set(this.state.scores)
       .then(() => console.log(`mlb scores updated.. `))
       .then(() => this.getCache())

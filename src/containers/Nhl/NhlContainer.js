@@ -35,7 +35,7 @@ class NhlContainer extends Component {
       this.setState({ isValid: true })
     }
     getNhlScores(dt)
-      .then((currentScores) => {
+      .then(currentScores => {
         this.setState({
           isLoading: false,
           scores: currentScores,
@@ -43,7 +43,7 @@ class NhlContainer extends Component {
           date: dt
         })
       })
-      .catch((error) =>  {
+      .catch(error => {
         this.setState({
           isLoading: false,
           isError: true,

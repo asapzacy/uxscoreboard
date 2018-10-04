@@ -1,37 +1,87 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
+# https://circleci.com/docs/2.0/local-cli/
 version: 2
 jobs:
   build:
+    working_directory: ~/project
     docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+      - image: circleci/node:9
     steps:
+      # checkout the code from the branch into the working_directory
       - checkout
-
-      # Download and cache dependencies
+      # log the current branch
+      - run:
+          name: Show Current Branch
+          command: echo ${CIRCLE_BRANCH}
+      # restore local dependencies from cache
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
-      - run: yarn install
-
+      # install project dependencies
+      - run:
+          name: Install node_modules
+          command: yarn
+      #cache local dependencies if they don't exist
       - save_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # lint the source code
+      # - run:
+      #     name: linting
+      #     command: yarn lint
+      # test the source code
+      - run:
+          name: Run Tests
+          command: yarn test
 
-      # run tests!
-      - run: yarn test
+  deploy:
+    working_directory: ~/project
+    docker:
+      - image: circleci/node:9
+    steps:
+      # log the current branch
+      - run:
+          name: Show Current Branch
+          command: echo ${CIRCLE_BRANCH}
+      # restore cache from the build job which contains the
+      # dist folder that needs to be deployed
+      - restore_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+      - add_ssh_keys
+      - run:
+          name: Keyscan Github (HACK)
+          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts # - add_ssh_keys:
+      #     fingerprints:
+      #       - $SSH_FINGERPRINT
+      #       - $SSH_FINGERPRINT2
+      #       - $SSH_FINGERPRINT3
+      # - run:
+      #     name: scp dist
+      #     command: sudo scp -i ~/.ssh/id_rsa_........... -P 3022 -r dist.zip tp-dev@..........:~/
+      - run:
+          name: SSH Into Droplet
+          command: |
+            # eval `ssh-agent` && ssh-add ~/.ssh/id_rsa_circleci
+            echo 'hi'
+            echo $DROPLET_USER
+            echo $DROPLET_IP
+            echo $SSH_FINGERPRINT
+            ssh -v $DROPLET_USER@$DROPLET_IP
+            eval "$(ssh-agent -s)"
+            ssh-add ~/.ssh/id_rsa
+            ~/scripts/pull.sh
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      # - build
+      - deploy:
+          # requires:
+          #   - build
+          filters:
+            branches:
+              only:
+                - staging
+                - master

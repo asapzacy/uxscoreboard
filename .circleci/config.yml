@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Install node_modules
           command: yarn
-      #cache local dependencies if they don't exist
+      # cache local dependencies if they don't exist
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
@@ -34,54 +34,80 @@ jobs:
       - run:
           name: Run Tests
           command: yarn test
+      - run:
+          name: Build Files
+          command: yarn build:deploy
 
   deploy:
     working_directory: ~/project
     docker:
       - image: circleci/node:9
+    # machine:
+    #   enabled: true
     steps:
+      - checkout
+      # - run:
+      #     name: SSH Keyscan
+      #     command: |
+      #       cp ~/.ssh/known_hosts ~/.ssh/known_hosts_old
+      #       ssh-keyscan $DEPLOY_HOST >> ~/.ssh/known_hosts
       # log the current branch
       - run:
           name: Show Current Branch
           command: echo ${CIRCLE_BRANCH}
+      # - run: cat ~/repo/.circleci/ssh.config >> ~/.ssh/config
       # restore cache from the build job which contains the
       # dist folder that needs to be deployed
       - restore_cache:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+      # - run:
+      #     name: Keyscan Github (HACK)
+      #     command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts # - add_ssh_keys:
       - add_ssh_keys
-      - run:
-          name: Keyscan Github (HACK)
-          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts # - add_ssh_keys:
-      #     fingerprints:
-      #       - $SSH_FINGERPRINT
-      #       - $SSH_FINGERPRINT2
-      #       - $SSH_FINGERPRINT3
+      # - run:
+      #     name: Keyscan Github (HACK)
+      #     command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts # fingerprints:
+      # - $SSH_FINGERPRINT_1
+      # - $SSH_FINGERPRINT_2
       # - run:
       #     name: scp dist
       #     command: sudo scp -i ~/.ssh/id_rsa_........... -P 3022 -r dist.zip tp-dev@..........:~/
       - run:
-          name: SSH Into Droplet
+          name: Fix host authenticity for $DROPLET_IP
           command: |
-            # eval `ssh-agent` && ssh-add ~/.ssh/id_rsa_circleci
-            echo 'hi'
-            echo $DROPLET_USER
-            echo $DROPLET_IP
-            echo $SSH_FINGERPRINT
+            ssh-keyscan $DROPLET_IP >> ~/.ssh/known_hosts
+      - run:
+          name: Deploy Over SSH
+          command: |
             ssh -v $DROPLET_USER@$DROPLET_IP
-            eval "$(ssh-agent -s)"
-            ssh-add ~/.ssh/id_rsa
-            ~/scripts/pull.sh
+            echo 'ayyyyyyyyyyyyyyy'
+            scp -rp ~/project/dist $DROPLET_USER@$DROPLET_IP:/home/$DROPLET_USER/apps/uxscoreboard
+            # ssh -vvv -i ~/.ssh/id_rsa_ci [youruser]@[yourLinode]
+      # - echo 'deploying'
+      # - ssh -v $DROPLET_USER@$DROPLET_IP "cd ~/mywell-server; ./circle_deployer.sh"
+      # - run:
+      #     name: SSH Into Droplet
+      #     command: |
+      # eval `ssh-agent` && ssh-add ~/.ssh/id_rsa_circleci
+      # echo 'hi'
+      # echo $DROPLET_USER
+      # echo $DROPLET_IP
+      # ssh -o "StrictHostKeyChecking no" $DROPLET_USER@$DROPLET_IP
+      # eval "$(ssh-agent -s)"
+      # ssh-add ~/.ssh/id_rsa
+      # cat $PUBLIC_KEY >> ~/.ssh/known_hosts
+      # ~/scripts/ci.sh
 
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-      # - build
+      - build
       - deploy:
-          # requires:
-          #   - build
+          requires:
+            - build
           filters:
             branches:
               only:
-                - staging
+                - x
                 - master

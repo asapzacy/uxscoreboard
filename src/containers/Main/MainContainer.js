@@ -16,6 +16,7 @@ class MainContainer extends Component {
     this.getScreenWidth = this.getScreenWidth.bind(this)
   }
   componentDidMount() {
+    console.log('circlci !')
     this.loadFonts()
     this.getScreenWidth()
     window.addEventListener('resize', this.getScreenWidth)

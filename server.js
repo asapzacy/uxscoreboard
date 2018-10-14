@@ -3,14 +3,18 @@ const express = require('express')
 const path = require('path')
 const compression = require('compression')
 const cors = require('cors')
+const responseTime = require('response-time')
 const axios = require('axios')
 const parseString = require('xml2js').parseString
+require('dotenv').config()
+
 const port = process.env.PORT || 9090
 
 const app = express()
 
 app.use(compression())
 app.use(cors())
+app.use(responseTime())
 
 app.use(express.static('dist'))
 

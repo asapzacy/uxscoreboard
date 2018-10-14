@@ -6,6 +6,7 @@ defaults: &defaults
   working_directory: ~/uxscoreboard
   environment:
     BUILD_DIR: ./dist
+    NODE_APP: ./app.js
 
 version: 2
 jobs:
@@ -49,16 +50,13 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
               sudo apt-get update && sudo apt-get install rsync
-              rsync -avce ssh $BUILD_DIR $DROPLET_USER@$DROPLET_IP:/home/zac/apps/uxscoreboard
+              rsync -avce ssh . $DROPLET_USER@$DROPLET_IP:/home/zac/apps/uxscoreboard
+            elif [ "${CIRCLE_BRANCH}" = "staging" ]; then
+              sudo apt-get update && sudo apt-get install rsync
+              rsync -avce ssh . $DROPLET_USER@$DROPLET_IP:/home/zac/apps/uxscoreboard-staging
             else
               echo "Not master branch, dry run only"
             fi
-      # - run:
-      #     name: Deploy Over SSH
-      #     command: |
-      #       ssh -v $DROPLET_USER@$DROPLET_IP
-      #       echo 'ayyyyyyyyyyyyyyy'
-      #       scp -rp ~/project/dist $DROPLET_USER@$DROPLET_IP:/home/$DROPLET_USER/apps/uxscoreboard
 
 workflows:
   version: 2
@@ -73,3 +71,4 @@ workflows:
             branches:
               only:
                 - master
+                - staging

@@ -6,6 +6,8 @@ const cors = require('cors')
 const responseTime = require('response-time')
 const axios = require('axios')
 const parseString = require('xml2js').parseString
+require('dotenv').config()
+
 const port = process.env.PORT || 9090
 
 const app = express()

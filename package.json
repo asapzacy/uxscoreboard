@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
-    "server": "nodemon app.js",
+    "server": "nodemon server.js",
     "start": "concurrently 'yarn dev' 'yarn server' --names 'REACT,NODE' -c 'bgBlue.bold,bgMagenta.bold'",
     "start:fresh": "yarn reset:all && yarn start",
     "start:dirty": "yarn && yarn start",

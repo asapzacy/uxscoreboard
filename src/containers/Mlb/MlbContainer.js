@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
+import { seasons } from 'data/league_dates'
 import { updatePageInfo } from 'config/metadata'
 import { ref } from 'config/firebase'
 
@@ -39,7 +40,7 @@ class MlbContainer extends Component {
     clearTimeout(this.delayId)
     clearTimeout(this.refreshId)
   }
-  makeRequest(dt = this.state.today) {
+  makeRequest(dt = seasons[this.props.league].seasons['2019'].season.start) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

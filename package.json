@@ -2,7 +2,7 @@
   "name": "uxscoreboard",
   "version": "1.0.0",
   "description": "A sports scoreboard web app built on ES6, React, and Node.js—features MLB, NBA, NFL, NHL, and MLS (coming soon) games.",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "dev": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
     "server": "nodemon server.js",
@@ -73,7 +73,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "node-sass": "^4.5.3",
-    "nodemon": "^1.11.0",
     "postcss-assets-webpack-plugin": "^1.1.0",
     "postcss-loader": "^2.0.10",
     "prettier": "^1.14.3",
@@ -88,6 +87,9 @@
     "webpack-dev-server": "^2.3.0",
     "webpack-stats-plugin": "^0.1.4",
     "webpack-visualizer-plugin": "^0.1.10"
+  },
+  "optionalDependencies": {
+    "fsevents": "^1.2.4"
   },
   "repository": {
     "type": "git",

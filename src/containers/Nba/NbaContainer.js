@@ -101,7 +101,6 @@ class NbaContainer extends Component {
   }
   saveScores() {
     const scores = { year: this.state.year, games: this.state.scores }
-    console.log(this.state)
     ref
       .child(`nba/scores/${this.state.date}`)
       .set(scores)

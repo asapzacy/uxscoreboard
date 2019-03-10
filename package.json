@@ -76,7 +76,6 @@
     "postcss-assets-webpack-plugin": "^1.1.0",
     "postcss-loader": "^2.0.10",
     "prettier": "^1.14.3",
-    "react-addons-perf": "^15.4.2",
     "react-hot-loader": "^4.0.0-beta.23",
     "sass-loader": "^6.0.5",
     "sass-resources-loader": "^1.2.1",

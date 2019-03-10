@@ -80,7 +80,7 @@ const extractTextPlugin = new ExtractTextPlugin({
 })
 
 const compressionPlugin = new CompressionPlugin({
-  asset: '[path].gz[query]',
+  filename: '[path].gz[query]',
   algorithm: 'gzip',
   test: /\.(js|css)$/,
   threshold: 1024,

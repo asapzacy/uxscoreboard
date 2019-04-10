@@ -22,6 +22,6 @@ export const nhlMatchupProps = (game, date) => ({
   homeTeam: game.teams.home.team.teamName,
   location:
     game.gameType === 'A' ? 'Los Angeles' : game.teams.home.team.venue.city,
-  venue: game.venue.name,
+  venue: game.teams.home.team.venue.name,
   date
 })

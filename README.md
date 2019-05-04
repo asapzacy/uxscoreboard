@@ -1,4 +1,4 @@
-# [uxscoreboard](https://github.com/asapzacy/uxscoreboard) &middot; [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/asapzacy/uxscoreboard/blob/master/LICENSE) [![CircleCI Status](https://img.shields.io/circleci/project/github/asapzacy/uxscoreboard.svg?style=flat-square&label=circleci)](https://circleci.com/gh/asapzacy/uxscoreboard)
+# [uxscoreboard](https://uxscoreboard.com) &middot; [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/asapzacy/uxscoreboard/blob/master/LICENSE) [![CircleCI Status](https://img.shields.io/circleci/project/github/asapzacy/uxscoreboard.svg?style=flat-square&label=circleci)](https://circleci.com/gh/asapzacy/uxscoreboard)
 
 <p style="text-align:center;font-size:110%">A real-time sports scoreboard web app built on ES6, React, and node.js.</p>
 

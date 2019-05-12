@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
-    "server": "nodemon server.js",
+    "server": "npx nodemon server.js",
     "start": "concurrently 'yarn dev' 'yarn server' --names 'REACT,NODE' -c 'bgBlue.bold,bgMagenta.bold'",
     "start:fresh": "yarn reset:all && yarn start",
     "start:dirty": "yarn && yarn start",
@@ -29,7 +29,6 @@
     "cors": "^2.8.3",
     "dotenv": "^6.1.0",
     "express": "^4.15.3",
-    "firebase": "^5.8.6",
     "moment": "^2.17.1",
     "moment-timezone": "^0.5.11",
     "react": "^16.8.4",

@@ -93,8 +93,8 @@ export const nhlGameStateProps = game => {
       game.status.codedGameState < 3
         ? 0
         : game.status.codedGameState < 6
-          ? 1
-          : 2,
+        ? 1
+        : 2,
     status:
       game.status.codedGameState === '2'
         ? game.status.detailedState

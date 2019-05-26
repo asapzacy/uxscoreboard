@@ -41,7 +41,7 @@ const InGameState = ({
   <section className={s.inGame}>
     {!isHalfTime && (
       <span>
-        {currentTime && `${currentTime} • `}
+        {currentTime && `${currentTime} · `}
         {currentPeriod}
         <sup>{periodSuffix(currentPeriod)}</sup>
       </span>

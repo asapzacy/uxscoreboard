@@ -1,35 +1,33 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
           "browsers": ["ie >= 10"]
         },
         "modules": false,
-        "useBuiltIns": true,
         "debug": false
       }
     ],
-    "stage-0",
-    "react"
+    "@babel/react"
   ],
   "ignore": ["node_modules"],
   "plugins": [
     "react-hot-loader/babel",
     "transform-react-stateless-component-name",
+    "@babel/plugin-proposal-class-properties",
     [
-      "transform-runtime",
+      "@babel/plugin-transform-runtime",
       {
         "helpers": false,
-        "polyfill": false,
         "regenerator": true
       }
     ]
   ],
   "env": {
     "test": {
-      "presets": [["env"], "react", "stage-0"]
+      "presets": [["@babel/preset-env"], "@babel/react"]
     }
   }
 }

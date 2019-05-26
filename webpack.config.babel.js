@@ -5,7 +5,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
 const VisualizerPlugin = require('webpack-visualizer-plugin')
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const PostcssAssetsPlugin = require('postcss-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -74,9 +74,8 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
   verbose: true
 })
 
-const extractTextPlugin = new ExtractTextPlugin({
-  disable: !isProduction,
-  filename: 'assets/build/css/bundle.[hash:12].css'
+const miniCssExtractPlugin = new MiniCssExtractPlugin({
+  filename: 'assets/build/css/bundle.[hash:12].min.css'
 })
 
 const compressionPlugin = new CompressionPlugin({
@@ -108,7 +107,7 @@ const productionPlugin = new webpack.DefinePlugin({
 const sharedPlugins = [
   globalVariables,
   htmlWebpackPlugin,
-  extractTextPlugin,
+  miniCssExtractPlugin,
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 ]
 
@@ -159,10 +158,7 @@ const base = {
       isProduction
         ? {
             test: /\.(scss)|(css)$/,
-            use: ExtractTextPlugin.extract({
-              fallback: 'style-loader',
-              use: sharedCssLoaders
-            })
+            use: [MiniCssExtractPlugin.loader, ...sharedCssLoaders]
           }
         : {
             test: /\.(scss)|(css)$/,
@@ -189,6 +185,7 @@ const developmentConfig = {
     PATHS.app
   ],
   devtool: 'cheap-module-inline-source-map',
+  mode: 'development',
   devServer: {
     contentBase: PATHS.build,
     publicPath: '/',
@@ -216,6 +213,7 @@ const developmentConfig = {
 const productionConfig = {
   entry: [PATHS.app],
   devtool: 'cheap-module-source-map',
+  mode: 'production',
   plugins: [
     ...sharedPlugins,
     productionPlugin,

@@ -151,7 +151,7 @@ const base = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(tsx?)|(js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
@@ -167,7 +167,8 @@ const base = {
     ]
   },
   resolve: {
-    modules: [PATHS.app, 'node_modules']
+    modules: [PATHS.app, 'node_modules'],
+    extensions: ['.ts', '.tsx', '.js']
   },
   node: {
     console: true,
@@ -203,7 +204,7 @@ const developmentConfig = {
   },
   plugins: [
     ...sharedPlugins,
-    browserSyncPlugin,
+    ...(process.env.BROWSER_SYNC ? browserSyncPlugin : []),
     duplicatePackageCheckerPlugin,
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()

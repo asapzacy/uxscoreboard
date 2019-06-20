@@ -38,7 +38,7 @@ class NbaContainer extends Component {
     clearTimeout(this.refreshId)
   }
 
-  makeRequest(dt = this.state.today) {
+  makeRequest(dt = '20190613') {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

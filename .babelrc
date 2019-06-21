@@ -17,6 +17,7 @@
   "plugins": [
     "react-hot-loader/babel",
     "transform-react-stateless-component-name",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
     "@babel/plugin-proposal-class-properties",
     [
       "@babel/plugin-transform-runtime",

@@ -9,8 +9,8 @@ const Social = () => (
   <section className={s.container}>
     <a
       className={s.link}
-      href="https://twitter.com/asapzacy"
-      title="asapzacy | twitter"
+      href={'https://twitter.com/asapzacy'}
+      title={'asapzacy | twitter'}
     >
       <span className={s.iconFull}>
         <TwitterFull />
@@ -21,8 +21,8 @@ const Social = () => (
     </a>
     <a
       className={s.link}
-      href="https://github.com/zacarellano/uxscoreboard"
-      title="uxscoreboard | github"
+      href={'https://github.com/zacarellano/uxscoreboard'}
+      title={'uxscoreboard | github'}
     >
       <span className={s.iconFull}>
         <GithubFull />

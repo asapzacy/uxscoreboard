@@ -1,4 +1,4 @@
-export const app_pages = {
+export const APP_PAGES = {
   mainLinks: [
     { name: 'MLB', url: 'mlb', icon: 'baseball' },
     { name: 'NBA', url: 'nba', icon: 'basketball' },

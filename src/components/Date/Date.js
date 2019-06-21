@@ -11,7 +11,7 @@ const Date = ({ width, ...props }) => (
     {props.league !== 'nfl' && (
       <menu className={s.list}>
         <li className={s.arrow}>
-          <Day {...props} diff={-1} isArrow />
+          <Day {...props} diff={-1} isArrow={true} />
         </li>
         {width >= 1331 && (
           <li className={s.item}>
@@ -37,7 +37,7 @@ const Date = ({ width, ...props }) => (
           </li>
         )}
         <li className={s.arrow}>
-          <Day {...props} diff={1} isArrow />
+          <Day {...props} diff={1} isArrow={true} />
         </li>
       </menu>
     )}

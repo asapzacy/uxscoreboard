@@ -4,7 +4,7 @@ import { GameContainer, DateContainer } from 'containers'
 import { getNbaGameDetails } from 'helpers/api'
 import { VelocityTransitionGroup } from 'velocity-react'
 import 'velocity-animate/velocity.ui'
-import { velocity_scoreboard } from 'config/velocity'
+import { velocityScoreboard } from 'config/velocity'
 import s from './Scoreboard.scss'
 
 export default function Scoreboard({
@@ -100,7 +100,7 @@ export default function Scoreboard({
       <DateContainer date={date} today={today} league={league} />
       <VelocityTransitionGroup
         className={s.fade}
-        {...velocity_scoreboard(direction)}
+        {...velocityScoreboard(direction)}
       >
         <ul className={s.list} key={date}>
           {games}

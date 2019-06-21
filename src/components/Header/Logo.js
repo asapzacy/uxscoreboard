@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import s from './Header.scss'
 
 const Logo = () => (
-  <Link to="/" title={'uxscoreboard'}>
+  <Link to={'/'} title={'uxscoreboard'}>
     <img
       className={s.logo}
       src={'/assets/static/img/uxscoreboard.svg'}

@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './Item'
-import { app_pages } from 'data/app_pages'
+import { APP_PAGES } from 'data/appPages'
 import s from './Home.scss'
 
 const Home = () => (
@@ -8,13 +8,13 @@ const Home = () => (
     <section className={s.uxscoreboard}>
       <h1 className={s.name}>{'uxscoreboard'}</h1>
       <h2 className={s.description}>
-        {'live sports scoreboard built on ES6, React, and Node.js'}
+        {'Real-time sports scoreboard built on es6, React, and Node.js'}
       </h2>
     </section>
     <nav className={s.menu}>
       <menu className={s.list}>
-        {app_pages.mainLinks.map((el, i) => (
-          <Item league={el.name} url={el.url} key={i} />
+        {APP_PAGES.mainLinks.map(page => (
+          <Item league={page.name} url={page.url} key={page.name} />
         ))}
       </menu>
     </nav>

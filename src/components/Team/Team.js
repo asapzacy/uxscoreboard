@@ -1,12 +1,12 @@
 import React from 'react'
 import { LogoContainer } from 'containers'
-import { team_colors } from 'data/team_colors'
+import { TEAM_COLORS } from 'data/teamColors'
 import s from './Team.scss'
 
-const makeBgImg = (code, league, isLoaded) => ({
+const makeBgImg = (code, league) => ({
   backgroundImage:
     code !== 'nyy' &&
-    `linear-gradient(to right,${team_colors[league][code]} 40%,transparent 0%)`
+    `linear-gradient(to right,${TEAM_COLORS[league][code]} 40%,transparent 0%)`
 })
 
 const Team = ({
@@ -36,12 +36,11 @@ const Team = ({
         <span className={s.name}>
           {name.length >= 9 ? <small>{name}</small> : name}
         </span>
-        {ws &&
-          ls && (
-            <span className={s.record}>{`(${ws}-${ls}${
-              ts ? `-${ts}` : ''
-            })`}</span>
-          )}
+        {ws && ls && (
+          <span className={s.record}>{`(${ws}-${ls}${
+            ts ? `-${ts}` : ''
+          })`}</span>
+        )}
       </section>
       <section
         className={s.rightSide}

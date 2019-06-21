@@ -4,14 +4,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { AppContainer } from 'react-hot-loader'
 import { MainContainer as Root } from 'containers'
 
-const createBrowserHistory = require('history').createBrowserHistory
-
 require('dotenv').config()
 
 const renderApp = Root => {
   render(
     <AppContainer>
-      <Router history={createBrowserHistory()}>
+      <Router>
         <Root />
       </Router>
     </AppContainer>,

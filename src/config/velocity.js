@@ -1,4 +1,4 @@
-export const velocity_game = {
+export const velocityGame = {
   enter: {
     animation: 'slideDown',
     duration: 220,
@@ -11,7 +11,7 @@ export const velocity_game = {
   }
 }
 
-export const velocity_scoreboard = direction => ({
+export const velocityScoreboard = direction => ({
   enter: {
     animation: `transition.slide${direction.enter ? direction.enter : 'Up'}${
       direction.enter ? 'Big' : ''

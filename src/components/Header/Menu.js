@@ -2,17 +2,17 @@ import React from 'react'
 import Item from './Item'
 import Extra from './Extra'
 import Footer from './Footer'
-import { app_pages } from 'data/app_pages'
+import { APP_PAGES } from 'data/appPages'
 import s from './Header.scss'
 
 const Menu = ({ menuHeight, screenWidth }) => (
   <nav className={s.menu} style={{ maxHeight: menuHeight }}>
     <menu className={s.list}>
-      {app_pages.mainLinks.map((el, i) => (
+      {APP_PAGES.mainLinks.map((el, i) => (
         <Item {...el} screenWidth={screenWidth} key={i} />
       ))}
       <span className={s.block} />
-      {app_pages.extraLinks.map((el, i) => (
+      {APP_PAGES.extraLinks.map((el, i) => (
         <Extra {...el} key={i} />
       ))}
     </menu>

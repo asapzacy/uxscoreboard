@@ -21,19 +21,21 @@ class MainContainer extends Component {
   }
 
   componentDidMount() {
+    /* eslint-disable-next-line */
     console.log('asappppppppppp')
     this.loadFonts()
     this.getScreenWidth()
     window.addEventListener('resize', this.getScreenWidth)
   }
 
+  componentDidUpdate() {
+    logPageView()
+  }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.getScreenWidth)
   }
 
-  componentDidUpdate() {
-    logPageView()
-  }
   loadFonts() {
     WebFont.load({
       google: { families: ['Comfortaa:300,400,700'] },
@@ -43,6 +45,7 @@ class MainContainer extends Component {
       classes: false
     })
   }
+
   getScreenWidth() {
     this.setState({ screenWidth: window.innerWidth }, () => {
       const header = document.querySelector('header')

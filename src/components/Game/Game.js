@@ -1,8 +1,8 @@
 import React from 'react'
-import { GameState, Team, Expand, Details } from 'components'
+import { GameState, Team, Expand } from 'components'
 import { DetailsContainer } from 'containers'
 import { VelocityTransitionGroup } from 'velocity-react'
-import { velocity_game } from 'config/velocity'
+import { velocityGame } from 'config/velocity'
 import {
   mlbTeamProps,
   nbaTeamProps,
@@ -81,7 +81,7 @@ const NbaGame = ({
     </span>
     <VelocityTransitionGroup
       className={isExpanded ? s.detailsExpanded : s.details}
-      {...velocity_game}
+      {...velocityGame}
     >
       {isExpanded && (
         <DetailsContainer
@@ -132,7 +132,7 @@ const NflGame = ({
     </span>
     <VelocityTransitionGroup
       className={isExpanded ? s.detailsExpanded : s.details}
-      {...velocity_game}
+      {...velocityGame}
     >
       {isExpanded && (
         <DetailsContainer
@@ -183,7 +183,7 @@ const MlbGame = ({
     </span>
     <VelocityTransitionGroup
       className={isExpanded ? s.detailsExpanded : s.details}
-      {...velocity_game}
+      {...velocityGame}
     >
       {isExpanded && (
         <DetailsContainer
@@ -234,7 +234,7 @@ const NhlGame = ({
     </span>
     <VelocityTransitionGroup
       className={isExpanded ? s.detailsExpanded : s.details}
-      {...velocity_game}
+      {...velocityGame}
     >
       {isExpanded && (
         <DetailsContainer

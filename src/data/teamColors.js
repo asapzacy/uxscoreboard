@@ -1,4 +1,4 @@
-export const team_colors = {
+export const TEAM_COLORS = {
   mlb: {
     ana: '#ba0021',
     ari: '#000000',

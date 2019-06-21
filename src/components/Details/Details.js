@@ -5,7 +5,6 @@ import {
   BoxScore,
   Stats,
   Diamond,
-  Leaders,
   UpdateTime
 } from 'components'
 import {

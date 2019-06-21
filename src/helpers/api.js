@@ -1,8 +1,6 @@
 import axios from 'axios'
 import { dateObject } from './utils'
 
-const CORS = 'https://cors-anywhere.herokuapp.com/'
-
 export const getMlbScores = dt => {
   const api = `/api/mlb/scores/${dt}`
   return axios

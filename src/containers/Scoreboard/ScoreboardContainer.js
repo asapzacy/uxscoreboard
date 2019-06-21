@@ -1,39 +1,42 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Scoreboard } from 'components'
-import { seasons } from 'data/league_dates'
+import { seasons } from 'data/leagueDates'
 import { checkDay, formatLastUpdatedString } from 'helpers/utils'
 
-class ScoreboardContainer extends Component {
-  constructor() {
-    super()
-    this.state = {
-      lastUpdated: 0,
-      bgImg: '',
-      seasonState: {
-        isPreseason: false,
-        isSeason: false,
-        isAllStar: false,
-        isPlayoffs: false,
-        isFinals: false
-      },
-      direction: {
-        enter: '',
-        leave: ''
-      }
+class ScoreboardContainer extends React.Component {
+  state = {
+    lastUpdated: 0,
+    bgImg: '',
+    seasonState: {
+      isPreseason: false,
+      isSeason: false,
+      isAllStar: false,
+      isPlayoffs: false,
+      isFinals: false
+    },
+    direction: {
+      enter: '',
+      leave: ''
     }
   }
+
   componentDidMount() {
     this.updateTime()
     this.checkSeason(this.props.date || this.props.week)
   }
-  componentWillReceiveProps(nextProps) {
-    this.updateTime()
-    this.checkSeason(nextProps.date || nextProps.week)
-    this.updateDirection(this.props.date, nextProps.date)
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.date !== this.props.date) {
+      this.updateTime()
+      this.checkSeason(this.props.date || this.props.week)
+      this.updateDirection(prevProps.date, this.props.date)
+    }
   }
+
   updateTime() {
     this.setState({ lastUpdated: formatLastUpdatedString() })
   }
+
   updateDirection(oldDate, newDate) {
     let enter
     let leave
@@ -48,6 +51,7 @@ class ScoreboardContainer extends Component {
       direction: { enter, leave }
     })
   }
+
   checkSeason(day) {
     if (
       this.props.league !== 'nba' &&
@@ -81,6 +85,7 @@ class ScoreboardContainer extends Component {
       )
     }
   }
+
   updateBgImg() {
     let img = ''
     if (this.state.seasonState.isPlayoffs) {
@@ -97,6 +102,7 @@ class ScoreboardContainer extends Component {
     }
     this.setState({ bgImg: img })
   }
+
   render() {
     return <Scoreboard {...this.state} {...this.props} />
   }

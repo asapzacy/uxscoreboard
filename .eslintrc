@@ -2,7 +2,10 @@
   "parser": "babel-eslint",
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "jest": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
@@ -13,7 +16,11 @@
     }
   },
   "plugins": ["react"],
-  "extends": ["eslint:recommended", "plugin:react/recommended", "standard"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
   "rules": {
     "no-console": [2, { "allow": ["warn", "error"] }],
     "semi": [2, "never"],
@@ -22,9 +29,14 @@
     "space-before-function-paren": ["error", "never"],
     "react/jsx-boolean-value": [2, "always"],
     "react/jsx-curly-spacing": [2, "never", { "allowMultiline": false }],
-    "react/jsx-max-props-per-line": [2, { "maximum": 3 }],
     "react/jsx-no-literals": 2,
     "react/self-closing-comp": 2,
-    "react/sort-comp": 2
+    "react/sort-comp": 2,
+    "react/prop-types": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

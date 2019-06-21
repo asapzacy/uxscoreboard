@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
-import { seasons } from 'data/league_dates'
 import { updatePageInfo } from 'config/metadata'
 
 class MlbContainer extends Component {
@@ -24,13 +23,15 @@ class MlbContainer extends Component {
     }
     updatePageInfo(pageInfo)
     this.setState({ today: getTodaysDate() }, () => {
-      this.makeRequest(this.props.routeParams.date)
+      this.makeRequest(this.props.match.params.date)
     })
   }
 
-  componentWillReceiveProps(nextProps) {
-    clearTimeout(this.refreshId)
-    this.makeRequest(nextProps.routeParams.date)
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.date !== this.props.match.params.date) {
+      clearTimeout(this.refreshId)
+      this.makeRequest(this.props.match.params.date)
+    }
   }
 
   componentWillUnmount() {

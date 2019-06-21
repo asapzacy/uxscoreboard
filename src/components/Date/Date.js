@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import moment from 'moment'
 import ArrowBack from 'react-icons/lib/io/ios-arrow-back'
 import ArrowForward from 'react-icons/lib/io/ios-arrow-forward'
@@ -64,8 +64,8 @@ function Day({ date, today, league, diff, isArrow }) {
     today === url
       ? 'today'
       : isMainLink
-        ? day.format('dddd')
-        : day.format('ddd')
+      ? day.format('dddd')
+      : day.format('ddd')
   const formattedDate = `${dayOfTheWeek}, ${day.format('MMM D')}`.toLowerCase()
   const title = `${league.toUpperCase()} scores - ${day.format(
     'MMMM D, YYYY'

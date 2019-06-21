@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-import { Header, Footer } from 'components'
 import WebFont from 'webfontloader'
+
+import { Header, Footer } from 'components'
+import Routes from 'config/Routes'
+import { logPageView } from 'config/analytics'
+
 import s from './Main.scss'
 
 class MainContainer extends Component {
@@ -15,14 +19,20 @@ class MainContainer extends Component {
     this.hideMenu = this.hideMenu.bind(this)
     this.getScreenWidth = this.getScreenWidth.bind(this)
   }
+
   componentDidMount() {
-    console.log('ayyy')
+    console.log('asappppppppppp')
     this.loadFonts()
     this.getScreenWidth()
     window.addEventListener('resize', this.getScreenWidth)
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.getScreenWidth)
+  }
+
+  componentDidUpdate() {
+    logPageView()
   }
   loadFonts() {
     WebFont.load({
@@ -81,7 +91,9 @@ class MainContainer extends Component {
     return (
       <div className={s.outerContainer} style={appHeight}>
         <Header triggerMenu={this.triggerMenu} {...this.state} />
-        <main className={s.innerContainer}>{this.props.children}</main>
+        <main className={s.innerContainer}>
+          <Routes />
+        </main>
         <Footer />
       </div>
     )

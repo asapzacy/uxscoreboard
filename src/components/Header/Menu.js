@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router'
 import Item from './Item'
 import Extra from './Extra'
 import Footer from './Footer'

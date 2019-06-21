@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { League } from 'components'
-import { getTodaysDate, isValidDate } from 'helpers/utils'
+import { getTodaysDate } from 'helpers/utils'
 import { updatePageInfo } from 'config/metadata'
 import { getNflScores } from 'helpers/api'
 
@@ -17,6 +17,7 @@ class NflContainer extends Component {
       week: 1
     }
   }
+
   componentDidMount() {
     const pageInfo = {
       title: `${this.props.league.toUpperCase()} scores · uxscoreboard`,
@@ -24,12 +25,17 @@ class NflContainer extends Component {
     }
     updatePageInfo(pageInfo)
     this.setState({ today: getTodaysDate() }, () => {
-      this.makeRequest(this.props.routeParams.week)
+      this.makeRequest(this.props.match.params.week)
     })
   }
-  componentWillReceiveProps(nextProps) {
-    this.makeRequest(nextProps.routeParams.week)
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.date !== this.props.match.params.date) {
+      clearTimeout(this.refreshId)
+      this.makeRequest(this.props.match.params.date)
+    }
   }
+
   makeRequest(week = this.state.week) {
     getNflScores(week)
       .then(data => {
@@ -47,6 +53,7 @@ class NflContainer extends Component {
         throw new Error(error)
       })
   }
+
   render() {
     return <League {...this.state} league={this.props.league} />
   }

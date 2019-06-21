@@ -17,6 +17,7 @@ class NhlContainer extends Component {
       today: ''
     }
   }
+
   componentDidMount() {
     const pageInfo = {
       title: `${this.props.league.toUpperCase()} scores · uxscoreboard`,
@@ -24,12 +25,17 @@ class NhlContainer extends Component {
     }
     updatePageInfo(pageInfo)
     this.setState({ today: getTodaysDate() }, () => {
-      this.makeRequest(this.props.routeParams.date)
+      this.makeRequest(this.props.match.params.date)
     })
   }
-  componentWillReceiveProps(nextProps) {
-    this.makeRequest(nextProps.routeParams.date)
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.date !== this.props.match.params.date) {
+      clearTimeout(this.refreshId)
+      this.makeRequest(this.props.match.params.date)
+    }
   }
+
   makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
@@ -52,6 +58,7 @@ class NhlContainer extends Component {
         throw new Error(error)
       })
   }
+
   render() {
     return <League {...this.state} league={this.props.league} />
   }

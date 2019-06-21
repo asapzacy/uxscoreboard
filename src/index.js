@@ -1,20 +1,30 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { AppContainer } from 'react-hot-loader'
-import routes from './config/routes'
+import { MainContainer as Root } from 'containers'
+
+const createBrowserHistory = require('history').createBrowserHistory
 
 require('dotenv').config()
 
-const renderApp = routes => {
-  render(<AppContainer>{routes}</AppContainer>, document.getElementById('app'))
+const renderApp = Root => {
+  render(
+    <AppContainer>
+      <Router history={createBrowserHistory()}>
+        <Root />
+      </Router>
+    </AppContainer>,
+    document.getElementById('app')
+  )
 }
 
-renderApp(routes)
+renderApp(Root)
 
 if (module.hot) {
   document.head.querySelector('link[rel=icon]').href = '/favicon-dev.png'
-  module.hot.accept('./config/routes', () => {
-    const newRoutes = require('./config/routes').default
-    renderApp(newRoutes)
+  module.hot.accept('containers/Main/MainContainer', () => {
+    const Root = require('containers/Main/MainContainer').default
+    renderApp(Root)
   })
 }

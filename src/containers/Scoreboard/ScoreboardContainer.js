@@ -96,9 +96,9 @@ class ScoreboardContainer extends React.Component {
       }
     }
     if (this.state.seasonState.isAllStar) {
-      img = `url(/assets/static/img/${
-        this.props.league
-      }/other/all-star-game.svg)`
+      img = `url(/assets/static/img/${this.props.league}/other/all-star-game-${
+        this.props.year
+      }.svg)`
     }
     this.setState({ bgImg: img })
   }

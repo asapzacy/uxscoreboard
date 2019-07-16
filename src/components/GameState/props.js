@@ -2,7 +2,7 @@ import { formatTimezone } from 'helpers/utils'
 
 //  mlb game state props --> GameState component
 export const mlbGameStateProps = game => {
-  const isPlayoffs = game.gameType !== 'R'
+  const isPlayoffs = !['R', 'A'].includes(game.gameType)
   const isDoubleHeader = game.doubleHeader === 'S' || game.doubleHeader === 'Y'
   const inGame =
     game.status.abstractGameCode === 'L' && game.status.codedGameState !== 'P'

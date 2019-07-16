@@ -6,8 +6,9 @@
   overflow:hidden;
   white-space:nowrap;
   color:transparent;
-  transition:opacity 0.77s 0.77s;
+  transition:opacity 0.33s 0.33s;
 }
 .container[src$='.png'] {
-  width:75px;
+  max-width:75px;
+  margin:0 calc(100% / 13.3333333333334);
 }

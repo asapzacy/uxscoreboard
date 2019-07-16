@@ -22,9 +22,9 @@ export default function Scoreboard({
   if (league === 'mlb') {
     games =
       !scores.length || seasonState.isPreseason ? (
-        <NoGames text={'no games today'} />
+        <NoGames text={'No games today'} />
       ) : isError ? (
-        <NoGames text={'woops! something went wrong.'} />
+        <NoGames text={'ahh.. something went wrong'} />
       ) : (
         scores.map(item => (
           <GameContainer

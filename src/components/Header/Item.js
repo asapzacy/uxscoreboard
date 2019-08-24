@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import s from './Header.scss'
 
 const Item = ({ name, url, icon, screenWidth }) => (
   <li className={s.item}>
-    <Link
+    <NavLink
       className={s.link}
       to={`/${url}`}
       title={`uxscoreboard | ${name} scores`}
@@ -20,7 +20,7 @@ const Item = ({ name, url, icon, screenWidth }) => (
         )}
         {name}
       </span>
-    </Link>
+    </NavLink>
   </li>
 )
 

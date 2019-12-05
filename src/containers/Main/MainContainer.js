@@ -29,6 +29,7 @@ class MainContainer extends Component {
   }
 
   componentDidUpdate() {
+    this.foo()
     logPageView()
   }
 

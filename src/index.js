@@ -16,7 +16,9 @@ const renderApp = Root => {
   render(
     <AppContainer>
       <Router>
-        <Root />
+        <React.Suspense fallback={<div />}>
+          <Root />
+        </React.Suspense>
       </Router>
     </AppContainer>,
     document.getElementById('app')

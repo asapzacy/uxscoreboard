@@ -25,7 +25,8 @@
         "helpers": false,
         "regenerator": true
       }
-    ]
+    ],
+    "@babel/plugin-syntax-dynamic-import"
   ],
   "env": {
     "test": {

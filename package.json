@@ -1,5 +1,5 @@
 {
-  "name": "uxscoreboard",
+  "name": "@asapzacy/uxscoreboard",
   "version": "1.0.0",
   "description": "A sports scoreboard web app built on ES6, React, and Node.js—features MLB, NBA, NFL, NHL, and MLS (coming soon) games.",
   "main": "server.js",
@@ -111,6 +111,10 @@
   },
   "bugs": {
     "url": "https://github.com/asapzacy/uxscoreboard/issues"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/",
+    "access": "public"
   },
   "homepage": "https://uxscoreboard.com",
   "engines": {

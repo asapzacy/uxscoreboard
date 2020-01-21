@@ -8,9 +8,11 @@ import { MainContainer as Root } from 'containers'
 
 require('dotenv').config()
 
-Sentry.init({
-  dsn: 'https://66e8a28472ba439eabfa9cb013eaa1b4@sentry.io/1540454'
-})
+if (process.env.NODE_ENV === 'production') {
+  Sentry.init({
+    dsn: 'https://66e8a28472ba439eabfa9cb013eaa1b4@sentry.io/1540454'
+  })
+}
 
 const renderApp = Root => {
   render(

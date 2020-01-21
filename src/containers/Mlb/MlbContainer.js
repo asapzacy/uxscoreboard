@@ -3,6 +3,7 @@ import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
 import { updatePageInfo } from 'config/metadata'
+import seasons from 'data/season-dates'
 
 class MlbContainer extends Component {
   static defaultProps = { league: 'mlb' }
@@ -39,10 +40,11 @@ class MlbContainer extends Component {
     clearTimeout(this.refreshId)
   }
 
-  makeRequest(dt = this.state.today) {
+  makeRequest(dt = seasons[this.props.league]['2020'].season.start) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }
+
     getMlbScores(dt)
       .then(currentScores => {
         const gamedayDetails = currentScores.dates[0]

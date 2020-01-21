@@ -1,6 +1,6 @@
 import React from 'react'
 import { Scoreboard } from 'components'
-import { seasons } from 'data/leagueDates'
+import seasons from 'data/season-dates'
 import { checkDay, formatLastUpdatedString } from 'helpers/utils'
 
 class ScoreboardContainer extends React.Component {
@@ -58,7 +58,7 @@ class ScoreboardContainer extends React.Component {
       this.props.league !== 'nhl' &&
       this.props.league !== 'nfl'
     ) {
-      const dates = seasons[this.props.league].seasons[this.props.year]
+      const dates = seasons[this.props.league][this.props.year]
       this.setState(
         {
           seasonState: {

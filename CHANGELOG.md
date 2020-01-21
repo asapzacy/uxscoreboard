@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/asapzacy/uxscoreboard/compare/v1.1.0...v1.1.1) (2020-01-21)
+
+
+### Bug Fixes
+
+* default to showing MLB 2020 opening day of games ([fbd64d6](https://github.com/asapzacy/uxscoreboard/commit/fbd64d649cbea9b953d4643d49a462ed39b13615))
+
+
+### Others
+
+* only initialize Sentry if production ([655030c](https://github.com/asapzacy/uxscoreboard/commit/655030ce6db96e505c6b80f4f2da2a3ef38e2188))
+
 ## 1.1.0 (2020-01-21)
 
 

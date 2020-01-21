@@ -4,6 +4,7 @@
   "description": "A sports scoreboard web app built on ES6, React, and Node.js—features MLB, NBA, NFL, NHL, and MLS (coming soon) games.",
   "main": "server.js",
   "scripts": {
+    "commit": "git-cz",
     "dev": "env UV_THREADPOOL_SIZE=100 webpack-dev-server --progress --colors",
     "server": "npx nodemon server.js",
     "start": "concurrently 'yarn dev' 'yarn server' --names 'REACT,NODE' -c 'bgBlue.bold,bgMagenta.bold'",
@@ -60,10 +61,12 @@
     "babel-plugin-transform-react-stateless-component-name": "^1.1.2",
     "browser-sync": "^2.18.7",
     "browser-sync-webpack-plugin": "^1.1.4",
+    "commitizen": "^4.0.3",
     "compression-webpack-plugin": "1.1.12",
     "concurrently": "^3.5.1",
     "css-loader": "^0.28.4",
     "css-mqpacker": "^6.0.1",
+    "cz-conventional-changelog": "3.0.2",
     "duplicate-package-checker-webpack-plugin": "^1.2.4",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
@@ -112,5 +115,10 @@
   "engines": {
     "node": ">=11.0.0",
     "yarn": ">=1.13.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

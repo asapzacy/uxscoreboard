@@ -20,7 +20,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "svg": "find dist/assets -name '*.svg' -type f -exec yarn svgo '{}' \\;",
-    "svgo": "svgo --config='{ \"plugins\": [{ \"removeTitle\": false },{ \"removeViewBox\": false }]}'"
+    "svgo": "svgo --config='{ \"plugins\": [{ \"removeTitle\": false },{ \"removeViewBox\": false }]}'",
+    "release": "standard-version"
   },
   "author": "Zac Arellano",
   "license": "MIT",
@@ -52,6 +53,8 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@types/jest": "^24.0.13",
     "@types/node": "^12.0.2",
     "@types/react": "^16.8.18",
@@ -80,7 +83,7 @@
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^3.0.1",
     "html-webpack-plugin": "^4.0.0-beta.11",
-    "husky": "^0.14.3",
+    "husky": "^4.0.10",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "mini-css-extract-plugin": "^0.6.0",
@@ -121,9 +124,14 @@
     "node": ">=11.0.0",
     "yarn": ">=1.13.0"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   }
 }

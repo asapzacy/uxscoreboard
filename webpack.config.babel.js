@@ -18,12 +18,15 @@ const isProduction = LAUNCH_COMMAND === 'build'
 process.env.BABEL_ENV = LAUNCH_COMMAND
 
 const HOST = process.env.HOST || 'localhost'
-const PORT = process.env.PORT || 8080
-const PROXY = `http://${HOST}:${PORT}`
+const WWW_PORT = process.env.WWW_PORT || 8080
+const API_PORT = process.env.API_PORT || 9090
+
+const WWW_PROXY = `http://${HOST}:${WWW_PORT}`
+const API_PROXY = `http://${HOST}:${API_PORT}`
 
 const PATHS = {
   app: path.join(__dirname, 'src'),
-  build: path.join(__dirname, 'dist')
+  dist: path.join(__dirname, 'dist')
 }
 
 const globalVariables = new webpack.DefinePlugin({
@@ -32,15 +35,14 @@ const globalVariables = new webpack.DefinePlugin({
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
-  filename: 'index.html',
-  inject: 'body'
+  filename: 'index.html'
 })
 
 const browserSyncPlugin = new BrowserSyncPlugin(
   {
     host: HOST,
-    port: PORT,
-    proxy: PROXY,
+    port: WWW_PORT,
+    proxy: WWW_PROXY,
     open: false,
     ui: { port: 8080, weinre: { port: 9090 } }
   },
@@ -61,13 +63,13 @@ const postcssAssetsPlugin = new PostcssAssetsPlugin({
 })
 
 const statsWriterPlugin = new StatsWriterPlugin({
-  filename: './stats/webpack_stats.json',
+  filename: './assets/build/stats/webpack_stats.json',
   fields: null,
   stats: { chunkModules: true }
 })
 
 const visualizerPlugin = new VisualizerPlugin({
-  filename: './stats/webpack_stats.html'
+  filename: './assets/build/stats/webpack_stats.html'
 })
 
 const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
@@ -75,7 +77,7 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 })
 
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
-  filename: 'assets/build/css/bundle.[hash:12].min.css'
+  filename: './assets/build/styles.[contenthash:12].bundle.css'
 })
 
 const compressionPlugin = new CompressionPlugin({
@@ -142,10 +144,11 @@ const sharedCssLoaders = [
 
 const base = {
   output: {
-    path: PATHS.build,
-    filename: isProduction
-      ? 'assets/build/js/bundle.[hash:12].min.js'
-      : 'assets/build/js/bundle.[hash:12].js',
+    path: PATHS.dist,
+    filename: isProduction ? 'assets/build/app.[hash:12].js' : 'app.js',
+    chunkFilename: isProduction
+      ? 'assets/build/[name].[chunkhash:12].js'
+      : '[name].js',
     publicPath: '/'
   },
   module: {
@@ -175,30 +178,35 @@ const base = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   }
 }
 
-const developmentConfig = {
+const devConfig = {
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
+    `webpack-dev-server/client?${WWW_PROXY}`,
     'webpack/hot/only-dev-server',
     PATHS.app
   ],
   devtool: 'cheap-module-inline-source-map',
   mode: 'development',
   devServer: {
-    contentBase: PATHS.build,
+    contentBase: PATHS.dist,
     publicPath: '/',
     hot: true,
     inline: true,
     compress: true,
     historyApiFallback: true,
     host: HOST,
-    port: PORT,
+    port: WWW_PORT,
     proxy: {
       '/api/**': {
-        target: 'http://localhost:9090'
+        target: API_PROXY
       }
     }
   },
@@ -211,7 +219,7 @@ const developmentConfig = {
   ]
 }
 
-const productionConfig = {
+const prodConfig = {
   entry: [PATHS.app],
   devtool: 'cheap-module-source-map',
   mode: 'production',
@@ -222,15 +230,13 @@ const productionConfig = {
     uglifyJsPlugin,
     postcssPlugin,
     postcssAssetsPlugin,
-    statsWriterPlugin,
-    visualizerPlugin,
+    ...(process.env.WEBPACK_STATS ? [statsWriterPlugin, visualizerPlugin] : []),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin()
   ]
 }
 
-module.exports = Object.assign(
-  {},
-  base,
-  isProduction ? productionConfig : developmentConfig
-)
+module.exports = {
+  ...base,
+  ...(isProduction ? prodConfig : devConfig)
+}

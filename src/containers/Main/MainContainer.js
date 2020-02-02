@@ -8,35 +8,31 @@ import { logPageView } from 'config/analytics'
 import s from './Main.scss'
 
 class MainContainer extends Component {
-  constructor() {
-    super()
-    this.state = {
-      screenWidth: 0,
-      menuHeight: 0,
-      isMenuOpen: false
-    }
-    this.triggerMenu = this.triggerMenu.bind(this)
-    this.hideMenu = this.hideMenu.bind(this)
-    this.getScreenWidth = this.getScreenWidth.bind(this)
+  state = {
+    screenWidth: 0,
+    menuHeight: 0,
+    isMenuOpen: false
   }
 
   componentDidMount() {
     /* eslint-disable-next-line */
-    console.log('asappppppppppp')
+    console.log('asap', process.env.NODE_ENV, Date.now())
     this.loadFonts()
     this.getScreenWidth()
     window.addEventListener('resize', this.getScreenWidth)
   }
 
   componentDidUpdate() {
-    logPageView()
+    if (process.env.NODE_ENV === 'production') {
+      logPageView()
+    }
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.getScreenWidth)
   }
 
-  loadFonts() {
+  loadFonts = () => {
     WebFont.load({
       google: { families: ['Comfortaa:300,400,700'] },
       active() {
@@ -46,7 +42,7 @@ class MainContainer extends Component {
     })
   }
 
-  getScreenWidth() {
+  getScreenWidth = () => {
     this.setState({ screenWidth: window.innerWidth }, () => {
       const header = document.querySelector('header')
       const navHeight = header.querySelector('nav').scrollHeight
@@ -63,7 +59,8 @@ class MainContainer extends Component {
       }
     })
   }
-  triggerMenu() {
+
+  triggerMenu = () => {
     const header = document.querySelector('header')
     const navHeight = header.querySelector('nav').scrollHeight
     if (this.state.isMenuOpen) {
@@ -76,7 +73,8 @@ class MainContainer extends Component {
       menuHeight: !this.state.isMenuOpen ? navHeight : 0
     })
   }
-  hideMenu(event) {
+
+  hideMenu = event => {
     let el = event.target || event.srcElement
     while (el) {
       if (el.nodeName === 'A') {
@@ -86,11 +84,13 @@ class MainContainer extends Component {
       el = el.parentNode
     }
   }
+
   render() {
     const { isMenuOpen, menuHeight } = this.state
     const appHeight = {
       height: isMenuOpen ? `calc(100% + ${menuHeight / 2}px)` : '100%'
     }
+
     return (
       <div className={s.outerContainer} style={appHeight}>
         <Header triggerMenu={this.triggerMenu} {...this.state} />

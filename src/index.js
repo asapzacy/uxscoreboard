@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { AppContainer } from 'react-hot-loader'
+import ReactGA from 'react-ga'
 import * as Sentry from '@sentry/browser'
 
 import { MainContainer as Root } from 'containers'
@@ -12,6 +13,7 @@ if (process.env.NODE_ENV === 'production') {
   Sentry.init({
     dsn: 'https://66e8a28472ba439eabfa9cb013eaa1b4@sentry.io/1540454'
   })
+  ReactGA.initialize('UA-86342987-2')
 }
 
 const renderApp = Root => {

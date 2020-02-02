@@ -30,7 +30,8 @@ const renderApp = Root => {
 renderApp(Root)
 
 if (module.hot) {
-  document.head.querySelector('link[rel=icon]').href = '/favicon-dev.png'
+  document.head.querySelector('link[rel=icon]').href =
+    '/assets/static/other/favicon-dev.png'
   module.hot.accept('containers/Main/MainContainer', () => {
     const Root = require('containers/Main/MainContainer').default
     renderApp(Root)

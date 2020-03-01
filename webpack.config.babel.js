@@ -1,5 +1,7 @@
-const webpack = require('webpack')
+const fs = require('fs')
 const path = require('path')
+
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
@@ -17,16 +19,18 @@ const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 const isProduction = LAUNCH_COMMAND === 'build'
 process.env.BABEL_ENV = LAUNCH_COMMAND
 
-const HOST = process.env.HOST || 'localhost'
-const WWW_PORT = process.env.WWW_PORT || 8080
-const API_PORT = process.env.API_PORT || 9090
+const WWW_HOST = process.env.WWW_HOST || 'local.uxscoreboard'
+const WWW_PORT = process.env.WWW_PORT || 8888
 
-const WWW_PROXY = `http://${HOST}:${WWW_PORT}`
-const API_PROXY = `http://${HOST}:${API_PORT}`
+const API_HOST = process.env.API_HOST || 'local.api.uxscoreboard'
+const API_PORT = process.env.API_PORT || 9999
+
+const WWW_PROXY = `https://${WWW_HOST}:${WWW_PORT}`
+const API_PROXY = `https://${API_HOST}:${API_PORT}`
 
 const PATHS = {
-  app: path.join(__dirname, 'src'),
-  dist: path.join(__dirname, 'dist')
+  app: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist')
 }
 
 const globalVariables = new webpack.DefinePlugin({
@@ -40,11 +44,11 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 const browserSyncPlugin = new BrowserSyncPlugin(
   {
-    host: HOST,
+    host: WWW_HOST,
     port: WWW_PORT,
     proxy: WWW_PROXY,
     open: false,
-    ui: { port: 8080, weinre: { port: 9090 } }
+    ui: { port: WWW_PORT, weinre: { port: API_PORT } }
   },
   { reload: false }
 )
@@ -202,11 +206,17 @@ const devConfig = {
     inline: true,
     compress: true,
     historyApiFallback: true,
-    host: HOST,
+    host: WWW_HOST,
     port: WWW_PORT,
+    https: {
+      cert: fs.readFileSync(`./.ssl/${WWW_HOST}.cert`),
+      key: fs.readFileSync(`./.ssl/${WWW_HOST}.key`)
+    },
+    disableHostCheck: true,
     proxy: {
       '/api/**': {
-        target: API_PROXY
+        target: API_PROXY,
+        secure: false
       }
     }
   },

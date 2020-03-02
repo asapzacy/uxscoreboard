@@ -1,14 +1,19 @@
 #!/usr/bin/env node
-const express = require('express')
+const fs = require('fs')
 const path = require('path')
+
+const express = require('express')
+const https = require('https')
 const compression = require('compression')
 const cors = require('cors')
 const responseTime = require('response-time')
 const axios = require('axios')
 const parseString = require('xml2js').parseString
+
 require('dotenv').config()
 
-const port = process.env.PORT || 9090
+const API_HOST = process.env.API_HOST || 'local.api.uxscoreboard'
+const API_PORT = process.env.API_PORT || 9999
 
 const app = express()
 
@@ -16,7 +21,7 @@ app.use(compression())
 app.use(cors())
 app.use(responseTime())
 
-app.use(express.static('dist'))
+app.use(express.static('./dist'))
 
 const parseDate = dt => {
   const yyyy = dt.slice(0, 4)
@@ -87,11 +92,21 @@ app.get('/api/nfl/scores/week/:week', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve('dist/index.html'))
+  res.sendFile(path.resolve('./dist/index.html'))
 })
 
-app.listen(port, () => {
-  console.log(`server listening on port ${port}`)
-})
+const localApp = https.createServer(
+  {
+    key: fs.readFileSync(`./.ssl/${API_HOST}.key`),
+    cert: fs.readFileSync(`./.ssl/${API_HOST}.cert`),
+    requestCert: false,
+    rejectUnauthorized: false
+  },
+  app
+)
 
-module.exports = app
+const server = process.env.NODE_ENV === 'development' ? localApp : app
+server.listen(API_PORT, () => {
+  /* eslint-disable */
+  console.log(`server listening on port ${API_PORT}`)
+})

@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import WebFont from 'webfontloader'
+import React from 'react'
 
 import { Header, Footer } from 'components'
 import Routes from 'config/Routes'
@@ -17,7 +16,7 @@ class MainContainer extends Component {
   componentDidMount() {
     /* eslint-disable-next-line */
     console.log('asap', process.env.NODE_ENV, Date.now())
-    this.loadFonts()
+
     this.getScreenWidth()
     window.addEventListener('resize', this.getScreenWidth)
   }
@@ -30,16 +29,6 @@ class MainContainer extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.getScreenWidth)
-  }
-
-  loadFonts = () => {
-    WebFont.load({
-      google: { families: ['Comfortaa:300,400,700'] },
-      active() {
-        document.getElementById('app').classList.add('ready')
-      },
-      classes: false
-    })
   }
 
   getScreenWidth = () => {

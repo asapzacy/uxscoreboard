@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/asapzacy/uxscoreboard/compare/v1.1.1...v1.2.0) (2020-03-02)
+
+
+### Features
+
+* set-up emotion ThemeProvider w base theme styles ([53699cc](https://github.com/asapzacy/uxscoreboard/commit/53699cc5b13625ee6ee4c27f673905cf018593a1))
+
+
+### Bug Fixes
+
+* don't initialize|track GA events in development ([b7b0517](https://github.com/asapzacy/uxscoreboard/commit/b7b0517d4af73a1c06f7cef4e0846742108bdfe6))
+
+
+### Build System
+
+* add @emotion/core, @emotion/styled deps ([544e897](https://github.com/asapzacy/uxscoreboard/commit/544e897eb8f61443d383e9691329c36466c456ab))
+* move around static/build assets directory structure ([32bbed1](https://github.com/asapzacy/uxscoreboard/commit/32bbed1c0854152a6668cdb2030a78bf42eb1a42))
+* rename/refactor npm commands ([40f526d](https://github.com/asapzacy/uxscoreboard/commit/40f526d0aa16349c557cfa7effecbd2662e4386e))
+
+
+### Others
+
+* add https support for webpack|express servers in dev ([cf8c354](https://github.com/asapzacy/uxscoreboard/commit/cf8c3542a4d6152aa17ac1be22fc83460e314d03))
+
+
+### Code Refactoring
+
+* replace scss modules in Item w emotion styled components ([fb4c2cc](https://github.com/asapzacy/uxscoreboard/commit/fb4c2ccfb2b76661d57a35a1129e91337773887a))
+
 ### [1.1.1](https://github.com/asapzacy/uxscoreboard/compare/v1.1.0...v1.1.1) (2020-01-21)
 
 

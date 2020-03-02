@@ -15,6 +15,7 @@
   ],
   "ignore": ["node_modules"],
   "plugins": [
+    "emotion",
     "react-hot-loader/babel",
     "transform-react-stateless-component-name",
     ["@babel/plugin-proposal-decorators", { "legacy": true }],

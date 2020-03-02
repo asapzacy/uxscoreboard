@@ -2,10 +2,12 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { AppContainer } from 'react-hot-loader'
+import { ThemeProvider } from 'emotion-theming'
 import ReactGA from 'react-ga'
 import * as Sentry from '@sentry/browser'
 
 import { MainContainer as Root } from 'containers'
+import theme from './theme'
 
 require('dotenv').config()
 
@@ -18,13 +20,15 @@ if (process.env.NODE_ENV === 'production') {
 
 const renderApp = Root => {
   render(
-    <AppContainer>
-      <Router>
-        <React.Suspense fallback={<div />}>
-          <Root />
-        </React.Suspense>
-      </Router>
-    </AppContainer>,
+    <ThemeProvider theme={theme}>
+      <AppContainer>
+        <Router>
+          <React.Suspense fallback={<div />}>
+            <Root />
+          </React.Suspense>
+        </Router>
+      </AppContainer>
+    </ThemeProvider>,
     document.getElementById('app')
   )
 }

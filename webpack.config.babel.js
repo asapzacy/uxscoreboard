@@ -1,5 +1,7 @@
-const webpack = require('webpack')
+const fs = require('fs')
 const path = require('path')
+
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
@@ -17,13 +19,18 @@ const LAUNCH_COMMAND = process.env.npm_lifecycle_event
 const isProduction = LAUNCH_COMMAND === 'build'
 process.env.BABEL_ENV = LAUNCH_COMMAND
 
-const HOST = process.env.HOST || 'localhost'
-const PORT = process.env.PORT || 8080
-const PROXY = `http://${HOST}:${PORT}`
+const WWW_HOST = process.env.WWW_HOST || 'local.uxscoreboard'
+const WWW_PORT = process.env.WWW_PORT || 8888
+
+const API_HOST = process.env.API_HOST || 'local.api.uxscoreboard'
+const API_PORT = process.env.API_PORT || 9999
+
+const WWW_PROXY = `https://${WWW_HOST}:${WWW_PORT}`
+const API_PROXY = `https://${API_HOST}:${API_PORT}`
 
 const PATHS = {
-  app: path.join(__dirname, 'src'),
-  build: path.join(__dirname, 'dist')
+  app: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist')
 }
 
 const globalVariables = new webpack.DefinePlugin({
@@ -32,17 +39,16 @@ const globalVariables = new webpack.DefinePlugin({
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
-  filename: 'index.html',
-  inject: 'body'
+  filename: 'index.html'
 })
 
 const browserSyncPlugin = new BrowserSyncPlugin(
   {
-    host: HOST,
-    port: PORT,
-    proxy: PROXY,
+    host: WWW_HOST,
+    port: WWW_PORT,
+    proxy: WWW_PROXY,
     open: false,
-    ui: { port: 8080, weinre: { port: 9090 } }
+    ui: { port: WWW_PORT, weinre: { port: API_PORT } }
   },
   { reload: false }
 )
@@ -61,13 +67,13 @@ const postcssAssetsPlugin = new PostcssAssetsPlugin({
 })
 
 const statsWriterPlugin = new StatsWriterPlugin({
-  filename: './stats/webpack_stats.json',
+  filename: './assets/build/stats/webpack_stats.json',
   fields: null,
   stats: { chunkModules: true }
 })
 
 const visualizerPlugin = new VisualizerPlugin({
-  filename: './stats/webpack_stats.html'
+  filename: './assets/build/stats/webpack_stats.html'
 })
 
 const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
@@ -75,7 +81,7 @@ const duplicatePackageCheckerPlugin = new DuplicatePackageCheckerPlugin({
 })
 
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
-  filename: 'assets/build/css/bundle.[hash:12].min.css'
+  filename: './assets/build/styles.[contenthash:12].bundle.css'
 })
 
 const compressionPlugin = new CompressionPlugin({
@@ -142,10 +148,11 @@ const sharedCssLoaders = [
 
 const base = {
   output: {
-    path: PATHS.build,
-    filename: isProduction
-      ? 'assets/build/js/bundle.[hash:12].min.js'
-      : 'assets/build/js/bundle.[hash:12].js',
+    path: PATHS.dist,
+    filename: isProduction ? 'assets/build/app.[hash:12].js' : 'app.js',
+    chunkFilename: isProduction
+      ? 'assets/build/[name].[chunkhash:12].js'
+      : '[name].js',
     publicPath: '/'
   },
   module: {
@@ -175,30 +182,41 @@ const base = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   }
 }
 
-const developmentConfig = {
+const devConfig = {
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
+    `webpack-dev-server/client?${WWW_PROXY}`,
     'webpack/hot/only-dev-server',
     PATHS.app
   ],
   devtool: 'cheap-module-inline-source-map',
   mode: 'development',
   devServer: {
-    contentBase: PATHS.build,
+    contentBase: PATHS.dist,
     publicPath: '/',
     hot: true,
     inline: true,
     compress: true,
     historyApiFallback: true,
-    host: HOST,
-    port: PORT,
+    host: WWW_HOST,
+    port: WWW_PORT,
+    https: {
+      cert: fs.readFileSync(`./.ssl/${WWW_HOST}.cert`),
+      key: fs.readFileSync(`./.ssl/${WWW_HOST}.key`)
+    },
+    disableHostCheck: true,
     proxy: {
       '/api/**': {
-        target: 'http://localhost:9090'
+        target: API_PROXY,
+        secure: false
       }
     }
   },
@@ -211,7 +229,7 @@ const developmentConfig = {
   ]
 }
 
-const productionConfig = {
+const prodConfig = {
   entry: [PATHS.app],
   devtool: 'cheap-module-source-map',
   mode: 'production',
@@ -222,15 +240,13 @@ const productionConfig = {
     uglifyJsPlugin,
     postcssPlugin,
     postcssAssetsPlugin,
-    statsWriterPlugin,
-    visualizerPlugin,
+    ...(process.env.WEBPACK_STATS ? [statsWriterPlugin, visualizerPlugin] : []),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin()
   ]
 }
 
-module.exports = Object.assign(
-  {},
-  base,
-  isProduction ? productionConfig : developmentConfig
-)
+module.exports = {
+  ...base,
+  ...(isProduction ? prodConfig : devConfig)
+}

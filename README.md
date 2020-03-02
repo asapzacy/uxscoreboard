@@ -11,8 +11,7 @@
 ```sh
 git clone https://github.com/asapzacy/uxscoreboard.git
 cd uxscoreboard
-yarn
-yarn start
-```
+yarn dev:fresh
 
-then --> [localhost:8080](http://localhost:8080)
+# open https://local.uxsocreboard:8888 or https://localhost:8888
+```

@@ -1,31 +1,85 @@
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ */
+
 
 /* -------  resets  ------- */
-* { margin:0;padding:0 }
-html, body { height:100%;box-sizing:border-box }
-*, *::before, *::after { box-sizing:inherit }
-img { max-width:100% }
-a { color:inherit;text-decoration:none }
-ul, menu { list-style-type:none }
-h1,h2,h3,h4,h5,h6 { font-weight:inherit }
-strong { font-weight:700 }
-figure { text-align:center }
-figcaption { font-size:0.9em }
-table, hr { border:0 }
-nav, menu { letter-spacing:0 }
-sup { font-size:66% }
+
+* { margin: 0; padding: 0 }
+html, body { height: 100%; box-sizing: border-box }
+*, *::before, *::after { box-sizing: inherit }
+img { max-width: 100% }
+a { color: inherit; text-decoration: none }
+ul, menu { list-style-type: none }
+h1,h2,h3,h4,h5,h6 { font-weight: inherit }
+strong { font-weight: 700 }
+figure { text-align: center }
+figcaption { font-size: 0.9em }
+table, hr { border: 0 }
+nav, menu { letter-spacing: 0 }
+sup { font-size: 66% }
 
 /* -------  body  ------- */
 body {
   background:#d3d3d3;
   color:#070707;
-  font:400 16px/1.45 'Avenir Next',Avenir,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
-  letter-spacing:1px;
-  text-rendering:optimizeLegibility;
-  -webkit-font-smoothing:antialiased;
-  -webkit-tap-highlight-color:transparent;
-  -moz-osx-font-smoothing:grayscale;
+  font: 400 16px/1.45 'Avenir Next', Avenir, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -moz-osx-font-smoothing: grayscale
 }
 
 /* -------  app  ------- */
-#app { width:100%;height:100%;opacity:0;transition:opacity 0.44s 0.22s }
-#app.ready { font-family:'Comfortaa',cursive;opacity:1 }
+#app {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.44s 0.22s
+}
+#app.ready {
+  font-family: 'Comfortaa', cursive;
+  opacity:1
+}

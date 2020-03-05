@@ -44,7 +44,6 @@
     "react-router-dom": "^5.0.1",
     "response-time": "^2.3.2",
     "velocity-react": "^1.2.2",
-    "webfontloader": "^1.6.27",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {

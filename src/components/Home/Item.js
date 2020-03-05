@@ -17,16 +17,16 @@ const LinkButton = styled(Link)(({ theme }) => ({
   display: 'block',
   padding: '7%',
   margin: '7%',
-  background: theme.colors.grey[1],
-  border: `2px solid ${theme.colors.grey[6]}`,
-  borderRadius: '3px',
+  background: theme.colors.white,
+  border: `1px solid ${theme.colors.grey[6]}`,
+  borderRadius: 4,
   position: 'relative',
   transition: 'color 0.11s, background-color 0.22s, box-shadow 0.22s',
   transitionDelay: '0.11s',
   '&:hover': {
     color: 'transparent',
     background: theme.colors.grey[6],
-    boxShadow: `inset 0 0 0 6px ${theme.colors.grey[1]}`
+    boxShadow: `inset 0 0 0 5px ${theme.colors.white}`
   }
 }))
 

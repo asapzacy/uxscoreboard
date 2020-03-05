@@ -7,6 +7,7 @@ import ReactGA from 'react-ga'
 import * as Sentry from '@sentry/browser'
 
 import { MainContainer as Root } from 'containers'
+import { Global } from 'components'
 import theme from './theme'
 
 require('dotenv').config()
@@ -21,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 const renderApp = Root => {
   render(
     <ThemeProvider theme={theme}>
+      <Global />
       <AppContainer>
         <Router>
           <React.Suspense fallback={<div />}>
@@ -29,7 +31,7 @@ const renderApp = Root => {
         </Router>
       </AppContainer>
     </ThemeProvider>,
-    document.getElementById('app')
+    document.getElementById('root')
   )
 }
 

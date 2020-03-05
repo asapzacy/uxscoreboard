@@ -1,6 +1,5 @@
 import React from 'react'
 import { Global as GlobalStyles, css } from '@emotion/core'
-// import resets from 'assets/styles/resets.css'
 
 const Global = () => (
   <GlobalStyles

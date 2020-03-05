@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from '@emotion/styled'
 
 import { Header, Footer } from 'components'
 import Routes from 'config/Routes'
@@ -6,7 +7,29 @@ import { logPageView } from 'config/analytics'
 
 import s from './Main.scss'
 
-class MainContainer extends Component {
+const Body = styled.div({
+  display: 'flex',
+  flex: 1,
+  alignItems: 'center',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  zIndex: 1
+})
+
+const Overlay = styled.span(({ theme }) => ({
+  position: 'fixed',
+  top: 0,
+  bottom: 0,
+  right: 0,
+  left: 0,
+  background: `linear-gradient(45deg,  ${theme.colors.white} 25%, ${
+    theme.colors.grey[0]
+  } 25% 47.5%, #e5e5e5 47.5% 67.5%, ${
+    theme.colors.grey[3]
+  } 67.5% 85%, #cbcbcb 85%)`
+}))
+
+class MainContainer extends React.Component {
   state = {
     screenWidth: 0,
     menuHeight: 0,
@@ -14,6 +37,11 @@ class MainContainer extends Component {
   }
 
   componentDidMount() {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.body.style.opacity = '1'
+      })
+    })
     /* eslint-disable-next-line */
     console.log('asap', process.env.NODE_ENV, Date.now())
 
@@ -83,10 +111,13 @@ class MainContainer extends Component {
     return (
       <div className={s.outerContainer} style={appHeight}>
         <Header triggerMenu={this.triggerMenu} {...this.state} />
-        <main className={s.innerContainer}>
-          <Routes />
-        </main>
-        <Footer />
+        <Body>
+          <main className={s.innerContainer}>
+            <Routes />
+          </main>
+          <Footer />
+        </Body>
+        <Overlay />
       </div>
     )
   }

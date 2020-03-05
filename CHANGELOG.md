@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.2.0](https://github.com/asapzacy/uxscoreboard/compare/v1.1.1...v1.2.0) (2020-03-02)
+## [1.2.0](https://github.com/asapzacy/uxscoreboard/compare/v1.1.1...v1.2.0) (2020-03-05)
 
 
 ### Features
@@ -13,6 +13,11 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * don't initialize|track GA events in development ([b7b0517](https://github.com/asapzacy/uxscoreboard/commit/b7b0517d4af73a1c06f7cef4e0846742108bdfe6))
+
+
+### Performance Improvements
+
+* use local fonts + move some static css to emotion global styles ([e7d5d82](https://github.com/asapzacy/uxscoreboard/commit/e7d5d82f4ef3e97650fa4b8d37ae379241d42ba1))
 
 
 ### Build System
@@ -30,6 +35,12 @@ All notable changes to this project will be documented in this file. See [standa
 ### Code Refactoring
 
 * replace scss modules in Item w emotion styled components ([fb4c2cc](https://github.com/asapzacy/uxscoreboard/commit/fb4c2ccfb2b76661d57a35a1129e91337773887a))
+* stop using `webfontloader` for loading custom google fonts ([8ab28fd](https://github.com/asapzacy/uxscoreboard/commit/8ab28fd8c323799b14cd83adbf4a22bf54276903))
+
+
+### Styling
+
+* spice up the homepage design ([a0e5ba2](https://github.com/asapzacy/uxscoreboard/commit/a0e5ba25732337e4571e97e5d3815d64fb23e06f))
 
 ### [1.1.1](https://github.com/asapzacy/uxscoreboard/compare/v1.1.0...v1.1.1) (2020-01-21)
 

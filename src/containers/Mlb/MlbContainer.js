@@ -40,7 +40,7 @@ class MlbContainer extends Component {
     clearTimeout(this.refreshId)
   }
 
-  makeRequest(dt = seasons[this.props.league]['2020'].season.start) {
+  makeRequest(dt = this.state.today) {
     if (isValidDate(dt)) {
       this.setState({ isValid: true })
     }

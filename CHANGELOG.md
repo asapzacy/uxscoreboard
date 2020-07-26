@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/asapzacy/uxscoreboard/compare/v1.3.1...v1.3.2) (2020-07-26)
+
+
+### Bug Fixes
+
+* mlb games post-covid dates ([f0c8210](https://github.com/asapzacy/uxscoreboard/commit/f0c82105fe7123e87dd83044cf9e0a6f466a2fa7))
+
+
+### Others
+
+* chore: test `devops/fake-branch-b` changes ([abd6dfe](https://github.com/asapzacy/uxscoreboard/commit/abd6dfed74298a58668ba21b0ced5cb948e74698))
+* chore: test `devops/fake-branch-c` changes ([d4a66dc](https://github.com/asapzacy/uxscoreboard/commit/d4a66dcaa30a8cb4cd8c92baaa9c106214d22c82))
+* test `devops/fake-branch-a` changes ([7378ae9](https://github.com/asapzacy/uxscoreboard/commit/7378ae9e56bc8a0e12572e2f45c99a0362240dca))
+
+
+### CI
+
+* small changes to test standard-version release ([dc9a56a](https://github.com/asapzacy/uxscoreboard/commit/dc9a56a8ff71210de0243176e75bb901b336c05f))
+
+### [1.3.1](https://github.com/asapzacy/uxscoreboard/compare/v1.2.0...v1.3.1) (2020-07-26)
+
+
+### Performance Improvements
+
+* use local fonts + move some static css to emotion global styles ([4c111c8](https://github.com/asapzacy/uxscoreboard/commit/4c111c89da99265711fc41aa189f5e873de2aa39))
+
+
+### Code Refactoring
+
+* stop using `webfontloader` for loading custom google fonts ([90c15af](https://github.com/asapzacy/uxscoreboard/commit/90c15afd41b6c946e99896d3451d9ea21b7ec4d9))
+
+
+### Styling
+
+* spice up the homepage design ([092b63e](https://github.com/asapzacy/uxscoreboard/commit/092b63ebcabf851c4ebb37bfcfd1f988cb4008b3))
+
+
+### Others
+
+* **release:** 1.2.0 ([d96fe6b](https://github.com/asapzacy/uxscoreboard/commit/d96fe6b289fcfa31f8d920e2cdb499f02f3652aa))
+* **release:** 1.3.0 ([1936b4a](https://github.com/asapzacy/uxscoreboard/commit/1936b4a7cdd366ed7b0c872f11bb84094d03d60a))
+
 ## [1.3.0](https://github.com/asapzacy/uxscoreboard/compare/v1.1.1...v1.3.0) (2020-03-05)
 
 

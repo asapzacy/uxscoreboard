@@ -1,6 +1,6 @@
 {
   "name": "@asapzacy/uxscoreboard",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "description": "A sports scoreboard web app built on ES6, React, and Node.js—features MLB, NBA, NFL, NHL, and MLS (coming soon) games.",
   "main": "server.js",
   "scripts": {

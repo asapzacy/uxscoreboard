@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/asapzacy/uxscoreboard/compare/v1.2.0...v1.3.1) (2020-07-26)
+
+
+### Performance Improvements
+
+* use local fonts + move some static css to emotion global styles ([4c111c8](https://github.com/asapzacy/uxscoreboard/commit/4c111c89da99265711fc41aa189f5e873de2aa39))
+
+
+### Code Refactoring
+
+* stop using `webfontloader` for loading custom google fonts ([90c15af](https://github.com/asapzacy/uxscoreboard/commit/90c15afd41b6c946e99896d3451d9ea21b7ec4d9))
+
+
+### Styling
+
+* spice up the homepage design ([092b63e](https://github.com/asapzacy/uxscoreboard/commit/092b63ebcabf851c4ebb37bfcfd1f988cb4008b3))
+
+
+### Others
+
+* **release:** 1.2.0 ([d96fe6b](https://github.com/asapzacy/uxscoreboard/commit/d96fe6b289fcfa31f8d920e2cdb499f02f3652aa))
+* **release:** 1.3.0 ([1936b4a](https://github.com/asapzacy/uxscoreboard/commit/1936b4a7cdd366ed7b0c872f11bb84094d03d60a))
+
 ## [1.3.0](https://github.com/asapzacy/uxscoreboard/compare/v1.1.1...v1.3.0) (2020-03-05)
 
 

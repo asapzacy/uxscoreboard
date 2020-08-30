@@ -1,8 +1,8 @@
 import React from 'react'
-import { Global as GlobalStyles, css } from '@emotion/core'
+import { Global, css } from '@emotion/core'
 
-const Global = () => (
-  <GlobalStyles
+const GlobalStyles = () => (
+  <Global
     styles={theme => css`
       * {
         margin: 0;
@@ -78,4 +78,4 @@ const Global = () => (
   />
 )
 
-export default Global
+export default GlobalStyles

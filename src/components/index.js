@@ -1,5 +1,5 @@
 /* -------  base components  ------- */
-import Global from './Global/Global'
+import GlobalStyles from './Global/GlobalStyles'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Social from './Social/Social'
@@ -35,7 +35,7 @@ import Diamond from './Diamond/Diamond'
 import UpdateTime from './UpdateTime/UpdateTime'
 
 export {
-  Global,
+  GlobalStyles,
   Header,
   Footer,
   Social,

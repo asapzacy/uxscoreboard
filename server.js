@@ -41,22 +41,31 @@ app.get('/api/mlb/scores/:dt', (req, res) => {
 
 app.get('/api/nba/scores/:dt', (req, res) => {
   const { dt } = req.params
-  const url = `http://data.nba.com/data/5s/json/cms/noseason/scoreboard/${dt}/games.json`
-  const url2 = `http://data.nba.net/data/10s/prod/v2/${dt}/scoreboard.json`
+  const gamesUrl = `http://data.nba.net/prod/v2/${dt}/scoreboard.json`
+  const teamsUrl = `https://data.nba.net/prod/v2/2019/teams.json`
+
   return axios
-    .all([axios.get(url), axios.get(url2)])
+    .all([axios.get(gamesUrl), axios.get(teamsUrl)])
     .then(
-      axios.spread((games, standings) => {
-        const scores = {}
-        scores.year =
-          games.data.sports_content.sports_meta.season_meta.season_year
-        scores.games = games.data.sports_content.games.game.reduce(
-          (arr, el, i) => {
-            arr.push(Object.assign({}, el, standings.data.games[i]))
-            return arr
-          },
-          []
+      axios.spread((games, teams) => {
+        const nbaTeams = teams.data.league.standard.filter(
+          team => team.isNBAFranchise === true
         )
+        const scores = {}
+        scores.year = dt.slice(0, 4)
+        scores.games = games.data.games
+
+        scores.games.forEach(game => {
+          game.vTeam = {
+            ...game.vTeam,
+            ...nbaTeams.find(team => team.teamId === game.vTeam.teamId)
+          }
+          game.hTeam = {
+            ...game.hTeam,
+            ...nbaTeams.find(team => team.teamId === game.hTeam.teamId)
+          }
+        })
+
         res.send(scores)
       })
     )
@@ -65,7 +74,7 @@ app.get('/api/nba/scores/:dt', (req, res) => {
 
 app.get('/api/nba/scores/:dt/details/:id', (req, res) => {
   const { dt, id } = req.params
-  const url = `http://data.nba.com/data/10s/json/cms/noseason/game/${dt}/${id}/boxscore.json`
+  const url = `http://data.nba.com/prod/v1/${dt}/${id}_boxscore.json`
   return axios
     .get(url)
     .then(scores => res.send(scores.data))

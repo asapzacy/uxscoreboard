@@ -43,7 +43,7 @@ const MlbDetails = ({
   panels,
   activePanel,
   switchPanel,
-  lastUpdated
+  lastUpdatedStr
 }) => (
   <section className={s.container}>
     <Matchup {...mlbMatchupProps(game, date)} />
@@ -57,7 +57,7 @@ const MlbDetails = ({
         <Diamond {...mlbDiamondProps(game)} />
       </BoxScore>
     )}
-    <UpdateTime lastUpdated={lastUpdated} />
+    <UpdateTime lastUpdatedStr={lastUpdatedStr} />
   </section>
 )
 
@@ -68,7 +68,7 @@ const NbaDetails = ({
   panels,
   activePanel,
   switchPanel,
-  lastUpdated
+  lastUpdatedStr
 }) => (
   <section className={s.container}>
     <Matchup {...nbaMatchupProps(game, date)} />
@@ -81,24 +81,24 @@ const NbaDetails = ({
       <BoxScore {...nbaBoxScoreProps(game, league)} />
     )}
     {activePanel === 'team stats' && <Stats {...nbaStatsProps(game)} />}
-    <UpdateTime lastUpdated={lastUpdated} />
+    <UpdateTime lastUpdatedStr={lastUpdatedStr} />
   </section>
 )
 
-const NflDetails = ({ lastUpdated }) => (
+const NflDetails = ({ lastUpdatedStr }) => (
   <section className={s.container}>
     <br />
     <br />
     <br />
     <br />
-    <UpdateTime lastUpdated={lastUpdated} />
+    <UpdateTime lastUpdatedStr={lastUpdatedStr} />
   </section>
 )
 
-const NhlDetails = ({ game, date, league, lastUpdated }) => (
+const NhlDetails = ({ game, date, league, lastUpdatedStr }) => (
   <section className={s.container}>
     <Matchup {...nhlMatchupProps(game, date)} />
     <BoxScore {...nhlBoxScoreProps(game, league)} />
-    <UpdateTime lastUpdated={lastUpdated} />
+    <UpdateTime lastUpdatedStr={lastUpdatedStr} />
   </section>
 )

@@ -9,9 +9,9 @@ export const mlbMatchupProps = (game, date) => ({
 
 //  nba matchup props --> Matchup component
 export const nbaMatchupProps = (game, date) => ({
-  awayTeam: game.visitor.nickname,
-  homeTeam: game.home.nickname,
-  location: `${game.city}, ${game.state}.`,
+  awayTeam: game.vTeam.nickname,
+  homeTeam: game.hTeam.nickname,
+  location: `${game.arena.city}, ${game.arena.stateAbbr}.`,
   venue: game.arena.name,
   date
 })

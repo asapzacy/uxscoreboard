@@ -27,10 +27,10 @@ export const mlbBoxScoreProps = (game, league) => {
 //  nba box score props --> BoxScore component
 export const nbaBoxScoreProps = (game, league) => {
   const inGame = game.period.current
-  const size = Number(game.period_time.period_value)
+  const size = Number(game.period.current)
   return {
-    awayTeam: shortenTeamName(game.visitor.nickname),
-    homeTeam: shortenTeamName(game.home.nickname),
+    awayTeam: shortenTeamName(game.vTeam.nickname),
+    homeTeam: shortenTeamName(game.hTeam.nickname),
     awayScore: inGame ? game.vTeam.score : '',
     homeScore: inGame ? game.hTeam.score : '',
     linescore: {
@@ -39,7 +39,7 @@ export const nbaBoxScoreProps = (game, league) => {
     },
     periods: 4,
     totalPeriods: size,
-    overtimes: game.period_time.period_value > 4 ? size - 4 : 0,
+    overtimes: game.period.current > 4 ? size - 4 : 0,
     league
   }
 }

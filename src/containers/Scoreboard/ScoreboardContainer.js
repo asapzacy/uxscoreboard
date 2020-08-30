@@ -5,7 +5,7 @@ import { checkDay, formatLastUpdatedString } from 'helpers/utils'
 
 class ScoreboardContainer extends React.Component {
   state = {
-    lastUpdated: 0,
+    lastUpdatedStr: '',
     bgImg: '',
     seasonState: {
       isPreseason: false,
@@ -31,10 +31,14 @@ class ScoreboardContainer extends React.Component {
       this.checkSeason(this.props.date || this.props.week)
       this.updateDirection(prevProps.date, this.props.date)
     }
+
+    if (prevProps.lastUpdated !== this.props.lastUpdated) {
+      this.updateTime()
+    }
   }
 
   updateTime() {
-    this.setState({ lastUpdated: formatLastUpdatedString() })
+    this.setState({ lastUpdatedStr: formatLastUpdatedString() })
   }
 
   updateDirection(oldDate, newDate) {

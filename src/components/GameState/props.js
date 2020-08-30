@@ -56,22 +56,20 @@ export const mlbGameStateProps = game => {
 //  nba game state props --> GameState component
 export const nbaGameStateProps = game => {
   const isPlayoffs = Boolean(game.playoffs)
+
   return {
-    gameState: Number(game.period_time.game_status) - 1,
-    status: game.period_time.period_status,
+    gameState: Number(game.statusNum) - 1,
+    status: game.statusNum === 3 ? 'Final' : '', // game.period_time.period_status
     time: `${formatTimezone(game.startTimeUTC)} ET`,
     periods: 4,
-    currentPeriod: game.period_time.period_value,
-    currentTime: game.period.isEndOfPeriod
-      ? 'END'
-      : game.period_time.game_clock,
-    isHalfTime:
-      game.period.isHalftime || game.period_time.period_status === 'Halftime',
-    totalPeriods: game.period_time.period_value,
+    currentPeriod: game.period.current,
+    currentTime: game.period.isEndOfPeriod ? 'END' : game.clock,
+    isHalfTime: game.period.isHalftime,
+    totalPeriods: game.period.maxRegular,
     overtime:
-      game.period_time.period_value > 4
-        ? game.period_time.period_value > 5
-          ? `${game.period_time.period_value - 4}OT`
+      game.period.current > 4
+        ? game.period.current > 5
+          ? `${game.period.current - 4}OT`
           : 'OT'
         : '',
     playoffs: isPlayoffs

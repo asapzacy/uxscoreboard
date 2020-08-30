@@ -11,7 +11,8 @@ const League = ({
   year,
   date,
   today,
-  league
+  league,
+  lastUpdated
 }) => (
   <div className={s.container}>
     {isLoading ? (
@@ -24,6 +25,7 @@ const League = ({
         today={today}
         league={league}
         isError={isError}
+        lastUpdated={lastUpdated}
       />
     ) : (
       <NotFound />

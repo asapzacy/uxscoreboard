@@ -3,7 +3,6 @@ import { League } from 'components'
 import { getTodaysDate, isValidDate } from 'helpers/utils'
 import { getMlbScores } from 'helpers/api'
 import { updatePageInfo } from 'config/metadata'
-import seasons from 'data/season-dates'
 
 class MlbContainer extends Component {
   static defaultProps = { league: 'mlb' }
@@ -14,7 +13,8 @@ class MlbContainer extends Component {
     scores: {},
     year: '',
     date: '',
-    today: ''
+    today: '',
+    lastUpdated: null
   }
 
   componentDidMount() {
@@ -56,7 +56,8 @@ class MlbContainer extends Component {
           {
             date: dt,
             scores,
-            year
+            year,
+            lastUpdated: Date.now()
           },
           () => this.delay()
         )

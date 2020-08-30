@@ -25,7 +25,6 @@
     "no-console": [2, { "allow": ["warn", "error"] }],
     "semi": [2, "never"],
     "no-extra-semi": 2,
-    "space-before-function-paren": ["error", "never"],
     "react/jsx-boolean-value": [2, "always"],
     "react/jsx-curly-spacing": [2, "never", { "allowMultiline": false }],
     "react/jsx-no-literals": 2,

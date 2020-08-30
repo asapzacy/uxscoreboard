@@ -48,7 +48,7 @@ const NbaGame = ({
   game,
   date,
   league,
-  lastUpdated,
+  lastUpdatedStr,
   isExpanded,
   showDetails,
   isHovered,
@@ -88,7 +88,7 @@ const NbaGame = ({
           game={game}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
         />
       )}
     </VelocityTransitionGroup>
@@ -99,7 +99,7 @@ const NflGame = ({
   game,
   date,
   league,
-  lastUpdated,
+  lastUpdatedStr,
   isExpanded,
   showDetails,
   isHovered,
@@ -139,7 +139,7 @@ const NflGame = ({
           game={game}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
         />
       )}
     </VelocityTransitionGroup>
@@ -150,7 +150,7 @@ const MlbGame = ({
   game,
   date,
   league,
-  lastUpdated,
+  lastUpdatedStr,
   isExpanded,
   showDetails,
   isHovered,
@@ -190,7 +190,7 @@ const MlbGame = ({
           game={game}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
         />
       )}
     </VelocityTransitionGroup>
@@ -201,7 +201,7 @@ const NhlGame = ({
   game,
   date,
   league,
-  lastUpdated,
+  lastUpdatedStr,
   isExpanded,
   showDetails,
   isHovered,
@@ -241,7 +241,7 @@ const NhlGame = ({
           game={game}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
         />
       )}
     </VelocityTransitionGroup>

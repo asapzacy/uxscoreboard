@@ -15,7 +15,7 @@ export default function Scoreboard({
   league,
   seasonState,
   direction,
-  lastUpdated,
+  lastUpdatedStr,
   isError
 }) {
   let games
@@ -31,7 +31,7 @@ export default function Scoreboard({
             game={item}
             date={date}
             league={league}
-            lastUpdated={lastUpdated}
+            lastUpdatedStr={lastUpdatedStr}
             key={item.gamePk}
           />
         ))
@@ -43,19 +43,22 @@ export default function Scoreboard({
     ) : isError ? (
       <NoGames text={'woops! something went wrong.'} />
     ) : (
-      scores.map((el, i) => {
-        getNbaGameDetails(date, el.id).then(details => {
-          el.home = details.sports_content.game.home
-          el.visitor = details.sports_content.game.visitor
+      scores.map(game => {
+        const { gameId } = game
+        getNbaGameDetails(date, gameId).then(details => {
+          if (game.hTeam && game.vTeam && details.stats) {
+            game.hTeam.stats = details.stats.hTeam
+            game.vTeam.stats = details.stats.vTeam
+          }
         })
         return (
           <GameContainer
-            game={el}
-            id={el.id}
+            game={game}
+            id={gameId}
             date={date}
             league={league}
-            lastUpdated={lastUpdated}
-            key={i}
+            lastUpdatedStr={lastUpdatedStr}
+            key={gameId}
           />
         )
       })
@@ -72,7 +75,7 @@ export default function Scoreboard({
           game={item}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
           key={item.gamePk}
         />
       ))
@@ -89,7 +92,7 @@ export default function Scoreboard({
           game={el}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
           key={el.eid}
         />
       ))

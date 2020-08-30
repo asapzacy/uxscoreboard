@@ -2,48 +2,50 @@ import { shortenTeamName } from 'helpers/utils'
 
 //  nba stats props --> Stats component
 export const nbaStatsProps = game => {
-  const awayStats = game.visitor.stats
-  const homeStats = game.home.stats
-  const inGame = game.period.current
+  const awayStats = game.vTeam.stats
+  const homeStats = game.hTeam.stats
+  const inGame = game.statusNum === 2 || game.statusNum === 3
   const empty = ['', '']
+
   return {
     teams: [
-      shortenTeamName(game.visitor.nickname),
-      shortenTeamName(game.home.nickname)
+      shortenTeamName(game.vTeam.nickname),
+      shortenTeamName(game.hTeam.nickname)
     ],
-    Points: inGame ? [awayStats.points, homeStats.points] : empty,
+    Points: inGame
+      ? [awayStats?.totals?.points, homeStats?.totals?.points]
+      : empty,
     'Field-Goal %': inGame
-      ? [
-          `${awayStats.field_goals_percentage}%`,
-          `${homeStats.field_goals_percentage}%`
-        ]
+      ? [`${awayStats?.totals?.fgp}%`, `${homeStats?.totals?.fgp}%`]
       : empty,
     '3-Point %': inGame
-      ? [
-          `${awayStats.three_pointers_percentage}%`,
-          `${homeStats.three_pointers_percentage}%`
-        ]
+      ? [`${awayStats?.totals?.tpp}%`, `${homeStats?.totals?.tpp}%`]
       : empty,
     'Free-Throw %': inGame
-      ? [
-          `${awayStats.free_throws_percentage}%`,
-          `${homeStats.free_throws_percentage}%`
-        ]
+      ? [`${awayStats?.totals?.ftp}%`, `${homeStats?.totals?.ftp}%`]
       : empty,
     Rebounds: inGame
+      ? [awayStats?.totals?.totReb, homeStats?.totals?.totReb]
+      : empty,
+    Assists: inGame
+      ? [awayStats?.totals?.assists, homeStats?.totals?.assists]
+      : empty,
+    Blocks: inGame
+      ? [awayStats?.totals?.blocks, homeStats?.totals?.blocks]
+      : empty,
+    Fouls: inGame
       ? [
-          Number(awayStats.rebounds_defensive) +
-            Number(awayStats.rebounds_offensive) +
-            Number(awayStats.team_rebounds),
-          Number(homeStats.rebounds_defensive) +
-            Number(homeStats.rebounds_offensive) +
-            Number(homeStats.team_rebounds)
+          Number(awayStats?.totals?.pFouls) +
+            Number(awayStats?.totals?.team_fouls),
+          Number(homeStats?.totals?.pFouls) +
+            Number(homeStats?.totals?.team_fouls)
         ]
       : empty,
-    Assists: inGame ? [awayStats.assists, homeStats.assists] : empty,
-    Blocks: inGame ? [awayStats.blocks, homeStats.blocks] : empty,
-    Fouls: inGame ? [awayStats.fouls, homeStats.fouls] : empty,
-    Steals: inGame ? [awayStats.steals, homeStats.steals] : empty,
-    Turnovers: inGame ? [awayStats.turnovers, homeStats.turnovers] : empty
+    Steals: inGame
+      ? [awayStats?.totals?.steals, homeStats?.totals?.steals]
+      : empty,
+    Turnovers: inGame
+      ? [awayStats?.totals?.turnovers, homeStats?.totals?.turnovers]
+      : empty
   }
 }

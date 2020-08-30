@@ -15,7 +15,7 @@ export default function Scoreboard({
   league,
   seasonState,
   direction,
-  lastUpdated,
+  lastUpdatedStr,
   isError
 }) {
   let games
@@ -31,7 +31,7 @@ export default function Scoreboard({
             game={item}
             date={date}
             league={league}
-            lastUpdated={lastUpdated}
+            lastUpdatedStr={lastUpdatedStr}
             key={item.gamePk}
           />
         ))
@@ -57,6 +57,7 @@ export default function Scoreboard({
             id={gameId}
             date={date}
             league={league}
+            lastUpdatedStr={lastUpdatedStr}
             key={gameId}
           />
         )
@@ -74,7 +75,7 @@ export default function Scoreboard({
           game={item}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
           key={item.gamePk}
         />
       ))
@@ -91,7 +92,7 @@ export default function Scoreboard({
           game={el}
           date={date}
           league={league}
-          lastUpdated={lastUpdated}
+          lastUpdatedStr={lastUpdatedStr}
           key={el.eid}
         />
       ))

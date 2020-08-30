@@ -1,11 +1,11 @@
 import React from 'react'
 import s from './UpdateTime.scss'
 
-const UpdateTime = ({ lastUpdated }) => (
+const UpdateTime = ({ lastUpdatedStr }) => (
   <footer className={s.container}>
     <span className={s.text}>
       <strong>{'last updated:'}</strong>
-      {lastUpdated}
+      {lastUpdatedStr}
     </span>
   </footer>
 )

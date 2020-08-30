@@ -13,7 +13,8 @@ class NbaContainer extends Component {
     scores: {},
     year: '',
     date: '',
-    today: ''
+    today: '',
+    lastUpdated: null
   }
 
   componentDidMount() {
@@ -50,7 +51,8 @@ class NbaContainer extends Component {
             isLoading: false,
             scores: data.games,
             year: data.year,
-            date: dt
+            date: dt,
+            lastUpdated: Date.now()
           },
           () => this.delay()
         )

@@ -93,6 +93,28 @@ const seasons = {
           end: ''
         }
       }
+    },
+    '2021': {
+      preseason: {
+        start: '',
+        end: ''
+      },
+      season: {
+        start: '20210401',
+        end: '20211103',
+        allstar: {
+          start: '',
+          end: ''
+        }
+      },
+      playoffs: {
+        start: '',
+        end: '',
+        finals: {
+          start: '',
+          end: ''
+        }
+      }
     }
   },
   nba: {

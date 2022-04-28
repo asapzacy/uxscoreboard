@@ -10,6 +10,10 @@
     "node": ">=11.0.0",
     "yarn": ">=1.13.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asapzacy/uxscoreboard.git"
+  },
   "scripts": {
     "commit": "git-cz",
     "api": "npx nodemon server.js",

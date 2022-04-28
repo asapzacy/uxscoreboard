@@ -7,7 +7,7 @@
   "author": "Zac Arellano",
   "license": "MIT",
   "engines": {
-    "node": ">=11.0.0",
+    "node": "16.13.1",
     "yarn": ">=1.13.0"
   },
   "repository": {

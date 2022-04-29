@@ -3,7 +3,6 @@ const path = require('path')
 
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin
 const VisualizerPlugin = require('webpack-visualizer-plugin')
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
@@ -41,17 +40,6 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: PATHS.app + '/index.html',
   filename: 'index.html'
 })
-
-const browserSyncPlugin = new BrowserSyncPlugin(
-  {
-    host: WWW_HOST,
-    port: WWW_PORT,
-    proxy: WWW_PROXY,
-    open: false,
-    ui: { port: WWW_PORT, weinre: { port: API_PORT } }
-  },
-  { reload: false }
-)
 
 const postcssPlugin = new webpack.LoaderOptionsPlugin({
   options: {
@@ -222,7 +210,6 @@ const devConfig = {
   },
   plugins: [
     ...sharedPlugins,
-    ...(process.env.BROWSER_SYNC ? browserSyncPlugin : []),
     duplicatePackageCheckerPlugin,
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()

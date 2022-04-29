@@ -1,22 +1,21 @@
-
 /* -------  Panel  ------- */
 .item {
-  flex:1;
-  height:100%;
-  cursor:pointer;
-  transition:background 0.44s;
-  composes:flexy from 'styles/_utils.scss';
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+  transition: background 0.44s;
+  composes: flexy from 'styles/_utils.scss';
 }
 .item:not(:last-child) {
-  border-right:1px solid $grey4;
+  border-right: 1px solid $grey4;
 }
 .itemActive {
-  background:$white;
-  composes:item;
+  background: $white;
+  composes: item;
 }
 
 @media (hover) {
   .item:hover {
-    background:$white;
+    background: $white;
   }
 }

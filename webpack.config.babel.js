@@ -137,7 +137,7 @@ const sharedCssLoaders = [
         }
       : {}
   },
-  { loader: 'sass-loader' },
+  { loader: 'sass-loader', options: { implementation: require('sass') } },
   {
     loader: 'sass-resources-loader',
     options: {

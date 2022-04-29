@@ -92,12 +92,12 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "mini-css-extract-plugin": "^0.6.0",
-    "node-sass": "^4.5.3",
     "postcss-assets-webpack-plugin": "^1.1.0",
     "postcss-loader": "^2.0.10",
     "prettier": "^1.14.3",
     "react-hot-loader": "^4.0.0-beta.23",
-    "sass-loader": "^6.0.5",
+    "sass": "^1.51.0",
+    "sass-loader": "^7.0.0",
     "sass-resources-loader": "^1.2.1",
     "standard-version": "^7.0.1",
     "style-loader": "^0.18.2",
@@ -109,9 +109,6 @@
     "webpack-dev-server": "^3.4.1",
     "webpack-stats-plugin": "^0.1.4",
     "webpack-visualizer-plugin": "^0.1.10"
-  },
-  "optionalDependencies": {
-    "fsevents": "^1.2.4"
   },
   "repository": {
     "type": "git",
